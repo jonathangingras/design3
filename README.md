@@ -3,10 +3,9 @@ Projet Design III
 
 #build
 
-<code>
-\#once in directory "design3"\\
-mkdir build\\
-cd build\\
-cmake ..\\
-make\\
-</code>
+once in directory "design3":
+
+<code>mkdir build</code>
+<code>cd build</code>
+<code>cmake ..</code>
+<code>make</code>
