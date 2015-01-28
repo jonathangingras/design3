@@ -1,0 +1,11 @@
+{
+	"colors" :
+	[
+		{ "name" : "blue",   "space" : "hsv" , "range" : [80, 180, 190, 120, 200, 210] },
+		{ "name" : "black",  "space" : "hsv" , "range" : [165, 0, 10, 180, 40, 60] },
+		{ "name" : "yellow", "space" : "hsv" , "range" : [20, 155, 240, 40, 175, 255] },
+		{ "name" : "green",  "space" : "hsv" , "range" : [45, 145, 160, 55, 190, 220] },
+		{ "name" : "red",    "space" : "hsv" , "range" : [0, 130, 210, 180, 200, 240] },
+		{ "name" : "white",  "space" : "hsv" , "range" : [10, 0, 245, 30, 15, 255] }
+	]
+}
