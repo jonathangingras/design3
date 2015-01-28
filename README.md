@@ -1,11 +1,12 @@
 # design3
 Projet Design III
 
-compile:
+#build
 
+<code>
 #once in directory "design3"
 mkdir build
 cd build
 cmake ..
 make
-
+</code>
