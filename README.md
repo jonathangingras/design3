@@ -4,7 +4,7 @@ Projet Design III
 #build
 
 <code>
-#once in directory "design3"
+\#once in directory "design3"
 mkdir build
 cd build
 cmake ..
