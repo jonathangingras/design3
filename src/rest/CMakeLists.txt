@@ -6,3 +6,7 @@ add_library(d3t12_rest
 	CURLGetter.cc
 	AtlasJSONDecoder.cc
 )
+
+target_link_libraries(d3t12_rest
+	${REST_LIBS}
+)

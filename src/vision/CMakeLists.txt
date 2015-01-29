@@ -5,3 +5,7 @@ add_library(d3t12_vision
 	ColorPalette.cc
 	SquareFilter.cc
 )
+
+target_link_libraries(d3t12_vision
+	${VISION_LIBS}
+)

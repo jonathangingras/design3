@@ -6,4 +6,4 @@ target_link_libraries(atlas_asker ${REST_LIBS})
 
 #next one is only for an example on shared pointers
 add_executable(shared_ptr_howto shared_ptr_howto.cc)
-target_link_libraries(shared_ptr_howto boost_container)
+target_link_libraries(shared_ptr_howto ${Boost_LIBRARIES})
