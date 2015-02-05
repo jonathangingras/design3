@@ -15,14 +15,18 @@ class htmlParser(object):
             print("file does not exist")
 
     def extractCountryInformationHtmlTag(self):
-        self.informationCategoryList = self.soup.find_all('div', 'category')
-        self.informationList = self.soup.find_all('div', 'category_data')
+        tag = 'div'
+        classType  = 'category'
+        self.informationCategoryList = self.soup.find_all(tag, classType)
 
+    def findCountryInformationKeys(self):
+        self.extractCountryInformationHtmlTag()
+        self.keys = []
+        numberOfContryFacts = len(self.informationCategoryList)
+        for i in range(numberOfContryFacts):
+            tag = self.informationCategoryList[i]
+            print(tag.contents)
 
-
-    def extractInformation(self, nameOfTheInformation):
-        tag = self.soup
-        print(self.soup.tagStack)
 
 
     def closeOpenFiles(self):
@@ -31,4 +35,4 @@ class htmlParser(object):
 if __name__ == '__main__':
     file_path = path.relpath("/home/antoine/workspace/design3/naturalLanguagePython/aa.html")
     parser = htmlParser(file_path,"/home/antoine/workspace/design3/naturalLanguagePython/extractedCountryInfo/aruba.txt")
-    parser.extractCountryInformationHtmlTag()
+    parser.findCountryInformationKeys()
