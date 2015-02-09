@@ -1,4 +1,3 @@
-
 __author__ = 'antoine'
 from bs4 import BeautifulSoup
 from os import path
@@ -7,7 +6,7 @@ endOfLine = "\n"
 class htmlParser(object):
 
     def __init__(self, fileToParse):
-        self.keys = []
+        self.keys = {}
         self.value = []
         self.soup = BeautifulSoup(open(fileToParse))
         self.__openFile__()
@@ -23,12 +22,16 @@ class htmlParser(object):
 
     def findCountryInformationValue(self):
         self.__extractCountryInformtionData__()
+        ### faire une recherche dans le html par les key pour ajouter
         nomberOfContryFacts = len(self.informationDataList)
+        for key in self.keys:
+            print(key)
+            informationKeyTag = self.soup.find('a', title = "Notes and Definitions: "+key)
+            #print(informationKeyTag)
+            parent = ((informationKeyTag.parent).parent).parent
+            print((parent.next_sibling).next_element)
 
-        for i in range(nomberOfContryFacts):
-            value = self.informationDataList[i]
-            print(value.string)
-        print(self.keys)
+
 
     def closeOpenedFiles(self):
         self.file.close()
@@ -56,9 +59,9 @@ class htmlParser(object):
         self.informationCategoryList = self.soup.find_all(tag, classType)
 
     def __extractCountryInformtionData__(self):
-        tag = 'span'
-        classType = "category_data"
-        self.informationDataList = self.soup.find_all(tag, classType)
+        tag = 'td'
+        wantedId = 'data'
+        self.informationDataList = self.soup.find_all(tag, id = wantedId)
 
     def __informationKeyFormatting__(self, tagToExtractTheKey):
         key = None
@@ -71,7 +74,7 @@ class htmlParser(object):
 
     def __addKeyToKeyList__(self, key):
         if(key is not None and key != 'None'):
-            self.keys.append(key)
+            self.keys[key] = None
 if __name__ == '__main__':
     file_path = path.normpath("aa.html")
     parser = htmlParser(file_path)
