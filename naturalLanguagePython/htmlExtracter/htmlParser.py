@@ -39,7 +39,7 @@ class htmlParser(object):
         self.file.close()
 
     def __openFile__(self):
-        appendMode = 'a'
+        appendMode = 'w'
         jsonExtension = ".json"
         nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
         nameOfCountryFile = nameOfCountry + jsonExtension
