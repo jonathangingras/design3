@@ -1,6 +1,7 @@
 __author__ = 'antoine'
 from bs4 import BeautifulSoup
 from os import path
+import json
 endOfLine = "\n"
 
 class htmlParser(object):
@@ -19,21 +20,36 @@ class htmlParser(object):
             tagChild = tag.find('a')
             key = self.__informationKeyFormatting__(tagChild)
             self.__addKeyToKeyList__(key)
+        self.__deleteNonImportantKeyword__()
 
     def findCountryInformationValue(self):
-        self.__extractCountryInformtionData__()
-        ### faire une recherche dans le html par les key pour ajouter
-        nomberOfContryFacts = len(self.informationDataList)
         for key in self.keys:
-            print(key)
-            informationKeyTag = self.soup.find('a', title = "Notes and Definitions: "+key)
-            #print(informationKeyTag)
-            parent = ((informationKeyTag.parent).parent).parent
-            print((parent.next_sibling).next_element)
+            informationList = []
+            extractedInfos = self.__extractCountryData__(key)
+            for extractedInfo in extractedInfos:
+                self.__verifyingStringContent__(extractedInfo, informationList)
+            self.keys[key] = informationList
 
 
+    def __extractCountryData__(self, key):
+        informationKeyTag = self.soup.find('a', title="Notes and Definitions: " + key)
+        parent = ((informationKeyTag.parent).parent).parent
+        parentNextElement = (parent.next_sibling).next_element
+        extractedInfos = parentNextElement.find_all(['div', 'span'], ['category', 'category_data'])
+        return extractedInfos
+
+    def __verifyingStringContent__(self, extractedInfo, informationList):
+        if extractedInfo.string is not None:
+            formattedInformationString = self.__informationKeyFormatting__(extractedInfo.string)
+            if formattedInformationString is not None:
+                informationList.append(formattedInformationString)
+
+    def writeInformationInOpenedFile(self):
+        for key in self.keys:
+            print(self.keys.get(key))
 
     def closeOpenedFiles(self):
+        json.dump(self.keys, self.file)
         self.file.close()
 
     def __openFile__(self):
@@ -66,15 +82,24 @@ class htmlParser(object):
     def __informationKeyFormatting__(self, tagToExtractTheKey):
         key = None
         if (tagToExtractTheKey is not None):
-            keyStringFormattedFromHtml = str(tagToExtractTheKey.string)
+            string = tagToExtractTheKey.string
+            keyStringFormattedFromHtml = str(string)
             strippedKeyString = keyStringFormattedFromHtml.strip(' :')
             key = strippedKeyString
-
+        if key == 'country comparison to the world':
+            key = None
         return key
 
     def __addKeyToKeyList__(self, key):
         if(key is not None and key != 'None'):
             self.keys[key] = None
+
+    def __deleteNonImportantKeyword__(self):
+        keyToIgnore = ['Economy - overview']
+        for key in keyToIgnore:
+            self.keys.pop(key, None)
+
+
 if __name__ == '__main__':
     file_path = path.normpath("aa.html")
     parser = htmlParser(file_path)
