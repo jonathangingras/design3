@@ -2,99 +2,58 @@ __author__ = 'antoine'
 from bs4 import BeautifulSoup
 from os import path
 import json
-endOfLine = "\n"
+from htmlInformationFormatter import HtmlInformationFormatter
+from htmlExtractor import HtmlExtractor
+from htmlInformationValidator import HtmlInformationValidator
 
 class htmlParser(object):
 
     def __init__(self, fileToParse):
         self.keys = {}
-        self.value = []
+        self.htmlInformationFormatter = HtmlInformationFormatter()
+        self.htmlExtractor = HtmlExtractor()
+        self.htmlInformationValidator = HtmlInformationValidator()
         self.soup = BeautifulSoup(open(fileToParse))
         self.__openFile__()
 
     def findCountryInformationKeys(self):
-        self.__extractCountryInformationHtmlTag__()
-        numberOfContryFacts = len(self.informationCategoryList)
-        for i in range(numberOfContryFacts):
-            tag = self.informationCategoryList[i]
-            tagChild = tag.find('a')
-            key = self.__informationKeyFormatting__(tagChild)
+        self.informationCategoryList = self.htmlExtractor.extractCountryInformationHtmlTag(self.soup)
+        for informationCategory in self.informationCategoryList:
+            key = self.htmlExtractor.informationCategoryFinder(informationCategory)
+            key = self.htmlInformationFormatter.informationKeyFormatting(key)
             self.__addKeyToKeyList__(key)
-        self.__deleteNonImportantKeyword__()
+        self.__deleteUnimportantKeyword__()
 
     def findCountryInformationValue(self):
         for key in self.keys:
             informationList = []
-            extractedInfos = self.__extractCountryData__(key)
-            for extractedInfo in extractedInfos:
-                self.__verifyingStringContent__(extractedInfo, informationList)
+            extractedInfos = self.htmlExtractor.extractCountryData(key, self.soup)
+            informationList = self.htmlInformationValidator.verifyingStringContent(extractedInfos)
             self.keys[key] = informationList
 
-
-    def __extractCountryData__(self, key):
-        informationKeyTag = self.soup.find('a', title="Notes and Definitions: " + key)
-        parent = ((informationKeyTag.parent).parent).parent
-        parentNextElement = (parent.next_sibling).next_element
-        extractedInfos = parentNextElement.find_all(['div', 'span'], ['category', 'category_data'])
-        return extractedInfos
-
-    def __verifyingStringContent__(self, extractedInfo, informationList):
-        if extractedInfo.string is not None:
-            formattedInformationString = self.__informationKeyFormatting__(extractedInfo.string)
-            if formattedInformationString is not None:
-                informationList.append(formattedInformationString)
-
-    def writeInformationInOpenedFile(self):
-        for key in self.keys:
-            print(self.keys.get(key))
+    def __writeInformationInOpenedFile__(self):
+        json.dump(self.keys, self.file)
 
     def closeOpenedFiles(self):
-        json.dump(self.keys, self.file)
+        self.__writeInformationInOpenedFile__()
         self.file.close()
 
     def __openFile__(self):
         appendMode = 'a'
-        txtExtension = ".txt"
-
-        nameOfCountry = self.__getNameOfCountry__()
-        nameOfCountryFile = nameOfCountry+ txtExtension
+        jsonExtension = ".json"
+        nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
+        nameOfCountryFile = nameOfCountry + jsonExtension
         self.file = open(nameOfCountryFile, appendMode)
         self.__writeNameOfCountry__(nameOfCountry)
 
-    def __getNameOfCountry__(self):
-        nameOfCountryTag = self.soup.find('span', 'region')
-        return nameOfCountryTag.string
-
     def __writeNameOfCountry__(self, nameOfCountry):
-        nameOfCountry = nameOfCountry + endOfLine
-        self.file.write(nameOfCountry)
-
-    def __extractCountryInformationHtmlTag__(self):
-        tag = 'div'
-        classType  = "category"
-        self.informationCategoryList = self.soup.find_all(tag, classType)
-
-    def __extractCountryInformtionData__(self):
-        tag = 'td'
-        wantedId = 'data'
-        self.informationDataList = self.soup.find_all(tag, id = wantedId)
-
-    def __informationKeyFormatting__(self, tagToExtractTheKey):
-        key = None
-        if (tagToExtractTheKey is not None):
-            string = tagToExtractTheKey.string
-            keyStringFormattedFromHtml = str(string)
-            strippedKeyString = keyStringFormattedFromHtml.strip(' :')
-            key = strippedKeyString
-        if key == 'country comparison to the world':
-            key = None
-        return key
+        json.dump(nameOfCountry, self.file)
 
     def __addKeyToKeyList__(self, key):
         if(key is not None and key != 'None'):
             self.keys[key] = None
 
-    def __deleteNonImportantKeyword__(self):
+    def __deleteUnimportantKeyword__(self):
         keyToIgnore = ['Economy - overview']
         for key in keyToIgnore:
             self.keys.pop(key, None)
