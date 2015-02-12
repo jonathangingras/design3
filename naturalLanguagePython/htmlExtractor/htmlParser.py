@@ -61,6 +61,6 @@ class htmlParser(object):
 
 
 if __name__ == '__main__':
-    file_path = path.normpath("aa.html")
+    file_path = path.normpath("ac.html")
     parser = htmlParser()
     parser.parseCountryHtml(file_path)
