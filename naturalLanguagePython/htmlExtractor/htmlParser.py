@@ -38,7 +38,7 @@ class htmlParser(object):
             self.keys[key] = informationList
 
     def __writeInformationInOpenedFile__(self):
-        json.dump(self.keys, self.file)
+        json.dump(self.keys, self.file, indent = 4, separators = (',', ':'))
 
     def __closeOpenedFile__(self):
         self.file.close()
@@ -46,21 +46,32 @@ class htmlParser(object):
     def __openFile__(self):
         writeMode = 'w'
         jsonExtension = ".json"
+        pathDirectory = "extractedCountryJson/"
         nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
-        nameOfCountryFile = nameOfCountry + jsonExtension
+        nameOfCountryFile = pathDirectory + nameOfCountry + jsonExtension
         self.file = open(nameOfCountryFile, writeMode)
+
 
     def __addKeyToKeyList__(self, key):
         if(key is not None and key != 'None'):
             self.keys[key] = None
 
     def __deleteUnimportantKeyword__(self):
-        keyToIgnore = ['Economy - overview']
+        keyToIgnore = ['Economy - overview', "Executive branch", "Map references","Merchant marine", "Background", "Environment - international agreements",
+                       "Legislative branch", "Judicial branch", "Military branches"]
         for key in keyToIgnore:
             self.keys.pop(key, None)
 
 
 if __name__ == '__main__':
-    file_path = path.normpath("ac.html")
-    parser = htmlParser()
-    parser.parseCountryHtml(file_path)
+    htmlFilePathDirectory = "htmlFiles/"
+
+    countryNameFilePath = path.realpath(htmlFilePathDirectory + "countryHtmlName.txt")
+    countryNameFile = open(countryNameFilePath, 'r')
+    for line in countryNameFile.readlines():
+        line = line.strip()
+        filePath = path.realpath(htmlFilePathDirectory + line + ".html")
+        parser = htmlParser()
+        parser.parseCountryHtml(filePath)
+    countryNameFile.close()
+    

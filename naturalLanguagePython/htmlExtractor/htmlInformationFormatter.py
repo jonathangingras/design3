@@ -6,12 +6,15 @@ class HtmlInformationFormatter(object):
         self.countryComparison = 'country comparison to the world'
 
     def informationKeyFormatting(self, tagToExtractTheKey):
-        key = None
-        if (tagToExtractTheKey is not None):
-            string = tagToExtractTheKey.string
-            keyStringFormattedFromHtml = str(string)
-            strippedKeyString = keyStringFormattedFromHtml.strip(' :')
-            key = strippedKeyString
-        if key == self.countryComparison:
+        try:
             key = None
-        return key
+            if (tagToExtractTheKey is not None):
+                string = tagToExtractTheKey.string
+                keyStringFormattedFromHtml = str(string)
+                strippedKeyString = keyStringFormattedFromHtml.strip(' :')
+                key = strippedKeyString
+            if key == self.countryComparison:
+                key = None
+            return key
+        except UnicodeEncodeError:
+            print(string)
