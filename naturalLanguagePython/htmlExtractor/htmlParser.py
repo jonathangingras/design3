@@ -8,15 +8,21 @@ from htmlInformationValidator import HtmlInformationValidator
 
 class htmlParser(object):
 
-    def __init__(self, fileToParse):
+    def __init__(self):
         self.keys = {}
         self.htmlInformationFormatter = HtmlInformationFormatter()
         self.htmlExtractor = HtmlExtractor()
         self.htmlInformationValidator = HtmlInformationValidator()
+
+    def parseCountryHtml(self, fileToParse):
         self.soup = BeautifulSoup(open(fileToParse))
         self.__openFile__()
+        self.__findCountryInformationKeys__()
+        self.__findCountryInformationValue__()
+        self.__writeInformationInOpenedFile__()
+        self.__closeOpenedFile__()
 
-    def findCountryInformationKeys(self):
+    def __findCountryInformationKeys__(self):
         self.informationCategoryList = self.htmlExtractor.extractCountryInformationHtmlTag(self.soup)
         for informationCategory in self.informationCategoryList:
             key = self.htmlExtractor.informationCategoryFinder(informationCategory)
@@ -24,7 +30,7 @@ class htmlParser(object):
             self.__addKeyToKeyList__(key)
         self.__deleteUnimportantKeyword__()
 
-    def findCountryInformationValue(self):
+    def __findCountryInformationValue__(self):
         for key in self.keys:
             informationList = []
             extractedInfos = self.htmlExtractor.extractCountryData(key, self.soup)
@@ -34,20 +40,15 @@ class htmlParser(object):
     def __writeInformationInOpenedFile__(self):
         json.dump(self.keys, self.file)
 
-    def closeOpenedFiles(self):
-        self.__writeInformationInOpenedFile__()
+    def __closeOpenedFile__(self):
         self.file.close()
 
     def __openFile__(self):
-        appendMode = 'w'
+        writeMode = 'w'
         jsonExtension = ".json"
         nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
         nameOfCountryFile = nameOfCountry + jsonExtension
-        self.file = open(nameOfCountryFile, appendMode)
-        self.__writeNameOfCountry__(nameOfCountry)
-
-    def __writeNameOfCountry__(self, nameOfCountry):
-        json.dump(nameOfCountry, self.file)
+        self.file = open(nameOfCountryFile, writeMode)
 
     def __addKeyToKeyList__(self, key):
         if(key is not None and key != 'None'):
@@ -61,7 +62,5 @@ class htmlParser(object):
 
 if __name__ == '__main__':
     file_path = path.normpath("aa.html")
-    parser = htmlParser(file_path)
-    parser.findCountryInformationKeys()
-    parser.findCountryInformationValue()
-    parser.closeOpenedFiles()
+    parser = htmlParser()
+    parser.parseCountryHtml(file_path)
