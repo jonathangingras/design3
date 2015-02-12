@@ -17,13 +17,21 @@ class TestCountryRepositoryDB(TestCase):
 
     def test_searchCountryToTheDatabase(self):
         dictionaryOfKeyword = {'Capital':'Paris'}
-        listOfNameOfTheSearchedCountry = ['Aruba']
+        expectedListOfNameOfTheSearchedCountry = ['Aruba']
         self.countryRepository.addCountry(self.firstCountryToAdd)
-        self.assertEquals(self.countryRepository.searchCountries(dictionaryOfKeyword), listOfNameOfTheSearchedCountry)
+        self.assertEqual(self.countryRepository.searchCountries(dictionaryOfKeyword), expectedListOfNameOfTheSearchedCountry)
 
     def test_searchCountryToDatabaseWithTwoPossibleCountry(self):
         self.countryRepository.addCountry(self.firstCountryToAdd)
         self.countryRepository.addCountry(self.secondCountryToAdd)
-        listOfNameOfTheSearchedCountry = ['Aruba', 'France']
-        dictionaryOfKeyword = {'Capital' : 'Paris'}
-        self.assertEquals(self.countryRepository.searchCountries(dictionaryOfKeyword), listOfNameOfTheSearchedCountry)
+        expectedListOfNameOfTheSearchedCountry = ['Aruba', 'France']
+        keywordSearchedDictionary = {'Capital' : 'Paris'}
+        self.assertEqual(self.countryRepository.searchCountries(keywordSearchedDictionary), expectedListOfNameOfTheSearchedCountry)
+
+    def test_searchingCountryWithOneFieldWhenCountryContainsTwoInformationCategoryShouldReturnCountryNameInList(self):
+        countryWithTwoCategory = Country('Canada', {'Capital': 'Ottawa', 'GDP':1000000})
+        self.countryRepository.addCountry(self.firstCountryToAdd)
+        self.countryRepository.addCountry(countryWithTwoCategory)
+        expectedListOfNameOfTheSearchedCountry = ['Canada']
+        keywordSearchedDictionary = {'GDP': 1000000}
+        self.assertEqual(self.countryRepository.searchCountries(keywordSearchedDictionary), expectedListOfNameOfTheSearchedCountry)

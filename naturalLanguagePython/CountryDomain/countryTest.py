@@ -8,18 +8,35 @@ __author__ = 'Antoine'
 class TestCountry(TestCase):
 
     def setUp(self):
-        self.dictionary = {'capital': 'Paris'}
-        self.nameOfCountry = 'Aruba'
+        self.dictionary = {'Capital': 'Paris'}
+        self.nameOfCountry = 'France'
         self.country = Country(self.nameOfCountry, self.dictionary)
 
-    def test_countryContainsNameAttribute(self):
+    def test_countryHasNameAttribute(self):
         self.assertIsNotNone(self.country.name)
 
-    def test_countryNameStartWithAUpperCase(self):
-        self.assertEquals(self.country.name, self.nameOfCountry)
-
-    def test_countryContainsAnInformationDictionary(self):
+    def test_countryHasAnInformationDictionary(self):
         self.assertIsNotNone(self.country.informationDict)
 
-    def test_countryInformationDictionaryContainsOneInformation(self):
-        self.assertEquals(self.country.informationDict, self.dictionary)
+    def test_containingWantedInformationReturnTrue(self):
+        key = 'Capital'
+        value = 'Paris'
+        self.assertTrue(self.country.contains(key, value))
+
+    def test_notContainingWantedInformationShouldReturnFalse(self):
+        key = 'Capital'
+        value = 'Kiew'
+        self.assertFalse(self.country.contains(key, value))
+
+    def test_containingWantedInformationShouldReturnTrueWhenHavingHavingMoreThanOneCategory(self):
+        key = 'GDP'
+        value = 10000
+        self.country.informationDict[key] = value
+        self.assertTrue(self.country.contains(key, value))
+
+    def test_notContainingCategoryShouldReturnFalse(self):
+        key = 'GDP'
+        value = 10000
+        self.assertFalse(self.country.contains(key, value))
+
+
