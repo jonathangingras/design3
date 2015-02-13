@@ -12,9 +12,11 @@ class CountryRepositoryDB(CountryRepository):
         self.countryList.append(country)
 
     def searchCountries(self, keywordDictionary):
-        listOfPossibleCountry = []
-        for country in self.countryList:
-            for keyword in keywordDictionary:
+        listOfPossibleCountryByKeyword = []
+        for keyword in keywordDictionary:
+            listOfPossibleCountry = []
+            for country in self.countryList:
                 if country.contains(keyword, keywordDictionary[keyword]):
                     listOfPossibleCountry.append(country.name)
-        return listOfPossibleCountry
+            listOfPossibleCountryByKeyword.append(listOfPossibleCountry)
+        return listOfPossibleCountryByKeyword

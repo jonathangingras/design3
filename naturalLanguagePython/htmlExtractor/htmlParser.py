@@ -35,7 +35,7 @@ class htmlParser(object):
             informationList = []
             extractedInfos = self.htmlExtractor.extractCountryData(key, self.soup)
             informationList = self.htmlInformationValidator.verifyingStringContent(extractedInfos)
-            self.keys[key] = informationList
+            self.keys[key.encode()] = informationList
 
     def __writeInformationInOpenedFile__(self):
         json.dump(self.keys, self.file, indent = 4, separators = (',', ':'))
@@ -69,9 +69,8 @@ if __name__ == '__main__':
     countryNameFilePath = path.realpath(htmlFilePathDirectory + "countryHtmlName.txt")
     countryNameFile = open(countryNameFilePath, 'r')
     for line in countryNameFile.readlines():
-        line = line.strip()
-        filePath = path.realpath(htmlFilePathDirectory + line + ".html")
-        parser = htmlParser()
-        parser.parseCountryHtml(filePath)
+            line = line.strip()
+            filePath = path.realpath(htmlFilePathDirectory + line + ".html")
+            parser = htmlParser()
+            parser.parseCountryHtml(filePath)
     countryNameFile.close()
-    
