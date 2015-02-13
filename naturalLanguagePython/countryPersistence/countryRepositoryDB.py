@@ -18,5 +18,3 @@ class CountryRepositoryDB(CountryRepository):
                 if country.contains(keyword, keywordDictionary[keyword]):
                     listOfPossibleCountry.append(country.name)
         return listOfPossibleCountry
-
-
