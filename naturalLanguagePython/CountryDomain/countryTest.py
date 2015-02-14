@@ -53,5 +53,27 @@ class TestCountry(TestCase):
         value = 'Paris'
         self.assertFalse(self.countryWithListInsideCategory.contains(key, value))
 
+    def test_containingWantedPartialInformationWhenHavingOneInformationShouldReturnTrue(self):
+        key = 'Capital'
+        value = 'Pa'
+        regex = '(\\b' + value + '.*\\b)'
+        self.assertTrue(self.country.contains(key, value, regex))
 
+    def test_notcontainingWantedPartialInformationWhenHavingOneInformationShouldReturnFalse(self):
+        key = 'Capital'
+        value = 'Ki'
+        regex = '(\\b' + value + '.*\\b)'
+        self.assertFalse(self.country.contains(key, value, regex))
+
+    def test_containingWantedPartialInformationWhenHavingOneInformationCategoryListShouldReturnTrue(self):
+        key = 'Capital'
+        value = 'Ki'
+        regex = '(\\b' + value + '.*\\b)'
+        self.assertTrue(self.countryWithListInsideCategory.contains(key, value, regex))
+
+    def test_notContainingWantedPartialInformationWhenHavingOneInformationCategoryListShouldReturnFalse(self):
+        key = 'Capital'
+        value = 'Pa'
+        regex = '(\\b' + value + '.*\\b)'
+        self.assertFalse(self.countryWithListInsideCategory.contains(key, value, regex))
 

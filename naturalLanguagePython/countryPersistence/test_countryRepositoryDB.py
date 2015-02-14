@@ -45,4 +45,3 @@ class TestCountryRepositoryDB(TestCase):
         expectedListOfNameOfTheSearchedCountry = [['Canada'], ['Canada']]
         self.countryRepository.addCountry(self.countryWithTwoCategory)
         self.assertEqual(self.countryRepository.searchCountries(keywordSearchedDictionary), expectedListOfNameOfTheSearchedCountry)
-

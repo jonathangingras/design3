@@ -1,14 +1,26 @@
 from unittest import TestCase
-
 __author__ = 'Antoine'
-from countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller,Country
-
+from countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
+#Acceptance  testing is done with this file
 class TestCountryRepositoryFiller(TestCase):
 
-    def test_findingAParsedCountryByItsCapitalShouldReturnCountryName(self):
-        countryRepository = CountryRepositoryDB()
-        countryDBFiller = CountryRepositoryFiller(countryRepository)
-        countryDBFiller.addCountriesToTheRepository()
-        self.assertEqual(countryRepository.searchCountries({'Capital': 'Paris'}), [['France']])
+    def setUp(self):
+        self.countryRepository = CountryRepositoryDB()
+        self.countryDBFiller = CountryRepositoryFiller(self.countryRepository)
+        self.countryDBFiller.addCountriesToTheRepository()
 
-    def test_findingAParsedCountryByIts
+    def test_findingAParsedCountryByItsCapitalShouldReturnCountryName(self):
+        expectedCountryList = [['France']]
+        wantedField = {'Capital' : 'Paris'}
+        self.assertEqual(self.countryRepository.searchCountries(wantedField), expectedCountryList)
+
+    def test_findingAParsedCountryByItsCapitalWhenNoCountryCorrespondingShouldReturnEmptyList(self):
+        expectedCountryList = [[]]
+        wantedField = {'Capital' : 'Capitol City'}
+        self.assertEqual(self.countryRepository.searchCountries(wantedField), expectedCountryList)
+
+    def test_findingAParsedCountryByItsCapitalWithStartPortionAndEndPortionShouldReturnCountryName(self):
+        expectedCountryList = [['Greece']]
+        wantedField = {'Capital' : 'Ath', 'Capital' : 'ens'}
+        self.assertEqual(self.countryRepository.searchCountries(wantedField), expectedCountryList)
+        pass

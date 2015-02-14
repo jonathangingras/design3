@@ -20,3 +20,4 @@ class CountryRepositoryDB(CountryRepository):
                     listOfPossibleCountry.append(country.name)
             listOfPossibleCountryByKeyword.append(listOfPossibleCountry)
         return listOfPossibleCountryByKeyword
+
