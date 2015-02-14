@@ -9,4 +9,6 @@ class TestCountryRepositoryFiller(TestCase):
         countryRepository = CountryRepositoryDB()
         countryDBFiller = CountryRepositoryFiller(countryRepository)
         countryDBFiller.addCountriesToTheRepository()
-        self.assertEqual(countryRepository.searchCountries({'Capital': 'Paris'}), ['France'])
+        self.assertEqual(countryRepository.searchCountries({'Capital': 'Paris'}), [['France']])
+
+    def test_findingAParsedCountryByIts

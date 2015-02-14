@@ -12,5 +12,5 @@ class HtmlInformationValidator(object):
             if extractedInfo.string is not None:
                 formattedInformationString = self.htmlInformationFormatter.informationKeyFormatting(extractedInfo.string)
                 if formattedInformationString is not None:
-                    informationList.append(formattedInformationString)
+                    informationList.append(formattedInformationString.encode('utf-8'))
         return informationList

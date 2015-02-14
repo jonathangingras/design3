@@ -3,6 +3,7 @@ from naturalLanguagePython.countryPersistence.countryRepositoryDB import Country
 from naturalLanguagePython.CountryDomain.Country import Country
 from os import path
 import os, json
+
 class CountryRepositoryFiller(object):
 
     def __init__(self, countryRepository):
@@ -17,8 +18,6 @@ class CountryRepositoryFiller(object):
             countryInformationDict = json.load(countryJson)
             country = Country(nameOfCountryToAdd[0], countryInformationDict)
             self.countryRepository.addCountry(country)
-        print(self.countryRepository.countryList[0].informationDict)
-        print(self.countryRepository.searchCountries({'Capital': 'Kabul'}))
 
 
 if __name__ == '__main__':

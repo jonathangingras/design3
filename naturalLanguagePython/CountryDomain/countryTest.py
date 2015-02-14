@@ -12,6 +12,10 @@ class TestCountry(TestCase):
         self.nameOfCountry = 'France'
         self.country = Country(self.nameOfCountry, self.dictionary)
 
+        dictionaryCategoryList = {'Capital':['Kiev', 'newKiev']}
+        nameOfCountryWithCategoryList = 'Ukraine'
+        self.countryWithListInsideCategory = Country(nameOfCountryWithCategoryList, dictionaryCategoryList)
+
     def test_countryHasNameAttribute(self):
         self.assertIsNotNone(self.country.name)
 
@@ -38,5 +42,16 @@ class TestCountry(TestCase):
         key = 'GDP'
         value = 10000
         self.assertFalse(self.country.contains(key, value))
+
+    def test_containingWantedInformationInsideListWhenHavingOneInformationCategoryInsideListShouldReturnTrue(self):
+        key = 'Capital'
+        value = 'newKiev'
+        self.assertTrue(self.countryWithListInsideCategory.contains(key, value))
+
+    def test_notContainingWantedInformationInsideListWhenHavingOneInformationCategoryInsideListShouldReturnFalse(self):
+        key = 'Capital'
+        value = 'Paris'
+        self.assertFalse(self.countryWithListInsideCategory.contains(key, value))
+
 
 
