@@ -8,5 +8,5 @@ add_library(d3t12_rest
 )
 
 target_link_libraries(d3t12_rest
-	${REST_LIBS}
+	${D3_REST_LIBS}
 )

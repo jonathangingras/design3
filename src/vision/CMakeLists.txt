@@ -7,5 +7,5 @@ add_library(d3t12_vision
 )
 
 target_link_libraries(d3t12_vision
-	${VISION_LIBS}
+	${D3_VISION_LIBS}
 )

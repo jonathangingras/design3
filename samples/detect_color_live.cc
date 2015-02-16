@@ -9,7 +9,12 @@ int main(int argc, char** argv) {
     loader.fillPalette(palette);
     d3t12::ColorFilter colorFilter(palette.getColor(argv[2]));
     
-    cv::Mat input = cv::imread(argv[1]), resizedInput;
+    cv::Mat input;// = cv::imread(argv[1]);
+    cv::VideoCapture capture(1);
+    capture >> input;
+    /*cv::imshow("resizedInput", input);
+    cv::waitKey(0);*/
+    cv::Mat resizedInput;
     cv::resize(input, resizedInput, cv::Size(input.size().width*(atof(argv[3])), input.size().height*(atof(argv[3]))) , 0, 0, cv::INTER_LANCZOS4);
 
     cv::Mat workingSquaresMatrix = resizedInput.clone();
@@ -23,9 +28,9 @@ int main(int argc, char** argv) {
     squareFilter.drawSquares(outputSquaresMatrix);
 
     cv::Mat finalMatrix;
-    outputSquaresMatrix.copyTo(finalMatrix/*, colorsMask*/);
+    outputSquaresMatrix.copyTo(finalMatrix, colorsMask);
     
-    cv::imshow("resizedInput", resizedInput);
+    
     cv::imshow("output", finalMatrix);
     cv::waitKey(0);
 
