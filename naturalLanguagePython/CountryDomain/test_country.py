@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Country import Country
+from country import Country
 
 
 __author__ = 'Antoine'

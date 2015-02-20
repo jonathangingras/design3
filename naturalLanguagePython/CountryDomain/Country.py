@@ -7,7 +7,7 @@ class Country(object):
         self.name = nameOfCountry
         self.informationDict = informationDictionary
 
-    def __isValueListContainingTheWantedValue__(self, currentValuesFromKey, value, regex):
+    def __isValueListContainingTheWantedValue(self, currentValuesFromKey, value, regex):
         isContaining = False
         for currentValue in currentValuesFromKey:
             if regex is None:
@@ -19,7 +19,7 @@ class Country(object):
                     isContaining = True
         return isContaining
 
-    def __isValueCorrespondingToTheWantedValue__(self, currentValueFromKey, wantedValue, regex):
+    def __isValueCorrespondingToTheWantedValue(self, currentValueFromKey, wantedValue, regex):
         isContaining = False
         if regex is not None:
             expression = re.compile(regex)
@@ -35,8 +35,8 @@ class Country(object):
         if self.informationDict.has_key(key):
             if type(self.informationDict[key]) is list:
                 currentValue = self.informationDict[key]
-                isContaining = self.__isValueListContainingTheWantedValue__(currentValue, value, regex)
+                isContaining = self.__isValueListContainingTheWantedValue(currentValue, value, regex)
             else:
                 currentValue = self.informationDict[key]
-                isContaining = self.__isValueCorrespondingToTheWantedValue__(currentValue, value, regex)
+                isContaining = self.__isValueCorrespondingToTheWantedValue(currentValue, value, regex)
         return isContaining

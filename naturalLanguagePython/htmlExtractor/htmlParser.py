@@ -16,34 +16,34 @@ class htmlParser(object):
 
     def parseCountryHtml(self, fileToParse):
         self.soup = BeautifulSoup(open(fileToParse))
-        self.__openFile__()
-        self.__findCountryInformationKeys__()
-        self.__findCountryInformationValue__()
-        self.__writeInformationInOpenedFile__()
-        self.__closeOpenedFile__()
+        self.__openFile()
+        self.__findCountryInformationKeys()
+        self.__findCountryInformationValue()
+        self.__writeInformationInOpenedFile()
+        self.__closeOpenedFile()
 
-    def __findCountryInformationKeys__(self):
+    def __findCountryInformationKeys(self):
         self.informationCategoryList = self.htmlExtractor.extractCountryInformationHtmlTag(self.soup)
         for informationCategory in self.informationCategoryList:
             key = self.htmlExtractor.informationCategoryFinder(informationCategory)
             key = self.htmlInformationFormatter.informationKeyFormatting(key)
-            self.__addKeyToKeyList__(key)
-        self.__deleteUnimportantKeyword__()
+            self.__addKeyToKeyList(key)
+        self.__deleteUnimportantKeyword()
 
-    def __findCountryInformationValue__(self):
+    def __findCountryInformationValue(self):
         for key in self.keys:
             informationList = []
             extractedInfos = self.htmlExtractor.extractCountryData(key, self.soup)
             informationList = self.htmlInformationValidator.verifyingStringContent(extractedInfos)
             self.keys[key.encode()] = informationList
 
-    def __writeInformationInOpenedFile__(self):
+    def __writeInformationInOpenedFile(self):
         json.dump(self.keys, self.file, indent = 4, separators = (',', ':'))
 
-    def __closeOpenedFile__(self):
+    def __closeOpenedFile(self):
         self.file.close()
 
-    def __openFile__(self):
+    def __openFile(self):
         writeMode = 'w'
         jsonExtension = ".json"
         pathDirectory = "extractedCountryJson/"
@@ -52,11 +52,11 @@ class htmlParser(object):
         self.file = open(nameOfCountryFile, writeMode)
 
 
-    def __addKeyToKeyList__(self, key):
+    def __addKeyToKeyList(self, key):
         if(key is not None and key != 'None'):
             self.keys[key] = None
 
-    def __deleteUnimportantKeyword__(self):
+    def __deleteUnimportantKeyword(self):
         keyToIgnore = ['Economy - overview', "Executive branch", "Map references","Merchant marine", "Background", "Environment - international agreements",
                        "Legislative branch", "Judicial branch", "Military branches"]
         for key in keyToIgnore:

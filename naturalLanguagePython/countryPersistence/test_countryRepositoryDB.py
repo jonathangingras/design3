@@ -1,6 +1,6 @@
 from unittest import TestCase
 from countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.CountryDomain.Country import Country
+from naturalLanguagePython.CountryDomain.country import Country
 from mock import Mock
 __author__ = 'Antoine'
 
