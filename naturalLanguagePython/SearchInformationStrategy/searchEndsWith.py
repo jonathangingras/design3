@@ -3,5 +3,5 @@ from naturalLanguagePython.SearchInformationStrategy.searchInformation import Se
 
 class SearchEndsWith(SearchInformation):
 
-    def findInformation(self, dictonary, keyword, wantedInformation):
-        pass
+    def setRegex(self, wantedInformation):
+        self.regex = '(\\b[A-Z].*' + wantedInformation + '\b)'

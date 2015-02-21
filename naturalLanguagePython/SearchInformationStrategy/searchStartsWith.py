@@ -4,5 +4,6 @@ from naturalLanguagePython.SearchInformationStrategy.searchInformation import Se
 
 class SearchStartsWith(SearchInformation):
 
-    def findInformation(self, dictonary, keyword, wantedInformation):
-        pass
+
+    def __setRegex(self, wantedInformation):
+        self.regex = '(\\b' + wantedInformation + '.*\\b)'
