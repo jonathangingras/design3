@@ -21,7 +21,7 @@ class TestSearchStrategyFactory(TestCase):
         self.assertIsInstance(searchMethod, expectedClassType)
 
     def test_creatingSearchStrategyWhenSearchParticularityIsEndsWithShouldReturnObjectTypeSearchEndsWith(self):
-        searchMethod = self.searchStrategyFactory.createSearchStrategy("end with")
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("ends with")
         expectedClassType = SearchEndsWith
         self.assertIsInstance(searchMethod, expectedClassType)
 
