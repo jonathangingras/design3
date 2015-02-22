@@ -1,0 +1,12 @@
+{
+	"color" :
+	[
+		{ "name" : "blue",   "space" : "hsv" , "range" : [90,110,80,110,255,200] },
+		{ "name" : "black",  "space" : "hsv" , "range" : [115,0,0,180,64,102] },
+		{ "name" : "yellow", "space" : "hsv" , "range" : [25,150,130,30,255,255] },
+		{ "name" : "green",  "space" : "hsv" , "range" : [40, 130, 100, 55, 255, 255] },
+		{ "name" : "red",    "space" : "hsv" , "range" : [0,120,120,15,255,255] },
+		{ "name" : "white", "space" : "hsv" , "range" : [0, 0, 225, 30, 20, 255] },
+		{ "name" : "turquoise",  "space" : "hsv" , "range" : [60,120,140,75,200,230] }
+	]
+}

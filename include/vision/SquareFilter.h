@@ -14,8 +14,12 @@ protected:
 public:
 	inline SquareFilter() {}
 
-	void find_squares(cv::Mat& image);
+	void findSquares(const cv::Mat& image);
 	void drawSquares(cv::Mat& image) const;
+	
+	inline std::vector<std::vector<cv::Point> > getSquares() const {
+		return squares;
+	}
 };
 
 }

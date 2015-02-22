@@ -1,0 +1,26 @@
+<package>
+	<name>d3_table_transform</name>
+	<version>0.2.1</version>
+	
+	<description>
+		turtle_tf demonstrates how to write a tf broadcaster and listener with the turtlesim. The tutle_tf_listener commands turtle2 to follow turtle1 around as you drive turtle1 using the keyboard.
+	</description>
+
+	<maintainer email="william@osrfoundation.org">William Woodall</maintainer>
+	<license>wtf</license>
+	<author>Jonathan Gingras</author>
+	<author email="jonathan.gingras.1@gmail.com">Jonathan Gingras</author>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>geometry_msgs</build_depend>
+	<build_depend>roscpp</build_depend>
+	<build_depend>rospy</build_depend>
+	<build_depend>std_msgs</build_depend>
+	<build_depend>tf</build_depend>
+
+	<run_depend>geometry_msgs</run_depend>
+	<run_depend>roscpp</run_depend>
+	<run_depend>rospy</run_depend>
+	<run_depend>std_msgs</run_depend>
+	<run_depend>tf</run_depend>
+</package>

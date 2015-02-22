@@ -25,7 +25,13 @@ std::string AtlasJSONDecoder::_questionStr(const char* jsonStr) {
 	resolveRootJSON(jsonStr);
 	resolveQuestion();
 
-	return std::string(json_string_value(question));
+  std::string questionStr = json_string_value(question);
+
+  if(questionStr.empty()) {
+    throw JanssonException("\"question\" field is empty!");
+  }
+
+	return questionStr;
 }
 
 }

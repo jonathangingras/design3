@@ -29,6 +29,10 @@ void ColorJSONLoader::loadJSON() {
         rootJSON = NULL;
         throw JanssonException(json_error.text);
     }
+
+    if(!json_is_array(json_object_get(rootJSON, "colors"))) {
+        throw JanssonException("no \"colors\" field in JSON, or value not an array!");
+    }
 }
 
 void ColorJSONLoader::fillPalette(ColorPalette& palette) {

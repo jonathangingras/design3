@@ -21,8 +21,13 @@ void capture_and_detect(cv::Mat* out, cv::VideoCapture* in, d3t12::ColorFilter* 
             cv::drawContours( src, contours, i, cv::Scalar(0,0,255), 4, 8, hierarchy, 0, cv::Point() );
         */
 
-        for(int i = 0; i < contours.size(); ++i)
-            cv::rectangle(src, cv::boundingRect(contours[i]), cv::Scalar(0,0,255));
+        d3t12::IncrementalRect incRect;
+        for(int i = 0; i < contours.size(); ++i) {
+            incRect += cv::boundingRect(contours[i]);
+            //cv::rectangle(src, cv::boundingRect(contours[i]), cv::Scalar(0,0,255));
+        }
+        cv::rectangle(src, incRect.toCvRect(), cv::Scalar(0,0,255));
+        cv::circle(src, incRect.centerToCvPoint(), 2, cv::Scalar(0,0,255));
 
         cv::imshow("corners", src);
         //cv::imshow("orig", in_mat);
@@ -47,9 +52,9 @@ int main(int argc, char** argv)
     d3t12::ColorJSONLoader loader;
     loader.setFile("colors.json");
     loader.loadJSON();
-    d3t12::ColorPalette palette;
-    loader.fillPalette(palette);
-    d3t12::ColorFilter filter(palette.getColor(argv[1]));
+    d3t12::ColorPalette::Ptr palette(new d3t12::ColorPalette);
+    loader.fillPalette(*palette);
+    d3t12::ColorFilter filter(palette->getColor(argv[1]));
 
     //boost::thread capturer_thread_object(capturer_thread, &src, &capturer, &mutex);
     //boost::thread detector_thread_object(detector_thread, &dst, &src, &mutex);

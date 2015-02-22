@@ -4,6 +4,12 @@ add_library(d3t12_vision
 	ColorJSONLoader.cc
 	ColorPalette.cc
 	SquareFilter.cc
+	IncrementalRect.cc
+	CubeDetector.cc
+	ColoredCubeDetector.cc
+	BlackCubeDetector.cc
+	WhiteCubeDetector.cc
+	CubeDetectorFactory.cc
 )
 
 target_link_libraries(d3t12_vision

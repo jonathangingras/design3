@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     colorFilter.filter(colorsMask, resizedInput);
 
     d3t12::SquareFilter squareFilter;
-    squareFilter.find_squares(workingSquaresMatrix);
+    squareFilter.findSquares(workingSquaresMatrix);
     squareFilter.drawSquares(outputSquaresMatrix);
 
     cv::Mat finalMatrix;

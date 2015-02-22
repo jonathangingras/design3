@@ -14,6 +14,7 @@ class CURLGetter {
 	curl_output* output;
 
 	void initialize();
+	void finalize();
 	void _setURL(const char* p_url);
 
 public:

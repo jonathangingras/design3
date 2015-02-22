@@ -1,0 +1,11 @@
+<launch>
+
+<include file="$(find openni_launch)/launch/openni.launch"/>
+<include file="$(find ar_track_alvar)/launch/d3_bundle.launch"/>
+
+<node name="table_origin_broadcaster" pkg="d3_table_transform" type="table_origin_broadcaster">
+</node>
+<node name="robot_center_broadcaster" pkg="d3_table_transform" type="robot_center_broadcaster">
+</node>
+
+</launch>

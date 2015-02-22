@@ -11,8 +11,7 @@ CURLGetter::CURLGetter(std::string p_url) : url(p_url)  {
 }
 
 CURLGetter::~CURLGetter() {
-	curl_output_free(output);
-  curl_free(handle);
+	finalize();
 }
 
 void CURLGetter::initialize() {
@@ -25,15 +24,21 @@ void CURLGetter::initialize() {
 	//set fuction to call at perform time
   curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, &curl_output_write_data_overwrite);
 	//set pointer for string output
-  curl_easy_setopt(handle, CURLOPT_WRITEDATA, (void *)output);
+  curl_easy_setopt(handle, CURLOPT_WRITEDATA, (void*)output);
   //set options because server has its own certificate
   curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 0);
   curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 0);
 }
 
+void CURLGetter::finalize() {
+  curl_output_free(output);
+  curl_free(handle);
+}
+
 void CURLGetter::_setURL(const char* p_url) {
 	url = p_url;
-	curl_easy_setopt(handle, CURLOPT_URL, url.c_str());
+  finalize();
+  initialize();
 }
 
 std::string CURLGetter::performGET() {

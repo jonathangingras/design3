@@ -10,10 +10,10 @@ double SquareFilter::angle(cv::Point pt1, cv::Point pt2, cv::Point pt0) {
     return (dx1*dx2 + dy1*dy2)/sqrt((dx1*dx1 + dy1*dy1)*(dx2*dx2 + dy2*dy2) + 1e-10);
 }
 
-void SquareFilter::find_squares(cv::Mat& image)
+void SquareFilter::findSquares(const cv::Mat& image)
 {
     // blur will enhance edge detection
-    cv::Mat blurred(image);
+    cv::Mat blurred(image.clone());
     cv::medianBlur(image, blurred, 9);
     //cv::GaussianBlur(image, blurred, cv::Size(5,5), 0.5, 0.5);
 
@@ -58,19 +58,20 @@ void SquareFilter::find_squares(cv::Mat& image)
                     // Note: absolute value of an area is used because
                     // area may be positive or negative - in accordance with the
                     // contour orientation
-                    if (approx.size() > 3 &&
+                    if (approx.size() > 4 &&
                             fabs(cv::contourArea(cv::Mat(approx))) > 200 &&
+                            fabs(cv::contourArea(cv::Mat(approx))) < 3000 &&
                             cv::isContourConvex(cv::Mat(approx))
                         )
                     {
-                            /*double maxCosine = 0;
-
-                            for (int j = 2; j < 5; j++)
-                            {
-                                    double cosine = fabs(cv::angle(approx[j%4], approx[j-2], approx[j-1]));
-                                    maxCosine = MAX(maxCosine, cosine);
-                            }*/
-
+                            //double maxCosine = 0;
+                            //
+                            //for (int j = 2; j < 5; j++)
+                            //{
+                            //        double cosine = fabs(angle(approx[j%4], approx[j-2], approx[j-1]));
+                            //        maxCosine = MAX(maxCosine, cosine);
+                            //}
+                            //
                             //if (maxCosine < 0.3)
                                     squares.push_back(approx);
                     }
