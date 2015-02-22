@@ -25,5 +25,5 @@ class Country(object):
                 currentValue = self.informationDict[key]
                 isContaining = self.__isValueListContainingTheWantedValue(currentValue, value)
             else:
-                searchStrategy.findInformation(self.informationDict, key, value)
+                isContaining = searchStrategy.findInformation(self.informationDict, key, value)
         return isContaining

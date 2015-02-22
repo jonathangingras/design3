@@ -1,7 +1,7 @@
 from unittest import TestCase
 from country import Country
-
-
+from mock import Mock
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 __author__ = 'Antoine'
 
 
@@ -52,3 +52,19 @@ class TestCountry(TestCase):
         key = 'Capital'
         value = 'Paris'
         self.assertFalse(self.countryWithListInsideCategory.contains(key, value))
+
+    def test_containingWantedInformationInsideListWhenUsingSearchStrategyShouldReturnTrue(self):
+        key = 'Capital'
+        value = 'Paris'
+        searchStrategy = SearchInformation()
+        searchStrategy.findInformation = Mock(return_value = True)
+        self.assertTrue(self.countryWithListInsideCategory.contains(key, value, searchStrategy))
+
+    def test_notContainingWantedInformationInsideListWhenUsingSearchStrategyShouldReturnFalse(self):
+        key = 'Capital'
+        value = 'Paris'
+        searchStrategy = SearchInformation()
+        searchStrategy.findInformation = Mock(return_value = False)
+        self.assertFalse(self.countryWithListInsideCategory.contains(key, value, searchStrategy))
+
+
