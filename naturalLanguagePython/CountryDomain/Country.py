@@ -1,5 +1,5 @@
 __author__ = 'Antoine'
-import re
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 
 class Country(object):
 
@@ -7,36 +7,23 @@ class Country(object):
         self.name = nameOfCountry
         self.informationDict = informationDictionary
 
-    def __isValueListContainingTheWantedValue(self, currentValuesFromKey, value, regex):
+    def __isValueListContainingTheWantedValue(self, currentValuesFromKey, value):
         isContaining = False
-        for currentValue in currentValuesFromKey:
-            if regex is None:
+        if type(currentValuesFromKey) is list:
+            for currentValue in currentValuesFromKey:
                 if currentValue == value:
                     isContaining = True
-            else:
-                expression = re.compile(regex)
-                if expression.search(currentValue) is not None:
-                    isContaining = True
-        return isContaining
-
-    def __isValueCorrespondingToTheWantedValue(self, currentValueFromKey, wantedValue, regex):
-        isContaining = False
-        if regex is not None:
-            expression = re.compile(regex)
-            if expression.search(currentValueFromKey) is not None:
-                isContaining = True
         else:
-            if currentValueFromKey is wantedValue:
+            if currentValuesFromKey is value:
                 isContaining = True
         return isContaining
 
-    def contains(self, key, value, regex = None):
+    def contains(self, key, value, searchStrategy = None):
         isContaining = False
         if self.informationDict.has_key(key):
-            if type(self.informationDict[key]) is list:
+            if searchStrategy is None:
                 currentValue = self.informationDict[key]
-                isContaining = self.__isValueListContainingTheWantedValue(currentValue, value, regex)
+                isContaining = self.__isValueListContainingTheWantedValue(currentValue, value)
             else:
-                currentValue = self.informationDict[key]
-                isContaining = self.__isValueCorrespondingToTheWantedValue(currentValue, value, regex)
+                searchStrategy.findInformation(self.informationDict, key, value)
         return isContaining

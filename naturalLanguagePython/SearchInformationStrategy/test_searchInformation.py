@@ -11,7 +11,8 @@ class TestSearchInformation(TestCase):
         self.searchMethodEndsWith = SearchEndsWith()
         self.searchMethodContains = SearchContains()
         self.dictionaryForSearchMethodTestWithoutList = {"capital": ["Paris"]}
-        self.dictionaryForSearchMethodTestWithList = {"capital" : ["In the same continent", "Paris"]}
+        self.dictionaryForSearchMethodTestWithList = {"capital" : ["In the same continent", "Paris"],
+                                                      "Population": ["Estimate of 100000"]}
 
     def test_findingCorrespondingInformationInsideDictionaryWithTheStartsWithRegexShouldReturnTrue(self):
         keyword = "capital"
@@ -60,3 +61,13 @@ class TestSearchInformation(TestCase):
         keyword = "capital"
         wantedInformation = "Kiev"
         self.assertFalse(self.searchMethodContains.findInformation(self.dictionaryForSearchMethodTestWithoutList, keyword, wantedInformation))
+
+    def test_findingCorrespondingNumberInsideDictionaryWithTheContainsStrategyShouldReturnTrue(self):
+        keyword = "Population"
+        wantedInformation = "100000"
+        self.assertTrue(self.searchMethodContains.findInformation(self.dictionaryForSearchMethodTestWithList, keyword, wantedInformation))
+
+    def test_notFindingCorrespondingNumberInsideDictionaryWithTheContainsStrategyShouldReturnFalse(self):
+        keyword = "Population"
+        wantedInformation = "2100000"
+        self.assertFalse(self.searchMethodContains.findInformation(self.dictionaryForSearchMethodTestWithList, keyword, wantedInformation))
