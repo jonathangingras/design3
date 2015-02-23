@@ -2,6 +2,7 @@ from unittest import TestCase
 from countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.CountryDomain.country import Country
 from mock import Mock
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 __author__ = 'Antoine'
 
 
@@ -15,6 +16,8 @@ class TestCountryRepositoryDB(TestCase):
         self.countryWithTwoCategory.contains = Mock(return_value = True)
         self.firstCountryToAdd.contains = Mock(return_value = True)
         self.secondCountryToAdd.contains = Mock(return_value = True)
+        self.searchStrategy = SearchInformation()
+        self.searchStrategy.findInformation = Mock(return_value = True)
 
     def test_addCountryToTheDatabase(self):
         self.assertRaises(self.countryRepository.addCountry(self.firstCountryToAdd), None)
@@ -45,3 +48,9 @@ class TestCountryRepositoryDB(TestCase):
         expectedListOfNameOfTheSearchedCountry = [['Canada'], ['Canada']]
         self.countryRepository.addCountry(self.countryWithTwoCategory)
         self.assertEqual(self.countryRepository.searchCountries(keywordSearchedDictionary), expectedListOfNameOfTheSearchedCountry)
+
+    def test_searchingCountryWhenUsingASearchStrategyShouldReturnTheNameOfCountry(self):
+        keywordSearchedInDictionary = {'Capital' : 'Ottawa'}
+        expectedListOfNameOfTheSearchCountry = [['Canada']]
+        self.countryRepository.addCountry(self.countryWithTwoCategory)
+        self.assertEqual(self.countryRepository.searchCountries(keywordSearchedInDictionary, self.searchStrategy), expectedListOfNameOfTheSearchCountry)
