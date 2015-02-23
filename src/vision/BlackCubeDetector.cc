@@ -19,17 +19,17 @@ cv::Rect BlackCubeDetector::detectCube() {
 
 		int erosion_size = 2;
 		cv::Mat element = cv::getStructuringElement(
-			cv::MORPH_ELLIPSE,
+			cv::MORPH_RECT,
 			cv::Size( 2*erosion_size + 1, 2*erosion_size+1 ),
 			cv::Point( erosion_size, erosion_size )
 		);
 		
 		cv::erode(gray, gray, element);
-		cv::erode(gray, gray, element);
-		cv::erode(gray, gray, element);
-		cv::erode(gray, gray, element);
-		cv::erode(gray, gray, element);
 
+		cv::dilate(gray, gray, element);
+		cv::dilate(gray, gray, element);
+		cv::dilate(gray, gray, element);
+		cv::dilate(gray, gray, element);
 		cv::dilate(gray, gray, element);
 		cv::dilate(gray, gray, element);
 		cv::dilate(gray, gray, element);
@@ -37,39 +37,61 @@ cv::Rect BlackCubeDetector::detectCube() {
 		cv::dilate(gray, gray, element);
  
 		cv::Mat canny_output;
-        std::vector<cv::Vec4i> hierarchy;
-        std::vector<std::vector<cv::Point> > contours, validContours;
+        std::vector<cv::Vec4i> hierarchy, hierarchy2;
+        std::vector<std::vector<cv::Point> > contours, contours2, validContours;
         cv::Canny( gray, canny_output, threshold, threshold*2, 3 );
         cv::findContours( canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
 
-        for(int i = 0; i < contours.size(); ++i) {
-        	double area = cv::contourArea(contours[i]);
-        	cv::drawContours( *sourceImage, contours, i, cv::Scalar(0,0,255), 2, 8, hierarchy, 0, cv::Point() );
-        	
-        	/*cv::Rect contourRect = cv::boundingRect(contours[i]);
-        	cv::Mat contourRectMat( *sourceImage, contourRect ), contourRectMatMask;
-        	
-        	cv::inRange(contourRectMat, cv::Scalar(0,0,0), cv::Scalar(60,60,60), contourRectMatMask);
+        cv::Mat element2 = cv::getStructuringElement(
+			cv::MORPH_CROSS,
+			cv::Size( 7, 7 ),
+			cv::Point( 2, 2 )
+		);
+		cv::Mat element3 = cv::getStructuringElement(
+			cv::MORPH_CROSS,
+			cv::Size( 3, 3 ),
+			cv::Point( 1, 1 )
+		);
 
-        	cv::erode(contourRectMatMask, contourRectMatMask, element);
-			cv::erode(contourRectMatMask, contourRectMatMask, element);
-			cv::erode(contourRectMatMask, contourRectMatMask, element);
-			cv::erode(contourRectMatMask, contourRectMatMask, element);
-			cv::erode(contourRectMatMask, contourRectMatMask, element);
-			cv::erode(contourRectMatMask, contourRectMatMask, element);
-			
-			for(int j = 0; j < 30; ++j) cv::dilate(contourRectMatMask, contourRectMatMask, element);
+		cv::dilate(canny_output, canny_output, element2);
+		cv::dilate(canny_output, canny_output, element2);
+		cv::dilate(canny_output, canny_output, element2);
+		cv::dilate(canny_output, canny_output, element2);
+		cv::dilate(canny_output, canny_output, element2);
 
-        	//bool middleIsBlack = 0 != cv::countNonZero(contourRectMatMask);
-        	*/
-        	if(area < 10000 && area > 500 /* && middleIsBlack*/) {
-        		validContours.push_back(contours[i]);
-        	}
+        cv::erode(canny_output, canny_output, element2);
+        cv::erode(canny_output, canny_output, element2);
+        cv::erode(canny_output, canny_output, element2);
+        cv::erode(canny_output, canny_output, element2);
+
+        cv::Mat morphologyHasard, grayMorphologyHasard;
+        sourceImage->copyTo(morphologyHasard, canny_output);
+
+        cv::erode(morphologyHasard, morphologyHasard, element2);
+        cv::erode(morphologyHasard, morphologyHasard, element2);
+
+        cv::dilate(morphologyHasard, morphologyHasard, element2);
+        cv::dilate(morphologyHasard, morphologyHasard, element2);
+        cv::dilate(morphologyHasard, morphologyHasard, element2);
+        cv::dilate(morphologyHasard, morphologyHasard, element2);
+        
+        cv::cvtColor(morphologyHasard, grayMorphologyHasard, CV_BGR2GRAY);
+
+        cv::rectangle(grayMorphologyHasard, cv::Point(0,0), cv::Point(15,15), cv::Scalar(0), CV_FILLED);
+
+        cv::findContours( grayMorphologyHasard, contours2, hierarchy2, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+
+        cv::imshow("morphologyHasard", grayMorphologyHasard);
+        cv::waitKey(30);
+
+        for(int i = 0; i < contours2.size(); ++i) {
+        	//cv::drawContours( *sourceImage, contours2, i, cv::Scalar(0,0,255), 2, 8, hierarchy, 0, cv::Point() );
+        	cv::rectangle(*sourceImage, cv::boundingRect(contours2[i]), cv::Scalar(255,0,0));
         }
 
-        std::sort(validContours.begin(), validContours.end(), compareContoursHeight);
+        std::sort(contours2.begin(), contours2.end(), compareContoursHeight);
 
-		return ( validContours.end() != validContours.begin() ? cv::boundingRect(*--validContours.end()) : cv::Rect() );
+		return ( contours2.end() != contours2.begin() ? cv::boundingRect(*--contours2.end()) : cv::Rect() );
 }
 
 BlackCubeDetector::~BlackCubeDetector() {}
