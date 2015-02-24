@@ -2,7 +2,7 @@ from unittest import TestCase
 from mock import Mock
 from naturalLanguagePython.countryService.countryService import CountryService
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
+from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
 __author__ = 'Antoine'
@@ -18,15 +18,8 @@ class TestCountryService(TestCase):
         self.assertIsInstance(self.countryService.countryRepository, expectedInstance)
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfSearchStrategyFactory(self):
-        expectedInstance = SearchStrategyFactory
-        self.assertIsInstance(self.countryService.searchStrategyFactory, expectedInstance)
-
-    def test_searchingForACountryWhenHavingNoCountryInDatabaseShouldReturnNone(self):
-        searchedInformation = {
-            "Capital": ["aCapital"]
-        }
-        expectedMessage = "Repository is empty"
-        self.assertEqual(expectedMessage, self.countryService.searchCountry(searchedInformation))
+        expectedInstance = SearchStrategyServiceFactory
+        self.assertIsInstance(self.countryService.searchStrategyServiceFactory, expectedInstance)
 
     def test_searchingForACountryWhenHavingTheSearchedCountryInsideTheRepositoryShouldReturnTheNameOfTheCountry(self):
         searchedInformation = {
@@ -60,7 +53,7 @@ class TestCountryService(TestCase):
         expectedNameOfCountry = "France"
         self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation, wantedSearchStrategy))
         expectedInstanceOfLastUsedSearchStrategy = SearchEndsWith
-        lastUseSearchStrategy = self.countryService.searchStrategyFactory.searchStrategy
+        lastUseSearchStrategy = self.countryService.searchStrategyServiceFactory.searchStrategyFactory.searchStrategy
         self.assertIsInstance(lastUseSearchStrategy, expectedInstanceOfLastUsedSearchStrategy)
 
     def test_searchingForACountryWhenHavingMoreSearchStrategyThanItemInsideTheSearchedInformationDictShouldRaiseAnSearchException(self):
