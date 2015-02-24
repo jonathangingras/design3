@@ -1,9 +1,9 @@
 __author__ = 'Antoine'
-import abc
 
-class questionAnalyzer(object):
-    __metaclass__ = abc.ABCMeta
+class QuestionAnalyzer(object):
 
-    @abc.abstractmethod
+    def __init__(self):
+        pass
+
     def extractedImportantInformationsFromQuestion(self, questionFromAtlas):
         return

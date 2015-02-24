@@ -5,6 +5,7 @@ from naturalLanguagePython.countryPersistence.countryRepositoryDB import Country
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
 __author__ = 'Antoine'
 
 
@@ -12,6 +13,7 @@ class TestCountryService(TestCase):
 
     def setUp(self):
         self.countryService = CountryService()
+        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):
         expectedInstance = CountryRepositoryDB
@@ -64,4 +66,20 @@ class TestCountryService(TestCase):
         wantedSearchStrategy = ["starts with", "ends with"]
         self.assertRaises(CountryServiceException, self.countryService.searchCountry, searchedInformation, wantedSearchStrategy)
 
+    def test_analyzingAQuestionWhenTheReceivedStringIsNoneShouldRaiseException(self):
+        receivedQuestion = None
+        expectedRaisedError = CountryServiceException
+        self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
 
+    def test_analyzingAQuestionWhenTheReceivedStringIsAnEmptyStringShouldRaisesException(self):
+        receivedQuestion = ""
+        expectedRaisedError = CountryServiceException
+        self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
+
+    def test_analyzingAQuestionWhenTheReceivedStringContainsOneCategoryShouldReturnADictionaryWithOneInformationKeyAndValue(self):
+        receivedQuestion = "This is an example question"
+        expectedDictionaryReturned = {
+            "question": "example"
+        }
+        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion.side_effect = [{"question": "example"}]
+        self.assertEqual(expectedDictionaryReturned, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))
