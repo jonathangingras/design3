@@ -1,10 +1,10 @@
 from unittest import TestCase
 
 __author__ = 'Antoine'
-from naturalLanguagePython.SearchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
-from naturalLanguagePython.SearchInformationStrategy.searchContains import SearchContains
-from naturalLanguagePython.SearchInformationStrategy.searchStartsWith import SearchStartsWith
-from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
+from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
+from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
+from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 
 class TestSearchStrategyFactory(TestCase):
     def setUp(self):

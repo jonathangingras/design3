@@ -1,8 +1,8 @@
 __author__ = 'Antoine'
 
-from naturalLanguagePython.SearchInformationStrategy.searchContains import SearchContains
-from naturalLanguagePython.SearchInformationStrategy.searchStartsWith import SearchStartsWith
-from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
+from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
+from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 class SearchStrategyFactory(object):
 
     def __init__(self):
