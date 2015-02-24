@@ -1,7 +1,7 @@
 from unittest import TestCase
-from country import Country
 from mock import Mock
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
+from naturalLanguagePython.countryDomain.country import Country
 __author__ = 'Antoine'
 
 

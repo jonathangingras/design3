@@ -1,6 +1,6 @@
 from unittest import TestCase
 __author__ = 'Antoine'
-from countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
+from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
 #Acceptance  testing is done with this file
 class TestCountryRepositoryFiller(TestCase):
 
