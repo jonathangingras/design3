@@ -20,6 +20,16 @@ public:
 	inline std::vector<std::vector<cv::Point> > getSquares() const {
 		return squares;
 	}
+
+	inline cv::Rect boundingRect() const {
+		std::vector<cv::Point> points;
+		for(int i = 0; i < squares.size(); ++i) {
+			for(int j = 0; j < squares[i].size(); ++j) {
+				points.push_back(squares[i][j]);
+			}
+		}
+		return cv::boundingRect(points);
+	}
 };
 
 }
