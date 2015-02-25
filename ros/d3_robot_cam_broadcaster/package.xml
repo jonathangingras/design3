@@ -1,0 +1,30 @@
+<package>
+	<name>d3_robot_cam_broadcaster</name>
+	<version>0.0.1</version>
+	
+	<description>
+		broadcasts the robot camera image to a ros message
+	</description>
+
+	<license>wtf</license>
+	<author>Jonathan Gingras</author>
+	<author email="jonathan.gingras.1@gmail.com">Jonathan Gingras</author>
+	<maintainer email="jonathan.gingras.1@gmail.com">Jonathan Gingras</maintainer>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>geometry_msgs</build_depend>
+	<build_depend>rospy</build_depend>
+	<build_depend>roscpp</build_depend>
+	<build_depend>image_transport</build_depend>
+	<build_depend>cv_bridge</build_depend>
+	<build_depend>std_msgs</build_depend>
+	<build_depend>tf</build_depend>
+
+	<run_depend>geometry_msgs</run_depend>
+	<run_depend>roscpp</run_depend>
+	<run_depend>rospy</run_depend>
+	<run_depend>cv_bridge</run_depend>
+	<run_depend>image_transport</run_depend>
+	<run_depend>std_msgs</run_depend>
+	<run_depend>tf</run_depend>
+</package>
