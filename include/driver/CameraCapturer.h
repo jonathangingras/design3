@@ -20,7 +20,7 @@ private:
 
 public:
 	CameraCapturer(int deviceId, int width = 640, int height = 480,
-		int whiteBalanceTemperature = 0, bool _deactivateWhiteBalance = true);
+		int whiteBalanceTemperature = 2800, bool _deactivateWhiteBalance = true);
 	
 	~CameraCapturer();
 
