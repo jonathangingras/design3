@@ -18,9 +18,3 @@ class CountryRepositoryFiller(object):
             countryInformationDict = json.load(countryJson)
             country = Country(nameOfCountryToAdd[0], countryInformationDict)
             self.countryRepository.addCountry(country)
-
-
-if __name__ == '__main__':
-    countryDB = CountryRepositoryDB()
-    parser = CountryRepositoryFiller(countryDB)
-    parser.addCountriesToTheRepository()

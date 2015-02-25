@@ -12,7 +12,7 @@ class CountryService(object):
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
         self.searchStrategy = None
         self.questionAnalyzer = QuestionAnalyzer()
-        #self.__setupTheCountryRepository()
+        self.__setupTheCountryRepository()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
         if receivedQuestion is None:
