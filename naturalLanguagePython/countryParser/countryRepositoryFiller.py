@@ -15,7 +15,6 @@ class CountryRepositoryFiller(object):
             nameOfCountryToAdd = countryFile.split('.')
             extractedCountryJson = jsonDirectoryPath + "//" + countryFile
             countryJson = open((extractedCountryJson), 'r')
-            print(countryJson)
             countryInformationDict = json.load(countryJson)
             country = Country(nameOfCountryToAdd[0], countryInformationDict)
             self.countryRepository.addCountry(country)
