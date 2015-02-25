@@ -65,3 +65,15 @@ class TestCountryRepositoryFiller(TestCase):
         wantedField = {"Death rate": "7.07 deaths/1,000"}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
+
+    def test_searchAParsedCountryWhenSearchingByItsIndependenceDateShouldReturnNameOfPossibleCountry(self):
+        expectedCountryList = [["Bahrain"]]
+        wantedField = {"Independence" : "August 1971"}
+        searchStrategy = self.searchStrategyFactory.createSearchStrategy()
+        self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
+
+    def test_searchAParsedCountryWhenSearchingByItsNationalAnthemShouldReturnTheNameOfTheCountry(self):
+        expectedCountryList = [["Egypt"]]
+        wantedField = {"National anthem": "Bilady, Bilady, Bilady"}
+        searchStrategy = self.searchStrategyFactory.createSearchStrategy()
+        self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
