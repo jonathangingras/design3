@@ -34,7 +34,8 @@ class CountryService(object):
                 nameOfCountry = nameOfCountryFistCall
                 break
         if type(nameOfCountry) is list:
-            print(nameOfCountry)
+            if len(nameOfCountry) > 1:
+                return "Unable to return only one Country. Here's the list of possible ones : " + str(nameOfCountry)
             nameOfCountry = nameOfCountry[0]
         return nameOfCountry
 

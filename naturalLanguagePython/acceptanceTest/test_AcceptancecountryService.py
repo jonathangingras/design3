@@ -6,15 +6,20 @@ __author__ = 'Antoine'
 
 class AcceptanceTestCountryService(TestCase):
 
+    def setUp(self):
+        self.countryService = CountryService()
     def test_usingServiceToSearchACountryWhenSearchingForACapitalShouldReturnTheNameOfTheCountry(self):
-        countryService = CountryService()
         expectedReturnedCountryName = "Canada"
         dictionaryFromQuestion = {"Capital": "Ottawa"}
-
-        self.assertEqual(expectedReturnedCountryName, countryService.searchCountry(dictionaryFromQuestion))
+        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalStartsWithNameShouldReturnTheNameOfTheCountry(self):
-        countryService = CountryService()
-        expectedReturnedCountryName = "United_State_Of_America"
-        dictionaryFromQuestion = {"Capital": "Wa"}
-        self.assertEqual(expectedReturnedCountryName, countryService.searchCountry(dictionaryFromQuestion, ["starts with"]))
+        expectedReturnedCountryName = "Unable to return only one Country. Here's the list of possible ones : " \
+                                      "['Afghanistan', 'Kazakhstan', 'Nepal', 'Uganda']"
+        dictionaryFromQuestion = {"Capital": "Ka"}
+        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["starts with"]))
+
+    def test_usingServiceToSearchACountryWhenSearchingForACapitalByItsEndsWithNameShouldReturnTheNameOfPossibleCountry(self):
+        expectedReturnedCountryName = 'Greece'
+        dictionaryFromQuestion = {"Capital": "ens"}
+        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["ends with"]))
