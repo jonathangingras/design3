@@ -18,13 +18,3 @@ class SearchStrategyServiceFactory(object):
         while len(wantedSearchStrategy) < len(searchedInformationDict):
             wantedSearchStrategy.append(defaultSearchStrategy)
         return wantedSearchStrategy
-
-    def searchPossiblesCountryInRepository(self, countryRepository, searchedInformationDict, wantedSearchStrategy):
-        searchStrategyNumberInList = 0
-        listOfCountry = []
-        for key in searchedInformationDict:
-            self.searchStrategy = self.searchStrategyFactory.createSearchStrategy(
-                wantedSearchStrategy[searchStrategyNumberInList])
-            listOfCountry.append(countryRepository.searchCountries(searchedInformationDict, self.searchStrategy))
-            searchStrategyNumberInList += 1
-        return listOfCountry

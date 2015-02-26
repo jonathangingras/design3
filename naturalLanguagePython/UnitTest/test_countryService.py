@@ -55,7 +55,7 @@ class TestCountryService(TestCase):
         expectedNameOfCountry = "France"
         self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation, wantedSearchStrategy))
         expectedInstanceOfLastUsedSearchStrategy = SearchEndsWith
-        lastUseSearchStrategy = self.countryService.searchStrategyServiceFactory.searchStrategyFactory.searchStrategy
+        lastUseSearchStrategy = self.countryService.repositorySearch.searchStrategyServiceFactory.searchStrategyFactory.searchStrategy
         self.assertIsInstance(lastUseSearchStrategy, expectedInstanceOfLastUsedSearchStrategy)
 
     def test_searchingForACountryWhenHavingMoreSearchStrategyThanItemInsideTheSearchedInformationDictShouldRaiseAnSearchException(self):

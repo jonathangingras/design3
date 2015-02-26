@@ -10,8 +10,8 @@ class CountryRepositoryFiller(object):
         self.countryRepository = countryRepository
 
     def addCountriesToTheRepository(self):
-        jsonDirectoryPath = path.realpath('../HtmlExtractor/extractedCountryJson')
-        for countryFile in os.listdir(path.abspath(jsonDirectoryPath)):
+        jsonDirectoryPath = path.realpath('../naturalLanguagePython/HtmlExtractor/extractedCountryJson')
+        for countryFile in os.listdir(jsonDirectoryPath):
             nameOfCountryToAdd = countryFile.split('.')
             extractedCountryJson = jsonDirectoryPath + "//" + countryFile
             countryJson = open((extractedCountryJson), 'r')
