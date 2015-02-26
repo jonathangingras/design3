@@ -1,12 +1,11 @@
 __author__ = 'Antoine'
 import abc
 import re
-class SearchInformation(object):
 
-    __metaclass__ = abc.ABCMeta
+
+class SearchInformation(object):
     def __setRegex(self, wantedInformation):
         self.regex = wantedInformation
-
 
     def findInformation(self, dictionary, keyword, wantedInformation):
         isContaining = False

@@ -1,6 +1,6 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.countryDomain.countryRepository import CountryRepository
-from naturalLanguagePython.countryDomain.country import Country
+from naturalLanguagePython.CountryDomain.countryRepository import CountryRepository
+from naturalLanguagePython.CountryDomain.country import Country
 
 
 class CountryRepositoryDB(CountryRepository):

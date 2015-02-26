@@ -1,9 +1,10 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
-from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
-from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
-from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
+from naturalLanguagePython.CountryParser.countryRepositoryFiller import CountryRepositoryFiller
+from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.QuestionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+
 
 class CountryService(object):
 
@@ -32,6 +33,9 @@ class CountryService(object):
             if numberOfAppearanceOfNameOfCountry == len(listOfPossibleCountryByCategory):
                 nameOfCountry = nameOfCountryFistCall
                 break
+        if type(nameOfCountry) is list:
+            print(nameOfCountry)
+            nameOfCountry = nameOfCountry[0]
         return nameOfCountry
 
     def __setupTheCountryRepository(self):

@@ -1,9 +1,9 @@
 from unittest import TestCase
 
 __author__ = 'Antoine'
-from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
-from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
-from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.SearchInformationStrategy.searchContains import SearchContains
+from naturalLanguagePython.SearchInformationStrategy.searchStartsWith import SearchStartsWith
+from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
 
 class TestSearchInformation(TestCase):
     def setUp(self):

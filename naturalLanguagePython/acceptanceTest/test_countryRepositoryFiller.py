@@ -1,7 +1,7 @@
 __author__ = 'Antoine'
 from unittest import TestCase
-from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
-from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
+from naturalLanguagePython.CountryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
+from naturalLanguagePython.SearchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
 #Acceptance  testing is done with this file
 class TestCountryRepositoryFiller(TestCase):
 

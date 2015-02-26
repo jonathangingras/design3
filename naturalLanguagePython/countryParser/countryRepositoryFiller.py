@@ -1,6 +1,6 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.countryDomain.country import Country
+from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.CountryDomain.country import Country
 from os import path
 import os, json
 
@@ -10,7 +10,7 @@ class CountryRepositoryFiller(object):
         self.countryRepository = countryRepository
 
     def addCountriesToTheRepository(self):
-        jsonDirectoryPath = "C://Users//Antoine//Documents//design3//naturalLanguagePython//htmlExtractor//extractedCountryJson"
+        jsonDirectoryPath = "C://Users//Antoine//Documents//design3//naturalLanguagePython//HtmlExtractor//extractedCountryJson"
         for countryFile in os.listdir(path.abspath(jsonDirectoryPath)):
             nameOfCountryToAdd = countryFile.split('.')
             extractedCountryJson = jsonDirectoryPath + "//" + countryFile
