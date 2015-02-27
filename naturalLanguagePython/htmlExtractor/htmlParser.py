@@ -49,7 +49,7 @@ class htmlParser(object):
         pathDirectory = "extractedCountryJson/"
         nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
         nameOfCountry = nameOfCountry.replace(' ', '_')
-        nameOfCountryFile = pathDirectory + nameOfCountry + jsonExtension
+        nameOfountryFile = pathDirectory + nameOfCountry + jsonExtension
         self.file = open(nameOfCountryFile, writeMode)
 
 

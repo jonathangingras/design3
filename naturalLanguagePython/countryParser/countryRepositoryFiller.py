@@ -1,6 +1,6 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.CountryDomain.country import Country
+from naturalLanguagePython.CountryDomain.Country import Country
 from os import path
 import os, json
 
