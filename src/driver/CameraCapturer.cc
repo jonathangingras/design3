@@ -68,9 +68,9 @@ CameraCapturer::CameraCapturer(int deviceId, int width, int height, int whiteBal
 
 	device_handle.image_treatment = &kiki_v4l2_YUV422toBGR888;
 
-	setWhiteBalanceTemperature(whiteBalanceTemperature);
 	if(_deactivateWhiteBalance) {
 		deactivateWhiteBalance();
+		setWhiteBalanceTemperature(whiteBalanceTemperature);
 	}
 
 	if(kiki_v4l2_turn_device_on(&device_handle)) {

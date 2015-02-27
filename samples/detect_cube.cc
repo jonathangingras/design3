@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
     d3t12::cvMatPtr src(new cv::Mat);
-    //d3t12::CameraCapturer capturer(0);
+    d3t12::CameraCapturer capturer(0);
     
     d3t12::ColorJSONLoader loader;
     loader.setFile("colors.json");
@@ -18,15 +18,15 @@ int main(int argc, char** argv) {
     d3t12::SignalFunctor::Ptr exitGuard(new d3t12::ExitGuard);
     d3t12::SIGINTHandler::getInstance().setSignalHandler(exitGuard);
     while(exitGuard->good()) {
-        //capturer >> *src;
-        *src = cv::imread(argv[2]);
+        capturer >> *src;
+        //*src = cv::imread(argv[2]);
 
         cv::Rect cubeRect = detector->detectCube();
         cv::rectangle(*src, cubeRect, cv::Scalar(0,255,0));
 
         cv::imshow("image", *src);
         cv::waitKey(30);
-        pause();
+        //pause();
     }
 
     std::cout << "bye" << std::endl;
