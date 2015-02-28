@@ -3,12 +3,17 @@ Projet Design III - Équipe 12
 
 #packets nécéssaires
 
+Opencv:
 - opencv 2.4.9
+
+ROS Hydro:
 - ros-hydro-desktop-full
 - ros-hydro-cmake-modules
 - ros-hydro-openni-launch
 - ros-hydro-openni-camera
-- curl
+
+Utilités:
+- curl (les headers et librairies)
 - realpath
 
 #projets externes fournis dans "extern"
