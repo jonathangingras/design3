@@ -3,6 +3,7 @@ Projet Design III - Équipe 12
 
 #packets nécéssaires
 
+- opencv 2.4.9
 - ros-hydro-desktop-full
 - ros-hydro-cmake-modules
 - ros-hydro-openni-launch
