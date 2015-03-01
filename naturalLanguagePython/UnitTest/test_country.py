@@ -1,7 +1,8 @@
 from unittest import TestCase
-from country import Country
+import unittest
 from mock import Mock
-from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
+from naturalLanguagePython.CountryDomain.Country import Country
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 __author__ = 'Antoine'
 
 
@@ -68,3 +69,5 @@ class TestCountry(TestCase):
         self.assertFalse(self.countryWithListInsideCategory.contains(key, value, searchStrategy))
 
 
+if __name__ == '__main__':
+    unittest.main()

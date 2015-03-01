@@ -1,6 +1,6 @@
-from htmlInformationFormatter import HtmlInformationFormatter
 from unittest import TestCase
 from bs4 import NavigableString
+from naturalLanguagePython.HtmlExtractor.htmlInformationFormatter import HtmlInformationFormatter
 __author__ = 'Antoine'
 
 

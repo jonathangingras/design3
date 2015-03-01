@@ -1,6 +1,6 @@
 __author__ = 'Antoine'
 
-from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 
 class SearchStartsWith(SearchInformation):
 

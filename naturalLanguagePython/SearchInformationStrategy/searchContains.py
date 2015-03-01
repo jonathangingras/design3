@@ -1,6 +1,5 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
-
+from naturalLanguagePython.SearchInformationStrategy.searchInformation import SearchInformation
 class SearchContains(SearchInformation):
 
     def __setRegex(self, wantedInformation):

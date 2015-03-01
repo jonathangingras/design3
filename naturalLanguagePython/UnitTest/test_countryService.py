@@ -1,10 +1,11 @@
 from unittest import TestCase
 from mock import Mock
-from naturalLanguagePython.countryService.countryService import CountryService
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
-from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
-from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.CountryService.countryService import CountryService
+from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
+from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.QuestionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
 __author__ = 'Antoine'
 
 
@@ -12,21 +13,15 @@ class TestCountryService(TestCase):
 
     def setUp(self):
         self.countryService = CountryService()
+        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):
         expectedInstance = CountryRepositoryDB
         self.assertIsInstance(self.countryService.countryRepository, expectedInstance)
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfSearchStrategyFactory(self):
-        expectedInstance = SearchStrategyFactory
-        self.assertIsInstance(self.countryService.searchStrategyFactory, expectedInstance)
-
-    def test_searchingForACountryWhenHavingNoCountryInDatabaseShouldReturnNone(self):
-        searchedInformation = {
-            "Capital": ["aCapital"]
-        }
-        expectedMessage = "Repository is empty"
-        self.assertEqual(expectedMessage, self.countryService.searchCountry(searchedInformation))
+        expectedInstance = SearchStrategyServiceFactory
+        self.assertIsInstance(self.countryService.searchStrategyServiceFactory, expectedInstance)
 
     def test_searchingForACountryWhenHavingTheSearchedCountryInsideTheRepositoryShouldReturnTheNameOfTheCountry(self):
         searchedInformation = {
@@ -60,7 +55,7 @@ class TestCountryService(TestCase):
         expectedNameOfCountry = "France"
         self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation, wantedSearchStrategy))
         expectedInstanceOfLastUsedSearchStrategy = SearchEndsWith
-        lastUseSearchStrategy = self.countryService.searchStrategyFactory.searchStrategy
+        lastUseSearchStrategy = self.countryService.repositorySearch.searchStrategyServiceFactory.searchStrategyFactory.searchStrategy
         self.assertIsInstance(lastUseSearchStrategy, expectedInstanceOfLastUsedSearchStrategy)
 
     def test_searchingForACountryWhenHavingMoreSearchStrategyThanItemInsideTheSearchedInformationDictShouldRaiseAnSearchException(self):
@@ -71,4 +66,20 @@ class TestCountryService(TestCase):
         wantedSearchStrategy = ["starts with", "ends with"]
         self.assertRaises(CountryServiceException, self.countryService.searchCountry, searchedInformation, wantedSearchStrategy)
 
+    def test_analyzingAQuestionWhenTheReceivedStringIsNoneShouldRaiseException(self):
+        receivedQuestion = None
+        expectedRaisedError = CountryServiceException
+        self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
 
+    def test_analyzingAQuestionWhenTheReceivedStringIsAnEmptyStringShouldRaisesException(self):
+        receivedQuestion = ""
+        expectedRaisedError = CountryServiceException
+        self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
+
+    def test_analyzingAQuestionWhenTheReceivedStringContainsOneCategoryShouldReturnADictionaryWithOneInformationKeyAndValue(self):
+        receivedQuestion = "This is an example question"
+        expectedDictionaryReturned = {
+            "question": "example"
+        }
+        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion.side_effect = [{"question": "example"}]
+        self.assertEqual(expectedDictionaryReturned, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))

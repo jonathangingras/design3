@@ -17,4 +17,4 @@ class HtmlInformationFormatter(object):
                 key = None
             return key
         except UnicodeEncodeError:
-            print(string)
+            pass

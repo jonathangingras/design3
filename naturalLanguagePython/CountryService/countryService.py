@@ -1,41 +1,54 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
-from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
+from naturalLanguagePython.CountryParser.countryRepositoryFiller import CountryRepositoryFiller
+from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.QuestionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+from naturalLanguagePython.CountryService.repositorySearch import RepositorySearch
+
 
 class CountryService(object):
 
     def __init__(self):
         self.countryRepository = CountryRepositoryDB()
-        self.searchStrategyFactory = SearchStrategyFactory()
-        self.searchStrategy = None
+        self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
+        self.questionAnalyzer = QuestionAnalyzer()
+        self.__setupTheCountryRepository()
+        self.repositorySearch = RepositorySearch()
+
+    def analyzeQuestionFromAtlas(self, receivedQuestion):
+        if receivedQuestion is None:
+            raise CountryServiceException("The received question from Atlas is empty")
+        if receivedQuestion is "":
+            raise CountryServiceException("The received question from Atlas is empty")
+        dictionaryOfImportantInformation = self.questionAnalyzer.extractedImportantInformationsFromQuestion(receivedQuestion)
+        return dictionaryOfImportantInformation
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""
-        listOfCountry = []
-        if self.countryRepository.countryList == []:
-            return "Repository is empty"
-        else:
-            if wantedSearchStrategy is None:
-                wantedSearchStrategy = []
-            if len(searchedInformationDict) < len(wantedSearchStrategy):
-                raise CountryServiceException(
-                    "The number of wanted information needs to be higher than the number of wanted search strategy")
-            while len(wantedSearchStrategy) < len(searchedInformationDict):
-                wantedSearchStrategy.append("Contains")
-            searchStrategyNumberInList = 0
-            for key in searchedInformationDict:
-                self.searchStrategy = self.searchStrategyFactory.createSearchStrategy(wantedSearchStrategy[searchStrategyNumberInList])
-                listOfCountry.append(self.countryRepository.searchCountries(searchedInformationDict, self.searchStrategy))
-                searchStrategyNumberInList += 1
-            numberOfCategory = len(listOfCountry)
-            for nameOfCountryFistCall in listOfCountry[0]:
-                numberOfAppearanceOfNameOfCountry = 0
-                for nameOfCountryList in listOfCountry:
-                    for namePossible in nameOfCountryList:
-                        if namePossible == nameOfCountryFistCall:
-                            numberOfAppearanceOfNameOfCountry += 1
-                if numberOfAppearanceOfNameOfCountry == numberOfCategory:
-                    nameOfCountry = nameOfCountryFistCall
-                    break
-            return nameOfCountry
+        wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict, wantedSearchStrategy)
+        listOfPossibleCountryByCategory = self.repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
+                                                                                                               searchedInformationDict, wantedSearchStrategy)
+        for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
+            numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
+                                                                                                   nameOfCountryFistCall)
+            if numberOfAppearanceOfNameOfCountry == len(listOfPossibleCountryByCategory):
+                nameOfCountry = nameOfCountryFistCall
+                break
+        if type(nameOfCountry) is list:
+            if len(nameOfCountry) > 1:
+                return "Unable to return only one Country. Here's the list of possible ones : " + str(nameOfCountry)
+            nameOfCountry = nameOfCountry[0]
+        return nameOfCountry
+
+    def __setupTheCountryRepository(self):
+        self.countryRepositoryFiller = CountryRepositoryFiller(self.countryRepository)
+        self.countryRepositoryFiller.addCountriesToTheRepository()
+
+    def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):
+        numberOfAppearanceOfNameOfCountry = 0
+        for nameOfCountryList in listOfCountry:
+            for namePossible in nameOfCountryList:
+                if namePossible == nameOfCountryFistCall:
+                    numberOfAppearanceOfNameOfCountry += 1
+        return numberOfAppearanceOfNameOfCountry

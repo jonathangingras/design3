@@ -1,5 +1,5 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
+
 
 class Country(object):
 
