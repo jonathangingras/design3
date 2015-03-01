@@ -1,11 +1,11 @@
 from unittest import TestCase
 from mock import Mock
 from naturalLanguagePython.CountryService.countryService import CountryService
-from naturalLanguagePython.CountryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
-from naturalLanguagePython.QuestionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
 __author__ = 'Antoine'
 
 
@@ -32,32 +32,6 @@ class TestCountryService(TestCase):
         expectedNameOfCountry = "France"
         self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation))
 
-    def test_searchingForACountryWhenHavingTwoPossibleCountryReturnedByTheDBShouldReturnTheCountryWhoseNameAppearsInAllListOfName(self):
-        searchedInformation = {
-            "Capital": ["aCapital"],
-            "Population": ["10000"]
-        }
-        self.countryService.countryRepository.countryList = ["France", "Canada"]
-        self.countryService.countryRepository.searchCountries = Mock()
-        self.countryService.countryRepository.searchCountries.side_effect = [["France", "Canada"], ["France"]]
-        expectedNameOfCountry = "France"
-        self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation))
-
-    def test_searchingForACountryWhenHavingTwoSearchStrategyShouldReturnTheCountryWhoseNameAppearsInAllListOfName(self):
-        searchedInformation = {
-            "Capital": ["aCapital"],
-            "Population": ["10000"]
-        }
-        self.countryService.countryRepository.countryList = ["France", "Canada"]
-        self.countryService.countryRepository.searchCountries = Mock()
-        self.countryService.countryRepository.searchCountries.side_effect = [["France", "Canada"], ["France"]]
-        wantedSearchStrategy = ["starts with", "ends with"]
-        expectedNameOfCountry = "France"
-        self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation, wantedSearchStrategy))
-        expectedInstanceOfLastUsedSearchStrategy = SearchEndsWith
-        lastUseSearchStrategy = self.countryService.repositorySearch.searchStrategyServiceFactory.searchStrategyFactory.searchStrategy
-        self.assertIsInstance(lastUseSearchStrategy, expectedInstanceOfLastUsedSearchStrategy)
-
     def test_searchingForACountryWhenHavingMoreSearchStrategyThanItemInsideTheSearchedInformationDictShouldRaiseAnSearchException(self):
         searchedInformation = {
             "Capital": ["aCapital"]
@@ -75,11 +49,3 @@ class TestCountryService(TestCase):
         receivedQuestion = ""
         expectedRaisedError = CountryServiceException
         self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
-
-    def test_analyzingAQuestionWhenTheReceivedStringContainsOneCategoryShouldReturnADictionaryWithOneInformationKeyAndValue(self):
-        receivedQuestion = "This is an example question"
-        expectedDictionaryReturned = {
-            "question": "example"
-        }
-        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion.side_effect = [{"question": "example"}]
-        self.assertEqual(expectedDictionaryReturned, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))

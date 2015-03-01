@@ -12,6 +12,12 @@ ROS Hydro:
 - ros-hydro-openni-launch
 - ros-hydro-openni-camera
 
+Natural Language:
+- python-bs4
+- python-mock
+- python-lxml
+- python-html5lib
+
 Utilités:
 - curl (les headers et librairies)
 - realpath

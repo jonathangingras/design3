@@ -1,5 +1,5 @@
 from unittest import TestCase
-from naturalLanguagePython.HtmlExtractor.htmlInformationValidator import HtmlInformationValidator
+from naturalLanguagePython.htmlExtractor.htmlInformationValidator import HtmlInformationValidator
 from bs4 import NavigableString, BeautifulSoup
 from mock import Mock
 

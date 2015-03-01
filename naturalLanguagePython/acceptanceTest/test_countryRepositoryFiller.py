@@ -1,6 +1,6 @@
 __author__ = 'Antoine'
 from unittest import TestCase
-from naturalLanguagePython.CountryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
+from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
 from naturalLanguagePython.SearchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
 #Acceptance  testing is done with this file
 class TestCountryRepositoryFiller(TestCase):
@@ -49,7 +49,7 @@ class TestCountryRepositoryFiller(TestCase):
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByTheNumberOfTelephoneMainLinesInUseShouldReturnTheCountryName(self):
-        expectedCountryList = [['Anguilla', 'Burma', 'Gaza_Strip', 'Paraguay', 'West_Bank']]
+        expectedCountryList = [['West_Bank', 'Anguilla', 'Burma', 'Paraguay', 'Gaza_Strip']]
         wantedField = {"Telephones - main lines in use": "6,000"}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
@@ -85,19 +85,19 @@ class TestCountryRepositoryFiller(TestCase):
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByItsPopulationGrowthRateShouldReturnTheNameOfPossibleCountry(self):
-        expectedCountryList = [["Armenia", "Japan"]]
+        expectedCountryList = [["Japan", "Armenia"]]
         wantedField = {"Population growth rate": "-0.13%"}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByItsNationalSymbolShouldReturnTheNameOfTheCountry(self):
-        expectedCountryList = [["Saint_Kitts_and_Nevis", "Saint_Martin"]]
+        expectedCountryList = [["Saint_Martin", "Saint_Kitts_and_Nevis"]]
         wantedField = {"National symbol(s)": "brown pelican"}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByReligionShouldReturnTheNameOfPossibleCountry(self):
-        expectedCountryList = [["Canada", "Fiji", "India", "Saudi_Arabia", "United_Arab_Emirates", "World"]]
+        expectedCountryList = [["Fiji", "World", "United_Arab_Emirates", "India", "Saudi_Arabia", "Canada"]]
         wantedField = {"Religions": "Sikh"}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
