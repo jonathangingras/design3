@@ -30,12 +30,12 @@ TEST(AtlasJSONDecoder, throwsWhenQuestionEmpty) {
 TEST(AtlasJSONDecoder, noThrowWhenQuestionPresent) {
 	AtlasJSONDecoder decoder;
 
-	EXPECT_NO_THROW(decoder.questionStr("{\"question\": \"Nice shoes, wanna f**k?\"}"));
+	EXPECT_NO_THROW(decoder.questionStr("{\"question\": \"Am I a question?\"}"));
 }
 
 TEST(AtlasJSONDecoder, questionStrIsAccurateWhenQuestionPresent) {
 	AtlasJSONDecoder decoder;
 
-	std::string expectedStr = "Nice shoes, wanna f**k?";
-	EXPECT_EQ(expectedStr, decoder.questionStr("{\"question\": \"Nice shoes, wanna f**k?\"}"));
+	std::string expectedStr = "Am I a question?";
+	EXPECT_EQ(expectedStr, decoder.questionStr("{\"question\": \"Am I a question?\"}"));
 }
