@@ -47,3 +47,8 @@ Utilités:
 
 - cd dans le répertoire "build"
 - rouler <code>for i in bin/*Test; do $i; done</code>
+
+# rouler les test du language naturel
+
+- cd dans le répertoire racine "design3"
+- rouler <code>python -m unittest discover</code>
