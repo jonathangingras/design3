@@ -37,7 +37,7 @@ class CountryService(object):
                 break
         if type(nameOfCountry) is list:
             if len(nameOfCountry) > 1:
-                return "Unable to return only one Country. Here's the list of possible ones : " + str(nameOfCountry)
+                return str(nameOfCountry)
             nameOfCountry = nameOfCountry[0]
         return nameOfCountry
 

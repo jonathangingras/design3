@@ -1,5 +1,5 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.SearchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
+from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
 from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
 defaultSearchStrategy = "Contains"
 

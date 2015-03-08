@@ -14,8 +14,8 @@ class AcceptanceTestCountryService(TestCase):
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalStartsWithNameShouldReturnTheNameOfTheCountry(self):
-        expectedReturnedCountryName = "Unable to return only one Country. Here's the list of possible ones : " \
-                                      "['Nepal', 'Afghanistan', 'Uganda', 'Kazakhstan']"
+        expectedReturnedCountryName = "['Nepal', 'Afghanistan', 'Uganda', 'Kazakhstan']"
+        expectedReturnedCountryName = "['Afghanistan', 'Kazakhstan', 'Nepal', 'Uganda']"
         dictionaryFromQuestion = {"Capital": "Ka"}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["starts with"]))
 

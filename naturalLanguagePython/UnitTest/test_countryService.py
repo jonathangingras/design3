@@ -3,7 +3,7 @@ from mock import Mock
 from naturalLanguagePython.CountryService.countryService import CountryService
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
-from naturalLanguagePython.SearchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.CountryService.countryServiceException import CountryServiceException
 from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
 __author__ = 'Antoine'
