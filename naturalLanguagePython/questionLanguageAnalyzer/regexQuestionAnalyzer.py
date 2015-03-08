@@ -3,24 +3,23 @@ import re
 import sys
 
 
-class RegexQuestionAnalyser(object):
+class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexKeyWord = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",#begin with key word
-                                 r"(?<=including )(.+)+ (and) (\w+){1}", #begin with key word
-                                 r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ([\S+]+)((\ \w+)+)?", #begin with key word
-                                 r"(?<=greater than )(((\d+)(\ )?)+(\w+\/\d+)?)+", #begin with key word
-                                 r"((\d+\s)?([A-Z][a-z]+\s(\d+)))", #date
-                                 r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENO])", #coord
+        self.listRegexKeyWord = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",
+                                 r"(?<=including )(.+)+ (and) (\w+){1}",
+                                 r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ([\S+]+)((\ \w+)+)?",
+                                 r"(?<=greater than )(((\d+)(\ )?)+(\w+\/\d+)?)+",
+                                 r"((\d+\s)?([A-Z][a-z]+\s(\d+)))",
+                                 r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENO])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
                                  r"(?<=What country has )([A-Z][a-z]+[^d ]\b)",
-                                 r"(\.[a-z]+)",#code
+                                 r"(\.[a-z]+)",
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+[\s\.]\d+\%?)(?=\.)",
-                                 r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)", #enum
+                                 r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)",
                                  r"((?<=The )(\w+\s*?){2}(?= is ))"]
-
-        self.registerOfKeyWord = ["starts with", "ends with", "including", "between", "greater than"]
+        self.registerOfKeyword = ["starts with", "ends with", "including", "between", "greater than", "contains", "less than"]
 
         self.subjectRegex = [r"((?<=[Mm]y )(.)*?((?= is)|(?= was)|(?= are)))",
                              r"((?<=[Mm]y )(\w+\s?){1,2}(?= starts))",
@@ -70,15 +69,6 @@ class RegexQuestionAnalyser(object):
         return self.listString
 
 
-    def searchKeyWord(self, question):
-        listkeyWordImportant = []
-        for word in self.registerOfKeyWord:
-            if question.find(word) != -1:
-                listkeyWordImportant.append(word)
-        #print listkeyWordImportant
-        self.listKeyword = listkeyWordImportant
-        return listkeyWordImportant
-
     def searchSubject(self, question):
         indexBegin = 0
         for reg in self.subjectRegex:
@@ -106,22 +96,21 @@ class RegexQuestionAnalyser(object):
         for x in self.listSubject:
             if(self.listSubject.count(x) > 1):
                 self.listSubject.remove(x)
-
-        #print self.listSubject
-
         return self.listSubject
+
+    def searchKeyword(self, question):
+        for word in self.registerOfKeyword:
+            if question.find(word) != -1:
+                self.listKeyword.append(word)
+        return self.listKeyword
 
     def associateWord(self, question):
 
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
             for subject, key in zip(self.listSubject, self.listString):
                 self.dictWord[subject] = key
-            #print self.dictWord
-            return
         elif len(self.listSubject) < len(self.listString) and len(self.listSubject) == 1:
             self.dictWord[self.listSubject[0]] = self.listString
-            #print self.dictWord
-            return
         elif(len(self.listSubject) == 2 and len(self.listString) == 2):
             for x in self.listSubject:
                 nearestValueDistance = sys.maxint
@@ -133,8 +122,4 @@ class RegexQuestionAnalyser(object):
                         nearestValuePosition = self.listString.index(y)
 
                 self.dictWord[x] = self.listString[nearestValuePosition]
-
-
-
-            print self.dictWord
-            return
+        print self.dictWord

@@ -1,19 +1,19 @@
 __author__ = 'alex'
 from naturalLanguagePython.questionLanguageAnalyzer.processLanguage import ProcessLanguage
-from naturalLanguagePython.questionLanguageAnalyzer.regexQuestionAnalyser import RegexQuestionAnalyser
-import regexQuestionAnalyser
+from naturalLanguagePython.questionLanguageAnalyzer.regexQuestionAnalyzer import RegexQuestionAnalyzer
+import regexQuestionAnalyzer
 
 
 class QuestionInformationAnalyser(object):
 
     def __init__(self):
-        self.regexAnalyser = RegexQuestionAnalyser()
+        self.regexAnalyser = RegexQuestionAnalyzer()
         self.processLanguage = ProcessLanguage()
         self.questionDictionary = {}
 
     def analyseQuestion(self, question):
         listimportante = self.regexAnalyser.parseAllRegexKeyWord(question)
-        listKeyWord = self.regexAnalyser.searchKeyWord(question)
+        self.regexAnalyser.searchKeyword(question)
         wordSubject = self.regexAnalyser.searchSubject(question)
         if len(listimportante) == 0 and len(wordSubject) == 0:
             self.questionDictionary = self.processLanguage.buildDictionaries()
