@@ -6,7 +6,7 @@ import sys
 class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexKeyWord = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",
+        self.listRegexKeyword = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",
                                  r"(?<=including )(.+)+ (and) (\w+){1}",
                                  r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ([\S+]+)((\ \w+)+)?",
                                  r"(?<=greater than )(((\d+)(\ )?)+(\w+\/\d+)?)+",
@@ -18,7 +18,9 @@ class RegexQuestionAnalyzer(object):
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+[\s\.]\d+\%?)(?=\.)",
                                  r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)",
-                                 r"((?<=The )(\w+\s*?){2}(?= is ))"]
+                                 r"((?<=The )(\w+\s*?){2}(?= is ))",
+                                 r"((?<=is )(\d+\s+\w*?){1,})",
+                                 r"((?<=[Mm]y )(?<=.)*?((?= is)|(?= was)|(?= are)|(?= is the))(\s+\w))"]
         self.registerOfKeyword = ["starts with", "ends with", "including", "between", "greater than", "contains", "less than"]
 
         self.subjectRegex = [r"((?<=[Mm]y )(.)*?((?= is)|(?= was)|(?= are)))",
@@ -34,10 +36,24 @@ class RegexQuestionAnalyzer(object):
         self.listKeyword = []
         self.dictWord = {}
 
+    def __parseAllRegexWord(self):
+        print self.listString
+        for x in self.listString:
+            for y in self.listString:
+                searchSub = str.find(x, y)
+                if searchSub != -1:
+                    if (len(x) > len(y)):
+                        self.listString.remove(y)
+        for x in self.listString:
+            if (self.listString.count(x) > 1):
+                self.listString.remove(x)
+
+        return self.listString
+
     def parseAllRegexKeyWord(self, question):
         indexBegin = 0
 
-        for reg in self.listRegexKeyWord:
+        for reg in self.listRegexKeyword:
             regex = re.compile(reg)
             wordReturn = regex.search(question)
             if  wordReturn != None:
@@ -51,22 +67,7 @@ class RegexQuestionAnalyzer(object):
                     else:
 
                         self.listString.append(regex.search(question).group())
-        for x in self.listString:
-            for y in self.listString:
-                searchSub = str.find(x,y)
-                if searchSub != -1:
-                    if(len(x)> len(y)):
-                        self.listString.remove(y)
-                    #elif (len(x) < len(y)):
-                        #self.listString.remove(x)
-
-        for x in self.listString:
-            if(self.listString.count(x) > 1):
-                self.listString.remove(x)
-
-
-        print self.listString
-        return self.listString
+        return self.__parseAllRegexWord()
 
 
     def searchSubject(self, question):

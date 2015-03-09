@@ -1,6 +1,6 @@
 from unittest import TestCase
 from mock import Mock
-from naturalLanguagePython.CountryDomain.Country import Country
+from naturalLanguagePython.countryDomain.country import Country
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
 __author__ = 'Antoine'

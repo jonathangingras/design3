@@ -36,3 +36,22 @@ class TestRegexQuestionAnalyser(TestCase):
         expectedStrategyList = ['less than']
         self.assertEqual(expectedStrategyList, self.regexQuestionAnalyzer.searchKeyword(question))
 
+    def test_parseAllRegexKeywordWhenHavingAnEmptyQuestionShouldReturnAnEmptyList(self):
+        question = ""
+        expectedRegexKeywordList = []
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+
+    def test_parseAllRegexKeywordWhenHavingOnlyOneInformationInQuestionShouldReturnCorrectList(self):
+        question = "My capital name starts with Moga."
+        expectedRegexKeywordList = ["Moga"]
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+
+    def test_parseAllRegexKeywordWhenHavingTwoInformationInQuestionShouldReturnCorrectList(self):
+        question = "My capital name starts with Ath and ends with ens."
+        expectedRegexKeywordList = ["Ath", "ens"]
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+
+    def test_parseAllRegexKeywordWhenHavingThreeInformationInQuestionShouldReturnCorrectList(self):
+        question = "The lotus blossom is the national symbol of this country , my internet code is .br and, my capital is Bruxelle"
+        expectedRegexKeywordList =[".br", "Bruxelle", "lotus blossom"]
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))

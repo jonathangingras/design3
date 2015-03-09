@@ -33,24 +33,6 @@ class ProcessLanguage(object):
     def tokenizeQuestion(self, question):
         self.tokenizedQuestionList = nltk.word_tokenize(question)
 
-    def searchKeyWord(self, question):
-        myFileKeyWord = open('keyWordList.txt', 'r')
-        keyWordList = []
-        keyWordList = myFileKeyWord.read()
-        keyWordList = keyWordList.splitlines()
-        for keyWord in keyWordList:
-            if question.find(keyWord) > 0:
-                if keyWord.count(" ") > 0:
-                    for x in keyWord.split(" "):
-                        self.keyWordList.append(x)
-                else:
-                    self.keyWordList.append(keyWord)
-        if(len(self.keyWordList)> 0):
-            for word in self.keyWordList:
-                indexReplace = self.tokenizedQuestionList.index(word)
-                self.tokenizedQuestionList[indexReplace] = " "
-
-
     def removeJunkWord(self):
         for junkWord in ['country', 'title']:
 

@@ -1,5 +1,5 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.CountryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
+from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 
 
 class RepositorySearch(object):

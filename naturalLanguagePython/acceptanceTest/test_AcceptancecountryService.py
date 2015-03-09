@@ -1,4 +1,4 @@
-from naturalLanguagePython.CountryService.countryService import CountryService
+from naturalLanguagePython.countryService.countryService import CountryService
 from unittest import TestCase
 
 __author__ = 'Antoine'
