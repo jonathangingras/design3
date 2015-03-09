@@ -5,7 +5,7 @@ from naturalLanguagePython.countryPersistence.countryRepositoryDB import Country
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
-from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 __author__ = 'Antoine'
 
 
@@ -13,7 +13,7 @@ class TestCountryService(TestCase):
 
     def setUp(self):
         self.countryService = CountryService()
-        self.countryService.questionAnalyzer.extractedImportantInformationsFromQuestion = Mock()
+        self.countryService.questionAnalyzer.analyseQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):
         expectedInstance = CountryRepositoryDB
@@ -49,3 +49,9 @@ class TestCountryService(TestCase):
         receivedQuestion = ""
         expectedRaisedError = CountryServiceException
         self.assertRaises(expectedRaisedError, self.countryService.analyzeQuestionFromAtlas, receivedQuestion)
+
+    def test_analyzingAQuestionWhenTheReceivedStringIsACapitalNameIsInQuestionShouldReturnTheCorrectDictionary(self):
+        expectedDictionary = {"capital":["Paris"]}
+        receivedQuestion = "What country has Paris as its capital?"
+        self.countryService.questionAnalyzer.analyseQuestion.side_effect = [expectedDictionary]
+        self.assertEqual(expectedDictionary, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))

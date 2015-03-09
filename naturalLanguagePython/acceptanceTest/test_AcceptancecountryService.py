@@ -23,3 +23,8 @@ class AcceptanceTestCountryService(TestCase):
         expectedReturnedCountryName = 'Greece'
         dictionaryFromQuestion = {"Capital": "ens"}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["ends with"]))
+
+    def test_analyzingAQuestionWhenTheReceivedStringIsACapitalNameIsInQuestionShouldReturnTheCorrectDictionary(self):
+        expectedDictionary = {"capital":["Paris"]}
+        receivedQuestion = "What country has Paris as its capital?"
+        self.assertEqual(expectedDictionary, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))

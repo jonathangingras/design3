@@ -3,8 +3,9 @@ from naturalLanguagePython.countryPersistence.countryRepositoryDB import Country
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
-from naturalLanguagePython.questionLanguageAnalyzer.questionAnalyzer import QuestionAnalyzer
+from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 from naturalLanguagePython.countryService.repositorySearch import RepositorySearch
+
 
 
 class CountryService(object):
@@ -12,16 +13,17 @@ class CountryService(object):
     def __init__(self):
         self.countryRepository = CountryRepositoryDB()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
-        self.questionAnalyzer = QuestionAnalyzer()
+        self.questionAnalyzer = QuestionInformationAnalyser()
         self.__setupTheCountryRepository()
         self.repositorySearch = RepositorySearch()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
+        dictionaryOfImportantInformation = {}
         if receivedQuestion is None:
             raise CountryServiceException("The received question from Atlas is empty")
         if receivedQuestion is "":
             raise CountryServiceException("The received question from Atlas is empty")
-        dictionaryOfImportantInformation = self.questionAnalyzer.extractedImportantInformationsFromQuestion(receivedQuestion)
+        dictionaryOfImportantInformation = self.questionAnalyzer.analyseQuestion(receivedQuestion)
         return dictionaryOfImportantInformation
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
