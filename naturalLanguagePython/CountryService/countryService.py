@@ -28,7 +28,6 @@ class CountryService(object):
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""
-        wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict, wantedSearchStrategy)
         listOfPossibleCountryByCategory = self.repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
                                                                                                                searchedInformationDict, wantedSearchStrategy)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:

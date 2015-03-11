@@ -13,8 +13,20 @@ class SearchInformation(object):
         expression = re.compile(self.regex)
         if dictionary.has_key(keyword):
             for value in dictionary[keyword]:
+                print(value)
                 if expression.search(value) is not None:
                     isContaining = True
                     break
 
+        return isContaining
+
+    def findInformationList(self, dictionary, keyword, wantedListInformation):
+        isContaining = False
+        numberOfInformationFound = 0
+        for wantedInformation in wantedListInformation:
+            isContainingInformation = self.findInformation(dictionary, keyword, wantedInformation)
+            if isContainingInformation is True:
+                numberOfInformationFound += 1
+        if numberOfInformationFound == len(wantedListInformation):
+            isContaining = True
         return isContaining

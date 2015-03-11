@@ -13,6 +13,7 @@ class CountryRepositoryDB(CountryRepository):
 
     def searchCountries(self, keywordDictionary, searchStrategy = None):
         listOfPossibleCountryByKeyword = []
+        print(searchStrategy)
         for keyword in keywordDictionary:
             listOfPossibleCountry = []
             for country in self.countryList:

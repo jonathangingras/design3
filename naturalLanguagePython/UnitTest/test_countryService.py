@@ -55,3 +55,4 @@ class TestCountryService(TestCase):
         receivedQuestion = "What country has Paris as its capital?"
         self.countryService.questionAnalyzer.analyseQuestion.side_effect = [expectedDictionary]
         self.assertEqual(expectedDictionary, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))
+

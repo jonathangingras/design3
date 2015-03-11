@@ -54,8 +54,8 @@ class TestSearchInformation(TestCase):
     #Starting test for the contains search strategy
     def test_findingCorrespondingInformationInsideDictionaryWithTheContainsStrategyShouldReturnTrue(self):
         keyword = "capital"
-        wantedInformation = "Paris"
-        self.assertTrue(self.searchMethodContains.findInformation(self.dictionaryForSearchMethodTestWithoutList, keyword, wantedInformation))
+        wantedInformation = ["Paris"]
+        self.assertTrue(self.searchMethodContains.findInformationList(self.dictionaryForSearchMethodTestWithoutList, keyword, wantedInformation))
 
     def test_notFindingCorrespondingInformationInsideDictionaryWithTheContainsStrategyShouldReturnFalse(self):
         keyword = "capital"

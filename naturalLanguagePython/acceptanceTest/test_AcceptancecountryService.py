@@ -8,23 +8,29 @@ class AcceptanceTestCountryService(TestCase):
 
     def setUp(self):
         self.countryService = CountryService()
+
     def test_usingServiceToSearchACountryWhenSearchingForACapitalShouldReturnTheNameOfTheCountry(self):
         expectedReturnedCountryName = "Canada"
-        dictionaryFromQuestion = {"Capital": "Ottawa"}
+        dictionaryFromQuestion = {"Capital": ["Ottawa"]}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalStartsWithNameShouldReturnTheNameOfTheCountry(self):
         expectedReturnedCountryName = "['Nepal', 'Afghanistan', 'Uganda', 'Kazakhstan']"
         expectedReturnedCountryName = "['Afghanistan', 'Kazakhstan', 'Nepal', 'Uganda']"
-        dictionaryFromQuestion = {"Capital": "Ka"}
+        dictionaryFromQuestion = {"Capital": ["Ka"]}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["starts with"]))
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalByItsEndsWithNameShouldReturnTheNameOfPossibleCountry(self):
         expectedReturnedCountryName = 'Greece'
-        dictionaryFromQuestion = {"Capital": "ens"}
+        dictionaryFromQuestion = {"Capital": ["ens"]}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, ["ends with"]))
 
     def test_analyzingAQuestionWhenTheReceivedStringIsACapitalNameIsInQuestionShouldReturnTheCorrectDictionary(self):
-        expectedDictionary = {"capital":["Paris"]}
+        expectedDictionary = {"capital":"Paris"}
         receivedQuestion = "What country has Paris as its capital?"
         self.assertEqual(expectedDictionary, self.countryService.analyzeQuestionFromAtlas(receivedQuestion))
+
+    def test_usingServiceToSearchACountryWhenSearchingForAExportPartnersShouldReturnTheNameOfTheCountry(self):
+        dictionaryFromQuestion = {"Exports - partners": ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]}
+        expectedReturnedCountryName = "Portugal"
+        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))

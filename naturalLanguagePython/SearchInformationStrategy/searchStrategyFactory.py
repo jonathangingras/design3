@@ -9,7 +9,9 @@ class SearchStrategyFactory(object):
         self.searchStrategy = None
 
     def createSearchStrategy(self, strategyParticularity = None):
-        if strategyParticularity == "starts with":
+        if strategyParticularity == "Contains":
+            self.searchStrategy = SearchContains()
+        elif strategyParticularity == "starts with":
             self.searchStrategy = SearchStartsWith()
         elif strategyParticularity == "ends with":
             self.searchStrategy = SearchEndsWith()
