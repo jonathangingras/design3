@@ -10,11 +10,11 @@ from naturalLanguagePython.countryService.repositorySearch import RepositorySear
 
 class CountryService(object):
 
-    def __init__(self):
+    def __init__(self, currentWorkspacePath):
         self.countryRepository = CountryRepositoryDB()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
         self.questionAnalyzer = QuestionInformationAnalyser()
-        self.__setupTheCountryRepository()
+        self.__setupTheCountryRepository(currentWorkspacePath)
         self.repositorySearch = RepositorySearch()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
@@ -42,9 +42,9 @@ class CountryService(object):
             nameOfCountry = nameOfCountry[0]
         return nameOfCountry
 
-    def __setupTheCountryRepository(self):
+    def __setupTheCountryRepository(self, currentWorkspacePath):
         self.countryRepositoryFiller = CountryRepositoryFiller(self.countryRepository)
-        self.countryRepositoryFiller.addCountriesToTheRepository()
+        self.countryRepositoryFiller.addCountriesToTheRepository(currentWorkspacePath)
 
     def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):
         numberOfAppearanceOfNameOfCountry = 0
