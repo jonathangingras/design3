@@ -6,3 +6,9 @@ class Flag(object):
         self.flagPath = path
         self.nameOfCountry = nameOfCountry
         self.colorList = colorList
+
+    def isFlagForThisCountry(self, nameOfCountry):
+        isCorrectFlag = False
+        if self.nameOfCountry == nameOfCountry:
+            isCorrectFlag = True
+        return isCorrectFlag

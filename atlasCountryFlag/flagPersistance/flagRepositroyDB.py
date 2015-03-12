@@ -10,10 +10,10 @@ class FlagRepositoryDB(FlagRepository):
     def searchFlag(self, nameOfCountry):
         colorList = []
         for element in self.flagList:
-            if element.isFlagOfCountry(nameOfCountry):
+            if element.isFlagForThisCountry(nameOfCountry):
                 colorList = element.colorList
                 break
-        return colorListc
+        return colorList
 
     def addFlag(self, flag):
         self.flagList.append(flag)
