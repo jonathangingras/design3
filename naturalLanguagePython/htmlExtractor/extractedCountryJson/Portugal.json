@@ -1,213 +1,85 @@
 {
-    "Refugees and internally displaced persons":[
-        "553 (2012)"
-    ],
-    "Inflation rate (consumer prices)":[
-        "0.4% (2013 est.)",
-        "2.8% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "10.4% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "252,200 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "5,837 sq km (2007)"
-    ],
-    "Exports - partners":[
-        "Spain 22.7%, Germany 12.4%, France 11.9%, Angola 6.5%, UK 5.3%, Netherlands 4.2% (2012)"
-    ],
-    "Independence":[
-        "1143 (Kingdom of Portugal recognized); 5 October 1910 (republic proclaimed)"
-    ],
-    "Constitution":[
-        "several previous; latest adopted 2 April 1976, effective 25 April 1976; amended several times, last in 2005 (2013)"
-    ],
-    "Geography - note":[
-        "Azores and Madeira Islands occupy strategic locations along western sea approaches to Strait of Gibraltar"
-    ],
-    "Exports":[
-        "$61 billion (2013 est.)",
-        "$58.29 billion (2012 est.)"
-    ],
-    "Pipelines":[
-        "gas 1,344 km; oil 11 km; refined products 188 km (2013)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$22,900 (2013 est.)",
-        "$23,400 (2012 est.)",
-        "$24,000 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 100% of population",
-        "rural: 100% of population",
-        "total: 100% of population",
-        "",
-        "urban: 0% of population",
-        "rural: 0% of population",
-        "total: 0% of population (2012 est.)"
-    ],
-    "Waterways":[
-        "210 km (on Douro River from Porto) (2011)"
-    ],
-    "Maternal mortality rate":[
-        "8 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "two vertical bands of green (hoist side, two-fifths) and red (three-fifths) with the national coat of arms (armillary sphere and Portuguese shield) centered on the dividing line; explanations for the color meanings are ambiguous, but a popular interpretation has green symbolizing hope and red the blood of those defending the nation"
-    ],
-    "Political pressure groups and leaders":[
-        "Armed Forces Officers' Association (AOFA) [Colonel Pereira CRACEL]",
-        "the Desperate Generation (youth movement protesting against low wages, precarious labor conditions, and unemployment)",
-        "the General Workers Union or General Confederation of Portuguese Workers (UGT) [Carlos SILVA]",
-        "Portuguese National Workers' Conference (CGTP) [Armenio CARLOS]",
-        "TugaLeaks (a website that has become a mouthpiece for publicizing diverse protest action)",
-        "",
-        "the media; labor unions"
-    ],
-    "Telephones - mobile cellular":[
-        "12.312 million (2012)"
-    ],
-    "Natural gas - imports":[
-        "5.185 billion cu m (2011 est.)"
-    ],
-    "Net migration rate":[
-        "2.74 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "2,103,080",
-        "2,018,004 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$219.3 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "24.1% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "127.8% of GDP (2013 est.)",
-        "123.6% of GDP (2012 est.)",
-        "data cover general government debt, and includes debt instruments issued (or owned) by government entities other than the treasury; the data include treasury debt held by foreign entities; the data include debt issued by subnational entities, as well as intra-governmental debt; intra-governmental debt consists of treasury borrowings from surpluses in the social funds, such as for retirement, medical care, and unemployment; debt instruments for the social funds are not sold at public auctions"
-    ],
-    "Crude oil - production":[
-        "5,250 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
+    "natural gas - exports":[
         "0 cu m (2011 est.)"
     ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "39 30 N, 8 00 W"
     ],
-    "Terrain":[
-        "mountainous north of the Tagus River, rolling plains in south"
+    "hiv/aids - people living with hiv/aids":[
+        "42,000 (2009 est.)"
     ],
-    "Electricity - imports":[
-        "10.76 billion kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "5.6% of GDP (2010)"
-    ],
-    "Government type":[
+    "government type":[
         "republic; parliamentary democracy"
     ],
-    "Crude oil - imports":[
-        "222,300 bbl/day (2010 est.)"
+    "religions":[
+        "Roman Catholic 81%, other Christian 3.3%, other (includes Jewish, Muslim, other) 0.6%, none 6.8%, unspecified 8.3%",
+        "represents population 15 years of age and older (2011 est.)"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "16.8% (2013 est.)",
         "15.7% (2012 est.)"
     ],
-    "Sex ratio":[
-        "1.07 male(s)/female",
-        "1.09 male(s)/female",
-        "1.13 male(s)/female",
-        "1.02 male(s)/female",
-        "0.95 male(s)/female",
-        "0.69 male(s)/female",
-        "0.95 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "15.4% of GDP (2013 est.)",
+        "15% of GDP (2012 est.)",
+        "11.3% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
-        "Democratic and Social Center/Popular Party or CDS/PP [Paulo PORTAS]",
-        "Social Democratic Party or PPD/PSD [Pedro PASSOS COELHO]",
-        "Socialist Party or PS [Antonio Jose SEGURO]",
-        "The Left Bloc or BE [Joao Pedro Furtado da Cunha SEMEDO and Catarina Soares MARTINS",
-        "Unitarian Democratic Coalition or CDU [Jeronimo DE SOUSA] (includes Portuguese Communist Party or PCP and Ecologist Party (\"The Greens\") or PEV)"
+    "total fertility rate":[
+        "1.52 children born/woman (2014 est.)"
     ],
-    "Unemployment, youth ages 15-24":[
-        "37.6%",
-        "36.4%",
-        "39.1% (2012)"
+    "national anthem":[
+        "\"A Portugesa\" (The Song of the Portuguese)",
+        "Henrique LOPES DE MENDOCA/Alfredo KEIL",
+        "adopted 1910; \"A Portuguesa\" was originally written to protest the Portuguese monarchy's acquiescence to the 1890 British ultimatum forcing Portugal to give up areas of Africa; the lyrics refer to the \"insult\" that resulted from the event"
     ],
-    "International law organization participation":[
-        "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction"
+    "environment - current issues":[
+        "soil erosion; air pollution caused by industrial and vehicle emissions; water pollution, especially in coastal areas"
     ],
-    "Stock of domestic credit":[
-        "$408.3 billion (31 December 2013 est.)",
-        "$433.6 billion (31 December 2012 est.)"
+    "industries":[
+        "textiles, clothing, footwear, wood and cork, paper, chemicals, auto parts, base metals, porcelain and ceramics, glassware, technology, telecommunications; dairy products, wine, other foodstuffs; ship construction and refurbishment; tourism"
     ],
-    "Area":[
-        "92,090 sq km",
-        "91,470 sq km",
-        "620 sq km",
-        "includes Azores and Madeira Islands"
+    "legal system":[
+        "civil law system; Constitutional Court review of legislative acts"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-5.1% of GDP (2013 est.)"
+    "health expenditures":[
+        "10.4% of GDP (2011)"
     ],
-    "Land use":[
-        "11.88%",
-        "7.71%",
-        "80.41% (2011)"
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
     ],
-    "Median age":[
-        "41.1 years",
-        "39 years",
-        "43.3 years (2014 est.)"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "42,000 (2009 est.)"
-    ],
-    "Urbanization":[
+    "urbanization":[
         "61.1% of total population (2011)",
         "0.91% annual rate of change (2010-15 est.)"
     ],
-    "Imports - commodities":[
+    "imports - commodities":[
         "agricultural products, chemical products, vehicles and other transport material, optical and precision instruments, computer accessories and parts, semi-conductors and related devices, oil products, base metals, food products, textile materials"
     ],
-    "Location":[
+    "crude oil - imports":[
+        "222,300 bbl/day (2010 est.)"
+    ],
+    "location":[
         "Southwestern Europe, bordering the North Atlantic Ocean, west of Spain"
     ],
-    "Electricity - from fossil fuels":[
-        "49% of total installed capacity (2010 est.)"
+    "irrigated land":[
+        "5,837 sq km (2007)"
     ],
-    "Military expenditures":[
-        "1.29% of GDP (2014)",
-        "1.2% of GDP (2013)",
-        "1.78% of GDP (2012)"
-    ],
-    "Telephone system":[
-        "Portugal's telephone system has a state-of-the-art network with broadband, high-speed capabilities",
-        "integrated network of coaxial cables, open-wire, microwave radio relay, and domestic satellite earth stations",
-        "country code - 351; a combination of submarine cables provide connectivity to Europe, North and East Africa, South Africa, the Middle East, Asia, and the US; satellite earth stations - 3 Intelsat (2 Atlantic Ocean and 1 Indian Ocean), NA Eutelsat; tropospheric scatter to Azores (2010)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$243.3 billion (2013 est.)",
-        "$247.7 billion (2012 est.)",
-        "$256 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
+    "natural hazards":[
         "Azores subject to severe earthquakes",
         "limited volcanic activity in the Azores Islands; Fayal or Faial (elev. 1,043 m) last erupted in 1958; most volcanoes have not erupted in centuries; historically active volcanoes include Agua de Pau, Furnas, Pico, Picos Volcanic System, San Jorge, Sete Cidades, and Terceira"
     ],
-    "Stock of narrow money":[
+    "natural gas - consumption":[
+        "5.143 billion cu m (2010 est.)"
+    ],
+    "exports":[
+        "$61 billion (2013 est.)",
+        "$58.29 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
         "$86.57 billion (31 December 2013 est.)",
         "$88.92 billion (31 December 2012 est.)",
         "see entry for the European Union for money supply in the euro area; the European Central Bank (ECB) controls monetary policy for the 17 members of the Economic and Monetary Union (EMU); individual members of the EMU do not control the quantity of money circulating within their own borders"
     ],
-    "Airports - with paved runways":[
+    "airports - with paved runways":[
         "43",
         "5",
         "7",
@@ -215,84 +87,87 @@
         "15",
         "8 (2013)"
     ],
-    "Railways":[
+    "internet users":[
+        "5.168 million (2009)"
+    ],
+    "railways":[
         "3,319 km",
         "2,700 km 1.668-m gauge (1,436 km electrified)",
         "192 km 1.000-m gauge; 427 km 0.760-m gauge (2008)"
     ],
-    "Electricity - consumption":[
-        "50.26 billion kWh (2010 est.)"
+    "current account balance":[
+        "$1 billion (2013 est.)",
+        "-$3.365 billion (2012 est.)"
     ],
-    "Manpower available for military service":[
-        "2,566,264",
-        "2,458,297 (2010 est.)"
+    "maternal mortality rate":[
+        "8 deaths/100,000 live births (2010)"
     ],
-    "Airports - with unpaved runways":[
-        "21",
-        "1",
-        "",
-        "20 (2013)"
+    "taxes and other revenues":[
+        "43.5% of GDP (2013 est.)"
     ],
-    "HIV/AIDS - deaths":[
-        "fewer than 500 (2009 est.)"
+    "refined petroleum products - exports":[
+        "61,010 bbl/day (2010 est.)"
     ],
-    "Area - comparative":[
-        "slightly smaller than Indiana"
+    "literacy":[
+        "age 15 and over can read and write",
+        "95.4%",
+        "97%",
+        "94% (2011 est.)"
     ],
-    "Distribution of family income - Gini index":[
-        "38.5 (2007)",
-        "35.6 (1995)"
-    ],
-    "Population":[
-        "10,813,834 (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
+    "crude oil - proved reserves":[
         "0 bbl (1 January 2013 est.)"
     ],
-    "Airports":[
+    "airports":[
         "64 (2013)"
     ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "8.46  cu km/yr (12%/18%/69%)",
-        "812  cu m/yr (2005)"
+    "gdp - per capita (ppp)":[
+        "$22,900 (2013 est.)",
+        "$23,400 (2012 est.)",
+        "$24,000 (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Budget":[
-        "$95.49 billion",
-        "$106.8 billion (2013 est.)"
+    "birth rate":[
+        "9.42 births/1,000 population (2014 est.)"
     ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "54.17 million Mt (2011 est.)"
+    "internet country code":[
+        ".pt"
     ],
-    "Agriculture - products":[
-        "grain, potatoes, tomatoes, olives, grapes; sheep, cattle, goats, pigs, poultry, dairy products; fish"
+    "suffrage":[
+        "18 years of age; universal"
     ],
-    "Military service age and obligation":[
-        "18-30 years of age for voluntary military service; no compulsory military service, but conscription possible if insufficient volunteers available; women serve in the armed forces, on naval ships since 1993, but are prohibited from serving in some combatant specialties; reserve obligation to age 35 (2012)"
+    "natural gas - production":[
+        "4.904 billion cu m (2012 est.)"
     ],
-    "Total fertility rate":[
-        "1.52 children born/woman (2014 est.)"
+    "exports - commodities":[
+        "agricultural products, food products, wine, oil products, chemical products, plastics and rubber, hides, leather, wood and cork, wood pulp and paper, textile materials, clothing, footwear, machinery and tools, base metals"
     ],
-    "Major urban areas - population":[
-        "LISBON (capital) 2.843 million; Porto 1.367 million (2011)"
+    "labor force":[
+        "5.395 million (2013 est.)"
     ],
-    "Population below poverty line":[
-        "18% (2006)"
+    "dependency ratios":[
+        "50.8 %",
+        "22.1 %",
+        "28.7 %",
+        "3.5 (2014 est.)"
     ],
-    "Labor force - by occupation":[
+    "imports - partners":[
+        "Spain 32%, Germany 11.5%, France 6.7%, Italy 5.3%, Netherlands 4.9% (2012)"
+    ],
+    "mother's mean age at first birth":[
+        "29.2 (2011 est.)"
+    ],
+    "ports and terminals":[
+        "Leixoes, Lisbon, Setubal, Sines"
+    ],
+    "labor force - by occupation":[
         "11.7%",
         "28.5%",
         "59.8% (2009 est.)"
     ],
-    "Stock of broad money":[
-        "$283.9 billion (31 December 2013 est.)",
-        "$301.5 billion (31 December 2012 est.)"
+    "illicit drugs":[
+        "seizing record amounts of Latin American cocaine destined for Europe; a European gateway for Southwest Asian heroin; transshipment point for hashish from North Africa to Europe; consumer of Southwest Asian heroin"
     ],
-    "GDP - composition, by sector of origin":[
-        "2.6%",
-        "22.2%",
-        "75.2% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
+    "diplomatic representation from the us":[
         "Ambassador Robert A. SHERMAN (since 12 February 2014)",
         "Avenida das Forcas Armadas, 1600-081 Lisbon",
         "Apartado 43033, 1601-301 Lisboa; PSC 83, APO AE 09726",
@@ -300,82 +175,78 @@
         "[351] (21) 726-9109",
         "Ponta Delgada (Azores)"
     ],
-    "Contraceptive prevalence rate":[
-        "86.8% (2005/06)"
+    "terrain":[
+        "mountainous north of the Tagus River, rolling plains in south"
     ],
-    "Infant mortality rate":[
+    "electricity - imports":[
+        "10.76 billion kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
         "4.48 deaths/1,000 live births",
         "4.92 deaths/1,000 live births",
         "4.02 deaths/1,000 live births (2014 est.)"
     ],
-    "Religions":[
-        "Roman Catholic 81%, other Christian 3.3%, other (includes Jewish, Muslim, other) 0.6%, none 6.8%, unspecified 8.3%",
-        "represents population 15 years of age and older (2011 est.)"
+    "central bank discount rate":[
+        "0.75% (31 December 2013)",
+        "1.5% (31 December 2010)",
+        "this is the European Central Bank's rate on the marginal lending facility, which offers overnight credit to banks in the euro area"
     ],
-    "Reserves of foreign exchange and gold":[
-        "$22.66 billion (31 December 2012 est.)",
-        "$21.34 billion (31 December 2011 est.)"
+    "geography - note":[
+        "Azores and Madeira Islands occupy strategic locations along western sea approaches to Strait of Gibraltar"
     ],
-    "Household income or consumption by percentage share":[
-        "3.1%",
-        "28.4% (1995 est.)"
+    "political parties and leaders":[
+        "Democratic and Social Center/Popular Party or CDS/PP [Paulo PORTAS]",
+        "Social Democratic Party or PPD/PSD [Pedro PASSOS COELHO]",
+        "Socialist Party or PS [Antonio Jose SEGURO]",
+        "The Left Bloc or BE [Joao Pedro Furtado da Cunha SEMEDO and Catarina Soares MARTINS",
+        "Unitarian Democratic Coalition or CDU [Jeronimo DE SOUSA] (includes Portuguese Communist Party or PCP and Ecologist Party (\"The Greens\") or PEV)"
     ],
-    "Hospital bed density":[
-        "3.4 beds/1,000 population (2010)"
+    "obesity - adult prevalence rate":[
+        "24% (2008)"
     ],
-    "Life expectancy at birth":[
-        "79.01 years",
-        "75.76 years",
-        "82.47 years (2014 est.)"
+    "broadcast media":[
+        "Radio e Televisao de Portugal (RTP),the publicly-owned TV broadcaster, operates 2 domestic channels and external service channels to Africa; overall, roughly 40 domestic TV stations; viewers have widespread access to international broadcasters with more than half of all households connected to multi-channel cable or satellite TV systems; publicly owned radio operates 3 national networks and provides regional and external services; several privately owned national radio stations and some 300 regional and local commercial radio stations (2008)"
     ],
-    "HIV/AIDS - adult prevalence rate":[
-        "0.6% (2009 est.)"
+    "constitution":[
+        "several previous; latest adopted 2 April 1976, effective 25 April 1976; amended several times, last in 2005 (2013)"
     ],
-    "School life expectancy (primary to tertiary education)":[
-        "16 years",
-        "16 years",
-        "17 years (2010)"
+    "contraceptive prevalence rate":[
+        "86.8% (2005/06)"
     ],
-    "Manpower reaching militarily significant age annually":[
-        "62,208",
-        "54,786 (2010 est.)"
+    "median age":[
+        "41.1 years",
+        "39 years",
+        "43.3 years (2014 est.)"
     ],
-    "International organization participation":[
-        "ADB (nonregional member), AfDB (nonregional member), Australia Group, BIS, CD, CE, CERN, CPLP, EAPC, EBRD, ECB, EIB, EMU, ESA, EU, FAO, FATF, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club (associate), PCA, Schengen Convention, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNMIT, UNSC (temporary), UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC"
+    "manpower fit for military service":[
+        "2,103,080",
+        "2,018,004 (2010 est.)"
     ],
-    "Languages":[
-        "Portuguese (official), Mirandese (official, but locally used)"
-    ],
-    "Country name":[
+    "country name":[
         "Portuguese Republic",
         "Portugal",
         "Republica Portuguesa",
         "Portugal"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "24 nm",
-        "200 nm",
-        "200 m depth or to the depth of exploitation"
+    "electricity - from fossil fuels":[
+        "49% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$65.53 billion (31 December 2012 est.)",
-        "$61.69 billion (31 December 2011)",
-        "$82 billion (31 December 2010 est.)"
+    "capital":[
+        "Lisbon",
+        "38 43 N, 9 08 W",
+        "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)",
+        "+1hr, begins last Sunday in March; ends last Sunday in October"
     ],
-    "Taxes and other revenues":[
-        "43.5% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$243.3 billion (2013 est.)",
+        "$247.7 billion (2012 est.)",
+        "$256 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "29.2 (2011 est.)"
+    "independence":[
+        "1143 (Kingdom of Portugal recognized); 5 October 1910 (republic proclaimed)"
     ],
-    "Refined petroleum products - consumption":[
-        "259,700 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "0.12% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 99.8% of population",
         "rural: 99.9% of population",
         "total: 99.8% of population",
@@ -384,210 +255,51 @@
         "rural: 0.1% of population",
         "total: 0.2% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Nuno Filipe Alves Salvador e BRITO (since 10 February 2011)",
-        "2012 Massachusetts Avenue NW, Washington, DC 20036",
-        "[1] (202) 350-5400",
-        "[1] (202) 462-3726",
-        "Boston, New York, Newark (NJ), San Francisco",
-        "New Bedford (MA), Providence (RI)"
+    "electricity - from hydroelectric plants":[
+        "21.5% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "5.168 million (2009)"
+    "stock of direct foreign investment - abroad":[
+        "$71.26 billion (31 December 2013 est.)",
+        "$71.26 billion (31 December 2012 est.)"
     ],
-    "Child labor - children ages 5-14":[
+    "debt - external":[
+        "$508.3 billion (31 December 2012 est.)",
+        "$482.2 billion (31 December 2011)"
+    ],
+    "coastline":[
+        "1,793 km"
+    ],
+    "nationality":[
+        "Portuguese (singular and plural)",
+        "Portuguese"
+    ],
+    "refined petroleum products - imports":[
+        "84,080 bbl/day (2010 est.)"
+    ],
+    "climate":[
+        "maritime temperate; cool and rainy in north, warmer and drier in south"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "0.6% (2009 est.)"
+    ],
+    "child labor - children ages 5-14":[
         "36,569",
         "3 %",
         "data represents children ages 6-14 (2001 est.)"
     ],
-    "Internet hosts":[
-        "3.748 million (2012)"
+    "manpower reaching militarily significant age annually":[
+        "62,208",
+        "54,786 (2010 est.)"
     ],
-    "Current account balance":[
-        "$1 billion (2013 est.)",
-        "-$3.365 billion (2012 est.)"
-    ],
-    "Debt - external":[
-        "$508.3 billion (31 December 2012 est.)",
-        "$482.2 billion (31 December 2011)"
-    ],
-    "Administrative divisions":[
-        "18 districts (distritos, singular - distrito) and 2 autonomous regions* (regioes autonomas, singular - regiao autonoma); Aveiro, Acores (Azores)*, Beja, Braga, Braganca, Castelo Branco, Coimbra, Evora, Faro, Guarda, Leiria, Lisboa (Lisbon), Madeira*, Portalegre, Porto, Santarem, Setubal, Viana do Castelo, Vila Real, Viseu"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Industrial production growth rate":[
-        "-1% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "Portugal does not recognize Spanish sovereignty over the territory of Olivenza based on a difference of interpretation of the 1815 Congress of Vienna and the 1801 Treaty of Badajoz"
-    ],
-    "Climate":[
-        "maritime temperate; cool and rainy in north, warmer and drier in south"
-    ],
-    "Natural resources":[
-        "fish, forests (cork), iron ore, copper, zinc, tin, tungsten, silver, gold, uranium, marble, clay, gypsum, salt, arable land, hydropower"
-    ],
-    "Internet country code":[
-        ".pt"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$121.6 billion (31 December 2013 est.)",
-        "$117.2 billion (31 December 2012 est.)"
-    ],
-    "Electricity - production":[
-        "49.92 billion kWh (2011 est.)"
-    ],
-    "Death rate":[
-        "10.97 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "21.5% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$59 billion (2013 est.)",
-        "$72.35 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "armillary sphere (a spherical astrolabe modeling objects in the sky and representing the Republic)"
-    ],
-    "GDP - real growth rate":[
-        "-1.8% (2013 est.)",
-        "-3.2% (2012 est.)",
-        "-1.3% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "0.75% (31 December 2013)",
-        "1.5% (31 December 2010)",
-        "this is the European Central Bank's rate on the marginal lending facility, which offers overnight credit to banks in the euro area"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "24% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "61,010 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "textiles, clothing, footwear, wood and cork, paper, chemicals, auto parts, base metals, porcelain and ceramics, glassware, technology, telecommunications; dairy products, wine, other foodstuffs; ship construction and refurbishment; tourism"
-    ],
-    "Legal system":[
-        "civil law system; Constitutional Court review of legislative acts"
-    ],
-    "Capital":[
-        "Lisbon",
-        "38 43 N, 9 08 W",
-        "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)",
-        "+1hr, begins last Sunday in March; ends last Sunday in October"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "soil erosion; air pollution caused by industrial and vehicle emissions; water pollution, especially in coastal areas"
-    ],
-    "Imports - partners":[
-        "Spain 32%, Germany 11.5%, France 6.7%, Italy 5.3%, Netherlands 4.9% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "5.143 billion cu m (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "18.92 million kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "9.42 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "15.9% (male 893,902/female 821,062)",
-        "11.4% (male 654,102/female 579,440)",
-        "42.2% (male 2,304,503/female 2,260,556)",
-        "11.9% (male 599,380/female 685,279)",
-        "18.4% (male 824,062/female 1,191,548) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "6% (31 December 2013 est.)",
-        "6.37% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "1,214 km",
-        "Spain 1,214 km"
-    ],
-    "Coastline":[
-        "1,793 km"
-    ],
-    "Nationality":[
-        "Portuguese (singular and plural)",
-        "Portuguese"
-    ],
-    "Telephones - main lines in use":[
-        "4.558 million (2012)"
-    ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "95.4%",
-        "97%",
-        "94% (2011 est.)"
-    ],
-    "Total renewable water resources":[
-        "68.7 cu km (2011)"
-    ],
-    "National holiday":[
-        "Portugal Day (Dia de Portugal), 10 June (1580); note - also called Camoes Day, the day that revered national poet Luis de Camoes (1524-80) died"
-    ],
-    "Elevation extremes":[
-        "Atlantic Ocean 0 m",
-        "Ponta do Pico (Pico or Pico Alto) on Ilha do Pico in the Azores 2,351 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "3.76 physicians/1,000 population (2009)"
-    ],
-    "Exports - commodities":[
-        "agricultural products, food products, wine, oil products, chemical products, plastics and rubber, hides, leather, wood and cork, wood pulp and paper, textile materials, clothing, footwear, machinery and tools, base metals"
-    ],
-    "Labor force":[
-        "5.395 million (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "50.8 %",
-        "22.1 %",
-        "28.7 %",
-        "3.5 (2014 est.)"
-    ],
-    "Roadways":[
+    "roadways":[
         "82,900 km",
         "71,294 km (includes 2,613 km of expressways)",
         "11,606 km (2008)"
     ],
-    "Electricity - exports":[
-        "2.873 billion kWh (2012 est.)"
+    "net migration rate":[
+        "2.74 migrant(s)/1,000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Leixoes, Lisbon, Setubal, Sines"
-    ],
-    "Refined petroleum products - imports":[
-        "84,080 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "seizing record amounts of Latin American cocaine destined for Europe; a European gateway for Southwest Asian heroin; transshipment point for hashish from North Africa to Europe; consumer of Southwest Asian heroin"
-    ],
-    "Stock of direct foreign investment - abroad":[
-        "$71.26 billion (31 December 2013 est.)",
-        "$71.26 billion (31 December 2012 est.)"
-    ],
-    "Natural gas - production":[
-        "4.904 billion cu m (2012 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "euros (EUR) per US dollar -",
         "0.7634 (2013 est.)",
         "0.7752 (2012 est.)",
@@ -595,10 +307,68 @@
         "0.7198 (2009 est.)",
         "0.6827 (2008 est.)"
     ],
-    "Ethnic groups":[
-        "homogeneous Mediterranean stock; citizens of black African descent who immigrated to mainland during decolonization number less than 100,000; since 1990 East Europeans have entered Portugal"
+    "refined petroleum products - production":[
+        "252,200 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.07 male(s)/female",
+        "1.09 male(s)/female",
+        "1.13 male(s)/female",
+        "1.02 male(s)/female",
+        "0.95 male(s)/female",
+        "0.69 male(s)/female",
+        "0.95 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "127.8% of GDP (2013 est.)",
+        "123.6% of GDP (2012 est.)",
+        "data cover general government debt, and includes debt instruments issued (or owned) by government entities other than the treasury; the data include treasury debt held by foreign entities; the data include debt issued by subnational entities, as well as intra-governmental debt; intra-governmental debt consists of treasury borrowings from surpluses in the social funds, such as for retirement, medical care, and unemployment; debt instruments for the social funds are not sold at public auctions"
+    ],
+    "manpower available for military service":[
+        "2,566,264",
+        "2,458,297 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$22.66 billion (31 December 2012 est.)",
+        "$21.34 billion (31 December 2011 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "21",
+        "1",
+        "",
+        "20 (2013)"
+    ],
+    "stock of broad money":[
+        "$283.9 billion (31 December 2013 est.)",
+        "$301.5 billion (31 December 2012 est.)"
+    ],
+    "refugees and internally displaced persons":[
+        "553 (2012)"
+    ],
+    "national symbol(s)":[
+        "armillary sphere (a spherical astrolabe modeling objects in the sky and representing the Republic)"
+    ],
+    "gdp - real growth rate":[
+        "-1.8% (2013 est.)",
+        "-3.2% (2012 est.)",
+        "-1.3% (2011 est.)"
+    ],
+    "telephone system":[
+        "Portugal's telephone system has a state-of-the-art network with broadband, high-speed capabilities",
+        "integrated network of coaxial cables, open-wire, microwave radio relay, and domestic satellite earth stations",
+        "country code - 351; a combination of submarine cables provide connectivity to Europe, North and East Africa, South Africa, the Middle East, Asia, and the US; satellite earth stations - 3 Intelsat (2 Atlantic Ocean and 1 Indian Ocean), NA Eutelsat; tropospheric scatter to Azores (2010)"
+    ],
+    "flag description":[
+        "two vertical bands of green (hoist side, two-fifths) and red (three-fifths) with the national coat of arms (armillary sphere and Portuguese shield) centered on the dividing line; explanations for the color meanings are ambiguous, but a popular interpretation has green symbolizing hope and red the blood of those defending the nation"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "3.1%",
+        "28.4% (1995 est.)"
+    ],
+    "gdp - composition, by end use":[
         "64.8%",
         "18.1%",
         "15.5%",
@@ -607,17 +377,247 @@
         "-40%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "15.4% of GDP (2013 est.)",
-        "15% of GDP (2012 est.)",
-        "11.3% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "79.01 years",
+        "75.76 years",
+        "82.47 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "Radio e Televisao de Portugal (RTP),the publicly-owned TV broadcaster, operates 2 domestic channels and external service channels to Africa; overall, roughly 40 domestic TV stations; viewers have widespread access to international broadcasters with more than half of all households connected to multi-channel cable or satellite TV systems; publicly owned radio operates 3 national networks and provides regional and external services; several privately owned national radio stations and some 300 regional and local commercial radio stations (2008)"
+    "languages":[
+        "Portuguese (official), Mirandese (official, but locally used)"
     ],
-    "National anthem":[
-        "\"A Portugesa\" (The Song of the Portuguese)",
-        "Henrique LOPES DE MENDOCA/Alfredo KEIL",
-        "adopted 1910; \"A Portuguesa\" was originally written to protest the Portuguese monarchy's acquiescence to the 1890 British ultimatum forcing Portugal to give up areas of Africa; the lyrics refer to the \"insult\" that resulted from the event"
+    "area":[
+        "92,090 sq km",
+        "91,470 sq km",
+        "620 sq km",
+        "includes Azores and Madeira Islands"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "54.17 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "fish, forests (cork), iron ore, copper, zinc, tin, tungsten, silver, gold, uranium, marble, clay, gypsum, salt, arable land, hydropower"
+    ],
+    "telephones - mobile cellular":[
+        "12.312 million (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "24 nm",
+        "200 nm",
+        "200 m depth or to the depth of exploitation"
+    ],
+    "electricity - from other renewable sources":[
+        "24.1% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "Spain 22.7%, Germany 12.4%, France 11.9%, Angola 6.5%, UK 5.3%, Netherlands 4.2% (2012)"
+    ],
+    "population growth rate":[
+        "0.12% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18-30 years of age for voluntary military service; no compulsory military service, but conscription possible if insufficient volunteers available; women serve in the armed forces, on naval ships since 1993, but are prohibited from serving in some combatant specialties; reserve obligation to age 35 (2012)"
+    ],
+    "pipelines":[
+        "gas 1,344 km; oil 11 km; refined products 188 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 100% of population",
+        "rural: 100% of population",
+        "total: 100% of population",
+        "",
+        "urban: 0% of population",
+        "rural: 0% of population",
+        "total: 0% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "2.6%",
+        "22.2%",
+        "75.2% (2013 est.)"
+    ],
+    "age structure":[
+        "15.9% (male 893,902/female 821,062)",
+        "11.4% (male 654,102/female 579,440)",
+        "42.2% (male 2,304,503/female 2,260,556)",
+        "11.9% (male 599,380/female 685,279)",
+        "18.4% (male 824,062/female 1,191,548) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "259,700 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "1,214 km",
+        "Spain 1,214 km"
+    ],
+    "natural gas - imports":[
+        "5.185 billion cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly smaller than Indiana"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "Portugal does not recognize Spanish sovereignty over the territory of Olivenza based on a difference of interpretation of the 1815 Congress of Vienna and the 1801 Treaty of Badajoz"
+    ],
+    "population":[
+        "10,813,834 (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "68.7 cu km (2011)"
+    ],
+    "national holiday":[
+        "Portugal Day (Dia de Portugal), 10 June (1580); note - also called Camoes Day, the day that revered national poet Luis de Camoes (1524-80) died"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-5.1% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$95.49 billion",
+        "$106.8 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "18% (2006)"
+    ],
+    "military expenditures":[
+        "1.29% of GDP (2014)",
+        "1.2% of GDP (2013)",
+        "1.78% of GDP (2012)"
+    ],
+    "death rate":[
+        "10.97 deaths/1,000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$65.53 billion (31 December 2012 est.)",
+        "$61.69 billion (31 December 2011)",
+        "$82 billion (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "-1% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "38.5 (2007)",
+        "35.6 (1995)"
+    ],
+    "inflation rate (consumer prices)":[
+        "0.4% (2013 est.)",
+        "2.8% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Nuno Filipe Alves Salvador e BRITO (since 10 February 2011)",
+        "2012 Massachusetts Avenue NW, Washington, DC 20036",
+        "[1] (202) 350-5400",
+        "[1] (202) 462-3726",
+        "Boston, New York, Newark (NJ), San Francisco",
+        "New Bedford (MA), Providence (RI)"
+    ],
+    "imports":[
+        "$59 billion (2013 est.)",
+        "$72.35 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "6% (31 December 2013 est.)",
+        "6.37% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "5.6% of GDP (2010)"
+    ],
+    "electricity - consumption":[
+        "50.26 billion kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "3.4 beds/1,000 population (2010)"
+    ],
+    "ethnic groups":[
+        "homogeneous Mediterranean stock; citizens of black African descent who immigrated to mainland during decolonization number less than 100,000; since 1990 East Europeans have entered Portugal"
+    ],
+    "unemployment, youth ages 15-24":[
+        "37.6%",
+        "36.4%",
+        "39.1% (2012)"
+    ],
+    "land use":[
+        "11.88%",
+        "7.71%",
+        "80.41% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "8.46  cu km/yr (12%/18%/69%)",
+        "812  cu m/yr (2005)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$121.6 billion (31 December 2013 est.)",
+        "$117.2 billion (31 December 2012 est.)"
+    ],
+    "stock of domestic credit":[
+        "$408.3 billion (31 December 2013 est.)",
+        "$433.6 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "grain, potatoes, tomatoes, olives, grapes; sheep, cattle, goats, pigs, poultry, dairy products; fish"
+    ],
+    "waterways":[
+        "210 km (on Douro River from Porto) (2011)"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "3.748 million (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "Armed Forces Officers' Association (AOFA) [Colonel Pereira CRACEL]",
+        "the Desperate Generation (youth movement protesting against low wages, precarious labor conditions, and unemployment)",
+        "the General Workers Union or General Confederation of Portuguese Workers (UGT) [Carlos SILVA]",
+        "Portuguese National Workers' Conference (CGTP) [Armenio CARLOS]",
+        "TugaLeaks (a website that has become a mouthpiece for publicizing diverse protest action)",
+        "",
+        "the media; labor unions"
+    ],
+    "administrative divisions":[
+        "18 districts (distritos, singular - distrito) and 2 autonomous regions* (regioes autonomas, singular - regiao autonoma); Aveiro, Acores (Azores)*, Beja, Braga, Braganca, Castelo Branco, Coimbra, Evora, Faro, Guarda, Leiria, Lisboa (Lisbon), Madeira*, Portalegre, Porto, Santarem, Setubal, Viana do Castelo, Vila Real, Viseu"
+    ],
+    "hiv/aids - deaths":[
+        "fewer than 500 (2009 est.)"
+    ],
+    "crude oil - production":[
+        "5,250 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "4.558 million (2012)"
+    ],
+    "electricity - production":[
+        "49.92 billion kWh (2011 est.)"
+    ],
+    "international law organization participation":[
+        "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
+        "Atlantic Ocean 0 m",
+        "Ponta do Pico (Pico or Pico Alto) on Ilha do Pico in the Azores 2,351 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "16 years",
+        "16 years",
+        "17 years (2010)"
+    ],
+    "physicians density":[
+        "3.76 physicians/1,000 population (2009)"
+    ],
+    "international organization participation":[
+        "ADB (nonregional member), AfDB (nonregional member), Australia Group, BIS, CD, CE, CERN, CPLP, EAPC, EBRD, ECB, EIB, EMU, ESA, EU, FAO, FATF, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club (associate), PCA, Schengen Convention, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNMIT, UNSC (temporary), UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC"
+    ],
+    "gdp (official exchange rate)":[
+        "$219.3 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "2.873 billion kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "18.92 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "LISBON (capital) 2.843 million; Porto 1.367 million (2011)"
     ]
 }

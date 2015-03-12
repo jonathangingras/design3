@@ -18,3 +18,8 @@ class HtmlInformationFormatter(object):
             return key
         except UnicodeEncodeError:
             pass
+
+    def firstLetterLowering(self, key):
+        if key is None:
+            return None
+        return str.lower(key)

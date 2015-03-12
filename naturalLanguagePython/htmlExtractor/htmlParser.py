@@ -9,7 +9,8 @@ from htmlInformationValidator import HtmlInformationValidator
 class htmlParser(object):
 
     def __init__(self):
-        self.keys = {}
+        self.countryDictionary = {}
+        self.listOfKeys = []
         self.htmlInformationFormatter = HtmlInformationFormatter()
         self.htmlExtractor = HtmlExtractor()
         self.htmlInformationValidator = HtmlInformationValidator()
@@ -31,14 +32,15 @@ class htmlParser(object):
         self.__deleteUnimportantKeyword()
 
     def __findCountryInformationValue(self):
-        for key in self.keys:
+        for key in self.listOfKeys:
             informationList = []
             extractedInfos = self.htmlExtractor.extractCountryData(key, self.soup)
             informationList = self.htmlInformationValidator.verifyingStringContent(extractedInfos)
-            self.keys[key.encode()] = informationList
+            key = self.htmlInformationFormatter.firstLetterLowering(key)
+            self.countryDictionary[key] = informationList
 
     def __writeInformationInOpenedFile(self):
-        json.dump(self.keys, self.file, indent = 4, separators = (',', ':'))
+        json.dump(self.countryDictionary, self.file, indent = 4, separators = (',', ':'))
 
     def __closeOpenedFile(self):
         self.file.close()
@@ -49,19 +51,23 @@ class htmlParser(object):
         pathDirectory = "extractedCountryJson/"
         nameOfCountry = self.htmlExtractor.getNameOfCountry(self.soup)
         nameOfCountry = nameOfCountry.replace(' ', '_')
-        nameOfountryFile = pathDirectory + nameOfCountry + jsonExtension
+        nameOfCountryFile = pathDirectory + nameOfCountry + jsonExtension
         self.file = open(nameOfCountryFile, writeMode)
 
 
     def __addKeyToKeyList(self, key):
         if(key is not None and key != 'None'):
-            self.keys[key] = None
+            self.listOfKeys.append(key)
 
     def __deleteUnimportantKeyword(self):
         keyToIgnore = ['Economy - overview', "Executive branch", "Map references","Merchant marine", "Background", "Environment - international agreements",
                        "Legislative branch", "Judicial branch", "Military branches"]
         for key in keyToIgnore:
-            self.keys.pop(key, None)
+            try:
+                self.listOfKeys.remove(key)
+            except Exception:
+                pass
+
 
 
 if __name__ == '__main__':

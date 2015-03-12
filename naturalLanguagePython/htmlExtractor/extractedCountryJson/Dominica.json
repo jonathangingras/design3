@@ -1,500 +1,303 @@
 {
-    "Inflation rate (consumer prices)":[
-        "1.8% (2013 est.)",
-        "1.4% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "5.9% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "NA"
-    ],
-    "Exports - partners":[
-        "Japan 38.8%, Jamaica 8.3%, Antigua and Barbuda 7.7%, Guyana 6.5%, Paraguay 5.6%, Trinidad and Tobago 4.2% (2012)"
-    ],
-    "Independence":[
-        "3 November 1978 (from the UK)"
-    ],
-    "Constitution":[
-        "previous 1967 (preindependence); latest presented 25 July 1978, entered into force 3 November 1978; amended several times, last in 1984 (2011)"
-    ],
-    "Geography - note":[
-        "known as \"The Nature Island of the Caribbean\" due to its spectacular, lush, and varied flora and fauna, which are protected by an extensive natural park system; the most mountainous of the Lesser Antilles, its volcanic peaks are cones of lava craters and include Boiling Lake, the second-largest, thermally active lake in the world"
-    ],
-    "Exports":[
-        "$40.4 million (2013 est.)",
-        "$40.6 million (2012 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$14,300 (2013 est.)",
-        "$14,200 (2012 est.)",
-        "$14,400 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 79.6% of population",
-        "rural: 84.3% of population",
-        "total: 81.1% of population",
-        "",
-        "urban: 20.4% of population",
-        "rural: 15.7% of population",
-        "total: 18.9% of population (2007 est.)"
-    ],
-    "Flag description":[
-        "green, with a centered cross of three equal bands - the vertical part is yellow (hoist side), black, and white and the horizontal part is yellow (top), black, and white; superimposed in the center of the cross is a red disk bearing a Sisserou parrot, unique to Dominica, encircled by 10 green, five-pointed stars edged in yellow; the 10 stars represent the 10 administrative divisions (parishes); green symbolizes the island's lush vegetation; the triple-colored cross represents the Christian Trinity; the yellow color denotes sunshine, the main agricultural products (citrus and bananas), and the native Carib Indians; black is for the rich soil and the African heritage of most citizens; white signifies rivers, waterfalls, and the purity of aspirations; the red disc stands for social justice"
-    ],
-    "Political pressure groups and leaders":[
-        "Dominica Liberation Movement or DLM (a small leftist party)"
-    ],
-    "Telephones - mobile cellular":[
-        "109,300 (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - exports":[
         "0 cu m (2011 est.)"
     ],
-    "Net migration rate":[
-        "-5.39 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "16,035",
-        "15,499 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$495 million (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "74.2% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "70% of GDP (2012 est.)",
-        "78% of GDP (2009 est.)"
-    ],
-    "Crude oil - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
-        "0 cu m (2011 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "15 25 N, 61 20 W"
     ],
-    "Terrain":[
-        "rugged mountains of volcanic origin"
-    ],
-    "Electricity - imports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "3.5% of GDP (2010)"
-    ],
-    "Government type":[
-        "parliamentary democracy"
-    ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Unemployment rate":[
-        "23% (2000 est.)"
-    ],
-    "Political parties and leaders":[
-        "Dominica Freedom Party or DFP [Judith PESTAINA]",
-        "Dominica Labor Party or DLP [Roosevelt SKERRIT]",
-        "Dominica United Workers Party or UWP [Hector JOHN]"
-    ],
-    "Unemployment, youth ages 15-24":[
-        "26%",
-        "26.2%",
-        "25.4% (2001)"
-    ],
-    "International law organization participation":[
-        "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction"
-    ],
-    "Stock of domestic credit":[
-        "$333.3 million (31 December 2013 est.)",
-        "$304.1 million (31 December 2012 est.)"
-    ],
-    "Area":[
-        "751 sq km",
-        "751 sq km",
-        "0 sq km"
-    ],
-    "Budget surplus (+) or deficit (-)":[
-        "-7.5% of GDP (2013 est.)"
-    ],
-    "Industrial production growth rate":[
-        "-1% (2013 est.)"
-    ],
-    "Median age":[
-        "32.1 years",
-        "31.7 years",
-        "32.6 years (2014 est.)"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
+    "hiv/aids - people living with hiv/aids":[
         "NA"
     ],
-    "Urbanization":[
+    "government type":[
+        "parliamentary democracy"
+    ],
+    "religions":[
+        "Roman Catholic 61.4%, Protestant 20.6% (Seventh-Day Adventist 6%, Pentecostal 5.6%, Baptist 4.1%, Methodist 3.7%, Church of God 1.2%), Jehovah's Witnesses 1.2%, other Christian 7.7%, Rastafarian 1.3%, other or unspecified 1.6%, none 6.1% (2001 census)"
+    ],
+    "unemployment rate":[
+        "23% (2000 est.)"
+    ],
+    "gross national saving":[
+        "9.2% of GDP (2012 est.)",
+        "8.5% of GDP (2011 est.)",
+        "7.8% of GDP (2010 est.)"
+    ],
+    "total fertility rate":[
+        "2.05 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "\"Isle of Beauty\"",
+        "Wilfred Oscar Morgan POND/Lemuel McPherson CHRISTIAN",
+        "adopted 1967"
+    ],
+    "environment - current issues":[
+        "NA"
+    ],
+    "industries":[
+        "soap, coconut oil, tourism, copra, furniture, cement blocks, shoes"
+    ],
+    "legal system":[
+        "common law based on the English model"
+    ],
+    "health expenditures":[
+        "5.9% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
         "67.1% of total population (2011)",
         "0.18% annual rate of change (2010-15 est.)"
     ],
-    "Imports - commodities":[
+    "imports - commodities":[
         "manufactured goods, machinery and equipment, food, chemicals"
     ],
-    "Location":[
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
         "Caribbean, island between the Caribbean Sea and the North Atlantic Ocean, about half way between Puerto Rico and Trinidad and Tobago"
     ],
-    "Electricity - from fossil fuels":[
-        "19.6% of total installed capacity (2010 est.)"
+    "irrigated land":[
+        "NA"
     ],
-    "Telephone system":[
-        "fully automatic network",
-        "fixed-line connections continued to decline slowly with the two active operators providing about 20 fixed-line connections per 100 persons; subscribership among the three mobile-cellular providers continued to increase with teledensity reaching 150 per 100 persons",
-        "country code - 1-767; landing points for the East Caribbean Fiber Optic System (ECFS) and the Global Caribbean Network (GCN) submarine cables providing connectivity to other islands in the eastern Caribbean extending from the British Virgin Islands to Trinidad; microwave radio relay and SHF radiotelephone links to Martinique and Guadeloupe; VHF and UHF radiotelephone links to Saint Lucia (2010)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$1.015 billion (2013 est.)",
-        "$1.004 billion (2012 est.)",
-        "$1.021 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
+    "natural hazards":[
         "flash floods are a constant threat; destructive hurricanes can be expected during the late summer months"
     ],
-    "Stock of narrow money":[
+    "natural gas - consumption":[
+        "0 cu m (2010 est.)"
+    ],
+    "exports":[
+        "$40.4 million (2013 est.)",
+        "$40.6 million (2012 est.)"
+    ],
+    "stock of narrow money":[
         "$94.41 million (31 December 2013 est.)",
         "$84.39 million (31 December 2012 est.)"
     ],
-    "Airports - with paved runways":[
+    "airports - with paved runways":[
         "2",
         "1",
         "1 (2013)"
     ],
-    "Electricity - consumption":[
-        "93.47 million kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "19,075 (2010 est.)"
-    ],
-    "HIV/AIDS - deaths":[
-        "NA"
-    ],
-    "Area - comparative":[
-        "slightly more than four times the size of Washington, DC"
-    ],
-    "Population":[
-        "73,449 (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "0 bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "2 (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "0.02  cu km/yr",
-        "244.1  cu m/yr (2004)"
-    ],
-    "Budget":[
-        "$148.1 million",
-        "$185.2 million (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "141,600 Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "bananas, citrus, mangos, root crops, coconuts, cocoa",
-        "forest and fishery potential not exploited"
-    ],
-    "Total fertility rate":[
-        "2.05 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "ROSEAU (capital) 14,000 (2011)"
-    ],
-    "Labor force":[
-        "25,000 (2000 est.)"
-    ],
-    "Labor force - by occupation":[
-        "40%",
-        "32%",
-        "28% (2002 est.)"
-    ],
-    "Stock of broad money":[
-        "$455.2 million (31 December 2013 est.)",
-        "$421.6 million (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "15.7%",
-        "15.6%",
-        "68.7% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "the US does not have an embassy in Dominica; the US Ambassador to Barbados is accredited to Dominica"
-    ],
-    "Infant mortality rate":[
-        "11.61 deaths/1,000 live births",
-        "15.46 deaths/1,000 live births",
-        "7.57 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Roman Catholic 61.4%, Protestant 20.6% (Seventh-Day Adventist 6%, Pentecostal 5.6%, Baptist 4.1%, Methodist 3.7%, Church of God 1.2%), Jehovah's Witnesses 1.2%, other Christian 7.7%, Rastafarian 1.3%, other or unspecified 1.6%, none 6.1% (2001 census)"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$90 million (31 December 2013 est.)",
-        "$94.56 million (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "NA%",
-        "NA%"
-    ],
-    "Hospital bed density":[
-        "3.8 beds/1,000 population (2011)"
-    ],
-    "Life expectancy at birth":[
-        "76.59 years",
-        "73.63 years",
-        "79.7 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "NA"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "675",
-        "636 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, AOSIS, C, Caricom, CD, CDB, CELAC, Commonwealth of Nations, ECCU, FAO, G-77, IAEA, IBRD, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, ISO (subscriber), ITU, ITUC (NGOs), MIGA, NAM, OAS, OECS, OIF, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WCL, WFTU, WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "English (official), French patois"
-    ],
-    "Country name":[
-        "Commonwealth of Dominica",
-        "Dominica"
-    ],
-    "Maritime claims":[
-        "12 nm",
-        "24 nm",
-        "200 nm"
-    ],
-    "Taxes and other revenues":[
-        "29.9% of GDP (2013 est.)"
-    ],
-    "Refined petroleum products - consumption":[
-        "918 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "0.22% (2014 est.)"
-    ],
-    "Drinking water source":[
-        "urban: 95.7% of population",
-        "",
-        "urban: 4.3% of population (2012 est.)"
-    ],
-    "Diplomatic representation in the US":[
-        "Ambassador Hubert J. CHARLES (since 16 July 2010)",
-        "3216 New Mexico Avenue NW, Washington, DC 20016",
-        "[1] (202) 364-6781",
-        "[1] (202) 364-6791",
-        "New York"
-    ],
-    "Internet users":[
+    "internet users":[
         "28,000 (2009)"
     ],
-    "Internet hosts":[
-        "723 (2012)"
-    ],
-    "Current account balance":[
+    "current account balance":[
         "-$91.5 million (2013 est.)",
         "-$54.9 million (2012 est.)"
     ],
-    "Debt - external":[
-        "$274.9 million (31 December 2013 est.)",
-        "$272.1 million (31 December 2012 est.)"
-    ],
-    "Administrative divisions":[
-        "10 parishes; Saint Andrew, Saint David, Saint George, Saint John, Saint Joseph, Saint Luke, Saint Mark, Saint Patrick, Saint Paul, Saint Peter"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Land use":[
-        "8%",
-        "24%",
-        "68% (2011)"
-    ],
-    "Disputes - international":[
-        "Dominica is the only Caribbean state to challenge Venezuela's sovereignty claim over Aves Island and joins the other island nations in challenging whether the feature sustains human habitation, a criterion under the UN Convention on the Law of the Sea (UNCLOS), which permits Venezuela to extend its Exclusive Economic Zone (EEZ) and continental shelf claims over a large portion of the eastern Caribbean Sea"
-    ],
-    "Climate":[
-        "tropical; moderated by northeast trade winds; heavy rainfall"
-    ],
-    "Natural resources":[
-        "timber, hydropower, arable land"
-    ],
-    "Internet country code":[
-        ".dm"
-    ],
-    "Electricity - production":[
-        "100.5 million kWh (2010 est.)"
-    ],
-    "Sex ratio":[
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.06 male(s)/female",
-        "1.03 male(s)/female",
-        "1.02 male(s)/female",
-        "0.77 male(s)/female",
-        "1.02 male(s)/female (2014 est.)"
-    ],
-    "Death rate":[
-        "7.94 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "6.2% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$219.6 million (2013 est.)",
-        "$182.7 million (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "Sisserou parrot"
-    ],
-    "GDP - real growth rate":[
-        "1.1% (2013 est.)",
-        "-1.7% (2012 est.)",
-        "1% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "6.5% (31 December 2010 est.)",
-        "6.5% (31 December 2009 est.)"
-    ],
-    "Fiscal year":[
-        "1 July - 30 June"
-    ],
-    "Obesity - adult prevalence rate":[
-        "24.9% (2008)"
-    ],
-    "Refined petroleum products - exports":[
+    "refined petroleum products - exports":[
         "0 bbl/day (2010 est.)"
     ],
-    "Industries":[
-        "soap, coconut oil, tourism, copra, furniture, cement blocks, shoes"
-    ],
-    "Legal system":[
-        "common law based on the English model"
-    ],
-    "Capital":[
-        "Roseau",
-        "15 18 N, 61 24 W",
-        "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "NA"
-    ],
-    "Imports - partners":[
-        "Japan 39.3%, US 15.6%, Trinidad and Tobago 13.5%, China 5.1% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "97,000 kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "15.53 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "22.1% (male 8,300/female 7,939)",
-        "16.7% (male 6,311/female 5,946)",
-        "41.5% (male 15,470/female 15,004)",
-        "9.2% (male 3,604/female 3,147)",
-        "10.4% (male 3,386/female 4,342) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "9.1% (31 December 2013 est.)",
-        "9.03% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "0 km"
-    ],
-    "Coastline":[
-        "148 km"
-    ],
-    "Nationality":[
-        "Dominican(s)",
-        "Dominican"
-    ],
-    "Telephones - main lines in use":[
-        "14,600 (2012)"
-    ],
-    "Literacy":[
+    "literacy":[
         "age 15 and over has ever attended school",
         "94%",
         "94%",
         "94% (2003 est.)"
     ],
-    "Total renewable water resources":[
-        "NA"
+    "crude oil - proved reserves":[
+        "0 bbl (1 January 2013 est.)"
     ],
-    "National holiday":[
-        "Independence Day, 3 November (1978)"
+    "airports":[
+        "2 (2013)"
     ],
-    "Elevation extremes":[
-        "Caribbean Sea 0 m",
-        "Morne Diablotins 1,447 m"
+    "gdp - per capita (ppp)":[
+        "$14,300 (2013 est.)",
+        "$14,200 (2012 est.)",
+        "$14,400 (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Suffrage":[
+    "birth rate":[
+        "15.53 births/1,000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".dm"
+    ],
+    "suffrage":[
         "18 years of age; universal"
     ],
-    "Physicians density":[
-        "1.59 physicians/1,000 population (2001)"
+    "natural gas - production":[
+        "0 cu m (2011 est.)"
     ],
-    "Exports - commodities":[
+    "exports - commodities":[
         "bananas, soap, bay oil, vegetables, grapefruit, oranges"
     ],
-    "Population below poverty line":[
-        "29% (2009 est.)"
+    "labor force":[
+        "25,000 (2000 est.)"
     ],
-    "Roadways":[
+    "imports - partners":[
+        "Japan 39.3%, US 15.6%, Trinidad and Tobago 13.5%, China 5.1% (2012)"
+    ],
+    "ports and terminals":[
+        "Portsmouth, Roseau"
+    ],
+    "labor force - by occupation":[
+        "40%",
+        "32%",
+        "28% (2002 est.)"
+    ],
+    "illicit drugs":[
+        "transshipment point for narcotics bound for the US and Europe; minor cannabis producer (2008)"
+    ],
+    "diplomatic representation from the us":[
+        "the US does not have an embassy in Dominica; the US Ambassador to Barbados is accredited to Dominica"
+    ],
+    "terrain":[
+        "rugged mountains of volcanic origin"
+    ],
+    "electricity - imports":[
+        "0 kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
+        "11.61 deaths/1,000 live births",
+        "15.46 deaths/1,000 live births",
+        "7.57 deaths/1,000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "6.5% (31 December 2010 est.)",
+        "6.5% (31 December 2009 est.)"
+    ],
+    "geography - note":[
+        "known as \"The Nature Island of the Caribbean\" due to its spectacular, lush, and varied flora and fauna, which are protected by an extensive natural park system; the most mountainous of the Lesser Antilles, its volcanic peaks are cones of lava craters and include Boiling Lake, the second-largest, thermally active lake in the world"
+    ],
+    "political parties and leaders":[
+        "Dominica Freedom Party or DFP [Judith PESTAINA]",
+        "Dominica Labor Party or DLP [Roosevelt SKERRIT]",
+        "Dominica United Workers Party or UWP [Hector JOHN]"
+    ],
+    "obesity - adult prevalence rate":[
+        "24.9% (2008)"
+    ],
+    "broadcast media":[
+        "no terrestrial TV service available; subscription cable TV provider offers some locally produced programming plus channels from the US, Latin America, and the Caribbean; state-operated radio broadcasts on 6 stations; privately owned radio broadcasts on about 15 stations (2007)"
+    ],
+    "constitution":[
+        "previous 1967 (preindependence); latest presented 25 July 1978, entered into force 3 November 1978; amended several times, last in 1984 (2011)"
+    ],
+    "median age":[
+        "32.1 years",
+        "31.7 years",
+        "32.6 years (2014 est.)"
+    ],
+    "manpower fit for military service":[
+        "16,035",
+        "15,499 (2010 est.)"
+    ],
+    "country name":[
+        "Commonwealth of Dominica",
+        "Dominica"
+    ],
+    "electricity - from fossil fuels":[
+        "19.6% of total installed capacity (2010 est.)"
+    ],
+    "capital":[
+        "Roseau",
+        "15 18 N, 61 24 W",
+        "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+    ],
+    "gdp (purchasing power parity)":[
+        "$1.015 billion (2013 est.)",
+        "$1.004 billion (2012 est.)",
+        "$1.021 billion (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "independence":[
+        "3 November 1978 (from the UK)"
+    ],
+    "drinking water source":[
+        "urban: 95.7% of population",
+        "",
+        "urban: 4.3% of population (2012 est.)"
+    ],
+    "electricity - from hydroelectric plants":[
+        "6.2% of total installed capacity (2010 est.)"
+    ],
+    "debt - external":[
+        "$274.9 million (31 December 2013 est.)",
+        "$272.1 million (31 December 2012 est.)"
+    ],
+    "coastline":[
+        "148 km"
+    ],
+    "nationality":[
+        "Dominican(s)",
+        "Dominican"
+    ],
+    "refined petroleum products - imports":[
+        "916 bbl/day (2010 est.)"
+    ],
+    "climate":[
+        "tropical; moderated by northeast trade winds; heavy rainfall"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "NA"
+    ],
+    "manpower reaching militarily significant age annually":[
+        "675",
+        "636 (2010 est.)"
+    ],
+    "roadways":[
         "1,512 km",
         "762 km",
         "750 km (2010)"
     ],
-    "Electricity - exports":[
-        "0 kWh (2012 est.)"
+    "net migration rate":[
+        "-5.39 migrant(s)/1,000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Portsmouth, Roseau"
-    ],
-    "Refined petroleum products - imports":[
-        "916 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "transshipment point for narcotics bound for the US and Europe; minor cannabis producer (2008)"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2011 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "East Caribbean dollars (XCD) per US dollar -",
         "2.7 (2013 est.)",
         "2.7 (2012 est.)",
         "2.7 (2010 est.)",
         "2.7 (2009)"
     ],
-    "Ethnic groups":[
-        "black 86.8%, mixed 8.9%, Carib Amerindian 2.9%, white 0.8%, other 0.7% (2001 census)"
+    "refined petroleum products - production":[
+        "0 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "agriculture - products":[
+        "bananas, citrus, mangos, root crops, coconuts, cocoa",
+        "forest and fishery potential not exploited"
+    ],
+    "public debt":[
+        "70% of GDP (2012 est.)",
+        "78% of GDP (2009 est.)"
+    ],
+    "manpower available for military service":[
+        "19,075 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$90 million (31 December 2013 est.)",
+        "$94.56 million (31 December 2012 est.)"
+    ],
+    "stock of broad money":[
+        "$455.2 million (31 December 2013 est.)",
+        "$421.6 million (31 December 2012 est.)"
+    ],
+    "national symbol(s)":[
+        "Sisserou parrot"
+    ],
+    "gdp - real growth rate":[
+        "1.1% (2013 est.)",
+        "-1.7% (2012 est.)",
+        "1% (2011 est.)"
+    ],
+    "telephone system":[
+        "fully automatic network",
+        "fixed-line connections continued to decline slowly with the two active operators providing about 20 fixed-line connections per 100 persons; subscribership among the three mobile-cellular providers continued to increase with teledensity reaching 150 per 100 persons",
+        "country code - 1-767; landing points for the East Caribbean Fiber Optic System (ECFS) and the Global Caribbean Network (GCN) submarine cables providing connectivity to other islands in the eastern Caribbean extending from the British Virgin Islands to Trinidad; microwave radio relay and SHF radiotelephone links to Martinique and Guadeloupe; VHF and UHF radiotelephone links to Saint Lucia (2010)"
+    ],
+    "flag description":[
+        "green, with a centered cross of three equal bands - the vertical part is yellow (hoist side), black, and white and the horizontal part is yellow (top), black, and white; superimposed in the center of the cross is a red disk bearing a Sisserou parrot, unique to Dominica, encircled by 10 green, five-pointed stars edged in yellow; the 10 stars represent the 10 administrative divisions (parishes); green symbolizes the island's lush vegetation; the triple-colored cross represents the Christian Trinity; the yellow color denotes sunshine, the main agricultural products (citrus and bananas), and the native Carib Indians; black is for the rich soil and the African heritage of most citizens; white signifies rivers, waterfalls, and the purity of aspirations; the red disc stands for social justice"
+    ],
+    "fiscal year":[
+        "1 July - 30 June"
+    ],
+    "household income or consumption by percentage share":[
+        "NA%",
+        "NA%"
+    ],
+    "gdp - composition, by end use":[
         "65.5%",
         "18.9%",
         "24.8%",
@@ -503,17 +306,214 @@
         "-55.6%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "9.2% of GDP (2012 est.)",
-        "8.5% of GDP (2011 est.)",
-        "7.8% of GDP (2010 est.)"
+    "life expectancy at birth":[
+        "76.59 years",
+        "73.63 years",
+        "79.7 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "no terrestrial TV service available; subscription cable TV provider offers some locally produced programming plus channels from the US, Latin America, and the Caribbean; state-operated radio broadcasts on 6 stations; privately owned radio broadcasts on about 15 stations (2007)"
+    "languages":[
+        "English (official), French patois"
     ],
-    "National anthem":[
-        "\"Isle of Beauty\"",
-        "Wilfred Oscar Morgan POND/Lemuel McPherson CHRISTIAN",
-        "adopted 1967"
+    "area":[
+        "751 sq km",
+        "751 sq km",
+        "0 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "141,600 Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "timber, hydropower, arable land"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "24 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "74.2% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "Japan 38.8%, Jamaica 8.3%, Antigua and Barbuda 7.7%, Guyana 6.5%, Paraguay 5.6%, Trinidad and Tobago 4.2% (2012)"
+    ],
+    "population growth rate":[
+        "0.22% (2014 est.)"
+    ],
+    "sanitation facility access":[
+        "urban: 79.6% of population",
+        "rural: 84.3% of population",
+        "total: 81.1% of population",
+        "",
+        "urban: 20.4% of population",
+        "rural: 15.7% of population",
+        "total: 18.9% of population (2007 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "15.7%",
+        "15.6%",
+        "68.7% (2013 est.)"
+    ],
+    "age structure":[
+        "22.1% (male 8,300/female 7,939)",
+        "16.7% (male 6,311/female 5,946)",
+        "41.5% (male 15,470/female 15,004)",
+        "9.2% (male 3,604/female 3,147)",
+        "10.4% (male 3,386/female 4,342) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "918 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "0 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly more than four times the size of Washington, DC"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "Dominica is the only Caribbean state to challenge Venezuela's sovereignty claim over Aves Island and joins the other island nations in challenging whether the feature sustains human habitation, a criterion under the UN Convention on the Law of the Sea (UNCLOS), which permits Venezuela to extend its Exclusive Economic Zone (EEZ) and continental shelf claims over a large portion of the eastern Caribbean Sea"
+    ],
+    "population":[
+        "73,449 (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "NA"
+    ],
+    "national holiday":[
+        "Independence Day, 3 November (1978)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-7.5% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$148.1 million",
+        "$185.2 million (2013 est.)"
+    ],
+    "population below poverty line":[
+        "29% (2009 est.)"
+    ],
+    "sex ratio":[
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.06 male(s)/female",
+        "1.03 male(s)/female",
+        "1.02 male(s)/female",
+        "0.77 male(s)/female",
+        "1.02 male(s)/female (2014 est.)"
+    ],
+    "death rate":[
+        "7.94 deaths/1,000 population (2014 est.)"
+    ],
+    "telephones - main lines in use":[
+        "14,600 (2012)"
+    ],
+    "inflation rate (consumer prices)":[
+        "1.8% (2013 est.)",
+        "1.4% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Hubert J. CHARLES (since 16 July 2010)",
+        "3216 New Mexico Avenue NW, Washington, DC 20016",
+        "[1] (202) 364-6781",
+        "[1] (202) 364-6791",
+        "New York"
+    ],
+    "imports":[
+        "$219.6 million (2013 est.)",
+        "$182.7 million (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "9.1% (31 December 2013 est.)",
+        "9.03% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "3.5% of GDP (2010)"
+    ],
+    "electricity - consumption":[
+        "93.47 million kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "3.8 beds/1,000 population (2011)"
+    ],
+    "ethnic groups":[
+        "black 86.8%, mixed 8.9%, Carib Amerindian 2.9%, white 0.8%, other 0.7% (2001 census)"
+    ],
+    "unemployment, youth ages 15-24":[
+        "26%",
+        "26.2%",
+        "25.4% (2001)"
+    ],
+    "land use":[
+        "8%",
+        "24%",
+        "68% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "0.02  cu km/yr",
+        "244.1  cu m/yr (2004)"
+    ],
+    "stock of domestic credit":[
+        "$333.3 million (31 December 2013 est.)",
+        "$304.1 million (31 December 2012 est.)"
+    ],
+    "taxes and other revenues":[
+        "29.9% of GDP (2013 est.)"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "723 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "Dominica Liberation Movement or DLM (a small leftist party)"
+    ],
+    "administrative divisions":[
+        "10 parishes; Saint Andrew, Saint David, Saint George, Saint John, Saint Joseph, Saint Luke, Saint Mark, Saint Patrick, Saint Paul, Saint Peter"
+    ],
+    "hiv/aids - deaths":[
+        "NA"
+    ],
+    "crude oil - production":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "telephones - mobile cellular":[
+        "109,300 (2012)"
+    ],
+    "electricity - production":[
+        "100.5 million kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
+        "Caribbean Sea 0 m",
+        "Morne Diablotins 1,447 m"
+    ],
+    "industrial production growth rate":[
+        "-1% (2013 est.)"
+    ],
+    "physicians density":[
+        "1.59 physicians/1,000 population (2001)"
+    ],
+    "international organization participation":[
+        "ACP, AOSIS, C, Caricom, CD, CDB, CELAC, Commonwealth of Nations, ECCU, FAO, G-77, IAEA, IBRD, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, ISO (subscriber), ITU, ITUC (NGOs), MIGA, NAM, OAS, OECS, OIF, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WCL, WFTU, WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$495 million (2013 est.)"
+    ],
+    "electricity - exports":[
+        "0 kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "97,000 kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "ROSEAU (capital) 14,000 (2011)"
     ]
 }

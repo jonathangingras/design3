@@ -1,345 +1,235 @@
 {
-    "Inflation rate (consumer prices)":[
-        "1.6% (2013 est.)",
-        "2.9% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "2.3% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "164,600 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "588.5 sq km (2004)"
-    ],
-    "Exports - partners":[
-        "China 31.8%, Japan 12.9%, UAE 10.4%, South Korea 10%, Thailand 4.4%, Singapore 4.4% (2012)"
-    ],
-    "Independence":[
-        "1650 (expulsion of the Portuguese)"
-    ],
-    "Constitution":[
-        "previous 1996 (The Basic Law of the Sultanate of Oman serves as the constitution); latest amended by royal decree in 2011 (2011)"
-    ],
-    "Geography - note":[
-        "strategic location on Musandam Peninsula adjacent to Strait of Hormuz, a vital transit point for world crude oil"
-    ],
-    "Exports":[
-        "$56.22 billion (2013 est.)",
-        "$52.14 billion (2012 est.)"
-    ],
-    "Pipelines":[
-        "condensate 106 km; gas 4,224 km; oil 3,558 km; oil/gas/water 33 km; refined products 264 km (2013)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$29,800 (2013 est.)",
-        "$29,200 (2012 est.)",
-        "$28,700 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 97.3% of population",
-        "rural: 94.7% of population",
-        "total: 96.6% of population",
-        "",
-        "urban: 2.7% of population",
-        "rural: 5.3% of population",
-        "total: 3.4% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "32 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "three horizontal bands of white, red, and green of equal width with a broad, vertical, red band on the hoist side; the national emblem (a khanjar dagger in its sheath superimposed on two crossed swords in scabbards) in white is centered near the top of the vertical band; white represents peace and prosperity, red recalls battles against foreign invaders, and green symbolizes the Jebel Akhdar (Green Mountains) and fertility"
-    ],
-    "Political pressure groups and leaders":[
-        "none"
-    ],
-    "Telephones - mobile cellular":[
-        "5.278 million (2012)"
-    ],
-    "Natural gas - imports":[
-        "1.95 billion cu m (2011 est.)"
-    ],
-    "Net migration rate":[
-        "-0.45 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "837,886",
-        "642,427 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$81.95 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "4.4% of GDP (2013 est.)",
-        "4.3% of GDP (2012 est.)"
-    ],
-    "Crude oil - production":[
-        "923,800 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
+    "natural gas - exports":[
         "10.93 billion cu m (2011 est.)"
     ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "21 00 N, 57 00 E"
     ],
-    "Terrain":[
-        "central desert plain, rugged mountains in north and south"
-    ],
-    "Electricity - imports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "4.3% of GDP (2009)"
-    ],
-    "Government type":[
-        "monarchy"
-    ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Unemployment rate":[
-        "15% (2004 est.)"
-    ],
-    "Sex ratio":[
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.1 male(s)/female",
-        "1.41 male(s)/female",
-        "1.2 male(s)/female",
-        "1.03 male(s)/female",
-        "1.22 male(s)/female (2014 est.)"
-    ],
-    "Political parties and leaders":[
-        "political parties are illegal"
-    ],
-    "Environment - current issues":[
-        "rising soil salinity; beach pollution from oil spills; limited natural freshwater resources"
-    ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
-    ],
-    "Stock of domestic credit":[
-        "$29.97 billion (31 December 2013 est.)",
-        "$27.62 billion (31 December 2012 est.)"
-    ],
-    "Area":[
-        "309,500 sq km",
-        "309,500 sq km",
-        "0 sq km"
-    ],
-    "Budget surplus (+) or deficit (-)":[
-        "-1.3% of GDP (2013 est.)"
-    ],
-    "Industrial production growth rate":[
-        "3.5% (2013 est.)"
-    ],
-    "Median age":[
-        "24.9 years",
-        "26.1 years",
-        "23.4 years (2014 est.)"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
+    "hiv/aids - people living with hiv/aids":[
         "1,100 (2009 est.)"
     ],
-    "Urbanization":[
+    "government type":[
+        "monarchy"
+    ],
+    "religions":[
+        "Muslim (official; majority are Ibadhi, lesser numbers of Sunni and Shia)) 85.9%, Christian 6.5%, Hindu 5.5%, Buddhist 0.8%, Jewish <.1, other 1%, unaffiliated 0.2%",
+        "approximately 75% of Omani citizens, who compose almost 70% of the country's total population, are Ibadhi Muslims; the Omani government does not keep statistics on religious affiliation (2013) (2010 est.)"
+    ],
+    "unemployment rate":[
+        "15% (2004 est.)"
+    ],
+    "gross national saving":[
+        "36.2% of GDP (2013 est.)",
+        "37.4% of GDP (2012 est.)",
+        "41% of GDP (2011 est.)"
+    ],
+    "total fertility rate":[
+        "2.86 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "\"Nashid as-Salaam as-Sultani\" (The Sultan's Anthem)",
+        "Rashid bin Uzayyiz al KHUSAIDI/James Frederick MILLS, arranged by Bernard EBBINGHAUS",
+        "adopted 1932; new words were written after QABOOS bin Said al Said gained power in 1970; the anthem was first performed by the band of a British ship as a salute to the Sultan during a 1932 visit to Muscat; the bandmaster of the HMS Hawkins was asked to write a salutation to the Sultan on the occasion of his visiting the ship"
+    ],
+    "environment - current issues":[
+        "rising soil salinity; beach pollution from oil spills; limited natural freshwater resources"
+    ],
+    "industries":[
+        "crude oil production and refining, natural and liquefied natural gas (LNG) production; construction, cement, copper, steel, chemicals, optic fiber"
+    ],
+    "legal system":[
+        "mixed legal system of Anglo-Saxon law and Islamic law"
+    ],
+    "health expenditures":[
+        "2.3% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "849.5 billion cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
         "73.4% of total population (2011)",
         "2.23% annual rate of change (2010-15 est.)"
     ],
-    "Imports - commodities":[
+    "imports - commodities":[
         "machinery and transport equipment, manufactured goods, food, livestock, lubricants"
     ],
-    "Location":[
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
         "Middle East, bordering the Arabian Sea, Gulf of Oman, and Persian Gulf, between Yemen and UAE"
     ],
-    "Electricity - from fossil fuels":[
-        "100% of total installed capacity (2010 est.)"
+    "irrigated land":[
+        "588.5 sq km (2004)"
     ],
-    "Military expenditures":[
-        "8.61% of GDP (2012)",
-        "6.13% of GDP (2011)",
-        "8.61% of GDP (2010)"
-    ],
-    "Telephone system":[
-        "modern system consisting of open-wire, microwave, and radiotelephone communication stations; limited coaxial cable; domestic satellite system with 8 earth stations",
-        "fixed-line and mobile-cellular subscribership both increasing with fixed-line phone service gradually being introduced to remote villages using wireless local loop systems",
-        "country code - 968; the Fiber-Optic Link Around the Globe (FLAG) and the SEA-ME-WE-3 submarine cable provide connectivity to Asia, the Middle East, and Europe; satellite earth stations - 2 Intelsat (Indian Ocean), 1 Arabsat (2008)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$94.86 billion (2013 est.)",
-        "$90.28 billion (2012 est.)",
-        "$85.99 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
+    "natural hazards":[
         "summer winds often raise large sandstorms and dust storms in interior; periodic droughts"
     ],
-    "Stock of narrow money":[
+    "natural gas - consumption":[
+        "17.53 billion cu m (2011 est.)"
+    ],
+    "exports":[
+        "$56.22 billion (2013 est.)",
+        "$52.14 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
         "$9.537 billion (31 December 2013 est.)",
         "$9.083 billion (31 December 2012 est.)"
     ],
-    "Airports - with paved runways":[
+    "airports - with paved runways":[
         "13",
         "7",
         "5",
         "1 (2013)"
     ],
-    "Electricity - consumption":[
-        "15.32 billion kWh (2010 est.)"
+    "internet users":[
+        "1.465 million (2009)"
     ],
-    "Manpower available for military service":[
-        "985,957",
-        "737,812 (2010 est.)"
+    "current account balance":[
+        "$7.249 billion (2013 est.)",
+        "$8.312 billion (2012 est.)"
     ],
-    "Airports - with unpaved runways":[
-        "119",
-        "2",
-        "7",
-        "51",
-        "33",
-        "",
-        "26 (2013)"
+    "maternal mortality rate":[
+        "32 deaths/100,000 live births (2010)"
     ],
-    "HIV/AIDS - deaths":[
-        "fewer than 100 (2009 est.)"
+    "taxes and other revenues":[
+        "42% of GDP (2013 est.)"
     ],
-    "Area - comparative":[
-        "slightly smaller than Kansas"
+    "children under the age of 5 years underweight":[
+        "8.6% (2009)"
     ],
-    "Population":[
-        "3,219,775",
-        "immigrants make up just over 30% of the total population, according to UN data (2013) (July 2014 est.)"
+    "refined petroleum products - exports":[
+        "47,710 bbl/day (2010 est.)"
     ],
-    "Crude oil - proved reserves":[
+    "literacy":[
+        "age 15 and over can read and write",
+        "86.9%",
+        "90.2%",
+        "81.8% (2010 est.)"
+    ],
+    "crude oil - proved reserves":[
         "5.5 billion bbl (1 January 2013 est.)"
     ],
-    "Airports":[
+    "airports":[
         "132 (2013)"
     ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "1.32  cu km/yr (10%/1%/88%)",
-        "515.8  cu m/yr (2003)"
+    "gdp - per capita (ppp)":[
+        "$29,800 (2013 est.)",
+        "$29,200 (2012 est.)",
+        "$28,700 (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Budget":[
-        "$34.42 billion",
-        "$35.48 billion (2013 est.)"
+    "birth rate":[
+        "24.47 births/1,000 population (2014 est.)"
     ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "52.67 million Mt (2011 est.)"
+    "internet country code":[
+        ".om"
     ],
-    "Agriculture - products":[
-        "dates, limes, bananas, alfalfa, vegetables; camels, cattle; fish"
+    "suffrage":[
+        "21 years of age; universal; note - members of the military and security forces by law cannot vote"
     ],
-    "Military service age and obligation":[
-        "18-30 years of age for voluntary military service; no conscription (2012)"
+    "natural gas - production":[
+        "35.94 billion cu m (2012 est.)"
     ],
-    "Total fertility rate":[
-        "2.86 children born/woman (2014 est.)"
+    "exports - commodities":[
+        "petroleum, reexports, fish, metals, textiles"
     ],
-    "Major urban areas - population":[
-        "MUSCAT (capital) 743,000 (2011)"
+    "labor force":[
+        "968,800",
+        "about 60% of the labor force is non-national (2007)"
     ],
-    "Population below poverty line":[
-        "NA%"
+    "dependency ratios":[
+        "34.4 %",
+        "30.4 %",
+        "3.9 %",
+        "25.4 (2014 est.)"
     ],
-    "Labor force - by occupation":[
+    "imports - partners":[
+        "UAE 24.1%, Japan 12.5%, India 8.5%, China 6.3%, US 6.1% (2012)"
+    ],
+    "ports and terminals":[
+        "Mina' Qabus, Salalah, Suhar",
+        "Salalah (3,200,000)"
+    ],
+    "labor force - by occupation":[
         "NA%",
         "NA%",
         "NA%"
     ],
-    "Stock of broad money":[
-        "$71.42 billion (31 December 2010 est.)",
-        "$63.16 billion (31 December 2009 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "1%",
-        "64.4%",
-        "34.6% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
+    "diplomatic representation from the us":[
         "Ambassador Greta C. HOLTZ (since 27 September 2012)",
         "Jamait Ad Duwal Al Arabiyya Street, Al Khuwair area, Muscat",
         "P. O. Box 202, P.C. 115, Madinat Al Sultan Qaboos, Muscat",
         "[968] 24-643-400",
         "[968] 24-64-37-40"
     ],
-    "Infant mortality rate":[
+    "terrain":[
+        "central desert plain, rugged mountains in north and south"
+    ],
+    "electricity - imports":[
+        "0 kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
         "14 deaths/1,000 live births",
         "14.29 deaths/1,000 live births",
         "13.69 deaths/1,000 live births (2014 est.)"
     ],
-    "Religions":[
-        "Muslim (official; majority are Ibadhi, lesser numbers of Sunni and Shia)) 85.9%, Christian 6.5%, Hindu 5.5%, Buddhist 0.8%, Jewish <.1, other 1%, unaffiliated 0.2%",
-        "approximately 75% of Omani citizens, who compose almost 70% of the country's total population, are Ibadhi Muslims; the Omani government does not keep statistics on religious affiliation (2013) (2010 est.)"
+    "central bank discount rate":[
+        "2% (31 December 2010 est.)",
+        "0.05% (31 December 2009 est.)"
     ],
-    "Reserves of foreign exchange and gold":[
-        "$17.7 billion (31 December 2013 est.)",
-        "$14.4 billion (31 December 2012 est.)"
+    "geography - note":[
+        "strategic location on Musandam Peninsula adjacent to Strait of Hormuz, a vital transit point for world crude oil"
     ],
-    "Household income or consumption by percentage share":[
-        "NA%",
-        "NA%"
+    "political parties and leaders":[
+        "political parties are illegal"
     ],
-    "Children under the age of 5 years underweight":[
-        "8.6% (2009)"
+    "obesity - adult prevalence rate":[
+        "20.9% (2008)"
     ],
-    "Hospital bed density":[
-        "1.8 beds/1,000 population (2009)"
+    "broadcast media":[
+        "1 state-run TV broadcaster; TV stations transmitting from Saudi Arabia, the UAE, and Yemen available via satellite TV; state-run radio operates multiple stations; first private radio station began operating in 2007 and 2 additional stations now operating (2007)"
     ],
-    "Life expectancy at birth":[
-        "74.97 years",
-        "73.07 years",
-        "76.97 years (2014 est.)"
+    "constitution":[
+        "previous 1996 (The Basic Law of the Sultanate of Oman serves as the constitution); latest amended by royal decree in 2011 (2011)"
     ],
-    "HIV/AIDS - adult prevalence rate":[
-        "0.1% (2009 est.)"
+    "contraceptive prevalence rate":[
+        "31.7% (2000)"
     ],
-    "School life expectancy (primary to tertiary education)":[
-        "14 years",
-        "13 years",
-        "14 years (2011)"
+    "median age":[
+        "24.9 years",
+        "26.1 years",
+        "23.4 years (2014 est.)"
     ],
-    "Manpower reaching militarily significant age annually":[
-        "31,959",
-        "30,264 (2010 est.)"
+    "manpower fit for military service":[
+        "837,886",
+        "642,427 (2010 est.)"
     ],
-    "International organization participation":[
-        "ABEDA, AFESD, AMF, CAEU, FAO, G-77, GCC, IAEA, IBRD, ICAO, ICC (NGOs), IDA, IDB, IFAD, IFC, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OIC, OPCW, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Arabic (official), English, Baluchi, Urdu, Indian dialects"
-    ],
-    "Country name":[
+    "country name":[
         "Sultanate of Oman",
         "Oman",
         "Saltanat Uman",
         "Uman",
         "Muscat and Oman"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "24 nm",
-        "200 nm"
+    "electricity - from fossil fuels":[
+        "100% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$20.11 billion (31 December 2012 est.)",
-        "$19.72 billion (31 December 2011)",
-        "$20.27 billion (31 December 2010 est.)"
+    "capital":[
+        "Muscat",
+        "23 37 N, 58 35 E",
+        "UTC+4 (9 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Taxes and other revenues":[
-        "42% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$94.86 billion (2013 est.)",
+        "$90.28 billion (2012 est.)",
+        "$85.99 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Refined petroleum products - consumption":[
-        "98,000 bbl/day (2011 est.)"
+    "independence":[
+        "1650 (expulsion of the Portuguese)"
     ],
-    "Population growth rate":[
-        "2.06% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 95.5% of population",
         "rural: 86.1% of population",
         "total: 93% of population",
@@ -348,203 +238,45 @@
         "rural: 13.9% of population",
         "total: 7% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Hunaina bint Sultan bin Ahmad al-MUGHAIRI (since 9 November 2005)",
-        "2535 Belmont Road, NW, Washington, DC 20008",
-        "[1] (202) 387-1980",
-        "[1] (202) 745-4933"
+    "electricity - from hydroelectric plants":[
+        "0% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "1.465 million (2009)"
+    "stock of direct foreign investment - abroad":[
+        "$NA"
     ],
-    "Contraceptive prevalence rate":[
-        "31.7% (2000)"
-    ],
-    "Internet hosts":[
-        "14,531 (2012)"
-    ],
-    "Current account balance":[
-        "$7.249 billion (2013 est.)",
-        "$8.312 billion (2012 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$10.84 billion (31 December 2013 est.)",
         "$9.99 billion (31 December 2012 est.)"
     ],
-    "Administrative divisions":[
-        "11 governorates (muhafazat, singular - muhafazat); Ad Dakhiliyah, Al Buraymi, Al Wusta, Az Zahirah, Janub al Batinah (Al Batinah South), Janub ash Sharqiyah (Ash Sharqiyah South), Masqat (Muscat), Musandam, Shamal al Batinah (Al Batinah North), Shamal ash Sharqiyah (Ash Sharqiyah North), Zufar (Dhofar)"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Land use":[
-        "0.1%",
-        "0.12%",
-        "99.77% (2011)"
-    ],
-    "Disputes - international":[
-        "boundary agreement reportedly signed and ratified with UAE in 2003 for entire border, including Oman's Musandam Peninsula and Al Madhah exclave, but details of the alignment have not been made public"
-    ],
-    "Climate":[
-        "dry desert; hot, humid along coast; hot, dry interior; strong southwest summer monsoon (May to September) in far south"
-    ],
-    "Natural resources":[
-        "petroleum, copper, asbestos, some marble, limestone, chromium, gypsum, natural gas"
-    ],
-    "Internet country code":[
-        ".om"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$NA"
-    ],
-    "Electricity - production":[
-        "18.63 billion kWh (2010 est.)"
-    ],
-    "Death rate":[
-        "3.38 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$30.75 billion (2013 est.)",
-        "$25.63 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "Khanjar dagger superimposed on two crossed swords"
-    ],
-    "GDP - real growth rate":[
-        "5.1% (2013 est.)",
-        "5% (2012 est.)",
-        "4.5% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "849.5 billion cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "2% (31 December 2010 est.)",
-        "0.05% (31 December 2009 est.)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "20.9% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "47,710 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "crude oil production and refining, natural and liquefied natural gas (LNG) production; construction, cement, copper, steel, chemicals, optic fiber"
-    ],
-    "Legal system":[
-        "mixed legal system of Anglo-Saxon law and Islamic law"
-    ],
-    "Capital":[
-        "Muscat",
-        "23 37 N, 58 35 E",
-        "UTC+4 (9 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Heliports":[
-        "3 (2013)"
-    ],
-    "Crude oil - exports":[
-        "705,100 bbl/day (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "4.265 million kW (2010 est.)"
-    ],
-    "Imports - partners":[
-        "UAE 24.1%, Japan 12.5%, India 8.5%, China 6.3%, US 6.1% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "17.53 billion cu m (2011 est.)"
-    ],
-    "Birth rate":[
-        "24.47 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "30.4% (male 501,352/female 476,333)",
-        "19.9% (male 335,404/female 304,261)",
-        "42.6% (male 801,539/female 569,187)",
-        "3.9% (male 67,085/female 58,254)",
-        "3.2% (male 53,320/female 53,040) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "5.8% (31 December 2013 est.)",
-        "5.65% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "1,573 km",
-        "Saudi Arabia 676 km, UAE 609 km, Yemen 288 km"
-    ],
-    "Coastline":[
+    "coastline":[
         "2,092 km"
     ],
-    "Nationality":[
+    "nationality":[
         "Omani(s)",
         "Omani"
     ],
-    "Telephones - main lines in use":[
-        "305,000 (2012)"
+    "refined petroleum products - imports":[
+        "2,390 bbl/day (2010 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "86.9%",
-        "90.2%",
-        "81.8% (2010 est.)"
+    "climate":[
+        "dry desert; hot, humid along coast; hot, dry interior; strong southwest summer monsoon (May to September) in far south"
     ],
-    "Total renewable water resources":[
-        "1.4 cu km (2011)"
+    "hiv/aids - adult prevalence rate":[
+        "0.1% (2009 est.)"
     ],
-    "National holiday":[
-        "Birthday of Sultan QABOOS, 18 November (1940)"
+    "manpower reaching militarily significant age annually":[
+        "31,959",
+        "30,264 (2010 est.)"
     ],
-    "Elevation extremes":[
-        "Arabian Sea 0 m",
-        "Jabal Shams 2,980 m"
-    ],
-    "Suffrage":[
-        "21 years of age; universal; note - members of the military and security forces by law cannot vote"
-    ],
-    "Physicians density":[
-        "2.05 physicians/1,000 population (2010)"
-    ],
-    "Exports - commodities":[
-        "petroleum, reexports, fish, metals, textiles"
-    ],
-    "Labor force":[
-        "968,800",
-        "about 60% of the labor force is non-national (2007)"
-    ],
-    "Dependency ratios":[
-        "34.4 %",
-        "30.4 %",
-        "3.9 %",
-        "25.4 (2014 est.)"
-    ],
-    "Roadways":[
+    "roadways":[
         "60,240 km",
         "29,685 km (includes 1,943 km of expressways)",
         "30,545 km (2012)"
     ],
-    "Electricity - exports":[
-        "0 kWh (2012 est.)"
+    "net migration rate":[
+        "-0.45 migrant(s)/1,000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Mina' Qabus, Salalah, Suhar",
-        "Salalah (3,200,000)"
-    ],
-    "Refined petroleum products - imports":[
-        "2,390 bbl/day (2010 est.)"
-    ],
-    "Stock of direct foreign investment - abroad":[
-        "$NA"
-    ],
-    "Natural gas - production":[
-        "35.94 billion cu m (2012 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "Omani rials (OMR) per US dollar -",
         "0.3845 (2013 est.)",
         "0.3845 (2012 est.)",
@@ -552,10 +284,67 @@
         "0.3845 (2009)",
         "0.3845 (2008)"
     ],
-    "Ethnic groups":[
-        "Arab, Baluchi, South Asian (Indian, Pakistani, Sri Lankan, Bangladeshi), African"
+    "refined petroleum products - production":[
+        "164,600 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.1 male(s)/female",
+        "1.41 male(s)/female",
+        "1.2 male(s)/female",
+        "1.03 male(s)/female",
+        "1.22 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "4.4% of GDP (2013 est.)",
+        "4.3% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "985,957",
+        "737,812 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$17.7 billion (31 December 2013 est.)",
+        "$14.4 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "119",
+        "2",
+        "7",
+        "51",
+        "33",
+        "",
+        "26 (2013)"
+    ],
+    "stock of broad money":[
+        "$71.42 billion (31 December 2010 est.)",
+        "$63.16 billion (31 December 2009 est.)"
+    ],
+    "national symbol(s)":[
+        "Khanjar dagger superimposed on two crossed swords"
+    ],
+    "gdp - real growth rate":[
+        "5.1% (2013 est.)",
+        "5% (2012 est.)",
+        "4.5% (2011 est.)"
+    ],
+    "telephone system":[
+        "modern system consisting of open-wire, microwave, and radiotelephone communication stations; limited coaxial cable; domestic satellite system with 8 earth stations",
+        "fixed-line and mobile-cellular subscribership both increasing with fixed-line phone service gradually being introduced to remote villages using wireless local loop systems",
+        "country code - 968; the Fiber-Optic Link Around the Globe (FLAG) and the SEA-ME-WE-3 submarine cable provide connectivity to Asia, the Middle East, and Europe; satellite earth stations - 2 Intelsat (Indian Ocean), 1 Arabsat (2008)"
+    ],
+    "flag description":[
+        "three horizontal bands of white, red, and green of equal width with a broad, vertical, red band on the hoist side; the national emblem (a khanjar dagger in its sheath superimposed on two crossed swords in scabbards) in white is centered near the top of the vertical band; white represents peace and prosperity, red recalls battles against foreign invaders, and green symbolizes the Jebel Akhdar (Green Mountains) and fertility"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "NA%",
+        "NA%"
+    ],
+    "gdp - composition, by end use":[
         "30.5%",
         "17.8%",
         "27.3%",
@@ -564,17 +353,228 @@
         "-39.4%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "36.2% of GDP (2013 est.)",
-        "37.4% of GDP (2012 est.)",
-        "41% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "74.97 years",
+        "73.07 years",
+        "76.97 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "1 state-run TV broadcaster; TV stations transmitting from Saudi Arabia, the UAE, and Yemen available via satellite TV; state-run radio operates multiple stations; first private radio station began operating in 2007 and 2 additional stations now operating (2007)"
+    "languages":[
+        "Arabic (official), English, Baluchi, Urdu, Indian dialects"
     ],
-    "National anthem":[
-        "\"Nashid as-Salaam as-Sultani\" (The Sultan's Anthem)",
-        "Rashid bin Uzayyiz al KHUSAIDI/James Frederick MILLS, arranged by Bernard EBBINGHAUS",
-        "adopted 1932; new words were written after QABOOS bin Said al Said gained power in 1970; the anthem was first performed by the band of a British ship as a salute to the Sultan during a 1932 visit to Muscat; the bandmaster of the HMS Hawkins was asked to write a salutation to the Sultan on the occasion of his visiting the ship"
+    "area":[
+        "309,500 sq km",
+        "309,500 sq km",
+        "0 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "52.67 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "petroleum, copper, asbestos, some marble, limestone, chromium, gypsum, natural gas"
+    ],
+    "telephones - mobile cellular":[
+        "5.278 million (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "24 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "China 31.8%, Japan 12.9%, UAE 10.4%, South Korea 10%, Thailand 4.4%, Singapore 4.4% (2012)"
+    ],
+    "population growth rate":[
+        "2.06% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18-30 years of age for voluntary military service; no conscription (2012)"
+    ],
+    "pipelines":[
+        "condensate 106 km; gas 4,224 km; oil 3,558 km; oil/gas/water 33 km; refined products 264 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 97.3% of population",
+        "rural: 94.7% of population",
+        "total: 96.6% of population",
+        "",
+        "urban: 2.7% of population",
+        "rural: 5.3% of population",
+        "total: 3.4% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "1%",
+        "64.4%",
+        "34.6% (2013 est.)"
+    ],
+    "age structure":[
+        "30.4% (male 501,352/female 476,333)",
+        "19.9% (male 335,404/female 304,261)",
+        "42.6% (male 801,539/female 569,187)",
+        "3.9% (male 67,085/female 58,254)",
+        "3.2% (male 53,320/female 53,040) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "98,000 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "1,573 km",
+        "Saudi Arabia 676 km, UAE 609 km, Yemen 288 km"
+    ],
+    "natural gas - imports":[
+        "1.95 billion cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly smaller than Kansas"
+    ],
+    "crude oil - exports":[
+        "705,100 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "boundary agreement reportedly signed and ratified with UAE in 2003 for entire border, including Oman's Musandam Peninsula and Al Madhah exclave, but details of the alignment have not been made public"
+    ],
+    "population":[
+        "3,219,775",
+        "immigrants make up just over 30% of the total population, according to UN data (2013) (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "1.4 cu km (2011)"
+    ],
+    "national holiday":[
+        "Birthday of Sultan QABOOS, 18 November (1940)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-1.3% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$34.42 billion",
+        "$35.48 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "NA%"
+    ],
+    "military expenditures":[
+        "8.61% of GDP (2012)",
+        "6.13% of GDP (2011)",
+        "8.61% of GDP (2010)"
+    ],
+    "death rate":[
+        "3.38 deaths/1,000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$20.11 billion (31 December 2012 est.)",
+        "$19.72 billion (31 December 2011)",
+        "$20.27 billion (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "3.5% (2013 est.)"
+    ],
+    "inflation rate (consumer prices)":[
+        "1.6% (2013 est.)",
+        "2.9% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Hunaina bint Sultan bin Ahmad al-MUGHAIRI (since 9 November 2005)",
+        "2535 Belmont Road, NW, Washington, DC 20008",
+        "[1] (202) 387-1980",
+        "[1] (202) 745-4933"
+    ],
+    "imports":[
+        "$30.75 billion (2013 est.)",
+        "$25.63 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "5.8% (31 December 2013 est.)",
+        "5.65% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "4.3% of GDP (2009)"
+    ],
+    "electricity - consumption":[
+        "15.32 billion kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "1.8 beds/1,000 population (2009)"
+    ],
+    "ethnic groups":[
+        "Arab, Baluchi, South Asian (Indian, Pakistani, Sri Lankan, Bangladeshi), African"
+    ],
+    "land use":[
+        "0.1%",
+        "0.12%",
+        "99.77% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "1.32  cu km/yr (10%/1%/88%)",
+        "515.8  cu m/yr (2003)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$NA"
+    ],
+    "stock of domestic credit":[
+        "$29.97 billion (31 December 2013 est.)",
+        "$27.62 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "dates, limes, bananas, alfalfa, vegetables; camels, cattle; fish"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "14,531 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "none"
+    ],
+    "heliports":[
+        "3 (2013)"
+    ],
+    "administrative divisions":[
+        "11 governorates (muhafazat, singular - muhafazat); Ad Dakhiliyah, Al Buraymi, Al Wusta, Az Zahirah, Janub al Batinah (Al Batinah South), Janub ash Sharqiyah (Ash Sharqiyah South), Masqat (Muscat), Musandam, Shamal al Batinah (Al Batinah North), Shamal ash Sharqiyah (Ash Sharqiyah North), Zufar (Dhofar)"
+    ],
+    "hiv/aids - deaths":[
+        "fewer than 100 (2009 est.)"
+    ],
+    "crude oil - production":[
+        "923,800 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "305,000 (2012)"
+    ],
+    "electricity - production":[
+        "18.63 billion kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
+        "Arabian Sea 0 m",
+        "Jabal Shams 2,980 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "14 years",
+        "13 years",
+        "14 years (2011)"
+    ],
+    "physicians density":[
+        "2.05 physicians/1,000 population (2010)"
+    ],
+    "international organization participation":[
+        "ABEDA, AFESD, AMF, CAEU, FAO, G-77, GCC, IAEA, IBRD, ICAO, ICC (NGOs), IDA, IDB, IFAD, IFC, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OIC, OPCW, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$81.95 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "0 kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "4.265 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "MUSCAT (capital) 743,000 (2011)"
     ]
 }

@@ -1,183 +1,70 @@
 {
-    "Industries":[
-        "tourism, phosphate extraction (near depletion)"
+    "administrative divisions":[
+        "none (territory of Australia)"
     ],
-    "Legal system":[
-        "legal system is under the authority of the governor general of Australia and Australian law"
+    "diplomatic representation in the us":[
+        "none (territory of Australia)"
     ],
-    "HIV/AIDS - adult prevalence rate":[
-        "NA"
-    ],
-    "Area":[
-        "135 sq km",
-        "135 sq km",
-        "0 sq km"
-    ],
-    "National symbol(s)":[
-        "golden bosun bird"
-    ],
-    "Land use":[
-        "0%",
-        "0%",
-        "100% (mainly tropical rainforest; 63% of the island is a national park) (2011)"
-    ],
-    "Airports - with paved runways":[
-        "1",
+    "airports":[
         "1 (2013)"
     ],
-    "National holiday":[
-        "Australia Day, 26 January (1788)"
-    ],
-    "International organization participation":[
-        "none"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "NA"
-    ],
-    "Languages":[
-        "English (official), Chinese, Malay"
-    ],
-    "Imports - commodities":[
-        "consumer goods"
-    ],
-    "Country name":[
-        "Territory of Christmas Island",
-        "Christmas Island"
-    ],
-    "Agriculture - products":[
-        "NA"
-    ],
-    "Location":[
-        "Southeastern Asia, island in the Indian Ocean, south of Indonesia"
-    ],
-    "Maritime claims":[
-        "12 nm",
-        "12 nm",
-        "200 nm"
-    ],
-    "Capital":[
-        "The Settlement",
-        "10 25 S, 105 43 E",
-        "UTC+7 (12 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Irrigated land":[
-        "NA"
-    ],
-    "GDP (purchasing power parity)":[
+    "imports":[
         "$NA"
     ],
-    "Population growth rate":[
-        "1.11% (2014 est.)"
+    "geographic coordinates":[
+        "10 30 S, 105 40 E"
     ],
-    "Natural hazards":[
-        "the narrow fringing reef surrounding the island can be a maritime hazard"
-    ],
-    "Exports":[
-        "$NA"
-    ],
-    "Constitution":[
-        "1 October 1958 (Christmas Island Act 1958); amended many times, last in 2010 (Territories Law Reform Act 2010) (2010)"
-    ],
-    "Diplomatic representation in the US":[
+    "diplomatic representation from the us":[
         "none (territory of Australia)"
     ],
-    "Geography - note":[
-        "located along major sea lanes of Indian Ocean"
+    "terrain":[
+        "steep cliffs along coast rise abruptly to central plateau"
     ],
-    "Internet users":[
-        "464 (2001)"
-    ],
-    "Internet hosts":[
-        "3,028 (2012)"
-    ],
-    "Land boundaries":[
-        "0 km"
-    ],
-    "Coastline":[
-        "138.9 km"
-    ],
-    "Dependency status":[
-        "non-self governing territory of Australia; administered from Canberra by the Department of Regional Australia, Local Government, Arts and Sport"
-    ],
-    "HIV/AIDS - deaths":[
+    "infant mortality rate":[
+        "NA",
+        "NA",
         "NA"
     ],
-    "Nationality":[
-        "Christmas Islander(s)",
-        "Christmas Island"
-    ],
-    "Independence":[
-        "none (territory of Australia)"
-    ],
-    "Area - comparative":[
-        "about three-quarters the size of Washington, DC"
-    ],
-    "Political pressure groups and leaders":[
-        "none"
-    ],
-    "Disputes - international":[
-        "none"
-    ],
-    "Population":[
-        "1,530 (July 2014 est.)"
-    ],
-    "Climate":[
-        "tropical with a wet season (December to April) and dry season; heat and humidity moderated by trade winds"
-    ],
-    "Administrative divisions":[
-        "none (territory of Australia)"
-    ],
-    "Airports":[
-        "1 (2013)"
-    ],
-    "Natural resources":[
-        "phosphate, beaches"
-    ],
-    "Elevation extremes":[
-        "Indian Ocean 0 m",
-        "Murray Hill 361 m"
-    ],
-    "Internet country code":[
-        ".cx"
-    ],
-    "Suffrage":[
-        "18 years of age"
-    ],
-    "Roadways":[
-        "140 km",
-        "30 km",
-        "110 km (2011)"
-    ],
-    "Budget":[
-        "$NA",
-        "$NA"
-    ],
-    "Labor force":[
+    "hiv/aids - people living with hiv/aids":[
         "NA"
     ],
-    "Flag description":[
-        "territorial flag; divided diagonally from upper hoist to lower fly; the upper triangle is green with a yellow image of the Golden Bosun Bird superimposed; the lower triangle is blue with the Southern Cross constellation, representing Australia, superimposed; a centered yellow disk displays a green map of the island",
-        "the flag of Australia is used for official purposes"
+    "government type":[
+        "NA"
     ],
-    "Sex ratio":[
-        "NA (2009 est.)"
+    "religions":[
+        "Buddhist 36%, Muslim 25%, Christian 18%, other 21% (1997)"
     ],
-    "Exports - commodities":[
+    "fiscal year":[
+        "1 July - 30 June"
+    ],
+    "exports - commodities":[
         "phosphate"
     ],
-    "Political parties and leaders":[
+    "political parties and leaders":[
         "none"
     ],
-    "Military - note":[
-        "defense is the responsibility of Australia"
+    "total fertility rate":[
+        "NA (2014 est.)"
     ],
-    "Broadcast media":[
+    "life expectancy at birth":[
+        "NA",
+        "NA",
+        "NA"
+    ],
+    "broadcast media":[
         "1 community radio station; satellite broadcasts of several Australian radio and TV stations (2009)"
     ],
-    "Ports and terminals":[
-        "Flying Fish Cove"
+    "ethnic groups":[
+        "Chinese 70%, European 20%, Malay 10%",
+        "no indigenous population (2001)"
     ],
-    "Exchange rates":[
+    "environment - current issues":[
+        "loss of rainforest; impact of phosphate mining"
+    ],
+    "industries":[
+        "tourism, phosphate extraction (near depletion)"
+    ],
+    "exchange rates":[
         "Australian dollars (AUD) per US dollar -",
         "1.031 (2013)",
         "0.9658 (2012)",
@@ -185,60 +72,173 @@
         "1.2822 (2009)",
         "1.2059 (2008)"
     ],
-    "Imports":[
-        "$NA"
+    "legal system":[
+        "legal system is under the authority of the governor general of Australia and Australian law"
     ],
-    "Geographic coordinates":[
-        "10 30 S, 105 40 E"
+    "constitution":[
+        "1 October 1958 (Christmas Island Act 1958); amended many times, last in 2010 (Territories Law Reform Act 2010) (2010)"
     ],
-    "Diplomatic representation from the US":[
-        "none (territory of Australia)"
+    "internet users":[
+        "464 (2001)"
     ],
-    "Terrain":[
-        "steep cliffs along coast rise abruptly to central plateau"
+    "area":[
+        "135 sq km",
+        "135 sq km",
+        "0 sq km"
     ],
-    "Infant mortality rate":[
-        "NA",
-        "NA",
-        "NA"
+    "land use":[
+        "0%",
+        "0%",
+        "100% (mainly tropical rainforest; 63% of the island is a national park) (2011)"
     ],
-    "Telephone system":[
+    "military - note":[
+        "defense is the responsibility of Australia"
+    ],
+    "languages":[
+        "English (official), Chinese, Malay"
+    ],
+    "imports - commodities":[
+        "consumer goods"
+    ],
+    "country name":[
+        "Territory of Christmas Island",
+        "Christmas Island"
+    ],
+    "location":[
+        "Southeastern Asia, island in the Indian Ocean, south of Indonesia"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "12 nm",
+        "200 nm"
+    ],
+    "capital":[
+        "The Settlement",
+        "10 25 S, 105 43 E",
+        "UTC+7 (12 hours ahead of Washington, DC, during Standard Time)"
+    ],
+    "telephone system":[
         "service provided by the Australian network",
         "GSM mobile-cellular telephone service replaced older analog system in February 2005",
         "country code - 61-8; satellite earth station - 1 (Intelsat provides telephone and telex service) (2005)"
     ],
-    "Government type":[
+    "agriculture - products":[
         "NA"
     ],
-    "Religions":[
-        "Buddhist 36%, Muslim 25%, Christian 18%, other 21% (1997)"
+    "irrigated land":[
+        "NA"
     ],
-    "Fiscal year":[
-        "1 July - 30 June"
+    "literacy":[
+        "NA"
     ],
-    "Railways":[
+    "gdp (purchasing power parity)":[
+        "$NA"
+    ],
+    "population growth rate":[
+        "1.11% (2014 est.)"
+    ],
+    "natural hazards":[
+        "the narrow fringing reef surrounding the island can be a maritime hazard"
+    ],
+    "exports":[
+        "$NA"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "NA"
+    ],
+    "airports - with paved runways":[
+        "1",
+        "1 (2013)"
+    ],
+    "national symbol(s)":[
+        "golden bosun bird"
+    ],
+    "internet hosts":[
+        "3,028 (2012)"
+    ],
+    "national holiday":[
+        "Australia Day, 26 January (1788)"
+    ],
+    "political pressure groups and leaders":[
+        "none"
+    ],
+    "land boundaries":[
+        "0 km"
+    ],
+    "coastline":[
+        "138.9 km"
+    ],
+    "dependency status":[
+        "non-self governing territory of Australia; administered from Canberra by the Department of Regional Australia, Local Government, Arts and Sport"
+    ],
+    "hiv/aids - deaths":[
+        "NA"
+    ],
+    "nationality":[
+        "Christmas Islander(s)",
+        "Christmas Island"
+    ],
+    "area - comparative":[
+        "about three-quarters the size of Washington, DC"
+    ],
+    "disputes - international":[
+        "none"
+    ],
+    "population":[
+        "1,530 (July 2014 est.)"
+    ],
+    "railways":[
         "18 km",
         "18 km 1.435-m (not in operation) (2010)"
     ],
-    "National anthem":[
+    "climate":[
+        "tropical with a wet season (December to April) and dry season; heat and humidity moderated by trade winds"
+    ],
+    "flag description":[
+        "territorial flag; divided diagonally from upper hoist to lower fly; the upper triangle is green with a yellow image of the Golden Bosun Bird superimposed; the lower triangle is blue with the Southern Cross constellation, representing Australia, superimposed; a centered yellow disk displays a green map of the island",
+        "the flag of Australia is used for official purposes"
+    ],
+    "natural resources":[
+        "phosphate, beaches"
+    ],
+    "elevation extremes":[
+        "Indian Ocean 0 m",
+        "Murray Hill 361 m"
+    ],
+    "geography - note":[
+        "located along major sea lanes of Indian Ocean"
+    ],
+    "internet country code":[
+        ".cx"
+    ],
+    "national anthem":[
         "as a territory of Australia, \"Advance Australia Fair\" remains official as the national anthem, while \"God Save the Queen\" serves as the royal anthem (see Australia)"
     ],
-    "Total fertility rate":[
-        "NA (2014 est.)"
+    "suffrage":[
+        "18 years of age"
     ],
-    "Literacy":[
+    "budget":[
+        "$NA",
+        "$NA"
+    ],
+    "international organization participation":[
+        "none"
+    ],
+    "labor force":[
         "NA"
     ],
-    "Life expectancy at birth":[
-        "NA",
-        "NA",
-        "NA"
+    "roadways":[
+        "140 km",
+        "30 km",
+        "110 km (2011)"
     ],
-    "Ethnic groups":[
-        "Chinese 70%, European 20%, Malay 10%",
-        "no indigenous population (2001)"
+    "sex ratio":[
+        "NA (2009 est.)"
     ],
-    "Environment - current issues":[
-        "loss of rainforest; impact of phosphate mining"
+    "independence":[
+        "none (territory of Australia)"
+    ],
+    "ports and terminals":[
+        "Flying Fish Cove"
     ]
 }

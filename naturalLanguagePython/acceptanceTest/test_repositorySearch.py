@@ -11,9 +11,10 @@ class TestRepositorySearch(TestCase):
     def setUp(self):
         self.repositorySearch = RepositorySearch()
         self.repository = CountryRepositoryDB()
-        self.countryFiller = CountryRepositoryFiller(self.repository)
+        self.repository.searchCountries = Mock()
 
     def test_searchAPossibleCountryInRepositoryWhenTheSearchStrategyIsNoneShouldReturnAName(self):
         searchedInformationDict = {"capital": "Ottawa"}
         expectedNameOfCountry = ["Canada"]
+        self.repository.searchCountries.side_effect = ['Canada']
         self.assertEqual(expectedNameOfCountry, self.repositorySearch.searchPossiblesCountryInRepository(self.repository, searchedInformationDict, ['Contains']))

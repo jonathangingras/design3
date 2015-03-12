@@ -12,7 +12,7 @@ __author__ = 'Antoine'
 class TestCountryService(TestCase):
 
     def setUp(self):
-        self.countryService = CountryService("C:\Users\Antoine\Documents\design3\naturalLanguagePython")
+        self.countryService = CountryService("C:\Users\Antoine\Documents\\design3\\naturalLanguagePython")
 
         self.countryService.questionAnalyzer.analyseQuestion = Mock()
 

@@ -1,127 +1,205 @@
 {
-    "Refugees and internally displaced persons":[
-        "16,684 (Democratic Republic of the Congo) (2013)"
+    "natural gas - exports":[
+        "0 cu m (2011 est.)"
     ],
-    "Inflation rate (consumer prices)":[
-        "7.1% (2013 est.)",
-        "6.6% (2012 est.)"
+    "geographic coordinates":[
+        "15 00 S, 30 00 E"
     ],
-    "Health expenditures":[
+    "hiv/aids - people living with hiv/aids":[
+        "1,106,400 (2012 est.)"
+    ],
+    "government type":[
+        "republic"
+    ],
+    "religions":[
+        "Protestant 75.3%, Roman Catholic 20.2%, other 2.7% (includes Muslim Buddhist, Hindu, and Baha'i), none 1.8% (2010 est.)"
+    ],
+    "unemployment rate":[
+        "15% (2008 est.)",
+        "50% (2000 est.)"
+    ],
+    "gross national saving":[
+        "14.5% of GDP (2013 est.)",
+        "19.4% of GDP (2012 est.)",
+        "23.7% of GDP (2011 est.)"
+    ],
+    "total fertility rate":[
+        "5.76 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "\"Lumbanyeni Zambia\" (Stand and Sing of Zambia, Proud and Free)",
+        "multiple/Enoch Mankayi SONTONGA",
+        "adopted 1964; the melody, from the popular song \"God Bless Africa,\" is the same as that of Tanzania but with different lyrics; the melody is also incorporated into South Africa's anthem"
+    ],
+    "environment - current issues":[
+        "air pollution and resulting acid rain in the mineral extraction and refining region; chemical runoff into watersheds; poaching seriously threatens rhinoceros, elephant, antelope, and large cat populations; deforestation; soil erosion; desertification; lack of adequate water treatment presents human health risks"
+    ],
+    "industries":[
+        "copper mining and processing, emerald mining, construction, foodstuffs, beverages, chemicals, textiles, fertilizer, horticulture"
+    ],
+    "legal system":[
+        "mixed legal system of English common law and customary law; judicial review of legislative acts in an ad hoc constitutional council"
+    ],
+    "health expenditures":[
         "6.1% of GDP (2011)"
     ],
-    "Refined petroleum products - production":[
-        "12,900 bbl/day (2010 est.)"
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
     ],
-    "Irrigated land":[
+    "urbanization":[
+        "39.2% of total population (2011)",
+        "4.15% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "machinery, transportation equipment, petroleum products, electricity, fertilizer, foodstuffs, clothing"
+    ],
+    "crude oil - imports":[
+        "12,500 bbl/day (2010 est.)"
+    ],
+    "location":[
+        "Southern Africa, east of Angola, south of the Democratic Republic of the Congo"
+    ],
+    "irrigated land":[
         "1,559 sq km (2003)"
     ],
-    "Exports - partners":[
-        "China 43.4%, South Africa 7.2%, Democratic Republic of the Congo 6.7%, South Korea 5.4%, India 4.7%, UAE 4.3%, Egypt 4.1% (2012)"
+    "natural hazards":[
+        "periodic drought; tropical storms (November to April)"
     ],
-    "Independence":[
-        "24 October 1964 (from the UK)"
+    "natural gas - consumption":[
+        "0 cu m (2010 est.)"
     ],
-    "Constitution":[
-        "several previous; latest adopted 24 August 1991, promulgated 30 August 1991; amended 1996; note - in late 2013, a constitution committee submitted a draft constitution to the government, but the government has not yet publicly released the final copy or presented a plan to adopt the document (2013)"
-    ],
-    "Geography - note":[
-        "landlocked; the Zambezi forms a natural riverine boundary with Zimbabwe; Lake Kariba on the Zambia-Zimbabwe border forms the world's largest reservoir by volume (180 cu km; 43 cu mi)"
-    ],
-    "Exports":[
+    "exports":[
         "$8.547 billion (2013 est.)",
         "$9.414 billion (2012 est.)"
     ],
-    "Pipelines":[
-        "oil 771 km (2013)"
+    "stock of narrow money":[
+        "$2.299 billion (31 December 2013 est.)",
+        "$2.185 billion (31 December 2012 est.)"
     ],
-    "GDP - per capita (PPP)":[
+    "airports - with paved runways":[
+        "8",
+        "1",
+        "3",
+        "3",
+        "1 (2013)"
+    ],
+    "internet users":[
+        "816,200 (2009)"
+    ],
+    "railways":[
+        "2,922 km",
+        "2,157 km 1.067-m gauge",
+        "includes 1,860 km of the Tanzania-Zambia Railway Authority (TAZARA) (2013)"
+    ],
+    "current account balance":[
+        "-$1.25 billion (2013 est.)",
+        "-$189.9 million (2012 est.)"
+    ],
+    "maternal mortality rate":[
+        "440 deaths/100,000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "21.6% of GDP (2013 est.)"
+    ],
+    "children under the age of 5 years underweight":[
+        "14.9% (2007)"
+    ],
+    "refined petroleum products - exports":[
+        "254 bbl/day (2010 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write English",
+        "61.4%",
+        "71.9%",
+        "51.8% (2007 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "0 bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "88 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
         "$1,800 (2013 est.)",
         "$1,700 (2012 est.)",
         "$1,600 (2011 est.)",
         "data are in 2013 US dollars"
     ],
-    "Sanitation facility access":[
-        "urban: 56.4% of population",
-        "rural: 33.9% of population",
-        "total: 42.8% of population",
-        "",
-        "urban: 43.6% of population",
-        "rural: 66.1% of population",
-        "total: 57.2% of population (2012 est.)"
+    "major infectious diseases":[
+        "very high",
+        "bacterial and protozoal diarrhea, hepatitis A, and typhoid fever",
+        "malaria and dengue fever",
+        "schistosomiasis",
+        "rabies (2013)"
     ],
-    "Waterways":[
-        "2,250 km (includes Lake Tanganyika and the Zambezi and Luapula rivers) (2010)"
+    "birth rate":[
+        "42.46 births/1,000 population (2014 est.)"
     ],
-    "Maternal mortality rate":[
-        "440 deaths/100,000 live births (2010)"
+    "internet country code":[
+        ".zm"
     ],
-    "Flag description":[
-        "green field with a panel of three vertical bands of red (hoist side), black, and orange below a soaring orange eagle, on the outer edge of the flag; green stands for the country's natural resources and vegetation, red symbolizes the struggle for freedom, black the people of Zambia, and orange the country's mineral wealth; the eagle represents the people's ability to rise above the nation's problems"
+    "suffrage":[
+        "18 years of age; universal"
     ],
-    "Political pressure groups and leaders":[
-        "NA"
-    ],
-    "Telephones - mobile cellular":[
-        "10.525 million (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - production":[
         "0 cu m (2011 est.)"
     ],
-    "Net migration rate":[
-        "-0.72 migrant(s)/1,000 population (2014 est.)"
+    "exports - commodities":[
+        "copper/cobalt, cobalt, electricity; tobacco, flowers, cotton"
     ],
-    "Manpower fit for military service":[
-        "1,745,656",
-        "1,688,670 (2010 est.)"
+    "labor force":[
+        "6.275 million (2013 est.)"
     ],
-    "GDP (official exchange rate)":[
-        "$22.24 billion (2013 est.)"
+    "dependency ratios":[
+        "96.4 %",
+        "91.3 %",
+        "5.1 %",
+        "19.6 (2014 est.)"
     ],
-    "Electricity - from other renewable sources":[
-        "0% of total installed capacity (2010 est.)"
+    "imports - partners":[
+        "South Africa 36.7%, Democratic Republic of the Congo 19.8%, China 10.4%, Kuwait 6% (2012)"
     ],
-    "Public debt":[
-        "31.8% of GDP (2013 est.)",
-        "29.5% of GDP (2012 est.)"
+    "mother's mean age at first birth":[
+        "19.2",
+        "median age at first birth among women 25-29 (2007 est.)"
     ],
-    "Crude oil - production":[
-        "174.6 bbl/day (2012 est.)"
+    "ports and terminals":[
+        "Mpulungu (Zambezi)"
     ],
-    "Natural gas - exports":[
-        "0 cu m (2011 est.)"
+    "labor force - by occupation":[
+        "85%",
+        "6%",
+        "9% (2004)"
     ],
-    "Geographic coordinates":[
-        "15 00 S, 30 00 E"
+    "illicit drugs":[
+        "transshipment point for moderate amounts of methaqualone, small amounts of heroin, and cocaine bound for southern Africa and possibly Europe; a poorly developed financial infrastructure coupled with a government commitment to combating money laundering make it an unattractive venue for money launderers; major consumer of cannabis\n"
     ],
-    "Terrain":[
+    "diplomatic representation from the us":[
+        "Ambassador (vacant); Charge d'Affaires David J. YOUNG",
+        "Ibex Hill, Lusaka",
+        "P. O. Box 31617, Lusaka",
+        "[260] (211) 357-000",
+        "[260] ) (211) 357-224"
+    ],
+    "terrain":[
         "mostly high plateau with some hills and mountains"
     ],
-    "Electricity - imports":[
+    "electricity - imports":[
         "23 million kWh (2011 est.)"
     ],
-    "Education expenditures":[
-        "1.3% of GDP (2008)"
+    "infant mortality rate":[
+        "66.62 deaths/1,000 live births",
+        "72.15 deaths/1,000 live births",
+        "60.94 deaths/1,000 live births (2014 est.)"
     ],
-    "Government type":[
-        "republic"
+    "central bank discount rate":[
+        "8.39% (31 December 2009)",
+        "14.49% (31 December 2008)"
     ],
-    "Crude oil - imports":[
-        "12,500 bbl/day (2010 est.)"
+    "geography - note":[
+        "landlocked; the Zambezi forms a natural riverine boundary with Zimbabwe; Lake Kariba on the Zambia-Zimbabwe border forms the world's largest reservoir by volume (180 cu km; 43 cu mi)"
     ],
-    "Unemployment rate":[
-        "15% (2008 est.)",
-        "50% (2000 est.)"
-    ],
-    "Sex ratio":[
-        "1.03 male(s)/female",
-        "1.01 male(s)/female",
-        "1 male(s)/female",
-        "1.02 male(s)/female",
-        "1 male(s)/female",
-        "0.75 male(s)/female",
-        "1 male(s)/female (2014 est.)"
-    ],
-    "Political parties and leaders":[
+    "political parties and leaders":[
         "Alliance for Democracy and Development or ADD [Charles MILUPI]",
         "Alliance for a Better Zambia or ABZ [Frank BWALYA]",
         "Christian Democratic Party or CDP [Daniel PULE]",
@@ -136,250 +214,50 @@
         "United National Independence Party or UNIP [Tilyenji KAUNDA]",
         "United Party for National Development or UPND [Hakainde HICHILEMA]"
     ],
-    "Unemployment, youth ages 15-24":[
-        "23.4% (2005)"
+    "obesity - adult prevalence rate":[
+        "3.6% (2008)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    "broadcast media":[
+        "state-owned Zambia National Broadcasting Corporation (ZNBC) operates 1 TV station and is the principal local-content provider; several private TV stations; multi-channel subscription TV services are available; ZNBC operates 3 radio networks; about 2 dozen private radio stations; relays of at least 2 international broadcasters are accessible in Lusaka and Kitwe (2007)"
     ],
-    "Stock of domestic credit":[
-        "$5.458 billion (31 December 2013 est.)",
-        "$3.833 billion (31 December 2012 est.)"
+    "constitution":[
+        "several previous; latest adopted 24 August 1991, promulgated 30 August 1991; amended 1996; note - in late 2013, a constitution committee submitted a draft constitution to the government, but the government has not yet publicly released the final copy or presented a plan to adopt the document (2013)"
     ],
-    "Area":[
-        "752,618 sq km",
-        "743,398 sq km",
-        "9,220 sq km"
+    "contraceptive prevalence rate":[
+        "40.8% (2007)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-8.4% of GDP (2013 est.)"
-    ],
-    "Land use":[
-        "4.52%",
-        "0.05%",
-        "95.44% (2011)"
-    ],
-    "Median age":[
+    "median age":[
         "16.7 years",
         "16.6 years",
         "16.8 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "1,106,400 (2012 est.)"
+    "manpower fit for military service":[
+        "1,745,656",
+        "1,688,670 (2010 est.)"
     ],
-    "Urbanization":[
-        "39.2% of total population (2011)",
-        "4.15% annual rate of change (2010-15 est.)"
+    "country name":[
+        "Republic of Zambia",
+        "Zambia",
+        "Northern Rhodesia"
     ],
-    "Imports - commodities":[
-        "machinery, transportation equipment, petroleum products, electricity, fertilizer, foodstuffs, clothing"
-    ],
-    "Location":[
-        "Southern Africa, east of Angola, south of the Democratic Republic of the Congo"
-    ],
-    "Electricity - from fossil fuels":[
+    "electricity - from fossil fuels":[
         "0.4% of total installed capacity (2010 est.)"
     ],
-    "Military expenditures":[
-        "1.55% of GDP (2012)",
-        "1.59% of GDP (2011)",
-        "1.55% of GDP (2010)"
+    "capital":[
+        "Lusaka",
+        "15 25 S, 28 17 E",
+        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Telephone system":[
-        "among the best in sub-Saharan Africa",
-        "high-capacity microwave radio relay connects most larger towns and cities; several cellular telephone services in operation and network coverage is improving; domestic satellite system being installed to improve telephone service in rural areas; Internet service is widely available; very small aperture terminal (VSAT) networks are operated by private firms",
-        "country code - 260; satellite earth stations - 2 Intelsat (1 Indian Ocean and 1 Atlantic Ocean), 3 owned by Zamtel (2010)"
-    ],
-    "GDP (purchasing power parity)":[
+    "gdp (purchasing power parity)":[
         "$25.47 billion (2013 est.)",
         "$24.01 billion (2012 est.)",
         "$22.39 billion (2011 est.)",
         "data are in 2013 US dollars"
     ],
-    "Natural hazards":[
-        "periodic drought; tropical storms (November to April)"
+    "independence":[
+        "24 October 1964 (from the UK)"
     ],
-    "Stock of narrow money":[
-        "$2.299 billion (31 December 2013 est.)",
-        "$2.185 billion (31 December 2012 est.)"
-    ],
-    "Airports - with paved runways":[
-        "8",
-        "1",
-        "3",
-        "3",
-        "1 (2013)"
-    ],
-    "Railways":[
-        "2,922 km",
-        "2,157 km 1.067-m gauge",
-        "includes 1,860 km of the Tanzania-Zambia Railway Authority (TAZARA) (2013)"
-    ],
-    "Electricity - consumption":[
-        "7.96 billion kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "3,041,069",
-        "2,948,291 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "80",
-        "1",
-        "5",
-        "53",
-        "",
-        "21 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "30,300 (2012 est.)"
-    ],
-    "Area - comparative":[
-        "slightly larger than Texas"
-    ],
-    "Distribution of family income - Gini index":[
-        "57.5 (2010)",
-        "50.8 (2004)"
-    ],
-    "Population":[
-        "14,638,505",
-        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "0 bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "88 (2013)"
-    ],
-    "Major infectious diseases":[
-        "very high",
-        "bacterial and protozoal diarrhea, hepatitis A, and typhoid fever",
-        "malaria and dengue fever",
-        "schistosomiasis",
-        "rabies (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "1.57  cu km/yr (18%/8%/73%)",
-        "147  cu m/yr (2002)"
-    ],
-    "Budget":[
-        "$4.814 billion",
-        "$6.687 billion (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "2.434 million Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "corn, sorghum, rice, peanuts, sunflower seeds, vegetables, flowers, tobacco, cotton, sugarcane, cassava (manioc, tapioca), coffee; cattle, goats, pigs, poultry, milk, eggs, hides"
-    ],
-    "Military service age and obligation":[
-        "national registration required at age 16; 18-25 years of age for male and female voluntary military service (16 years of age with parental consent); no conscription; Zambian citizenship required; grade 12 certification required; mandatory HIV testing on enlistment; mandatory retirement for officers at age 65 (Army, Air Force) (2012)"
-    ],
-    "Total fertility rate":[
-        "5.76 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "LUSAKA (capital) 1.802 million (2011)"
-    ],
-    "Population below poverty line":[
-        "60.5% (2010)"
-    ],
-    "Labor force - by occupation":[
-        "85%",
-        "6%",
-        "9% (2004)"
-    ],
-    "Stock of broad money":[
-        "$5.047 billion (31 December 2013 est.)",
-        "$4.86 billion (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "19.8%",
-        "33.8%",
-        "46.5% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "Ambassador (vacant); Charge d'Affaires David J. YOUNG",
-        "Ibex Hill, Lusaka",
-        "P. O. Box 31617, Lusaka",
-        "[260] (211) 357-000",
-        "[260] ) (211) 357-224"
-    ],
-    "Contraceptive prevalence rate":[
-        "40.8% (2007)"
-    ],
-    "Infant mortality rate":[
-        "66.62 deaths/1,000 live births",
-        "72.15 deaths/1,000 live births",
-        "60.94 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Protestant 75.3%, Roman Catholic 20.2%, other 2.7% (includes Muslim Buddhist, Hindu, and Baha'i), none 1.8% (2010 est.)"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$2.833 billion (31 December 2013 est.)",
-        "$3.042 billion (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "1.5%",
-        "47.4% (2010)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "14.9% (2007)"
-    ],
-    "Hospital bed density":[
-        "2 beds/1,000 population (2010)"
-    ],
-    "Life expectancy at birth":[
-        "51.83 years",
-        "50.24 years",
-        "53.48 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "12.7% (2012 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "14 years",
-        "14 years",
-        "13 years (2012)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "158,592",
-        "158,805 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, AfDB, AU, C, COMESA, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, PCA, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Bembe 33.4%, Nyanja 14.7%, Tonga 11.4%, Chewa 4.5%, Lozi 5.5%, Nsenga 2.9%, Tumbuka 2.5%, Lunda (North Western) 1.9%, Kaonde 1.8%, Lala 1.8%, Lamba 1.8%, English (official) 1.7%, Luvale 1.5%, Mambwe 1.3%, Namwanga 1.2%, Lenje 1.1%, Bisa 1%, other 9.4%, unspecified 0.4%",
-        "Zambia is said to have over 70 languages, although man of these may be considered dialects; all of Zambia's major languages are members of the Bantu family (2010 est.)"
-    ],
-    "Country name":[
-        "Republic of Zambia",
-        "Zambia",
-        "Northern Rhodesia"
-    ],
-    "Maritime claims":[
-        "none (landlocked)"
-    ],
-    "Market value of publicly traded shares":[
-        "$3.004 billion (31 December 2012 est.)",
-        "$4.009 billion (31 December 2011)",
-        "$NA (31 December 2010 est.)"
-    ],
-    "Taxes and other revenues":[
-        "21.6% of GDP (2013 est.)"
-    ],
-    "Mother's mean age at first birth":[
-        "19.2",
-        "median age at first birth among women 25-29 (2007 est.)"
-    ],
-    "Refined petroleum products - consumption":[
-        "19,260 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "2.88% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 84.8% of population",
         "rural: 49.2% of population",
         "total: 63.3% of population",
@@ -388,204 +266,50 @@
         "rural: 50.8% of population",
         "total: 36.7% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Palan MULONDA (since 8 January 2013)",
-        "2419 Massachusetts Avenue NW, Washington, DC 20008",
-        "[1] (202) 265-9717 through 9719",
-        "[1] (202) 332-0826"
+    "electricity - from hydroelectric plants":[
+        "99.6% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "816,200 (2009)"
+    "stock of direct foreign investment - abroad":[
+        "$NA"
     ],
-    "Child labor - children ages 5-14":[
+    "debt - external":[
+        "$5.985 billion (31 December 2013 est.)",
+        "$5.618 billion (31 December 2012 est.)"
+    ],
+    "coastline":[
+        "0 km (landlocked)"
+    ],
+    "nationality":[
+        "Zambian(s)",
+        "Zambian"
+    ],
+    "refined petroleum products - imports":[
+        "1,272 bbl/day (2010 est.)"
+    ],
+    "climate":[
+        "tropical; modified by altitude; rainy season (October to April)"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "12.7% (2012 est.)"
+    ],
+    "child labor - children ages 5-14":[
         "1,000,850",
         "41 %",
         "data represents children ages 7-14 (2005 est.)"
     ],
-    "Internet hosts":[
-        "16,571 (2012)"
+    "manpower reaching militarily significant age annually":[
+        "158,592",
+        "158,805 (2010 est.)"
     ],
-    "Current account balance":[
-        "-$1.25 billion (2013 est.)",
-        "-$189.9 million (2012 est.)"
-    ],
-    "Debt - external":[
-        "$5.985 billion (31 December 2013 est.)",
-        "$5.618 billion (31 December 2012 est.)"
-    ],
-    "Administrative divisions":[
-        "10 provinces; Central, Copperbelt, Eastern, Luapula, Lusaka, Muchinga, Northern, North-Western, Southern, Western"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Industrial production growth rate":[
-        "8% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "in 2004, Zimbabwe dropped objections to plans between Botswana and Zambia to build a bridge over the Zambezi River, thereby de facto recognizing a short, but not clearly delimited, Botswana-Zambia boundary in the river"
-    ],
-    "Climate":[
-        "tropical; modified by altitude; rainy season (October to April)"
-    ],
-    "Natural resources":[
-        "copper, cobalt, zinc, lead, coal, emeralds, gold, silver, uranium, hydropower"
-    ],
-    "Internet country code":[
-        ".zm"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$NA"
-    ],
-    "Electricity - production":[
-        "11.19 billion kWh (2010 est.)"
-    ],
-    "Death rate":[
-        "12.92 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "99.6% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$8.216 billion (2013 est.)",
-        "$7.961 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "African fish eagle"
-    ],
-    "GDP - real growth rate":[
-        "6% (2013 est.)",
-        "7.2% (2012 est.)",
-        "6.8% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "8.39% (31 December 2009)",
-        "14.49% (31 December 2008)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "3.6% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "254 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "copper mining and processing, emerald mining, construction, foodstuffs, beverages, chemicals, textiles, fertilizer, horticulture"
-    ],
-    "Legal system":[
-        "mixed legal system of English common law and customary law; judicial review of legislative acts in an ad hoc constitutional council"
-    ],
-    "Capital":[
-        "Lusaka",
-        "15 25 S, 28 17 E",
-        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "air pollution and resulting acid rain in the mineral extraction and refining region; chemical runoff into watersheds; poaching seriously threatens rhinoceros, elephant, antelope, and large cat populations; deforestation; soil erosion; desertification; lack of adequate water treatment presents human health risks"
-    ],
-    "Imports - partners":[
-        "South Africa 36.7%, Democratic Republic of the Congo 19.8%, China 10.4%, Kuwait 6% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "1.679 million kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "42.46 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "46.2% (male 3,393,388/female 3,362,850)",
-        "20% (male 1,465,009/female 1,467,555)",
-        "28.5% (male 2,105,768/female 2,072,314)",
-        "2.9% (male 199,098/female 222,214)",
-        "2.4% (male 151,471/female 198,838) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "10.4% (31 December 2013 est.)",
-        "12.15% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "5,664.1 km",
-        "Angola 1,110 km, Botswana 0.1 km, Democratic Republic of the Congo 1,930 km, Malawi 837 km, Mozambique 419 km, Namibia 233 km, Tanzania 338 km, Zimbabwe 797 km"
-    ],
-    "Coastline":[
-        "0 km (landlocked)"
-    ],
-    "Nationality":[
-        "Zambian(s)",
-        "Zambian"
-    ],
-    "Telephones - main lines in use":[
-        "82,500 (2012)"
-    ],
-    "Literacy":[
-        "age 15 and over can read and write English",
-        "61.4%",
-        "71.9%",
-        "51.8% (2007 est.)"
-    ],
-    "Total renewable water resources":[
-        "105.2 cu km (2011)"
-    ],
-    "National holiday":[
-        "Independence Day, 24 October (1964)"
-    ],
-    "Elevation extremes":[
-        "Zambezi river 329 m",
-        "unnamed elevation in Mafinga Hills 2,301 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "0.07 physicians/1,000 population (2010)"
-    ],
-    "Exports - commodities":[
-        "copper/cobalt, cobalt, electricity; tobacco, flowers, cotton"
-    ],
-    "Labor force":[
-        "6.275 million (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "96.4 %",
-        "91.3 %",
-        "5.1 %",
-        "19.6 (2014 est.)"
-    ],
-    "Roadways":[
+    "roadways":[
         "67,671 km",
         "9,403 km",
         "31,051 km"
     ],
-    "Electricity - exports":[
-        "578 million kWh (2010)"
+    "net migration rate":[
+        "-0.72 migrant(s)/1,000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Mpulungu (Zambezi)"
-    ],
-    "Refined petroleum products - imports":[
-        "1,272 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "transshipment point for moderate amounts of methaqualone, small amounts of heroin, and cocaine bound for southern Africa and possibly Europe; a poorly developed financial infrastructure coupled with a government commitment to combating money laundering make it an unattractive venue for money launderers; major consumer of cannabis\n"
-    ],
-    "Stock of direct foreign investment - abroad":[
-        "$NA"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2011 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "Zambian kwacha (ZMK) per US dollar -",
         "5.3 (2013 est.)",
         "5.1 (2012 est.)",
@@ -593,10 +317,69 @@
         "5,046.1 (2009)",
         "3,512.9 (2008)"
     ],
-    "Ethnic groups":[
-        "Bemba 21%, Tonga 13.6%, Chewa 7.4%, Lozi 5.7%, Nsenga 5.3%, Tumbuka 4.4%, Ngoni 4%, Lala 3.1%, Kaonde 2.9%, Namwanga 2.8%, Lunda (north Western) 2.6%, Mambwe 2.5%, Luvale 2.2%, Lamba 2.1%, Ushi 1.9%, Lenje 1.6%, Bisa 1.6%, Mbunda 1.2%, other 13.8%, unspecified 0.4% (2010 est.)"
+    "refined petroleum products - production":[
+        "12,900 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.03 male(s)/female",
+        "1.01 male(s)/female",
+        "1 male(s)/female",
+        "1.02 male(s)/female",
+        "1 male(s)/female",
+        "0.75 male(s)/female",
+        "1 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "31.8% of GDP (2013 est.)",
+        "29.5% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "3,041,069",
+        "2,948,291 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$2.833 billion (31 December 2013 est.)",
+        "$3.042 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "80",
+        "1",
+        "5",
+        "53",
+        "",
+        "21 (2013)"
+    ],
+    "stock of broad money":[
+        "$5.047 billion (31 December 2013 est.)",
+        "$4.86 billion (31 December 2012 est.)"
+    ],
+    "refugees and internally displaced persons":[
+        "16,684 (Democratic Republic of the Congo) (2013)"
+    ],
+    "national symbol(s)":[
+        "African fish eagle"
+    ],
+    "gdp - real growth rate":[
+        "6% (2013 est.)",
+        "7.2% (2012 est.)",
+        "6.8% (2011 est.)"
+    ],
+    "telephone system":[
+        "among the best in sub-Saharan Africa",
+        "high-capacity microwave radio relay connects most larger towns and cities; several cellular telephone services in operation and network coverage is improving; domestic satellite system being installed to improve telephone service in rural areas; Internet service is widely available; very small aperture terminal (VSAT) networks are operated by private firms",
+        "country code - 260; satellite earth stations - 2 Intelsat (1 Indian Ocean and 1 Atlantic Ocean), 3 owned by Zamtel (2010)"
+    ],
+    "flag description":[
+        "green field with a panel of three vertical bands of red (hoist side), black, and orange below a soaring orange eagle, on the outer edge of the flag; green stands for the country's natural resources and vegetation, red symbolizes the struggle for freedom, black the people of Zambia, and orange the country's mineral wealth; the eagle represents the people's ability to rise above the nation's problems"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "1.5%",
+        "47.4% (2010)"
+    ],
+    "gdp - composition, by end use":[
         "60%",
         "26.5%",
         "19.1%",
@@ -605,17 +388,234 @@
         "-42.9%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "14.5% of GDP (2013 est.)",
-        "19.4% of GDP (2012 est.)",
-        "23.7% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "51.83 years",
+        "50.24 years",
+        "53.48 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "state-owned Zambia National Broadcasting Corporation (ZNBC) operates 1 TV station and is the principal local-content provider; several private TV stations; multi-channel subscription TV services are available; ZNBC operates 3 radio networks; about 2 dozen private radio stations; relays of at least 2 international broadcasters are accessible in Lusaka and Kitwe (2007)"
+    "languages":[
+        "Bembe 33.4%, Nyanja 14.7%, Tonga 11.4%, Chewa 4.5%, Lozi 5.5%, Nsenga 2.9%, Tumbuka 2.5%, Lunda (North Western) 1.9%, Kaonde 1.8%, Lala 1.8%, Lamba 1.8%, English (official) 1.7%, Luvale 1.5%, Mambwe 1.3%, Namwanga 1.2%, Lenje 1.1%, Bisa 1%, other 9.4%, unspecified 0.4%",
+        "Zambia is said to have over 70 languages, although man of these may be considered dialects; all of Zambia's major languages are members of the Bantu family (2010 est.)"
     ],
-    "National anthem":[
-        "\"Lumbanyeni Zambia\" (Stand and Sing of Zambia, Proud and Free)",
-        "multiple/Enoch Mankayi SONTONGA",
-        "adopted 1964; the melody, from the popular song \"God Bless Africa,\" is the same as that of Tanzania but with different lyrics; the melody is also incorporated into South Africa's anthem"
+    "area":[
+        "752,618 sq km",
+        "743,398 sq km",
+        "9,220 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "2.434 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "copper, cobalt, zinc, lead, coal, emeralds, gold, silver, uranium, hydropower"
+    ],
+    "telephones - mobile cellular":[
+        "10.525 million (2012)"
+    ],
+    "maritime claims":[
+        "none (landlocked)"
+    ],
+    "electricity - from other renewable sources":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "China 43.4%, South Africa 7.2%, Democratic Republic of the Congo 6.7%, South Korea 5.4%, India 4.7%, UAE 4.3%, Egypt 4.1% (2012)"
+    ],
+    "population growth rate":[
+        "2.88% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "national registration required at age 16; 18-25 years of age for male and female voluntary military service (16 years of age with parental consent); no conscription; Zambian citizenship required; grade 12 certification required; mandatory HIV testing on enlistment; mandatory retirement for officers at age 65 (Army, Air Force) (2012)"
+    ],
+    "pipelines":[
+        "oil 771 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 56.4% of population",
+        "rural: 33.9% of population",
+        "total: 42.8% of population",
+        "",
+        "urban: 43.6% of population",
+        "rural: 66.1% of population",
+        "total: 57.2% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "19.8%",
+        "33.8%",
+        "46.5% (2013 est.)"
+    ],
+    "age structure":[
+        "46.2% (male 3,393,388/female 3,362,850)",
+        "20% (male 1,465,009/female 1,467,555)",
+        "28.5% (male 2,105,768/female 2,072,314)",
+        "2.9% (male 199,098/female 222,214)",
+        "2.4% (male 151,471/female 198,838) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "19,260 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "5,664.1 km",
+        "Angola 1,110 km, Botswana 0.1 km, Democratic Republic of the Congo 1,930 km, Malawi 837 km, Mozambique 419 km, Namibia 233 km, Tanzania 338 km, Zimbabwe 797 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly larger than Texas"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "in 2004, Zimbabwe dropped objections to plans between Botswana and Zambia to build a bridge over the Zambezi River, thereby de facto recognizing a short, but not clearly delimited, Botswana-Zambia boundary in the river"
+    ],
+    "population":[
+        "14,638,505",
+        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "105.2 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 24 October (1964)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-8.4% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$4.814 billion",
+        "$6.687 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "60.5% (2010)"
+    ],
+    "military expenditures":[
+        "1.55% of GDP (2012)",
+        "1.59% of GDP (2011)",
+        "1.55% of GDP (2010)"
+    ],
+    "death rate":[
+        "12.92 deaths/1,000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$3.004 billion (31 December 2012 est.)",
+        "$4.009 billion (31 December 2011)",
+        "$NA (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "8% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "57.5 (2010)",
+        "50.8 (2004)"
+    ],
+    "inflation rate (consumer prices)":[
+        "7.1% (2013 est.)",
+        "6.6% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Palan MULONDA (since 8 January 2013)",
+        "2419 Massachusetts Avenue NW, Washington, DC 20008",
+        "[1] (202) 265-9717 through 9719",
+        "[1] (202) 332-0826"
+    ],
+    "imports":[
+        "$8.216 billion (2013 est.)",
+        "$7.961 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "10.4% (31 December 2013 est.)",
+        "12.15% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "1.3% of GDP (2008)"
+    ],
+    "electricity - consumption":[
+        "7.96 billion kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "2 beds/1,000 population (2010)"
+    ],
+    "ethnic groups":[
+        "Bemba 21%, Tonga 13.6%, Chewa 7.4%, Lozi 5.7%, Nsenga 5.3%, Tumbuka 4.4%, Ngoni 4%, Lala 3.1%, Kaonde 2.9%, Namwanga 2.8%, Lunda (north Western) 2.6%, Mambwe 2.5%, Luvale 2.2%, Lamba 2.1%, Ushi 1.9%, Lenje 1.6%, Bisa 1.6%, Mbunda 1.2%, other 13.8%, unspecified 0.4% (2010 est.)"
+    ],
+    "unemployment, youth ages 15-24":[
+        "23.4% (2005)"
+    ],
+    "land use":[
+        "4.52%",
+        "0.05%",
+        "95.44% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "1.57  cu km/yr (18%/8%/73%)",
+        "147  cu m/yr (2002)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$NA"
+    ],
+    "stock of domestic credit":[
+        "$5.458 billion (31 December 2013 est.)",
+        "$3.833 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "corn, sorghum, rice, peanuts, sunflower seeds, vegetables, flowers, tobacco, cotton, sugarcane, cassava (manioc, tapioca), coffee; cattle, goats, pigs, poultry, milk, eggs, hides"
+    ],
+    "waterways":[
+        "2,250 km (includes Lake Tanganyika and the Zambezi and Luapula rivers) (2010)"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "16,571 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "NA"
+    ],
+    "administrative divisions":[
+        "10 provinces; Central, Copperbelt, Eastern, Luapula, Lusaka, Muchinga, Northern, North-Western, Southern, Western"
+    ],
+    "hiv/aids - deaths":[
+        "30,300 (2012 est.)"
+    ],
+    "crude oil - production":[
+        "174.6 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "82,500 (2012)"
+    ],
+    "electricity - production":[
+        "11.19 billion kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
+        "Zambezi river 329 m",
+        "unnamed elevation in Mafinga Hills 2,301 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "14 years",
+        "14 years",
+        "13 years (2012)"
+    ],
+    "physicians density":[
+        "0.07 physicians/1,000 population (2010)"
+    ],
+    "international organization participation":[
+        "ACP, AfDB, AU, C, COMESA, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, PCA, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$22.24 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "578 million kWh (2010)"
+    ],
+    "electricity - installed generating capacity":[
+        "1.679 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "LUSAKA (capital) 1.802 million (2011)"
     ]
 }
