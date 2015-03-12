@@ -9,8 +9,8 @@ class TestFlagRepositoryDB(TestCase):
 
     def setUp(self):
         self.flagRepositoryDB = FlagRepositoryDB()
-        self.firstFlagToAdd = Flag("aPath", "countryName", ["blue"])
-        self.secondFlagToAdd = Flag("aPath", "aSecondName", ["red"])
+        self.firstFlagToAdd = Flag("countryName", ["blue"])
+        self.secondFlagToAdd = Flag("aSecondName", ["red"])
         self.secondFlagToAdd.isFlagForThisCountry = Mock(return_value = False)
         self.firstFlagToAdd.isFlagForThisCountry = Mock(return_value = False)
 
@@ -27,7 +27,6 @@ class TestFlagRepositoryDB(TestCase):
 
     def test_addAFlagToTheRepositoryWhenHavingAListOfFlagOfOneElementShouldAddTheFlagToTheList(self):
         expectedLenOfFlag = 2
-
         self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
         self.flagRepositoryDB.addFlag(self.secondFlagToAdd)
         numberOfElementInList = len(self.flagRepositoryDB.flagList)

@@ -2,8 +2,7 @@ __author__ = 'Antoine'
 
 class Flag(object):
 
-    def __init__(self, path, nameOfCountry, colorList):
-        self.flagPath = path
+    def __init__(self, nameOfCountry, colorList):
         self.nameOfCountry = nameOfCountry
         self.colorList = colorList
 

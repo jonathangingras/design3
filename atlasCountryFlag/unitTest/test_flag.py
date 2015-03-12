@@ -6,10 +6,9 @@ __author__ = 'Antoine'
 class TestFlag(TestCase):
 
     def setUp(self):
-        self.flagPath = "aPath"
         self.nameOfCountry = "ACountry"
         self.colorList = ["Blue", "Blue"]
-        self.flag = Flag(self.flagPath, self.nameOfCountry, self.colorList)
+        self.flag = Flag(self.nameOfCountry, self.colorList)
 
     def test_createFlagWithAllParametersShouldCreateTheFlagObject(self):
         self.assertIsInstance(self.flag, Flag)
