@@ -13,7 +13,7 @@ class FlagRepositoryDB(FlagRepository):
             if element.isFlagOfCountry(nameOfCountry):
                 colorList = element.colorList
                 break
-        return colorList
+        return colorListc
 
     def addFlag(self, flag):
         self.flagList.append(flag)
