@@ -5,9 +5,21 @@ __author__ = 'Antoine'
 
 class TestFlag(TestCase):
 
+    def setUp(self):
+        self.flagPath = "aPath"
+        self.nameOfCountry = "ACountry"
+        self.colorList = ["Blue", "Blue"]
+        self.flag = Flag(self.flagPath, self.nameOfCountry, self.colorList)
+
     def test_createFlagWithAllParametersShouldCreateTheFlagObject(self):
-        flagPath = "aPath"
+        self.assertIsInstance(self.flag, Flag)
+
+    def test_isFlagCorrespondingToACountryNameWhenTheFlagIsNotTheCorrespondingOneShouldReturnFalse(self):
+        nameOfCountry = "NotACountry"
+        expectedReturnValue = False
+        self.assertEqual(expectedReturnValue, self.flag.isFlagForThisCountry(nameOfCountry))
+
+    def test_isFlagCorrespondingToACountryNameWhenTheFlagIsTheCorrespondingOneShouldReturnTrue(self):
         nameOfCountry = "ACountry"
-        colorList = ["Blue", "Blue"]
-        flag = Flag(flagPath, nameOfCountry, colorList)
-        self.assertIsInstance(flag, Flag)
+        expectedReturnValue = True
+        self.assertEqual(expectedReturnValue, self.flag.isFlagForThisCountry(nameOfCountry))
