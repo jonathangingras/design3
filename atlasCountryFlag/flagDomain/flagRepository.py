@@ -2,14 +2,14 @@ __author__ = 'Antoine'
 from atlasCountryFlag.flagDomain.flag import Flag
 import abc
 
-class flagRepository(object):
+class FlagRepository(object):
 
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def __init__(self):
-        pass
+    def searchFlag(self, nameOfCountry):
+        return
 
     @abc.abstractmethod
-    def searchFlag(self, nameOfCountry):
-        pass
+    def addFlag(self, flag):
+        return
