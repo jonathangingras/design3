@@ -28,5 +28,4 @@ class QuestionInformationAnalyser(object):
         else:
             self.regexAnalyser.associateWord(question)
             self.questionDictionary = self.regexAnalyser.dictWord
-        print(self.questionDictionary)
         return self.questionDictionary

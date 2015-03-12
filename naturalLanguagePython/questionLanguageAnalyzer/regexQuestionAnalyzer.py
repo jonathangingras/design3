@@ -7,7 +7,7 @@ class RegexQuestionAnalyzer(object):
 
     def __init__(self):
         self.listRegexKeyword = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",
-                                 r"(?<=including )(.+)+ (and) (\w+){1}",
+                                 r"((((?<=including )|(?<=include )|(?<= are ))(.+) and (((\s?\w+\s?)|(\d?\.\d\%)?)){1,4}))",
                                  r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ([\S+]+)((\ \w+)+)?",
                                  r"(?<=greater than )(((\d+)(\ )?)+(\w+\/\d+)?)+",
                                  r"((\d+\s)?([A-Z][a-z]+\s(\d+)))",
@@ -105,14 +105,33 @@ class RegexQuestionAnalyzer(object):
                 self.listKeyword.append(word)
         return self.listKeyword
 
-    def associateWord(self, question):
 
+ # def __splitString(self):
+    #     listTemp =[]
+    #     futurList = []
+    #     for item in self.listString:
+    #         listTemp = str(item).replace('and ','').split(',')
+    #         for temp in listTemp:
+    #             futurList.append(temp)
+    #     self.listString = futurList
+    #     print futurList
+
+    def associateWord(self, question):
+        listTemp =[]
+        futurList = []
+        for item in self.listString:
+            listTemp = str(item).replace(' and ',',').split(',')
+            for temp in listTemp:
+                temp.strip(' ')
+                if(temp != ''):
+                    futurList.append(temp)
+        self.listString = futurList
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
             for subject, key in zip(self.listSubject, self.listString):
-                self.dictWord[subject] = key
+                self.dictWord[subject] = [key]
         elif len(self.listSubject) < len(self.listString) and len(self.listSubject) == 1:
             self.dictWord[self.listSubject[0]] = self.listString
-        elif(len(self.listSubject) == 2 and len(self.listString) == 2):
+        elif(len(self.listSubject) >= 2 and len(self.listString) >= 2 and len(self.listString) == len(self.listSubject)):
             for x in self.listSubject:
                 nearestValueDistance = sys.maxint
                 nearestValuePosition = 0
@@ -123,4 +142,3 @@ class RegexQuestionAnalyzer(object):
                         nearestValuePosition = self.listString.index(y)
 
                 self.dictWord[x] = self.listString[nearestValuePosition]
-        print self.dictWord
