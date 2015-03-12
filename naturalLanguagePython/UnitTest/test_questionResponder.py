@@ -17,5 +17,6 @@ class TestQuestionResponder(TestCase):
     def test_askingAQuestionWhenHavingAnNonEmptyQuestionShouldReturnTheNameOfTheSearchedCountry(self):
         question = "A question"
         expectedReturn = "A Country"
+        self.questionResponder.countryService.analyzeQuestionFromAtlas= Mock()
         self.questionResponder.countryService.searchCountry = Mock(return_value = expectedReturn)
         self.assertEqual(expectedReturn, self.questionResponder.askQuestion(question))
