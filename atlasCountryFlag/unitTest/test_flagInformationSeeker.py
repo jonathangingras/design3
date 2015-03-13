@@ -4,10 +4,11 @@ from atlasCountryFlag.flagService.flagInformationSeeker import FlagInformationSe
 __author__ = 'Antoine'
 
 
-class TestFlagSeeker(TestCase):
+class TestFlagInformationSeeker(TestCase):
 
     def setUp(self):
-        self.flagInformationSeeker = FlagInformationSeeker()
+        path = None
+        self.flagInformationSeeker = FlagInformationSeeker(path)
 
     def test_searchingFlagColorWhenNoFlagCountryNameCorrespondToSearchedNameShouldReturnAnEmptyList(self):
         nameOfCountry = "Country"
