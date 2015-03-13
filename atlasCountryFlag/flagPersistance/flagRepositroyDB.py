@@ -18,4 +18,8 @@ class FlagRepositoryDB(FlagRepository):
         self.flagList.append(flag)
 
     def searchFlagPictureFilename(self, nameOfCountry):
-        return
+        flagPictureFilename = None
+        for element in self.flagList:
+            if element.isFlagForThisCountry(nameOfCountry):
+                flagPictureFilename = element.flagPictureFilename
+        return flagPictureFilename

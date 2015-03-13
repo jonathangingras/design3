@@ -5,9 +5,15 @@ class Flag(object):
     def __init__(self, nameOfCountry, colorList):
         self.nameOfCountry = nameOfCountry
         self.colorList = colorList
+        self.__setPictureFlagFilename(nameOfCountry)
 
     def isFlagForThisCountry(self, nameOfCountry):
         isCorrectFlag = False
         if self.nameOfCountry == nameOfCountry:
             isCorrectFlag = True
         return isCorrectFlag
+
+    def __setPictureFlagFilename(self, nameOfCountry):
+        filenamePrefix = "Flag_"
+        filenameSufix = ".gif"
+        self.flagPictureFilename = filenamePrefix + nameOfCountry + filenameSufix
