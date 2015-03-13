@@ -2,7 +2,7 @@
   "countries": [
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Pologne.gif",
-      "name": "Pologne",
+      "name": "Poland",
       "color_list": [
         null,
         "white",
@@ -17,7 +17,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Grenade.gif",
-      "name": "Grenade",
+      "name": "Grenada",
       "color_list": [
         "yellow",
         "yellow",
@@ -32,7 +32,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_GuineeEquatoriale.gif",
-      "name": "GuineeEquatoriale",
+      "name": "EquatorialGuinea",
       "color_list": [
         "green",
         "green",
@@ -47,7 +47,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Australie.gif",
-      "name": "Australie",
+      "name": "Australia",
       "color_list": [
         "red",
         "blue",
@@ -122,7 +122,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Italie.gif",
-      "name": "Italie",
+      "name": "Italia",
       "color_list": [
         null,
         null,
@@ -152,7 +152,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Maurice.gif",
-      "name": "Maurice",
+      "name": "Mauritius",
       "color_list": [
         null,
         "red",
@@ -167,7 +167,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Russie.gif",
-      "name": "Russie",
+      "name": "Russia",
       "color_list": [
         null,
         "white",
@@ -182,7 +182,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Kirghizistan.gif",
-      "name": "Kirghizistan",
+      "name": "Kyrgyzstan",
       "color_list": [
         null,
         null,
@@ -197,7 +197,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Jamaique.gif",
-      "name": "Jamaique",
+      "name": "Jamaica",
       "color_list": [
         "yellow",
         "green",
@@ -242,7 +242,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Hongrie.gif",
-      "name": "Hongrie",
+      "name": "Hungary",
       "color_list": [
         null,
         "red",
@@ -272,7 +272,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Comores.gif",
-      "name": "Comores",
+      "name": "Comoros",
       "color_list": [
         "green",
         "yellow",
@@ -332,7 +332,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Somalie.gif",
-      "name": "Somalie",
+      "name": "Somalia",
       "color_list": [
         null,
         null,
@@ -347,7 +347,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Chine.gif",
-      "name": "Chine",
+      "name": "China",
       "color_list": [
         "yellow",
         "red",
@@ -392,7 +392,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_IlesFidji.gif",
-      "name": "IlesFidji",
+      "name": "Fiji",
       "color_list": [
         "red",
         "blue",
@@ -452,7 +452,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Centrafique.gif",
-      "name": "Centrafique",
+      "name": "CentralAfricanRepublic",
       "color_list": [
         "blue",
         "red",
@@ -467,7 +467,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Indonesie.gif",
-      "name": "Indonesie",
+      "name": "Indonesia",
       "color_list": [
         null,
         "red",
@@ -482,7 +482,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Barbade.gif",
-      "name": "Barbade",
+      "name": "Barbados",
       "color_list": [
         null,
         null,
@@ -497,7 +497,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Algerie.gif",
-      "name": "Algerie",
+      "name": "Algeria",
       "color_list": [
         null,
         null,
@@ -527,7 +527,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Belgique.gif",
-      "name": "Belgique",
+      "name": "Belgium",
       "color_list": [
         null,
         null,
@@ -587,7 +587,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_RoyaumeUni.gif",
-      "name": "RoyaumeUni",
+      "name": "UnitedKingdom",
       "color_list": [
         "blue",
         "red",
@@ -602,7 +602,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_TriniteTobago.gif",
-      "name": "TriniteTobago",
+      "name": "TrinidadAndTobago",
       "color_list": [
         "black",
         "red",
@@ -632,7 +632,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bulgarie.gif",
-      "name": "Bulgarie",
+      "name": "Bulgaria",
       "color_list": [
         null,
         "white",
@@ -647,7 +647,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Cap-Vert.gif",
-      "name": "Cap-Vert",
+      "name": "CapeVerde",
       "color_list": [
         "blue",
         "blue",
@@ -677,7 +677,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Singapour.gif",
-      "name": "Singapour",
+      "name": "Singapore",
       "color_list": [
         null,
         "red",
@@ -692,7 +692,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Koweit.gif",
-      "name": "Koweit",
+      "name": "Kuwait",
       "color_list": [
         "green",
         "green",
@@ -737,7 +737,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Jordanie.gif",
-      "name": "Jordanie",
+      "name": "Jordan",
       "color_list": [
         "black",
         "black",
@@ -752,7 +752,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Micronesie.gif",
-      "name": "Micronesie",
+      "name": "Micronesia",
       "color_list": [
         "blue",
         "white",
@@ -767,7 +767,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Egypte.gif",
-      "name": "Egypte",
+      "name": "Egypt",
       "color_list": [
         null,
         "red",
@@ -782,7 +782,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Libye.gif",
-      "name": "Libye",
+      "name": "Libya",
       "color_list": [
         null,
         "black",
@@ -797,7 +797,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Serbie.gif",
-      "name": "Serbie",
+      "name": "Serbia",
       "color_list": [
         null,
         "red",
@@ -812,7 +812,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Danemark.gif",
-      "name": "Danemark",
+      "name": "Denmark",
       "color_list": [
         "red",
         "white",
@@ -827,7 +827,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_CoteIvoire.gif",
-      "name": "CoteIvoire",
+      "name": "IvoryCoast",
       "color_list": [
         null,
         null,
@@ -842,7 +842,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Ouganda.gif",
-      "name": "Ouganda",
+      "name": "Uganda",
       "color_list": [
         null,
         "black",
@@ -857,7 +857,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Slovaquie.gif",
-      "name": "Slovaquie",
+      "name": "Slovakia",
       "color_list": [
         "white",
         "white",
@@ -872,7 +872,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bresil.gif",
-      "name": "Bresil",
+      "name": "Brazil",
       "color_list": [
         "green",
         "yellow",
@@ -917,7 +917,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Andorre.gif",
-      "name": "Andorre",
+      "name": "Andorra",
       "color_list": [
         null,
         null,
@@ -947,7 +947,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_CoreeS.gif",
-      "name": "CoreeS",
+      "name": "SouthKorea",
       "color_list": [
         "black",
         "white",
@@ -962,7 +962,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Mexique.gif",
-      "name": "Mexique",
+      "name": "Mexico",
       "color_list": [
         null,
         null,
@@ -977,7 +977,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Macedoine.gif",
-      "name": "Macedoine",
+      "name": "Macedonia",
       "color_list": [
         "yellow",
         "red",
@@ -992,7 +992,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bosnie.gif",
-      "name": "Bosnie",
+      "name": "Bosnia",
       "color_list": [
         "blue",
         "yellow",
@@ -1022,7 +1022,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Cameroun.gif",
-      "name": "Cameroun",
+      "name": "Cameroon",
       "color_list": [
         null,
         null,
@@ -1052,7 +1052,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bahrein.gif",
-      "name": "Bahrein",
+      "name": "Bahrain",
       "color_list": [
         null,
         null,
@@ -1067,7 +1067,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Irak.gif",
-      "name": "Irak",
+      "name": "Iraq",
       "color_list": [
         null,
         "red",
@@ -1082,7 +1082,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_PaysBas.gif",
-      "name": "PaysBas",
+      "name": "Netherlands",
       "color_list": [
         null,
         "red",
@@ -1097,7 +1097,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Arabie-Saoudite.gif",
-      "name": "Arabie-Saoudite",
+      "name": "SaudiArabia",
       "color_list": [
         null,
         null,
@@ -1127,7 +1127,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Ethiopie.gif",
-      "name": "Ethiopie",
+      "name": "Ethiopia",
       "color_list": [
         null,
         "green",
@@ -1142,7 +1142,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_AfriqueSud.gif",
-      "name": "AfriqueSud",
+      "name": "SouthAfrica",
       "color_list": [
         "green",
         "red",
@@ -1157,7 +1157,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_SoudanSud.gif",
-      "name": "SoudanSud",
+      "name": "SouthSudan",
       "color_list": [
         "black",
         "black",
@@ -1172,7 +1172,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Autriche.gif",
-      "name": "Autriche",
+      "name": "Austria",
       "color_list": [
         null,
         "red",
@@ -1202,7 +1202,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Irlande.gif",
-      "name": "Irlande",
+      "name": "Ireland",
       "color_list": [
         null,
         null,
@@ -1217,7 +1217,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Japon.gif",
-      "name": "Japon",
+      "name": "Japan",
       "color_list": [
         null,
         null,
@@ -1232,7 +1232,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Perou.gif",
-      "name": "Perou",
+      "name": "Peru",
       "color_list": [
         null,
         null,
@@ -1247,7 +1247,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Tanzanie.gif",
-      "name": "Tanzanie",
+      "name": "Tanzania",
       "color_list": [
         "green",
         "green",
@@ -1277,7 +1277,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Suisse.gif",
-      "name": "Suisse",
+      "name": "Switzerland",
       "color_list": [
         "red",
         "red",
@@ -1292,7 +1292,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Suede.gif",
-      "name": "Suede",
+      "name": "Sweden",
       "color_list": [
         "blue",
         "yellow",
@@ -1322,7 +1322,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Mauritanie.gif",
-      "name": "Mauritanie",
+      "name": "Mauritania",
       "color_list": [
         null,
         "green",
@@ -1352,7 +1352,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Papouasie.gif",
-      "name": "Papouasie",
+      "name": "PapuaNewGuinea",
       "color_list": [
         "red",
         "red",
@@ -1367,7 +1367,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Nioue.gif",
-      "name": "Nioue",
+      "name": "Niue",
       "color_list": [
         "blue",
         "yellow",
@@ -1382,7 +1382,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Albanie.gif",
-      "name": "Albanie",
+      "name": "Albania",
       "color_list": [
         null,
         null,
@@ -1457,7 +1457,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Slovenie.gif",
-      "name": "Slovenie",
+      "name": "Slovenia",
       "color_list": [
         null,
         "white",
@@ -1472,7 +1472,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Tcheque.gif",
-      "name": "Tcheque",
+      "name": "CzechRepublic",
       "color_list": [
         "blue",
         "white",
@@ -1502,7 +1502,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_EtatsUnis.gif",
-      "name": "EtatsUnis",
+      "name": "UnitedStates",
       "color_list": [
         "blue",
         "red",
@@ -1517,7 +1517,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Thailande.gif",
-      "name": "Thailande",
+      "name": "Thailand",
       "color_list": [
         "white",
         "red",
@@ -1547,7 +1547,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Espagne.gif",
-      "name": "Espagne",
+      "name": "Spain",
       "color_list": [
         null,
         "red",
@@ -1592,7 +1592,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Islande.gif",
-      "name": "Islande",
+      "name": "Iceland",
       "color_list": [
         "blue",
         "red",
@@ -1622,7 +1622,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Inde.gif",
-      "name": "Inde",
+      "name": "India",
       "color_list": [
         null,
         "yellow",
@@ -1637,7 +1637,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Roumanie.gif",
-      "name": "Roumanie",
+      "name": "Roumania",
       "color_list": [
         null,
         null,
@@ -1667,7 +1667,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Erythree.gif",
-      "name": "Erythree",
+      "name": "Eritrea",
       "color_list": [
         "red",
         "green",
@@ -1682,7 +1682,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Lettonie.gif",
-      "name": "Lettonie",
+      "name": "Latvia",
       "color_list": [
         null,
         "red",
@@ -1697,7 +1697,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_RepubliqueDominicaine.gif",
-      "name": "RepubliqueDominicaine",
+      "name": "DominicanRepublic",
       "color_list": [
         "blue",
         "white",
@@ -1712,7 +1712,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Ouzbekistan.gif",
-      "name": "Ouzbekistan",
+      "name": "Uzbekistan",
       "color_list": [
         null,
         "blue",
@@ -1757,7 +1757,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_NouvelleZelande.gif",
-      "name": "NouvelleZelande",
+      "name": "NewZealand",
       "color_list": [
         "red",
         "blue",
@@ -1772,7 +1772,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Syrie.gif",
-      "name": "Syrie",
+      "name": "Syria",
       "color_list": [
         "red",
         "red",
@@ -1787,7 +1787,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Namibie.gif",
-      "name": "Namibie",
+      "name": "Namibia",
       "color_list": [
         "yellow",
         "blue",
@@ -1817,7 +1817,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Finlande.gif",
-      "name": "Finlande",
+      "name": "Finland",
       "color_list": [
         "white",
         "blue",
@@ -1832,7 +1832,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Liban.gif",
-      "name": "Liban",
+      "name": "Lebanon",
       "color_list": [
         "red",
         "red",
@@ -1847,7 +1847,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_VietNam.gif",
-      "name": "VietNam",
+      "name": "Vietnam",
       "color_list": [
         null,
         null,
@@ -1862,7 +1862,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_CoreeN.gif",
-      "name": "CoreeN",
+      "name": "NorthKorea",
       "color_list": [
         "blue",
         "blue",
@@ -1877,7 +1877,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_IlesMarshall.gif",
-      "name": "IlesMarshall",
+      "name": "MarshallIslands",
       "color_list": [
         "blue",
         "blue",
@@ -1907,7 +1907,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Mongolie.gif",
-      "name": "Mongolie",
+      "name": "Mongolia",
       "color_list": [
         null,
         null,
@@ -1922,7 +1922,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Azerbaidjan.gif",
-      "name": "Azerbaidjan",
+      "name": "Azerbaijan",
       "color_list": [
         null,
         "blue",
@@ -1952,7 +1952,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Tunisie.gif",
-      "name": "Tunisie",
+      "name": "Tunisia",
       "color_list": [
         "red",
         "white",
@@ -1982,7 +1982,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Guinee.gif",
-      "name": "Guinee",
+      "name": "Guinea",
       "color_list": [
         null,
         null,
@@ -1997,7 +1997,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Tchad.gif",
-      "name": "Tchad",
+      "name": "Chad",
       "color_list": [
         null,
         null,
@@ -2042,7 +2042,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Zambie.gif",
-      "name": "Zambie",
+      "name": "Zambia",
       "color_list": [
         "green",
         "green",
@@ -2087,7 +2087,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Chypre.gif",
-      "name": "Chypre",
+      "name": "Cyprus",
       "color_list": [
         null,
         null,
@@ -2102,7 +2102,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Croatie.gif",
-      "name": "Croatie",
+      "name": "Croatia",
       "color_list": [
         "red",
         "red",
@@ -2147,7 +2147,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Burkina.gif",
-      "name": "Burkina",
+      "name": "BurkinaFaso ",
       "color_list": [
         null,
         "red",
@@ -2267,7 +2267,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Soudan.gif",
-      "name": "Soudan",
+      "name": "Sudan",
       "color_list": [
         "red",
         "red",
@@ -2282,7 +2282,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Norvege.gif",
-      "name": "Norvege",
+      "name": "Norway",
       "color_list": [
         "red",
         "blue",
@@ -2327,7 +2327,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Allemagne.gif",
-      "name": "Allemagne",
+      "name": "Germany",
       "color_list": [
         null,
         "black",
@@ -2342,7 +2342,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Malte.gif",
-      "name": "Malte",
+      "name": "Malta",
       "color_list": [
         null,
         null,
@@ -2357,7 +2357,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Palaos.gif",
-      "name": "Palaos",
+      "name": "Palau",
       "color_list": [
         null,
         null,
@@ -2372,7 +2372,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Turquie.gif",
-      "name": "Turquie",
+      "name": "Turkey",
       "color_list": [
         "red",
         "white",
@@ -2402,7 +2402,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Grece.gif",
-      "name": "Grece",
+      "name": "Greece",
       "color_list": [
         null,
         "blue",
@@ -2417,7 +2417,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Malaisie.gif",
-      "name": "Malaisie",
+      "name": "Malaysia",
       "color_list": [
         "blue",
         "red",
@@ -2477,7 +2477,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Estonie.gif",
-      "name": "Estonie",
+      "name": "Estonia",
       "color_list": [
         null,
         "blue",
@@ -2492,7 +2492,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_IlesSalomon.gif",
-      "name": "IlesSalomon",
+      "name": "SolomonIslands",
       "color_list": [
         "white",
         "blue",
@@ -2507,7 +2507,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bolivie.gif",
-      "name": "Bolivie",
+      "name": "Bolivia",
       "color_list": [
         null,
         "red",
@@ -2522,7 +2522,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Belarusse.gif",
-      "name": "Belarusse",
+      "name": "Belarus",
       "color_list": [
         "red",
         "red",
@@ -2552,7 +2552,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Equateur.gif",
-      "name": "Equateur",
+      "name": "Equator",
       "color_list": [
         null,
         "yellow",
@@ -2567,7 +2567,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_IlesCook.gif",
-      "name": "IlesCook",
+      "name": "CookIslands",
       "color_list": [
         "red",
         "blue",
@@ -2582,7 +2582,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Armenie.gif",
-      "name": "Armenie",
+      "name": "Armenia",
       "color_list": [
         null,
         "red",
@@ -2612,7 +2612,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_EmiratsArabesUnis.gif",
-      "name": "EmiratsArabesUnis",
+      "name": "UnitedArabEmirates",
       "color_list": [
         "red",
         "green",
@@ -2672,7 +2672,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Colombie.gif",
-      "name": "Colombie",
+      "name": "Colombia",
       "color_list": [
         null,
         "yellow",
@@ -2717,7 +2717,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Gambie.gif",
-      "name": "Gambie",
+      "name": "Gambia",
       "color_list": [
         null,
         "red",
@@ -2732,7 +2732,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Maroc.gif",
-      "name": "Maroc",
+      "name": "Morocco",
       "color_list": [
         null,
         null,
@@ -2747,7 +2747,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Tadjikistan.gif",
-      "name": "Tadjikistan",
+      "name": "Tajikistan",
       "color_list": [
         null,
         "red",
@@ -2762,7 +2762,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Lituanie.gif",
-      "name": "Lituanie",
+      "name": "Lithuania",
       "color_list": [
         null,
         "yellow",
@@ -2867,7 +2867,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_Bhoutan.gif",
-      "name": "Bhoutan",
+      "name": "Bhutan",
       "color_list": [
         null,
         null,
@@ -2897,7 +2897,7 @@
     },
     {
       "file": "/home/jorobot/Desktop/drapeaux/Flag_GuineeBissau.gif",
-      "name": "GuineeBissau",
+      "name": "GuineaBissau",
       "color_list": [
         "red",
         "yellow",
