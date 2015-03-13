@@ -10,8 +10,19 @@ class FlagRepositoryFiller(object):
     def __init__(self, flagRepository):
         self.flagRepository = flagRepository
 
+    def setupFlagRepository(self, pathToModule):
+        flagJsonData = self.__openingFlagJson(pathToModule)
+        flagCountries = flagJsonData['countries']
+        nameFieldInJson = 'name'
+        colorListFieldInJson = 'color_list'
+        for flagCountry in flagCountries:
+            flagToAdd = Flag(flagCountry[nameFieldInJson], flagCountry[colorListFieldInJson])
+            self.flagRepository.addFlag(flagToAdd)
+        self.__closeJsonFile()
+
     def __openingFlagJson(self, pathToModule):
-        pathToFlagJson = pathToModule + "/flagData/new_country_json.json"
+        pathToFlagDataJson = "/flagData/new_country_json.json"
+        pathToFlagJson = pathToModule + pathToFlagDataJson
         pathToFlagJson = path.relpath(pathToFlagJson)
         self.flagJson = open(pathToFlagJson, 'r')
         flagJsonData = json.load(self.flagJson)
@@ -19,11 +30,3 @@ class FlagRepositoryFiller(object):
 
     def __closeJsonFile(self):
         self.flagJson.close()
-
-    def setupFlagRepository(self, pathToModule):
-        flagJsonData = self.__openingFlagJson(pathToModule)
-        flagCountries = flagJsonData['countries']
-        for flagCountry in flagCountries:
-            flafToAdd = Flag(flagCountry['name'], flagCountry['color_list'])
-            self.flagRepository.addFlag(flafToAdd)
-        self.__closeJsonFile()

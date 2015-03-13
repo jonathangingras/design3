@@ -22,4 +22,5 @@ class FlagRepositoryDB(FlagRepository):
         for element in self.flagList:
             if element.isFlagForThisCountry(nameOfCountry):
                 flagPictureFilename = element.flagPictureFilename
+                break
         return flagPictureFilename

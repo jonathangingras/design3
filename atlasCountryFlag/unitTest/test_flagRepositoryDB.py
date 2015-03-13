@@ -27,8 +27,7 @@ class TestFlagRepositoryDB(TestCase):
 
     def test_addAFlagToTheRepositoryWhenHavingAListOfFlagOfOneElementShouldAddTheFlagToTheList(self):
         expectedLenOfFlag = 2
-        self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
-        self.flagRepositoryDB.addFlag(self.secondFlagToAdd)
+        self.__addTwoFlagToTheRepository()
         numberOfElementInList = len(self.flagRepositoryDB.flagList)
         self.assertEqual(expectedLenOfFlag, numberOfElementInList)
 
@@ -48,8 +47,7 @@ class TestFlagRepositoryDB(TestCase):
     def test_searchForFlagColorListByTheCountryNameWhenNotHavingTheCountryInsideListAndHavingMoreThanOneElementInListShouldReturnAnEmptyList(self):
         expectedColorList = []
         nameOfCountry = "aCountryName"
-        self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
-        self.flagRepositoryDB.addFlag(self.secondFlagToAdd)
+        self.__addTwoFlagToTheRepository()
         self.assertEqual(expectedColorList, self.flagRepositoryDB.searchFlagColorList(nameOfCountry))
 
     def test_searchForAFlagPictureFilenameByCountryNameWhenNotHavingTheCountryInsideListShouldReturnNone(self):
@@ -68,6 +66,9 @@ class TestFlagRepositoryDB(TestCase):
     def test_searchForAFlagPictureFilenameByCountryNameWhenNotHavingCountryInsideListOfTwoElementShouldReturnNone(self):
         expectedFlagPictureFilename = None
         nameOfCountry = "aCountryName"
+        self.__addTwoFlagToTheRepository()
+        self.assertEqual(expectedFlagPictureFilename, self.flagRepositoryDB.searchFlagPictureFilename(nameOfCountry))
+
+    def __addTwoFlagToTheRepository(self):
         self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
         self.flagRepositoryDB.addFlag(self.secondFlagToAdd)
-        self.assertEqual(expectedFlagPictureFilename, self.flagRepositoryDB.searchFlagPictureFilename(nameOfCountry))

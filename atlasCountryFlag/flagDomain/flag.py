@@ -1,5 +1,6 @@
 __author__ = 'Antoine'
 
+
 class Flag(object):
 
     def __init__(self, nameOfCountry, colorList):
@@ -15,5 +16,5 @@ class Flag(object):
 
     def __setPictureFlagFilename(self, nameOfCountry):
         filenamePrefix = "Flag_"
-        filenameSufix = ".gif"
-        self.flagPictureFilename = filenamePrefix + nameOfCountry + filenameSufix
+        filenameSuffix = ".gif"
+        self.flagPictureFilename = filenamePrefix + nameOfCountry + filenameSuffix
