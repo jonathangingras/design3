@@ -6,8 +6,7 @@ class FlagRepositoryDB(FlagRepository):
     def __init__(self):
         self.flagList = []
 
-
-    def searchFlag(self, nameOfCountry):
+    def searchFlagColorList(self, nameOfCountry):
         colorList = []
         for element in self.flagList:
             if element.isFlagForThisCountry(nameOfCountry):
@@ -17,3 +16,6 @@ class FlagRepositoryDB(FlagRepository):
 
     def addFlag(self, flag):
         self.flagList.append(flag)
+
+    def searchFlagPictureFilename(self, nameOfCountry):
+        return

@@ -7,9 +7,13 @@ class FlagRepository(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def searchFlag(self, nameOfCountry):
+    def searchFlagColorList(self, nameOfCountry):
         return
 
     @abc.abstractmethod
     def addFlag(self, flag):
+        return
+
+    @abc.abstractmethod
+    def searchFlagPictureFilename(self, nameOfCountry):
         return

@@ -37,14 +37,14 @@ class TestFlagRepositoryDB(TestCase):
         nameOfCountry = "countryName"
         self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
         self.firstFlagToAdd.isFlagForThisCountry = Mock(return_value = True)
-        returnedColorList = self.flagRepositoryDB.searchFlag(nameOfCountry)
+        returnedColorList = self.flagRepositoryDB.searchFlagColorList(nameOfCountry)
         self.assertEqual(expectedColorList, returnedColorList)
 
     def test_searchForAFlagByTheNameOfTheCountryWhenNotHavingTheCountryInsideListShouldReturnAnEmptyList(self):
         expectedColorList = []
         nameOfCountry = "countryName"
         self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
-        returnedColorList = self.flagRepositoryDB.searchFlag(nameOfCountry)
+        returnedColorList = self.flagRepositoryDB.searchFlagColorList(nameOfCountry)
         self.assertEqual(expectedColorList, returnedColorList)
 
     def test_searchForAFlagByTheNameOfTheCountryWhenNotHavingTheCountryInsideListAndHavingMoreThanOneElemenetInListShouldReturnAnEmptyList(self):
@@ -52,5 +52,5 @@ class TestFlagRepositoryDB(TestCase):
         nameOfCountry = "countryName"
         self.flagRepositoryDB.addFlag(self.firstFlagToAdd)
         self.flagRepositoryDB.addFlag(self.secondFlagToAdd)
-        returnedColorList = self.flagRepositoryDB.searchFlag(nameOfCountry)
+        returnedColorList = self.flagRepositoryDB.searchFlagColorList(nameOfCountry)
         self.assertEqual(expectedColorList, returnedColorList)

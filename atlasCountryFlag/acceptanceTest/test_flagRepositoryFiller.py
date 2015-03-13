@@ -21,9 +21,9 @@ class TestFlagRepositoryFiller(TestCase):
         expectedColorList = [None, "red", None,
                              None, "white", None,
                              None, "blue", None]
-        self.assertEqual(expectedColorList, self.flagRepositoryDB.searchFlag(nameOfCountry))
+        self.assertEqual(expectedColorList, self.flagRepositoryDB.searchFlagColorList(nameOfCountry))
 
     def test_searchingAParsedFlagInsideRepositoryWhenTheNameOfCountryIsNotInsideOneFlagShouldReturnAnEmptyList(self):
         nameOfCountry = "aCountry"
         expectedColorList = []
-        self.assertEqual(expectedColorList, self.flagRepositoryDB.searchFlag(nameOfCountry))
+        self.assertEqual(expectedColorList, self.flagRepositoryDB.searchFlagColorList(nameOfCountry))
