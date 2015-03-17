@@ -2,6 +2,8 @@ __author__ = 'alex'
 
 import nltk
 
+
+
 class ProcessLanguage(object):
 
     def __init__(self):
@@ -18,10 +20,9 @@ class ProcessLanguage(object):
                                 """
 
         self.chunkGramSubjectOnly = r"""ChunkSubjectOnly:  {((<JJ><NN[S]?>+)|(<NN><IN><NN>))}
-
                                          """
-        self.chunkGramValueOnly = r""" ChunkValue:  {(<KeyWord>?<NNP>+|(<KeyWord>)?<CD>+<NN\w?>*<\w+>?)}
-                                        }  <KeyWord> {"""
+        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+<NN\w?>*<\w+>?)|(<NNP><.>?<IN>?)+)+}
+                                        """
         self.taggedList = []
         self.tokenizedQuestionList = []
         self.chunkedList = []
@@ -43,7 +44,7 @@ class ProcessLanguage(object):
 
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
-        #print self.taggedList
+        print self.taggedList
 
     def chunkingQuestion(self):
         chunkParser = nltk.RegexpParser(self.chunkGramAllSentense)
@@ -55,7 +56,7 @@ class ProcessLanguage(object):
         for subTreeQuestion in self.chunkedList.subtrees():
             if subTreeQuestion._label in ['ChunkSubjectOnly']:
                 stringToConcat = ""
-                listsequenceMot = []
+
                 for leavesChunk in subTreeQuestion.leaves():
                         if stringToConcat == "":
                             stringToConcat = leavesChunk[0]
@@ -63,14 +64,33 @@ class ProcessLanguage(object):
                             stringToConcat = stringToConcat + " " + leavesChunk[0]
                 self.importantWordList.append(stringToConcat)
 
-                listsequenceMot.append(stringToConcat)
+
         return self.importantWordList
+
+    def extractOnlyQuestionValue(self):
+        chunkParser = nltk.RegexpParser(self.chunkGramValueOnly)
+        self.chunkedList = chunkParser.parse(self.taggedList)
+        for subTreeQuestion in self.chunkedList.subtrees():
+            if subTreeQuestion._label in ['ChunkValue']:
+                stringToConcat = ""
+
+                listsequenceMot = []
+                for leavesChunk in subTreeQuestion.leaves():
+                    print leavesChunk
+                    if stringToConcat == "":
+                        stringToConcat = leavesChunk[0]
+                    else:
+                        stringToConcat = stringToConcat + " " + leavesChunk[0]
+
+                self.keyWordList.append(stringToConcat)
+        return self.keyWordList
+
 
     def extractImportantWord(self):
         for subTreeQuestion in self.chunkedList.subtrees():
             if subTreeQuestion._label in ['ChunkNumber', 'ChunkName', 'ChunkLessSymbole', 'ChunkSubject']:
                 stringToConcat = ""
-                listsequenceMot = []
+                listsequenceWord = []
                 for leavesChunk in subTreeQuestion.leaves():
                         if stringToConcat == "":
                             stringToConcat = leavesChunk[0]
@@ -80,10 +100,10 @@ class ProcessLanguage(object):
                 self.importantWordList.append(stringToConcat)
 
                 if self.dictionariesWord.has_key(subTreeQuestion._label):
-                    listsequenceMot = self.dictionariesWord.get(subTreeQuestion._label)
+                    listsequenceWord = self.dictionariesWord.get(subTreeQuestion._label)
 
-                listsequenceMot.append(stringToConcat)
-                self.dictionariesWord[subTreeQuestion._label] = listsequenceMot
+                listsequenceWord.append(stringToConcat)
+                self.dictionariesWord[subTreeQuestion._label] = listsequenceWord
 
     def buildDictionaries(self):
 

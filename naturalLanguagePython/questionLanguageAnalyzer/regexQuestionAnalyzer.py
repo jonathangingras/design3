@@ -11,7 +11,7 @@ class RegexQuestionAnalyzer(object):
                                  r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ([\S+]+)((\ \w+)+)?",
                                  r"(?<=greater than )(((\d+)(\ )?)+(\w+\/\d+)?)+",
                                  r"((\d+\s)?([A-Z][a-z]+\s(\d+)))",
-                                 r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENO])",
+                                 r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
                                  r"(?<=What country has )([A-Z][a-z]+[^d ]\b)",
                                  r"(\.[a-z]+)",
@@ -29,7 +29,8 @@ class RegexQuestionAnalyzer(object):
                              r"(?<=its )(\w+)",
                              r"(?<=What country has )([a-z]+[^d ]\b)",
                              r"(?<=What country has a )(.+)(?= of )",
-                             r"(?<=is the )(.+)(?= of this country)"]
+                             r"(?<=is the )(.+)(?= of this country),"
+                             r"((?<=[Mm]y )(\w+\s?){1,2}((?=\sinclude)|(?= was )|(?= is )|(?= are)|(?= is the)))"]
 
         self.listString = []
         self.listSubject = []
@@ -52,6 +53,7 @@ class RegexQuestionAnalyzer(object):
 
     def parseAllRegexKeyWord(self, question):
         indexBegin = 0
+
 
         for reg in self.listRegexKeyword:
             regex = re.compile(reg)
@@ -86,6 +88,7 @@ class RegexQuestionAnalyzer(object):
                     else:
 
                         self.listSubject.append(regex.search(question).group())
+        print self.listSubject
 
         for x in self.listSubject:
             for y in self.listSubject:
@@ -106,15 +109,8 @@ class RegexQuestionAnalyzer(object):
         return self.listKeyword
 
 
- # def __splitString(self):
-    #     listTemp =[]
-    #     futurList = []
-    #     for item in self.listString:
-    #         listTemp = str(item).replace('and ','').split(',')
-    #         for temp in listTemp:
-    #             futurList.append(temp)
-    #     self.listString = futurList
-    #     print futurList
+
+
 
     def associateWord(self, question):
         listTemp =[]
@@ -124,8 +120,9 @@ class RegexQuestionAnalyzer(object):
             for temp in listTemp:
                 temp.strip(' ')
                 if(temp != ''):
-                    futurList.append(temp)
+                    futurList.append(temp.lstrip(' '))
         self.listString = futurList
+
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
             for subject, key in zip(self.listSubject, self.listString):
                 self.dictWord[subject] = [key]
@@ -141,4 +138,5 @@ class RegexQuestionAnalyzer(object):
                         nearestValueDistance = valueTemp
                         nearestValuePosition = self.listString.index(y)
 
-                self.dictWord[x] = self.listString[nearestValuePosition]
+                self.dictWord[x] = [self.listString[nearestValuePosition]]
+        print self.dictWord

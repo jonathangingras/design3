@@ -13,7 +13,6 @@ class SearchInformation(object):
         expression = re.compile(self.regex)
         if dictionary.has_key(keyword):
             for value in dictionary[keyword]:
-                print(value)
                 if expression.search(value) is not None:
                     isContaining = True
                     break

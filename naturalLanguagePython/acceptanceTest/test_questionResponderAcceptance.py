@@ -29,7 +29,33 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Bahrain"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByItsNationalSymbolShouldReturnTheNameOfTheCountry(self):
+    def test_askingQuestionWhenSearchingByOneOfItsNationalSymbolShouldReturnTheNameOfTheCountry(self):
         askedQuestion = "One national symbol of this country is the edelweiss."
         expectedNameOfCountry = "Switzerland"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsNumberOfInternetUsersShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "What country has 13.694 million internet users?"
+        expectedNameOfCountry = "Argentina"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsNationalSymbolShouldReturnCountryName(self):
+        askedQuestion = "My national symbol is the elephant."
+        expectedNameOfCountry = "Madagascar"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsBirthRateShouldReturnCountryName(self):
+        askedQuestion = "What country has a birth rate of 46.12 births/ 1000 population?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsTelephoneLinesNumbersShouldReturnNameOfCountry(self):
+        askedQuestion = "My telephone lines in use are 1.217 million."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsNationalAnthemShouldReturnTheNameOfCountry(self):
+        askedQuestion = "The title of my national anthem is Advance Australia Fair."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
