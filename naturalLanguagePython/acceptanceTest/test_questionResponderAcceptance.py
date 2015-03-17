@@ -1,3 +1,4 @@
+from binascii import a2b_base64
 from unittest import TestCase
 from naturalLanguagePython.countryRessource.questionResponder import QuestionResponder
 __author__ = 'Antoine'
@@ -56,6 +57,75 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsNationalAnthemShouldReturnTheNameOfCountry(self):
         askedQuestion = "The title of my national anthem is Advance Australia Fair."
+        expectedNameOfCountry = "Australia"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    #def test_askingQuestionWhenSearchingByItsIllicitDrugsActivitiesShouldReturnTheNameOfTheCountry(self):
+    #    askedQuestion = "What country has illicit drugs activities including a transshipment point for cocaine from South America to North America and illicit cultivation of cannabis?"
+    #    expectedNameOfCountry = ""
+    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsExportPartnerShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "My export partners are US, Germany, UK, France, Spain, Canada and Italy."
         expectedNameOfCountry = ""
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
+    def test_askingQuestionWhenSearchingByItsReligionsPercentageShouldReturnTheNameOfCountry(self):
+        askQuestion = "What country has religions including 51.3% of protestant and 0.7% of buddhist?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
+
+    def test_askingQuestionWhenSearchingByItsDeathRateAndCapitalShouldReturnTheNameOfTheCountry(self):
+        askQuestion = "My death rate is greater than 13 death/1000 and my capital starts with Mos."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
+
+    def test_askingQuestionWhenSearchingByItsTotalAreaShouldReturnTheNameOfCountry(self):
+        askQuestion = "What country has a total area of 390757 sq km?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
+
+    def test_askingQuestionWhenSearchingByAGreaterThTheNameOfCountry(self):
+        askedQuestion = "What country has a population greater than 1 300 692 576?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsReligionsShouldReturnCountryName(self):
+        askedQuestion = "What country has religions including Hindu, Muslim, Christian, and Sikh?"
+        expectedNameOfCountry = "['Canada', 'Fiji', 'India', 'United_Arab_Emirates']"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsIndependenceDateInBeginningShouldReturnCountryName(self):
+        askedQuestion = "22 September 1960 is the date of independence of this country."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    #def test_askingQuestionWhenSearchingByAIllicitActivityShouldReturnTheNameOfTheCountry(self):
+    #    askedQuestion = "What country considers illicit drug trafficking as a serious offense and carry death penalty?"
+    #    expectedNameOfCountry = ""
+    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByItsLatitudeAndLongitudeShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "My latitude is 16 00 S and my longitude is 167 00 E."
+        expectedNameOfCountry = ""
+        self.assertNotEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "My population growth rate is between 1.44% and 1.47%."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheLatitudeShouldReturnCountryName(self):
+        askedQuestion = "What country has a latitude of 41.00 S? "
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheNationalSymbolAtBeginningShouldReturnCountryName(self):
+        askedQuestion = "The lotus blossom is the national symbol of this country."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
+        askedQuestion = "My population is 32 742. "
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
