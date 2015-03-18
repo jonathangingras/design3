@@ -67,7 +67,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsExportPartnerShouldReturnTheNameOfTheCountry(self):
         askedQuestion = "My export partners are US, Germany, UK, France, Spain, Canada and Italy."
-        expectedNameOfCountry = ""
+        expectedNameOfCountry = "Bangladesh"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     #def test_askingQuestionWhenSearchingByItsReligionsPercentageShouldReturnTheNameOfCountry(self):
