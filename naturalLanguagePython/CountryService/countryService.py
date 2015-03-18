@@ -35,7 +35,6 @@ class CountryService(object):
         nameOfCountry = ""
         listOfPossibleCountryByCategory = self.repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
                                                                                                                searchedInformationDict, wantedSearchStrategy)
-        print(listOfPossibleCountryByCategory)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
             numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)

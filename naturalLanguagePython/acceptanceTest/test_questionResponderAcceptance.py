@@ -105,10 +105,10 @@ class TestQuestionResponder(TestCase):
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsLatitudeAndLongitudeShouldReturnTheNameOfTheCountry(self):
-    #    askedQuestion = "My latitude is 16 00 S and my longitude is 167 00 E."
-    #    expectedNameOfCountry = ""
-    #    self.assertNotEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByItsLatitudeAndLongitudeShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "My latitude is 16 00 S and my longitude is 167 00 E."
+        expectedNameOfCountry = "Vanuatu"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     #def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
     #    askedQuestion = "My population growth rate is between 1.44% and 1.47%."

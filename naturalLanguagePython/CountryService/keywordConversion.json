@@ -3,7 +3,9 @@
     {
       "export partners" : "exports - partners",
       "national symbol" : "national symbol(s)",
-      "date of independence": "independence"
+      "date of independence": "independence",
+      "latitude" : "geographic coordinates",
+      "longitude" : "geographic coordinates"
     }
   ]
 

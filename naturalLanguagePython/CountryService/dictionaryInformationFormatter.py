@@ -24,7 +24,6 @@ class DictionaryInformationFormatter(object):
         possibleConversion = self.__obtainPossibleKeywordConversion()
         for keyword in receivedDictionary:
             if keyword in possibleConversion:
-                print(possibleConversion[keyword])
                 convertedDictionary[possibleConversion[keyword]] = receivedDictionary[keyword]
             else:
                 convertedDictionary[keyword] = receivedDictionary[keyword]
