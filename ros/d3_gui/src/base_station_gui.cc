@@ -2,6 +2,7 @@
 #include <tf/transform_listener.h>
 #include <geometry_msgs/PointStamped.h>
 #include <RosQtExitGuard.h>
+#include <d3_table_transform/robotPose.h>
 
 //Qt MUST BE included last because of some shit it does with signals in its
 //immensely giant unintuitive crappy API
@@ -11,6 +12,10 @@
 #include <QDeclarativeProperty>
 #include <QGraphicsPixmapItem>
 #include <QmlApplicationViewer.h>
+
+namespace d3t12 {
+  namespace tf = d3_table_transform;
+}
 
 struct UIPose {
   typedef boost::shared_ptr<UIPose> Ptr;
@@ -117,7 +122,7 @@ private:
 public:
   inline UIContentSetter(QDeclarativeView* _view, std::string _flagsPath): view(_view), flagsPath(_flagsPath) {}
 
-  void setCountry(std::string countryName) {
+  void setAnswer(std::string countryName) {
     setCountryName(countryName);
     setCountryFlag(flagsPath + '/' + countryName + ".gif");
   }
@@ -130,38 +135,27 @@ public:
 
 };
 
-inline geometry_msgs::PoseStamped robotZero() {
-  geometry_msgs::PoseStamped robotPoseOnRobot;
-  robotPoseOnRobot.header.frame_id = "robot_center";
-  robotPoseOnRobot.header.stamp = ros::Time();
-
-  robotPoseOnRobot.pose.position.x = 0;
-  robotPoseOnRobot.pose.position.y = 0;
-  robotPoseOnRobot.pose.position.z = 0;
-  robotPoseOnRobot.pose.orientation = tf::createQuaternionMsgFromYaw(0);
-  return robotPoseOnRobot;
-}
-
-void listenTf(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, UIPoseConverter* poseConverter, UIPose::Ptr uiPose) {  
-  tf::TransformListener listener(ros::Duration(10));
-
-  while(exitGuard->good()) {
-    try {
-      geometry_msgs::PoseStamped robotPoseOnTable;
-      listener.transformPose("d3_table_origin", robotZero(), robotPoseOnTable);
-
-      tf::Quaternion q;
-      tf::quaternionMsgToTF(robotPoseOnTable.pose.orientation, q);
-      
-      UIPose uiPoseNew = poseConverter->getUIPoseFromTfPose(robotPoseOnTable.pose.position.x, robotPoseOnTable.pose.position.y, tf::getYaw(q));
-      mutex->lock();
-      *uiPose = uiPoseNew;
-      mutex->unlock();
-    } catch(tf::TransformException& ex) {
-      ROS_ERROR_STREAM("could not transform robot position: " << ex.what());
-    }
+struct PoseListener {
+  ros::NodeHandle& nodeHandle;
+  boost::mutex& mutex;
+  UIPose::Ptr uiPose;
+  UIPoseConverter* poseConverter;
+  
+  inline PoseListener(ros::NodeHandle& _nodeHandle, boost::mutex& _mutex, UIPose::Ptr _uiPose, UIPoseConverter* _poseConverter):
+    nodeHandle(_nodeHandle), mutex(_mutex), uiPose(_uiPose), poseConverter(_poseConverter) {}
+  
+  void operator()(const d3t12::tf::robotPose::ConstPtr& robotPose) {
+    UIPose uiPoseNew = poseConverter->getUIPoseFromTfPose(robotPose->x, robotPose->y, robotPose->yaw);
+        
+    mutex.lock();
+    *uiPose = uiPoseNew;
+    mutex.unlock();
   }
-}
+  
+  ros::Subscriber subscribe() {
+    return nodeHandle.subscribe<d3t12::tf::robotPose>("/robot_positioner/robot_pose", 1, *this);
+  }
+};
 
 void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphicsScene* scene, QGraphicsPixmapItem* item, UIPose::Ptr uiPose) {
   while(exitGuard->good()) {
@@ -178,6 +172,10 @@ void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphics
   }
 }
 
+void rosSpin() {
+  ros::spin();
+}
+
 Q_DECL_EXPORT 
 int main(int argc, char** argv) {
 		QApplication app(argc, argv);
@@ -192,29 +190,28 @@ int main(int argc, char** argv) {
     handle.getParam("d3_base_station_gui/flagsPath", flagsPath);
 
     QmlApplicationViewer viewer;
-    QUrl qmlFilePath(qmlPath.c_str());
-    viewer.setSource(qmlFilePath);
+    viewer.setSource(QUrl(qmlPath.c_str()));
     viewer.show();
 
-    QString filepath(imagePath.c_str());
-    QPixmap pixmap(filepath);
+    QPixmap pixmap(imagePath.c_str());
     QGraphicsPixmapItem item(pixmap);
     viewer.scene()->addItem(&item);
     item.setOffset( -0.5 * QPointF( item.pixmap().width(), item.pixmap().height() ) );
     
     UIPoseConverter poseConverter(2.305, &viewer);
     UIPose::Ptr uiPose(new UIPose);
-
-    //TODO add a subscription to atlas asker so it can change when sent
-    UIContentSetter setter(&viewer, flagsPath);
-    setter.setCountry("Flag_Allemagne");
-    setter.setQuestion("Who likes sausage?");
-    viewer.scene()->update();
-
-    //threads
     boost::mutex mutex;
-    boost::thread tfListenerThread(listenTf, exitGuard.get(), &mutex, &poseConverter, uiPose);
+    PoseListener poseListener(handle, mutex, uiPose, &poseConverter);
+    ros::Subscriber poseSubscriber = poseListener.subscribe();
+    //threads
+    boost::thread rosSpinner(rosSpin);
     boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose);
 
+    //TODO add a subscription to atlas asker so it can change when sent
+    //next 3 lines are examples
+    UIContentSetter setter(&viewer, flagsPath);
+    setter.setAnswer("Germany");
+    setter.setQuestion("Who likes sausage?");
+    
     return app.exec();
 }

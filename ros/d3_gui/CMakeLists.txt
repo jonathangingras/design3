@@ -11,6 +11,7 @@ find_package(
 	roscpp 
 	std_msgs 
 	tf
+	d3_table_transform
 )
 
 find_package(Qt4 COMPONENTS QtCore QtGui QtDeclarative QtOpenGL REQUIRED)
@@ -33,6 +34,7 @@ catkin_package(
 	rospy 
 	std_msgs 
 	tf
+	d3_table_transform
 )
 
 #Qt stuff
