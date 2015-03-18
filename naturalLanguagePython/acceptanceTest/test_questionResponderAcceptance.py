@@ -95,10 +95,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "['Canada', 'Fiji', 'India', 'United_Arab_Emirates']"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsIndependenceDateInBeginningShouldReturnCountryName(self):
-    #    askedQuestion = "22 September 1960 is the date of independence of this country."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByItsIndependenceDateInBeginningShouldReturnCountryName(self):
+        askedQuestion = "22 September 1960 is the date of independence of this country."
+        expectedNameOfCountry = "Mali"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     #def test_askingQuestionWhenSearchingByAIllicitActivityShouldReturnTheNameOfTheCountry(self):
     #    askedQuestion = "What country considers illicit drug trafficking as a serious offense and carry death penalty?"

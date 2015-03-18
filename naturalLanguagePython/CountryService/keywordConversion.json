@@ -2,7 +2,8 @@
   "conversion":[
     {
       "export partners" : "exports - partners",
-      "national symbol" : "national symbol(s)"
+      "national symbol" : "national symbol(s)",
+      "date of independence": "independence"
     }
   ]
 
