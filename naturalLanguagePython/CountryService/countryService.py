@@ -5,7 +5,7 @@ from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryR
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
 from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 from naturalLanguagePython.countryService.repositorySearch import RepositorySearch
-
+from naturalLanguagePython.countryService.dictionaryInformationFormatter import DictionaryInformationFormatter
 
 
 class CountryService(object):
@@ -13,6 +13,7 @@ class CountryService(object):
     def __init__(self, currentWorkspacePath):
         self.countryRepository = CountryRepositoryDB()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
+        self.dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
         self.questionAnalyzer = QuestionInformationAnalyser()
         self.__setupTheCountryRepository(currentWorkspacePath)
         self.repositorySearch = RepositorySearch()
@@ -26,10 +27,15 @@ class CountryService(object):
         dictionaryOfImportantInformation = self.questionAnalyzer.analyseQuestion(receivedQuestion)
         return dictionaryOfImportantInformation
 
+    def formatKeywordFromSemanticAnalysisToWorldFactbook(self, receivedDictionary):
+        formattedDictionary = self.dictionaryInformationFormatter.formatDictionary(receivedDictionary)
+        return  formattedDictionary
+
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""
         listOfPossibleCountryByCategory = self.repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
                                                                                                                searchedInformationDict, wantedSearchStrategy)
+        print(listOfPossibleCountryByCategory)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
             numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)

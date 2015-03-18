@@ -35,3 +35,8 @@ class AcceptanceTestCountryService(TestCase):
         dictionaryFromQuestion = {"exports - partners": ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]}
         expectedReturnedCountryName = "Bangladesh"
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))
+
+    def test_usingServiceToSearchACountryWhenSearchingByItsNaturalSymbolShouldReturnTheNameOfTheCountry(self):
+        dictionaryFromQuestion = {'national symbol(s)': ['elephant']}
+        expectedReturnedCountryName = "Thailand"
+        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))

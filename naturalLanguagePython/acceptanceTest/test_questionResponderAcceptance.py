@@ -32,7 +32,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByOneOfItsNationalSymbolShouldReturnTheNameOfTheCountry(self):
         askedQuestion = "One national symbol of this country is the edelweiss."
-        expectedNameOfCountry = "Switzerland"
+        expectedNameOfCountry = "Austria"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsNumberOfInternetUsersShouldReturnTheNameOfTheCountry(self):
@@ -42,7 +42,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsNationalSymbolShouldReturnCountryName(self):
         askedQuestion = "My national symbol is the elephant."
-        expectedNameOfCountry = "Madagascar"
+        expectedNameOfCountry = "Thailand"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     #def test_askingQuestionWhenSearchingByItsBirthRateShouldReturnCountryName(self):
