@@ -38,7 +38,6 @@ class RegexQuestionAnalyzer(object):
         self.dictWord = {}
 
     def __parseAllRegexWord(self):
-        print self.listString
         for x in self.listString:
             for y in self.listString:
                 searchSub = str.find(x, y)
@@ -88,7 +87,6 @@ class RegexQuestionAnalyzer(object):
                     else:
 
                         self.listSubject.append(regex.search(question).group())
-        print self.listSubject
 
         for x in self.listSubject:
             for y in self.listSubject:
@@ -139,4 +137,3 @@ class RegexQuestionAnalyzer(object):
                         nearestValuePosition = self.listString.index(y)
 
                 self.dictWord[x] = [self.listString[nearestValuePosition]]
-        print self.dictWord

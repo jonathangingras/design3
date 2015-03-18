@@ -109,7 +109,7 @@ class TestCountryRepositoryFiller(TestCase):
 
     def test_searchAParsedCountryWhenSearchingByReligionShouldReturnTheNameOfPossibleCountry(self):
         expectedCountryList = [["Fiji", "World", "United_Arab_Emirates", "India", "Saudi_Arabia", "Canada"]]
-        expectedCountryList = [['Canada', 'Fiji', 'India', 'Saudi_Arabia', 'United_Arab_Emirates', 'World']]
+        expectedCountryList = [['Canada', 'Fiji', 'India', 'Saudi_Arabia', 'United_Arab_Emirates']]
         wantedField = {"religions": ["Sikh"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)

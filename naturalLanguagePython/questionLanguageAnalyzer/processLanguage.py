@@ -44,7 +44,6 @@ class ProcessLanguage(object):
 
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
-        print self.taggedList
 
     def chunkingQuestion(self):
         chunkParser = nltk.RegexpParser(self.chunkGramAllSentense)

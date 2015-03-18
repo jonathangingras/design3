@@ -10,5 +10,6 @@ class QuestionResponder(object):
         nameOfCountry = None
         if question is not None:
             dictionary = self.countryService.analyzeQuestionFromAtlas(question)
+            print(dictionary)
             nameOfCountry = self.countryService.searchCountry(dictionary)
         return nameOfCountry
