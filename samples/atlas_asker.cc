@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
   d3t12::AtlasJSONDecoder decoder;
 
   while(1) {
-    sleep(1);
+    usleep(2000);
     std::string atlas_told = getter.performGET();
     std::cout << decoder.questionStr(atlas_told) << std::endl;
   }

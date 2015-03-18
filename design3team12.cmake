@@ -12,9 +12,11 @@ set(DESIGN3_INCLUDE_DIRS
 	${CURL_INCLUDE_DIRS}
 	${JANSSON_INCLUDE_DIRS}
 	${CMAKE_CURRENT_LIST_DIR}/build/extern/jansson-2.7/include
+	${CMAKE_CURRENT_LIST_DIR}/extern/nsgif/include
 )
 
 set(DESIGN3_LIBRARY_DIRS
 	${CMAKE_CURRENT_LIST_DIR}/build/lib
 	${CMAKE_CURRENT_LIST_DIR}/build/extern/jansson-2.7/lib
+	${CMAKE_CURRENT_LIST_DIR}/build/extern/nsgif/lib
 )
