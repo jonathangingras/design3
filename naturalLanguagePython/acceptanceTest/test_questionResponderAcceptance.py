@@ -115,15 +115,15 @@ class TestQuestionResponder(TestCase):
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByTheLatitudeShouldReturnCountryName(self):
-    #    askedQuestion = "What country has a latitude of 41.00 S? "
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByTheLatitudeShouldReturnCountryName(self):
+        askedQuestion = "What country has a latitude of 41.00 S? "
+        expectedNameOfCountry = "New_Zealand"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByTheNationalSymbolAtBeginningShouldReturnCountryName(self):
-    #    askedQuestion = "The lotus blossom is the national symbol of this country."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByTheNationalSymbolAtBeginningShouldReturnCountryName(self):
+        askedQuestion = "The lotus blossom is the national symbol of this country."
+        expectedNameOfCountry = "['Macau', 'Vietnam']"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     #def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
     #    askedQuestion = "My population is 32 742. "
