@@ -4,6 +4,10 @@ add_library(d3t12_driver
 	yuv422_to_rgb888.c
 
 	CameraCapturer.cc
+
+	MicroControllerCommand.cc
+	MicroControllerCommandBuilder.cc
+	MicroControllerCommandPort.cc
 )
 
 target_link_libraries(d3t12_driver
