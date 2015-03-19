@@ -82,7 +82,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsTotalAreaShouldReturnTheNameOfCountry(self):
         askQuestion = "What country has a total area of 390757 sq km?"
-        expectedNameOfCountry = ""
+        expectedNameOfCountry = "Zimbabwe"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
     #def test_askingQuestionWhenSearchingByAGreaterThTheNameOfCountry(self):

@@ -46,7 +46,7 @@ class TestCountryRepositoryFiller(TestCase):
 
     def test_searchAParsedCountryWhenSearchingByItsPopulationShouldReturnTheCountryName(self):
         expectedCountryList = [['Afghanistan']]
-        wantedField = {"population": ["31,822,848"]}
+        wantedField = {"population": ["31822848"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
@@ -59,19 +59,19 @@ class TestCountryRepositoryFiller(TestCase):
     def test_searchAParsedCountryWhenSearchingByTheNumberOfTelephoneMainLinesInUseShouldReturnTheCountryName(self):
         expectedCountryList = [['West_Bank', 'Anguilla', 'Burma', 'Paraguay', 'Gaza_Strip']]
         expectedCountryList = [['Anguilla', 'Burma', 'Gaza_Strip', 'Paraguay', 'West_Bank']]
-        wantedField = {"telephones - main lines in use": ["6,000"]}
+        wantedField = {"telephones - main lines in use": ["6000"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByTheBirthRateShouldReturnNameOfPossibleCountry(self):
         expectedCountryList = [['Aruba']]
-        wantedField = {"birth rate": ["12.65 births/1,000"]}
+        wantedField = {"birth rate": ["12.65 births/1000"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByItsDeathRateShouldReturnNameOfPossibleCountry(self):
         expectedCountryList = [['Australia']]
-        wantedField = {"death rate": ["7.07 deaths/1,000"]}
+        wantedField = {"death rate": ["7.07 deaths/1000"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
@@ -116,7 +116,7 @@ class TestCountryRepositoryFiller(TestCase):
 
     def test_searchAParsedCountryWhenSearchingByItsIndustriesShouldReturnTheNameOfPossibleCountry(self):
         expectedCountryList = [['South_Africa']]
-        wantedField = {"industries": ["world's largest producer of platinum, gold, chromium"]}
+        wantedField = {"industries": ["platinum", "gold", "chromium"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
