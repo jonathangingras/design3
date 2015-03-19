@@ -22,6 +22,8 @@ target_link_libraries(capture_frame ${D3_VISION_LIBS} ${D3_COMMON_LIBS} ${D3_DRI
 add_executable(sample_squares sample_squares.cc)
 target_link_libraries(sample_squares ${D3_VISION_LIBS} ${D3_COMMON_LIBS} ${D3_DRIVER_LIBS})
 
+add_executable(ledSample ledSample.cc)
+target_link_libraries(ledSample ${D3_VISION_LIBS} ${D3_COMMON_LIBS} ${D3_DRIVER_LIBS})
 
 #next one is only for an example on shared pointers
 add_executable(shared_ptr_howto shared_ptr_howto.cc)
