@@ -29,10 +29,13 @@ class HtmlInformationFormatter(object):
     def formatNumberSeparatedByComaFromWorldFactBook(self, receivedString):
         splittedString = receivedString.split(" ")
         formattedString = ""
-        numberFormatRegex = re.compile("\d*(\,\d*){1,}")
+        numberFormatRegex = re.compile("\d+(\,\d+){1,}")
         for stringElement in splittedString:
             if numberFormatRegex.search(stringElement):
                 stringElement = stringElement.replace(",", "")
             formattedString += stringElement + " "
 
         return formattedString.strip()
+
+    def removeQuoteFromString(self, receivedString):
+        return receivedString.replace("\"", "")

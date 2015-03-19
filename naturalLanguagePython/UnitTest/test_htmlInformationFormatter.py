@@ -39,3 +39,8 @@ class TestHtmlInformationFormatter(TestCase):
         stringWithNumberWithSpaceSeparatedValue = "34 834 841 (July 2014 est.)"
         expectedReturnedString  ="34 834 841 (July 2014 est.)"
         self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithNumberWithSpaceSeparatedValue))
+
+    def test_formattingNumberValueFromWorldFactBookWhenHavingStringElementSeparatedByComaShouldReturnTheStringUnchanged(self):
+        stringWithoutNumber = "Bilady, Bilady, Bilady"
+        expectedReturnedString = "Bilady, Bilady, Bilady"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithoutNumber))
