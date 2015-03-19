@@ -44,7 +44,7 @@ class ProcessLanguage(object):
 
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
-        print self.taggedList
+        # print self.taggedList
 
     def chunkingQuestion(self):
         chunkParser = nltk.RegexpParser(self.chunkGramAllSentense)
@@ -76,7 +76,6 @@ class ProcessLanguage(object):
 
                 listsequenceMot = []
                 for leavesChunk in subTreeQuestion.leaves():
-                    print leavesChunk
                     if stringToConcat == "":
                         stringToConcat = leavesChunk[0]
                     else:

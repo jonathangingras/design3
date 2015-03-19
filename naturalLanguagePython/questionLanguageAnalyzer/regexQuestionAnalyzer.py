@@ -52,13 +52,7 @@ class RegexQuestionAnalyzer(object):
 
 
     def __parseAllRegexWord(self):
-
         self.listString = self.__removeSubPartOfSameStringOfAList(self.listString)
-
-
-
-
-
         for x in self.listString:
             if (self.listString.count(x) > 1):
                 self.listString.remove(x)
@@ -78,8 +72,6 @@ class RegexQuestionAnalyzer(object):
                 if self.listString.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
-                    print reg
-                    print listTemp
                     if len(listTemp) > 1:
                         for key in listTemp:
                             listOfKey = []
@@ -104,8 +96,6 @@ class RegexQuestionAnalyzer(object):
                 if self.listSubject.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
-                    print reg
-                    print listTemp
                     if len(listTemp) > 1:
 
                         for key in listTemp:
@@ -166,4 +156,3 @@ class RegexQuestionAnalyzer(object):
                         nearestValuePosition = self.listString.index(y)
 
                 self.dictWord[x] = [self.listString[nearestValuePosition]]
-        print self.dictWord
