@@ -40,3 +40,9 @@ class AcceptanceTestCountryService(TestCase):
         dictionaryFromQuestion = {'national symbol(s)': ['polar bear']}
         expectedReturnedCountryName = "Greenland"
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))
+
+    #def test_usingServiceToSearchACountryWhenSearchingByItsDeathRateShouldReturnTheNameOfTheCountry(self):
+    #    dictionaryFromQuestion = {"death rate": "15 death/1,000",
+    #                              "capital": "Mos"}
+    #    expectedReturnedCountryName = ""
+    #    self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion))

@@ -50,10 +50,10 @@ class TestQuestionResponder(TestCase):
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsTelephoneLinesNumbersShouldReturnNameOfCountry(self):
-    #    askedQuestion = "My telephone lines in use are 1.217 million."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByItsTelephoneLinesNumbersShouldReturnNameOfCountry(self):
+        askedQuestion = "My telephone lines in use are 1.217 million."
+        expectedNameOfCountry = "Cuba"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsNationalAnthemShouldReturnTheNameOfCountry(self):
         askedQuestion = "The title of my national anthem is Advance Australia Fair."
@@ -80,10 +80,10 @@ class TestQuestionResponder(TestCase):
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsTotalAreaShouldReturnTheNameOfCountry(self):
-    #    askQuestion = "What country has a total area of 390757 sq km?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
+    def test_askingQuestionWhenSearchingByItsTotalAreaShouldReturnTheNameOfCountry(self):
+        askQuestion = "What country has a total area of 390757 sq km?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
     #def test_askingQuestionWhenSearchingByAGreaterThTheNameOfCountry(self):
     #    askedQuestion = "What country has a population greater than 1 300 692 576?"
@@ -125,7 +125,7 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "['Macau', 'Vietnam']"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
-    #    askedQuestion = "My population is 32 742. "
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
+        askedQuestion = "My population is 32 742. "
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))

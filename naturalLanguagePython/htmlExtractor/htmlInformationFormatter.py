@@ -1,4 +1,6 @@
 __author__ = 'Antoine'
+import re
+
 
 class HtmlInformationFormatter(object):
 
@@ -23,3 +25,14 @@ class HtmlInformationFormatter(object):
         if key is None:
             return None
         return str.lower(key)
+
+    def formatNumberSeparatedByComaFromWorldFactBook(self, receivedString):
+        splittedString = receivedString.split(" ")
+        formattedString = ""
+        numberFormatRegex = re.compile("\d*(\,\d*){1,}")
+        for stringElement in splittedString:
+            if numberFormatRegex.search(stringElement):
+                stringElement = stringElement.replace(",", "")
+            formattedString += stringElement + " "
+
+        return formattedString.strip()

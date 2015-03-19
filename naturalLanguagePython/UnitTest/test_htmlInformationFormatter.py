@@ -24,3 +24,18 @@ class TestHtmlInformationFormatter(TestCase):
     def test_formattingTheInformationKeyWhenTheTagHasAnUnicodeEncodeErrorShouldReturnNone(self):
         tag = NavigableString(u"allo\u2026'")
         self.assertIsNone(self.htmlInformationFormatter.informationKeyFormatting(tag))
+
+    def test_formattingNumberValueFromWorldFactBookWhenHavingNumberSeparatedByComaShouldReturnTheStringWithoutTheComa(self):
+        stringWithNumber = "34,834,841 (July 2014 est.)"
+        expectedReturnedString = "34834841 (July 2014 est.)"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithNumber))
+
+    def test_formattingNumberValueFromWorldFactBookWhenHavingNumbersSeparatedByDotsShouldReturnTheNumberUnchanged(self):
+        stringWithNumberWithComaSeparatedValue = "34.834.841 (July 2014 est.)"
+        expectedReturnedString = "34.834.841 (July 2014 est.)"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithNumberWithComaSeparatedValue))
+
+    def test_formattingNumberValueFromWorldFactBookWhenHavingNumbersSeparatedBySpaceShouldReturnTheNumberUnchanged(self):
+        stringWithNumberWithSpaceSeparatedValue = "34 834 841 (July 2014 est.)"
+        expectedReturnedString  ="34 834 841 (July 2014 est.)"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithNumberWithSpaceSeparatedValue))

@@ -11,7 +11,7 @@ class TestDictionaryInformationFormatter(TestCase):
 
     def test_changingKeywordOfDictionaryWhenReceivedExportPartnersKeywordShouldReturnDictionaryWithExportUnionMarkPartners(self):
         receivedDictionary = {"export partners": "aPartner"}
-        expectedDictionary = {"export - partners": "aPartner"}
+        expectedDictionary = {"exports - partners": "aPartner"}
         self.assertEqual(expectedDictionary, self.dictionaryInformationFormatter.formatDictionary(receivedDictionary))
 
     def test_changingKeywordOfDictionaryWhenReceivedACorrectlyFormattedDictionaryShouldReturnTheReceivedDictionary(self):

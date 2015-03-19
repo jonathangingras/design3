@@ -5,7 +5,9 @@
       "national symbol" : "national symbol(s)",
       "date of independence": "independence",
       "latitude" : "geographic coordinates",
-      "longitude" : "geographic coordinates"
+      "longitude" : "geographic coordinates",
+      "telephone lines in use": "telephones - main lines in use",
+      "total area": "area"
     }
   ]
 
