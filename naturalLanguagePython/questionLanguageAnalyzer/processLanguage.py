@@ -21,7 +21,7 @@ class ProcessLanguage(object):
 
         self.chunkGramSubjectOnly = r"""ChunkSubjectOnly:  {((<JJ><NN[S]?>+)|(<NN><IN><NN>))}
                                          """
-        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+<NN\w?>*<\w+>?)|(<NNP><.>?<IN>?)+)+}
+        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+<NN\w?>*<\w+>?)|(<NNP>,?<IN>?)+)+}
                                         """
         self.taggedList = []
         self.tokenizedQuestionList = []
