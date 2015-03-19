@@ -36,6 +36,7 @@ class TestHtmlInformationValidator(TestCase):
         extractedInfoList = [element]
         expectedInformationList = [self.stringElement]
         self.htmlInformationValidator.htmlInformationFormatter.informationKeyFormatting = Mock(return_value = self.stringElement)
+        self.htmlInformationValidator.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook = Mock(return_value = self.stringElement)
         self.assertEqual(self.htmlInformationValidator.verifyingStringContent(extractedInfoList), expectedInformationList)
 
     def test_verifyingStringContentWhenTheExtractedInfoContainsMoreThanOneValidStringShouldReturnInformationListWithMoreThanOneElement(self):
@@ -44,4 +45,5 @@ class TestHtmlInformationValidator(TestCase):
         extractedInfoList = [firstElement, secondElement]
         expectedInformationList = [self.stringElement, self.stringElement]
         self.htmlInformationValidator.htmlInformationFormatter.informationKeyFormatting = Mock(return_value = self.stringElement)
+        self.htmlInformationValidator.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook = Mock(return_value = self.stringElement)
         self.assertEqual(self.htmlInformationValidator.verifyingStringContent(extractedInfoList), expectedInformationList)
