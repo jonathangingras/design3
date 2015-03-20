@@ -21,7 +21,7 @@ class ProcessLanguage(object):
 
         self.chunkGramSubjectOnly = r"""ChunkSubjectOnly:  {((<JJ><NN[S]?>+)|(<NN><IN><NN>))}
                                          """
-        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+<NN\w?>*<\w+>?)|(<NNP><.>?<IN>?)+)+}
+        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+<NN\w?>*<\w+>?)|(<NNP>,?<IN>?)+)+}
                                         """
         self.taggedList = []
         self.tokenizedQuestionList = []
@@ -44,6 +44,7 @@ class ProcessLanguage(object):
 
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
+        # print self.taggedList
 
     def chunkingQuestion(self):
         chunkParser = nltk.RegexpParser(self.chunkGramAllSentense)
@@ -75,7 +76,6 @@ class ProcessLanguage(object):
 
                 listsequenceMot = []
                 for leavesChunk in subTreeQuestion.leaves():
-                    print leavesChunk
                     if stringToConcat == "":
                         stringToConcat = leavesChunk[0]
                     else:

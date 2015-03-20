@@ -18,6 +18,8 @@ class QuestionInformationAnalyser(object):
     def analyseQuestion(self, question):
         keywordList = self.regexAnalyser.parseAllRegexKeyWord(question)
         wordSubject = self.regexAnalyser.searchSubject(question)
+        # print keywordList
+        # print wordSubject
 
 
         if len(keywordList) == 0 and len(wordSubject) == 0:
@@ -36,11 +38,12 @@ class QuestionInformationAnalyser(object):
     def __analyseQuestionSubject(self,question,keywordlist):
         self.__taggingQuestionWithNltk(question)
         listSubject = self.processLanguage.extractOnlyQuestionSubject()
-
         if len(listSubject) == 1 and len(keywordlist) == 1:
             self.questionDictionary[listSubject.pop()] = keywordlist
-        for x in listSubject:
-            self.questionDictionary[x] = keywordlist
+        else:
+            for x in listSubject:
+                self.questionDictionary[x] = keywordlist
+
 
     def __analyseQuestionValue(self,question,wordSubject):
         self.__taggingQuestionWithNltk(question)
@@ -51,7 +54,6 @@ class QuestionInformationAnalyser(object):
         else:
             for x in wordSubject:
                 self.questionDictionary[x] = listValue
-
 
 
     def __taggingQuestionWithNltk(self, question):
