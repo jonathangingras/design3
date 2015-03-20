@@ -44,3 +44,33 @@ class TestHtmlInformationFormatter(TestCase):
         stringWithoutNumber = "Bilady, Bilady, Bilady"
         expectedReturnedString = "Bilady, Bilady, Bilady"
         self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(stringWithoutNumber))
+
+    def test_formattingNameOfMajorUrbanAreaWhenHavingUpperCaseStringShouldReturnCapitalizedString(self):
+        upperCaseString = "STRING"
+        expectedReturnedString = "String"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(upperCaseString))
+
+    def test_formattingNameOfMajorUrbanAreaWhenHavingLowerCaseStringShouldReturnCapitalizeString(self):
+        lowerCaseString = "string"
+        expectedReturnedString = "String"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(lowerCaseString))
+
+    def test_formattingNameOfMajorUrbanAreaWhenHavingCapitalizeStringShouldReturnUnchangedString(self):
+        capitalizeString = "String"
+        expectedReturnedString = "String"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(capitalizeString))
+
+    def test_formattingNameOfMajorUrbanAreaWhenHavingWordsInStringShouldReturnFormattedString(self):
+        string = "STRING, string"
+        expectedReturnedString = "String, String"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(string))
+
+    def test_formattingNameOfMajorUrbanAreaWhenHavingNumberInsideStringShouldReturnFormattedStringWithOnlyWordChanged(self):
+        stringWithNumber = "string 199999"
+        expectedReturnedString = "String 199999"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(stringWithNumber))
+
+    def test_formatNameOfMajorUrbanAreaWhenHavingMillionInStringShouldNotChangeMillionFormat(self):
+        stringWithMillion = "string 19999 million"
+        expectedReturnedString = "String 19999 million"
+        self.assertEqual(expectedReturnedString, self.htmlInformationFormatter.formatMajorUrbanAreaValue(stringWithMillion))

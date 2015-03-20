@@ -39,3 +39,12 @@ class HtmlInformationFormatter(object):
 
     def removeQuoteFromString(self, receivedString):
         return receivedString.replace("\"", "")
+
+    def formatMajorUrbanAreaValue(self, stringValue):
+        formattedString = ""
+        for stringPart in stringValue.split(" "):
+            formattedStringPart = stringPart
+            if stringPart != "million":
+                formattedStringPart = stringPart.capitalize()
+            formattedString += (formattedStringPart + " ")
+        return formattedString.strip()

@@ -138,7 +138,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByThePublicDebtShouldReturnCountryName(self):
         askedQuestion = "My public debt is 7.9% of GDP"
-        expectedNameOfCountry = ""
+        expectedNameOfCountry = "Russia"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
@@ -163,5 +163,5 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByTheNameOfMajorUrbanAreaShouldReturnNameOfTheCountry(self):
         askedQuestion = "The major urban areas of this country are Santiago, Valparaiso and Concepcion."
-        expectedCountryName = ""
+        expectedCountryName = "Chile"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

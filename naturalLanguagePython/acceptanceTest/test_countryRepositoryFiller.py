@@ -1,7 +1,9 @@
 __author__ = 'Antoine'
 from unittest import TestCase
+
 from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryDB, CountryRepositoryFiller
 from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
+
 #Acceptance  testing is done with this file
 class TestCountryRepositoryFiller(TestCase):
 
@@ -58,7 +60,7 @@ class TestCountryRepositoryFiller(TestCase):
 
     def test_searchAParsedCountryWhenSearchingByTheNumberOfTelephoneMainLinesInUseShouldReturnTheCountryName(self):
         expectedCountryList = [['West_Bank', 'Anguilla', 'Burma', 'Paraguay', 'Gaza_Strip']]
-        expectedCountryList = [['Anguilla', 'Burma', 'Gaza_Strip', 'Paraguay', 'West_Bank']]
+        expectedCountryList = [['Anguilla']]
         wantedField = {"telephones - main lines in use": ["6000"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy("Contains")
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)

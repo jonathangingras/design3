@@ -5,6 +5,7 @@ import json
 from htmlInformationFormatter import HtmlInformationFormatter
 from htmlExtractor import HtmlExtractor
 from htmlInformationValidator import HtmlInformationValidator
+from htmlCountryDictionaryFormatter import HtmlCountryDictionaryFormatter
 
 class htmlParser(object):
 
@@ -14,6 +15,7 @@ class htmlParser(object):
         self.htmlInformationFormatter = HtmlInformationFormatter()
         self.htmlExtractor = HtmlExtractor()
         self.htmlInformationValidator = HtmlInformationValidator()
+        self.htmlCountryDictionaryFormatter = HtmlCountryDictionaryFormatter()
 
     def parseCountryHtml(self, fileToParse):
         self.soup = BeautifulSoup(open(fileToParse))
@@ -38,6 +40,8 @@ class htmlParser(object):
             informationList = self.htmlInformationValidator.verifyingStringContent(extractedInfos)
             key = self.htmlInformationFormatter.firstLetterLowering(key)
             self.countryDictionary[key] = informationList
+        self.countryDictionary = self.htmlCountryDictionaryFormatter.formatMajorUrbanAreaValue(self.countryDictionary)
+
 
     def __writeInformationInOpenedFile(self):
         json.dump(self.countryDictionary, self.file, indent = 4, separators = (',', ':'))
