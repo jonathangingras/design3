@@ -15,7 +15,7 @@ class TestSearchInformation(TestCase):
         self.dictionaryForSearchMethodTestWithoutList = {"capital": ["Paris"]}
         self.dictionaryForSearchMethodTestWithList = {"capital" : ["In the same continent", "Paris"],
                                                       "Population": ["Estimate of 100000"]}
-        self.dictionaryForNumber = {"Population": ["12345"]}
+        self.dictionaryForNumber = {"population": ["12345"]}
 
     def test_findingCorrespondingInformationInsideDictionaryWithTheStartsWithRegexShouldReturnTrue(self):
         keyword = "capital"

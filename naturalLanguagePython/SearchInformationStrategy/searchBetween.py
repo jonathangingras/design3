@@ -1,4 +1,6 @@
 __author__ = 'Antoine'
+import re
+
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
 
 
@@ -6,10 +8,25 @@ class SearchBetween(SearchInformation):
 
     def __setRegex(self, wantedInformation):
         self.listRegex = []
-        for element in wantedInformation:
-            print(element)
+        if len(wantedInformation) > 2:
+            return None
+        elementLesser = int(wantedInformation[0])
+        elementBigger = int(wantedInformation[1])
+        while elementLesser <= elementBigger:
+            regex = '(\\b' + str(elementLesser) + '\\b)'
+            self.listRegex.append(regex)
+            elementLesser += 1
+
 
     def findInformation(self, dictionary, keyword, wantedInformation):
         isContaining = False
-
+        self.__setRegex(wantedInformation)
+        print(self.listRegex)
+        for possibleRegex in self.listRegex:
+            expression = re.compile(possibleRegex)
+            if keyword in dictionary:
+                for value in dictionary[keyword]:
+                    if expression.search(value) is not None:
+                        isContaining = True
+                        break
         return isContaining
