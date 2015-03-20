@@ -34,7 +34,7 @@ class CountryService(object):
         return  formattedDictionary
 
     def formatValueInformationFromSemanticAnalysisToWorldFactBook(self, receivedDictionary):
-        formattedDictionary = self.dictionaryValueFormatter.formatPopulationValue(receivedDictionary)
+        formattedDictionary = self.dictionaryValueFormatter.formatValueInformation(receivedDictionary)
         return formattedDictionary
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):

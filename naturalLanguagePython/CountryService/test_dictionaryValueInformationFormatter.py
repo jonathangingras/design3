@@ -10,23 +10,35 @@ class TestDictionaryValueInformationFormatter(TestCase):
     def test_formatValueInformationForPopulationKeywordWhenNumberIsSeparatedBySpaceShouldChangeValueInsideDictionaryToNumberWithoutSpace(self):
         dictionary = {"population": ["32 990"]}
         expectedReturnedDictionary = {"population": ["32990"]}
-        self.dictionaryValueInformationFormatter.formatPopulationValue(dictionary)
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForPopulationKeywordWhenNumbersNotSeparatedBySpaceShouldNotChangeValueInsideDictionary(self):
         dictionary = {"population": ["32.990"]}
         expectedReturnedDictionary = {"population": ["32.990"]}
-        self.dictionaryValueInformationFormatter.formatPopulationValue(dictionary)
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForPopulationKeywordWhenDictionaryNotContainingPopulationKeyShouldNotChangeDictionary(self):
         expectedReturnedDictionary = {"this not population": ["not an number"]}
         dictionary = expectedReturnedDictionary
-        self.dictionaryValueInformationFormatter.formatPopulationValue(dictionary)
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForPopulationKeywordWhenHavingTwoValueShouldChangeOnlyTheSecondOne(self):
         expectedReturnedDictionary = {"population": ["population is not real", "32990"]}
         dictionary = {"population": ["population is not real", "32 990"]}
-        self.dictionaryValueInformationFormatter.formatPopulationValue(dictionary)
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForSlashWhenHavingNoSlashShouldReturnUnchangedValue(self):
+        dictionary = {"population": ["a population"]}
+        expectedReturnedDictionary = {"population": ["a population"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForSlashWhenHavingASlashSeparatedByASpaceShouldReturnTheStringWithSlashWithoutSpace(self):
+        dictionary = {"population": ["10 more/ 1000 population"]}
+        expectedReturnedDictionary = {"population": ["10 more/1000 population"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)

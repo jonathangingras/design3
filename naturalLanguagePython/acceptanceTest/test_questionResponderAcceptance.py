@@ -47,7 +47,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsBirthRateShouldReturnCountryName(self):
         askedQuestion = "What country has a birth rate of 46.12 births/ 1000 population?"
-        expectedNameOfCountry = ""
+        expectedNameOfCountry = "Niger"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsTelephoneLinesNumbersShouldReturnNameOfCountry(self):

@@ -4,7 +4,7 @@ import re
 
 class DictionaryValueInformationFormatter(object):
 
-    def formatPopulationValue(self, dictionary):
+    def __formatPopulationValue(self, dictionary):
         population = "population"
         if population in dictionary:
             formattedValue = []
@@ -14,4 +14,16 @@ class DictionaryValueInformationFormatter(object):
                     element =element.replace(" ", "")
                 formattedValue.append(element)
             dictionary[population] = formattedValue
+
+    def __formatSlashValueFormatting(self, dictionary):
+        for element in dictionary:
+            formattedSlashListElement = []
+            for listElement in dictionary[element]:
+                formattedSlashListElement.append(listElement.replace("/ ", "/"))
+            dictionary[element] = formattedSlashListElement
+
+    def formatValueInformation(self, dictionary):
+        self.__formatPopulationValue(dictionary)
+        self.__formatSlashValueFormatting(dictionary)
+
         return dictionary
