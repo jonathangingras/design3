@@ -44,7 +44,7 @@ class HtmlInformationFormatter(object):
         formattedString = ""
         for stringPart in stringValue.split(" "):
             formattedStringPart = stringPart
-            if stringPart != "million":
+            if stringPart not in ["million", "million;"]:
                 formattedStringPart = stringPart.capitalize()
             formattedString += (formattedStringPart + " ")
         return formattedString.strip()

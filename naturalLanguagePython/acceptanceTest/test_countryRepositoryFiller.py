@@ -133,3 +133,9 @@ class TestCountryRepositoryFiller(TestCase):
         wantedField = {"national symbol(s)": ["polar bear"]}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(expectedCountryList, self.countryRepository.searchCountries(wantedField, searchStrategy))
+
+    def test_searchAParsedCountryWhenSearchingByPopulationOfMajorUrbanAreasShouldReturnTheNameOfPossibleCountry(self):
+        expectedCountryList = [['Angola']]
+        wantedField = {"major urban areas - population": ['5.068 million', '1.098 million']}
+        searchStrategy = self.searchStrategyFactory.createSearchStrategy()
+        self.assertEqual(expectedCountryList, self.countryRepository.searchCountries(wantedField, searchStrategy))

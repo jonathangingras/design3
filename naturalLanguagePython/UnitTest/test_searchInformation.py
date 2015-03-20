@@ -4,15 +4,18 @@ __author__ = 'Antoine'
 from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
 from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.searchInformationStrategy.searchBetween import SearchBetween
 
 class TestSearchInformation(TestCase):
     def setUp(self):
         self.searchMethodStartsWith = SearchStartsWith()
         self.searchMethodEndsWith = SearchEndsWith()
         self.searchMethodContains = SearchContains()
+        self.searchMethodBetween = SearchBetween()
         self.dictionaryForSearchMethodTestWithoutList = {"capital": ["Paris"]}
         self.dictionaryForSearchMethodTestWithList = {"capital" : ["In the same continent", "Paris"],
                                                       "Population": ["Estimate of 100000"]}
+        self.dictionaryForNumber = {"Population": ["12345"]}
 
     def test_findingCorrespondingInformationInsideDictionaryWithTheStartsWithRegexShouldReturnTrue(self):
         keyword = "capital"
@@ -36,8 +39,8 @@ class TestSearchInformation(TestCase):
 
     def test_notHavingKeyInsideDictionaryWhenSearchingWithTheStartsWithSearchShouldReturnFalse(self):
         keyword = "Population"
-        wantedInforamtion = "100000"
-        self.assertFalse(self.searchMethodStartsWith.findInformation(self.dictionaryForSearchMethodTestWithoutList, keyword, wantedInforamtion))
+        wantedInformation = "100000"
+        self.assertFalse(self.searchMethodStartsWith.findInformation(self.dictionaryForSearchMethodTestWithoutList, keyword, wantedInformation))
 
     #Starting test for the ends with search strategy
 
@@ -71,3 +74,20 @@ class TestSearchInformation(TestCase):
         keyword = "Population"
         wantedInformation = "2100000"
         self.assertFalse(self.searchMethodContains.findInformation(self.dictionaryForSearchMethodTestWithList, keyword, wantedInformation))
+
+    #Starting test for the between search strategy
+    def test_findingCorrespondingInformationInsideDictionaryWhenUsingTheBetweenSearchStrategyShouldReturnTrue(self):
+        keyword = "population"
+        wantedInformation = ["12344", "12346"]
+        self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForNumber, keyword, wantedInformation))
+
+    def test_findingCorrespondingInformationInsideDictionaryWhenUsingBetweenSearchStrategyAndAGapOfMoreThan10ShouldReturnTrue(self):
+        keyword = "population"
+        wantedInformation = ["12334", "12356"]
+        self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForNumber, keyword, wantedInformation))
+
+    def test_notFindingCorrespondingInformationWhenUsingBetweenSearchStrategyShouldReturnFalse(self):
+        keyword = "population"
+        wantedInformation = ["12334", "12345"]
+        self.assertFalse(self.searchMethodBetween.findInformation(self.dictionaryForNumber, keyword, wantedInformation))
+

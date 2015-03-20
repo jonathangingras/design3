@@ -5,6 +5,7 @@ from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory impor
 from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
 from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
+from naturalLanguagePython.searchInformationStrategy.searchBetween import SearchBetween
 
 class TestSearchStrategyFactory(TestCase):
     def setUp(self):
@@ -25,3 +26,7 @@ class TestSearchStrategyFactory(TestCase):
         expectedClassType = SearchEndsWith
         self.assertIsInstance(searchMethod, expectedClassType)
 
+    def test_creatingSearchStrategyWhenSearchParticularityIsBetweenShouldReturnInstanceOfBetween(self):
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("between")
+        expectedClassType = SearchBetween
+        self.assertIsInstance(searchMethod, expectedClassType)

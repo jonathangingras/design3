@@ -1,8 +1,10 @@
 from unittest import TestCase
+
 from mock import Mock
+
 from naturalLanguagePython.countryService.repositorySearch import RepositorySearch
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
+
 __author__ = 'Antoine'
 
 

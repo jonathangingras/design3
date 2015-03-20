@@ -146,10 +146,10 @@ class TestQuestionResponder(TestCase):
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
-    #    askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
-    #    expectedNameOfCountry = "Angola"
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
+        askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
+        expectedNameOfCountry = "Angola"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheImportsPartnersShouldReturnCountryName(self):
         askedQuestion = "My import partners include Netherlands, France, China, Belgium, Switzerland and Austria."
