@@ -150,3 +150,18 @@ class TestQuestionResponder(TestCase):
         askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
         expectedNameOfCountry = "Angola"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheImportsPartnersShouldReturnCountryName(self):
+        askedQuestion = "My import partners include Netherlands, France, China, Belgium, Switzerland and Austria."
+        expectedNameOfCountry = "Germany"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheStartsAndEndsPartOfCapitalNameShouldReturnNameOfCountry(self):
+        askedQuestion = "My capital name starts with Ath and ends with ens."
+        expectedCountryName = "Greece"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheNameOfMajorUrbanAreaShouldReturnNameOfTheCountry(self):
+        askedQuestion = "The major urban areas of this country are Santiago, Valparaiso and Concepcion."
+        expectedCountryName = ""
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

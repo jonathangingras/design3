@@ -8,7 +8,8 @@
       "longitude" : "geographic coordinates",
       "telephone lines in use": "telephones - main lines in use",
       "total area": "area",
-      "major urban areas": "major urban areas - population"
+      "major urban areas": "major urban areas - population",
+      "import partners": "imports - partners"
     }
   ]
 
