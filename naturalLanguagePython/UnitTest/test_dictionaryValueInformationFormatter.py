@@ -57,6 +57,6 @@ class TestDictionaryValueInformationFormatter(TestCase):
 
     def test_formatValueInformationForGeographicCoordinatesWhenHavingDotBetweenNumbersShouldReturnSpacedNumber(self):
         dictionary = {"geographic coordinates": ["42.00 S"]}
-        expectedReturnedDictionary = {"geographic coordinates": "42 00 S"}
+        expectedReturnedDictionary = {"geographic coordinates": ["42 00 S"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)

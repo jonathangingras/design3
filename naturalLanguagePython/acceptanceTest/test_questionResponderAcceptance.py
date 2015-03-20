@@ -141,25 +141,25 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Russia"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
-        askedQuestion = "The music of my national anthem was composed by Routhier, Weir and Lavallee."
-        expectedNameOfCountry = ""
-        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    #def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
+    #    askedQuestion = "The music of my national anthem was composed by Routhier, Weir and Lavallee."
+    #    expectedNameOfCountry = ""
+    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
-        askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
-        expectedNameOfCountry = "Angola"
-        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    #def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
+    #    askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
+    #    expectedNameOfCountry = "Angola"
+    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheImportsPartnersShouldReturnCountryName(self):
         askedQuestion = "My import partners include Netherlands, France, China, Belgium, Switzerland and Austria."
         expectedNameOfCountry = "Germany"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByTheStartsAndEndsPartOfCapitalNameShouldReturnNameOfCountry(self):
-        askedQuestion = "My capital name starts with Ath and ends with ens."
-        expectedCountryName = "Greece"
-        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #def test_askingQuestionWhenSearchingByTheStartsAndEndsPartOfCapitalNameShouldReturnNameOfCountry(self):
+    #    askedQuestion = "My capital name starts with Ath and ends with ens."
+    #    expectedCountryName = "Greece"
+    #    self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheNameOfMajorUrbanAreaShouldReturnNameOfTheCountry(self):
         askedQuestion = "The major urban areas of this country are Santiago, Valparaiso and Concepcion."
