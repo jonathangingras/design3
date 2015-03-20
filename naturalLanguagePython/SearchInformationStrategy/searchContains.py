@@ -31,7 +31,6 @@ class SearchContains(SearchInformation):
         isContaining = False
         self.__setRegex(wantedInformation)
         expression = re.compile(self.regex)
-        print(expression.pattern)
         if dictionary.has_key(keyword):
             for value in dictionary[keyword]:
                 if expression.search(value) is not None:
