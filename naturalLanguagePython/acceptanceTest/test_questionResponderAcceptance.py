@@ -1,5 +1,6 @@
 from binascii import a2b_base64
 from unittest import TestCase
+from re import search
 from naturalLanguagePython.countryRessource.questionResponder import QuestionResponder
 __author__ = 'Antoine'
 
@@ -128,4 +129,24 @@ class TestQuestionResponder(TestCase):
     def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
         askedQuestion = "My population is 32 742. "
         expectedNameOfCountry = "San_Marino"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheLanguagesShouldReturnTheNameOfCountry(self):
+        askedQuestion = "My languages include german, french and romansch."
+        expectedNameOfCountry = "Switzerland"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByThePublicDebtShouldReturnCountryName(self):
+        askedQuestion = "My public debt is 7.9% of GDP"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
+        askedQuestion = "The music of my national anthem was composed by Routhier, Weir and Lavallee."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
+        askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"
+        expectedNameOfCountry = "Angola"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))

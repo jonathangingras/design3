@@ -42,3 +42,15 @@ class TestDictionaryValueInformationFormatter(TestCase):
         expectedReturnedDictionary = {"population": ["10 more/1000 population"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForLanguageKeywordWhenHavingAllLowerCaseWordShouldReturnWordWithUpperCaseFirstLetter(self):
+        dictionary = {"languages": ["french", "english"]}
+        expectedReturnedDictionary = {"languages": ["French", "English"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForLanguageKeywordWhenHavingFirstLetterUpperCaseShouldReturnWordsUnchanged(self):
+        dictionary = {"languages": ["French", "English"]}
+        expectedReturnedDictionary = {"languages": ["French", "English"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)

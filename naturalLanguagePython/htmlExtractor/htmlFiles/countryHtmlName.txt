@@ -47,7 +47,6 @@ cg
 ch
 ci
 cj
-ck
 cm
 cn
 co
@@ -128,7 +127,6 @@ kn
 kq
 kr
 ks
-kt
 ku
 kv
 kz
@@ -165,7 +163,6 @@ my
 mz
 nc
 ne
-nf
 ng
 nh
 ni
@@ -219,6 +216,7 @@ sv
 sw
 sx
 sy
+sz
 tb
 td
 th

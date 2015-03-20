@@ -15,6 +15,14 @@ class DictionaryValueInformationFormatter(object):
                 formattedValue.append(element)
             dictionary[population] = formattedValue
 
+    def __formatLanguageKeyword(self, dictionary):
+        language = "languages"
+        if language in dictionary:
+            formattedValue = []
+            for element in dictionary[language]:
+                formattedValue.append(element.capitalize())
+            dictionary[language] = formattedValue
+
     def __formatSlashValueFormatting(self, dictionary):
         for element in dictionary:
             formattedSlashListElement = []
@@ -25,5 +33,5 @@ class DictionaryValueInformationFormatter(object):
     def formatValueInformation(self, dictionary):
         self.__formatPopulationValue(dictionary)
         self.__formatSlashValueFormatting(dictionary)
-
+        self.__formatLanguageKeyword(dictionary)
         return dictionary

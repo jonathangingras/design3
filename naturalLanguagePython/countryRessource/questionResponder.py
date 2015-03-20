@@ -11,7 +11,7 @@ class QuestionResponder(object):
         if question is not None:
             dictionary = self.countryService.analyzeQuestionFromAtlas(question)
             formattedDictionary = self.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook(dictionary)
-            print(formattedDictionary)
             formattedDictionary = self.countryService.formatValueInformationFromSemanticAnalysisToWorldFactBook(formattedDictionary)
+            print(formattedDictionary)
             nameOfCountry = self.countryService.searchCountry(formattedDictionary)
         return nameOfCountry
