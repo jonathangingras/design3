@@ -1,11 +1,12 @@
 __author__ = 'Antoine'
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
-from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
 from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
+from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.countryService.repositorySearch import RepositorySearch
-from naturalLanguagePython.countryService.dictionaryInformationFormatter import DictionaryInformationFormatter
+from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
+from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
+from naturalLanguagePython.countryService.dictionaryValueInformationFormatter import DictionaryValueInformationFormatter
 
 
 class CountryService(object):
@@ -14,6 +15,7 @@ class CountryService(object):
         self.countryRepository = CountryRepositoryDB()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
         self.dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
+        self.dictionaryValueFormatter = DictionaryValueInformationFormatter()
         self.questionAnalyzer = QuestionInformationAnalyser()
         self.__setupTheCountryRepository(currentWorkspacePath)
         self.repositorySearch = RepositorySearch()
@@ -30,6 +32,10 @@ class CountryService(object):
     def formatKeywordFromSemanticAnalysisToWorldFactbook(self, receivedDictionary):
         formattedDictionary = self.dictionaryInformationFormatter.formatDictionary(receivedDictionary)
         return  formattedDictionary
+
+    def formatValueInformationFromSemanticAnalysisToWorldFactBook(self, receivedDictionary):
+        formattedDictionary = self.dictionaryValueFormatter.formatPopulationValue(receivedDictionary)
+        return formattedDictionary
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""

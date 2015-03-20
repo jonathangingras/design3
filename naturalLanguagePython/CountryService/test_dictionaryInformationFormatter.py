@@ -1,5 +1,5 @@
 from unittest import TestCase
-from naturalLanguagePython.countryService.dictionaryInformationFormatter import DictionaryInformationFormatter
+from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
 __author__ = 'Antoine'
 
 

@@ -45,10 +45,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Greenland"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsBirthRateShouldReturnCountryName(self):
-    #    askedQuestion = "What country has a birth rate of 46.12 births/ 1000 population?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByItsBirthRateShouldReturnCountryName(self):
+        askedQuestion = "What country has a birth rate of 46.12 births/ 1000 population?"
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsTelephoneLinesNumbersShouldReturnNameOfCountry(self):
         askedQuestion = "My telephone lines in use are 1.217 million."
@@ -127,5 +127,5 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):
         askedQuestion = "My population is 32 742. "
-        expectedNameOfCountry = ""
+        expectedNameOfCountry = "San_Marino"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))

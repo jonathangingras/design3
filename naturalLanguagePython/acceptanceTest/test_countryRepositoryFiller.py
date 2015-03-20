@@ -60,7 +60,7 @@ class TestCountryRepositoryFiller(TestCase):
         expectedCountryList = [['West_Bank', 'Anguilla', 'Burma', 'Paraguay', 'Gaza_Strip']]
         expectedCountryList = [['Anguilla', 'Burma', 'Gaza_Strip', 'Paraguay', 'West_Bank']]
         wantedField = {"telephones - main lines in use": ["6000"]}
-        searchStrategy = self.searchStrategyFactory.createSearchStrategy()
+        searchStrategy = self.searchStrategyFactory.createSearchStrategy("Contains")
         self.assertEqual(self.countryRepository.searchCountries(wantedField, searchStrategy), expectedCountryList)
 
     def test_searchAParsedCountryWhenSearchingByTheBirthRateShouldReturnNameOfPossibleCountry(self):

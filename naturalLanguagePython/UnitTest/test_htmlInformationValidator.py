@@ -12,6 +12,9 @@ class TestHtmlInformationValidator(TestCase):
         self.htmlInformationValidator = HtmlInformationValidator()
         self.htmlInformationValidator.htmlInformationFormatter = Mock()
         self.stringElement = "string"
+        self.htmlInformationValidator.htmlInformationFormatter.informationKeyFormatting = Mock(return_value = self.stringElement)
+        self.htmlInformationValidator.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook = Mock(return_value = self.stringElement)
+        self.htmlInformationValidator.htmlInformationFormatter.removeQuoteFromString = Mock(return_value = self.stringElement)
 
     def test_verifyingStringContentWhenTheExtractedInfoAreAnEmptyListShouldReturnAnEmptyList(self):
         extractedInfoList = []
@@ -35,8 +38,6 @@ class TestHtmlInformationValidator(TestCase):
         element = NavigableString(self.stringElement)
         extractedInfoList = [element]
         expectedInformationList = [self.stringElement]
-        self.htmlInformationValidator.htmlInformationFormatter.informationKeyFormatting = Mock(return_value = self.stringElement)
-        self.htmlInformationValidator.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook = Mock(return_value = self.stringElement)
         self.assertEqual(self.htmlInformationValidator.verifyingStringContent(extractedInfoList), expectedInformationList)
 
     def test_verifyingStringContentWhenTheExtractedInfoContainsMoreThanOneValidStringShouldReturnInformationListWithMoreThanOneElement(self):
@@ -44,6 +45,4 @@ class TestHtmlInformationValidator(TestCase):
         secondElement = NavigableString(self.stringElement)
         extractedInfoList = [firstElement, secondElement]
         expectedInformationList = [self.stringElement, self.stringElement]
-        self.htmlInformationValidator.htmlInformationFormatter.informationKeyFormatting = Mock(return_value = self.stringElement)
-        self.htmlInformationValidator.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook = Mock(return_value = self.stringElement)
         self.assertEqual(self.htmlInformationValidator.verifyingStringContent(extractedInfoList), expectedInformationList)
