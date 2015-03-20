@@ -15,6 +15,14 @@ class DictionaryValueInformationFormatter(object):
                 formattedValue.append(element)
             dictionary[population] = formattedValue
 
+    def __formatGeographicCoordinate(self, dictionary):
+        geographicCoordinate = "geographic coordinates"
+        if geographicCoordinate in dictionary:
+            formattedValue = []
+            for element in dictionary[geographicCoordinate]:
+                formattedValue.append(element.replace(".", " "))
+            dictionary[geographicCoordinate] = formattedValue
+
     def __formatLanguageKeyword(self, dictionary):
         language = "languages"
         if language in dictionary:
