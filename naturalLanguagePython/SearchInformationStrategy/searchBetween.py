@@ -10,8 +10,12 @@ class SearchBetween(SearchInformation):
         self.listRegex = []
         if len(wantedInformation) > 2:
             return None
-        elementLesser = int(wantedInformation[0])
-        elementBigger = int(wantedInformation[1])
+        if "." in wantedInformation[0]:
+            elementLesser = float(wantedInformation[0])
+            elementBigger = float(wantedInformation[1])
+        else:
+            elementLesser = int(wantedInformation[0])
+            elementBigger = int(wantedInformation[1])
         while elementLesser <= elementBigger:
             regex = '(\\b' + str(elementLesser) + '\\b)'
             self.listRegex.append(regex)
