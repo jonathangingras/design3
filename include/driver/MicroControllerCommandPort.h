@@ -11,13 +11,14 @@ namespace d3t12 {
 class MicroControllerCommandPort {
 public:
 	typedef boost::shared_ptr<std::ostream> OStreamPtr;
+	typedef boost::shared_ptr<MicroControllerCommandPort> Ptr;
+	
 private:
 	OStreamPtr serialPort;
 	boost::mutex mutex;
 
 public:
 	inline MicroControllerCommandPort(OStreamPtr _serialPort): serialPort(_serialPort) {}
-	inline MicroControllerCommandPort(): serialPort(new std::ofstream("/dev/ttyACM0")) {}
 
 	~MicroControllerCommandPort() {}
 

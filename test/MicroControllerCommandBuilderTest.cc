@@ -72,9 +72,36 @@ TEST(MicroControllerLEDCommandBuilderTest, canDoLastJobAfterMultipleSettings) {
 
 TEST(MicroControllerMotorControlCommandBuilderTest, canSendCurrentPosition) {
 	SETUP
-	MicroControllerMotorControlCommandBuilder commandbuilder;
+	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
 
-	port << commandbuilder.setCurrentPosition(1.1, 1.1, 1.1).build();
+	port << motorCommandbuilder.setCurrentPosition(1.1, 1.1, 1.1).build();
 
 	EXPECT_EQ("setpos 1.1 1.1 1.1\n", osStr);
+}
+
+TEST(MicroControllerMotorControlCommandBuilderTest, canSendCurrentPositionAtEnd) {
+	SETUP
+	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
+
+	port << motorCommandbuilder.setWantedPosition(1.1, 1.1, 1.1).setCurrentPosition(1.1, 1.1, 1.1).build();
+
+	EXPECT_EQ("setpos 1.1 1.1 1.1\n", osStr);
+}
+
+TEST(MicroControllerMotorControlCommandBuilderTest, canSendWantedPosition) {
+	SETUP
+	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
+
+	port << motorCommandbuilder.setWantedPosition(1.1, 1.1, 1.1).build();
+
+	EXPECT_EQ("goto 1.1 1.1 1.1\n", osStr);
+}
+
+TEST(MicroControllerMotorControlCommandBuilderTest, canSendWantedPositionAtEnd) {
+	SETUP
+	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
+
+	port << motorCommandbuilder.setCurrentPosition(1.1, 1.1, 1.1).setWantedPosition(1.1, 1.1, 1.1).build();
+
+	EXPECT_EQ("goto 1.1 1.1 1.1\n", osStr);
 }
