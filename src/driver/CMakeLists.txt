@@ -8,6 +8,9 @@ add_library(d3t12_driver
 	MicroControllerCommand.cc
 	MicroControllerCommandBuilder.cc
 	MicroControllerCommandPort.cc
+
+	ServoMotorController.cc
+	ServoMotorControllerFactory.cc
 )
 
 target_link_libraries(d3t12_driver

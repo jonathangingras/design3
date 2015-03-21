@@ -5,5 +5,6 @@
 #include "MicroControllerCommand.h"
 #include "MicroControllerCommandBuilder.h"
 #include "MicroControllerCommandPort.h"
+#include "ServoMotorControllerFactory.h"
 
 #endif
