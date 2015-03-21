@@ -71,10 +71,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Bangladesh"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsReligionsPercentageShouldReturnTheNameOfCountry(self):
-    #    askQuestion = "What country has religions including 51.3% of protestant and 0.7% of buddhist?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
+    def test_askingQuestionWhenSearchingByItsReligionsPercentageShouldReturnTheNameOfCountry(self):
+        askQuestion = "What country has religions including 51.3% of protestant and 0.7% of buddhist?"
+        expectedNameOfCountry = "United_States"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
     #def test_askingQuestionWhenSearchingByItsDeathRateAndCapitalShouldReturnTheNameOfTheCountry(self):
     #    askQuestion = "My death rate is greater than 13 death/1000 and my capital starts with Mos."
@@ -164,4 +164,9 @@ class TestQuestionResponder(TestCase):
     def test_askingQuestionWhenSearchingByTheNameOfMajorUrbanAreaShouldReturnNameOfTheCountry(self):
         askedQuestion = "The major urban areas of this country are Santiago, Valparaiso and Concepcion."
         expectedCountryName = "Chile"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheDateOfIndependenceShouldReturnCountryName(self):
+        askedQuestion = "What country has declared its independence on 22 May 1990?"
+        expectedCountryName = "Yemen"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

@@ -1,3 +1,5 @@
+from numpy.core.defchararray import capitalize
+
 __author__ = 'Antoine'
 import re
 
@@ -39,9 +41,45 @@ class DictionaryValueInformationFormatter(object):
                 formattedSlashListElement.append(listElement.replace("/ ", "/"))
             dictionary[element] = formattedSlashListElement
 
+    def __removeItemFromInitialReligionItem(self, splitValue):
+        i = 0
+        while i < len(splitValue):
+            if splitValue[i].isalpha():
+                splitValue.remove(splitValue[i])
+            else:
+                i += 1
+
+    def __capitalizeItemFromReligionValue(self, splitValue):
+        capitalizeSplitValue = []
+        for splitItem in splitValue:
+            if splitItem.isalpha():
+                capitalizeSplitValue.append(splitItem.capitalize())
+        return capitalizeSplitValue
+
+    def __formatReligionsKeywordValue(self, dictionary):
+        religions = "religions"
+        if religions in dictionary:
+            formattedValue = []
+            for element in dictionary[religions]:
+                splitValue = element.split(" ")
+                if "of" in splitValue:
+                    capitalizeWordValue = self.__capitalizeItemFromReligionValue(splitValue)
+                    self.__removeItemFromInitialReligionItem(splitValue)
+                    formattedSplitValue = []
+                    for capitalizeElement in capitalizeWordValue:
+                        if capitalizeElement != "Of":
+                            formattedSplitValue.append(capitalizeElement)
+                    formattedSplitValue.append(splitValue[0])
+                    formattedValue.append(" ".join(formattedSplitValue))
+                else:
+                    formattedValue.append(element)
+            dictionary[religions] = formattedValue
+
+
     def formatValueInformation(self, dictionary):
         self.__formatPopulationValue(dictionary)
         self.__formatSlashValueFormatting(dictionary)
         self.__formatLanguageKeyword(dictionary)
         self.__formatGeographicCoordinate(dictionary)
+        self.__formatReligionsKeywordValue(dictionary)
         return dictionary

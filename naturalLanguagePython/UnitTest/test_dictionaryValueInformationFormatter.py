@@ -60,3 +60,9 @@ class TestDictionaryValueInformationFormatter(TestCase):
         expectedReturnedDictionary = {"geographic coordinates": ["42 00 S"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForReligionsWhenHavingPercentageOfReligionsShouldReturnDictionaryWithInvertedOrderOfValueInformation(self):
+        dictionary = {"religions": ["51.3% of protestant"]}
+        expectedReturnedDictionary = {"religions": ["Protestant 51.3%"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
