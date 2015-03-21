@@ -31,6 +31,11 @@ class CountryService(object):
     def searchQuestionSearchStrategyParticularity(self, receivedQuestion):
         return self.questionAnalyzer.analyseQuestionParticularity(receivedQuestion)
 
+    def linkSearchStrategyToKeyword(self, receivedQuestion, dictionary, questionSearchParticularity):
+        return self.questionAnalyzer.linkSearchStrategyToKeywordRelatedToQuestion(
+            receivedQuestion, dictionary, questionSearchParticularity
+        )
+
     def formatKeywordFromSemanticAnalysisToWorldFactbook(self, receivedDictionary):
         formattedDictionary = self.__dictionaryInformationFormatter.formatDictionary(receivedDictionary)
         return  formattedDictionary

@@ -21,4 +21,5 @@ class TestQuestionResponder(TestCase):
         self.questionResponder.countryService.searchCountry = Mock(return_value = expectedReturn)
         self.questionResponder.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook = Mock()
         self.questionResponder.countryService.formatValueInformationFromSemanticAnalysisToWorldFactBook = Mock()
+        self.questionResponder.countryService.linkSearchStrategyToKeyword = Mock()
         self.assertEqual(expectedReturn, self.questionResponder.askQuestion(question))

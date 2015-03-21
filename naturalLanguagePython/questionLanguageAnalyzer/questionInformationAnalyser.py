@@ -1,7 +1,7 @@
 __author__ = 'alex'
+from naturalLanguagePython.questionLanguageAnalyzer.matchKeywordAndSearchStrategy import MatchKeywordAndSearchStrategy
 from naturalLanguagePython.questionLanguageAnalyzer.processLanguage import ProcessLanguage
 from naturalLanguagePython.questionLanguageAnalyzer.regexQuestionAnalyzer import RegexQuestionAnalyzer
-import regexQuestionAnalyzer
 
 
 class QuestionInformationAnalyser(object):
@@ -9,11 +9,17 @@ class QuestionInformationAnalyser(object):
     def __init__(self):
         self.regexAnalyser = RegexQuestionAnalyzer()
         self.processLanguage = ProcessLanguage()
+        self.matchKeywordAndSearchStrategy = MatchKeywordAndSearchStrategy()
         self.questionDictionary = {}
 
     def analyseQuestionParticularity(self, question):
         questionParticularity = self.regexAnalyser.searchKeyword(question)
         return questionParticularity
+
+    def linkSearchStrategyToKeywordRelatedToQuestion(self, question, dictionary, questionSearchParticularity):
+        return self.matchKeywordAndSearchStrategy.matchSearchStrategyByKeyword(
+            question, dictionary, questionSearchParticularity
+        )
 
     def analyseQuestion(self, question):
         keywordList = self.regexAnalyser.parseAllRegexKeyWord(question)
