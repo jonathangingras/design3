@@ -12,13 +12,13 @@ class TestSearchStrategyServiceFactory(TestCase):
 
     def test_validateNumbersOfWantedSearchStrategyWhenHavingNoneDefinedStrategyShouldReturnAListOfEqualNumbersOfStrategyToTheDictionary(self):
         expectedReturnedStrategyList = ['Contains']
-        dictionary = {"Capital": "Ottawa"}
+        dictionary = {"Capital": ["Ottawa"]}
         self.assertEqual(expectedReturnedStrategyList, self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary))
 
     def test_validateNumbersOfWantedSearchStrategyWhenHavingOneDefinedStrategyShouldReturnTheSameList(self):
         expectedReturnedStrategyList = ['Contains']
         strategyList = ['Contains']
-        dictionary = {"Capital": "Ottawa"}
+        dictionary = {"Capital": ["Ottawa"]}
         self.assertEqual(expectedReturnedStrategyList, self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary, strategyList))
 
     def test_createASearchStrategyFromNoneSearchStrategyShouldCreateTheRightStrategy(self):
