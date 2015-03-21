@@ -86,7 +86,7 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Zimbabwe"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
-    #def test_askingQuestionWhenSearchingByAGreaterThTheNameOfCountry(self):
+    #def test_askingQuestionWhenSearchingByAGreaterThanPopulationShouldReturnTheNameOfCountry(self):
     #    askedQuestion = "What country has a population greater than 1 300 692 576?"
     #    expectedNameOfCountry = ""
     #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))

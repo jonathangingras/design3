@@ -66,3 +66,9 @@ class TestDictionaryValueInformationFormatter(TestCase):
         expectedReturnedDictionary = {"religions": ["Protestant 51.3%"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForReligionsWhenHavingPercentageOfReligionsWithMuslimReligionShouldReturnTheFormattedDictionary(self):
+        dictionary = {"religions": ["1.3% of muslim sia"]}
+        expectedReturnedDictionary = {"religions": ["Muslim Sia 1.3%"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
