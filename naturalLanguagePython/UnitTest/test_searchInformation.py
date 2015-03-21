@@ -18,6 +18,7 @@ class TestSearchInformation(TestCase):
                                                       "Population": ["Estimate of 100000"]}
         self.dictionaryForInteger = {"population": ["12345"]}
         self.dictionaryForFloat = {"population": ["1.50"]}
+        self.dictionaryForFloatWithMillion = {"population": ["1.50 million"]}
 
 
     def test_findingCorrespondingInformationInsideDictionaryWithTheStartsWithRegexShouldReturnTrue(self):
@@ -98,3 +99,16 @@ class TestSearchInformation(TestCase):
         keyword = "population"
         wantedInformation = ["1.40", "1.60"]
         self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForFloat, keyword, wantedInformation))
+
+    # def test_notFindingCorrespondingInformationWhenUsingBetweenSearchStrategyWithFloatNumberShouldReturnFalse(self):
+    #     keyword = "population"
+    #     wantedInformation = ["1.40", "1.49"]
+    #     self.assertFalse(self.searchMethodBetween.findInformation(self.dictionaryForFloat, keyword, wantedInformation))
+    # def test_findingCorrespondingInformationWhenUsingBetweenSearchStrategyWithFloatNumberFollowedByMillionShouldReturnTrue(self):
+    #     keyword = "population"
+    #     wantedInformation = ["1.40 million", "1.60 million"]
+    #     self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForFloatWithMillion, keyword, wantedInformation))
+
+
+
+

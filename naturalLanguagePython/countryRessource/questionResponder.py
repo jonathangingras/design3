@@ -12,6 +12,7 @@ class QuestionResponder(object):
             dictionary = self.countryService.analyzeQuestionFromAtlas(question)
             formattedDictionary = self.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook(dictionary)
             formattedDictionary = self.countryService.formatValueInformationFromSemanticAnalysisToWorldFactBook(formattedDictionary)
-            print(formattedDictionary)
+            # print(formattedDictionary)
+
             nameOfCountry = self.countryService.searchCountry(formattedDictionary)
         return nameOfCountry

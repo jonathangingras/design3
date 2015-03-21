@@ -37,6 +37,7 @@ class SearchBetween(SearchInformation):
 
     def findInformation(self, dictionary, keyword, wantedInformation):
         isContaining = False
+        wordRemovedFromWantedInformation = []
         self.__setRegex(wantedInformation)
         for possibleRegex in self.listRegex:
             possibleRegex = self.__replaceSlash(possibleRegex)

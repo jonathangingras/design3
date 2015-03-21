@@ -139,3 +139,9 @@ class TestCountryRepositoryFiller(TestCase):
         wantedField = {"major urban areas - population": ['5.068 million', '1.098 million']}
         searchStrategy = self.searchStrategyFactory.createSearchStrategy()
         self.assertEqual(expectedCountryList, self.countryRepository.searchCountries(wantedField, searchStrategy))
+
+    def test_searchAParsedCountyWhenSearchingByItsInflationRateBetweenShouldReturnTheNameOfPossibleCountry(self):
+        expectedCountryList = [[]]
+        wantedField = {"inflation rate (consumer prices)": ["0.4%", "0.6%"]}
+        searchStrategy = self.searchStrategyFactory.createSearchStrategy("between")
+        self.assertEqual(expectedCountryList, self.countryRepository.searchCountries(wantedField, searchStrategy))

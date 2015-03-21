@@ -13,7 +13,6 @@ class TestCountryService(TestCase):
 
     def setUp(self):
         self.countryService = CountryService("C:\Users\Antoine\Documents\\design3\\naturalLanguagePython")
-
         self.countryService.questionAnalyzer.analyseQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):
@@ -28,6 +27,7 @@ class TestCountryService(TestCase):
         searchedInformation = {
             "Capital": ["aCapital"]
         }
+
         self.countryService.countryRepository.countryList = ["France"]
         self.countryService.countryRepository.searchCountries = Mock(return_value = ["France"])
         expectedNameOfCountry = "France"

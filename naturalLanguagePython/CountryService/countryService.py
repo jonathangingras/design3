@@ -14,11 +14,11 @@ class CountryService(object):
     def __init__(self, currentWorkspacePath):
         self.countryRepository = CountryRepositoryDB()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
-        self.dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
-        self.dictionaryValueFormatter = DictionaryValueInformationFormatter()
+        self.__dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
+        self.__dictionaryValueFormatter = DictionaryValueInformationFormatter()
         self.questionAnalyzer = QuestionInformationAnalyser()
         self.__setupTheCountryRepository(currentWorkspacePath)
-        self.repositorySearch = RepositorySearch()
+        self.__repositorySearch = RepositorySearch()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
         dictionaryOfImportantInformation = {}
@@ -28,20 +28,21 @@ class CountryService(object):
             raise CountryServiceException("The received question from Atlas is empty")
         dictionaryOfImportantInformation = self.questionAnalyzer.analyseQuestion(receivedQuestion)
         return dictionaryOfImportantInformation
+    def searchQuestionSearchStrategyParticularity(self, receivedQuestion):
+        return self.questionAnalyzer.analyseQuestionParticularity(receivedQuestion)
 
     def formatKeywordFromSemanticAnalysisToWorldFactbook(self, receivedDictionary):
-        formattedDictionary = self.dictionaryInformationFormatter.formatDictionary(receivedDictionary)
+        formattedDictionary = self.__dictionaryInformationFormatter.formatDictionary(receivedDictionary)
         return  formattedDictionary
 
     def formatValueInformationFromSemanticAnalysisToWorldFactBook(self, receivedDictionary):
-        formattedDictionary = self.dictionaryValueFormatter.formatValueInformation(receivedDictionary)
+        formattedDictionary = self.__dictionaryValueFormatter.formatValueInformation(receivedDictionary)
         return formattedDictionary
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""
-        listOfPossibleCountryByCategory = self.repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
+        listOfPossibleCountryByCategory = self.__repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
                                                                                                                searchedInformationDict, wantedSearchStrategy)
-        print(listOfPossibleCountryByCategory)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
             numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)
