@@ -21,7 +21,6 @@ class CountryService(object):
         self.__repositorySearch = RepositorySearch()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
-        dictionaryOfImportantInformation = {}
         if receivedQuestion is None:
             raise CountryServiceException("The received question from Atlas is empty")
         if receivedQuestion is "":
@@ -44,7 +43,6 @@ class CountryService(object):
         nameOfCountry = ""
         listOfPossibleCountryByCategory = self.__repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
                                                                                                                searchedInformationDict, wantedSearchStrategy)
-        print(listOfPossibleCountryByCategory)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
             numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)

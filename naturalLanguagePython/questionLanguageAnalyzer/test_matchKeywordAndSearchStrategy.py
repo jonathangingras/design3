@@ -9,7 +9,7 @@ class TestMatchKeywordAndSearchStrategy(TestCase):
         self.matchKeywordAndSearchStrategy = MatchKeywordAndSearchStrategy()
 
     def test_matchingSearchStrategyAndKeywordWhenHavingStartsWithSearchStrategyShouldReturnStartsWithWithCapitalKeyword(self):
-        question = "this question is irrelevant"
+        question = "My capital name starts with Moga."
         expectedSearchStrategyByKeyword = {"capital": ["starts with"]}
         informationDictionary = {"capital": "a capital"}
         extractedSearchStrategy = ["starts with"]
@@ -17,7 +17,7 @@ class TestMatchKeywordAndSearchStrategy(TestCase):
             question, informationDictionary, extractedSearchStrategy))
 
     def test_matchingSearchStrategyAndKeywordWhenHavingEndsWithStrategyShouldReturnEndsWithLinkedToCapitalKeyword(self):
-        question = "this question is irrelevant"
+        question = "My capital name ends with Moga."
         expectedSearchStrategyByKeyword = {"capital": ["ends with"]}
         informationDictionary = {"capital": "a capital"}
         extractedSearchStrategy = ["ends with"]
@@ -26,7 +26,7 @@ class TestMatchKeywordAndSearchStrategy(TestCase):
         ))
 
     def test_matchingSearchStrategyAndKeywordWhenHavingStartsWithAndEndsWithShouldReturnBothLinkedToCapitalKeyword(self):
-        question = "this question is still irrelevant"
+        question = "My capital name starts with Ath and ends with ens."
         expectedSearchStrategyByKeyword = {"capital": ["starts with", "ends with"]}
         informationDictionary = {"capital": "a capital"}
         extractedSearchStrategy = ["starts with", "ends with"]
@@ -47,6 +47,15 @@ class TestMatchKeywordAndSearchStrategy(TestCase):
         expectedSearchStrategyByKeyword = {"population": ["less than"]}
         informationDictionary = {"population": ["1 300 692 576"]}
         extractedSearchStrategy = ["less than"]
+        self.assertEqual(expectedSearchStrategyByKeyword, self.matchKeywordAndSearchStrategy.matchSearchStrategyByKeyword(
+            question, informationDictionary, extractedSearchStrategy
+        ))
+
+    def test_matchingSearchStrategyAndKeywordWhenHavingGreaterThanShouldReturnGreaterThanLinkedToTheCorrespondingKeyword(self):
+        question = "My death rate is greater than 15 death/1000"
+        expectedSearchStrategyByKeyword = {"death rate" : ["greater than"]}
+        informationDictionary = {"death rate": ["15 death/1000"]}
+        extractedSearchStrategy = ["greater than"]
         self.assertEqual(expectedSearchStrategyByKeyword, self.matchKeywordAndSearchStrategy.matchSearchStrategyByKeyword(
             question, informationDictionary, extractedSearchStrategy
         ))

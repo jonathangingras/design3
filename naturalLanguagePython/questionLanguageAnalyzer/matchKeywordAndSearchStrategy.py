@@ -1,4 +1,5 @@
 __author__ = 'Antoine'
+import re
 
 
 class MatchKeywordAndSearchStrategy(object):
@@ -7,24 +8,27 @@ class MatchKeywordAndSearchStrategy(object):
         self.capital = "capital"
         self.startsWith = "starts with"
         self.endsWith = "ends with"
+        self.searchStrategyLinkedToKeyword= {}
+        self.regex = [r"$ is .", r"$ .", r"$ name .", r"and ."]
 
     def __createSearchStrategyLinkedKeywordDictionary(self, informationDictionary):
-        searchStrategyLinkedToKeyword = {}
         for element in informationDictionary:
-            searchStrategyLinkedToKeyword[element] = []
-        return searchStrategyLinkedToKeyword
+            self.searchStrategyLinkedToKeyword[element] = []
 
-    def __matchCapitalKeywordToPossibleSearchStrategy(self, extractedSearchStrategy, informationDictionary,
-                                                      searchStrategyLinkedToKeyword):
-        if self.capital in informationDictionary:
-            if self.startsWith in extractedSearchStrategy:
-                searchStrategyLinkedToKeyword[self.capital].append(self.startsWith)
-            if self.endsWith in extractedSearchStrategy:
-                searchStrategyLinkedToKeyword[self.capital].append(self.endsWith)
+
+    def __searchKeywordLinkInQuestionByRegex(self, keyword, question, searchStrategy):
+        for possibleRegex in self.regex:
+            possibleRegex = possibleRegex.replace("$", keyword)
+            possibleRegex = possibleRegex.replace(".", searchStrategy)
+            expression = re.compile(possibleRegex)
+            result = expression.search(question)
+            if result is not None:
+                self.searchStrategyLinkedToKeyword[keyword].append(searchStrategy)
+                break
 
     def matchSearchStrategyByKeyword(self, question, informationDictionary, extractedSearchStrategy):
-        searchStrategyLinkedToKeyword = self.__createSearchStrategyLinkedKeywordDictionary(informationDictionary)
-        self.__matchCapitalKeywordToPossibleSearchStrategy(extractedSearchStrategy, informationDictionary,
-                                                           searchStrategyLinkedToKeyword)
-
-        return searchStrategyLinkedToKeyword
+        self.__createSearchStrategyLinkedKeywordDictionary(informationDictionary)
+        for keyword in informationDictionary:
+            for searchStrategy in extractedSearchStrategy:
+                self.__searchKeywordLinkInQuestionByRegex(keyword, question, searchStrategy)
+        return self.searchStrategyLinkedToKeyword

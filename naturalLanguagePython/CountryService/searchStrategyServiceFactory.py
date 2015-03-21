@@ -13,18 +13,13 @@ class SearchStrategyServiceFactory(object):
         if wantedSearchStrategy is None:
             wantedSearchStrategy = []
         numberOfPossibleSearchStrategy = 0
-        print(searchedInformationDict)
         for element in searchedInformationDict:
-            print(element)
             numberOfPossibleSearchStrategy += len(searchedInformationDict[element])
         if numberOfPossibleSearchStrategy < len(wantedSearchStrategy):
             raise CountryServiceException(
                 "The number of wanted information needs to be higher than the number of wanted search strategy")
-
-        print(numberOfPossibleSearchStrategy)
         while len(wantedSearchStrategy) < numberOfPossibleSearchStrategy:
             wantedSearchStrategy.append(defaultSearchStrategy)
-        print(wantedSearchStrategy)
         return wantedSearchStrategy
 
     def createStrategy(self, searchStrategy = None):
