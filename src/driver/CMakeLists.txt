@@ -11,6 +11,11 @@ add_library(d3t12_driver
 
 	ServoMotorController.cc
 	ServoMotorControllerFactory.cc
+
+	Prehensor.cc
+	CameraPoseHandler.cc
+
+	MotorController.cc
 )
 
 target_link_libraries(d3t12_driver

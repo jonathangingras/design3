@@ -5,5 +5,6 @@
 #include "SIGINTHandler.h"
 #include "ExitGuard.h"
 #include "SystemCaller.h"
+#include "Popener.h"
 
 #endif

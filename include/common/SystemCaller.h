@@ -3,6 +3,7 @@
 
 #include <boost/smart_ptr.hpp>
 #include <unistd.h>
+#include <stdio.h>
 
 namespace d3t12 {
 
