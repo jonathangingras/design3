@@ -7,20 +7,22 @@ from naturalLanguagePython.searchInformationStrategy.searchInformation import Se
 
 class SearchBetween(SearchInformation):
 
+    def __constructDecimalRegexList(self, wantedInformation):
+        elementLesser = Decimal(wantedInformation[0])
+        elementBigger = Decimal(wantedInformation[1])
+        numberOfDigit = len(wantedInformation[0].split(".")[1])
+        decimalIncrement = Decimal(str(1 * pow(10, -numberOfDigit)))
+        while elementLesser <= elementBigger:
+            regex = '(\\b' + str(elementLesser) + '\\b)'
+            self.listRegex.append(regex)
+            elementLesser += decimalIncrement
+
     def __setRegex(self, wantedInformation):
         self.listRegex = []
         if len(wantedInformation) > 2:
             return None
         if "." in wantedInformation[0]:
-            elementLesser = Decimal(wantedInformation[0])
-            elementBigger = Decimal(wantedInformation[1])
-            numberOfDigit = len(wantedInformation[0].split(".")[1])
-            decimalIncrement = Decimal(str(1 * pow(10, -numberOfDigit)))
-            print(decimalIncrement)
-            while elementLesser <= elementBigger:
-                regex = '(\\b' + str(elementLesser) + '\\b)'
-                self.listRegex.append(regex)
-                elementLesser += decimalIncrement
+            self.__constructDecimalRegexList(wantedInformation)
         else:
             elementLesser = int(wantedInformation[0])
             elementBigger = int(wantedInformation[1])
@@ -36,10 +38,8 @@ class SearchBetween(SearchInformation):
     def findInformation(self, dictionary, keyword, wantedInformation):
         isContaining = False
         self.__setRegex(wantedInformation)
-        print(self.listRegex)
         for possibleRegex in self.listRegex:
             possibleRegex = self.__replaceSlash(possibleRegex)
-            print(possibleRegex)
             expression = re.compile(possibleRegex)
             if keyword in dictionary:
                 for value in dictionary[keyword]:
