@@ -9,11 +9,14 @@ class RepositorySearch(object):
 
     def searchPossiblesCountryInRepository(self, countryRepository, searchedInformationDict, wantedSearchStrategy):
         wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict, wantedSearchStrategy)
-        searchStrategyNumberInList = 0
         listOfCountry = []
-        for key in searchedInformationDict:
-            self.searchStrategy = self.searchStrategyServiceFactory.searchStrategyFactory.createSearchStrategy(
-                wantedSearchStrategy[searchStrategyNumberInList])
-            listOfCountry.append(countryRepository.searchCountries(searchedInformationDict, self.searchStrategy))
-            searchStrategyNumberInList += 1
+        for keyword in searchedInformationDict:
+            for informationElement in searchedInformationDict[keyword]:
+                print(informationElement)
+                searchStrategyNumberInList = 0
+                self.searchStrategy = self.searchStrategyServiceFactory.searchStrategyFactory.createSearchStrategy(
+                wantedSearchStrategy[keyword][searchStrategyNumberInList])
+                print(self.searchStrategy)
+                listOfCountry.append(countryRepository.searchCountries(searchedInformationDict, self.searchStrategy))
+                searchStrategyNumberInList += 1
         return listOfCountry

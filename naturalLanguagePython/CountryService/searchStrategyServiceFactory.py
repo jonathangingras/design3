@@ -11,15 +11,24 @@ class SearchStrategyServiceFactory(object):
 
     def wantedSearchStrategyValidator(self, searchedInformationDict, wantedSearchStrategy = None):
         if wantedSearchStrategy is None:
-            wantedSearchStrategy = []
-        numberOfPossibleSearchStrategy = 0
-        for element in searchedInformationDict:
-            numberOfPossibleSearchStrategy += len(searchedInformationDict[element])
-        if numberOfPossibleSearchStrategy < len(wantedSearchStrategy):
+            wantedSearchStrategy = {}
+            for keyword in searchedInformationDict:
+                wantedSearchStrategy[keyword] = []
+        totalNumberOfSearchStrategy = 0
+        for searchStrategyByKeyword in wantedSearchStrategy:
+            totalNumberOfSearchStrategy += len(wantedSearchStrategy[searchStrategyByKeyword])
+        numberOfInformationInDictionary = 0
+        for keyword in searchedInformationDict:
+            numberOfInformationInDictionary += len(searchedInformationDict[keyword])
+        if numberOfInformationInDictionary < totalNumberOfSearchStrategy:
             raise CountryServiceException(
                 "The number of wanted information needs to be higher than the number of wanted search strategy")
-        while len(wantedSearchStrategy) < numberOfPossibleSearchStrategy:
-            wantedSearchStrategy.append(defaultSearchStrategy)
+        for keyword in searchedInformationDict:
+            numberOfInformation = len(searchedInformationDict[keyword])
+            numberOfSearchStrategy = len(wantedSearchStrategy[keyword])
+            while numberOfSearchStrategy < numberOfInformation:
+                wantedSearchStrategy[keyword].append("Contains")
+                numberOfSearchStrategy += 1
         return wantedSearchStrategy
 
     def createStrategy(self, searchStrategy = None):

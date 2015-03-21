@@ -38,7 +38,7 @@ class TestCountryService(TestCase):
             "Capital": ["aCapital"]
         }
         self.countryService.countryRepository.countryList = ["France"]
-        wantedSearchStrategy = ["starts with", "ends with"]
+        wantedSearchStrategy = {"Capital":["starts with", "ends with"]}
         self.assertRaises(CountryServiceException, self.countryService.searchCountry, searchedInformation, wantedSearchStrategy)
 
     def test_analyzingAQuestionWhenTheReceivedStringIsNoneShouldRaiseException(self):

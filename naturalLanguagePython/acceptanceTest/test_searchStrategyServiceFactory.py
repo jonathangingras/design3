@@ -11,15 +11,17 @@ class TestSearchStrategyServiceFactory(TestCase):
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
 
     def test_validateNumbersOfWantedSearchStrategyWhenHavingNoneDefinedStrategyShouldReturnAListOfEqualNumbersOfStrategyToTheDictionary(self):
-        expectedReturnedStrategyList = ['Contains']
+        expectedSearchStrategyDictionary = {"Capital": ["Contains"]}
         dictionary = {"Capital": ["Ottawa"]}
-        self.assertEqual(expectedReturnedStrategyList, self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary))
+        self.assertEqual(expectedSearchStrategyDictionary,
+                         self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary))
 
     def test_validateNumbersOfWantedSearchStrategyWhenHavingOneDefinedStrategyShouldReturnTheSameList(self):
-        expectedReturnedStrategyList = ['Contains']
-        strategyList = ['Contains']
+        expectedSearchStrategyDictionary = {"Capital": ["Contains"]}
+        searchStrategyDictionary = {"Capital": ['Contains']}
         dictionary = {"Capital": ["Ottawa"]}
-        self.assertEqual(expectedReturnedStrategyList, self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary, strategyList))
+        self.assertEqual(expectedSearchStrategyDictionary,
+                         self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary, searchStrategyDictionary))
 
     def test_createASearchStrategyFromNoneSearchStrategyShouldCreateTheRightStrategy(self):
         self.assertIsInstance(self.searchStrategyServiceFactory.createStrategy(None), SearchContains)

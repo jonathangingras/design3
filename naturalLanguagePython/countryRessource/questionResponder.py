@@ -10,12 +10,13 @@ class QuestionResponder(object):
         nameOfCountry = None
         if question is not None:
             dictionary = self.countryService.analyzeQuestionFromAtlas(question)
-            questionSearchParticularity = self.countryService.searchQuestionSearchStrategyParticularity(question)
             formattedDictionary = self.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook(dictionary)
             formattedDictionary = self.countryService.formatValueInformationFromSemanticAnalysisToWorldFactBook(formattedDictionary)
+            questionSearchParticularity = self.countryService.searchQuestionSearchStrategyParticularity(question)
             searchStrategyByKeywordDictionary = self.countryService.linkSearchStrategyToKeyword(
                 question, dictionary, questionSearchParticularity
             )
+            formattedSearchStrategyByKeywordDictionary = self.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook(searchStrategyByKeywordDictionary)
             print(searchStrategyByKeywordDictionary)
-            nameOfCountry = self.countryService.searchCountry(formattedDictionary, questionSearchParticularity)
+            nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
         return nameOfCountry
