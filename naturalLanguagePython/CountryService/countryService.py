@@ -1,6 +1,5 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
-from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
 from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
@@ -61,10 +60,6 @@ class CountryService(object):
                 return str(nameOfCountry)
             nameOfCountry = nameOfCountry[0]
         return nameOfCountry
-
-    def __setupTheCountryRepository(self, currentWorkspacePath):
-        self.countryRepositoryFiller = CountryRepositoryFiller(self.countryRepository)
-        self.countryRepositoryFiller.addCountriesToTheRepository(currentWorkspacePath)
 
     def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):
         numberOfAppearanceOfNameOfCountry = 0

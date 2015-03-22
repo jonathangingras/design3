@@ -20,26 +20,26 @@ class TestDictionaryValueInformationFormatter(TestCase):
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForPopulationKeywordWhenDictionaryNotContainingPopulationKeyShouldNotChangeDictionary(self):
-        expectedReturnedDictionary = {"this not population": ["not an number"]}
+        expectedReturnedDictionary = {"this not population": ["not","an", "number"]}
         dictionary = expectedReturnedDictionary
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForPopulationKeywordWhenHavingTwoValueShouldChangeOnlyTheSecondOne(self):
-        expectedReturnedDictionary = {"population": ["population is not real", "32990"]}
+        expectedReturnedDictionary = {"population": ["population", "is", "not", "real", "32990"]}
         dictionary = {"population": ["population is not real", "32 990"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForSlashWhenHavingNoSlashShouldReturnUnchangedValue(self):
         dictionary = {"population": ["a population"]}
-        expectedReturnedDictionary = {"population": ["a population"]}
+        expectedReturnedDictionary = {"population": ["a", "population"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForSlashWhenHavingASlashSeparatedByASpaceShouldReturnTheStringWithSlashWithoutSpace(self):
         dictionary = {"population": ["10 more/ 1000 population"]}
-        expectedReturnedDictionary = {"population": ["10 more/1000 population"]}
+        expectedReturnedDictionary = {"population": ["10", "more/1000", "population"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
@@ -57,18 +57,18 @@ class TestDictionaryValueInformationFormatter(TestCase):
 
     def test_formatValueInformationForGeographicCoordinatesWhenHavingDotBetweenNumbersShouldReturnSpacedNumber(self):
         dictionary = {"geographic coordinates": ["42.00 S"]}
-        expectedReturnedDictionary = {"geographic coordinates": ["42 00 S"]}
+        expectedReturnedDictionary = {"geographic coordinates": ["42", "00", "S"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForReligionsWhenHavingPercentageOfReligionsShouldReturnDictionaryWithInvertedOrderOfValueInformation(self):
         dictionary = {"religions": ["51.3% of protestant"]}
-        expectedReturnedDictionary = {"religions": ["Protestant 51.3%"]}
+        expectedReturnedDictionary = {"religions": ["Protestant", "51.3%"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
 
     def test_formatValueInformationForReligionsWhenHavingPercentageOfReligionsWithMuslimReligionShouldReturnTheFormattedDictionary(self):
         dictionary = {"religions": ["1.3% of muslim sia"]}
-        expectedReturnedDictionary = {"religions": ["Muslim Sia 1.3%"]}
+        expectedReturnedDictionary = {"religions": ["Muslim", "Sia", "1.3%"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)

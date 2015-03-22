@@ -52,4 +52,9 @@ class DictionaryValueInformationFormatter(object):
         self.__formatLanguageKeyword(dictionary)
         self.__formatGeographicCoordinate(dictionary)
         self.formatValueFromReligionKeyword.formatReligionsKeywordValue(dictionary)
+        for keyword in dictionary:
+            listOfValue = []
+            for valueElement in dictionary[keyword]:
+                listOfValue += valueElement.split(" ")
+            dictionary[keyword] = listOfValue
         return dictionary
