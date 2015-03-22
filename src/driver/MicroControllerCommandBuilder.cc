@@ -42,7 +42,7 @@ std::string MicroControllerLEDCommandBuilder::getControllerColorStr() const {
 }
 
 MicroControllerCommand MicroControllerLEDCommandBuilder::build() {
-	commandStream.clear();
+	std::ostringstream commandStream;
 	if(ledNumber == 0) {
 		commandStream << "setled " << (on ? "on" : "off") << '\n';
 	} else {
@@ -65,7 +65,7 @@ MicroControllerMotorControlCommandBuilder& MicroControllerMotorControlCommandBui
 }
 
 MicroControllerCommand MicroControllerMotorControlCommandBuilder::build() {
-	commandStream.clear();
+	std::ostringstream commandStream;
 	commandStream << (state == current ? "setpos " : "goto " )
 				  << x << ' '
 				  << y << ' '

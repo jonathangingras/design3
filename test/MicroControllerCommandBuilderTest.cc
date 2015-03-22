@@ -70,6 +70,16 @@ TEST(MicroControllerLEDCommandBuilderTest, canDoLastJobAfterMultipleSettings) {
 	EXPECT_EQ("setled on\n", osStr);
 }
 
+TEST(MicroControllerLEDCommandBuilderTest, doesntAccumulateStringsWhenBuilding) {
+	SETUP
+	MicroControllerLEDCommandBuilder ledCommandbuilder;
+
+	port << ledCommandbuilder.setLED(0).setPower(true).build();
+	port << ledCommandbuilder.setLED(0).setPower(false).build();
+
+	EXPECT_EQ("setled on\nsetled off\n", osStr);
+}
+
 TEST(MicroControllerMotorControlCommandBuilderTest, canSendCurrentPosition) {
 	SETUP
 	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
@@ -104,4 +114,14 @@ TEST(MicroControllerMotorControlCommandBuilderTest, canSendWantedPositionAtEnd) 
 	port << motorCommandbuilder.setCurrentPosition(1.1, 1.1, 1.1).setWantedPosition(1.1, 1.1, 1.1).build();
 
 	EXPECT_EQ("goto 1.1 1.1 1.1\n", osStr);
+}
+
+TEST(MicroControllerMotorControlCommandBuilderTest, doesntAccumulateStringsWhenBuilding) {
+	SETUP
+	MicroControllerMotorControlCommandBuilder motorCommandbuilder;
+
+	port << motorCommandbuilder.setCurrentPosition(1.1, 1.1, 1.1).build();
+	port << motorCommandbuilder.setWantedPosition(1.1, 1.1, 1.1).build();
+
+	EXPECT_EQ("setpos 1.1 1.1 1.1\ngoto 1.1 1.1 1.1\n", osStr);
 }

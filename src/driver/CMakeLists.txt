@@ -5,7 +5,6 @@ add_library(d3t12_driver
 
 	CameraCapturer.cc
 
-	MicroControllerCommand.cc
 	MicroControllerCommandBuilder.cc
 	MicroControllerCommandPort.cc
 
@@ -16,6 +15,7 @@ add_library(d3t12_driver
 	CameraPoseHandler.cc
 
 	MotorController.cc
+	LEDMatrixController.cc
 )
 
 target_link_libraries(d3t12_driver

@@ -9,8 +9,6 @@ namespace d3t12 {
 
 class MicroControllerCommandBuilder {
 protected:
-	std::ostringstream commandStream;
-	
 	inline MicroControllerCommand createCommand(const std::string& command) {
 		return MicroControllerCommand(command);
 	}

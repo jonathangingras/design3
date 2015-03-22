@@ -31,3 +31,4 @@ add_design3_test(ColoredCubeDetectorTest)
 #driver
 add_design3_test(MicroControllerCommandBuilderTest)
 add_design3_test(ServoMotorControllerTest)
+add_design3_test(LEDMatrixControllerTest)
