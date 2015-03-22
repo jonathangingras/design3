@@ -7,4 +7,10 @@
 #include "MicroControllerCommandPort.h"
 #include "ServoMotorControllerFactory.h"
 
+#include "MotorController.h"
+#include "LEDMatrixController.h"
+
+#include "Prehensor.h"
+#include "CameraPoseHandler.h"
+
 #endif
