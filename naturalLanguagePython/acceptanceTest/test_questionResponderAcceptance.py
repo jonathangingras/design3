@@ -93,7 +93,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByItsReligionsShouldReturnCountryName(self):
         askedQuestion = "What country has religions including Hindu, Muslim, Christian, and Sikh?"
-        expectedNameOfCountry = "['Canada', 'Fiji', 'India', 'United_Arab_Emirates']"
+        expectedNameOfCountry = "India"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsIndependenceDateInBeginningShouldReturnCountryName(self):
@@ -123,7 +123,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByTheNationalSymbolAtBeginningShouldReturnCountryName(self):
         askedQuestion = "The lotus blossom is the national symbol of this country."
-        expectedNameOfCountry = "['Macau', 'Vietnam']"
+        expectedNameOfCountry = "Macau"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByThePopulationNumberShouldReturnCountryName(self):

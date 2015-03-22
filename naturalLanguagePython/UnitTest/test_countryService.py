@@ -1,11 +1,9 @@
 from unittest import TestCase
 from mock import Mock
 from naturalLanguagePython.countryService.countryService import CountryService
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
+from naturalLanguagePython.countryPersistence.countryRepositoryElasticSearch import CountryRepositoryElasticSearch
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
-from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
-from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 __author__ = 'Antoine'
 
 
@@ -16,7 +14,7 @@ class TestCountryService(TestCase):
         self.countryService.questionAnalyzer.analyseQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):
-        expectedInstance = CountryRepositoryDB
+        expectedInstance = CountryRepositoryElasticSearch
         self.assertIsInstance(self.countryService.countryRepository, expectedInstance)
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfSearchStrategyFactory(self):
@@ -29,7 +27,7 @@ class TestCountryService(TestCase):
         }
 
         self.countryService.countryRepository.countryList = ["France"]
-        self.countryService.countryRepository.searchCountries = Mock(return_value = ["France"])
+        self.countryService.countryRepository.searchCountries = Mock(return_value = [["France"]])
         expectedNameOfCountry = "France"
         self.assertEqual(expectedNameOfCountry, self.countryService.searchCountry(searchedInformation))
 

@@ -3,22 +3,21 @@ from naturalLanguagePython.countryService.searchStrategyServiceFactory import Se
 from naturalLanguagePython.countryParser.countryRepositoryFiller import CountryRepositoryFiller
 from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
 from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
-from naturalLanguagePython.countryService.repositorySearch import RepositorySearch
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
 from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
 from naturalLanguagePython.countryService.dictionaryValueInformationFormatter import DictionaryValueInformationFormatter
+from naturalLanguagePython.countryPersistence.countryRepositoryElasticSearch import CountryRepositoryElasticSearch
 
 
 class CountryService(object):
 
     def __init__(self, currentWorkspacePath):
-        self.countryRepository = CountryRepositoryDB()
+        self.countryRepository = CountryRepositoryElasticSearch()
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
         self.__dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
         self.__dictionaryValueFormatter = DictionaryValueInformationFormatter()
         self.questionAnalyzer = QuestionInformationAnalyser()
-        self.__setupTheCountryRepository(currentWorkspacePath)
-        self.__repositorySearch = RepositorySearch()
+        #self.__setupTheCountryRepository(currentWorkspacePath)
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
         if receivedQuestion is None:
@@ -46,9 +45,11 @@ class CountryService(object):
 
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         nameOfCountry = ""
-        listOfPossibleCountryByCategory = self.__repositorySearch.searchPossiblesCountryInRepository(self.countryRepository,
-                                                                                                               searchedInformationDict, wantedSearchStrategy)
-        print(searchedInformationDict)
+        wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict,
+                                                                                               wantedSearchStrategy)
+        listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
+            searchedInformationDict, wantedSearchStrategy)
+        print(listOfPossibleCountryByCategory)
         for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
             numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)
