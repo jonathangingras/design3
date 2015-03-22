@@ -9,18 +9,5 @@ class SearchInformation(object):
         self.regex = wantedInformation
 
     @abc.abstractmethod
-    def findInformation(self, dictionary, keyword, wantedInformation):
-        isContaining = False
-        return isContaining
-
-    @abc.abstractmethod
-    def findInformationList(self, dictionary, keyword, wantedListInformation):
-        isContaining = False
-        numberOfInformationFound = 0
-        for wantedInformation in wantedListInformation:
-            isContainingInformation = self.findInformation(dictionary, keyword, wantedInformation)
-            if isContainingInformation is True:
-                numberOfInformationFound += 1
-        if numberOfInformationFound == len(wantedListInformation):
-            isContaining = True
-        return isContaining
+    def createQuery(self, keyword, value):
+        return
