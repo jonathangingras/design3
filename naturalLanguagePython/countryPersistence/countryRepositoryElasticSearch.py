@@ -24,8 +24,6 @@ class CountryRepositoryElasticSearch(CountryRepository):
         for returnedResult in possibleCountry["hits"]["hits"]:
             listOfPossibleCountryByKeyword.append(returnedResult["_id"])
         self.listOfPossibleCountry.append(listOfPossibleCountryByKeyword)
-        if "Greece" in self.listOfPossibleCountry[0]:
-            print(possibleCountry)
 
     def searchCountries(self, keywordDictionary, searchStrategyByKeyword):
         self.listOfPossibleCountry = []
@@ -33,7 +31,6 @@ class CountryRepositoryElasticSearch(CountryRepository):
             keywordListKeyword = keywordDictionary[keyword]
             strategyListKeyword = searchStrategyByKeyword[keyword]
             numberOfElementForKeyword = len(keywordDictionary[keyword])
-            print(numberOfElementForKeyword)
             i = 0
             while i < numberOfElementForKeyword:
                 self.__searchPossibleCountryByKeywordAndInformation(keyword,
