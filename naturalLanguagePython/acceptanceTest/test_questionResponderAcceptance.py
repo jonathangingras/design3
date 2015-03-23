@@ -172,4 +172,26 @@ class TestQuestionResponder(TestCase):
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheMajorIndustriesShouldReturnCountryName(self):
+        askedQuestion = "What country has industries including the world's largest producer of platinum, gold and chromium?"
+        expectedCountryName = "South_Africa"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnCountryName(self):
         askedQuestion = ""
+        expectedCountryName = ""
+        # self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheStartsPartOfAQuestionShouldReturnCountryName(self):
+        askedQuestion = "My capital name starts with Moga."
+        expectedCountryName = "Somalia"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheYearOfTheIndependenceShouldReturnCountryName(self):
+        askedQuestion = "In 1923, we proclaimed our independence"
+        expectedCountryName = "Turkey"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheCountryInternetCodeShouldReturnCountryName(self):
+        askedQuestion = "What country has .dz as its internet country code?"
+        expectedCountryName = "Algeria"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
