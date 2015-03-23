@@ -19,11 +19,13 @@ class QuestionInformationAnalyser(object):
     def analyseQuestion(self, question):
         keywordList = self.regexAnalyser.parseAllRegexKeyWord(question)
         wordSubject = self.regexAnalyser.searchSubject(question)
-        # print keywordList
-        # print wordSubject
+        print "regex keyword"
+        print keywordList
+        print wordSubject
 
 
         if len(keywordList) == 0 and len(wordSubject) == 0:
+
             self.__taggingQuestionWithNltk(question)
             self.questionDictionary = self.processLanguage.buildDictionaries(question)
 
@@ -57,6 +59,8 @@ class QuestionInformationAnalyser(object):
         return futurList
 
 
+
+
     def __buildADictionnaryWithProperKeyAndValue(self, listValue, wordSubject, question):
         if len(wordSubject) == 1 and len(listValue) == 1:
             self.questionDictionary[wordSubject.pop()] = listValue
@@ -64,7 +68,7 @@ class QuestionInformationAnalyser(object):
             for x in wordSubject:
                 self.questionDictionary[x] = listValue
         listValue = self.__splitEnumerationItemInListString(listValue)
-        #print listValue
+        print listValue
 
         if(len(listValue) == 1 and len(listValue) == 1):
             for subject, key in zip(wordSubject, listValue):

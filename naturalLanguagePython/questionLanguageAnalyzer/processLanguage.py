@@ -19,9 +19,14 @@ class ProcessLanguage(object):
                              ChunkLessSymbole: {<JJ>}
                                 """
 
-        self.chunkGramSubjectOnly = r"""ChunkSubjectOnly:  {((<JJ><NN[S]?>+)|(<NN><IN><NN>))}
+        self.chunkGramSubjectOnly = r"""QuestionWordStartsSentence: {<WP><NN><VBZ>}
+                             ChunkSubjectOnly:  {((<JJ><NN[S]?>+)|(<NN><IN><NN>)|(<QuestionWordStartsSentence><.*><NN\w?>+))}
+                                                }<QuestionWordStartsSentence>{
                                          """
-        self.chunkGramValueOnly = r""" ChunkValue:  {((<CD>+(\w+\/\d+)?<NN\w?>*<\w+>?)|(<NNP>,?<IN>?)+)+}
+        self.chunkGramValueOnly = r""" AdjectiveHidden: {<JJ><NN>}
+                                                }<NN>{
+
+                            ChunkValue:  {((<CD>+(\w+\/\d+)?<NN\w?>*<\w+>?)|(<NNP>,?<IN>?)+)+|<AdjectiveHidden>}
                                         """
         self.taggedList = []
         self.tokenizedQuestionList = []
@@ -44,7 +49,7 @@ class ProcessLanguage(object):
 
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
-        # print self.taggedList
+        print self.taggedList
 
     def chunkingQuestion(self):
         chunkParser = nltk.RegexpParser(self.chunkGramAllSentense)
@@ -70,7 +75,6 @@ class ProcessLanguage(object):
     def extractOnlyQuestionValue(self):
         chunkParser = nltk.RegexpParser(self.chunkGramValueOnly)
         self.chunkedList = chunkParser.parse(self.taggedList)
-        #print self.chunkedList
         for subTreeQuestion in self.chunkedList.subtrees():
             if subTreeQuestion._label in ['ChunkValue']:
                 stringToConcat = ""
@@ -107,11 +111,9 @@ class ProcessLanguage(object):
     def buildDictionaries(self,question):
         self.extractOnlyQuestionValue()
         self.extractOnlyQuestionSubject()
-        #print self.keyWordList
-        #print self.importantWordList
         if len(self.keyWordList) == 1 and len(self.importantWordList) == 1:
             self.dictionariesWord[self.importantWordList.pop()] = self.keyWordList
         else:
-            for x in self.importantWordList:
-                self.dictionariesWord[x] = self.keyWordList
+            for x,y in zip(self.importantWordList,self.keyWordList):
+                self.dictionariesWord[str(x)] = str(y)
 

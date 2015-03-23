@@ -6,7 +6,7 @@ import sys
 class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexKeyword = [r"(?<=starts with )(\w+){1}",
+        self.listRegexKeyword = [r"(?<=starts with )([A-Z]{1}[a-z]+){1}",
                                  r"(?<=ends with )(\w+){1}",
                                  r"((?<=including )|(?<=include )|(?<= are ))((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))",
                                  r"((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+))",
@@ -18,6 +18,8 @@ class RegexQuestionAnalyzer(object):
                                  r"(\d+\.?\d*\s\w+\/\s?\d+)",
                                  r"(?<=What country has )([A-Z][a-z]+[^d ]\b)",
                                  r"(\.[a-z]+)",
+                                 r"(?<=including a )(\w+\s?)+",
+                                 r"(\d*\.?\d+\%)",
                                  r"(?<= contains )(\w+\s?){1,2}",
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+(\s|\.)\d+\%?)(\s[a-z]{1,2})?(\s[A-Z]{1,})?",
@@ -31,7 +33,7 @@ class RegexQuestionAnalyzer(object):
                              r"((?<=[Mm]y )(\w+){1}(?= \w*\s?starts))",
                              r"(((?<=has\sa[n\s])\s?(\w+\s?){1,3})((?= of )|(?= between )|(?= greater )|(?= including)|(?= \w+ starts)|(?= and )))",
                              r"((?<=its )|(?<= our ))(\w+)",
-                             r"(?<=What country has )([a-z]{3,}[^d ]\b)(?= including )",
+                             r"(?<=What country has )(([a-z]{3,}[^d ]\b)|(\w+\s?){1,3})(?= including )",
                              r"(?<=What country has a )(.+)(?= of )",
                              r"(?<=is the )(.+)(?= of this country)",
                              r"(?<=The )(\w+\s?){1,3}(?= of this country)"]
@@ -76,7 +78,9 @@ class RegexQuestionAnalyzer(object):
                 if self.listString.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
+                    print reg
                     if len(listTemp) > 1:
+
                         for key in listTemp:
                             listOfKey = []
                             for i in key:
@@ -97,6 +101,7 @@ class RegexQuestionAnalyzer(object):
             regex = re.compile(reg)
             wordReturn = regex.search(question)
             if  wordReturn != None:
+                print reg
                 if self.listSubject.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
