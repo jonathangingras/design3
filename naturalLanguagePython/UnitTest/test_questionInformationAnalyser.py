@@ -393,5 +393,5 @@ class testQuestionInformationAnalyser(TestCase):
         question = "What country has a population growth rate of 1.46%??"
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)
-        print self.processLanguage.questionDictionary
+        # print self.processLanguage.questionDictionary
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)

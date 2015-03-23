@@ -78,7 +78,7 @@ class RegexQuestionAnalyzer(object):
                 if self.listString.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
-                    print reg
+                    # print reg
                     if len(listTemp) > 1:
 
                         for key in listTemp:
@@ -101,7 +101,7 @@ class RegexQuestionAnalyzer(object):
             regex = re.compile(reg)
             wordReturn = regex.search(question)
             if  wordReturn != None:
-                print reg
+                # print reg
                 if self.listSubject.count(wordReturn) == False:
                     listTemp = []
                     listTemp = regex.findall(question)
