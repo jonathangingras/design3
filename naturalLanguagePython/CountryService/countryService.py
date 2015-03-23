@@ -49,16 +49,20 @@ class CountryService(object):
         listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
             searchedInformationDict, wantedSearchStrategy)
         print(listOfPossibleCountryByCategory)
-        for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
-            numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
+        if len(listOfPossibleCountryByCategory) == 1:
+            nameOfCountry = listOfPossibleCountryByCategory[0]
+        else:
+            for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
+                numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
                                                                                                    nameOfCountryFistCall)
-            if numberOfAppearanceOfNameOfCountry == len(listOfPossibleCountryByCategory):
-                nameOfCountry = nameOfCountryFistCall
-                break
+                if numberOfAppearanceOfNameOfCountry == len(listOfPossibleCountryByCategory):
+                    nameOfCountry = nameOfCountryFistCall
+                    break
         if type(nameOfCountry) is list:
             if len(nameOfCountry) > 1:
                 return str(nameOfCountry)
-            nameOfCountry = nameOfCountry[0]
+            else:
+                nameOfCountry = nameOfCountry[0]
         return nameOfCountry
 
     def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):

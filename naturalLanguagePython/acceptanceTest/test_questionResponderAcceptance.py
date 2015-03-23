@@ -141,10 +141,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Russia"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
-    #    askedQuestion = "The music of my national anthem was composed by Routhier, Weir and Lavallee."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByTheAuthorsOfTheNationalAnthemShouldReturnCountryName(self):
+        askedQuestion = "The music of my national anthem was composed by Routhier, Weir and Lavallee."
+        expectedNameOfCountry = "Canada"
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByThePopulationOfMajorUrbanAreasShouldReturnCountryName(self):
         askedQuestion = "What country has major urban areas of 5.068 million and 1.098 million?"

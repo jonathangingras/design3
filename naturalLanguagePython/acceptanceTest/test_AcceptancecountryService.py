@@ -17,15 +17,9 @@ class AcceptanceTestCountryService(TestCase):
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalStartsWithNameShouldReturnTheNameOfTheCountry(self):
         expectedReturnedCountryName = "['Nepal', 'Afghanistan', 'Uganda', 'Kazakhstan']"
-        expectedReturnedCountryName = "['Afghanistan', 'Kazakhstan', 'Nepal', 'Uganda']"
+        expectedReturnedCountryName = "[u'Kazakhstan', u'Nepal', u'Uganda', u'Afghanistan', u'Ukraine']"
         dictionaryFromQuestion = {"capital": ["Ka"]}
         searchStrategyDictionary = {"capital": ["starts with"]}
-        self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, searchStrategyDictionary))
-
-    def test_usingServiceToSearchACountryWhenSearchingForACapitalByItsEndsWithNameShouldReturnTheNameOfPossibleCountry(self):
-        expectedReturnedCountryName = 'Greece'
-        dictionaryFromQuestion = {"capital": ["ens"]}
-        searchStrategyDictionary = {"capital": ["ends with"]}
         self.assertEqual(expectedReturnedCountryName, self.countryService.searchCountry(dictionaryFromQuestion, searchStrategyDictionary))
 
     def test_analyzingAQuestionWhenTheReceivedStringIsACapitalNameIsInQuestionShouldReturnTheCorrectDictionary(self):
