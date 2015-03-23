@@ -17,7 +17,5 @@ class QuestionResponder(object):
                 question, dictionary, questionSearchParticularity
             )
             formattedSearchStrategyByKeywordDictionary = self.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook(searchStrategyByKeywordDictionary)
-            print(formattedSearchStrategyByKeywordDictionary)
-            print(formattedDictionary)
             nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
         return nameOfCountry

@@ -176,7 +176,7 @@ class TestQuestionResponder(TestCase):
         expectedCountryName = "South_Africa"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnCountryName(self):
+    def test_askingQuestionWhenSearchingByBetweenPopulationGrowthRateShouldReturnCountryName(self):
         askedQuestion = ""
         expectedCountryName = ""
         # self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
@@ -194,4 +194,9 @@ class TestQuestionResponder(TestCase):
     def test_askingQuestionWhenSearchingByTheCountryInternetCodeShouldReturnCountryName(self):
         askedQuestion = "What country has .dz as its internet country code?"
         expectedCountryName = "Algeria"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheExactPopulationGrowthRatePercentageShouldReturnCountryName(self):
+        askedQuestion = "What country has a population growth rate of 1.46%"
+        expectedCountryName = ""
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
