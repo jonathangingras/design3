@@ -6,15 +6,19 @@ import sys
 class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexKeyword = [r"(?<=starts with )(\w+){1}", r"(?<=ends with )(\w+){1}",
-                                 r"((((?<=including )|(?<=include )|(?<= are ))(.+) and (((\s?\w+\s?)|(\d?\.\d\%)?)){1,4}))",
+        self.listRegexKeyword = [r"(?<=starts with )(\w+){1}",
+                                 r"(?<=ends with )(\w+){1}",
+                                 r"((?<=including )|(?<=include )|(?<= are ))((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))",
+                                 r"((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+))",
                                  r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ((\d+[\%\.]?)+)((\ \w+)+)?",
                                  r"((?<=greater than )|(?<=less than ))(((\d+)(\ |\.|\%)?)+(\w+\/\d+)?)+",
-                                 r"((\d+\s)?([A-Z][a-z]+\s(\d+)))",
+                                 r"((\d+\s)?([A-Z][a-z]{2,}\s(\d+)))",
                                  r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
+                                 r"(\d+\.?\d*\s\w+\/\s?\d+)",
                                  r"(?<=What country has )([A-Z][a-z]+[^d ]\b)",
                                  r"(\.[a-z]+)",
+                                 r"(?<= contains )(\w+\s?){1,2}",
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+(\s|\.)\d+\%?)(\s[a-z]{1,2})?(\s[A-Z]{1,})?",
                                  r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)",
@@ -23,10 +27,10 @@ class RegexQuestionAnalyzer(object):
                                  r"((?<=[Mm]y )(?<=.)*?((?= is)|(?= was)|(?= are)|(?= is the))(\s+\w))"]
         self.registerOfKeyword = ["starts with", "ends with", "including", "between", "greater than", "contains", "less than"]
 
-        self.subjectRegex = [r"((?<=[Mm]y )(.*?)((?=\sinclude)|(?= was )|(?= is )|(?= are)|(?= is the)))",
+        self.subjectRegex = [r"((?<=[Mm]y )(.*?)((?=\sinclude)|(?= was )|(?= is )|(?= are)|(?= is the)|(?= contains)))",
                              r"((?<=[Mm]y )(\w+){1}(?= \w*\s?starts))",
                              r"(((?<=has\sa[n\s])\s?(\w+\s?){1,3})((?= of )|(?= between )|(?= greater )|(?= including)|(?= \w+ starts)|(?= and )))",
-                             r"(?<=its )(\w+)",
+                             r"((?<=its )|(?<= our ))(\w+)",
                              r"(?<=What country has )([a-z]{3,}[^d ]\b)(?= including )",
                              r"(?<=What country has a )(.+)(?= of )",
                              r"(?<=is the )(.+)(?= of this country)",
@@ -97,14 +101,11 @@ class RegexQuestionAnalyzer(object):
                     listTemp = []
                     listTemp = regex.findall(question)
                     if len(listTemp) > 1:
-
                         for key in listTemp:
                             if self.listSubject.count(key[indexBegin]) == 0:
                                 self.listSubject.append(key[indexBegin])
                     else:
-
                         self.listSubject.append(regex.search(question).group())
-
 
         for x in self.listSubject:
             for y in self.listSubject:
@@ -125,34 +126,48 @@ class RegexQuestionAnalyzer(object):
         return self.listKeyword
 
 
+    def __splitEnumarationStringInToAList(self, item):
+        futurList = []
+        listTemp = str(item).replace(' and ', ',').split(',')
+        for temp in listTemp:
+            temp.strip(' ')
+            if (temp != ''):
+                temp.rstrip(' ')
+                futurList.append(temp.lstrip(' '))
+        return futurList
+
     def __splitEnumerationItemInListString(self):
         futurList = []
         for item in self.listString:
-            listTemp = str(item).replace(' and ', ',').split(',')
-            for temp in listTemp:
-                temp.strip(' ')
-                if (temp != ''):
-                    temp.rstrip(' ')
-                    futurList.append(temp.lstrip(' '))
+            for value in self.__splitEnumarationStringInToAList(item):
+                futurList.append(value)
         self.listString = futurList
 
-    def associateWord(self, question):
-        listTemp =[]
-        self.__splitEnumerationItemInListString()
+    def __returnPositionInTheListForNearestItemMatching(self, question, x, listOfItem):
+        nearestValueDistance = sys.maxint
+        nearestValuePosition = 0
+        for y in listOfItem:
 
+            valueTemp = abs((question.find(x) + len(x)) - (question.find(str(y))))
+            if valueTemp < nearestValueDistance:
+                nearestValueDistance = valueTemp
+                nearestValuePosition = listOfItem.index(y)
+
+        return nearestValuePosition
+
+    def associateWord(self, question):
+        self.__splitEnumerationItemInListString()
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
             for subject, key in zip(self.listSubject, self.listString):
                 self.dictWord[subject] = [key]
         elif len(self.listSubject) < len(self.listString) and len(self.listSubject) == 1:
             self.dictWord[str(self.listSubject[0]).strip(' ')] = self.listString
-        elif(len(self.listSubject) >= 2 and len(self.listString) >= 2 and len(self.listString) == len(self.listSubject)):
+        elif(len(self.listSubject) >= 2 and len(self.listString) >= 2):
             for x in self.listSubject:
-                nearestValueDistance = sys.maxint
-                nearestValuePosition = 0
-                for y in self.listString:
-                    valueTemp = abs(question.find(x) - question.find(y))
-                    if  valueTemp < nearestValueDistance:
-                        nearestValueDistance = valueTemp
-                        nearestValuePosition = self.listString.index(y)
-
-                self.dictWord[x] = [self.listString[nearestValuePosition]]
+                nearestValuePosition = self.__returnPositionInTheListForNearestItemMatching(question, x, self.listString)
+                self.dictWord[x] = [self.listString.pop(nearestValuePosition)]
+            if(len(self.listString) != 0):
+                for valueNotPlacedYet in self.listString:
+                    nearestValuePosition = self.__returnPositionInTheListForNearestItemMatching(question, valueNotPlacedYet, self.dictWord.values())
+                    value = self.dictWord.values()[nearestValuePosition]
+                    value.append(valueNotPlacedYet)

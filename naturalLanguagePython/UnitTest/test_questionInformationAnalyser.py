@@ -245,14 +245,14 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    # def test_AnalyseQuestion28ShouldReturnProperDictionary(self):
-    #     expectedDictionary = {}
-    #     expectedDictionary['birth rate'] = ["16 births/1000"]
-    #     expectedDictionary['local short country name'] = ['2 words']
-    #     question = "My birth rate is approximately 16 births/1000 and my local short country name contains 2 words."
-    #     self.processLanguage = QuestionInformationAnalyser()
-    #     self.processLanguage.analyseQuestion(question)
-    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+    def test_AnalyseQuestion28ShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['birth rate'] = ["16 births/1000"]
+        expectedDictionary['local short country name'] = ['2 words']
+        question = "My birth rate is approximately 16 births/1000 and my local short country name contains 2 words."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
     # def test_AnalyseQuestion29ShouldReturnProperDictionary(self):
     #     expectedDictionary = {}
@@ -279,13 +279,13 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    # def test_AnalyseQuestion32ShouldReturnProperDictionary(self):
-    #     expectedDictionary = {}
-    #     expectedDictionary['industries'] = ["platinum", "gold", "chromium"]
-    #     question = "What country has industries including the world's largest producer of platinum, gold and chromium?"
-    #     self.processLanguage = QuestionInformationAnalyser()
-    #     self.processLanguage.analyseQuestion(question)
-    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+    def test_AnalyseQuestion32ShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['industries'] = ["platinum", "gold", "chromium"]
+        question = "What country has industries including the world's largest producer of platinum, gold and chromium?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
     def test_AnalyseQuestion33ShouldReturnProperDictionary(self):
         expectedDictionary = {}
@@ -319,17 +319,17 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    # def test_AnalyseQuestion37ShouldReturnProperDictionary(self):
-    #     expectedDictionary = {}
-    #     expectedDictionary['independence'] = ["1923"]
-    #     question = "In 1923, we proclaimed our independence."
-    #     self.processLanguage = QuestionInformationAnalyser()
-    #     self.processLanguage.analyseQuestion(question)
-    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+    def test_AnalyseQuestion37ShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['independence'] = ["1923"]
+        question = "In 1923, we proclaimed our independence."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
     def test_AnalyseQuestion38ShouldReturnProperDictionary(self):
         expectedDictionary = {}
-        expectedDictionary['birth rate'] = ["46.12 births/ 1000 population"]
+        expectedDictionary['birth rate'] = ["46.12 births/ 1000"]
         question = "What country has a birth rate of 46.12 births/ 1000 population?"
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)
@@ -345,20 +345,21 @@ class testQuestionInformationAnalyser(TestCase):
 
     # def test_AnalyseQuestion40ShouldReturnProperDictionary(self):
     #     expectedDictionary = {}
-    #     expectedDictionary['birth rate'] = ["46.12 births/ 1000 population"]
+    #     expectedDictionary['illicit drugs activities'] = ["a transshipment point for cocaine from South America to North America",
+    #     "illicit cultivation of cannabis"]
     #     question = "What country has illicit drugs activities including a transshipment point for cocaine from South America to North America and illicit cultivation of cannabis?"
     #     self.processLanguage = QuestionInformationAnalyser()
     #     self.processLanguage.analyseQuestion(question)
     #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    # def test_AnalyseQuestion41ShouldReturnProperDictionary(self):
-    #     expectedDictionary = {}
-    #     expectedDictionary['unemployment rate'] = ["25%"]
-    #     expectedDictionary['industries'] = ['tourism', 'footwear']
-    #     question = "My unemployment rate is greater than 25% and my industries include tourism and footwear."
-    #     self.processLanguage = QuestionInformationAnalyser()
-    #     self.processLanguage.analyseQuestion(question)
-    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+    def test_AnalyseQuestion41ShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['unemployment rate'] = ["25%"]
+        expectedDictionary['industries'] = ['tourism', 'footwear']
+        question = "My unemployment rate is greater than 25% and my industries include tourism and footwear."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
     def test_AnalyseQuestion42ShouldReturnProperDictionary(self):
         expectedDictionary = {}
@@ -374,12 +375,14 @@ class testQuestionInformationAnalyser(TestCase):
         question = "What country has 13.694 million internet users?"
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)
+
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    # def test_AnalyseQuestion43ShouldReturnProperDictionary(self):
+    # def test_AnalyseQuestion44ShouldReturnProperDictionary(self):
     #     expectedDictionary = {}
-    #     expectedDictionary['serious offense'] = ["13.694 million"]
+    #     expectedDictionary['drug trafficking'] = ["serious offense"]
     #     question = "What country considers illicit drug trafficking as a serious offense and carry death penalty?"
     #     self.processLanguage = QuestionInformationAnalyser()
     #     self.processLanguage.analyseQuestion(question)
+    #     print self.processLanguage.questionDictionary
     #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
