@@ -1,6 +1,7 @@
 from unittest import TestCase
 import json
 from os import path
+from elasticsearch import Elasticsearch
 from naturalLanguagePython.countryPersistence.countryRepositoryElasticSearch import CountryRepositoryElasticSearch
 __author__ = 'Antoine'
 
