@@ -21,25 +21,25 @@ class TestSearchInformation(TestCase):
         self.dictionaryForFloatWithMillion = {"population": ["1.50 million"]}
 
     #Starting test for the between search strategy
-    def test_findingCorrespondingInformationInsideDictionaryWhenUsingTheBetweenSearchStrategyShouldReturnTrue(self):
-        keyword = "population"
-        wantedInformation = ["12344", "12346"]
-        self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
-
-    def test_findingCorrespondingInformationInsideDictionaryWhenUsingBetweenSearchStrategyAndAGapOfMoreThan10ShouldReturnTrue(self):
-        keyword = "population"
-        wantedInformation = ["12334", "12356"]
-        self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
-
-    def test_notFindingCorrespondingInformationWhenUsingBetweenSearchStrategyShouldReturnFalse(self):
-        keyword = "population"
-        wantedInformation = ["12334", "12344"]
-        self.assertFalse(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
-
-    def test_findingCorrespondingInformationWhenUsingBetweenSearchStrategyWithFloatNumberShouldReturnTrue(self):
-        keyword = "population"
-        wantedInformation = ["1.40", "1.60"]
-        self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForFloat, keyword, wantedInformation))
+    # def test_findingCorrespondingInformationInsideDictionaryWhenUsingTheBetweenSearchStrategyShouldReturnTrue(self):
+    #     keyword = "population"
+    #     wantedInformation = ["12344", "12346"]
+    #     self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
+    #
+    # def test_findingCorrespondingInformationInsideDictionaryWhenUsingBetweenSearchStrategyAndAGapOfMoreThan10ShouldReturnTrue(self):
+    #     keyword = "population"
+    #     wantedInformation = ["12334", "12356"]
+    #     self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
+    #
+    # def test_notFindingCorrespondingInformationWhenUsingBetweenSearchStrategyShouldReturnFalse(self):
+    #     keyword = "population"
+    #     wantedInformation = ["12334", "12344"]
+    #     self.assertFalse(self.searchMethodBetween.findInformation(self.dictionaryForInteger, keyword, wantedInformation))
+    #
+    # def test_findingCorrespondingInformationWhenUsingBetweenSearchStrategyWithFloatNumberShouldReturnTrue(self):
+    #     keyword = "population"
+    #     wantedInformation = ["1.40", "1.60"]
+    #     self.assertTrue(self.searchMethodBetween.findInformation(self.dictionaryForFloat, keyword, wantedInformation))
 
     # def test_notFindingCorrespondingInformationWhenUsingBetweenSearchStrategyWithFloatNumberShouldReturnFalse(self):
     #     keyword = "population"

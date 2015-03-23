@@ -111,10 +111,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Vanuatu"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
-    #    askedQuestion = "My population growth rate is between 1.44% and 1.47%."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
+        askedQuestion = "My population growth rate is between 1.44% and 1.47%."
+        expectedNameOfCountry = ""
+        self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheLatitudeShouldReturnCountryName(self):
         askedQuestion = "What country has a latitude of 41.00 S? "
@@ -170,3 +170,6 @@ class TestQuestionResponder(TestCase):
         askedQuestion = "What country has declared its independence on 22 May 1990?"
         expectedCountryName = "Yemen"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheMajorIndustriesShouldReturnCountryName(self):
+        askedQuestion = ""
