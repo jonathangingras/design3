@@ -9,8 +9,10 @@ class SearchStartsWith(SearchInformation):
 
     def createSearchQuery(self, keyword, value):
         query = {
-            "query":
-                {
-                    "match_phrase_prefix": {keyword: value}
+            "query":{
+                "match_phrase_prefix" : {
+                    keyword : value
                 }
+            }
         }
+        return query

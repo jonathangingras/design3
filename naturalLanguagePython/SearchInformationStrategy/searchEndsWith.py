@@ -8,6 +8,11 @@ class SearchEndsWith(SearchInformation):
         query = {
             "query":
                 {
-                    "match_phrase_prefix": {keyword: value}
+                    "fuzzy": {
+                        keyword:{
+                            "value": value,
+                            }
+                    }
                 }
         }
+        return query
