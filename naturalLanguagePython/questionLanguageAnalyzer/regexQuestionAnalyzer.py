@@ -6,7 +6,7 @@ import sys
 class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexKeyword = [r"(?<=starts with )(\w+){1}",
+        self.listRegexValueWord = [r"(?<=starts with )([A-Z]{1}[a-z]+){1}",
                                  r"(?<=ends with )(\w+){1}",
                                  r"((?<=including )|(?<=include )|(?<= are ))((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))",
                                  r"((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+))",
@@ -16,8 +16,10 @@ class RegexQuestionAnalyzer(object):
                                  r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
                                  r"(\d+\.?\d*\s\w+\/\s?\d+)",
-                                 r"(?<=What country has )([A-Z][a-z]+[^d ]\b)",
+                                 r"(?<=[Ww]hat country has )([A-Z][a-z]+[^d ]\b)",
                                  r"(\.[a-z]+)",
+                                 r"((?<=including a )|(?<=(?<!(including ))ing\b as a ))(\w+\s?)+",
+                                 r"(\d*\.?\d+\%)",
                                  r"(?<= contains )(\w+\s?){1,2}",
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+(\s|\.)\d+\%?)(\s[a-z]{1,2})?(\s[A-Z]{1,})?",
@@ -31,8 +33,9 @@ class RegexQuestionAnalyzer(object):
                              r"((?<=[Mm]y )(\w+){1}(?= \w*\s?starts))",
                              r"(((?<=has\sa[n\s])\s?(\w+\s?){1,3})((?= of )|(?= between )|(?= greater )|(?= including)|(?= \w+ starts)|(?= and )))",
                              r"((?<=its )|(?<= our ))(\w+)",
-                             r"(?<=What country has )([a-z]{3,}[^d ]\b)(?= including )",
-                             r"(?<=What country has a )(.+)(?= of )",
+                             r"(?<=[Ww]hat country has )(([a-z]{3,}[^d ]\b)|(\w+\s?){1,3})(?= including )",
+                             r"(?<=[Ww]hat country has a )(.+)(?= of )",
+                             r"((?<=[Ww]hat country considers )((\w+\s*?){2})(?= \w+ing as a ))",
                              r"(?<=is the )(.+)(?= of this country)",
                              r"(?<=The )(\w+\s?){1,3}(?= of this country)"]
 
@@ -55,21 +58,22 @@ class RegexQuestionAnalyzer(object):
         return listStringfromRegex
 
 
+    def __removeDupplicateOfAList(self,listWithDouble):
+        for x in listWithDouble:
+            if (listWithDouble.count(x) > 1):
+                listWithDouble.remove(x)
+        return self.__splitEnumerationItemInListString(listWithDouble)
+
     def __parseAllRegexWord(self):
         self.listString = self.__removeSubPartOfSameStringOfAList(self.listString)
-        for x in self.listString:
-            if (self.listString.count(x) > 1):
-                self.listString.remove(x)
-        self.__splitEnumerationItemInListString()
+        self.listString = self.__removeDupplicateOfAList(self.listString)
         return self.listString
-
-
 
     def parseAllRegexKeyWord(self, question):
         indexBegin = 0
 
 
-        for reg in self.listRegexKeyword:
+        for reg in self.listRegexValueWord:
             regex = re.compile(reg)
             wordReturn = regex.search(question)
             if  wordReturn != None:
@@ -77,17 +81,20 @@ class RegexQuestionAnalyzer(object):
                     listTemp = []
                     listTemp = regex.findall(question)
                     if len(listTemp) > 1:
+
                         for key in listTemp:
                             listOfKey = []
                             for i in key:
                                 listOfKey.append(str(i))
 
                             listOfKey = self.__removeSubPartOfSameStringOfAList(listOfKey)
+
                             if self.listString.count(listOfKey[indexBegin]) == False:
                                 self.listString.append(listOfKey[indexBegin])
                     else:
 
                         self.listString.append(regex.search(question).group())
+        # print self.listString
         return self.__parseAllRegexWord()
 
 
@@ -114,10 +121,7 @@ class RegexQuestionAnalyzer(object):
                     if(len(x)> len(y)):
                         self.listSubject.remove(y)
 
-        for x in self.listSubject:
-            if(self.listSubject.count(x) > 1):
-                self.listSubject.remove(x)
-        return self.listSubject
+        return self.__removeDupplicateOfAList(self.listSubject)
 
     def searchKeyword(self, question):
         for word in self.registerOfKeyword:
@@ -135,12 +139,12 @@ class RegexQuestionAnalyzer(object):
                 futurList.append(temp.lstrip(' '))
         return futurList
 
-    def __splitEnumerationItemInListString(self):
+    def __splitEnumerationItemInListString(self,listWithEnumaration):
         futurList = []
-        for item in self.listString:
+        for item in listWithEnumaration:
             for value in self.__splitEnumarationStringInToAList(item):
                 futurList.append(value)
-        self.listString = futurList
+        return futurList
 
     def __returnPositionInTheListForNearestItemMatching(self, question, x, listOfItem):
         nearestValueDistance = sys.maxint
@@ -155,7 +159,11 @@ class RegexQuestionAnalyzer(object):
         return nearestValuePosition
 
     def associateWord(self, question):
-        self.__splitEnumerationItemInListString()
+        # self.listString.sort()
+        self.listString = self.__splitEnumerationItemInListString(self.listString)
+        if(len(self.listSubject) > len(self.listString)):
+            self.listSubject = self.__removeSubPartOfSameStringOfAList(self.listSubject)
+
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
             for subject, key in zip(self.listSubject, self.listString):
                 self.dictWord[subject] = [key]

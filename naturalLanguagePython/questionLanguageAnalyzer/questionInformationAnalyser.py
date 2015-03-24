@@ -26,11 +26,12 @@ class QuestionInformationAnalyser(object):
     def analyseQuestion(self, question):
         keywordList = self.regexAnalyser.parseAllRegexKeyWord(question)
         wordSubject = self.regexAnalyser.searchSubject(question)
+        # print "regex keyword"
         # print keywordList
         # print wordSubject
 
-
         if len(keywordList) == 0 and len(wordSubject) == 0:
+
             self.__taggingQuestionWithNltk(question)
             self.questionDictionary = self.processLanguage.buildDictionaries(question)
 
@@ -38,7 +39,6 @@ class QuestionInformationAnalyser(object):
             self.__analyseQuestionSubject(question,keywordList)
         elif len(keywordList) == 0 and len(wordSubject) != 0:
             self.__analyseQuestionValue(question,wordSubject)
-
 
         else:
 
@@ -51,7 +51,6 @@ class QuestionInformationAnalyser(object):
         listSubject = self.processLanguage.extractOnlyQuestionSubject()
         self.__buildADictionnaryWithProperKeyAndValue(keywordlist, listSubject,question)
 
-
     def __splitEnumerationItemInListString(self,listString):
         futurList = []
         for item in listString:
@@ -63,7 +62,6 @@ class QuestionInformationAnalyser(object):
                     futurList.append(temp.lstrip(' '))
         return futurList
 
-
     def __buildADictionnaryWithProperKeyAndValue(self, listValue, wordSubject, question):
         if len(wordSubject) == 1 and len(listValue) == 1:
             self.questionDictionary[wordSubject.pop()] = listValue
@@ -71,7 +69,6 @@ class QuestionInformationAnalyser(object):
             for x in wordSubject:
                 self.questionDictionary[x] = listValue
         listValue = self.__splitEnumerationItemInListString(listValue)
-        #print listValue
 
         if(len(listValue) == 1 and len(listValue) == 1):
             for subject, key in zip(wordSubject, listValue):
@@ -96,11 +93,6 @@ class QuestionInformationAnalyser(object):
 
         self.__buildADictionnaryWithProperKeyAndValue(listValue, wordSubject, question)
 
-
     def __taggingQuestionWithNltk(self, question):
         self.processLanguage.tokenizeQuestion(question)
         self.processLanguage.taggingQuestion()
-
-
-
-
