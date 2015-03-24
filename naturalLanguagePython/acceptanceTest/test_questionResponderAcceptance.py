@@ -179,7 +179,10 @@ class TestQuestionResponder(TestCase):
     def test_askingQuestionWhenSearchingByGreaterPopulationShouldReturnCountryName(self):
         askedQuestion = "What country has a population greater than 1 300 692 576?"
         expectedCountryName = ""
-        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+        dictionary = self.questionResponder.askQuestion(askedQuestion)
+        if "Bahrain" in dictionary:
+            print("allo")
+        self.assertEqual(expectedCountryName, dictionary)
 
     def test_askingQuestionWhenSearchingByTheStartsPartOfAQuestionShouldReturnCountryName(self):
         askedQuestion = "My capital name starts with Moga."
@@ -198,5 +201,5 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByTheExactPopulationGrowthRatePercentageShouldReturnCountryName(self):
         askedQuestion = "What country has a population growth rate of 1.46%"
-        expectedCountryName = ""
+        expectedCountryName = "Canada"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

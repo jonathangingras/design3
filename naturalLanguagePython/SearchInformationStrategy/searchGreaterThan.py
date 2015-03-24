@@ -7,18 +7,18 @@ class SearchGreaterThan(SearchInformation):
         query = {
             "query":
                 {
-                    "filtered":{
-                        "query":{"match_all":{}},
-                        "filter": {
-                            "range":{
-                                keyword:{
-                                    "lte": (value)
+                    "range":
+                        {
+                            keyword:
+                                {
+                                    "from": value,
+                                    "to": "*",
+                                    "boost": 2.0
                                 }
-                            }
-                    }
-                    }
-
+                        }
                 }
         }
+
+
         print(query)
         return query

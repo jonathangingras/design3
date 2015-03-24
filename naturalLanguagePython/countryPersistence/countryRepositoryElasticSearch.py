@@ -21,13 +21,14 @@ class CountryRepositoryElasticSearch(CountryRepository):
         searchStrategy = self.__createStrategy(strategy)
         query = searchStrategy.createSearchQuery(keyword, value)
         possibleCountry = self.countryDB.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
-        print(len(possibleCountry["hits"]["hits"]))
+        print(possibleCountry["hits"]["hits"])
         for returnedResult in possibleCountry["hits"]["hits"]:
             listOfPossibleCountryByKeyword.append(returnedResult["_id"])
         self.listOfPossibleCountry.append(listOfPossibleCountryByKeyword)
 
     def searchCountries(self, keywordDictionary, searchStrategyByKeyword):
         self.listOfPossibleCountry = []
+        print(keywordDictionary)
         for keyword in keywordDictionary:
             keywordListKeyword = keywordDictionary[keyword]
             strategyListKeyword = searchStrategyByKeyword[keyword]
