@@ -10,6 +10,7 @@ add_library(d3t12_vision
 	BlackCubeDetector.cc
 	WhiteCubeDetector.cc
 	CubeDetectorFactory.cc
+	CubeCenterTargeter.cc
 )
 
 target_link_libraries(d3t12_vision

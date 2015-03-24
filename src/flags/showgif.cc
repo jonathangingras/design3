@@ -120,7 +120,7 @@ void findCountries(const char* directory, std::vector<Country>& countries) {
 	fs::directory_iterator end_iter;
 
 	for(fs::directory_iterator dir_itr(directory); dir_itr != end_iter; ++dir_itr) {		
-		boost::regex fileRegEx(".*Flag_(.*)\\.gif");
+		boost::regex fileRegEx(".*/(.*)\\.gif");
 		boost::smatch what;
 
 		std::string filename = dir_itr->path().string();
