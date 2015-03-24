@@ -125,7 +125,6 @@ class RegexQuestionAnalyzer(object):
                 self.listKeyword.append(word)
         return self.listKeyword
 
-
     def __splitEnumarationStringInToAList(self, item):
         futurList = []
         listTemp = str(item).replace(' and ', ',').split(',')

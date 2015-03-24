@@ -9,5 +9,5 @@ class SearchInformation(object):
         self.regex = wantedInformation
 
     @abc.abstractmethod
-    def createQuery(self, keyword, value):
+    def createSearchQuery(self, keyword, value):
         return

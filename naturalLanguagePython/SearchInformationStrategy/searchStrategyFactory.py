@@ -4,6 +4,7 @@ from naturalLanguagePython.searchInformationStrategy.searchContains import Searc
 from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.searchInformationStrategy.searchBetween import SearchBetween
+from naturalLanguagePython.searchInformationStrategy.searchGreaterThan import SearchGreaterThan
 
 class SearchStrategyFactory(object):
 
@@ -21,6 +22,8 @@ class SearchStrategyFactory(object):
             self.searchStrategy = SearchEndsWith()
         elif strategyParticularity == "between":
             self.searchStrategy = SearchBetween()
+        elif strategyParticularity == "greater than":
+            self.searchStrategy = SearchGreaterThan()
         elif strategyParticularity is None:
             self.searchStrategy = SearchContains()
         return self.searchStrategy
