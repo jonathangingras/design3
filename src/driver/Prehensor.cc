@@ -17,11 +17,11 @@ void Prehensor::close() {
 }
 
 void Prehensor::rise() {
-	verticalController->setAngle(90);
+	verticalController->setAngle(0);
 }
 
 void Prehensor::lower() {
-	verticalController->setAngle(0);
+	verticalController->setAngle(90);
 }
 
 }

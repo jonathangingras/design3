@@ -34,12 +34,8 @@ catkin_package(
 	d3_table_transform
 )
 
-set(PKG_SOURCE
-	src/remote.cc
-)
-
 add_executable( robot_remote
-	${PKG_SOURCE}
+	src/remote.cc
 )
 target_link_libraries( robot_remote 
 	${catkin_LIBRARIES} 

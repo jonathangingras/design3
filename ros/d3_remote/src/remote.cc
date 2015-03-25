@@ -9,45 +9,53 @@ namespace d3t12 {
 }
 
 struct RobotPositioner {
-	boost::mutex* mutex;
+	boost::mutex mutex;
 	d3t12::MotorController& motors;
+
 	float x, y, yaw;
+	int counter;
 
 	inline RobotPositioner(d3t12::MotorController& _motors):
-		motors(_motors), mutex(new boost::mutex) {}
+		motors(_motors), counter(0), x(0), y(0), yaw(0) {}
 
-	~RobotPositioner() {
-		delete mutex;
-	}
-
-	void operator()(const d3t12::tf::robotPose::ConstPtr& pose) {
-		mutex->lock();
-		x = pose->x; y = pose->y; yaw = pose->yaw;
+	void callback(const d3t12::tf::robotPose::ConstPtr& pose) {
+		mutex.lock();
+		if(++counter < 5000) {
+			x += pose->x; y += pose->y; yaw += pose->yaw;
+			mutex.unlock();
+			return;
+		}
+		else {
+			x /= counter; y /= counter; yaw /= counter;
+			counter = 0;
+		}
+		
 		motors.informPosition(x, y, yaw);
-		mutex->unlock();
+
+		mutex.unlock();
 	}
 
 	void goTo(float _x, float _y, float _yaw) {
-		mutex->lock();
+		mutex.lock();
 		float comX = _x - x, comY = _y - y, comYaw = _yaw - yaw;
 		motors.commandPosition(comX, comY, comYaw);
-		mutex->unlock();
+		mutex.unlock();
 	}
 };
 
 struct RemoteConsole {
-	ros::NodeHandle& node;
-	RobotPositioner& position; 
-	d3t12::LEDMatrixController& leds;
-	d3t12::Prehensor& prehensor;
-	d3t12::CameraPoseHandler& cameraPose;
+	ros::NodeHandle* node;
+	RobotPositioner* position; 
+	d3t12::LEDMatrixController* leds;
+	d3t12::Prehensor* prehensor;
+	d3t12::CameraPoseHandler* cameraPose;
 
 	inline RemoteConsole(
-		ros::NodeHandle& _node,
-		RobotPositioner& _position, 
-		d3t12::LEDMatrixController& _leds,
-		d3t12::Prehensor& _prehensor,
-		d3t12::CameraPoseHandler& _cameraPose
+		ros::NodeHandle* _node,
+		RobotPositioner* _position, 
+		d3t12::LEDMatrixController* _leds,
+		d3t12::Prehensor* _prehensor,
+		d3t12::CameraPoseHandler* _cameraPose
 	): node(_node), position(_position), leds(_leds), prehensor(_prehensor), cameraPose(_cameraPose) {}
 
 	void printLine(const std::string& line) {
@@ -61,16 +69,16 @@ struct RemoteConsole {
 		
 		if(command == "pr up") {
 			printLine("rising prehensor");
-			prehensor.rise();
+			prehensor->rise();
 		} else if(command == "pr down") {
 			printLine("lowering prehensor");
-			prehensor.lower();
+			prehensor->lower();
 		} else if(command == "pr open") {
 			printLine("opening prehensor");
-			prehensor.open();
+			prehensor->open();
 		} else if(command == "pr close") {
 			printLine("closing prehensor");
-			prehensor.close();
+			prehensor->close();
 		} else if(command[0] == 'g' && command[1] == 'o') {
 			double xyyaw[3] = {0,0,0};
 			char commandCharArray[command.length() + 1];
@@ -82,11 +90,7 @@ struct RemoteConsole {
 				token = strtok(NULL, " ,");
 				xyyaw[i] = atof(token);
 			}
-			if(xyyaw[0] && xyyaw[1]) {
-				position.goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
-			} else {
-				printLine("bad go instruction!");
-			}
+			position->goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
 		} else if(command[0] == 'c' && command[1] == 'a' && command[2] == 'm') {
 			double angles[2] = {0,0};
 			char commandCharArray[command.length() + 1];
@@ -100,8 +104,8 @@ struct RemoteConsole {
 			}
 			if(angles[0] && angles[1]) {
 				printLine("setting cam pitch/yaw");
-				cameraPose.setPitch(angles[0]);
-				cameraPose.setYaw(angles[1]);
+				cameraPose->setPitch(angles[0]);
+				cameraPose->setYaw(angles[1]);
 			} else {
 				printLine("bad cam instruction!");
 			}
@@ -115,20 +119,20 @@ struct RemoteConsole {
 			printLine(token);
 			if(!strcmp(token, "add")) {
 				token = strtok(NULL, " ,");
-				if(token) leds.addNew(token);
-				else leds.addBlank();
+				if(token) leds->addNew(token);
+				else leds->addBlank();
 			} else if(!strcmp(token, "alloff")) {
 				printLine("turning all LEDs off");
-				leds.turnAllOff();
+				leds->turnAllOff();
 			} else if(!strcmp(token, "master")) {
 				token = strtok(NULL, " ,");
 				if(token) {
 					if(!strcmp(token, "on")) {
 						printLine("turning master LED on");
-						leds.turnMasterOn();
+						leds->turnMasterOn();
 					} else if(!strcmp(token, "off")) {
 						printLine("turning master LED off");
-						leds.turnMasterOff();
+						leds->turnMasterOff();
 					}
 				}
 				else {
@@ -136,14 +140,14 @@ struct RemoteConsole {
 				}
 			}
 		} else if(command == "exit") {
-			node.shutdown();
+			node->shutdown();
 		} else {
 			printLine("no such command!");
 		}
 	}
 
 	void operator()() {
-		while(node.ok()) {
+		while(node->ok()) {
 			prompt();
 		}
 	}
@@ -153,12 +157,14 @@ int main(int argc, char** argv) {
 	ros::init(argc, argv, "robot_remote");
 	ros::NodeHandle node;
 
+	d3t12::MicroControllerCommandPort::OStreamPtr stream(
+				new std::ofstream("/dev/ttySTM32")
+			);
+
 	//Micro-controller command port
 	d3t12::MicroControllerCommandPort::Ptr commandPort(
 		new d3t12::MicroControllerCommandPort(
-			d3t12::MicroControllerCommandPort::OStreamPtr(
-				new std::ofstream("/dev/ttyACM2")
-			)
+			stream
 		)
 	);
 	 
@@ -168,9 +174,9 @@ int main(int argc, char** argv) {
 	d3t12::CameraPoseHandler cameraPose;
 
 	RobotPositioner positioner(motors);
-	ros::Subscriber robotPoseReceiver = node.subscribe<d3t12::tf::robotPose>("robot_positioner/robot_pose", 1, positioner);
+	ros::Subscriber robotPoseReceiver = node.subscribe<d3t12::tf::robotPose>("robot_positioner/robot_pose", 1, &RobotPositioner::callback, &positioner);
 
-	RemoteConsole remoteConsole(node, positioner, leds, prehensor, cameraPose);
+	RemoteConsole remoteConsole(&node, &positioner, &leds, &prehensor, &cameraPose);
 	boost::thread remoteConsoleThread(remoteConsole);
 
 	ros::spin();
