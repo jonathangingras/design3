@@ -201,5 +201,50 @@ class TestQuestionResponder(TestCase):
 
     def test_askingQuestionWhenSearchingByTheExactPopulationGrowthRatePercentageShouldReturnCountryName(self):
         askedQuestion = "What country has a population growth rate of 1.46%"
+        expectedCountryName = "Israel"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheClimateAndTheStartsPortionOfCapitalNameShouldReturnCountryName(self):
+        askedQuestion = "What country has a tropical climate and has a capital that starts with the letters Phn?"
+        expectedCountryName = "Cambodia"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheIllegalActivitiesShouldReturnCountryName(self):
+        askedQuestion = "What country has illicit drugs activities including a transshipment point for cocaine from South America to North America and illicit cultivation of cannabis?"
+        expectedCountryName = "Jamaica"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByTheIllicitDrugPenaltyShouldReturnCountryName(self):
+        askedQuestion = "What country considers illicit drug trafficking as a serious offenses and carry death penalty?"
+        expectedCountryName = "Brunei"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByGreaterDeathRateAndStartPortionOfCapitalShouldReturnCountryName(self):
+        askedQuestion = "My death rate is greater than 13 death/1000 and my capital starts with Mos."
         expectedCountryName = "Canada"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    # def test_askingQuestionWhenSearchingByBetweenTheElectricityProductionShouldReturnCountryName(self):
+    #     askedQuestion = "My electricity production is between 600 and 650 billion kWh."
+    #     expectedCountryName = "Canada"
+    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #
+    # def test_askingQuestionWhenSearchingByItsInflationRateBetweenShouldReturnCountryName(self):
+    #     askedQuestion = "What country has an inflation rate between 0.3% and 0.5%?"
+    #     expectedCountryName = "Canada"
+    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #
+    # def test_askingQuestionWhenSearchingByItsBetweenDeathRatesShouldReturnCountryName(self):
+    #     askedQuestion = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
+    #     expectedCountryName = "canada"
+    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #
+    # def test_askingQuestionWhenSearchingByIndustriesAndUnemploymentRateShouldReturnCountryName(self):
+    #     askedQuestion = "My unemployment rate is greater than 25% and my industries include tourism and footwear."
+    #     expectedCountryName = "canada"
+    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #
+    # def test_askingQuestionWhenSearchingByItsLocalShortCapitalNameCompositionAndByTheApproximationOfBirthShouldReturnCountryName(self):
+    #     askedQuestion = "My birth rate is approximately 16 births/1000 and my local short country name contains 2 words."
+    #     expectedCountryName = "canada"
+    #     # self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

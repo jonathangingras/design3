@@ -12,4 +12,5 @@ class SearchContains(SearchInformation):
                     "match": {keyword: value}
                 }
         }
+        print query
         return query

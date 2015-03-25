@@ -9,7 +9,7 @@ class MatchKeywordAndSearchStrategy(object):
         self.startsWith = "starts with"
         self.endsWith = "ends with"
         self.searchStrategyLinkedToKeyword= {}
-        self.regex = [r"$ is .", r"$ .", r"$ name .", r"and ."]
+        self.regex = [r"$ is .", r"$ .", r"$ name .", r"and .", r"$ that ."]
 
     def __createSearchStrategyLinkedKeywordDictionary(self, informationDictionary):
         for element in informationDictionary:

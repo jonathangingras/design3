@@ -48,7 +48,9 @@ class CountryService(object):
                                                                                                wantedSearchStrategy)
         listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
             searchedInformationDict, wantedSearchStrategy)
+        print(len(listOfPossibleCountryByCategory[0]))
         if len(listOfPossibleCountryByCategory) == 1:
+            print("patate")
             nameOfCountry = listOfPossibleCountryByCategory[0]
         else:
             for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:

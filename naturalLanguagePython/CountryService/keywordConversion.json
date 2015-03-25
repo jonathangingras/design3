@@ -10,7 +10,11 @@
       "total area": "area",
       "major urban areas": "major urban areas - population",
       "import partners": "imports - partners",
-      "internet": "internet country code"
+      "internet": "internet country code",
+      "tropical climate": "climate",
+      "nordic climate": "climate",
+      "illicit drugs activities": "illicit drugs",
+      "illicit drug": "illicit drugs"
     }
   ]
 
