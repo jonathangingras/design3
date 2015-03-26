@@ -54,17 +54,18 @@ class CountryService(object):
                     break
         return nameOfCountry
 
+    def __verifyNameOfCountryFormat(self, nameOfCountry):
+        if type(nameOfCountry) is list:
+            nameOfCountry = nameOfCountry[0]
+        return nameOfCountry
+
     def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
         wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict,
                                                                                                wantedSearchStrategy)
         listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
             searchedInformationDict, wantedSearchStrategy)
         nameOfCountry = self.__findCountryNameInPossibleKeywordByInformation(listOfPossibleCountryByCategory)
-        if type(nameOfCountry) is list:
-            if len(nameOfCountry) > 1:
-                return str(nameOfCountry)
-            else:
-                nameOfCountry = nameOfCountry[0]
+        nameOfCountry = self.__verifyNameOfCountryFormat(nameOfCountry)
         return nameOfCountry
 
     def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):

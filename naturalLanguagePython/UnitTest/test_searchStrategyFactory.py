@@ -5,11 +5,16 @@ from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory impor
 from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
 from naturalLanguagePython.searchInformationStrategy.searchStartsWith import SearchStartsWith
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
-from naturalLanguagePython.searchInformationStrategy.searchBetween import SearchBetween
+from naturalLanguagePython.searchInformationStrategy.searchGreaterThan import SearchGreaterThan
+from naturalLanguagePython.searchInformationStrategy.searchLessThan import SearchLessThan
+from os import path
+
 
 class TestSearchStrategyFactory(TestCase):
+
     def setUp(self):
-        self.searchStrategyFactory = SearchStrategyFactory("path")
+        self.searchStrategyFactory = SearchStrategyFactory("C:\Users\Antoine\Documents\\design3\\naturalLanguagePython")
+
 
     def test_creatingSearchStrategyWhenSearchParticularityIsNoneShouldReturnObjectTypeSearchContains(self):
         searchMethod = self.searchStrategyFactory.createSearchStrategy()
@@ -26,7 +31,12 @@ class TestSearchStrategyFactory(TestCase):
         expectedClassType = SearchEndsWith
         self.assertIsInstance(searchMethod, expectedClassType)
 
-    def test_creatingSearchStrategyWhenSearchParticularityIsBetweenShouldReturnInstanceOfBetween(self):
-        searchMethod = self.searchStrategyFactory.createSearchStrategy("between")
-        expectedClassType = SearchBetween
+    def test_creatingSearchStrategyWhenSearchParticularityIsGreaterThanShouldReturnInstanceOfBetween(self):
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("greater than")
+        expectedClassType = SearchGreaterThan
+        self.assertIsInstance(searchMethod, expectedClassType)
+
+    def test_cratingSearchStrategyWhenSearchParticularityIsLesserThanShouldReturnInstanceOfLessThan(self):
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("less than")
+        expectedClassType = SearchLessThan
         self.assertIsInstance(searchMethod, expectedClassType)

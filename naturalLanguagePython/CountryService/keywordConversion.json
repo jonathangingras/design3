@@ -14,7 +14,9 @@
       "tropical climate": "climate",
       "nordic climate": "climate",
       "illicit drugs activities": "illicit drugs",
-      "illicit drug": "illicit drugs"
+      "illicit drug": "illicit drugs",
+      "electricity production": "electricity - production",
+      "inflation rate": "inflation rate (consumer prices)"
     }
   ]
 

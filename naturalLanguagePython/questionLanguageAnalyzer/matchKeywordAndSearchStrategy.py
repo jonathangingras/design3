@@ -26,9 +26,20 @@ class MatchKeywordAndSearchStrategy(object):
                 self.searchStrategyLinkedToKeyword[keyword].append(searchStrategy)
                 break
 
+    def __changeBetweenStrategyToGreaterAndLessThanStrategyInDictionary(self):
+        for keyword in self.searchStrategyLinkedToKeyword:
+            for listElement in self.searchStrategyLinkedToKeyword[keyword]:
+                if listElement == "between":
+                    listOfStrategy = self.searchStrategyLinkedToKeyword[keyword]
+                    positionOfBetweenInList = listOfStrategy.index(listElement)
+                    self.searchStrategyLinkedToKeyword[keyword][positionOfBetweenInList] = "greater than"
+                    self.searchStrategyLinkedToKeyword[keyword].insert(positionOfBetweenInList + 1, "less than")
+
     def matchSearchStrategyByKeyword(self, question, informationDictionary, extractedSearchStrategy):
         self.__createSearchStrategyLinkedKeywordDictionary(informationDictionary)
         for keyword in informationDictionary:
             for searchStrategy in extractedSearchStrategy:
                 self.__searchKeywordLinkInQuestionByRegex(keyword, question, searchStrategy)
+
+        self.__changeBetweenStrategyToGreaterAndLessThanStrategyInDictionary()
         return self.searchStrategyLinkedToKeyword

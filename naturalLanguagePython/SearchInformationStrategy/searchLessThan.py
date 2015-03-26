@@ -26,6 +26,8 @@ class SearchLessThan(SearchInformation):
         self.decrement = self.incrementByKeyword[keyword]
 
     def __decrementValue(self, value):
+        if "%" in value:
+            value = value.replace("%", "")
         if Decimal(value) < Decimal(self.minValue):
             self.searchFinished = True
         else:

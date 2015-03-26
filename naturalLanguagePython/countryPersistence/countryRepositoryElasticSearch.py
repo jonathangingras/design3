@@ -18,7 +18,6 @@ class CountryRepositoryElasticSearch(CountryRepository):
         return self.selfStrategyFactory.createSearchStrategy(strategy)
 
     def __searchPossibleCountryByKeywordAndInformation(self, keyword, value, strategy):
-        listOfPossibleCountryByKeyword = []
         searchStrategy = self.__createStrategy(strategy)
         possibleCountry = searchStrategy.createSearchQuery(keyword, value, self.countryDB)
         self.listOfPossibleCountry.append(possibleCountry)

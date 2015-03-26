@@ -91,10 +91,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Vanuatu"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
-    #    askedQuestion = "My population growth rate is between 1.44% and 1.47%."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByThePopulationGrowthRateShouldReturnTheNameOfTheCountry(self):
+       askedQuestion = "My population growth rate is between 1.44% and 1.47%."
+       expectedNameOfCountry = "Israel"
+       self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheLatitudeShouldReturnCountryName(self):
         askedQuestion = "What country has a latitude of 41.00 S? "
@@ -207,11 +207,11 @@ class TestQuestionResponder(TestCase):
     #     expectedCountryName = "Canada"
     #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
     #
-    # def test_askingQuestionWhenSearchingByItsInflationRateBetweenShouldReturnCountryName(self):
-    #     askedQuestion = "What country has an inflation rate between 0.3% and 0.5%?"
-    #     expectedCountryName = "Canada"
-    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
-    #
+    def test_askingQuestionWhenSearchingByItsInflationRateBetweenShouldReturnCountryName(self):
+        askedQuestion = "What country has an inflation rate between 0.3% and 0.5%?"
+        expectedCountryName = "Falkland_Islands_(Islas_Malvinas)"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
     def test_askingQuestionWhenSearchingByItsBetweenDeathRatesShouldReturnCountryName(self):
         askedQuestion = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
         expectedCountryName = "Austria"
