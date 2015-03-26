@@ -55,7 +55,6 @@ class ProcessLanguage(object):
     def extractOnlyQuestionValue(self):
         chunkParser = nltk.RegexpParser(self.chunkGramValueOnly)
         self.chunkedList = chunkParser.parse(self.taggedList)
-        # print self.chunkedList
         for subTreeQuestion in self.chunkedList.subtrees():
             if subTreeQuestion._label in ['ChunkValue']:
                 stringToConcat = ""
@@ -73,8 +72,6 @@ class ProcessLanguage(object):
     def buildDictionaries(self,question):
         self.extractOnlyQuestionValue()
         self.extractOnlyQuestionSubject()
-        # print self.keyWordList
-        # print self.importantWordList
 
         if len(self.keyWordList) == 1 and len(self.importantWordList) == 1:
             self.dictionariesWord[self.importantWordList.pop()] = self.keyWordList

@@ -17,7 +17,7 @@ class QuestionInformationAnalyser(object):
         return questionParticularity
 
     def analyseQuestion(self, question):
-        keywordList = self.regexAnalyser.parseAllRegexKeyWord(question)
+        keywordList = self.regexAnalyser.parseAllRegexValue(question)
         wordSubject = self.regexAnalyser.searchSubject(question)
         # print "regex keyword"
         # print keywordList

@@ -1,10 +1,15 @@
-from unittest import TestCase
+import unittest
+import re
+# from unittest import TestLoader
+# from unittest import TextTestRunner
+
 from naturalLanguagePython.questionLanguageAnalyzer.regexQuestionAnalyzer import RegexQuestionAnalyzer
 from mock import Mock
+import json
 __author__ = 'Antoine'
 
 
-class TestRegexQuestionAnalyser(TestCase):
+class TestRegexQuestionAnalyser(unittest.TestCase):
     def setUp(self):
         self.regexQuestionAnalyzer = RegexQuestionAnalyzer()
     def test_extractStrategyWhenHavingNoSpecifiedStrategyInQuestionShouldReturnEmptyList(self):
@@ -40,22 +45,22 @@ class TestRegexQuestionAnalyser(TestCase):
     def test_parseAllRegexKeywordWhenHavingAnEmptyQuestionShouldReturnAnEmptyList(self):
         question = ""
         expectedRegexKeywordList = []
-        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexValue(question))
 
     def test_parseAllRegexKeywordWhenHavingOnlyOneInformationInQuestionShouldReturnCorrectList(self):
         question = "My capital name starts with Moga."
         expectedRegexKeywordList = ["Moga"]
-        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexValue(question))
 
     def test_parseAllRegexKeywordWhenHavingTwoInformationInQuestionShouldReturnCorrectList(self):
         question = "My capital name starts with Ath and ends with ens."
         expectedRegexKeywordList = ["Ath", "ens"]
-        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexValue(question))
 
     def test_parseAllRegexKeywordWhenHavingThreeInformationInQuestionShouldReturnCorrectList(self):
         question = "The lotus blossom is the national symbol of this country , my internet code is .br and, my capital is Bruxelle"
         expectedRegexKeywordList =[".br", "Bruxelle", "lotus blossom"]
-        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexKeyWord(question))
+        self.assertEqual(expectedRegexKeywordList, self.regexQuestionAnalyzer.parseAllRegexValue(question))
 
     def test_removeDoubleInformationFetchedBySubjectRegexList(self):
         question = "My capital name starts with Ath."
@@ -66,18 +71,14 @@ class TestRegexQuestionAnalyser(TestCase):
         self.regexQuestionAnalyzer.associateWord(question)
         self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
 
-    # def test_assignAllValueToOneSubject(self):
-    #     question = "My latitude is 16 00 S and my longitude is 167 00 E and my export partners are US, Germany, UK, France, Spain, Canada and Italy."
-    #     self.regexQuestionAnalyzer.parseAllRegexKeyWord(question)
-    #     self.regexQuestionAnalyzer.searchSubject(question)
-    #     self.regexQuestionAnalyzer.associateWord(question)
-    #     expectedDict = {}
-    #     expectedDict["capital"] = ["Yaounde"]
-    #     expectedDict["capital name"] = ["Moga"]
-    #     print self.regexQuestionAnalyzer.listSubject
-    #     print self.regexQuestionAnalyzer.listString
-    #     print self.regexQuestionAnalyzer.dictWord
-    #     self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
+    def test_assignAllValueToOneSubject(self):
+        question = "My latitude is 16 00 S and my longitude is 167 00 E and my export partners are US, Germany, UK, France, Spain, Canada and Italy."
+        self.regexQuestionAnalyzer.parseAllRegexValue(question)
+        self.regexQuestionAnalyzer.searchSubject(question)
+        self.regexQuestionAnalyzer.associateWord(question)
+        expectedDict = {}
+        expectedDict["latitude"] = ["16 00 S"]
+        expectedDict["longitude"] = ["167 00 E"]
+        expectedDict["export partners"] = ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]
 
-
-
+        self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
