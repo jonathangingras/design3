@@ -22,9 +22,3 @@ class TestSearchStrategyServiceFactory(TestCase):
         dictionary = {"Capital": ["Ottawa"]}
         self.assertEqual(expectedSearchStrategyDictionary,
                          self.searchStrategyServiceFactory.wantedSearchStrategyValidator(dictionary, searchStrategyDictionary))
-
-    def test_createASearchStrategyFromNoneSearchStrategyShouldCreateTheRightStrategy(self):
-        self.assertIsInstance(self.searchStrategyServiceFactory.createStrategy(None), SearchContains)
-
-    def test_createASearchStrategyFromContainsSearchStrategyServiceFactoryShouldCreateTheRightStrategy(self):
-        self.assertIsInstance(self.searchStrategyServiceFactory.createStrategy('Contains'), SearchContains)

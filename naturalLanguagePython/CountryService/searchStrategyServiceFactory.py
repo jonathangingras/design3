@@ -6,9 +6,6 @@ defaultSearchStrategy = "Contains"
 
 class SearchStrategyServiceFactory(object):
 
-    def __init__(self):
-        self.searchStrategyFactory = SearchStrategyFactory()
-
     def wantedSearchStrategyValidator(self, searchedInformationDict, wantedSearchStrategy = None):
         if wantedSearchStrategy is None:
             wantedSearchStrategy = {}
@@ -30,6 +27,3 @@ class SearchStrategyServiceFactory(object):
                 wantedSearchStrategy[keyword].append("Contains")
                 numberOfSearchStrategy += 1
         return wantedSearchStrategy
-
-    def createStrategy(self, searchStrategy = None):
-        return self.searchStrategyFactory.createSearchStrategy(searchStrategy)

@@ -5,12 +5,15 @@ import re
 
 class SearchContains(SearchInformation):
 
-    def createSearchQuery(self, keyword, value):
+    def createSearchQuery(self, keyword, value, repository):
+        listOfPossibleCountryByKeyword = []
         query = {
             "query":
                 {
-                    "match": {keyword: value}
+                    "match_phrase": {keyword: value}
                 }
         }
-        print query
-        return query
+        possibleCountry = repository.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
+        for returnedResult in possibleCountry["hits"]["hits"]:
+            listOfPossibleCountryByKeyword.append(returnedResult["_id"])
+        return listOfPossibleCountryByKeyword

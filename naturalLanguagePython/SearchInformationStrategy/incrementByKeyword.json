@@ -1,0 +1,9 @@
+{
+  "population":"1",
+  "population growth rate": "0.01",
+  "death rate": "0.01",
+  "birth rate": "0.01",
+  "Inflation": "0.01",
+  "electricity  production" : "0.01",
+  "unemployment rate": "0.1"
+}

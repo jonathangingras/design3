@@ -61,11 +61,6 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "Australia"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsIllicitDrugsActivitiesShouldReturnTheNameOfTheCountry(self):
-    #    askedQuestion = "What country has illicit drugs activities including a transshipment point for cocaine from South America to North America and illicit cultivation of cannabis?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
-
     def test_askingQuestionWhenSearchingByItsExportPartnerShouldReturnTheNameOfTheCountry(self):
         askedQuestion = "My export partners are US, Germany, UK, France, Spain, Canada and Italy."
         expectedNameOfCountry = "Bangladesh"
@@ -76,20 +71,10 @@ class TestQuestionResponder(TestCase):
         expectedNameOfCountry = "United_States"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
-    #def test_askingQuestionWhenSearchingByItsDeathRateAndCapitalShouldReturnTheNameOfTheCountry(self):
-    #    askQuestion = "My death rate is greater than 13 death/1000 and my capital starts with Mos."
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
-
     def test_askingQuestionWhenSearchingByItsTotalAreaShouldReturnTheNameOfCountry(self):
         askQuestion = "What country has a total area of 390757 sq km?"
         expectedNameOfCountry = "Zimbabwe"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
-
-    #def test_askingQuestionWhenSearchingByAGreaterThanPopulationShouldReturnTheNameOfCountry(self):
-    #    askedQuestion = "What country has a population greater than 1 300 692 576?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsReligionsShouldReturnCountryName(self):
         askedQuestion = "What country has religions including Hindu, Muslim, Christian, and Sikh?"
@@ -100,11 +85,6 @@ class TestQuestionResponder(TestCase):
         askedQuestion = "22 September 1960 is the date of independence of this country."
         expectedNameOfCountry = "Mali"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
-
-    #def test_askingQuestionWhenSearchingByAIllicitActivityShouldReturnTheNameOfTheCountry(self):
-    #    askedQuestion = "What country considers illicit drug trafficking as a serious offense and carry death penalty?"
-    #    expectedNameOfCountry = ""
-    #    self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByItsLatitudeAndLongitudeShouldReturnTheNameOfTheCountry(self):
         askedQuestion = "My latitude is 16 00 S and my longitude is 167 00 E."
@@ -176,13 +156,11 @@ class TestQuestionResponder(TestCase):
         expectedCountryName = "South_Africa"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
-    def test_askingQuestionWhenSearchingByGreaterPopulationShouldReturnCountryName(self):
-        askedQuestion = "What country has a population greater than 1 300 692 576?"
-        expectedCountryName = ""
-        dictionary = self.questionResponder.askQuestion(askedQuestion)
-        if "Bahrain" in dictionary:
-            print("allo")
-        self.assertEqual(expectedCountryName, dictionary)
+    # def test_askingQuestionWhenSearchingByGreaterPopulationShouldReturnCountryName(self):
+    #     askedQuestion = "What country has a population greater than 1 300 692 576?"
+    #     expectedCountryName = ""
+    #     dictionary = self.questionResponder.askQuestion(askedQuestion)
+    #     self.assertEqual(expectedCountryName, dictionary)
 
     def test_askingQuestionWhenSearchingByTheStartsPartOfAQuestionShouldReturnCountryName(self):
         askedQuestion = "My capital name starts with Moga."
@@ -220,8 +198,8 @@ class TestQuestionResponder(TestCase):
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByGreaterDeathRateAndStartPortionOfCapitalShouldReturnCountryName(self):
-        askedQuestion = "My death rate is greater than 13 death/1000 and my capital starts with Mos."
-        expectedCountryName = "Canada"
+        askedQuestion = "My death rate is greater than 13 deaths/1000 and my capital starts with Mos."
+        expectedCountryName = "Russia"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     # def test_askingQuestionWhenSearchingByBetweenTheElectricityProductionShouldReturnCountryName(self):
@@ -234,15 +212,15 @@ class TestQuestionResponder(TestCase):
     #     expectedCountryName = "Canada"
     #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
     #
-    # def test_askingQuestionWhenSearchingByItsBetweenDeathRatesShouldReturnCountryName(self):
-    #     askedQuestion = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
-    #     expectedCountryName = "canada"
-    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
-    #
-    # def test_askingQuestionWhenSearchingByIndustriesAndUnemploymentRateShouldReturnCountryName(self):
-    #     askedQuestion = "My unemployment rate is greater than 25% and my industries include tourism and footwear."
-    #     expectedCountryName = "canada"
-    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    def test_askingQuestionWhenSearchingByItsBetweenDeathRatesShouldReturnCountryName(self):
+        askedQuestion = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
+        expectedCountryName = "canada"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
+    def test_askingQuestionWhenSearchingByIndustriesAndUnemploymentRateShouldReturnCountryName(self):
+        askedQuestion = "My unemployment rate is greater than 24% and my industries include tourism and footwear."
+        expectedCountryName = "Greece"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
     #
     # def test_askingQuestionWhenSearchingByItsLocalShortCapitalNameCompositionAndByTheApproximationOfBirthShouldReturnCountryName(self):
     #     askedQuestion = "My birth rate is approximately 16 births/1000 and my local short country name contains 2 words."

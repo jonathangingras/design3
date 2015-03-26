@@ -6,9 +6,10 @@ from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory impor
 
 class CountryRepositoryElasticSearch(CountryRepository):
 
-    def __init__(self):
+    def __init__(self, pathToModule):
         self.countryDB = Elasticsearch(['http://localhost:9200/country'])
-        self.selfStrategyFactory = SearchStrategyFactory()
+        self.selfStrategyFactory = SearchStrategyFactory(pathToModule)
+        self.pathToModule = pathToModule
 
     def addCountry(self, country, nameOfCountry):
         return #Script ran before to start and populate elasticsearch
@@ -19,15 +20,8 @@ class CountryRepositoryElasticSearch(CountryRepository):
     def __searchPossibleCountryByKeywordAndInformation(self, keyword, value, strategy):
         listOfPossibleCountryByKeyword = []
         searchStrategy = self.__createStrategy(strategy)
-        query = searchStrategy.createSearchQuery(keyword, value)
-        if type(query) is not dict:
-            possibleCountry = self.countryDB.search(index="", doc_type="", q=query, size= 46, fields= ["_id", "_score"])
-        else:
-            possibleCountry = self.countryDB.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
-        print(possibleCountry["hits"]["hits"])
-        for returnedResult in possibleCountry["hits"]["hits"]:
-            listOfPossibleCountryByKeyword.append(returnedResult["_id"])
-        self.listOfPossibleCountry.append(listOfPossibleCountryByKeyword)
+        possibleCountry = searchStrategy.createSearchQuery(keyword, value, self.countryDB)
+        self.listOfPossibleCountry.append(possibleCountry)
 
     def searchCountries(self, keywordDictionary, searchStrategyByKeyword):
         self.listOfPossibleCountry = []

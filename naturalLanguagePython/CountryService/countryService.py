@@ -11,7 +11,7 @@ from naturalLanguagePython.countryPersistence.countryRepositoryElasticSearch imp
 class CountryService(object):
 
     def __init__(self, currentWorkspacePath):
-        self.countryRepository = CountryRepositoryElasticSearch()
+        self.countryRepository = CountryRepositoryElasticSearch(currentWorkspacePath)
         self.searchStrategyServiceFactory = SearchStrategyServiceFactory()
         self.__dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
         self.__dictionaryValueFormatter = DictionaryValueInformationFormatter()
@@ -48,9 +48,7 @@ class CountryService(object):
                                                                                                wantedSearchStrategy)
         listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
             searchedInformationDict, wantedSearchStrategy)
-        print(len(listOfPossibleCountryByCategory[0]))
         if len(listOfPossibleCountryByCategory) == 1:
-            print("patate")
             nameOfCountry = listOfPossibleCountryByCategory[0]
         else:
             for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:

@@ -43,7 +43,13 @@ class DictionaryValueInformationFormatter(object):
                 formattedSlashListElement.append(listElement.replace("/ ", "/"))
             dictionary[element] = formattedSlashListElement
 
-
+    def __formatSpacingForIllicitDrugActivities(self, dictionary):
+        illicitDrug = "illicit drugs"
+        if illicitDrug in dictionary:
+            listOfValue = []
+            for valueElement in dictionary[illicitDrug]:
+                listOfValue += valueElement.split(" ")
+            dictionary[illicitDrug] = listOfValue
 
 
     def formatValueInformation(self, dictionary):
@@ -51,10 +57,7 @@ class DictionaryValueInformationFormatter(object):
         self.__formatSlashValueFormatting(dictionary)
         self.__formatLanguageKeyword(dictionary)
         self.__formatGeographicCoordinate(dictionary)
+        self.__formatSpacingForIllicitDrugActivities(dictionary)
         self.formatValueFromReligionKeyword.formatReligionsKeywordValue(dictionary)
-        for keyword in dictionary:
-            listOfValue = []
-            for valueElement in dictionary[keyword]:
-                listOfValue += valueElement.split(" ")
-            dictionary[keyword] = listOfValue
+
         return dictionary

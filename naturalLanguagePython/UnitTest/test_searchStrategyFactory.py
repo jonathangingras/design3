@@ -9,7 +9,7 @@ from naturalLanguagePython.searchInformationStrategy.searchBetween import Search
 
 class TestSearchStrategyFactory(TestCase):
     def setUp(self):
-        self.searchStrategyFactory = SearchStrategyFactory()
+        self.searchStrategyFactory = SearchStrategyFactory("path")
 
     def test_creatingSearchStrategyWhenSearchParticularityIsNoneShouldReturnObjectTypeSearchContains(self):
         searchMethod = self.searchStrategyFactory.createSearchStrategy()
