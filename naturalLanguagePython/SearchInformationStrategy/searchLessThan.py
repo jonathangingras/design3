@@ -13,22 +13,24 @@ class SearchLessThan(SearchInformation):
         incrementFile = open(path.realpath(pathToWorkingModule+ "/searchInformationStrategy/IncrementByKeyword.json"))
         self.lesserValueJson = json.load(lesserRangeFile)
         self.incrementByKeyword = json.load(incrementFile)
+        lesserRangeFile.close()
+        incrementFile.close()
 
     def __init__(self, pathToWorkingModule):
         self.__openJsonRangeFile(pathToWorkingModule)
 
     def __setMinValueToReach(self, keyword):
-        self.maxValue = self.lesserValueJson[keyword]
+        self.minValue = self.lesserValueJson[keyword]
 
     def __setDecrementValue(self, keyword):
-        self.increment = self.incrementByKeyword[keyword]
+        self.decrement = self.incrementByKeyword[keyword]
 
-    def __incrementValue(self, value):
+    def __decrementValue(self, value):
         splitValue = value.split(" ")
-        if Decimal(splitValue[0]) > Decimal(self.maxValue):
+        if Decimal(splitValue[0]) < Decimal(self.minValue):
             self.searchFinished = True
         else:
-            splitValue[0] = str(Decimal(splitValue[0]) + Decimal(self.increment))
+            splitValue[0] = str(Decimal(splitValue[0]) - Decimal(self.decrement))
         return splitValue[0]
 
     def createSearchQuery(self, keyword, value, repository):
@@ -42,12 +44,15 @@ class SearchLessThan(SearchInformation):
                     {
                         "regexp":
                             {
-                                keyword: value
+                                keyword: "("+value+")"
                             }
-                        }
+                    }
             }
-            value = self.__incrementValue(value)
+            value = self.__decrementValue(value)
+            print(value)
             possibleCountry = repository.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
+            print(possibleCountry)
             for returnedResult in possibleCountry["hits"]["hits"]:
                 self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
+
         return self.listOfPossibleCountryByKeyword

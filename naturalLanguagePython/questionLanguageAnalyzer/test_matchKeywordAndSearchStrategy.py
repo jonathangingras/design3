@@ -59,3 +59,12 @@ class TestMatchKeywordAndSearchStrategy(TestCase):
         self.assertEqual(expectedSearchStrategyByKeyword, self.matchKeywordAndSearchStrategy.matchSearchStrategyByKeyword(
             question, informationDictionary, extractedSearchStrategy
         ))
+
+    def test_matchingSearchStrategyAndKeywordWhenHavingTwoStrategyLinkedToTheSameKeywordShouldReturnBothOfThemInKeywordList(self):
+        question = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
+        expectedSearchStrategyByKeyword = {"death rate": ["greater than", "less than"]}
+        informationDictionary = {"death rate": ["10.37 deaths/1000", "10.40 deaths/1000"]}
+        extractedSearchStrategy = ["greater than", "less than"]
+        self.assertEqual(expectedSearchStrategyByKeyword, self.matchKeywordAndSearchStrategy.matchSearchStrategyByKeyword(
+            question, informationDictionary, extractedSearchStrategy
+        ))
