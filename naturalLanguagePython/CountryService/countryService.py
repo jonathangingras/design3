@@ -1,7 +1,6 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
 from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser import QuestionInformationAnalyser
-from naturalLanguagePython.countryPersistence.countryRepositoryDB import CountryRepositoryDB
 from naturalLanguagePython.countryService.countryServiceException import CountryServiceException
 from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
 from naturalLanguagePython.countryService.dictionaryValueInformationFormatter import DictionaryValueInformationFormatter
@@ -16,7 +15,6 @@ class CountryService(object):
         self.__dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
         self.__dictionaryValueFormatter = DictionaryValueInformationFormatter()
         self.questionAnalyzer = QuestionInformationAnalyser()
-        #self.__setupTheCountryRepository(currentWorkspacePath)
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
         if receivedQuestion is None:
@@ -42,21 +40,26 @@ class CountryService(object):
         formattedDictionary = self.__dictionaryValueFormatter.formatValueInformation(receivedDictionary)
         return formattedDictionary
 
-    def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
+    def __findCountryNameInPossibleKeywordByInformation(self, listOfPossibleCountryByCategory):
         nameOfCountry = ""
-        wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict,
-                                                                                               wantedSearchStrategy)
-        listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
-            searchedInformationDict, wantedSearchStrategy)
         if len(listOfPossibleCountryByCategory) == 1:
             nameOfCountry = listOfPossibleCountryByCategory[0]
         else:
             for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
-                numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(listOfPossibleCountryByCategory,
-                                                                                                   nameOfCountryFistCall)
-                if numberOfAppearanceOfNameOfCountry == len(listOfPossibleCountryByCategory):
+                numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(
+                    listOfPossibleCountryByCategory,
+                    nameOfCountryFistCall)
+                if numberOfAppearanceOfNameOfCountry >= len(listOfPossibleCountryByCategory):
                     nameOfCountry = nameOfCountryFistCall
                     break
+        return nameOfCountry
+
+    def searchCountry(self, searchedInformationDict, wantedSearchStrategy = None):
+        wantedSearchStrategy = self.searchStrategyServiceFactory.wantedSearchStrategyValidator(searchedInformationDict,
+                                                                                               wantedSearchStrategy)
+        listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
+            searchedInformationDict, wantedSearchStrategy)
+        nameOfCountry = self.__findCountryNameInPossibleKeywordByInformation(listOfPossibleCountryByCategory)
         if type(nameOfCountry) is list:
             if len(nameOfCountry) > 1:
                 return str(nameOfCountry)

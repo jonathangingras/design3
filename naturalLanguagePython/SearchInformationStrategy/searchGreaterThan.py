@@ -35,24 +35,30 @@ class SearchGreaterThan(SearchInformation):
             splitValue[0] = str(Decimal(splitValue[0]) + Decimal(self.increment))
         return splitValue[0]
 
+    def __buildingQuery(self, keyword, value):
+        query = {
+            "query":
+                {
+                    "regexp":
+                        {
+                            keyword: value
+                        }
+                }
+        }
+        return query
+
+    def __executeSearchQuery(self, query, repository):
+        possibleCountry = repository.search(index="", doc_type="", body=query, size=300, fields=["_id", "_score"])
+        for returnedResult in possibleCountry["hits"]["hits"]:
+            self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
+
     def createSearchQuery(self, keyword, value, repository):
         self.listOfPossibleCountryByKeyword = []
         self.__setMaxValueToReach(keyword)
         self.__setIncrementValue(keyword)
         self.searchFinished = False
         while (self.searchFinished is False):
-            query = {
-                "query":
-                    {
-                        "regexp":
-                            {
-                                keyword: value
-                            }
-                        }
-            }
+            query = self.__buildingQuery(keyword, value)
             value = self.__incrementValue(value)
-            possibleCountry = repository.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
-            for returnedResult in possibleCountry["hits"]["hits"]:
-                self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
-
+            self.__executeSearchQuery(query, repository)
         return self.listOfPossibleCountryByKeyword

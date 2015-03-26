@@ -214,7 +214,7 @@ class TestQuestionResponder(TestCase):
     #
     def test_askingQuestionWhenSearchingByItsBetweenDeathRatesShouldReturnCountryName(self):
         askedQuestion = "The death rate of this country is greater than 10.37 deaths/1000 population and less than 10.40 deaths/1000 population."
-        expectedCountryName = "canada"
+        expectedCountryName = "Austria"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByIndustriesAndUnemploymentRateShouldReturnCountryName(self):

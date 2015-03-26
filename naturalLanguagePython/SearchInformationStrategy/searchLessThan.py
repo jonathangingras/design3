@@ -26,33 +26,46 @@ class SearchLessThan(SearchInformation):
         self.decrement = self.incrementByKeyword[keyword]
 
     def __decrementValue(self, value):
-        splitValue = value.split(" ")
-        if Decimal(splitValue[0]) < Decimal(self.minValue):
+        if Decimal(value) < Decimal(self.minValue):
             self.searchFinished = True
         else:
-            splitValue[0] = str(Decimal(splitValue[0]) - Decimal(self.decrement))
-        return splitValue[0]
+            value = str(Decimal(value) - Decimal(self.decrement))
+        return value
 
-    def createSearchQuery(self, keyword, value, repository):
-        self.listOfPossibleCountryByKeyword = []
+    def __extractNumericValueFromValue(self, value):
+        elementSplit = value.split(" ")
+        value = elementSplit[0]
+        return value
+
+    def __setQueryBuilderParameters(self, keyword):
         self.__setMinValueToReach(keyword)
         self.__setDecrementValue(keyword)
         self.searchFinished = False
-        while (self.searchFinished is False):
-            query = {
-                "query":
-                    {
-                        "regexp":
-                            {
-                                keyword: "("+value+")"
-                            }
-                    }
-            }
-            value = self.__decrementValue(value)
-            print(value)
-            possibleCountry = repository.search(index="", doc_type="", body=query, size= 300, fields= ["_id", "_score"])
-            print(possibleCountry)
-            for returnedResult in possibleCountry["hits"]["hits"]:
-                self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
 
+    def __buildingQuery(self, keyword, value):
+        formattedValueForQuery = value.replace(".", "\.")
+        query = {
+            "query":
+                {
+                    "regexp":
+                        {
+                            keyword: formattedValueForQuery
+                        }
+                }
+        }
+        return query
+
+    def __executeSearchQuery(self, query, repository):
+        possibleCountry = repository.search(index="", doc_type="", body=query, size=300, fields=["_id", "_score"])
+        for returnedResult in possibleCountry["hits"]["hits"]:
+            self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
+
+    def createSearchQuery(self, keyword, value, repository):
+        self.listOfPossibleCountryByKeyword = []
+        self.__setQueryBuilderParameters(keyword)
+        value = self.__extractNumericValueFromValue(value)
+        while (self.searchFinished is False):
+            query = self.__buildingQuery(keyword, value)
+            value = self.__decrementValue(value)
+            self.__executeSearchQuery(query, repository)
         return self.listOfPossibleCountryByKeyword

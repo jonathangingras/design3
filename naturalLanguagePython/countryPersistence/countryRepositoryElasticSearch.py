@@ -35,5 +35,5 @@ class CountryRepositoryElasticSearch(CountryRepository):
                                                                     keywordListKeyword[i],
                                                                     strategyListKeyword[i])
                 i += 1
-        print(self.listOfPossibleCountry)
+
         return self.listOfPossibleCountry
