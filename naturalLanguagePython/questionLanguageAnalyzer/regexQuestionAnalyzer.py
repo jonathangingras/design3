@@ -16,7 +16,7 @@ class RegexQuestionAnalyzer(object):
                                  r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
                                  r"(\d+\.?\d*\s\w+\/\s?\d+)",
-                                 r"(?<=[Ww]hat country has )(([A-Z][a-z]+\s?)?(\w*['-]\w*\-?)?){1,4}(?=\,?\s)",
+                                 r"(?<=[Ww]hat country has )(([A-Z][a-z]+\s?)?(\w*['-]?\w*\-?)?(\s?[A-Z][a-z]+)?){1,3}(?= as)",
                                  r"(\.[a-z]+)",
                                  r"((?<=including a )|(?<=(?<!(including ))ing\b as a ))(\w+\s?)+",
                                  r"(\d*\.?\d+\%)",
