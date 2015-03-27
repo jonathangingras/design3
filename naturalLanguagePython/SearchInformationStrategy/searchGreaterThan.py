@@ -3,6 +3,7 @@ from os import path
 from decimal import Decimal
 import json
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
+from naturalLanguagePython.searchInformationStrategy.searchKeywordException import SearchKeywordException
 
 
 class SearchGreaterThan(SearchInformation):
@@ -86,8 +87,10 @@ class SearchGreaterThan(SearchInformation):
         query = self.__buildingRangeRegexQuery(keyword, value)
         self.__executeSearchQuery(query, repository)
 
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         self.listOfPossibleCountryByKeyword = []
+        if keyword is None:
+            raise SearchKeywordException("The keyword is none")
         self.__setMaxValueToReach(keyword)
         if self.__isKeywordRangeRegex(keyword):
             self.__searchByRangeRegexQuery(keyword, repository, value)

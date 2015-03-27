@@ -97,7 +97,7 @@ class SearchLessThan(SearchInformation):
         query = self.__buildingRangeRegexQuery(keyword, value)
         self.__executeSearchQuery(query, repository)
 
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         self.listOfPossibleCountryByKeyword = []
         self.__setQueryBuilderParameters(keyword)
         value = self.__extractNumericValueFromValue(value)

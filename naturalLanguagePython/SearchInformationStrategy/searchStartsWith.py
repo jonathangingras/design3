@@ -1,4 +1,4 @@
-import re
+from naturalLanguagePython.searchInformationStrategy.searchKeywordException import SearchKeywordException
 
 __author__ = 'Antoine'
 
@@ -7,8 +7,10 @@ from naturalLanguagePython.searchInformationStrategy.searchInformation import Se
 
 class SearchStartsWith(SearchInformation):
 
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         listOfPossibleCountryByKeyword = []
+        if keyword is None:
+            raise SearchKeywordException("The keyword is none")
         query = {
             "query":{
                 "match_phrase_prefix" : {

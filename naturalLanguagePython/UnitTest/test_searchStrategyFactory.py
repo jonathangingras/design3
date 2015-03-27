@@ -40,3 +40,13 @@ class TestSearchStrategyFactory(TestCase):
         searchMethod = self.searchStrategyFactory.createSearchStrategy("less than")
         expectedClassType = SearchLessThan
         self.assertIsInstance(searchMethod, expectedClassType)
+
+    def test_creatingSearchStrategyWhenSearchParticularityIsIncludingShouldReturnInstanceOfContains(self):
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("including")
+        expectedClassType = SearchContains
+        self.assertIsInstance(searchMethod, expectedClassType)
+
+    def test_creatingSearchStrategyWhenSearchParticularityIsContainsShouldReturnInstanceOfContains(self):
+        searchMethod = self.searchStrategyFactory.createSearchStrategy("Contains")
+        expectedClassType = SearchContains
+        self.assertIsInstance(searchMethod, expectedClassType)

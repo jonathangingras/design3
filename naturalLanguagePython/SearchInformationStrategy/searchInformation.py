@@ -6,5 +6,5 @@ import re
 class SearchInformation(object):
 
     @abc.abstractmethod
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         return

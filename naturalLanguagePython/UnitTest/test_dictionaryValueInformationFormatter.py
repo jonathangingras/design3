@@ -72,3 +72,15 @@ class TestDictionaryValueInformationFormatter(TestCase):
         expectedReturnedDictionary = {"religions": ["Muslim Sia 1.3%"]}
         self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
         self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForIllicitDrugsWhenHavingOneElementShouldReturnDictionaryWithUnchangedList(self):
+        dictionary = {"illicit drugs": ["cocaine"]}
+        expectedReturnedDictionary = {"illicit drugs": ["cocaine"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)
+
+    def test_formatValueInformationForIllicitDrugsWhenHavingTwoElementShouldReturnDictionaryWithSplitElement(self):
+        dictionary = {"illicit drugs": ["cocaine transhipment"]}
+        expectedReturnedDictionary = {"illicit drugs": ["cocaine", "transhipment"]}
+        self.dictionaryValueInformationFormatter.formatValueInformation(dictionary)
+        self.assertEqual(expectedReturnedDictionary, dictionary)

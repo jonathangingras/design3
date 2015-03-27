@@ -1,11 +1,13 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
-import re
+from naturalLanguagePython.searchInformationStrategy.searchKeywordException import SearchKeywordException
 
 class SearchEndsWith(SearchInformation):
 
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         listOfPossibleCountryByKeyword = []
+        if keyword is None:
+            raise SearchKeywordException("The keyword is none")
         query = {
             "query":
                 {

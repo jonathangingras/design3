@@ -1,12 +1,14 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
-import re
+from naturalLanguagePython.searchInformationStrategy.searchKeywordException import SearchKeywordException
 
 
 class SearchContains(SearchInformation):
 
-    def createSearchQuery(self, keyword, value, repository):
+    def searchPossibleCountryByKeywordValue(self, keyword, value, repository):
         listOfPossibleCountryByKeyword = []
+        if keyword is None:
+            raise SearchKeywordException("The keyword is none")
         query = ""
         if keyword == "capital" and value == "Washington":
             listOfPossibleCountryByKeyword.append("United_States")
