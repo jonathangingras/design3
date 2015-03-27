@@ -69,10 +69,19 @@ class RegexQuestionAnalyzer(object):
         self.listString = self.__removeDupplicateOfAList(self.listString)
         return self.listString
 
+    def __addElementsFromListTempIntoListOfKey(self, indexBegin, listTemp):
+        for key in listTemp:
+            listOfKey = []
+            for i in key:
+                listOfKey.append(str(i))
+
+            listOfKey = self.__removeSubPartOfSameStringOfAList(listOfKey)
+
+            if self.listString.count(listOfKey[indexBegin]) == False:
+                self.listString.append(listOfKey[indexBegin])
+
     def parseAllRegexValue(self, question):
         indexBegin = 0
-
-
         for reg in self.listRegexValueWord:
             regex = re.compile(reg)
             wordReturn = regex.search(question)
@@ -82,20 +91,25 @@ class RegexQuestionAnalyzer(object):
                     listTemp = regex.findall(question)
                     if len(listTemp) > 1:
 
-                        for key in listTemp:
-                            listOfKey = []
-                            for i in key:
-                                listOfKey.append(str(i))
-
-                            listOfKey = self.__removeSubPartOfSameStringOfAList(listOfKey)
-
-                            if self.listString.count(listOfKey[indexBegin]) == False:
-                                self.listString.append(listOfKey[indexBegin])
+                        self.__addElementsFromListTempIntoListOfKey(indexBegin, listTemp)
                     else:
 
                         self.listString.append(regex.search(question).group())
         return self.__parseAllRegexWord()
 
+
+    def __removeSmallestElementAlreadyInsideAnOtherItem(self):
+        for x in self.listSubject:
+            for y in self.listSubject:
+                searchSub = str.find(str(x), str(y))
+                if searchSub != -1:
+                    if (len(x) > len(y)):
+                        self.listSubject.remove(y)
+
+    def __addElementFromListTempInListSubject(self, indexBegin, listTemp):
+        for key in listTemp:
+            if self.listSubject.count(key[indexBegin]) == 0:
+                self.listSubject.append(key[indexBegin])
 
     def searchSubject(self, question):
         indexBegin = 0
@@ -107,18 +121,11 @@ class RegexQuestionAnalyzer(object):
                     listTemp = []
                     listTemp = regex.findall(question)
                     if len(listTemp) > 1:
-                        for key in listTemp:
-                            if self.listSubject.count(key[indexBegin]) == 0:
-                                self.listSubject.append(key[indexBegin])
+                        self.__addElementFromListTempInListSubject(indexBegin, listTemp)
                     else:
                         self.listSubject.append(regex.search(question).group())
 
-        for x in self.listSubject:
-            for y in self.listSubject:
-                searchSub = str.find(str(x),str(y))
-                if searchSub != -1:
-                    if(len(x)> len(y)):
-                        self.listSubject.remove(y)
+        self.__removeSmallestElementAlreadyInsideAnOtherItem()
 
         return self.__removeDupplicateOfAList(self.listSubject)
 
@@ -170,15 +177,28 @@ class RegexQuestionAnalyzer(object):
 
         return nearestValueName
 
+    def __associateTwoListOfOneElementEach(self):
+        for subject, key in zip(self.listSubject, self.listString):
+            self.dictWord[subject] = [key]
+
+    def __associateValueElementIntoDictionary(self, question):
+        for valueNotPlacedYet in self.listString:
+            nearestValuePosition = self.__returnTheNearestItemOfTheListWithARefferentialObjectInTheStringQuestion(
+                question, valueNotPlacedYet, self.dictWord.values())
+            cpt = 0
+            for val in self.dictWord.values():
+                if (val == nearestValuePosition):
+                    value = self.dictWord.values()[cpt]
+                    value.append(valueNotPlacedYet)
+                cpt = cpt + 1
+
     def associateWord(self, question):
-        # self.listString.sort(lambda x,y:cmp(len(x), len(y)))
         self.listString = self.__splitEnumerationItemInListString(self.listString)
         if(len(self.listSubject) > len(self.listString)):
             self.listSubject = self.__removeSubPartOfSameStringOfAList(self.listSubject)
 
         if(len(self.listSubject) == 1 and len(self.listString) == 1):
-            for subject, key in zip(self.listSubject, self.listString):
-                self.dictWord[subject] = [key]
+            self.__associateTwoListOfOneElementEach()
         elif len(self.listSubject) < len(self.listString) and len(self.listSubject) == 1:
             self.dictWord[str(self.listSubject[0]).strip(' ')] = self.listString
         elif(len(self.listSubject) >= 2 and len(self.listString) >= 2):
@@ -186,11 +206,4 @@ class RegexQuestionAnalyzer(object):
                 nearestValuePosition = self.__returnPositionInTheListForNearestItemMatching(question, x, self.listString)
                 self.dictWord[x] = [self.listString.pop(nearestValuePosition)]
             if(len(self.listString) != 0):
-                for valueNotPlacedYet in self.listString:
-                    nearestValuePosition = self.__returnTheNearestItemOfTheListWithARefferentialObjectInTheStringQuestion(question, valueNotPlacedYet, self.dictWord.values())
-                    cpt = 0
-                    for val in self.dictWord.values():
-                        if(val == nearestValuePosition):
-                            value = self.dictWord.values()[cpt]
-                            value.append(valueNotPlacedYet)
-                        cpt = cpt +1
+                self.__associateValueElementIntoDictionary(question)
