@@ -68,6 +68,14 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
+    def test_AnalyseQuestionWithCapitalAsKeySearchingCompleteNameWithCommaInsideShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['capital'] = ["N'Djamena"]
+        question = "What country has N'Djamena as its capital?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
 
     def test_AnalyseQuestionWithTelephoneLinesInUseAsKeyShouldReturnProperDictionary(self):
         expectedDictionary = {}
@@ -432,6 +440,16 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
+
+
+    # def test_useImpossibleQuestionSentenceAndUnseNltkLastAttemptInQuestionSentenceShouldReturnSomething(self):
+    #     question = "My population use more than 12 Questions."
+    #     expectedDictionnary = {}
+    #     expectedDictionnary['population'] = ["12 Questions"]
+    #     self.processLanguage = QuestionInformationAnalyser()
+    #     self.processLanguage.analyseQuestion(question)
+    #     print self.processLanguage.questionDictionary
+    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
 
 
 
