@@ -1,10 +1,10 @@
 {
   "population":"1390000000",
-  "population growth rate": "99",
+  "population growth rate": "10",
   "death rate": "20.00",
   "birth rate": "50",
-  "Inflation": "90",
+  "Inflation": "60",
   "electricity - production" : "1000",
-  "unemployment rate": "90",
+  "unemployment rate": "99",
   "inflation rate (consumer prices)":  "100"
 }

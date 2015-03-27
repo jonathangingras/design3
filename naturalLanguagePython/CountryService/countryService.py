@@ -5,6 +5,7 @@ from naturalLanguagePython.countryService.countryServiceException import Country
 from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
 from naturalLanguagePython.countryService.dictionaryValueInformationFormatter import DictionaryValueInformationFormatter
 from naturalLanguagePython.countryPersistence.countryRepositoryElasticSearch import CountryRepositoryElasticSearch
+from naturalLanguagePython.countryService.searchResultAnalyzer import SearchResultAnalyzer
 
 
 class CountryService(object):
@@ -15,6 +16,7 @@ class CountryService(object):
         self.__dictionaryInformationFormatter = DictionaryInformationFormatter(currentWorkspacePath)
         self.__dictionaryValueFormatter = DictionaryValueInformationFormatter()
         self.questionAnalyzer = QuestionInformationAnalyser()
+        self.searchRequestExecutor = SearchResultAnalyzer()
 
     def analyzeQuestionFromAtlas(self, receivedQuestion):
         if receivedQuestion is None:
@@ -29,10 +31,9 @@ class CountryService(object):
 
     def linkSearchStrategyToKeyword(self, receivedQuestion, dictionary, questionSearchParticularity):
         return self.questionAnalyzer.linkSearchStrategyToKeywordRelatedToQuestion(
-            receivedQuestion, dictionary, questionSearchParticularity
-        )
+            receivedQuestion, dictionary, questionSearchParticularity)
 
-    def formatKeywordFromSemanticAnalysisToWorldFactbook(self, receivedDictionary):
+    def formatKeywordFromSemanticAnalysisToWorldFactBook(self, receivedDictionary):
         formattedDictionary = self.__dictionaryInformationFormatter.formatDictionary(receivedDictionary)
         return  formattedDictionary
 
@@ -40,19 +41,7 @@ class CountryService(object):
         formattedDictionary = self.__dictionaryValueFormatter.formatValueInformation(receivedDictionary)
         return formattedDictionary
 
-    def __findCountryNameInPossibleKeywordByInformation(self, listOfPossibleCountryByCategory):
-        nameOfCountry = ""
-        if len(listOfPossibleCountryByCategory) == 1:
-            nameOfCountry = listOfPossibleCountryByCategory[0]
-        else:
-            for nameOfCountryFistCall in listOfPossibleCountryByCategory[0]:
-                numberOfAppearanceOfNameOfCountry = self.__findCountryAppearingInListOfPossibleCountry(
-                    listOfPossibleCountryByCategory,
-                    nameOfCountryFistCall)
-                if numberOfAppearanceOfNameOfCountry >= len(listOfPossibleCountryByCategory):
-                    nameOfCountry = nameOfCountryFistCall
-                    break
-        return nameOfCountry
+
 
     def __verifyNameOfCountryFormat(self, nameOfCountry):
         if type(nameOfCountry) is list:
@@ -64,14 +53,8 @@ class CountryService(object):
                                                                                                wantedSearchStrategy)
         listOfPossibleCountryByCategory = self.countryRepository.searchCountries(
             searchedInformationDict, wantedSearchStrategy)
-        nameOfCountry = self.__findCountryNameInPossibleKeywordByInformation(listOfPossibleCountryByCategory)
-        nameOfCountry = self.__verifyNameOfCountryFormat(nameOfCountry)
+        nameOfCountryList = self.searchRequestExecutor.findPossibleCountryNameInSearchResultByKeyword(listOfPossibleCountryByCategory)
+        nameOfCountry = self.__verifyNameOfCountryFormat(nameOfCountryList)
         return nameOfCountry
 
-    def __findCountryAppearingInListOfPossibleCountry(self, listOfCountry, nameOfCountryFistCall):
-        numberOfAppearanceOfNameOfCountry = 0
-        for nameOfCountryList in listOfCountry:
-            for namePossible in nameOfCountryList:
-                if namePossible == nameOfCountryFistCall:
-                    numberOfAppearanceOfNameOfCountry += 1
-        return numberOfAppearanceOfNameOfCountry
+

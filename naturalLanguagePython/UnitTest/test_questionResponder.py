@@ -11,7 +11,7 @@ class TestQuestionResponder(TestCase):
 
     def test_askingAQuestionWhenHavingAnEmptyQuestionShouldReturnNone(self):
         question = None
-        expectedReturn = None
+        expectedReturn = ""
         self.assertEqual(expectedReturn, self.questionResponder.askQuestion(question))
 
     def test_askingAQuestionWhenHavingAnNonEmptyQuestionShouldReturnTheNameOfTheSearchedCountry(self):
@@ -19,7 +19,7 @@ class TestQuestionResponder(TestCase):
         expectedReturn = "A Country"
         self.questionResponder.countryService.analyzeQuestionFromAtlas= Mock()
         self.questionResponder.countryService.searchCountry = Mock(return_value = expectedReturn)
-        self.questionResponder.countryService.formatKeywordFromSemanticAnalysisToWorldFactbook = Mock()
+        self.questionResponder.countryService.formatKeywordFromSemanticAnalysisToWorldFactBook = Mock()
         self.questionResponder.countryService.formatValueInformationFromSemanticAnalysisToWorldFactBook = Mock()
         self.questionResponder.countryService.linkSearchStrategyToKeyword = Mock()
         self.assertEqual(expectedReturn, self.questionResponder.askQuestion(question))

@@ -1,9 +1,9 @@
 {
   "population":"0",
-  "population growth rate": "-99",
+  "population growth rate": "-10",
   "death rate": "0.00",
   "birth rate": "0.00",
-  "Inflation": "-90",
+  "Inflation": "-10",
   "electricity - production" : "0",
   "inflation rate (consumer prices)": "-10"
 }
