@@ -15,7 +15,7 @@ class QuestionInformationAnalyser(object):
         self.questionDictionary = {}
 
     def analyseQuestionParticularity(self, question):
-        questionParticularity = self.regexAnalyser.searchKeyword(question)
+        questionParticularity = self.regexAnalyser.searchSearchParticularityInQuestion(question)
         return questionParticularity
 
     def linkSearchStrategyToKeywordRelatedToQuestion(self, question, dictionary, questionSearchParticularity):

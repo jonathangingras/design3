@@ -34,6 +34,14 @@ class ProcessLanguage(object):
     def taggingQuestion(self):
         self.taggedList = nltk.pos_tag(self.tokenizedQuestionList)
 
+    def __extractLeavesFromChunkTreeOfSubject(self, stringToConcat, subTreeQuestion):
+        for leavesChunk in subTreeQuestion.leaves():
+            if stringToConcat == "":
+                stringToConcat = leavesChunk[0]
+            else:
+                stringToConcat = stringToConcat + " " + leavesChunk[0]
+        return stringToConcat
+
     def extractOnlyQuestionSubject(self):
         chunkParser = nltk.RegexpParser(self.chunkGramSubjectOnly)
         self.chunkedList = chunkParser.parse(self.taggedList)
@@ -42,15 +50,19 @@ class ProcessLanguage(object):
             if subTreeQuestion._label in ['ChunkSubjectOnly']:
                 stringToConcat = ""
 
-                for leavesChunk in subTreeQuestion.leaves():
-                        if stringToConcat == "":
-                            stringToConcat = leavesChunk[0]
-                        else:
-                            stringToConcat = stringToConcat + " " + leavesChunk[0]
+                stringToConcat = self.__extractLeavesFromChunkTreeOfSubject(stringToConcat, subTreeQuestion)
                 self.importantWordList.append(stringToConcat)
 
 
         return self.importantWordList
+
+    def __extractLeavesFromTreeOfValue(self, stringToConcat, subTreeQuestion):
+        for leavesChunk in subTreeQuestion.leaves():
+            if stringToConcat == "":
+                stringToConcat = leavesChunk[0]
+            else:
+                stringToConcat = stringToConcat + " " + leavesChunk[0]
+        return stringToConcat
 
     def extractOnlyQuestionValue(self):
         chunkParser = nltk.RegexpParser(self.chunkGramValueOnly)
@@ -59,11 +71,7 @@ class ProcessLanguage(object):
             if subTreeQuestion._label in ['ChunkValue']:
                 stringToConcat = ""
 
-                for leavesChunk in subTreeQuestion.leaves():
-                    if stringToConcat == "":
-                        stringToConcat = leavesChunk[0]
-                    else:
-                        stringToConcat = stringToConcat + " " + leavesChunk[0]
+                stringToConcat = self.__extractLeavesFromTreeOfValue(stringToConcat, subTreeQuestion)
 
                 self.keyWordList.append(stringToConcat)
         return self.keyWordList
@@ -72,6 +80,7 @@ class ProcessLanguage(object):
     def buildDictionaries(self,question):
         self.extractOnlyQuestionValue()
         self.extractOnlyQuestionSubject()
+
 
         if len(self.keyWordList) == 1 and len(self.importantWordList) == 1:
             self.dictionariesWord[self.importantWordList.pop()] = self.keyWordList
