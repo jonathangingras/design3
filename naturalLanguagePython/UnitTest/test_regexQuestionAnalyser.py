@@ -1,17 +1,17 @@
 import unittest
-import re
-# from unittest import TestLoader
-# from unittest import TextTestRunner
-
 from naturalLanguagePython.questionLanguageAnalyzer.regexQuestionAnalyzer import RegexQuestionAnalyzer
-from mock import Mock
-import json
+
+
 __author__ = 'Antoine'
+
+
 
 
 class TestRegexQuestionAnalyser(unittest.TestCase):
     def setUp(self):
         self.regexQuestionAnalyzer = RegexQuestionAnalyzer()
+
+
     def test_extractStrategyWhenHavingNoSpecifiedStrategyInQuestionShouldReturnEmptyList(self):
         question = "My unemployment rate is 40.6%."
         expectedStrategyList = []
@@ -82,3 +82,4 @@ class TestRegexQuestionAnalyser(unittest.TestCase):
         expectedDict["export partners"] = ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]
 
         self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
+
