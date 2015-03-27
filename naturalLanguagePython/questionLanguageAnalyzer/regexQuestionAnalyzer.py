@@ -6,26 +6,26 @@ import sys
 class RegexQuestionAnalyzer(object):
 
     def __init__(self):
-        self.listRegexValueWord = [r"(?<=starts with )([A-Z]{1}[a-z]+){1}",
+        self.listRegexValueWord = [r"(?<=starts with )([A-Z][a-z]+){1}",
                                  r"(?<=ends with )(\w+){1}",
                                  r"((?<=including )|(?<=include )|(?<= are ))((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))",
                                  r"((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+))",
-                                 r"(?<=between )(\d+)+(\.)?(\d+)((\%)|(\w+)+) and ((\d+[\%\.]?)+)((\ \w+)+)?",
+                                 r"(?<=between )(\S?\d+)+(\.)?(\d+)((\%)|(\w+)+) and ((\S?\d+[%.]?)+)((\s\w+)+)?",
                                  r"((?<=greater than )|(?<=less than ))(((\d+)(\ |\.|\%)?)+(\w+\/\d+)?)+",
                                  r"((\d+\s)?([A-Z][a-z]{2,}\s(\d+)))",
                                  r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
                                  r"(\d+\.?\d*\s\w+\/\s?\d+)",
-                                 r"(?<=[Ww]hat country has )([A-Z][a-z]+[^d ]\b)",
+                                 r"(?<=[Ww]hat country has )(([A-Z][a-z]+\s?)?(\w*['-]\w*\-?)?){1,4}(?=\,?\s)",
                                  r"(\.[a-z]+)",
                                  r"((?<=including a )|(?<=(?<!(including ))ing\b as a ))(\w+\s?)+",
                                  r"(\d*\.?\d+\%)",
-                                 r"(?<= contains )(\w+\s?){1,2}",
+                                 r"(?<= contains )(\w+\s?\-?\'?){1,2}",
                                  r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
                                  r"(?<= is )(\d+(\s|\.)\d+\%?)(\s[a-z]{1,2})?(\s[A-Z]{1,})?",
                                  r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)",
                                  r"((?<=The )(\w+\s*?){2}(?= is ))",
-                                 r"((?<=is )(\d+\s+\w*?){1,})",
+                                 r"((?<=is )(\d+\s\w*?){1,})",
                                  r"((?<=[Mm]y )(?<=.)*?((?= is)|(?= was)|(?= are)|(?= is the))(\s+\w))"]
         self.registerOfKeyword = ["starts with", "ends with", "including", "between", "greater than", "contains", "less than"]
 
@@ -50,7 +50,7 @@ class RegexQuestionAnalyzer(object):
             flagRemoveElement = 0
             for x in listStringfromRegex:
                 for y in listStringfromRegex:
-                    searchSub = str.find(x, y)
+                    searchSub = str.find(str(x), str(y))
                     if searchSub != -1:
                         if (len(x) > len(y)):
                             listStringfromRegex.remove(y)
@@ -69,7 +69,7 @@ class RegexQuestionAnalyzer(object):
         self.listString = self.__removeDupplicateOfAList(self.listString)
         return self.listString
 
-    def parseAllRegexKeyWord(self, question):
+    def parseAllRegexValue(self, question):
         indexBegin = 0
 
 
@@ -94,7 +94,6 @@ class RegexQuestionAnalyzer(object):
                     else:
 
                         self.listString.append(regex.search(question).group())
-        # print self.listString
         return self.__parseAllRegexWord()
 
 
@@ -116,7 +115,7 @@ class RegexQuestionAnalyzer(object):
 
         for x in self.listSubject:
             for y in self.listSubject:
-                searchSub = str.find(x,y)
+                searchSub = str.find(str(x),str(y))
                 if searchSub != -1:
                     if(len(x)> len(y)):
                         self.listSubject.remove(y)
@@ -136,7 +135,7 @@ class RegexQuestionAnalyzer(object):
             temp.strip(' ')
             if (temp != ''):
                 temp.rstrip(' ')
-                futurList.append(temp.lstrip(' '))
+                futurList.append(temp.strip(' '))
         return futurList
 
     def __splitEnumerationItemInListString(self,listWithEnumaration):
@@ -149,17 +148,29 @@ class RegexQuestionAnalyzer(object):
     def __returnPositionInTheListForNearestItemMatching(self, question, x, listOfItem):
         nearestValueDistance = sys.maxint
         nearestValuePosition = 0
-        for y in listOfItem:
+        for value in listOfItem:
 
-            valueTemp = abs((question.find(x) + len(x)) - (question.find(str(y))))
+            valueTemp = abs(question.find(str(x)) -  question.find(str(value)))
             if valueTemp < nearestValueDistance:
                 nearestValueDistance = valueTemp
-                nearestValuePosition = listOfItem.index(y)
+                nearestValuePosition = listOfItem.index(value)
 
         return nearestValuePosition
 
+    def __returnTheNearestItemOfTheListWithARefferentialObjectInTheStringQuestion(self, question, reffenrentialObject, listOfItem):
+        nearestValueDistance = sys.maxint
+        nearestValueName = ""
+        for value in listOfItem:
+            # print str(value)
+            valueTemp = abs(question.find(str(reffenrentialObject)) -  question.find(str(value[len(value) - 1])))
+            if valueTemp < nearestValueDistance:
+                nearestValueDistance = valueTemp
+                nearestValueName = value
+
+        return nearestValueName
+
     def associateWord(self, question):
-        # self.listString.sort()
+        # self.listString.sort(lambda x,y:cmp(len(x), len(y)))
         self.listString = self.__splitEnumerationItemInListString(self.listString)
         if(len(self.listSubject) > len(self.listString)):
             self.listSubject = self.__removeSubPartOfSameStringOfAList(self.listSubject)
@@ -175,6 +186,10 @@ class RegexQuestionAnalyzer(object):
                 self.dictWord[x] = [self.listString.pop(nearestValuePosition)]
             if(len(self.listString) != 0):
                 for valueNotPlacedYet in self.listString:
-                    nearestValuePosition = self.__returnPositionInTheListForNearestItemMatching(question, valueNotPlacedYet, self.dictWord.values())
-                    value = self.dictWord.values()[nearestValuePosition]
-                    value.append(valueNotPlacedYet)
+                    nearestValuePosition = self.__returnTheNearestItemOfTheListWithARefferentialObjectInTheStringQuestion(question, valueNotPlacedYet, self.dictWord.values())
+                    cpt = 0
+                    for val in self.dictWord.values():
+                        if(val == nearestValuePosition):
+                            value = self.dictWord.values()[cpt]
+                            value.append(valueNotPlacedYet)
+                        cpt = cpt +1

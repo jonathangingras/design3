@@ -385,11 +385,57 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    def test_AnalyseQuestion46ShouldReturnProperDictionary(self):
+    def test_AnalyseQuestion46ShouldRetparamsurnProperDictionary(self):
         expectedDictionary = {}
         expectedDictionary['population growth rate'] = ["1.46%"]
         question = "What country has a population growth rate of 1.46%?"
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_addComplexityOnTheNumberUsedForAQuestionWithBetweenAndPercentShoudReturnProperDictionnary(self):
+        expectedDictionary = {}
+        expectedDictionary['inflation rate'] = ["118.456%", "10.5678%"]
+        question = "What country has an inflation rate between 118.456% and 10.5678%?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_useNegativeNumbersForAQuestionWithBetweenAndPercentShoudReturnProperDictionnary(self):
+        expectedDictionary = {}
+        expectedDictionary['inflation rate'] = ["-118.456%", "-10.5678%"]
+        question = "What country has an inflation rate between -118.456% and -10.5678%?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_useSymbolInTheQuestionSentenceShouldBeCapturedAndReturnProperDictionnary(self):
+        expectedDictionary = {}
+        expectedDictionary['electricity production'] = ["600", "650", "billion dollar"]
+        question = "My electricity production is between 600$ and 650$ billion dollar."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_useVariateSymbolInQuestionSentenceAtTheEndOfTheStringShouldReturn(self):
+        question = "My population is 32 742$#@!^&&*."
+        expectedDictionnary = {}
+        expectedDictionnary['population'] = ["32 742"]
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
+
+    def test_useVariateSymbolInQuestionSentenceAtTheBeginningOfTheStringShouldReturn(self):
+        question = "$#@!^&&*My population is 32 742."
+        expectedDictionnary = {}
+        expectedDictionnary['population'] = ["32 742"]
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
+
+
+
+
+
+
 
