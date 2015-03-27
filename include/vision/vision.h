@@ -13,6 +13,10 @@
 #include "ColoredCubeDetector.h"
 #include "CubeDetectorFactory.h"
 
+#include "ImageAngleAdjuster.h"
+#include "ImageCapturer.h"
+#include "CubeCenterTargeter.h"
+
 #include "BitmapFormatException.h"
 #include "BadColorStringException.h"
 

@@ -28,9 +28,9 @@ void CubeCenterTargeter::macroAdjust(const cv::Point& imageCenter, const cv::Rec
 	}
 	if(!pointYInRect(imageCenter, rect)) {
 		if(imageCenter.y <= rect.y) {
-			adjuster->adjustY(2);
-		} else {
 			adjuster->adjustY(-2);
+		} else {
+			adjuster->adjustY(2);
 		}
 	}
 }
@@ -46,10 +46,10 @@ void CubeCenterTargeter::microAdjust(const cv::Point& imageCenter, const cv::Rec
 	}
 
 	if(rect.width >= 5 && imageCenter.y - cubeCenter.y > rect.height/2) {
-		adjuster->adjustY(-1);
+		adjuster->adjustY(1);
 	}
 	if(rect.width >= 5 && cubeCenter.y - imageCenter.y > rect.height/2) {
-		adjuster->adjustY(1);
+		adjuster->adjustY(-1);
 	}
 }
 
@@ -77,13 +77,15 @@ void CubeCenterTargeter::targetCenter() {
 	cv::Rect rect;
 	cv::Point imageCenter;
 
-	do { 
+	do {
+		capturer->capture();
 		rect = detector->detectCube();
 		imageCenter = cv::Point(320, 240);
 		macroAdjust(imageCenter, rect);
 	} while(!pointInRect(imageCenter, rect));
 
-	do { 
+	do {
+		capturer->capture();
 		rect = detector->detectCube();
 		imageCenter = cv::Point(320, 240);
 		microAdjust(imageCenter, rect);

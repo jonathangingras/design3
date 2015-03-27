@@ -14,6 +14,7 @@ private:
 
 	std::string devicePathFromId(int deviceId);
 	void deactivateWhiteBalance();
+	void deativateAutoExposure();
 	void setWhiteBalanceTemperature(int);
 
 	bool checkMatrixDimensions(const cv::Mat& matrix);

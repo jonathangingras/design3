@@ -2,6 +2,7 @@
 #define _D3T12_CUBECENTERTARGETER_H_
 
 #include <vision/visionEssentials.h>
+#include <vision/ImageCapturer.h>
 #include <vision/ImageAngleAdjuster.h>
 #include <vision/CubeDetector.h>
 
@@ -11,6 +12,7 @@ class CubeCenterTargeter {
 protected:
 	CubeDetector::Ptr detector;
 	ImageAngleAdjuster::Ptr adjuster;
+	ImageCapturer::Ptr capturer;
 
 private:
 	void macroAdjust(const cv::Point& center, const cv::Rect& rect);
@@ -18,8 +20,8 @@ private:
 	bool needMicroAdjust(const cv::Point& imageCenter, const cv::Rect& rect);
 
 public:
-	inline CubeCenterTargeter(CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster):
-		detector(_detector), adjuster(_adjuster) {}
+	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster):
+		capturer(_capturer), detector(_detector), adjuster(_adjuster) {}
 
 	inline void setDetector(CubeDetector::Ptr _detector) {
 		detector = _detector;

@@ -8,6 +8,8 @@ namespace d3t12 {
 	namespace tf = d3_table_transform;
 }
 
+d3t12::MicroControllerCommandPort* portP;
+
 struct RobotPositioner {
 	boost::mutex mutex;
 	d3t12::MotorController& motors;
@@ -15,13 +17,25 @@ struct RobotPositioner {
 	float x, y, yaw;
 	int counter;
 
+	bool first;
+
 	inline RobotPositioner(d3t12::MotorController& _motors):
-		motors(_motors), counter(0), x(0), y(0), yaw(0) {}
+		motors(_motors), counter(0), x(0), y(0), yaw(0), first(true) {}
 
 	void callback(const d3t12::tf::robotPose::ConstPtr& pose) {
 		mutex.lock();
 		if(++counter < 5000) {
 			x += pose->x; y += pose->y; yaw += pose->yaw;
+			
+			if(first) {
+				first = false;
+				*portP << "setecho off";
+				motors.informPosition(x, y, yaw);
+				motors.commandPosition(x, y, yaw);
+				//*portP << "clcmode p";
+				*portP << "clcecho on";
+			}
+
 			mutex.unlock();
 			return;
 		}
@@ -86,11 +100,17 @@ struct RemoteConsole {
 			strcpy(commandCharArray, command.c_str());
 			char* token;
 			token = strtok(commandCharArray, " ,");
-			for(int i = 0; i < 3; ++i) {
+			for(int i = 0; i < 1/*3*/; ++i) {
 				token = strtok(NULL, " ,");
 				xyyaw[i] = atof(token);
 			}
-			position->goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
+			//position->goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
+
+			std::ostringstream oss;
+			oss << xyyaw[0];
+
+			*portP << (std::string("clcspt ") + oss.str());
+
 		} else if(command[0] == 'c' && command[1] == 'a' && command[2] == 'm') {
 			double angles[2] = {0,0};
 			char commandCharArray[command.length() + 1];
@@ -167,6 +187,7 @@ int main(int argc, char** argv) {
 			stream
 		)
 	);
+	portP = commandPort.get();
 	 
 	d3t12::MotorController motors(commandPort);
 	d3t12::LEDMatrixController leds(commandPort);

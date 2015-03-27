@@ -23,6 +23,7 @@ public:
 	~MicroControllerCommandPort() {}
 
 	void operator << (MicroControllerCommand command);
+	void operator << (std::string command);
 };
 
 } //d3t12

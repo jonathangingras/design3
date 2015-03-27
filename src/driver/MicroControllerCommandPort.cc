@@ -8,4 +8,10 @@ void MicroControllerCommandPort::operator << (MicroControllerCommand command) {
 	mutex.unlock();
 }
 
+void MicroControllerCommandPort::operator << (std::string command) {
+	mutex.lock();
+	*serialPort << command << std::endl;
+	mutex.unlock();
+}
+
 }

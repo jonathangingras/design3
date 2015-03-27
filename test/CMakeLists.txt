@@ -27,6 +27,7 @@ add_design3_test(ColorJSONLoaderTest)
 add_design3_test(ColorPaletteTest)
 add_design3_test(IncrementalRectTest)
 add_design3_test(ColoredCubeDetectorTest)
+add_design3_test(CubeCenterTargeterTest)
 
 #driver
 add_design3_test(MicroControllerCommandBuilderTest)

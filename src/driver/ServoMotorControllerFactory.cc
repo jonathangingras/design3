@@ -9,7 +9,7 @@ ServoMotorController::Ptr ServoMotorControllerFactory::createController(const st
 
 	if(servoName == "prehensorVertical") {
 		controller->command += "5,";
-		controller->min = 3584;
+		controller->min = 3700;//584;
 		controller->max = 5120;
 		controller->currentInt = 3584;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
