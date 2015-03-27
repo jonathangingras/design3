@@ -156,11 +156,11 @@ class TestQuestionResponder(TestCase):
         expectedCountryName = "South_Africa"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
-    # def test_askingQuestionWhenSearchingByGreaterPopulationShouldReturnCountryName(self):
-    #     askedQuestion = "What country has a population greater than 1 300 692 576?"
-    #     expectedCountryName = ""
-    #     dictionary = self.questionResponder.askQuestion(askedQuestion)
-    #     self.assertEqual(expectedCountryName, dictionary)
+    def test_askingQuestionWhenSearchingByGreaterPopulationShouldReturnCountryName(self):
+        askedQuestion = "What country has a population greater than 1 300 692 576?"
+        expectedCountryName = "China"
+        dictionary = self.questionResponder.askQuestion(askedQuestion)
+        self.assertEqual(expectedCountryName, dictionary)
 
     def test_askingQuestionWhenSearchingByTheStartsPartOfAQuestionShouldReturnCountryName(self):
         askedQuestion = "My capital name starts with Moga."
@@ -202,11 +202,11 @@ class TestQuestionResponder(TestCase):
         expectedCountryName = "Russia"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
-    # def test_askingQuestionWhenSearchingByBetweenTheElectricityProductionShouldReturnCountryName(self):
-    #     askedQuestion = "My electricity production is between 600 and 650 billion kWh."
-    #     expectedCountryName = "Canada"
-    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
-    #
+    def test_askingQuestionWhenSearchingByBetweenTheElectricityProductionShouldReturnCountryName(self):
+        askedQuestion = "My electricity production is between 600 and 650 billion kWh."
+        expectedCountryName = "India"
+        self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+
     def test_askingQuestionWhenSearchingByItsInflationRateBetweenShouldReturnCountryName(self):
         askedQuestion = "What country has an inflation rate between 0.3% and 0.5%?"
         expectedCountryName = "Falkland_Islands_(Islas_Malvinas)"

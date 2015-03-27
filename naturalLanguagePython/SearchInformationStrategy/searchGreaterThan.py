@@ -15,6 +15,7 @@ class SearchGreaterThan(SearchInformation):
         self.incrementByKeyword = json.load(greaterIncrementFile)
         greaterRangeFile.close()
         greaterIncrementFile.close()
+        self.listOfKeywordForRangeRegex = ["population", "electricity - production"]
 
     def __init__(self, pathToWorkingModule):
         self.__openJsonRangeFile(pathToWorkingModule)
@@ -47,18 +48,49 @@ class SearchGreaterThan(SearchInformation):
         }
         return query
 
+    def __buildingRangeRegexQuery(self, keyword, value):
+        query = {
+            "query":
+                {
+                    "regexp":
+                        {
+                            keyword:
+                                {
+                                    "value": "<" + value + "-" + self.maxValue + ">",
+                                    "flags": "INTERVAL"
+                                }
+                        }
+                }
+        }
+        return query
     def __executeSearchQuery(self, query, repository):
         possibleCountry = repository.search(index="", doc_type="", body=query, size=300, fields=["_id", "_score"])
         for returnedResult in possibleCountry["hits"]["hits"]:
             self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
 
-    def createSearchQuery(self, keyword, value, repository):
-        self.listOfPossibleCountryByKeyword = []
-        self.__setMaxValueToReach(keyword)
+    def __iterativeSearchQuery(self, keyword, repository, value):
         self.__setIncrementValue(keyword)
         self.searchFinished = False
         while (self.searchFinished is False):
             query = self.__buildingQuery(keyword, value)
             value = self.__incrementValue(value)
             self.__executeSearchQuery(query, repository)
+
+    def __isKeywordRangeRegex(self, keyword):
+        regexCondition = False
+        if keyword in self.listOfKeywordForRangeRegex:
+            regexCondition = True
+        return regexCondition
+
+    def __searchByRangeRegexQuery(self, keyword, repository, value):
+        query = self.__buildingRangeRegexQuery(keyword, value)
+        self.__executeSearchQuery(query, repository)
+
+    def createSearchQuery(self, keyword, value, repository):
+        self.listOfPossibleCountryByKeyword = []
+        self.__setMaxValueToReach(keyword)
+        if self.__isKeywordRangeRegex(keyword):
+            self.__searchByRangeRegexQuery(keyword, repository, value)
+        else:
+            self.__iterativeSearchQuery(keyword, repository, value)
         return self.listOfPossibleCountryByKeyword

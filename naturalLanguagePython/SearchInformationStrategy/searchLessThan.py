@@ -15,6 +15,7 @@ class SearchLessThan(SearchInformation):
         self.incrementByKeyword = json.load(incrementFile)
         lesserRangeFile.close()
         incrementFile.close()
+        self.listOfKeywordForRangeRegex = ["population", "electricity - production"]
 
     def __init__(self, pathToWorkingModule):
         self.__openJsonRangeFile(pathToWorkingModule)
@@ -44,7 +45,7 @@ class SearchLessThan(SearchInformation):
         self.__setDecrementValue(keyword)
         self.searchFinished = False
 
-    def __buildingQuery(self, keyword, value):
+    def __buildingIterativeQuery(self, keyword, value):
         formattedValueForQuery = value.replace(".", "\.")
         query = {
             "query":
@@ -57,17 +58,51 @@ class SearchLessThan(SearchInformation):
         }
         return query
 
+    def __buildingRangeRegexQuery(self, keyword, value):
+        query = {
+            "query":
+                {
+                    "regexp":
+                        {
+                            keyword:
+                                {
+                                    "value": "<" + self.minValue + "-" + value + ">",
+                                    "flags": "INTERVAL"
+                                }
+                        }
+                }
+        }
+        return query
+
+    def __iterativeSearchQuery(self, keyword, repository, value):
+        self.__setDecrementValue(keyword)
+        self.searchFinished = False
+        while (self.searchFinished is False):
+            query = self.__buildingIterativeQuery(keyword, value)
+            value = self.__decrementValue(value)
+            self.__executeSearchQuery(query, repository)
+
     def __executeSearchQuery(self, query, repository):
         possibleCountry = repository.search(index="", doc_type="", body=query, size=300, fields=["_id", "_score"])
         for returnedResult in possibleCountry["hits"]["hits"]:
             self.listOfPossibleCountryByKeyword.append(returnedResult["_id"])
 
+    def __isKeywordRangeRegex(self, keyword):
+        regexCondition = False
+        if keyword in self.listOfKeywordForRangeRegex:
+            regexCondition = True
+        return regexCondition
+
+    def __searchByRangeRegexQuery(self, keyword, repository, value):
+        query = self.__buildingRangeRegexQuery(keyword, value)
+        self.__executeSearchQuery(query, repository)
+
     def createSearchQuery(self, keyword, value, repository):
         self.listOfPossibleCountryByKeyword = []
         self.__setQueryBuilderParameters(keyword)
         value = self.__extractNumericValueFromValue(value)
-        while (self.searchFinished is False):
-            query = self.__buildingQuery(keyword, value)
-            value = self.__decrementValue(value)
-            self.__executeSearchQuery(query, repository)
+        if self.__isKeywordRangeRegex(keyword):
+            self.__searchByRangeRegexQuery(keyword, repository, value)
+        else:
+            self.__iterativeSearchQuery(keyword, repository, value)
         return self.listOfPossibleCountryByKeyword
