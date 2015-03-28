@@ -10,9 +10,9 @@ class TestCountryRepositoryDB(TestCase):
 
     def setUp(self):
         self.countryRepository = CountryRepositoryDB()
-        self.firstCountryToAdd = Country('Aruba', {'Capital':['Paris']})
-        self.secondCountryToAdd = Country('France', {'Capital':['Paris']})
-        self.countryWithTwoCategory = Country('Canada', {'Capital': ['Ottawa'], 'GDP':[1000000]})
+        self.firstCountryToAdd = Country('Aruba', {'Capital': ['Paris']})
+        self.secondCountryToAdd = Country('France', {'Capital': ['Paris']})
+        self.countryWithTwoCategory = Country('Canada', {'Capital': ['Ottawa'], 'GDP': [1000000]})
         self.countryWithTwoCategory.contains = Mock(return_value = True)
         self.firstCountryToAdd.contains = Mock(return_value = True)
         self.secondCountryToAdd.contains = Mock(return_value = True)

@@ -1,8 +1,5 @@
 from unittest import TestCase
-import unittest
-from mock import Mock
 from naturalLanguagePython.countryDomain.country import Country
-from naturalLanguagePython.searchInformationStrategy.searchInformation import SearchInformation
 __author__ = 'Antoine'
 
 
@@ -13,7 +10,7 @@ class TestCountry(TestCase):
         self.nameOfCountry = 'France'
         self.country = Country(self.nameOfCountry, self.dictionary)
 
-        dictionaryCategoryList = {'Capital':['Kiev', 'newKiev']}
+        dictionaryCategoryList = {'Capital': ['Kiev', 'newKiev']}
         nameOfCountryWithCategoryList = 'Ukraine'
         self.countryWithListInsideCategory = Country(nameOfCountryWithCategoryList, dictionaryCategoryList)
 
@@ -53,7 +50,3 @@ class TestCountry(TestCase):
         key = 'Capital'
         value = 'Paris'
         self.assertFalse(self.countryWithListInsideCategory.contains(key, value))
-
-
-if __name__ == '__main__':
-    unittest.main()

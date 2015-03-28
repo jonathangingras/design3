@@ -239,8 +239,7 @@ class testQuestionInformationAnalyser(TestCase):
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
     def test_AnalyseQuestionWithExportPartnersAsKeyShouldReturnProperDictionary(self):
-        expectedDictionary = {}
-        expectedDictionary['export partners'] = ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]
+        expectedDictionary = {"export partners" : ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]}
         question = "My export partners are US, Germany, UK, France, Spain, Canada and Italy."
         self.processLanguage = QuestionInformationAnalyser()
         self.processLanguage.analyseQuestion(question)

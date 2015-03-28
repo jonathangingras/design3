@@ -7,7 +7,8 @@ class Country(object):
         self.name = nameOfCountry
         self.informationDict = informationDictionary
 
-    def __isValueListContainingTheWantedValue(self, currentValuesFromKey, value):
+    @staticmethod
+    def __isValueListContainingTheWantedValue(currentValuesFromKey, value):
         isContaining = False
         if type(currentValuesFromKey) is list:
             for currentValue in currentValuesFromKey:
