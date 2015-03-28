@@ -9,7 +9,7 @@ class DictionaryInformationFormatter(object):
         self.pathToModule = pathToModule
 
     def __setupFormatterData(self):
-        pathToFormatterData = path.relpath(self.pathToModule + "/countryService/keywordConversion.json")
+        pathToFormatterData = path.realpath(self.pathToModule + "/countryService/keywordConversion.json")
         keywordFormatterJsonFile = open(pathToFormatterData, 'r')
         keywordFormatterData = json.load(keywordFormatterJsonFile)
         return keywordFormatterData
