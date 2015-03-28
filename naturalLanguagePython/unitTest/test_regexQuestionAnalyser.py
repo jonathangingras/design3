@@ -68,18 +68,19 @@ class TestRegexQuestionAnalyser(unittest.TestCase):
         self.regexQuestionAnalyzer.listSubject = ["capital name", "capital"]
         expectedDict = {}
         expectedDict["capital name"] = ["Ath"]
-        self.regexQuestionAnalyzer.associateWord(question)
-        self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
+        dictAssociateWordDone = self.regexQuestionAnalyzer.associateWord(question,self.regexQuestionAnalyzer.listString,self.regexQuestionAnalyzer.listSubject)
+        self.assertEqual(dictAssociateWordDone,expectedDict)
 
     def test_assignAllValueToOneSubject(self):
         question = "My latitude is 16 00 S and my longitude is 167 00 E and my export partners are US, Germany, UK, France, Spain, Canada and Italy."
         self.regexQuestionAnalyzer.parseAllRegexValue(question)
         self.regexQuestionAnalyzer.searchSubject(question)
-        self.regexQuestionAnalyzer.associateWord(question)
+        # self.regexQuestionAnalyzer.associateWord(question)
         expectedDict = {}
         expectedDict["latitude"] = ["16 00 S"]
         expectedDict["longitude"] = ["167 00 E"]
         expectedDict["export partners"] = ["US", "Germany", "UK", "France", "Spain", "Canada", "Italy"]
 
-        self.assertEqual(self.regexQuestionAnalyzer.dictWord,expectedDict)
+        dictAssociateWordDone = self.regexQuestionAnalyzer.associateWord(question,self.regexQuestionAnalyzer.listString,self.regexQuestionAnalyzer.listSubject)
+        self.assertEqual(dictAssociateWordDone,expectedDict)
 
