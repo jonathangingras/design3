@@ -7,6 +7,7 @@ class TestDictionaryValueInformationFormatter(TestCase):
 
     def setUp(self):
         self.dictionaryValueInformationFormatter = DictionaryValueInformationFormatter()
+
     def test_formatValueInformationForPopulationKeywordWhenNumberIsSeparatedBySpaceShouldChangeValueInsideDictionaryToNumberWithoutSpace(self):
         dictionary = {"population": ["32 990"]}
         expectedReturnedDictionary = {"population": ["32990"]}

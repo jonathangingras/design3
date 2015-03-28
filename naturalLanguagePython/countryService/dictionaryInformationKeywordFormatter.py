@@ -2,6 +2,7 @@ __author__ = 'Antoine'
 import json
 from os import path
 
+
 class DictionaryInformationFormatter(object):
 
     def __init__(self, pathToModule):

@@ -1,3 +1,4 @@
+import os
 from unittest import TestCase
 from mock import Mock
 from naturalLanguagePython.countryService.countryService import CountryService
@@ -10,7 +11,8 @@ __author__ = 'Antoine'
 class TestCountryService(TestCase):
 
     def setUp(self):
-        self.countryService = CountryService("C:\Users\Antoine\Documents\\design3\\naturalLanguagePython")
+        path = os.getcwd()
+        self.countryService = CountryService(path)
         self.countryService.questionAnalyzer.analyseQuestion = Mock()
 
     def test_creatingACountryServiceShouldCreateAnInstanceOfCountryRepositoryDB(self):

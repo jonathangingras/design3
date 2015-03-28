@@ -5,6 +5,7 @@ __author__ = 'Antoine'
 
 
 class TestHtmlInformationFormatter(TestCase):
+
     def setUp(self):
         self.htmlInformationFormatter = HtmlInformationFormatter()
 

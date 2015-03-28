@@ -1,4 +1,5 @@
 from unittest import TestCase
+import os
 from mock import Mock
 from naturalLanguagePython.countryRessource.questionResponder import QuestionResponder
 __author__ = 'Antoine'
@@ -6,7 +7,7 @@ __author__ = 'Antoine'
 
 class TestQuestionResponder(TestCase):
     def setUp(self):
-        path = "C:\Users\Antoine\Documents\\design3\\naturalLanguagePython"
+        path = os.getcwd()
         self.questionResponder = QuestionResponder(path)
 
     def test_askingAQuestionWhenHavingAnEmptyQuestionShouldReturnNone(self):

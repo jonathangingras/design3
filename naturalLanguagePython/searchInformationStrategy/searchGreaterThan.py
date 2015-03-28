@@ -11,7 +11,7 @@ class SearchGreaterThan(SearchInformation):
     def __openJsonRangeFile(self, pathToWorkingModule):
         nameOfRangeFile = path.realpath(pathToWorkingModule + "/searchInformationStrategy/greaterRangeValue.json")
         greaterRangeFile = open(nameOfRangeFile)
-        greaterIncrementFile = open(path.realpath(pathToWorkingModule+ "/searchInformationStrategy/IncrementByKeyword.json"))
+        greaterIncrementFile = open(path.realpath(pathToWorkingModule+ "/searchInformationStrategy/incrementByKeyword.json"))
         self.greaterValueJson = json.load(greaterRangeFile)
         self.incrementByKeyword = json.load(greaterIncrementFile)
         greaterRangeFile.close()

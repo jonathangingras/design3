@@ -4,6 +4,7 @@ from naturalLanguagePython.questionLanguageAnalyzer.questionInformationAnalyser 
 
 
 class testQuestionInformationAnalyser(TestCase):
+
     def setUp(self):
         self.processLanguage = QuestionInformationAnalyser()
 

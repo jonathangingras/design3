@@ -1,3 +1,4 @@
+import os
 from unittest import TestCase
 from naturalLanguagePython.countryService.dictionaryInformationKeywordFormatter import DictionaryInformationFormatter
 __author__ = 'Antoine'
@@ -6,7 +7,7 @@ __author__ = 'Antoine'
 class TestDictionaryInformationFormatter(TestCase):
 
     def setUp(self):
-        path = "C:\Users\Antoine\Documents\\design3\\naturalLanguagePython"
+        path = os.getcwd()
         self.dictionaryInformationFormatter = DictionaryInformationFormatter(path)
 
     def test_changingKeywordOfDictionaryWhenReceivedExportPartnersKeywordShouldReturnDictionaryWithExportUnionMarkPartners(self):

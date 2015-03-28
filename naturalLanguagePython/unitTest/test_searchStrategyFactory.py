@@ -1,5 +1,5 @@
 from unittest import TestCase
-
+import os
 __author__ = 'Antoine'
 from naturalLanguagePython.searchInformationStrategy.searchStrategyFactory import SearchStrategyFactory
 from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
@@ -7,13 +7,13 @@ from naturalLanguagePython.searchInformationStrategy.searchStartsWith import Sea
 from naturalLanguagePython.searchInformationStrategy.searchEndsWith import SearchEndsWith
 from naturalLanguagePython.searchInformationStrategy.searchGreaterThan import SearchGreaterThan
 from naturalLanguagePython.searchInformationStrategy.searchLessThan import SearchLessThan
-from os import path
 
 
 class TestSearchStrategyFactory(TestCase):
 
     def setUp(self):
-        self.searchStrategyFactory = SearchStrategyFactory("C:\Users\Antoine\Documents\\design3\\naturalLanguagePython")
+        pathToModule = os.getcwd()
+        self.searchStrategyFactory = SearchStrategyFactory(pathToModule)
 
 
     def test_creatingSearchStrategyWhenSearchParticularityIsNoneShouldReturnObjectTypeSearchContains(self):

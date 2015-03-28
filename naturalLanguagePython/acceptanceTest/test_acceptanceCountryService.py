@@ -1,3 +1,4 @@
+import os
 from naturalLanguagePython.countryService.countryService import CountryService
 from unittest import TestCase
 
@@ -7,7 +8,7 @@ __author__ = 'Antoine'
 class AcceptanceTestCountryService(TestCase):
 
     def setUp(self):
-        path = "C:\Users\Antoine\Documents\\design3\\naturalLanguagePython"
+        path = os.getcwd()
         self.countryService = CountryService(path)
 
     def test_usingServiceToSearchACountryWhenSearchingForACapitalShouldReturnTheNameOfTheCountry(self):

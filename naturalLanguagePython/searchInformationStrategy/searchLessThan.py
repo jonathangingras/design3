@@ -10,7 +10,7 @@ class SearchLessThan(SearchInformation):
     def __openJsonRangeFile(self, pathToWorkingModule):
         nameOfRangeFile = path.realpath(pathToWorkingModule + "/searchInformationStrategy/lessRangeValue.json")
         lesserRangeFile = open(nameOfRangeFile)
-        incrementFile = open(path.realpath(pathToWorkingModule+ "/searchInformationStrategy/IncrementByKeyword.json"))
+        incrementFile = open(path.realpath(pathToWorkingModule+ "/searchInformationStrategy/incrementByKeyword.json"))
         self.lesserValueJson = json.load(lesserRangeFile)
         self.incrementByKeyword = json.load(incrementFile)
         lesserRangeFile.close()

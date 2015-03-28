@@ -1,6 +1,5 @@
 from unittest import TestCase
 from naturalLanguagePython.countryService.searchStrategyServiceFactory import SearchStrategyServiceFactory
-from naturalLanguagePython.searchInformationStrategy.searchContains import SearchContains
 
 __author__ = 'Antoine'
 

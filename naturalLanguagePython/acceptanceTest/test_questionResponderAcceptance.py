@@ -1,6 +1,5 @@
-from binascii import a2b_base64
+import os
 from unittest import TestCase
-from re import search
 from naturalLanguagePython.countryRessource.questionResponder import QuestionResponder
 __author__ = 'Antoine'
 
@@ -8,7 +7,7 @@ __author__ = 'Antoine'
 class TestQuestionResponder(TestCase):
 
     def setUp(self):
-        path = "C:\Users\Antoine\Documents\\design3\\naturalLanguagePython"
+        path = os.getcwd()
         self.questionResponder = QuestionResponder(path)
 
     def test_askingQuestionWhenSearchingByCountryCapitalShouldReturnTheNameOfCorrespondingCountry(self):
