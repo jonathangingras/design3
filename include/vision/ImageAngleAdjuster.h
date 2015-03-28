@@ -10,8 +10,8 @@ public:
 	typedef boost::shared_ptr<ImageAngleAdjuster> Ptr;
 	virtual ~ImageAngleAdjuster() {}
 
-	virtual void adjustY(int degrees) = 0;
-	virtual void adjustX(int degrees) = 0;
+	virtual void adjustY(float degrees) = 0;
+	virtual void adjustX(float degrees) = 0;
 };
 
 }

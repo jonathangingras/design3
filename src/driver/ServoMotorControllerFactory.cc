@@ -8,28 +8,33 @@ ServoMotorController::Ptr ServoMotorControllerFactory::createController(const st
 	controller->command += "/maestro-linux/UscCmd --servo ";
 
 	if(servoName == "prehensorVertical") {
-		controller->command += "5,";
-		controller->min = 3700;//584;
+		controller->channel = 5;
+		controller->min = 3700;
+		controller->forcedMin = 3700;
 		controller->max = 5120;
-		controller->currentInt = 3584;
+		controller->currentInt = 3700;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
 	} else if(servoName == "prehensorHorizontal") {
-		controller->command += "4,";
+		controller->channel = 4;
 		controller->min = 1600;
+		controller->forcedMin = 1600;
 		controller->max = 6080;
 		controller->currentInt = 6080;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
 	} else if(servoName == "cameraVertical") {
-		controller->command += "3,";
+		controller->channel = 3;
 		controller->min = 2244;
 		controller->max = 5952;
 		controller->currentInt = 4268;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
+		//next one is because tag confilcts with white
+		controller->forcedMin = 4150;
 	} else if(servoName == "cameraHorizontal") {
-		controller->command += "2,";
+		controller->channel = 2;
 		controller->min = 2440;
+		controller->forcedMin = 2440;
 		controller->max = 9536;
-		controller->currentInt = 5896;
+		controller->currentInt = 5988;
 		controller->slope = (controller->max - controller->min)/M_PI;
 	}
 

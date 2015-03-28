@@ -91,7 +91,7 @@ TEST(ServoMotorController_##servoStr, goodCommandWhenAngleSetAt##angle##Degrees)
 
 //Camera Horizontal
 
-TEST_hasGoodAngleAtInstanciation(cameraHorizontal, 87)
+TEST_hasGoodAngleAtInstanciation(cameraHorizontal, 90)
 
 TEST_systemCallerIsCalledWhenAngleSet(cameraHorizontal)
 
@@ -116,14 +116,15 @@ TEST_hasGoodAngleAtInstanciation(cameraVertical, 49)
 
 TEST_systemCallerIsCalledWhenAngleSet(cameraVertical)
 
-TEST_hasGoodAngleWhenSetDeg(cameraVertical, 0)
-TEST_hasGoodAngleWhenSetDeg(cameraVertical, 45)
+TEST_hasGoodAngleWhenSetDeg(cameraVertical, 50)
+TEST_hasGoodAngleWhenSetDeg(cameraVertical, 60)
+TEST_hasGoodAngleWhenSetDeg(cameraVertical, 70)
 TEST_hasGoodAngleWhenSetDeg(cameraVertical, 90)
 
-TEST_doesntExceedMinMax(cameraVertical, 0, 90)
+TEST_doesntExceedMinMax(cameraVertical, 46, 90) //because of forced min
 
-TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 0, 2244)
-TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 45, 4098)
+TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 0, 4150)// because of forced min
+TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 45, 4150)// because of forced min
 TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 90, 5952)
 
 
@@ -138,7 +139,7 @@ TEST_hasGoodAngleWhenSetDeg(prehensorVertical, 90)
 
 TEST_doesntExceedMinMax(prehensorVertical, 0, 90)
 
-TEST_goodCommandWhenAngleSetAtDegree(prehensorVertical, 5, 0, 3584)
+TEST_goodCommandWhenAngleSetAtDegree(prehensorVertical, 5, 0, 3700)
 TEST_goodCommandWhenAngleSetAtDegree(prehensorVertical, 5, 90, 5120)
 
 

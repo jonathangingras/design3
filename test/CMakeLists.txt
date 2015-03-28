@@ -33,3 +33,6 @@ add_design3_test(CubeCenterTargeterTest)
 add_design3_test(MicroControllerCommandBuilderTest)
 add_design3_test(ServoMotorControllerTest)
 add_design3_test(LEDMatrixControllerTest)
+
+#ai
+add_design3_test(CubePositionFinderTest)

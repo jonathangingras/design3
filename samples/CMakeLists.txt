@@ -31,3 +31,5 @@ target_link_libraries(ledSample ${D3_VISION_LIBS} ${D3_COMMON_LIBS} ${D3_DRIVER_
 #next one is only for an example on shared pointers
 add_executable(shared_ptr_howto shared_ptr_howto.cc)
 target_link_libraries(shared_ptr_howto ${Boost_LIBRARIES})
+
+add_executable(serial_populu serial_populu.cc)

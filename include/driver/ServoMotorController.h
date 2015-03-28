@@ -15,12 +15,16 @@ friend class ServoMotorControllerFactory;
 private:
 	SystemCaller::Ptr systemCaller;
 	std::string command;
+
+	int channel;
 	
 	int currentInt;
 
 	double slope;
 	double min;
 	double max;
+
+	double forcedMin;
 
 	inline ServoMotorController() {}
 	void sendCommand();

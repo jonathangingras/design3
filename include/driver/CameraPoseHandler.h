@@ -1,6 +1,7 @@
 #ifndef _D3T12_CAMERAPOSEHANDLER_H_
 #define _D3T12_CAMERAPOSEHANDLER_H_
 
+#include <common/commonEssentials.h>
 #include "ServoMotorControllerFactory.h"
 
 namespace d3t12 {
@@ -11,6 +12,7 @@ private:
 	ServoMotorController::Ptr horizontalController;
 
 public:
+	typedef boost::shared_ptr<CameraPoseHandler> Ptr;
 	CameraPoseHandler();
 
 	void increasePitch(double angle);

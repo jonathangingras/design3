@@ -4,7 +4,7 @@ namespace d3t12 {
 
 void ServoMotorController::sendCommand() {
 	std::ostringstream os;
-	os << command << currentInt;
+	os << command << channel << ',' << currentInt;
 	systemCaller->call(os.str());
 }
 
@@ -14,8 +14,8 @@ double ServoMotorController::getAngle() {
 
 void ServoMotorController::setAngle(double angle) {
 	double correspondingInt = slope*angle + min;
-	if(correspondingInt <= min) {
-		currentInt = min;
+	if(correspondingInt <= forcedMin) {
+		currentInt = forcedMin;
 	} else if(correspondingInt >= max) {
 		currentInt = max;
 	} else {
