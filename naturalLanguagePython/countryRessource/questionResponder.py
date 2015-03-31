@@ -1,6 +1,5 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.countryService.countryService import CountryService
-
 class QuestionResponder(object):
 
     def __init__(self, currentProjectPath):
@@ -30,3 +29,6 @@ class QuestionResponder(object):
                                                                                                      question)
             nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
         return nameOfCountry
+
+if __name__ == "__main__":
+    print("allo")
