@@ -8,4 +8,6 @@ public:
 	MOCK_METHOD0(detectCube, cv::Rect(void));
 };
 
+#define CAST_DECTECTOR(mock) *((CubeDetectorMock*) mock .get())
+
 #endif

@@ -1,16 +1,10 @@
 #include <testEssentials.h>
 #include <ai/ai.h>
 
+#include "mocks/ImageAngleGetterMock.h"
+
 using namespace d3t12;
 using ::testing::Return;
-
-class ImageAngleGetterMock : public d3t12::ImageAngleGetter {
-public:
-	MOCK_METHOD0(getPitch, double(void));
-	MOCK_METHOD0(getYaw, double(void));
-};
-
-#define CAST_AGETTER(mock) *( (ImageAngleGetterMock*) mock .get() )
 
 class CubePositionFinderTest : public d3t12::CubePositionFinder {
 public:

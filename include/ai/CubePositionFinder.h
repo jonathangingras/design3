@@ -20,6 +20,7 @@ protected:
 	double getCameraEyeXOffset(double pitch);
 
 public:
+	typedef boost::shared_ptr<CubePositionFinder> Ptr;
 	inline CubePositionFinder(ImageAngleGetter::Ptr _anglesGetter, double _pulleyHeight, double _eyeToPulleyHeight, double _eyeToPulleyWidth):
 		anglesGetter(_anglesGetter), pulleyHeight(_pulleyHeight), eyeToPulleyHeight(_eyeToPulleyHeight), eyeToPulleyWidth(_eyeToPulleyWidth) {}
 

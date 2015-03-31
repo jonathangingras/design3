@@ -20,6 +20,7 @@ private:
 	bool needMicroAdjust(const cv::Point& imageCenter, const cv::Rect& rect);
 
 public:
+	typedef boost::shared_ptr<CubeCenterTargeter> Ptr;
 	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster):
 		capturer(_capturer), detector(_detector), adjuster(_adjuster) {}
 

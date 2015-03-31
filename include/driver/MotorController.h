@@ -17,6 +17,8 @@ public:
 
 	void informPosition(float x, float y, float yaw);
 	void commandPosition(float x, float y, float yaw);
+	void moveTo(float x, float y);
+	void rotate(float yaw);
 };
 
 }

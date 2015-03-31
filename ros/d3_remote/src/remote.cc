@@ -9,6 +9,14 @@ namespace d3t12 {
 }
 
 d3t12::MicroControllerCommandPort* portP;
+std::ifstream* inPort;
+
+inline bool getFlag() {
+	int ret;
+	*portP << "getflag";
+	*inPort >> ret;
+	return ret;
+}
 
 struct RobotPositioner {
 	boost::mutex mutex;
@@ -29,11 +37,11 @@ struct RobotPositioner {
 			
 			if(first) {
 				first = false;
-				*portP << "setecho off";
-				motors.informPosition(x, y, yaw);
-				motors.commandPosition(x, y, yaw);
-				//*portP << "clcmode p";
-				*portP << "clcecho on";
+				//*portP << "setecho off";
+				//motors.informPosition(x, y, yaw);
+				//motors.commandPosition(x, y, yaw);
+				
+				//*portP << "clcecho on";
 			}
 
 			mutex.unlock();
@@ -50,10 +58,12 @@ struct RobotPositioner {
 	}
 
 	void goTo(float _x, float _y, float _yaw) {
-		mutex.lock();
+		/*mutex.lock();
 		float comX = _x - x, comY = _y - y, comYaw = _yaw - yaw;
 		motors.commandPosition(comX, comY, comYaw);
-		mutex.unlock();
+		mutex.unlock();*/
+
+		motors.moveTo(_x, _y);
 	}
 };
 
@@ -100,16 +110,20 @@ struct RemoteConsole {
 			strcpy(commandCharArray, command.c_str());
 			char* token;
 			token = strtok(commandCharArray, " ,");
-			for(int i = 0; i < 1/*3*/; ++i) {
+			for(int i = 0; i < 3; ++i) {
 				token = strtok(NULL, " ,");
 				xyyaw[i] = atof(token);
 			}
-			//position->goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
+			
+			position->goTo(xyyaw[0], xyyaw[1], xyyaw[2]);
+			while(!getFlag()) {
+				sleep(1);
+			}
 
-			std::ostringstream oss;
-			oss << xyyaw[0];
+			//std::ostringstream oss;
+			//oss << xyyaw[0];
 
-			*portP << (std::string("clcspt ") + oss.str());
+			//*portP << (std::string("clcspt ") + oss.str());
 
 		} else if(command[0] == 'c' && command[1] == 'a' && command[2] == 'm') {
 			double angles[2] = {0,0};
@@ -194,8 +208,12 @@ int main(int argc, char** argv) {
 	d3t12::Prehensor prehensor;
 	d3t12::CameraPoseHandler cameraPose;
 
+	std::ifstream _inPort("/dev/ttySTM32");
+	inPort = &_inPort;
+
+	*portP << "clcmode p";
 	RobotPositioner positioner(motors);
-	ros::Subscriber robotPoseReceiver = node.subscribe<d3t12::tf::robotPose>("robot_positioner/robot_pose", 1, &RobotPositioner::callback, &positioner);
+	//ros::Subscriber robotPoseReceiver = node.subscribe<d3t12::tf::robotPose>("robot_positioner/robot_pose", 1, &RobotPositioner::callback, &positioner);
 
 	RemoteConsole remoteConsole(&node, &positioner, &leds, &prehensor, &cameraPose);
 	boost::thread remoteConsoleThread(remoteConsole);

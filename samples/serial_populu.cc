@@ -44,7 +44,7 @@ return response[0] + 256*response[1];
 }
 
 int main(int argc, char** argv) {
-	int fd = open("/dev/ttyPololu", O_RDWR | O_NOCTTY);
+	int fd = open("/dev/ttyACM0", O_RDWR | O_NOCTTY);
 	
 	if (fd == -1) {
 		perror("no file descriptor");
@@ -57,14 +57,14 @@ int main(int argc, char** argv) {
 	options.c_oflag &= ~(ONLCR | OCRNL);
 	tcsetattr(fd, TCSANOW, &options);
 
-	int position = maestroGetPosition(fd, 3);
-	printf("Current position is %d.\n", position);
+	//int position = maestroGetPosition(fd, 3);
+	//printf("Current position is %d.\n", position);
 
-	//unsigned char command[4];
-	//PololuCommand(3, 2988).writeBytes(command);
+	unsigned char command[4];
+	PololuCommand(3, 2988).writeBytes(command);
 	
-	/*if (write(fd, command, 4*sizeof(unsigned char)) == -1) {
+	if (write(fd, command, 4*sizeof(unsigned char)) == -1) {
 		perror("error writing");
 		return -1;
-	}*/
+	}
 }

@@ -2,5 +2,6 @@
 #define _D3T12_AI_H_
 
 #include "CubePositionFinder.h"
+#include "PathPlanner.h"
 
 #endif

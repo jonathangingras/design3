@@ -36,3 +36,5 @@ add_design3_test(LEDMatrixControllerTest)
 
 #ai
 add_design3_test(CubePositionFinderTest)
+add_design3_test(JourneySchedulerTest)
+add_design3_test(JourneyStatesTest)

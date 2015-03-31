@@ -1,5 +1,5 @@
-#ifndef _D3T12_COLORPALETTEMOCK_H_
-#define _D3T12_COLORPALETTEMOCK_H_
+#ifndef _D3T12_IMAGEADJUSTERMOCK_H_
+#define _D3T12_IMAGEADJUSTERMOCK_H_
 
 #include <vision/ImageAngleAdjuster.h>
 
@@ -8,5 +8,7 @@ public:
   MOCK_METHOD1(adjustX, void(float degrees));
   MOCK_METHOD1(adjustY, void(float degrees));
 };
+
+#define CAST_ADJUSTER(mock) *((ImageAngleAdjusterMock*) mock .get())
 
 #endif

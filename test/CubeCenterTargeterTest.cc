@@ -12,8 +12,6 @@ public:
 	MOCK_METHOD0(capture, void(void));
 };
 
-#define CAST_DECTECTOR(mock) *((CubeDetectorMock*) mock .get())
-#define CAST_ADJUSTER(mock) *((ImageAngleAdjusterMock*) mock .get())
 #define CAST_CAPTURER(mock) *((ImageCapturerMock*) mock .get())
 
 #define SETUP \
