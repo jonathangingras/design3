@@ -11,6 +11,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		GoToAtlasState* state = new GoToAtlasState;
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
+		state->pathPlanner = pathPlanner;
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "HandleQuestion") {
 		HandleQuestionState* state = new HandleQuestionState;
@@ -29,6 +30,35 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		state->poseCommander = poseCommander;
 		state->pathPlanner = pathPlanner;		
 		statePtr = JourneyState::Ptr(state);
+	} else if(stateName == "AskCube") {
+		AskCubeState* state = new AskCubeState;
+		state->colorList = colorList;
+		state->leds = leds;
+		statePtr = JourneyState::Ptr(state);
+	} else if(stateName == "FindCube") {
+		FindCubeState* state = new FindCubeState;
+		state->cameraTargeter = cameraTargeter;
+		state->finder = finder;
+		state->detectorFactory = detectorFactory;
+		statePtr = JourneyState::Ptr(state);
+	} else if(stateName == "PlanPathToCubeZone") {
+		PlanPathToCubeZoneState* state = new PlanPathToCubeZoneState;
+		state->pathInformer = pathInformer;
+		state->poseGetter = poseGetter;
+		state->pathPlanner = pathPlanner;
+		statePtr = JourneyState::Ptr(state);
+	} else if(stateName == "GoToCubeZone") {
+		GoToCubeZoneState* state = new GoToCubeZoneState;
+		state->poseCommander = poseCommander;
+		statePtr = JourneyState::Ptr(state);
+	} else if(stateName == "GrabCube") {
+		GrabCubeState* state = new GrabCubeState;
+		state->prehensor = prehensor;
+		state->cameraTargeter = cameraTargeter;
+		state->motorTargeter = motorTargeter;
+		state->poseGetter = poseGetter;
+		state->poseCommander = poseCommander;
+		statePtr = JourneyState::Ptr(state);	
 	}
 
 	statePtr->backpack = backpack;

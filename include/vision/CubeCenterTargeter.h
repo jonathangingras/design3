@@ -28,7 +28,7 @@ public:
 		detector = _detector;
 	}
 
-	void targetCenter();
+	virtual void targetCenter();
 };
 
 }

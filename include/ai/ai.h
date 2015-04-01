@@ -3,5 +3,6 @@
 
 #include "CubePositionFinder.h"
 #include "PathPlanner.h"
+#include "JourneyStateFactory.h"
 
 #endif

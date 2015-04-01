@@ -15,6 +15,7 @@ friend class JourneyStateFactory;
 
 	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
+	PathPlanner::Ptr pathPlanner;
 
 public:
 	void run();
@@ -67,6 +68,8 @@ friend class JourneyStateFactory;
 
 	CubeCenterTargeter::Ptr cameraTargeter;
 	CubePositionFinder::Ptr finder;
+	CubeDetectorFactory::Ptr detectorFactory;
+	cvMatPtr image;
 
 public:
 	void run();
@@ -86,7 +89,6 @@ public:
 class GoToCubeZoneState : public JourneyState {
 friend class JourneyStateFactory;
 
-	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
 
 public:

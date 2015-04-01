@@ -21,15 +21,15 @@ public:
 	void turnMasterOn();
 	void turnMasterOff();
 
-	void addNew(const std::string& colorStr);
-	void addBlank();
-	void removeCurrent();
+	virtual void addNew(const std::string& colorStr);
+	virtual void addBlank();
+	virtual void removeCurrent();
 
 	inline bool matrixFilled() {
 		return orderList.current() == 3;
 	}
 
-	void turnAllOff();
+	virtual void turnAllOff();
 };
 
 }

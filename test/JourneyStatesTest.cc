@@ -1,10 +1,12 @@
 #include <testEssentials.h>
-#include <ai/JourneyStateFactory.h>
+#include <ai/ai.h>
+#include <vision/vision.h>
 
 #include "mocks/ImageAngleAdjusterMock.h"
 
 using namespace d3t12;
 using ::testing::Return;
+using ::testing::ElementsAre;
 
 struct PoseGetterMock : public PoseGetter {
 	MOCK_METHOD0(getPose, RobotPose(void));
@@ -36,6 +38,39 @@ struct PathInformerMock : public PathInformer {
 };
 #define CAST_PATHINFORMER(x) *((PathInformerMock*) x .get())
 
+struct CubeCenterTargeterMock : public CubeCenterTargeter {
+	MOCK_METHOD0(targetCenter, void(void));
+
+	inline CubeCenterTargeterMock(): CubeCenterTargeter(ImageCapturer::Ptr(), CubeDetector::Ptr(), ImageAngleAdjuster::Ptr()) {}
+};
+#define CAST_TARGETER(x) *((CubeCenterTargeterMock*) x .get())
+
+struct CubePositionFinderMock : public CubePositionFinder {
+	MOCK_METHOD0(findCubePosition, CubeRelativePosition(void));
+
+	inline CubePositionFinderMock(): CubePositionFinder(ImageAngleGetter::Ptr(), 0, 0, 0) {}
+};
+#define CAST_FINDER(x) *((CubePositionFinderMock*) x .get())
+
+struct PathPlannerMock : public PathPlanner {
+	//std::vector<PathCommand> planPath(RobotPose currentPose, RobotPose wantedPose);
+	MOCK_METHOD2(planPath, std::vector<PathCommand>(RobotPose, RobotPose));
+};
+#define CAST_PATHPLANNER(x) *((PathPlannerMock*) x .get())
+
+struct CubeDetectorMock : public CubeDetector {
+	MOCK_METHOD0(detectCube, cv::Rect(void));
+};
+
+struct CubeDetectorFactoryMock : public CubeDetectorFactory {
+	MOCK_METHOD2(createCubeDetector, CubeDetector::Ptr(std::string, cvMatPtr));
+
+	inline CubeDetectorFactoryMock(): CubeDetectorFactory(ColorPalette::Ptr(new ColorPalette)) {
+		palette->storeColor("somecolor", Color());
+	}
+};
+#define CAST_DETECTORFACTORY(x) *((CubeDetectorFactoryMock*) x .get())
+
 struct PrehensorMock : public Prehensor {
 	MOCK_METHOD0(open, void(void));
 	MOCK_METHOD0(close, void(void));
@@ -43,6 +78,17 @@ struct PrehensorMock : public Prehensor {
 	MOCK_METHOD0(lower, void(void));
 };
 #define CAST_PREHENSOR(x) *((PrehensorMock*) x .get())
+
+struct LEDMatrixControllerMock : public LEDMatrixController {
+	MOCK_METHOD1(addNew, void(const std::string&));
+	MOCK_METHOD0(addBlank, void(void));
+	MOCK_METHOD0(removeCurrent, void(void));
+	MOCK_METHOD0(turnAllOff, void(void));
+
+	inline LEDMatrixControllerMock(MicroControllerCommandPort::Ptr _port): LEDMatrixController(_port) {}
+};
+#define CAST_LEDS(x) *((LEDMatrixControllerMock*) x .get())
+
 
 #include <common/CountryToColorLister.h>
 
@@ -59,8 +105,14 @@ std::vector<StringPtr> colors = CountryToColorLister(std::string(getenv("HOME"))
 LEDColorList::Ptr colorList(new LEDColorList(LEDMatrixOrderList::Ptr(new LEDMatrixOrderList))); \
 colorList->setColorList(colors); \
 std::ostringstream* portStream = new std::ostringstream; \
-LEDMatrixController::Ptr leds(new LEDMatrixController (MicroControllerCommandPort::Ptr(new MicroControllerCommandPort ( MicroControllerCommandPort::OStreamPtr(portStream) ) ) )  ); \
-PathPlanner::Ptr pathPlanner(new PathPlanner); \
+LEDMatrixController::Ptr leds(new LEDMatrixControllerMock( MicroControllerCommandPort::Ptr(new MicroControllerCommandPort ( MicroControllerCommandPort::OStreamPtr(portStream) ) ) )  ); \
+PathPlanner::Ptr pathPlanner(new PathPlannerMock); \
+ \
+CubeDetectorFactory::Ptr detectorFactory(new CubeDetectorFactoryMock); \
+cvMatPtr image(new cv::Mat); \
+CubeCenterTargeter::Ptr cameraTargeter(new CubeCenterTargeterMock);\
+CubeCenterTargeter::Ptr motorTargeter(new CubeCenterTargeterMock);\
+CubePositionFinder::Ptr finder(new CubePositionFinderMock);\
  \
 ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ImageAngleAdjusterMock); \
 Prehensor::Ptr prehensor(new PrehensorMock); \
@@ -77,20 +129,36 @@ JourneyStateFactory factory( \
 	colorList, \
 	leds, \
 	pathPlanner, \
+	detectorFactory, \
+	image, \
+	cameraTargeter, \
+	motorTargeter, \
+	finder, \
 	cameraPoseAdjuster, \
 	prehensor, \
 	backpack \
 ); \
+CubeDetector::Ptr cubeDetectorMock(new CubeDetectorMock);
 
 MATCHER(AtlasPose, "is atlas pose") { return arg == ATLAS_ZONE_POSE; }
 
 TEST(GoToAtlasState, goesToAtlasWhenNotThere) {
 	SETUP
 
-	JourneyState::Ptr state = factory.createState("GoToAtlas");
+	std::vector<PathCommand> commands;
+	PathCommand c1(1,0,0), c2(0,1,0), c3(0,0,1);
+	commands.push_back(c1);
+	commands.push_back(c2);
+	commands.push_back(c3);
 
-	EXPECT_CALL(CAST_POSEGETTER(poseGetter), getPose()).Times(1).WillOnce(Return(RobotPose(0.15,0.63,-M_PI/2)));
-	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(ATLAS_ZONE_POSE)).Times(1);
+	JourneyState::Ptr state = factory.createState("GoToAtlas");
+	EXPECT_CALL(CAST_POSEGETTER(poseGetter), getPose()).Times(1).WillOnce(Return(RobotPose(0.50,0.75,0)));
+	
+	EXPECT_CALL(CAST_PATHPLANNER(pathPlanner), planPath(RobotPose(0.50,0.75,0), ATLAS_ZONE_POSE)).Times(1).WillOnce(Return(commands));
+
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(1,0,0)) ).Times(1);
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(0,1,0)) ).Times(1);
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(0,0,1)) ).Times(1);
 
 	state->run();
 }
@@ -136,14 +204,94 @@ TEST(ShowFlagsOnLEDsState, stateRunsWhitoutException) {
 
 	JourneyState::Ptr state = factory.createState("ShowFlagsOnLEDs");
 
+	EXPECT_CALL(CAST_LEDS(leds), addBlank()).Times(6);
+	EXPECT_CALL(CAST_LEDS(leds), addNew("yellow")).Times(1);
+	EXPECT_CALL(CAST_LEDS(leds), addNew("red")).Times(1);
+	EXPECT_CALL(CAST_LEDS(leds), addNew("black")).Times(1);
+	EXPECT_CALL(CAST_LEDS(leds), turnAllOff()).Times(1);
+
 	state->run();
 }
 
 TEST(GoToDetectionZoneState, stateRunsWhitoutException) {
 	SETUP
 
+	std::vector<PathCommand> commands;
+	PathCommand c1(1,0,0), c2(0,1,0), c3(0,0,1);
+	commands.push_back(c1);
+	commands.push_back(c2);
+	commands.push_back(c3);
+
 	JourneyState::Ptr state = factory.createState("GoToDetectionZone");
 	EXPECT_CALL(CAST_POSEGETTER(poseGetter), getPose()).Times(1).WillOnce(Return(RobotPose(0.50,0.75,0)));
+	
+	EXPECT_CALL(CAST_PATHPLANNER(pathPlanner), planPath(RobotPose(0.50,0.75,0), SEEKING_CUBE_ZONE_POSE)).Times(1).WillOnce(Return(commands));
+
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(1,0,0)) ).Times(1);
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(0,1,0)) ).Times(1);
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(RobotPose(0,0,1)) ).Times(1);
+
+	state->run();
+}
+
+TEST(AskCubeState, addsColorsInGoodOrder) {
+	SETUP
+
+	JourneyState::Ptr state = factory.createState("AskCube");
+
+	EXPECT_CALL(CAST_LEDS(leds), addBlank()).Times(1);
+	EXPECT_CALL(CAST_LEDS(leds), addNew("yellow")).Times(1);
+
+	state->run();
+}
+
+TEST(FindCubeState, runsHowExpected) {
+	SETUP
+
+	JourneyState::Ptr state = factory.createState("FindCube");
+	backpack->currentColor = "somecolor";
+	CubeRelativePosition relativePosition(1.0,-0.5);
+
+	EXPECT_CALL(CAST_DETECTORFACTORY(detectorFactory), createCubeDetector("somecolor", _)).Times(1).WillOnce(Return(cubeDetectorMock));
+	EXPECT_CALL(CAST_TARGETER(cameraTargeter), targetCenter()).Times(1);
+	EXPECT_CALL(CAST_FINDER(finder), findCubePosition()).Times(1).WillOnce(Return(relativePosition));
+
+	state->run();
+
+	EXPECT_EQ(relativePosition.x, backpack->cubeTarget.x);
+	EXPECT_EQ(relativePosition.y, backpack->cubeTarget.y);
+}
+
+MATCHER(AnyPose, "is a pose") { return true; }
+
+TEST(PlanPathToCubeZoneState, runsHowExpected) {
+	SETUP
+
+	JourneyState::Ptr state = factory.createState("PlanPathToCubeZone");
+	backpack->cubeTarget = CubeRelativePosition(0.75, 0.4);
+	std::vector<PathCommand> commands;
+	PathCommand c1(0.75, 0.4, 0);
+	commands.push_back(c1);
+
+	EXPECT_CALL(CAST_POSEGETTER(poseGetter), getPose()).Times(1).WillOnce(Return(SEEKING_CUBE_ZONE_POSE));
+	EXPECT_CALL(CAST_PATHPLANNER(pathPlanner), planPath(SEEKING_CUBE_ZONE_POSE, AnyPose())).Times(1).WillOnce(Return(commands));
+	EXPECT_CALL(CAST_PATHINFORMER(pathInformer), informPath(ElementsAre(c1))).Times(1);
+
+	state->run();
+}
+
+TEST(GoToCubeZoneState, runsHowExpected) {
+	SETUP
+
+	JourneyState::Ptr state = factory.createState("GoToCubeZone");
+	std::vector<PathCommand> commands;
+	PathCommand c1(0.75, 0.4, 0), c2(0.5, 0.5, 0);
+	commands.push_back(c1);
+	commands.push_back(c2);
+	backpack->plannedCommands = commands;
+
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(c1.toRobotPose())).Times(1);
+	EXPECT_CALL(CAST_POSECOMMANDER(poseCommander), commandPose(c2.toRobotPose())).Times(1);
 
 	state->run();
 }

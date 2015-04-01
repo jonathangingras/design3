@@ -15,12 +15,16 @@ struct PathCommand {
 	}
 };
 
+inline bool operator == (const PathCommand& first, const PathCommand& other) {
+	return first.x == other.x && first.y == other.y && first.yaw == other.yaw;
+}
+
 class PathPlanner {
 public:
 	typedef boost::shared_ptr<PathPlanner> Ptr;
 	inline PathPlanner() {}
 
-	std::vector<PathCommand> planPath(RobotPose currentPose, RobotPose wantedPose);
+	virtual std::vector<PathCommand> planPath(RobotPose currentPose, RobotPose wantedPose);
 };
 
 } //d3t12

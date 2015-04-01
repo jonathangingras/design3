@@ -19,6 +19,12 @@ private:
 	LEDMatrixController::Ptr leds;
 
 	PathPlanner::Ptr pathPlanner;
+
+	CubeDetectorFactory::Ptr detectorFactory;
+	cvMatPtr image;
+	CubeCenterTargeter::Ptr cameraTargeter;
+	CubeCenterTargeter::Ptr motorTargeter;
+	CubePositionFinder::Ptr finder;
 	
 	ImageAngleAdjuster::Ptr cameraPoseAdjuster;
 	Prehensor::Ptr prehensor;
@@ -38,6 +44,12 @@ public:
 		LEDMatrixController::Ptr _leds,
 
 		PathPlanner::Ptr _pathPlanner,
+
+		CubeDetectorFactory::Ptr _detectorFactory,
+		cvMatPtr _image,
+		CubeCenterTargeter::Ptr _cameraTargeter,
+		CubeCenterTargeter::Ptr _motorTargeter,
+		CubePositionFinder::Ptr _finder,
 	
 		ImageAngleAdjuster::Ptr _cameraPoseAdjuster,
 		Prehensor::Ptr _prehensor,
@@ -53,6 +65,12 @@ public:
 
 		colorList(_colorList),
 		leds(_leds),
+
+		detectorFactory(_detectorFactory),
+		image(_image),
+		cameraTargeter(_cameraTargeter),
+		motorTargeter(_motorTargeter),
+		finder(_finder),
 
 		pathPlanner(_pathPlanner),
 

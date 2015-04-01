@@ -11,13 +11,14 @@
 namespace d3t12 {
 
 class CubeDetectorFactory {
-private:
+protected:
 	ColorPalette::Ptr palette;
 
 public:
+	typedef boost::shared_ptr<CubeDetectorFactory> Ptr;
 	inline CubeDetectorFactory(ColorPalette::Ptr _palette): palette(_palette) {}
 
-	CubeDetector::Ptr createCubeDetector(std::string colorString, cvMatPtr image);
+	virtual CubeDetector::Ptr createCubeDetector(std::string colorString, cvMatPtr image);
 };
 
 }
