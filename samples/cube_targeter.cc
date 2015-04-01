@@ -85,7 +85,7 @@ int main(int argc, char** argv) {
     );
 
     d3t12::ImageAngleGetter::Ptr angleGetter(new ConcreteAngleGetter(cameraPose));
-    d3t12::CubePositionFinder finder(angleGetter, 0.30, 0.03, 0.02);
+    d3t12::CubePositionFinder finder(angleGetter, 0.34, 0.03, 0.02);
 
     d3t12::SignalFunctor::Ptr exitGuard(new d3t12::ExitGuard);
     d3t12::SIGINTHandler::getInstance().setSignalHandler(exitGuard);

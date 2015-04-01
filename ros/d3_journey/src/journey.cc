@@ -13,20 +13,33 @@ namespace d3t12 {
 
 struct PoseReceiver : public d3t12::PoseGetter {
 	d3t12::RobotPose robotPose;
-	boost::mutex mutex;
+	boost::mutex mutex, fmutex;
+	bool firstReceived;
 
-	inline PoseReceiver(): robotPose(0,0,0) {}
+	inline PoseReceiver(): robotPose(0,0,0), firstReceived(false) {
+		fmutex.lock();
+	}
 
 	void callback(const d3t12::tf::robotPose::ConstPtr& inputPose) {
+		if(!firstReceived) {
+			firstReceived = true;
+			fmutex.unlock();
+		}
+
 		mutex.lock();
 		robotPose = d3t12::RobotPose(inputPose->x, inputPose->y, inputPose->yaw);
 		mutex.unlock();
 	}
 
 	d3t12::RobotPose getPose() {
+		if(!firstReceived) {
+			fmutex.lock();
+		}
+
 		mutex.lock();
 		d3t12::RobotPose pose = robotPose;
 		mutex.unlock();
+		ROS_ERROR_STREAM(pose.x << "," << pose.y << "," << pose.yaw);
 		return pose;
 	}
 };
@@ -34,39 +47,48 @@ struct PoseReceiver : public d3t12::PoseGetter {
 struct ConcretePoseCommander : public d3t12::PoseCommander {
 	d3t12::MicroControllerCommandPort::Ptr commandPort;
 	d3t12::MotorController motors;
-	std::ifstream inPort;
 
 	inline ConcretePoseCommander(d3t12::MicroControllerCommandPort::Ptr _commandPort): 
-		inPort("/dev/ttySTM32"), commandPort(_commandPort), motors(_commandPort) {
+		commandPort(_commandPort), motors(_commandPort) {
 		*commandPort << "clcmode p";
 	}
 
-	bool getFlag() {
-		int ret;
-		*commandPort << "getflag";
-		inPort >> ret;
-		return ret;
+	signed char getLastChar() {
+		std::string ret;
+  		do { 
+  			inPort >> ret;
+  			ROS_ERROR_STREAM("ret: " << ret);
+  		}while(ret.size() < 1 || *--ret.end() != '1');
+	}
+
+	void getFlag() {
+		std::ifstream inPort("/dev/ttySTM32");
+		signed char c;
+		do {
+			*commandPort << "getflag";
+			usleep(1000000);
+			c = getLastChar();
+		} while(c != '1');
 	}
 
 	void commandPose(d3t12::RobotPose pose) {
 		if(pose.yaw) {
 			motors.rotate(pose.yaw);
-			while(!getFlag());
 		}
-		if(pose.x || pose.y) {
+		else if(pose.x || pose.y) {
 			motors.moveTo(pose.x, pose.y);
-			while(!getFlag());
 		}
+
+		getFlag();
 	}
 };
 
 struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved to other node as a receiver of std_msgs::String message
 	std::string getQuestion() {
-		/*d3t12::CURLGetter getter("https://132.203.14.228");
+		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-    	return decoder.questionStr(atlas_told);*/
-    	return "Who likes Sausage?";
+    	return decoder.questionStr(atlas_told);
 	}
 };
 
@@ -91,7 +113,6 @@ struct ConcretePathInformer : public d3t12::PathInformer {
 };
 
 struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
-private:
     d3t12::CameraPoseHandler::Ptr cameraPose;
 
     inline float rad2deg(double rad) {
@@ -102,7 +123,6 @@ private:
         return (deg*M_PI)/180;
     }
 
-public:
     inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose):
         cameraPose(_cameraPose) {}
 
@@ -116,10 +136,8 @@ public:
 };
 
 struct ConcreteAngleGetter : public d3t12::ImageAngleGetter {
-private:
     d3t12::CameraPoseHandler::Ptr cameraPose;
 
-public:
     inline ConcreteAngleGetter(d3t12::CameraPoseHandler::Ptr _cameraPose):
         cameraPose(_cameraPose) {}
 
@@ -132,16 +150,14 @@ public:
     }
 };
 
-struct CameraImageCapturer : public d3t12::ImageCapturer {
-private:
+struct ConcreteImageCapturer : public d3t12::ImageCapturer {
     d3t12::CameraCapturer* capturer;
     d3t12::cvMatPtr srcImage;
 
-public:
-    inline CameraImageCapturer(int camId, d3t12::cvMatPtr _srcImage): 
+    inline ConcreteImageCapturer(int camId, d3t12::cvMatPtr _srcImage): 
         capturer(new d3t12::CameraCapturer(camId)), srcImage(_srcImage) {}
     
-    ~CameraImageCapturer() {
+    ~ConcreteImageCapturer() {
         delete capturer;
     }
 
@@ -149,6 +165,16 @@ public:
         *capturer >> *srcImage;
     }
 };
+
+void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& stateName) {
+	d3t12::JourneyState::Ptr state = stateFactory->createState(stateName);
+	state->run();
+	std::cout << "done command: " << stateName << std::endl; 
+}
+
+void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
+	runState(stateFactory, "GoToAtlas");
+}
 
 int main(int argc, char** argv) {
 	ros::init(argc, argv, "design3_robot_journey");
@@ -169,8 +195,7 @@ int main(int argc, char** argv) {
 	d3t12::PoseCommander::Ptr poseCommander(new ConcretePoseCommander(commandPort));
 
 	d3t12::LEDMatrixController::Ptr leds(new d3t12::LEDMatrixController(commandPort));
-	d3t12::Prehensor::Ptr prehensor(new d3t12::Prehensor);
-	d3t12::CameraPoseHandler::Ptr cameraPose(new d3t12::CameraPoseHandler);
+	d3t12::LEDColorList::Ptr colorList(new d3t12::LEDColorList(leds->getOrderList()));
 
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
 	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker);
@@ -180,10 +205,58 @@ int main(int argc, char** argv) {
 	d3t12::PathPlanner::Ptr pathPlanner(new d3t12::PathPlanner);
 
 	d3t12::cvMatPtr image(new cv::Mat);
-	d3t12::ImageCaturer::Ptr imageCapturer();
+	d3t12::ImageCapturer::Ptr imageCapturer(new ConcreteImageCapturer(0, image));
 
-	d3t12::ImageAngleAdjuster()
+	d3t12::ColorJSONLoader loader;
+    loader.setFile("/home/team12/catkin_ws/src/design3/config/colors.json");
+    loader.loadJSON();
+    d3t12::ColorPalette::Ptr palette(new d3t12::ColorPalette);
+    loader.fillPalette(*palette);
+
+    d3t12::CubeDetectorFactory::Ptr detectorFactory(new d3t12::CubeDetectorFactory(palette));
+
+	d3t12::CameraPoseHandler::Ptr cameraPose(new d3t12::CameraPoseHandler);
+	d3t12::ImageAngleGetter::Ptr angleGetter(new ConcreteAngleGetter(cameraPose));
+	d3t12::ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ConcreteAngleAdjuster(cameraPose));
+    d3t12::CubeCenterTargeter::Ptr cameraTargeter(new d3t12::CubeCenterTargeter(
+        imageCapturer,
+        cameraPoseAdjuster
+    ));
+
+    d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
+
+	d3t12::Prehensor::Ptr prehensor(new d3t12::Prehensor);
+
+	d3t12::JourneyBackPack::Ptr backpack(new d3t12::JourneyBackPack);
+
+	d3t12::JourneyStateFactory::Ptr stateFactory(new d3t12::JourneyStateFactory(
+		poseGetter,
+		poseCommander,
+		questionGetter,
+		questionAsker,
+		confirmationGetter,
+		pathInformer,
+
+		colorList,
+		leds,
+
+		pathPlanner,
+
+		detectorFactory,
+		image,
+		cameraTargeter,
+		cameraTargeter,
+		finder,
+	
+		cameraPoseAdjuster,
+		prehensor,
+
+		backpack
+	));
+
+	boost::thread mainThread(factoryThread, stateFactory);
 
 	ros::spin();
+	
 	return 0;
 }

@@ -14,41 +14,41 @@ private:
 public:
 	typedef boost::shared_ptr<LEDMatrixOrderList> Ptr;
 
-	inline int next() {
-		++currentIndex;
-		if(currentIndex == 9) {
-			currentIndex = 0;
-		}
-		return indices[currentIndex];
-	}
-
-	inline int cancelCurrent() {
+	inline void cancelCurrent() {
 		--currentIndex;
-		if(currentIndex < 0) {
-			currentIndex = 0;
+		if(currentIndex < -1) {
+			currentIndex = -1;
 		}
-		return indices[currentIndex];
 	}
 
 	inline void increase() {
 		++currentIndex;
+		if(currentIndex == 9) {
+			currentIndex = 0;
+		}
+	}
+
+	inline int next() {
+		increase();
+		return indices[currentIndex];
 	}
 
 	inline int current() {
 		if(currentIndex < 0) currentIndex = 0;
+		if(currentIndex > 8) currentIndex = 8;
 		return indices[currentIndex];
 	}
 
 	inline LEDMatrixOrderList(): currentIndex(-1) {
-		indices[0] = 6;
-		indices[1] = 7;
-		indices[2] = 8;
-		indices[3] = 3;
-		indices[4] = 4;
-		indices[5] = 5;
-		indices[6] = 0;
-		indices[7] = 1;
-		indices[8] = 2;
+		indices[0] = 7;
+		indices[1] = 8;
+		indices[2] = 9;
+		indices[3] = 4;
+		indices[4] = 5;
+		indices[5] = 6;
+		indices[6] = 1;
+		indices[7] = 2;
+		indices[8] = 3;
 	}
 };
 
@@ -74,11 +74,11 @@ public:
 	}
 
 	inline StringPtr current() const {
-		return (colors.size() == 9 ? colors[orderList->current()] : nullStr);
+		return (colors.size() == 9 ? colors[orderList->current() - 1] : nullStr);
 	}
 
 	inline StringPtr next() {
-		return (colors.size() == 9 ? colors[orderList->next()] : nullStr);
+		return (colors.size() == 9 ? colors[orderList->next() - 1] : nullStr);
 	}
 };
 

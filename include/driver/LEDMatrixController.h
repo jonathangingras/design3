@@ -9,14 +9,14 @@ namespace d3t12 {
 
 class LEDMatrixController {
 private:
-	LEDMatrixOrderList orderList;
+	LEDMatrixOrderList::Ptr orderList;
 	MicroControllerCommandPort::Ptr commandPort;
 	MicroControllerLEDCommandBuilder commandBuilder;
 
 public:
 	typedef boost::shared_ptr<LEDMatrixController> Ptr;
 	inline LEDMatrixController(MicroControllerCommandPort::Ptr _commandPort): 
-		commandPort(_commandPort) {}
+		commandPort(_commandPort), orderList(new LEDMatrixOrderList) {}
 
 	void turnMasterOn();
 	void turnMasterOff();
@@ -26,7 +26,11 @@ public:
 	virtual void removeCurrent();
 
 	inline bool matrixFilled() {
-		return orderList.current() == 3;
+		return orderList->current() == 3;
+	}
+
+	inline LEDMatrixOrderList::Ptr getOrderList() {
+		return orderList;
 	}
 
 	virtual void turnAllOff();

@@ -24,6 +24,9 @@ public:
 	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster):
 		capturer(_capturer), detector(_detector), adjuster(_adjuster) {}
 
+	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, ImageAngleAdjuster::Ptr _adjuster):
+		capturer(_capturer), adjuster(_adjuster) {}
+
 	inline void setDetector(CubeDetector::Ptr _detector) {
 		detector = _detector;
 	}

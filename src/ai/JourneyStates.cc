@@ -7,11 +7,14 @@ namespace d3t12 {
 void GoToAtlasState::run() {
 	RobotPose pose = poseGetter->getPose();
 	if(pose != backpack->atlasZonePose) {
-		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
+		std::vector<PathCommand> commands = pathPlanner->planPath(pose, /*backpack->atlasZonePose*/RobotPose(0.33, 0.15, 0));
 		for(int i = 0; i < commands.size(); ++i) {
+			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
 			poseCommander->commandPose(commands[i].toRobotPose());
 		}
 	}
+
+	std::cout << "done GoToAtlasState" << std::endl;
 }
 
 void HandleQuestionState::run() {

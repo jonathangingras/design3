@@ -46,4 +46,6 @@ target_link_libraries( journey
 	${Boost_LIBRARIES}
 	boost_system
 	boost_thread
+	jansson
+	curl
 )

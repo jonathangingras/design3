@@ -140,6 +140,14 @@ JourneyStateFactory factory( \
 ); \
 CubeDetector::Ptr cubeDetectorMock(new CubeDetectorMock);
 
+TEST(LEDMatrixOrderList, outputsGoodColors) {
+	SETUP
+
+	for(int i = 0; i < 9; ++i) {
+		std::cout << *colorList->next() << std::endl;
+	}
+}
+
 MATCHER(AtlasPose, "is atlas pose") { return arg == ATLAS_ZONE_POSE; }
 
 TEST(GoToAtlasState, goesToAtlasWhenNotThere) {

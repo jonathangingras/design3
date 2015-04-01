@@ -28,39 +28,50 @@ std::vector<PathCommand> PathPlanner::planPath(RobotPose currentPose, RobotPose 
 	
 	//this section is for the command decision ordering
 
-	if( distanceXBetweenRobotAndWantedPose < 0 && fabs(currentPose.yaw - M_PI) > 0.01 ) {
-		if(isRobotPoseNearLeftWall) {
-			commandVector.push_back(PathCommand(0,0, - M_PI - currentPose.yaw ));//"move 0 0 (Robot.angle - 180)"
-		} 
-		else if(isRobotPoseNearRightWall) {
-			commandVector.push_back(PathCommand(0,0, M_PI - currentPose.yaw));//"move 0 0 (180 - Robot.angle)"
-		}
-		else {
-			commandVector.push_back(PathCommand(0,0, currentPose.yaw - M_PI)); //"move 0 0 (Robot.angle - 180)"
-		}
-	}
-		
-	else if( distanceXBetweenRobotAndWantedPose > 0 && fabs(currentPose.yaw) > 0.01 ) {
-		if(isRobotPoseNearLeftWall) {
-			commandVector.push_back(PathCommand(0,0, M_PI - currentPose.yaw));//"move 0 0 (180 - currentPose.angle)"
-		}
-		else if(isRobotPoseNearRightWall) {
-			commandVector.push_back(PathCommand(0,0, currentPose.yaw - M_PI));//"move 0 0 (currentPose.angle - 180)"
-		}
-		else {
-			commandVector.push_back(PathCommand(0,0, M_PI - currentPose.yaw));//"move 0 0 (180 - currentPose.angle)"
-		}
-	}
-	
-	if(!isWantedPoseNearLeftWall && !isWantedPoseNearRightWall) {
-		commandVector.push_back(PathCommand(fabs(distanceXBetweenRobotAndWantedPose), -distanceYBetweenRobotAndWantedPose, 0));//"move absolute(distanceXBetweenRobotAndWantedPose) -(distanceYBetweenRobotAndWantedPose) 0 "
-	}
-	
-	else {
-		commandVector.push_back(PathCommand(fabs(distanceXBetweenRobotAndWantedPose), 0, 0));//"move absolute(distanceXBetweenRobotAndWantedPose) 0 0"
-		commandVector.push_back(PathCommand(0, -distanceYBetweenRobotAndWantedPose, 0));//"move 0 absolute(distanceYBetweenRobotAndWantedPose) 0"
-	}
+	if( distanceXBetweenRobotAndWantedPose < 0) {
+		if(fabs(currentPose.yaw - M_PI) > 0.05) {
 
+			if(isRobotPoseNearLeftWall) {
+				commandVector.push_back(PathCommand(0,0, - M_PI - currentPose.yaw ));//"move 0 0 (Robot.angle - 180)"
+			} 
+			else if(isRobotPoseNearRightWall) {
+				commandVector.push_back(PathCommand(0,0, M_PI - currentPose.yaw));//"move 0 0 (180 - Robot.angle)"
+			}
+			else {
+				if(currentPose.yaw > 0) {
+					commandVector.push_back( PathCommand(0,0, M_PI - currentPose.yaw)); //"move 0 0 (Robot.angle - 180)"
+				}
+				else {
+					commandVector.push_back( PathCommand(0,0, M_PI + currentPose.yaw));
+				}
+			}
+		}
+		distanceYBetweenRobotAndWantedPose = -distanceYBetweenRobotAndWantedPose;
+	}
+	
+	else if( distanceXBetweenRobotAndWantedPose > 0) {
+		if( fabs(currentPose.yaw) > 0.05 )
+		{
+			if(isRobotPoseNearLeftWall) {
+				commandVector.push_back(PathCommand(0,0, M_PI - currentPose.yaw));//"move 0 0 (180 - currentPose.angle)"
+			}
+			else if(isRobotPoseNearRightWall) {
+				commandVector.push_back(PathCommand(0,0, currentPose.yaw - M_PI));//"move 0 0 (currentPose.angle - 180)"
+			}
+			else {
+				if(currentPose.yaw > 0) {
+					commandVector.push_back( PathCommand(0,0, -currentPose.yaw));
+				}
+				else {
+					commandVector.push_back( PathCommand(0,0, currentPose.yaw));
+				}
+			}
+		}
+	}
+	
+	commandVector.push_back(PathCommand(fabs(distanceXBetweenRobotAndWantedPose), 0, 0));
+	commandVector.push_back(PathCommand(0, distanceYBetweenRobotAndWantedPose, 0));//"move absolute(distanceXBetweenRobotAndWantedPose) -(distanceYBetweenRobotAndWantedPose) 0 "
+	
 	return commandVector;
 }
 

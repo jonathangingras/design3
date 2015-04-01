@@ -11,15 +11,17 @@ void LEDMatrixController::turnMasterOff() {
 }
 
 void LEDMatrixController::addNew(const std::string& colorStr) {
-	*commandPort << commandBuilder.setLED(orderList.next()).setColor(colorStr).build();
+	orderList->increase();
+	*commandPort << commandBuilder.setLED(orderList->current()).setColor(colorStr).build();
 }
 
 void LEDMatrixController::addBlank() {
-	orderList.next();
+	orderList->increase();
 }
 
 void LEDMatrixController::removeCurrent() {
-	*commandPort << commandBuilder.setLED(orderList.cancelCurrent()).setPower(false).build();
+	*commandPort << commandBuilder.setLED(orderList->current()).setPower(false).build();
+	orderList->cancelCurrent();
 }
 
 void LEDMatrixController::turnAllOff() {

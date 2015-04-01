@@ -32,6 +32,8 @@ private:
 	JourneyBackPack::Ptr backpack;
 
 public:
+	typedef boost::shared_ptr<JourneyStateFactory> Ptr;
+
 	inline JourneyStateFactory(
 		PoseGetter::Ptr _poseGetter,
 		PoseCommander::Ptr _poseCommander,
