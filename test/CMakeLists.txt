@@ -18,6 +18,10 @@ function(add_design3_test test_name)
 	)
 endfunction(add_design3_test)
 
+#common
+add_design3_test(NonBlockIfStreamTest)
+add_design3_test(dummyWriter)
+
 #rest
 add_design3_test(CURLGetterTest)
 

@@ -7,6 +7,7 @@
 #include "ExitGuard.h"
 #include "SystemCaller.h"
 #include "Popener.h"
+#include "NonBlockIfStream.h"
 #include "CountryToColorLister.h"
 
 #endif

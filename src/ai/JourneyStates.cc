@@ -70,17 +70,18 @@ void FindCubeState::run() {
 }
 
 void PlanPathToCubeZoneState::run() {
+	//TODO add logic to be able to grab cube when its right to table border
 	// calculate plan poseTarget;
 	RobotPose currentPose = poseGetter->getPose();
-	double wantedYaw;
+	/*double wantedYaw;
 	if(backpack->cubeTarget.y <= 0.25) { wantedYaw = -M_PI; }
 	else if(backpack->cubeTarget.y >= 0.75) { wantedYaw = M_PI; }
-	else { wantedYaw = 0; }
+	else { wantedYaw = 0; }*/
 	
 	backpack->poseTarget = RobotPose( 
 		currentPose.x + backpack->cubeTarget.x, 
 		currentPose.y + backpack->cubeTarget.y, 
-		wantedYaw
+		0 //wantedYaw
 	);
 	
 	backpack->plannedCommands = pathPlanner->planPath(currentPose, backpack->poseTarget);
@@ -94,7 +95,8 @@ void GoToCubeZoneState::run() {
 }
 
 void GrabCubeState::run() {
-	motorTargeter->targetCenter();
+	//TODO implement a motor targeter
+	//motorTargeter->targetCenter();
 	prehensor->open();
 	poseCommander->commandPose(RobotPose(0.05,0,0));
 	prehensor->close();
@@ -107,18 +109,26 @@ void GrabCubeState::run() {
 }
 
 void PlanReturnToDetectionZoneState::run() {
-	// calculate plan poseTarget
+	RobotPose currentPose = poseGetter->getPose();
+	backpack->plannedCommands = pathPlanner->planPath(currentPose, RETURN_SEEKING_CUBE_ZONE_POSE);
+	pathInformer->informPath(backpack->plannedCommands);
 }
 
 void ReturnToDetectionZoneState::run() {
-	RobotPose pose = poseGetter->getPose();
-	if(pose != RETURN_SEEKING_CUBE_ZONE_POSE) {
-		poseCommander->commandPose(RETURN_SEEKING_CUBE_ZONE_POSE);
+	for(int i = 0; i < backpack->plannedCommands.size(); ++i) {
+		poseCommander->commandPose(backpack->plannedCommands[i].toRobotPose());
 	}
 }
 
 void DropCubeState::run() {
-	
+	//TODO add code for dropping at good place
+
+	prehensor->lower();
+	prehensor->open();
+	prehensor->rise();
+	poseCommander->commandPose(RobotPose(-0.30,0,0));
+	prehensor->close();
+	prehensor->lower();
 }
 
 } //d3t12

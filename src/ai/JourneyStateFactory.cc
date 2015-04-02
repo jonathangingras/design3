@@ -59,6 +59,22 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
 		statePtr = JourneyState::Ptr(state);	
+	} else if(stateName == "PlanReturnToDetectionZone") {
+		PlanReturnToDetectionZoneState* state = new PlanReturnToDetectionZoneState;
+		state->pathInformer = pathInformer;
+		state->poseGetter = poseGetter;
+		state->pathPlanner = pathPlanner;
+		statePtr = JourneyState::Ptr(state);	
+	} else if(stateName == "ReturnToDetectionZone") {
+		ReturnToDetectionZoneState* state = new ReturnToDetectionZoneState;
+		state->poseCommander = poseCommander;
+		statePtr = JourneyState::Ptr(state);	
+	} else if(stateName == "DropCube") {
+		DropCubeState* state = new DropCubeState;
+		state->poseGetter = poseGetter;
+		state->poseCommander = poseCommander;
+		state->prehensor = prehensor;
+		statePtr = JourneyState::Ptr(state);	
 	}
 
 	statePtr->backpack = backpack;

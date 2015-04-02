@@ -122,9 +122,7 @@ public:
 class ReturnToDetectionZoneState : public JourneyState {
 friend class JourneyStateFactory;
 
-	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
-	PathPlanner::Ptr pathPlanner;
 
 public:
 	void run();

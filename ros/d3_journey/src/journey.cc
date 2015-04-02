@@ -53,22 +53,15 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		*commandPort << "clcmode p";
 	}
 
-	signed char getLastChar() {
-		std::string ret;
-  		do { 
-  			inPort >> ret;
-  			ROS_ERROR_STREAM("ret: " << ret);
-  		}while(ret.size() < 1 || *--ret.end() != '1');
-	}
-
 	void getFlag() {
-		std::ifstream inPort("/dev/ttySTM32");
-		signed char c;
+		d3t12::NonBlockIfStream inPort("/dev/ttySTM32");
+		std::string inStr;
 		do {
 			*commandPort << "getflag";
-			usleep(1000000);
-			c = getLastChar();
-		} while(c != '1');
+			usleep(100000);
+			inPort >> inStr;
+			ROS_ERROR_STREAM("inStr: " << inStr);
+		} while(inStr.empty() || *--inStr.end() != '1');
 	}
 
 	void commandPose(d3t12::RobotPose pose) {
@@ -93,9 +86,21 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 };
 
 struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
+	d3t12::LEDColorList::Ptr colorList;
+	std::vector<d3t12::StringPtr> colors;
+
+	inline ConcreteQuestionAsker(d3t12::LEDColorList::Ptr _colorList):
+		colorList(_colorList) {}
+
 	std::string ask(std::string question) {
 		// AntoineCode with Popener
-		return "Germany";
+
+		std::string answer = "Germany";
+
+		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
+		colorList->setColorList(colors);
+
+		return answer;
 	}
 };
 
@@ -169,11 +174,23 @@ struct ConcreteImageCapturer : public d3t12::ImageCapturer {
 void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& stateName) {
 	d3t12::JourneyState::Ptr state = stateFactory->createState(stateName);
 	state->run();
-	std::cout << "done command: " << stateName << std::endl; 
+	std::cout << "done state: " << stateName << std::endl; 
 }
 
 void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
 	runState(stateFactory, "GoToAtlas");
+	runState(stateFactory, "HandleQuestion");
+	runState(stateFactory, "ShowFlagsOnLEDs");
+	nextCube: runState(stateFactory, "GoToDetectionZone"); 
+	runState(stateFactory, "AskCube");
+	runState(stateFactory, "FindCube");
+	runState(stateFactory, "PlanPathToCubeZone");
+	runState(stateFactory, "GoToCubeZone");
+	runState(stateFactory, "GrabCube");
+	runState(stateFactory, "PlanReturnToDetectionZone");
+	runState(stateFactory, "ReturnToDetectionZone");
+	runState(stateFactory, "DropCube");
+	goto nextCube;
 }
 
 int main(int argc, char** argv) {
@@ -198,7 +215,7 @@ int main(int argc, char** argv) {
 	d3t12::LEDColorList::Ptr colorList(new d3t12::LEDColorList(leds->getOrderList()));
 
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
-	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker);
+	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList));
 	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter);
 	d3t12::PathInformer::Ptr pathInformer(new ConcretePathInformer);
 
