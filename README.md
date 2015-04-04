@@ -17,6 +17,9 @@ Natural Language:
 - python-mock
 - python-lxml
 - python-html5lib
+- python-Nltk
+- python-Elasticsearch
+- python-numpy
 
 Utilités:
 - curl (les headers et librairies)
@@ -50,5 +53,13 @@ Utilités:
 
 # rouler les test du language naturel
 
-- cd dans le répertoire racine "design3/naturalLanguagePython"
+- cd dans le repertoire "design3/elasticsearch/bin"
+- démarrer elasticsearch <code>elasticsearch</code>
+- cd dans le répertoire racine "design3/naturalLanguagePython/"
 - rouler <code>python -m unittest discover -t ../</code>
+
+# pour poser une question à notre module
+
+- assurez-vous d'avoir elasticsearch qui est démarré
+-cd dans le repertoire "design3"
+- rouler <code>python -m naturalLanguagePython "votre question"<\code>
