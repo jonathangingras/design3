@@ -6,7 +6,12 @@
 #include <vision/vision.h>
 #include <ai/ai.h>
 
+#include <geometry_msgs/Point.h>
+#include <tf/transform_listener.h>
+
 #include <d3_table_transform/robotPose.h>
+#include <d3_table_transform/robotPoseArray.h>
+
 namespace d3t12 {
 	namespace tf = d3_table_transform;
 }
@@ -58,21 +63,56 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		std::string inStr;
 		do {
 			*commandPort << "getflag";
-			usleep(100000);
+			d3t12::sleepSecondsNanoSeconds(0, 500000000);
 			inPort >> inStr;
-			ROS_ERROR_STREAM("inStr: " << inStr);
-		} while(inStr.empty() || *--inStr.end() != '1');
+		} while(inStr.empty() || *(inStr.end() - 3) != '1');
+	}
+
+	void commandDirectly(d3t12::RobotPose pose) {
+		ROS_ERROR_STREAM("command: " << pose.x << ',' << pose.y << ',' << pose.yaw);
+
+		*commandPort << "clcmode p";
+
+		if( fabs(pose.yaw) >= 0.01 ) {
+			motors.rotate( pose.yaw );
+			getFlag();
+		}
+		if( fabs(pose.x) >= 0.01 || fabs(pose.y) >= 0.01 ) {
+			motors.moveTo( (fabs(pose.x) >= 0.01 ? pose.x : 0), (fabs(pose.y) >= 0.01 ? pose.y : 0) );
+			getFlag();
+		}
 	}
 
 	void commandPose(d3t12::RobotPose pose) {
-		if(pose.yaw) {
-			motors.rotate(pose.yaw);
-		}
-		else if(pose.x || pose.y) {
-			motors.moveTo(pose.x, pose.y);
+		tf::TransformListener listener(ros::Duration(10));
+
+		geometry_msgs::PoseStamped robotPoseOnTable;
+		robotPoseOnTable.header.frame_id = "d3_table_origin";
+		robotPoseOnTable.header.stamp = ros::Time();
+		robotPoseOnTable.pose.position.x = pose.x;
+		robotPoseOnTable.pose.position.y = pose.y;
+		robotPoseOnTable.pose.position.z = 0;
+		robotPoseOnTable.pose.orientation = tf::createQuaternionMsgFromYaw(pose.yaw);
+
+		geometry_msgs::PoseStamped robotPoseOnRobot;
+
+		bool error = true;
+		while(error) {
+			try {
+				listener.transformPose("robot_center", robotPoseOnTable, robotPoseOnRobot);
+			} catch(tf::TransformException& ex) {
+				error = true;
+				continue;
+			}
+			error = false;
 		}
 
-		getFlag();
+		tf::Quaternion yaw;
+		tf::quaternionMsgToTF(robotPoseOnRobot.pose.orientation, yaw);
+
+		d3t12::RobotPose command(robotPoseOnRobot.pose.position.x, robotPoseOnRobot.pose.position.y, tf::getYaw(yaw));
+
+		commandDirectly(command);
 	}
 };
 
@@ -81,7 +121,9 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-    	return decoder.questionStr(atlas_told);
+  		ROS_ERROR_STREAM(atlas_told);
+  		return "";
+    	//return decoder.questionStr(atlas_told);
 	}
 };
 
@@ -112,8 +154,26 @@ struct ConcreteConfirmationGetter : public d3t12::ConfirmationGetter {
 };
 
 struct ConcretePathInformer : public d3t12::PathInformer {
+	ros::Publisher pathPublisher;
+
+	inline ConcretePathInformer(ros::NodeHandle& node) {
+		pathPublisher = node.advertise<d3t12::tf::robotPoseArray>("/d3_journey/robot_path", 1);
+	}
+
 	void informPath(const std::vector<d3t12::PathCommand>& path) {
-		//implement as path publisher to gui
+		d3t12::tf::robotPoseArray poseArray;
+
+		std::vector<d3t12::tf::robotPose> poses;
+		for(std::vector<d3t12::PathCommand>::const_iterator it = path.begin(); it != path.end(); ++it) {
+			d3t12::tf::robotPose pose;
+			pose.x = it->x;
+			pose.y = it->y;
+			pose.yaw = it->yaw;
+			poses.push_back(pose);
+		}
+		poseArray.poses = poses;
+		
+		pathPublisher.publish(poseArray);
 	}
 };
 
@@ -217,7 +277,7 @@ int main(int argc, char** argv) {
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
 	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList));
 	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter);
-	d3t12::PathInformer::Ptr pathInformer(new ConcretePathInformer);
+	d3t12::PathInformer::Ptr pathInformer(new ConcretePathInformer(node));
 
 	d3t12::PathPlanner::Ptr pathPlanner(new d3t12::PathPlanner);
 

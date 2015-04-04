@@ -16,6 +16,7 @@ struct PoseGetter {
 struct PoseCommander {
 	typedef boost::shared_ptr<PoseCommander> Ptr;
 	virtual ~PoseCommander() {}
+	virtual void commandDirectly(RobotPose pose) = 0;
 	virtual void commandPose(RobotPose pose) = 0;
 };
 

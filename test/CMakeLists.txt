@@ -21,6 +21,7 @@ endfunction(add_design3_test)
 #common
 add_design3_test(NonBlockIfStreamTest)
 add_design3_test(dummyWriter)
+add_design3_test(SleepNanoSecondsTest)
 
 #rest
 add_design3_test(CURLGetterTest)

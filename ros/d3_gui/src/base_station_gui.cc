@@ -3,6 +3,7 @@
 #include <geometry_msgs/PointStamped.h>
 #include <RosQtExitGuard.h>
 #include <d3_table_transform/robotPose.h>
+#include <d3_table_transform/robotPoseArray.h>
 
 //Qt MUST BE included last because of some shit it does with signals in its
 //immensely giant unintuitive crappy API
@@ -157,6 +158,52 @@ struct PoseListener {
   }
 };
 
+struct PlannedPathDrawer {
+  ros::NodeHandle& nodeHandle;
+  boost::mutex& mutex;
+  UIPoseConverter* poseConverter;
+
+  QPen pen;
+  QGraphicsScene* scene;
+  std::vector<QGraphicsLineItem*> currentLines;
+
+  inline PlannedPathDrawer(ros::NodeHandle& _nodeHandle, boost::mutex& _mutex, UIPoseConverter* _poseConverter, QGraphicsScene* _scene):
+    nodeHandle(_nodeHandle), mutex(_mutex), poseConverter(_poseConverter), pen(QColor(255,0,0)), scene(_scene) {}
+
+  void clearLines() {
+    for(std::vector<QGraphicsLineItem*>::iterator it = currentLines.begin(); it != currentLines.end(); ++it) {
+      scene->removeItem(*it);
+    }
+    currentLines.clear();
+  }
+
+  void operator()(const d3t12::tf::robotPoseArray::ConstPtr& robotPoseArray) {
+    std::vector<float> xs, ys;
+
+    for(std::vector<d3t12::tf::robotPose>::const_iterator it = robotPoseArray->poses.begin(); it != robotPoseArray->poses.end(); ++it) {
+      UIPose uiPose = poseConverter->getUIPoseFromTfPose(it->x, it->y, it->yaw);
+      xs.push_back(uiPose.x);
+      ys.push_back(uiPose.y);
+    }
+
+    mutex.lock();
+
+    clearLines();
+
+    if(robotPoseArray->poses.size()) {
+      for(std::vector<float>::const_iterator itx = xs.begin(), ity = ys.begin(); itx != xs.end() - 1 && ity != ys.end() - 1; ++itx, ++ity) {
+        currentLines.push_back( scene->addLine(*itx, *ity, *(itx + 1), *(ity + 1), pen) );
+      }
+    }
+
+    mutex.unlock();
+  }
+
+  ros::Subscriber subscribe() {
+    return nodeHandle.subscribe<d3t12::tf::robotPoseArray>("/d3_journey/robot_path", 1, *this);
+  }
+};
+
 void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphicsScene* scene, QGraphicsPixmapItem* item, UIPose::Ptr uiPose) {
   while(exitGuard->good()) {
     mutex->lock();
@@ -180,14 +227,14 @@ Q_DECL_EXPORT
 int main(int argc, char** argv) {
 		QApplication app(argc, argv);
     ros::init(argc, argv, "d3_base_station_gui");
-    ros::NodeHandle handle;
-    d3t12::SignalFunctor::Ptr exitGuard(new d3t12::RosQtExitGuard(handle, &app));
+    ros::NodeHandle node;
+    d3t12::SignalFunctor::Ptr exitGuard(new d3t12::RosQtExitGuard(node, &app));
     d3t12::SIGINTHandler::getInstance().setSignalHandler(exitGuard);
 
     std::string qmlPath, imagePath, flagsPath;
-    handle.getParam("d3_base_station_gui/qmlPath", qmlPath);
-    handle.getParam("d3_base_station_gui/imagePath", imagePath);
-    handle.getParam("d3_base_station_gui/flagsPath", flagsPath);
+    node.getParam("d3_base_station_gui/qmlPath", qmlPath);
+    node.getParam("d3_base_station_gui/imagePath", imagePath);
+    node.getParam("d3_base_station_gui/flagsPath", flagsPath);
 
     QmlApplicationViewer viewer;
     viewer.setSource(QUrl(qmlPath.c_str()));
@@ -201,8 +248,13 @@ int main(int argc, char** argv) {
     UIPoseConverter poseConverter(2.305, &viewer);
     UIPose::Ptr uiPose(new UIPose);
     boost::mutex mutex;
-    PoseListener poseListener(handle, mutex, uiPose, &poseConverter);
+    
+    PoseListener poseListener(node, mutex, uiPose, &poseConverter);
     ros::Subscriber poseSubscriber = poseListener.subscribe();
+
+    PlannedPathDrawer pathDrawer(node, mutex, &poseConverter, viewer.scene());
+    ros::Subscriber plannedPathSubscriber = pathDrawer.subscribe();
+
     //threads
     boost::thread rosSpinner(rosSpin);
     boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose);

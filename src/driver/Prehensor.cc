@@ -8,20 +8,28 @@ Prehensor::Prehensor() {
 	horizontalController = factory.createController("prehensorHorizontal");
 }
 
+void Prehensor::waitUntilDone() {
+	sleepSecondsNanoSeconds(0, 500000000);
+}
+
 void Prehensor::open() {
 	horizontalController->setAngle(0);
+	waitUntilDone();
 }
 
 void Prehensor::close() {
 	horizontalController->setAngle(90);
+	waitUntilDone();
 }
 
 void Prehensor::rise() {
 	verticalController->setAngle(0);
+	waitUntilDone();
 }
 
 void Prehensor::lower() {
 	verticalController->setAngle(90);
+	waitUntilDone();
 }
 
 }

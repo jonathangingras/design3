@@ -27,6 +27,7 @@ link_directories(
 add_message_files(
   FILES
   robotPose.msg
+  robotPoseArray.msg
 )
 
 generate_messages(

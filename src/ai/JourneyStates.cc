@@ -7,14 +7,12 @@ namespace d3t12 {
 void GoToAtlasState::run() {
 	RobotPose pose = poseGetter->getPose();
 	if(pose != backpack->atlasZonePose) {
-		std::vector<PathCommand> commands = pathPlanner->planPath(pose, /*backpack->atlasZonePose*/RobotPose(0.33, 0.15, 0));
+		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
 		for(int i = 0; i < commands.size(); ++i) {
 			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
 			poseCommander->commandPose(commands[i].toRobotPose());
 		}
 	}
-
-	std::cout << "done GoToAtlasState" << std::endl;
 }
 
 void HandleQuestionState::run() {
@@ -33,7 +31,9 @@ void ShowFlagsOnLEDsState::run() {
 		if(colorStr->empty()) { leds->addBlank(); }
 		else{leds->addNew(*colorStr); }
 	}
-	sleep(5);
+	
+	d3t12::sleepSecondsNanoSeconds(7,0);
+
 	leds->turnAllOff();
 }
 
@@ -59,13 +59,17 @@ void AskCubeState::run() {
 	}
 	leds->addNew(backpack->currentColor);
 
-	sleep(5);
+	d3t12::sleepSecondsNanoSeconds(5,0);
 }
 
 void FindCubeState::run() {
 	CubeDetector::Ptr detector = detectorFactory->createCubeDetector(backpack->currentColor, image);
 	cameraTargeter->setDetector(detector);
-	cameraTargeter->targetCenter();
+	
+	for(int i = 0; i < 5; ++i) {
+		cameraTargeter->targetCenter();
+	}
+
 	backpack->cubeTarget = finder->findCubePosition();
 }
 
@@ -98,11 +102,11 @@ void GrabCubeState::run() {
 	//TODO implement a motor targeter
 	//motorTargeter->targetCenter();
 	prehensor->open();
-	poseCommander->commandPose(RobotPose(0.05,0,0));
+	poseCommander->commandDirectly(RobotPose(0.05,0,0));
 	prehensor->close();
 	prehensor->open();
-	poseCommander->commandPose(RobotPose(-0.025,0,0));
-	poseCommander->commandPose(RobotPose(0.03,0,0));
+	poseCommander->commandDirectly(RobotPose(-0.025,0,0));
+	poseCommander->commandDirectly(RobotPose(0.03,0,0));
 	prehensor->close();
 	cameraTargeter->targetCenter();
 	prehensor->rise();
@@ -126,9 +130,13 @@ void DropCubeState::run() {
 	prehensor->lower();
 	prehensor->open();
 	prehensor->rise();
-	poseCommander->commandPose(RobotPose(-0.30,0,0));
+
+	poseCommander->commandDirectly(RobotPose(-0.30,0,0));
+
 	prehensor->close();
 	prehensor->lower();
+
+	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
 }
 
 } //d3t12

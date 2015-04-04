@@ -40,6 +40,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		state->cameraTargeter = cameraTargeter;
 		state->finder = finder;
 		state->detectorFactory = detectorFactory;
+		state->image = image;
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "PlanPathToCubeZone") {
 		PlanPathToCubeZoneState* state = new PlanPathToCubeZoneState;

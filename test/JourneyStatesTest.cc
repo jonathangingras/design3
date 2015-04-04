@@ -15,6 +15,7 @@ struct PoseGetterMock : public PoseGetter {
 
 struct PoseCommanderMock : public PoseCommander {
 	MOCK_METHOD1(commandPose, void(RobotPose));
+	MOCK_METHOD1(commandDirectly, void(RobotPose));
 };
 #define CAST_POSECOMMANDER(x) *((PoseCommanderMock*) x .get())
 

@@ -10,7 +10,7 @@ struct PathCommand {
 	double x, y, yaw;
 
 	inline PathCommand(double _x, double _y, double _yaw): x(_x), y(_y), yaw(_yaw) {}
-	inline RobotPose toRobotPose() {
+	inline RobotPose toRobotPose() const {
 		return RobotPose(x,y,yaw);
 	}
 };
@@ -25,6 +25,7 @@ public:
 	inline PathPlanner() {}
 
 	virtual std::vector<PathCommand> planPath(RobotPose currentPose, RobotPose wantedPose);
+	virtual PathCommand planPathAngle(RobotPose currentPose, RobotPose wantedPose);
 };
 
 } //d3t12

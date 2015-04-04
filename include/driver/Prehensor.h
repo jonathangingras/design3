@@ -1,7 +1,7 @@
 #ifndef _D3T12_PREHENSOR_H_
 #define _D3T12_PREHENSOR_H_
 
-#include <common/commonEssentials.h>
+#include <common/common.h>
 #include "ServoMotorControllerFactory.h"
 
 namespace d3t12 {
@@ -10,6 +10,8 @@ class Prehensor {
 private:
 	ServoMotorController::Ptr verticalController;
 	ServoMotorController::Ptr horizontalController;
+
+	void waitUntilDone();
 
 public:
 	typedef boost::shared_ptr<Prehensor> Ptr;
