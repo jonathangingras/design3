@@ -1,227 +1,164 @@
 {
-    "Inflation rate (consumer prices)":[
-        "3.8% (2006 est.)"
-    ],
-    "Health expenditures":[
-        "17.3% of GDP (2011)"
-    ],
-    "Irrigated land":[
-        "NA"
-    ],
-    "Independence":[
-        "1 October 1978 (from the UK)"
-    ],
-    "Constitution":[
-        "previous 1978 (at independence); latest effective 1 October 1986; amended 2007, 2010 (2010)"
-    ],
-    "Geography - note":[
-        "one of the smallest and most remote countries on Earth; six of the nine coral atolls - Nanumea, Nui, Vaitupu, Nukufetau, Funafuti, and Nukulaelae - have lagoons open to the ocean; Nanumaya and Niutao have landlocked lagoons; Niulakita does not have a lagoon"
-    ],
-    "Exports":[
-        "$600,000 (2010 est.)",
-        "$1 million (2004 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$3,500 (2013 est.)",
-        "$3,500 (2012 est.)",
-        "$3,500 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 86.3% of population",
-        "rural: 80.2% of population",
-        "total: 83.3% of population",
-        "",
-        "urban: 13.7% of population",
-        "rural: 19.8% of population",
-        "total: 16.7% of population (2012 est.)"
-    ],
-    "Flag description":[
-        "light blue with the flag of the UK in the upper hoist-side quadrant; the outer half of the flag represents a map of the country with nine yellow, five-pointed stars on a blue field symbolizing the nine atolls in the ocean"
-    ],
-    "Political pressure groups and leaders":[
-        "none"
-    ],
-    "Telephones - mobile cellular":[
-        "2,800 (2012)"
-    ],
-    "Net migration rate":[
-        "-6.86 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "2,021",
-        "2,026 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$38 million (2013 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "8 00 S, 178 00 E"
     ],
-    "Terrain":[
-        "low-lying and narrow coral atolls"
-    ],
-    "Education expenditures":[
+    "hiv/aids - people living with hiv/aids":[
         "NA"
     ],
-    "Government type":[
+    "government type":[
         "parliamentary democracy and a Commonwealth realm"
     ],
-    "Unemployment rate":[
+    "religions":[
+        "Protestant 98.4% (Church of Tuvalu (Congregationalist) 97%, Seventh-Day Adventist 1.4%), Baha'i 1%, other 0.6%"
+    ],
+    "unemployment rate":[
         "NA%"
     ],
-    "Political parties and leaders":[
-        "there are no political parties but members of parliament usually align themselves in informal groupings"
+    "total fertility rate":[
+        "3.03 children born/woman (2014 est.)"
     ],
-    "Environment - current issues":[
+    "national anthem":[
+        "Tuvalu mo te Atua (Tuvalu for the Almighty)",
+        "Afaese MANOA",
+        "adopted 1978; the anthem's name is also the nation's motto"
+    ],
+    "environment - current issues":[
         "since there are no streams or rivers and groundwater is not potable, most water needs must be met by catchment systems with storage facilities (the Japanese Government has built one desalination plant and plans to build one other); beachhead erosion because of the use of sand for building materials; excessive clearance of forest undergrowth for use as fuel; damage to coral reefs from the spread of the Crown of Thorns starfish; Tuvalu is concerned about global increases in greenhouse gas emissions and their effect on rising sea levels, which threaten the country's underground water table; in 2000, the government appealed to Australia and New Zealand to take in Tuvaluans if rising sea levels should make evacuation necessary"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    "industries":[
+        "fishing, tourism, copra"
     ],
-    "Area":[
-        "26 sq km",
-        "26 sq km",
-        "0 sq km"
+    "legal system":[
+        "mixed legal system of English common law and local customary law"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-4% of GDP (2006)"
+    "health expenditures":[
+        "17.3% of GDP (2011)"
     ],
-    "Industrial production growth rate":[
-        "NA%"
+    "urbanization":[
+        "50% of total population (2011)",
+        "1.04% annual rate of change (2010-15 est.)"
     ],
-    "Median age":[
+    "imports - commodities":[
+        "food, animals, mineral fuels, machinery, manufactured goods"
+    ],
+    "location":[
+        "Oceania, island group consisting of nine coral atolls in the South Pacific Ocean, about one-half of the way from Hawaii to Australia"
+    ],
+    "irrigated land":[
+        "NA"
+    ],
+    "natural hazards":[
+        "severe tropical storms are usually rare, but in 1997 there were three cyclones; low levels of islands make them sensitive to changes in sea level"
+    ],
+    "exports":[
+        "$600000 (2010 est.)",
+        "$1 million (2004 est.)"
+    ],
+    "internet users":[
+        "4200 (2008)"
+    ],
+    "current account balance":[
+        "-$7.7 million (2010 est.)",
+        "-$11.68 million (2003)"
+    ],
+    "children under the age of 5 years underweight":[
+        "1.6% (2007)"
+    ],
+    "literacy":[
+        "NA"
+    ],
+    "airports":[
+        "1 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$3500 (2013 est.)",
+        "$3500 (2012 est.)",
+        "$3500 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "birth rate":[
+        "23.74 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".tv"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "exports - commodities":[
+        "copra, fish"
+    ],
+    "labor force":[
+        "3615 (2004 est.)"
+    ],
+    "mother's mean age at first birth":[
+        "23.5",
+        "median age at first birth among women 25-29 (2007 est.)"
+    ],
+    "ports and terminals":[
+        "Funafuti"
+    ],
+    "labor force - by occupation":[
+        "people make a living mainly through exploitation of the sea, reefs, and atolls and through overseas remittances (mostly from workers in the phosphate industry and sailors)"
+    ],
+    "diplomatic representation from the us":[
+        "the US does not have an embassy in Tuvalu; the US ambassador to Fiji, currently Ambassador Frankie A. REED, is accredited to Tuvalu"
+    ],
+    "terrain":[
+        "low-lying and narrow coral atolls"
+    ],
+    "infant mortality rate":[
+        "31.69 deaths/1000 live births",
+        "34.44 deaths/1000 live births",
+        "28.81 deaths/1000 live births (2014 est.)"
+    ],
+    "geography - note":[
+        "one of the smallest and most remote countries on Earth; six of the nine coral atolls - Nanumea, Nui, Vaitupu, Nukufetau, Funafuti, and Nukulaelae - have lagoons open to the ocean; Nanumaya and Niutao have landlocked lagoons; Niulakita does not have a lagoon"
+    ],
+    "political parties and leaders":[
+        "there are no political parties but members of parliament usually align themselves in informal groupings"
+    ],
+    "broadcast media":[
+        "no TV stations; many households use satellite dishes to watch foreign TV stations; 1 government-owned radio station, Radio Tuvalu, includes relays of programming from international broadcasters (2009)"
+    ],
+    "constitution":[
+        "previous 1978 (at independence); latest effective 1 October 1986; amended 2007, 2010 (2010)"
+    ],
+    "contraceptive prevalence rate":[
+        "30.5% (2007)"
+    ],
+    "median age":[
         "24.9 years",
         "23.7 years",
         "26.4 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "NA"
+    "manpower fit for military service":[
+        "2021",
+        "2026 (2010 est.)"
     ],
-    "Urbanization":[
-        "50% of total population (2011)",
-        "1.04% annual rate of change (2010-15 est.)"
-    ],
-    "Imports - commodities":[
-        "food, animals, mineral fuels, machinery, manufactured goods"
-    ],
-    "Location":[
-        "Oceania, island group consisting of nine coral atolls in the South Pacific Ocean, about one-half of the way from Hawaii to Australia"
-    ],
-    "GDP (purchasing power parity)":[
-        "$40 million (2013 est.)",
-        "$39.53 million (2012 est.)",
-        "$39.19 million (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "severe tropical storms are usually rare, but in 1997 there were three cyclones; low levels of islands make them sensitive to changes in sea level"
-    ],
-    "Airports - with unpaved runways":[
-        "1",
-        "1 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "NA"
-    ],
-    "Area - comparative":[
-        "0.1 times the size of Washington, DC"
-    ],
-    "Population":[
-        "10,782 (July 2014 est.)"
-    ],
-    "Airports":[
-        "1 (2013)"
-    ],
-    "Budget":[
-        "$21.54 million",
-        "$23.05 million (2006)"
-    ],
-    "Agriculture - products":[
-        "coconuts; fish"
-    ],
-    "Major urban areas - population":[
-        "FUNAFUTI (capital) 5,000 (2011)"
-    ],
-    "Labor force":[
-        "3,615 (2004 est.)"
-    ],
-    "Labor force - by occupation":[
-        "people make a living mainly through exploitation of the sea, reefs, and atolls and through overseas remittances (mostly from workers in the phosphate industry and sailors)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "16.6%",
-        "27.2%",
-        "56.2% (2002)"
-    ],
-    "Diplomatic representation from the US":[
-        "the US does not have an embassy in Tuvalu; the US ambassador to Fiji, currently Ambassador Frankie A. REED, is accredited to Tuvalu"
-    ],
-    "Infant mortality rate":[
-        "31.69 deaths/1,000 live births",
-        "34.44 deaths/1,000 live births",
-        "28.81 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Protestant 98.4% (Church of Tuvalu (Congregationalist) 97%, Seventh-Day Adventist 1.4%), Baha'i 1%, other 0.6%"
-    ],
-    "Household income or consumption by percentage share":[
-        "NA%",
-        "NA%"
-    ],
-    "Children under the age of 5 years underweight":[
-        "1.6% (2007)"
-    ],
-    "Hospital bed density":[
-        "5.6 beds/1,000 population (2001)"
-    ],
-    "Life expectancy at birth":[
-        "65.81 years",
-        "63.69 years",
-        "68.05 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "NA"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "11 years",
-        "10 years",
-        "11 years (2001)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "119",
-        "111 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, ADB, AOSIS, C, FAO, IBRD, IDA, IFRCS (observer), ILO, IMF, IMO, IOC, ITU, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UNIDO, UPU, WHO"
-    ],
-    "Languages":[
-        "Tuvaluan (official), English (official), Samoan, Kiribati (on the island of Nui)"
-    ],
-    "Country name":[
+    "country name":[
         "none",
         "Tuvalu",
         "none",
         "Tuvalu",
         "Ellice Islands",
-        "\"Tuvalu\" means \"group of eight\" referring to the country's eight traditionally inhabited islands"
+        "Tuvalu means group of eight referring to the country's eight traditionally inhabited islands"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "24 nm",
-        "200 nm"
+    "capital":[
+        "Funafuti; note - administrative offices are in Vaiaku Village on Fongafale Islet",
+        "8 31 S, 179 13 E",
+        "UTC+12 (17 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Taxes and other revenues":[
-        "56.7% of GDP (2006)"
+    "gdp (purchasing power parity)":[
+        "$40 million (2013 est.)",
+        "$39.53 million (2012 est.)",
+        "$39.19 million (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "23.5",
-        "median age at first birth among women 25-29 (2007 est.)"
+    "independence":[
+        "1 October 1978 (from the UK)"
     ],
-    "Population growth rate":[
-        "0.8% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 98.3% of population",
         "rural: 97% of population",
         "total: 97.7% of population",
@@ -230,49 +167,145 @@
         "rural: 3% of population",
         "total: 2.3% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Aunese Makoi SIMATI (since 11 January 2013)",
-        "Note - Tuvalu does not have an embassy in Washington, D.C.; UN office located at 800 2nd Avenue, Suite 400D, New York, NY 10017",
-        "[1] (212) 490-0534",
-        "[1] (212) 937-0692"
-    ],
-    "Internet users":[
-        "4,200 (2008)"
-    ],
-    "Contraceptive prevalence rate":[
-        "30.5% (2007)"
-    ],
-    "Internet hosts":[
-        "145,158 (2012)"
-    ],
-    "Current account balance":[
-        "-$7.7 million (2010 est.)",
-        "-$11.68 million (2003)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$NA"
     ],
-    "Administrative divisions":[
-        "7 island councils and 1 town council*; Funafuti*, Nanumaga, Nanumea, Niutao, Nui, Nukufetau, Nukulaelae, Vaitupu"
+    "coastline":[
+        "24 km"
     ],
-    "Land use":[
-        "0%",
-        "60%",
-        "40% (2011)"
+    "household income or consumption by percentage share":[
+        "NA%",
+        "NA%"
     ],
-    "Disputes - international":[
-        "none"
-    ],
-    "Climate":[
+    "climate":[
         "tropical; moderated by easterly trade winds (March to November); westerly gales and heavy rain (November to March)"
     ],
-    "Natural resources":[
+    "hiv/aids - adult prevalence rate":[
+        "NA"
+    ],
+    "manpower reaching militarily significant age annually":[
+        "119",
+        "111 (2010 est.)"
+    ],
+    "roadways":[
+        "8 km",
+        "8 km (2011)"
+    ],
+    "net migration rate":[
+        "-6.86 migrant(s)/1000 population (2014 est.)"
+    ],
+    "exchange rates":[
+        "Tuvaluan dollars or Australian dollars (AUD) per US dollar -",
+        "1.031 (2011)",
+        "1.67 (2011 est.)",
+        "1.67 (2010)",
+        "1.2822 (2009)",
+        "1.2059 (2008)"
+    ],
+    "agriculture - products":[
+        "coconuts; fish"
+    ],
+    "airports - with unpaved runways":[
+        "1",
+        "1 (2013)"
+    ],
+    "gdp - real growth rate":[
+        "1.1% (2013 est.)",
+        "0.2% (2012 est.)",
+        "8.5% (2011 est.)"
+    ],
+    "telephone system":[
+        "serves particular needs for internal communications",
+        "radiotelephone communications between islands",
+        "country code - 688; international calls can be made by satellite (2007)"
+    ],
+    "flag description":[
+        "light blue with the flag of the UK in the upper hoist-side quadrant; the outer half of the flag represents a map of the country with nine yellow, five-pointed stars on a blue field symbolizing the nine atolls in the ocean"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "nationality":[
+        "Tuvaluan(s)",
+        "Tuvaluan"
+    ],
+    "life expectancy at birth":[
+        "65.81 years",
+        "63.69 years",
+        "68.05 years (2014 est.)"
+    ],
+    "languages":[
+        "Tuvaluan (official), English (official), Samoan, Kiribati (on the island of Nui)"
+    ],
+    "area":[
+        "26 sq km",
+        "26 sq km",
+        "0 sq km"
+    ],
+    "natural resources":[
         "fish"
     ],
-    "Internet country code":[
-        ".tv"
+    "telephones - mobile cellular":[
+        "2800 (2012)"
     ],
-    "Sex ratio":[
+    "maritime claims":[
+        "12 nm",
+        "24 nm",
+        "200 nm"
+    ],
+    "population growth rate":[
+        "0.8% (2014 est.)"
+    ],
+    "sanitation facility access":[
+        "urban: 86.3% of population",
+        "rural: 80.2% of population",
+        "total: 83.3% of population",
+        "",
+        "urban: 13.7% of population",
+        "rural: 19.8% of population",
+        "total: 16.7% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "16.6%",
+        "27.2%",
+        "56.2% (2002)"
+    ],
+    "age structure":[
+        "29.6% (male 1636/female 1553)",
+        "20.6% (male 1176/female 1048)",
+        "36.2% (male 1901/female 1999)",
+        "8.2% (male 360/female 525)",
+        "5.3% (male 242/female 342) (2014 est.)"
+    ],
+    "internet hosts":[
+        "145158 (2012)"
+    ],
+    "land boundaries":[
+        "0 km"
+    ],
+    "area - comparative":[
+        "0.1 times the size of Washington, DC"
+    ],
+    "disputes - international":[
+        "none"
+    ],
+    "population":[
+        "10782 (July 2014 est.)"
+    ],
+    "national holiday":[
+        "Independence Day, 1 October (1978)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-4% of GDP (2006)"
+    ],
+    "budget":[
+        "$21.54 million",
+        "$23.05 million (2006)"
+    ],
+    "population below poverty line":[
+        "NA%"
+    ],
+    "sex ratio":[
         "1.05 male(s)/female",
         "1.05 male(s)/female",
         "1.12 male(s)/female",
@@ -281,109 +314,76 @@
         "0.73 male(s)/female",
         "0.97 male(s)/female (2014 est.)"
     ],
-    "Death rate":[
-        "8.9 deaths/1,000 population (2014 est.)"
+    "death rate":[
+        "8.9 deaths/1000 population (2014 est.)"
     ],
-    "Imports":[
+    "industrial production growth rate":[
+        "NA%"
+    ],
+    "inflation rate (consumer prices)":[
+        "3.8% (2006 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Aunese Makoi SIMATI (since 11 January 2013)",
+        "Note - Tuvalu does not have an embassy in Washington, D.C.; UN office located at 800 2nd Avenue, Suite 400D, New York, NY 10017",
+        "[1] (212) 490-0534",
+        "[1] (212) 937-0692"
+    ],
+    "imports":[
         "$16.5 million (2010 est.)",
         "$12.91 million (2005)"
     ],
-    "GDP - real growth rate":[
-        "1.1% (2013 est.)",
-        "0.2% (2012 est.)",
-        "8.5% (2011 est.)"
-    ],
-    "Telephone system":[
-        "serves particular needs for internal communications",
-        "radiotelephone communications between islands",
-        "country code - 688; international calls can be made by satellite (2007)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Total fertility rate":[
-        "3.03 children born/woman (2014 est.)"
-    ],
-    "Industries":[
-        "fishing, tourism, copra"
-    ],
-    "Legal system":[
-        "mixed legal system of English common law and local customary law"
-    ],
-    "Capital":[
-        "Funafuti; note - administrative offices are in Vaiaku Village on Fongafale Islet",
-        "8 31 S, 179 13 E",
-        "UTC+12 (17 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Birth rate":[
-        "23.74 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "29.6% (male 1,636/female 1,553)",
-        "20.6% (male 1,176/female 1,048)",
-        "36.2% (male 1,901/female 1,999)",
-        "8.2% (male 360/female 525)",
-        "5.3% (male 242/female 342) (2014 est.)"
-    ],
-    "Land boundaries":[
-        "0 km"
-    ],
-    "Coastline":[
-        "24 km"
-    ],
-    "Nationality":[
-        "Tuvaluan(s)",
-        "Tuvaluan"
-    ],
-    "Telephones - main lines in use":[
-        "1,450 (2012)"
-    ],
-    "Literacy":[
+    "education expenditures":[
         "NA"
     ],
-    "National holiday":[
-        "Independence Day, 1 October (1978)"
+    "hospital bed density":[
+        "5.6 beds/1000 population (2001)"
     ],
-    "Elevation extremes":[
+    "ethnic groups":[
+        "Polynesian 96%, Micronesian 4%"
+    ],
+    "land use":[
+        "0%",
+        "60%",
+        "40% (2011)"
+    ],
+    "taxes and other revenues":[
+        "56.7% of GDP (2006)"
+    ],
+    "political pressure groups and leaders":[
+        "none"
+    ],
+    "administrative divisions":[
+        "7 island councils and 1 town council*; Funafuti*, Nanumaga, Nanumea, Niutao, Nui, Nukufetau, Nukulaelae, Vaitupu"
+    ],
+    "hiv/aids - deaths":[
+        "NA"
+    ],
+    "telephones - main lines in use":[
+        "1450 (2012)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
         "Pacific Ocean 0 m",
         "unnamed location 5 m"
     ],
-    "Suffrage":[
-        "18 years of age; universal"
+    "school life expectancy (primary to tertiary education)":[
+        "11 years",
+        "10 years",
+        "11 years (2001)"
     ],
-    "Physicians density":[
-        "1.09 physicians/1,000 population (2009)"
+    "physicians density":[
+        "1.09 physicians/1000 population (2009)"
     ],
-    "Exports - commodities":[
-        "copra, fish"
+    "international organization participation":[
+        "ACP, ADB, AOSIS, C, FAO, IBRD, IDA, IFRCS (observer), ILO, IMF, IMO, IOC, ITU, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UNIDO, UPU, WHO"
     ],
-    "Population below poverty line":[
-        "NA%"
+    "gdp (official exchange rate)":[
+        "$38 million (2013 est.)"
     ],
-    "Roadways":[
-        "8 km",
-        "8 km (2011)"
-    ],
-    "Ports and terminals":[
-        "Funafuti"
-    ],
-    "Exchange rates":[
-        "Tuvaluan dollars or Australian dollars (AUD) per US dollar -",
-        "1.031 (2011)",
-        "1.67 (2011 est.)",
-        "1.67 (2010)",
-        "1.2822 (2009)",
-        "1.2059 (2008)"
-    ],
-    "Ethnic groups":[
-        "Polynesian 96%, Micronesian 4%"
-    ],
-    "Broadcast media":[
-        "no TV stations; many households use satellite dishes to watch foreign TV stations; 1 government-owned radio station, Radio Tuvalu, includes relays of programming from international broadcasters (2009)"
-    ],
-    "National anthem":[
-        "\"Tuvalu mo te Atua\" (Tuvalu for the Almighty)",
-        "Afaese MANOA",
-        "adopted 1978; the anthem's name is also the nation's motto"
+    "major urban areas - population":[
+        "Funafuti (capital) 5000 (2011)"
     ]
 }

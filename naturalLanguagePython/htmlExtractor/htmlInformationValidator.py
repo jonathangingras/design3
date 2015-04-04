@@ -12,5 +12,7 @@ class HtmlInformationValidator(object):
             if extractedInfo.string is not None:
                 formattedInformationString = self.htmlInformationFormatter.informationKeyFormatting(extractedInfo.string)
                 if formattedInformationString is not None:
+                    formattedInformationString = self.htmlInformationFormatter.formatNumberSeparatedByComaFromWorldFactBook(formattedInformationString)
+                    formattedInformationString = self.htmlInformationFormatter.removeQuoteFromString(formattedInformationString)
                     informationList.append(formattedInformationString.encode('utf-8'))
         return informationList

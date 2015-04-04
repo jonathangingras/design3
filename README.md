@@ -50,5 +50,5 @@ Utilités:
 
 # rouler les test du language naturel
 
-- cd dans le répertoire racine "design3"
-- rouler <code>python -m unittest discover</code>
+- cd dans le répertoire racine "design3/naturalLanguagePython"
+- rouler <code>python -m unittest discover -t ../</code>

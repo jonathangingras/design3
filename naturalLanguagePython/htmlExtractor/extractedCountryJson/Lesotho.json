@@ -1,116 +1,183 @@
 {
-    "Inflation rate (consumer prices)":[
-        "5% (2013 est.)",
-        "6.1% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "12.8% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "26.37 sq km (2003)"
-    ],
-    "Independence":[
-        "4 October 1966 (from the UK)"
-    ],
-    "Constitution":[
-        "previous 1959, 1967; latest adopted 2 April 1993 (effectively restoring the 1967 version); amended 2001 (2013)"
-    ],
-    "Geography - note":[
-        "landlocked, completely surrounded by South Africa; mountainous, more than 80% of the country is 1,800 m above sea level"
-    ],
-    "Exports":[
-        "$941.2 million (2013 est.)",
-        "$972.4 million (2012 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$2,200 (2013 est.)",
-        "$2,200 (2012 est.)",
-        "$2,100 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 37% of population",
-        "rural: 26.7% of population",
-        "total: 29.6% of population",
-        "",
-        "urban: 63% of population",
-        "rural: 73.3% of population",
-        "total: 70.4% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "620 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "three horizontal stripes of blue (top), white, and green in the proportions of 3:4:3; the colors represent rain, peace, and prosperity respectively; centered in the white stripe is a black Basotho hat representing the indigenous people; the flag was unfurled in October 2006 to celebrate 40 years of independence"
-    ],
-    "Political pressure groups and leaders":[],
-    "Telephones - mobile cellular":[
-        "1.312 million (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - exports":[
         "0 cu m (2011 est.)"
     ],
-    "Trafficking in persons":[
-        "Lesotho is a source, transit, and destination country for women and children subjected to forced labor and sex trafficking and for men subjected to forced labor; Basotho women and children are subjected to domestic servitude and children, to a lesser extent, commercial sexual exploitation within Lesotho and South Africa; some Basotho women willingly migrate to South Africa seeking work in domestic service only to be forced into prostitution; some Basotho men who voluntarily migrate to South Africa for work become victims of forced labor in agriculture and mining or are coerced into committing crimes",
-        "Tier 2 Watch List - Lesotho does not fully comply with the minimum standards for the elimination of trafficking; however, it is making significant efforts to do so; the government has decreased its anti-trafficking law enforcement and victim protection efforts during 2012; authorities have initiated fewer prosecutions, ceased arresting suspected trafficking offenders due to a backlog of prosecutions, and stopped referring victims to NGO centers for care; the government has not implemented key portions of the 2011 anti-trafficking act, including failing to develop formal referral procedures, establish victim care centers, and complete a national action plan (2013)"
-    ],
-    "Net migration rate":[
-        "-7.62 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "270,184",
-        "275,734 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$2.457 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "NA"
-    ],
-    "Crude oil - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
-        "0 cu m (2011 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "29 30 S, 28 30 E"
     ],
-    "Terrain":[
-        "mostly highland with plateaus, hills, and mountains"
+    "hiv/aids - people living with hiv/aids":[
+        "358700 (2012 est.)"
     ],
-    "Electricity - imports":[
-        "247 million kWh (2011 est.)"
-    ],
-    "Education expenditures":[
-        "13% of GDP (2008)"
-    ],
-    "Government type":[
+    "government type":[
         "parliamentary constitutional monarchy"
     ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
+    "religions":[
+        "Christian 80%, indigenous beliefs 20%"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "25% (2008 est.)",
         "45% (2002 est.)"
     ],
-    "Sex ratio":[
-        "1.03 male(s)/female",
-        "1.01 male(s)/female",
-        "0.91 male(s)/female",
-        "0.96 male(s)/female",
-        "0.98 male(s)/female",
-        "0.99 male(s)/female",
-        "0.97 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "11.4% of GDP (2013 est.)",
+        "7.8% of GDP (2012 est.)",
+        "7.8% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "2.78 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Lesotho fatse la bo ntat'a rona (Lesotho, Land of Our Fathers)",
+        "Francois COILLARD/Ferdinand-Samuel LAUR",
+        "adopted 1967; the anthem's music derives from an 1823 Swiss songbook"
+    ],
+    "environment - current issues":[
+        "population pressure forcing settlement in marginal areas results in overgrazing, severe soil erosion, and soil exhaustion; desertification; Highlands Water Project controls, stores, and redirects water to South Africa"
+    ],
+    "industries":[
+        "food, beverages, textiles, apparel assembly, handicrafts, construction, tourism"
+    ],
+    "legal system":[
+        "mixed legal system of English common law and Roman-Dutch law; judicial review of legislative acts in High Court and Court of Appeal"
+    ],
+    "health expenditures":[
+        "12.8% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
+        "27.6% of total population (2011)",
+        "3.57% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "food; building materials, vehicles, machinery, medicines, petroleum products"
+    ],
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
+        "Southern Africa, an enclave of South Africa"
+    ],
+    "irrigated land":[
+        "26.37 sq km (2003)"
+    ],
+    "natural hazards":[
+        "periodic droughts"
+    ],
+    "natural gas - consumption":[
+        "0 cu m (2010 est.)"
+    ],
+    "exports":[
+        "$941.2 million (2013 est.)",
+        "$972.4 million (2012 est.)"
+    ],
+    "stock of narrow money":[
+        "$425.1 million (31 December 2013 est.)",
+        "$408.9 million (31 December 2012 est.)"
+    ],
+    "airports - with paved runways":[
+        "3",
+        "1",
+        "1",
+        "1 (2013)"
+    ],
+    "internet users":[
+        "76800 (2009)"
+    ],
+    "current account balance":[
+        "-$518.4 million (2013 est.)",
+        "-$587.4 million (2012 est.)"
+    ],
+    "maternal mortality rate":[
+        "620 deaths/100000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "59.5% of GDP (2013 est.)"
+    ],
+    "children under the age of 5 years underweight":[
+        "13.5% (2010)"
+    ],
+    "refined petroleum products - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write",
+        "89.6%",
+        "83.3%",
+        "95.6% (2010 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "0 bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "24 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$2200 (2013 est.)",
+        "$2200 (2012 est.)",
+        "$2100 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "birth rate":[
+        "25.92 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".ls"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "natural gas - production":[
+        "0 cu m (2011 est.)"
+    ],
+    "exports - commodities":[
+        "manufactures (clothing, footwear), wool and mohair, food and live animals, electricity, water, diamonds"
+    ],
+    "labor force":[
+        "874200 (2013 est.)"
+    ],
+    "dependency ratios":[
+        "67.1 %",
+        "60.1 %",
+        "7 %",
+        "14.3 (2014 est.)"
+    ],
+    "mother's mean age at first birth":[
+        "21.2",
+        "median age at first birth among women 25-29 (2009 est.)"
+    ],
+    "labor force - by occupation":[
+        "86%",
+        "14%",
+        "most of the resident population is engaged in subsistence agriculture; roughly 35% of the active male wage earners work in South Africa (2002 est.)"
+    ],
+    "diplomatic representation from the us":[
+        "Ambassador (vacant); Charge d'Affaires Carl B. FOX",
+        "254 Kingsway Road, Maseru West (Consular Section)",
+        "P. O. Box 333, Maseru 100, Lesotho",
+        "[266] 22 312666",
+        "[266] 22 310116"
+    ],
+    "terrain":[
+        "mostly highland with plateaus, hills, and mountains"
+    ],
+    "electricity - imports":[
+        "247 million kWh (2011 est.)"
+    ],
+    "infant mortality rate":[
+        "50.48 deaths/1000 live births",
+        "54.38 deaths/1000 live births",
+        "46.45 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "9.36% (31 December 2012 est.)",
+        "10% (31 December 2010 est.)"
+    ],
+    "geography - note":[
+        "landlocked, completely surrounded by South Africa; mountainous, more than 80% of the country is 1800 m above sea level"
+    ],
+    "political parties and leaders":[
         "Pakalitha Mosisili All Basotho Convention or ABC [Motsoahae Thomas THABANE]",
         "Basotho Batho Democratic Party or BBDP [Geremane RAMATHEBANE]",
         "Basotho Congress Party or BCP [Thulo MAHLAKENG]",
@@ -124,233 +191,55 @@
         "National Independent Party or NIP [Kimetso MATHABA]",
         ""
     ],
-    "Unemployment, youth ages 15-24":[
-        "34.4%",
-        "29%",
-        "41.9% (2008)"
+    "obesity - adult prevalence rate":[
+        "14.6% (2008)"
     ],
-    "International law organization participation":[
-        "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction"
+    "broadcast media":[
+        "1 state-owned TV station and 2 state-owned radio stations; government controls most private broadcast media; satellite TV subscription service available; transmissions of multiple international broadcasters obtainable (2008)"
     ],
-    "Stock of domestic credit":[
-        "$85,420 (31 December 2013 est.)",
-        "$75,280 (31 December 2012 est.)"
+    "constitution":[
+        "previous 1959, 1967; latest adopted 2 April 1993 (effectively restoring the 1967 version); amended 2001 (2013)"
     ],
-    "Area":[
-        "30,355 sq km",
-        "30,355 sq km",
-        "0 sq km"
+    "contraceptive prevalence rate":[
+        "47% (2009/10)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-0.9% of GDP (2013 est.)"
-    ],
-    "Land use":[
-        "10.14%",
-        "0.13%",
-        "89.72% (2011)"
-    ],
-    "Median age":[
+    "median age":[
         "23.6 years",
         "23.6 years",
         "23.6 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "358,700 (2012 est.)"
+    "military - note":[
+        "Lesotho's declared policy is maintenance of its independent sovereignty and preservation of internal security; in practice, external security is guaranteed by South Africa; restructuring of the Lesotho Defense Force (LDF) and Ministry of Defense and Public Service over the past five years has focused on subordinating the defense apparatus to civilian control and restoring the LDF's cohesion; the restructuring has considerably improved capabilities and professionalism, but the LDF is disproportionately large for a small, poor country; the government has outlined a reduction to a planned 1500-man strength, but these plans have met with vociferous resistance from the political opposition and from inside the LDF (2008)"
     ],
-    "Urbanization":[
-        "27.6% of total population (2011)",
-        "3.57% annual rate of change (2010-15 est.)"
+    "manpower fit for military service":[
+        "270184",
+        "275734 (2010 est.)"
     ],
-    "Imports - commodities":[
-        "food; building materials, vehicles, machinery, medicines, petroleum products"
-    ],
-    "Location":[
-        "Southern Africa, an enclave of South Africa"
-    ],
-    "Electricity - from fossil fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Military expenditures":[
-        "1.94% of GDP (2012)",
-        "2.3% of GDP (2011)",
-        "1.94% of GDP (2010)"
-    ],
-    "Telephone system":[
-        "rudimentary system consisting of a modest number of landlines, a small microwave radio relay system, and a small radiotelephone communication system; mobile-cellular telephone system is expanding",
-        "privatized in 2001, Telecom Lesotho was tasked with providing an additional 50,000 fixed-line connections within five years, a target not met; mobile-cellular service dominates the market and is expanding with a subscribership roughly 65 per 100 persons in 2011; rural services are scant",
-        "country code - 266; satellite earth station - 1 Intelsat (Atlantic Ocean) (2011)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$4.265 billion (2013 est.)",
-        "$4.096 billion (2012 est.)",
-        "$3.918 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "periodic droughts"
-    ],
-    "Stock of narrow money":[
-        "$425.1 million (31 December 2013 est.)",
-        "$408.9 million (31 December 2012 est.)"
-    ],
-    "Airports - with paved runways":[
-        "3",
-        "1",
-        "1",
-        "1 (2013)"
-    ],
-    "Electricity - consumption":[
-        "307 million kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "472,456",
-        "508,953 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "21",
-        "5",
-        "",
-        "16 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "15,500 (2012 est.)"
-    ],
-    "Area - comparative":[
-        "slightly smaller than Maryland"
-    ],
-    "Distribution of family income - Gini index":[
-        "63.2 (1995)",
-        "56 (1986-87)"
-    ],
-    "Population":[
-        "1,942,008",
-        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "0 bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "24 (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "0.04  cu km/yr (46%/46%/9%)",
-        "21.79  cu m/yr (2000)"
-    ],
-    "Budget":[
-        "$1.462 billion",
-        "$1.483 billion (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "445,600 Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "corn, wheat, pulses, sorghum, barley; livestock"
-    ],
-    "Military service age and obligation":[
-        "18-24 years of age for voluntary military service; no conscription; women serve as commissioned officers (2012)"
-    ],
-    "Total fertility rate":[
-        "2.78 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "MASERU (capital) 239,000 (2011)"
-    ],
-    "Population below poverty line":[
-        "49% (1999)"
-    ],
-    "Labor force - by occupation":[
-        "86%",
-        "14%",
-        "most of the resident population is engaged in subsistence agriculture; roughly 35% of the active male wage earners work in South Africa (2002 est.)"
-    ],
-    "Stock of broad money":[
-        "$903.4 million (31 December 2013 est.)",
-        "$840.9 million (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "7.4%",
-        "34.5%",
-        "58.2% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "Ambassador (vacant); Charge d'Affaires Carl B. FOX",
-        "254 Kingsway Road, Maseru West (Consular Section)",
-        "P. O. Box 333, Maseru 100, Lesotho",
-        "[266] 22 312666",
-        "[266] 22 310116"
-    ],
-    "Contraceptive prevalence rate":[
-        "47% (2009/10)"
-    ],
-    "Infant mortality rate":[
-        "50.48 deaths/1,000 live births",
-        "54.38 deaths/1,000 live births",
-        "46.45 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Christian 80%, indigenous beliefs 20%"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$857.9 million (31 December 2013 est.)",
-        "$749.4 million (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "1%",
-        "39.4% (2003)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "13.5% (2010)"
-    ],
-    "Hospital bed density":[
-        "1.3 beds/1,000 population (2006)"
-    ],
-    "Life expectancy at birth":[
-        "52.65 years",
-        "52.55 years",
-        "52.75 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "23.1% (2012 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "11 years",
-        "11 years",
-        "12 years (2012)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "19,110",
-        "20,037 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, MIGA, NAM, OPCW, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Sesotho (official) (southern Sotho), English (official), Zulu, Xhosa"
-    ],
-    "Country name":[
+    "country name":[
         "Kingdom of Lesotho",
         "Lesotho",
         "Kingdom of Lesotho",
         "Lesotho",
         "Basutoland"
     ],
-    "Maritime claims":[
-        "none (landlocked)"
+    "electricity - from fossil fuels":[
+        "0% of total installed capacity (2010 est.)"
     ],
-    "Taxes and other revenues":[
-        "59.5% of GDP (2013 est.)"
+    "capital":[
+        "Maseru",
+        "29 19 S, 27 29 E",
+        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Mother's mean age at first birth":[
-        "21.2",
-        "median age at first birth among women 25-29 (2009 est.)"
+    "gdp (purchasing power parity)":[
+        "$4.265 billion (2013 est.)",
+        "$4.096 billion (2012 est.)",
+        "$3.918 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Refined petroleum products - consumption":[
-        "1,777 bbl/day (2011 est.)"
+    "independence":[
+        "4 October 1966 (from the UK)"
     ],
-    "Population growth rate":[
-        "0.34% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 93.2% of population",
         "rural: 76.7% of population",
         "total: 81.3% of population",
@@ -359,195 +248,46 @@
         "rural: 23.3% of population",
         "total: 18.7% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Eliachim Molapi SEBATANE (since 2 November 2011)",
-        "2511 Massachusetts Avenue NW, Washington, DC 20008",
-        "[1] (202) 797-5533",
-        "[1] (202) 234-6815"
+    "electricity - from hydroelectric plants":[
+        "100% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "76,800 (2009)"
-    ],
-    "Child labor - children ages 5-14":[
-        "103,020",
-        "23 % (2000 est.)"
-    ],
-    "Internet hosts":[
-        "11,030 (2012)"
-    ],
-    "Current account balance":[
-        "-$518.4 million (2013 est.)",
-        "-$587.4 million (2012 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$794 million (31 December 2013 est.)",
         "$779.8 million (31 December 2012 est.)"
     ],
-    "Administrative divisions":[
-        "10 districts; Berea, Butha-Buthe, Leribe, Mafeteng, Maseru, Mohale's Hoek, Mokhotlong, Qacha's Nek, Quthing, Thaba-Tseka"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Industrial production growth rate":[
-        "4.3% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "South Africa has placed military units to assist police operations along the border of Lesotho, Zimbabwe, and Mozambique to control smuggling, poaching, and illegal migration"
-    ],
-    "Climate":[
-        "temperate; cool to cold, dry winters; hot, wet summers"
-    ],
-    "Natural resources":[
-        "water, agricultural and grazing land, diamonds, sand, clay, building stone"
-    ],
-    "Internet country code":[
-        ".ls"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$635.7 million (31 December 2013 est.)",
-        "$398 million (31 December 2012 est.)"
-    ],
-    "Electricity - production":[
-        "200 million kWh (2010 est.)"
-    ],
-    "Death rate":[
-        "14.91 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "100% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$2.148 billion (2013 est.)",
-        "$2.239 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "Basotho hat"
-    ],
-    "GDP - real growth rate":[
-        "4.1% (2013 est.)",
-        "4.5% (2012 est.)",
-        "5.7% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "9.36% (31 December 2012 est.)",
-        "10% (31 December 2010 est.)"
-    ],
-    "Fiscal year":[
-        "1 April - 31 March"
-    ],
-    "Obesity - adult prevalence rate":[
-        "14.6% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "food, beverages, textiles, apparel assembly, handicrafts, construction, tourism"
-    ],
-    "Legal system":[
-        "mixed legal system of English common law and Roman-Dutch law; judicial review of legislative acts in High Court and Court of Appeal"
-    ],
-    "Military - note":[
-        "Lesotho's declared policy is maintenance of its independent sovereignty and preservation of internal security; in practice, external security is guaranteed by South Africa; restructuring of the Lesotho Defense Force (LDF) and Ministry of Defense and Public Service over the past five years has focused on subordinating the defense apparatus to civilian control and restoring the LDF's cohesion; the restructuring has considerably improved capabilities and professionalism, but the LDF is disproportionately large for a small, poor country; the government has outlined a reduction to a planned 1,500-man strength, but these plans have met with vociferous resistance from the political opposition and from inside the LDF (2008)"
-    ],
-    "Capital":[
-        "Maseru",
-        "29 19 S, 27 29 E",
-        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "population pressure forcing settlement in marginal areas results in overgrazing, severe soil erosion, and soil exhaustion; desertification; Highlands Water Project controls, stores, and redirects water to South Africa"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "76,000 kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "25.92 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "32.9% (male 321,017/female 318,265)",
-        "19.9% (male 184,006/female 203,336)",
-        "36.8% (male 349,365/female 364,970)",
-        "4.9% (male 51,274/female 44,847)",
-        "5.4% (male 52,955/female 51,973) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "10% (31 December 2013 est.)",
-        "10.12% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "909 km",
-        "South Africa 909 km"
-    ],
-    "Coastline":[
+    "coastline":[
         "0 km (landlocked)"
     ],
-    "Nationality":[
+    "nationality":[
         "Mosotho (singular), Basotho (plural)",
         "Basotho"
     ],
-    "Telephones - main lines in use":[
-        "43,100 (2012)"
+    "refined petroleum products - imports":[
+        "3711 bbl/day (2010 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "89.6%",
-        "83.3%",
-        "95.6% (2010 est.)"
+    "climate":[
+        "temperate; cool to cold, dry winters; hot, wet summers"
     ],
-    "Total renewable water resources":[
-        "3.02 cu km (2011)"
+    "hiv/aids - adult prevalence rate":[
+        "23.1% (2012 est.)"
     ],
-    "National holiday":[
-        "Independence Day, 4 October (1966)"
+    "child labor - children ages 5-14":[
+        "103020",
+        "23 % (2000 est.)"
     ],
-    "Elevation extremes":[
-        "junction of the Orange and Makhaleng Rivers 1,400 m",
-        "Thabana Ntlenyana 3,482 m"
+    "manpower reaching militarily significant age annually":[
+        "19110",
+        "20037 (2010 est.)"
     ],
-    "Suffrage":[
-        "18 years of age; universal"
+    "roadways":[
+        "5940 km",
+        "1069 km",
+        "4871 km (2011)"
     ],
-    "Physicians density":[
-        "0.05 physicians/1,000 population (2003)"
+    "net migration rate":[
+        "-7.62 migrant(s)/1000 population (2014 est.)"
     ],
-    "Exports - commodities":[
-        "manufactures (clothing, footwear), wool and mohair, food and live animals, electricity, water, diamonds"
-    ],
-    "Labor force":[
-        "874,200 (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "67.1 %",
-        "60.1 %",
-        "7 %",
-        "14.3 (2014 est.)"
-    ],
-    "Roadways":[
-        "5,940 km",
-        "1,069 km",
-        "4,871 km (2011)"
-    ],
-    "Electricity - exports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Refined petroleum products - imports":[
-        "3,711 bbl/day (2010 est.)"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2011 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "maloti (LSL) per US dollar -",
         "9.575 (2013 est.)",
         "8.2 (2012 est.)",
@@ -555,10 +295,63 @@
         "8.47 (2009)",
         "7.75 (2008)"
     ],
-    "Ethnic groups":[
-        "Sotho 99.7%, Europeans, Asians, and other 0.3%,"
+    "refined petroleum products - production":[
+        "0 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.03 male(s)/female",
+        "1.01 male(s)/female",
+        "0.91 male(s)/female",
+        "0.96 male(s)/female",
+        "0.98 male(s)/female",
+        "0.99 male(s)/female",
+        "0.97 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "NA"
+    ],
+    "manpower available for military service":[
+        "472456",
+        "508953 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$857.9 million (31 December 2013 est.)",
+        "$749.4 million (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "21",
+        "5",
+        "",
+        "16 (2013)"
+    ],
+    "stock of broad money":[
+        "$903.4 million (31 December 2013 est.)",
+        "$840.9 million (31 December 2012 est.)"
+    ],
+    "national symbol(s)":[
+        "Basotho hat"
+    ],
+    "gdp - real growth rate":[
+        "4.1% (2013 est.)",
+        "4.5% (2012 est.)",
+        "5.7% (2011 est.)"
+    ],
+    "telephone system":[
+        "rudimentary system consisting of a modest number of landlines, a small microwave radio relay system, and a small radiotelephone communication system; mobile-cellular telephone system is expanding",
+        "privatized in 2001, Telecom Lesotho was tasked with providing an additional 50000 fixed-line connections within five years, a target not met; mobile-cellular service dominates the market and is expanding with a subscribership roughly 65 per 100 persons in 2011; rural services are scant",
+        "country code - 266; satellite earth station - 1 Intelsat (Atlantic Ocean) (2011)"
+    ],
+    "flag description":[
+        "three horizontal stripes of blue (top), white, and green in the proportions of 3:4:3; the colors represent rain, peace, and prosperity respectively; centered in the white stripe is a black Basotho hat representing the indigenous people; the flag was unfurled in October 2006 to celebrate 40 years of independence"
+    ],
+    "fiscal year":[
+        "1 April - 31 March"
+    ],
+    "household income or consumption by percentage share":[
+        "1%",
+        "39.4% (2003)"
+    ],
+    "gdp - composition, by end use":[
         "86%",
         "39.4%",
         "33.7%",
@@ -567,17 +360,224 @@
         "-108.2%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "11.4% of GDP (2013 est.)",
-        "7.8% of GDP (2012 est.)",
-        "7.8% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "52.65 years",
+        "52.55 years",
+        "52.75 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "1 state-owned TV station and 2 state-owned radio stations; government controls most private broadcast media; satellite TV subscription service available; transmissions of multiple international broadcasters obtainable (2008)"
+    "languages":[
+        "Sesotho (official) (southern Sotho), English (official), Zulu, Xhosa"
     ],
-    "National anthem":[
-        "\"Lesotho fatse la bo ntat'a rona\" (Lesotho, Land of Our Fathers)",
-        "Francois COILLARD/Ferdinand-Samuel LAUR",
-        "adopted 1967; the anthem's music derives from an 1823 Swiss songbook"
+    "area":[
+        "30355 sq km",
+        "30355 sq km",
+        "0 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "445600 Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "water, agricultural and grazing land, diamonds, sand, clay, building stone"
+    ],
+    "telephones - mobile cellular":[
+        "1.312 million (2012)"
+    ],
+    "maritime claims":[
+        "none (landlocked)"
+    ],
+    "electricity - from other renewable sources":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "population growth rate":[
+        "0.34% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18-24 years of age for voluntary military service; no conscription; women serve as commissioned officers (2012)"
+    ],
+    "sanitation facility access":[
+        "urban: 37% of population",
+        "rural: 26.7% of population",
+        "total: 29.6% of population",
+        "",
+        "urban: 63% of population",
+        "rural: 73.3% of population",
+        "total: 70.4% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "7.4%",
+        "34.5%",
+        "58.2% (2013 est.)"
+    ],
+    "age structure":[
+        "32.9% (male 321017/female 318265)",
+        "19.9% (male 184006/female 203336)",
+        "36.8% (male 349365/female 364970)",
+        "4.9% (male 51274/female 44847)",
+        "5.4% (male 52955/female 51973) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "1777 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "909 km",
+        "South Africa 909 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly smaller than Maryland"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "South Africa has placed military units to assist police operations along the border of Lesotho, Zimbabwe, and Mozambique to control smuggling, poaching, and illegal migration"
+    ],
+    "population":[
+        "1942008",
+        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "3.02 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 4 October (1966)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-0.9% of GDP (2013 est.)"
+    ],
+    "trafficking in persons":[
+        "Lesotho is a source, transit, and destination country for women and children subjected to forced labor and sex trafficking and for men subjected to forced labor; Basotho women and children are subjected to domestic servitude and children, to a lesser extent, commercial sexual exploitation within Lesotho and South Africa; some Basotho women willingly migrate to South Africa seeking work in domestic service only to be forced into prostitution; some Basotho men who voluntarily migrate to South Africa for work become victims of forced labor in agriculture and mining or are coerced into committing crimes",
+        "Tier 2 Watch List - Lesotho does not fully comply with the minimum standards for the elimination of trafficking; however, it is making significant efforts to do so; the government has decreased its anti-trafficking law enforcement and victim protection efforts during 2012; authorities have initiated fewer prosecutions, ceased arresting suspected trafficking offenders due to a backlog of prosecutions, and stopped referring victims to NGO centers for care; the government has not implemented key portions of the 2011 anti-trafficking act, including failing to develop formal referral procedures, establish victim care centers, and complete a national action plan (2013)"
+    ],
+    "budget":[
+        "$1.462 billion",
+        "$1.483 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "49% (1999)"
+    ],
+    "military expenditures":[
+        "1.94% of GDP (2012)",
+        "2.3% of GDP (2011)",
+        "1.94% of GDP (2010)"
+    ],
+    "death rate":[
+        "14.91 deaths/1000 population (2014 est.)"
+    ],
+    "industrial production growth rate":[
+        "4.3% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "63.2 (1995)",
+        "56 (1986-87)"
+    ],
+    "inflation rate (consumer prices)":[
+        "5% (2013 est.)",
+        "6.1% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Eliachim Molapi SEBATANE (since 2 November 2011)",
+        "2511 Massachusetts Avenue NW, Washington, DC 20008",
+        "[1] (202) 797-5533",
+        "[1] (202) 234-6815"
+    ],
+    "imports":[
+        "$2.148 billion (2013 est.)",
+        "$2.239 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "10% (31 December 2013 est.)",
+        "10.12% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "13% of GDP (2008)"
+    ],
+    "electricity - consumption":[
+        "307 million kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "1.3 beds/1000 population (2006)"
+    ],
+    "ethnic groups":[
+        "Sotho 99.7%, Europeans, Asians, and other 0.3%,"
+    ],
+    "unemployment, youth ages 15-24":[
+        "34.4%",
+        "29%",
+        "41.9% (2008)"
+    ],
+    "land use":[
+        "10.14%",
+        "0.13%",
+        "89.72% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "0.04  cu km/yr (46%/46%/9%)",
+        "21.79  cu m/yr (2000)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$635.7 million (31 December 2013 est.)",
+        "$398 million (31 December 2012 est.)"
+    ],
+    "stock of domestic credit":[
+        "$85420 (31 December 2013 est.)",
+        "$75280 (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "corn, wheat, pulses, sorghum, barley; livestock"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "11030 (2012)"
+    ],
+    "political pressure groups and leaders":[],
+    "administrative divisions":[
+        "10 districts; Berea, Butha-Buthe, Leribe, Mafeteng, Maseru, Mohale's Hoek, Mokhotlong, Qacha's Nek, Quthing, Thaba-Tseka"
+    ],
+    "hiv/aids - deaths":[
+        "15500 (2012 est.)"
+    ],
+    "crude oil - production":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "43100 (2012)"
+    ],
+    "electricity - production":[
+        "200 million kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
+        "junction of the Orange and Makhaleng Rivers 1400 m",
+        "Thabana Ntlenyana 3482 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "11 years",
+        "11 years",
+        "12 years (2012)"
+    ],
+    "physicians density":[
+        "0.05 physicians/1000 population (2003)"
+    ],
+    "international organization participation":[
+        "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, MIGA, NAM, OPCW, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$2.457 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "0 kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "76000 kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Maseru (capital) 239000 (2011)"
     ]
 }

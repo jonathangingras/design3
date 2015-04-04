@@ -1,0 +1,24 @@
+{
+  "conversion":[
+    {
+      "export partners" : "exports - partners",
+      "national symbol" : "national symbol(s)",
+      "date of independence": "independence",
+      "latitude" : "geographic coordinates",
+      "longitude" : "geographic coordinates",
+      "telephone lines in use": "telephones - main lines in use",
+      "total area": "area",
+      "major urban areas": "major urban areas - population",
+      "import partners": "imports - partners",
+      "internet": "internet country code",
+      "tropical climate": "climate",
+      "nordic climate": "climate",
+      "illicit drugs activities": "illicit drugs",
+      "illicit drug": "illicit drugs",
+      "electricity production": "electricity - production",
+      "inflation rate": "inflation rate (consumer prices)",
+      "capital name": "capital"
+    }
+  ]
+
+}

@@ -1,310 +1,233 @@
 {
-    "Inflation rate (consumer prices)":[
-        "2.4% (2013 est.)",
-        "2.4% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "6.2% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "2.19 sq km (2003)"
-    ],
-    "Exports - partners":[
-        "Nigeria 40.2%, St. Lucia 10.7%, Antigua and Barbuda 7.3%, US 6.6%, St. Kitts and Nevis 6.5%, Dominica 6.5%, Switzerland 4.3% (2012)"
-    ],
-    "Independence":[
-        "7 February 1974 (from the UK)"
-    ],
-    "Constitution":[
-        "previous 1967; latest presented 19 December 1973, came into operation 7 February 1974, some provisions suspended 1979; amended 1991 (Constitutional Judicature Act, 1991 - restored provisions suspended in 1979), 1992 (2008)"
-    ],
-    "Geography - note":[
-        "the administration of the islands of the Grenadines group is divided between Saint Vincent and the Grenadines and Grenada"
-    ],
-    "Exports":[
-        "$40.5 million (2012 est.)",
-        "$34.9 million (2011 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$13,800 (2013 est.)",
-        "$13,700 (2012 est.)",
-        "$13,900 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 97.5% of population",
-        "rural: 98.3% of population",
-        "total: 98% of population",
-        "",
-        "urban: 2.5% of population",
-        "rural: 1.7% of population",
-        "total: 2% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "24 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "a rectangle divided diagonally into yellow triangles (top and bottom) and green triangles (hoist side and outer side), with a red border around the flag; there are seven yellow, five-pointed stars with three centered in the top red border, three centered in the bottom red border, and one on a red disk superimposed at the center of the flag; there is also a symbolic nutmeg pod on the hoist-side triangle (Grenada is the world's second-largest producer of nutmeg, after Indonesia); the seven stars stand for the seven administrative divisions, with the central star denoting the capital, St. George; yellow represents the sun and the warmth of the people, green stands for vegetation and agriculture, and red symbolizes harmony, unity, and courage"
-    ],
-    "Political pressure groups and leaders":[
-        "Committee for Human Rights in Grenada or CHRG",
-        "New Jewel Movement Support Group",
-        "The British Grenada Friendship Society",
-        "The New Jewel 19 Committee"
-    ],
-    "Telephones - mobile cellular":[
-        "128,000 (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - exports":[
         "0 cu m (2011 est.)"
     ],
-    "Net migration rate":[
-        "-3.24 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "22,596",
-        "22,588 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$811 million (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "1.4% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "110% of GDP (2012 est.)"
-    ],
-    "Crude oil - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
-        "0 cu m (2011 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "12 07 N, 61 40 W"
     ],
-    "Terrain":[
-        "volcanic in origin with central mountains"
+    "hiv/aids - people living with hiv/aids":[
+        "NA"
     ],
-    "Electricity - imports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "3.9% of GDP (2003)"
-    ],
-    "Government type":[
+    "government type":[
         "parliamentary democracy and a Commonwealth realm"
     ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
+    "religions":[
+        "Roman Catholic 53%, Anglican 13.8%, other Protestant 33.2%"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "33.5% (2013)",
         "25% (2008)"
     ],
-    "Sex ratio":[
-        "1.1 male(s)/female",
-        "1.07 male(s)/female",
-        "0.99 male(s)/female",
-        "1.05 male(s)/female",
-        "1.03 male(s)/female",
-        "0.83 male(s)/female",
-        "1.02 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "-3.6% of GDP (2013 est.)",
+        "-7.2% of GDP (2012 est.)",
+        "-2.1% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
-        "Grenada United Labor Party or GULP [Wilfred HAYES]",
-        "National Democratic Congress or NDC [Tillman THOMAS]",
-        "New National Party or NNP [Keith MITCHELL]"
+    "total fertility rate":[
+        "2.09 children born/woman (2014 est.)"
     ],
-    "Environment - current issues":[
+    "national anthem":[
+        "Hail Grenada",
+        "Irva Merle BAPTISTE/Louis Arnold MASANTO",
+        "adopted 1974"
+    ],
+    "environment - current issues":[
         "NA"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    "industries":[
+        "food and beverages, textiles, light assembly operations, tourism, construction"
     ],
-    "Stock of domestic credit":[
-        "$744.9 million (31 December 2013 est.)",
-        "$729.5 million (31 December 2012 est.)"
+    "legal system":[
+        "common law based on English model"
     ],
-    "Area":[
-        "344 sq km",
-        "344 sq km",
-        "0 sq km"
+    "health expenditures":[
+        "6.2% of GDP (2011)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-4.1% of GDP (2012 est.)"
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
     ],
-    "Industrial production growth rate":[
-        "-2% (2013 est.)"
-    ],
-    "Median age":[
-        "29.9 years",
-        "29.8 years",
-        "29.9 years (2014 est.)"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "NA"
-    ],
-    "Urbanization":[
+    "urbanization":[
         "39.1% of total population (2011)",
         "1.24% annual rate of change (2010-15 est.)"
     ],
-    "Imports - commodities":[
+    "imports - commodities":[
         "food, manufactured goods, machinery, chemicals, fuel"
     ],
-    "Location":[
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
         "Caribbean, island between the Caribbean Sea and Atlantic Ocean, north of Trinidad and Tobago"
     ],
-    "Electricity - from fossil fuels":[
-        "98.6% of total installed capacity (2010 est.)"
+    "irrigated land":[
+        "2.19 sq km (2003)"
     ],
-    "Telephone system":[
-        "automatic, island-wide telephone system",
-        "interisland VHF and UHF radiotelephone links",
-        "country code - 1-473; landing point for the East Caribbean Fiber Optic System (ECFS) submarine cable with links to 13 other islands in the eastern Caribbean extending from the British Virgin Islands to Trinidad; SHF radiotelephone links to Trinidad and Tobago and Saint Vincent; VHF and UHF radio links to Trinidad (2009)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$1.458 billion (2013 est.)",
-        "$1.447 billion (2012 est.)",
-        "$1.458 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
+    "natural hazards":[
         "lies on edge of hurricane belt; hurricane season lasts from June to November"
     ],
-    "Stock of narrow money":[
+    "natural gas - consumption":[
+        "0 cu m (2010 est.)"
+    ],
+    "exports":[
+        "$40.5 million (2012 est.)",
+        "$34.9 million (2011 est.)"
+    ],
+    "stock of narrow money":[
         "$131.7 million (31 December 2013 est.)",
         "$123.3 million (31 December 2012 est.)"
     ],
-    "Airports - with paved runways":[
+    "airports - with paved runways":[
         "3",
         "1",
         "1",
         "1 (2013)"
     ],
-    "Electricity - consumption":[
-        "178.4 million kWh (2010 est.)"
+    "internet users":[
+        "25000 (2009)"
     ],
-    "Manpower available for military service":[
-        "27,468 (2010 est.)"
+    "current account balance":[
+        "-$214.4 million (2012 est.)",
+        "-$204.5 million (2011 est.)"
     ],
-    "HIV/AIDS - deaths":[
-        "NA"
+    "maternal mortality rate":[
+        "24 deaths/100000 live births (2010)"
     ],
-    "Area - comparative":[
-        "twice the size of Washington, DC"
+    "taxes and other revenues":[
+        "20.1% of GDP (2012 est.)"
     ],
-    "Population":[
-        "110,152 (July 2014 est.)"
+    "refined petroleum products - exports":[
+        "0 bbl/day (2010 est.)"
     ],
-    "Crude oil - proved reserves":[
+    "literacy":[
+        "age 15 and over can read and write",
+        "96%",
+        "NA",
+        "NA (2003 est.)"
+    ],
+    "crude oil - proved reserves":[
         "0 bbl (1 January 2013 est.)"
     ],
-    "Airports":[
+    "airports":[
         "3 (2013)"
     ],
-    "Budget":[
-        "$163 million",
-        "$196.3 million (2012 est.)"
+    "gdp - per capita (ppp)":[
+        "$13800 (2013 est.)",
+        "$13700 (2012 est.)",
+        "$13900 (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "269,000 Mt (2011 est.)"
+    "birth rate":[
+        "16.3 births/1000 population (2014 est.)"
     ],
-    "Agriculture - products":[
-        "bananas, cocoa, nutmeg, mace, citrus, avocados, root crops, sugarcane, corn, vegetables"
+    "internet country code":[
+        ".gd"
     ],
-    "Total fertility rate":[
-        "2.09 children born/woman (2014 est.)"
+    "suffrage":[
+        "18 years of age; universal"
     ],
-    "Major urban areas - population":[
-        "SAINT GEORGE'S (capital) 41,000 (2011)"
+    "natural gas - production":[
+        "0 cu m (2011 est.)"
     ],
-    "Population below poverty line":[
-        "38% (2008)"
+    "exports - commodities":[
+        "nutmeg, bananas, cocoa, fruit and vegetables, clothing, mace"
     ],
-    "Labor force - by occupation":[
+    "labor force":[
+        "59900 (2013 est.)"
+    ],
+    "dependency ratios":[
+        "50.9 %",
+        "40.2 %",
+        "10.7 %",
+        "9.3 (2014 est.)"
+    ],
+    "imports - partners":[
+        "Trinidad and Tobago 44.3%, US 16.4%, China 4.6% (2012)"
+    ],
+    "ports and terminals":[
+        "Saint George's"
+    ],
+    "labor force - by occupation":[
         "11%",
         "20%",
         "69% (2008 est.)"
     ],
-    "Stock of broad money":[
-        "$697.4 million (31 December 2013 est.)",
-        "$689.7 million (31 December 2012 est.)"
+    "illicit drugs":[
+        "small-scale cannabis cultivation; lesser transshipment point for marijuana and cocaine to US"
     ],
-    "GDP - composition, by sector of origin":[
-        "5.6%",
-        "15.8%",
-        "78.5% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
+    "diplomatic representation from the us":[
         "the US does not have an embassy in Grenada; the US Ambassador to Barbados is accredited to Grenada",
         "Lance-aux-Epines Stretch, Saint George's",
         "P. O. Box 54, Saint George's",
         "[1] (473) 444-1173 through 1177",
         "[1] (473) 444-4820"
     ],
-    "Infant mortality rate":[
-        "10.5 deaths/1,000 live births",
-        "9.82 deaths/1,000 live births",
-        "11.26 deaths/1,000 live births (2014 est.)"
+    "terrain":[
+        "volcanic in origin with central mountains"
     ],
-    "Religions":[
-        "Roman Catholic 53%, Anglican 13.8%, other Protestant 33.2%"
+    "electricity - imports":[
+        "0 kWh (2012 est.)"
     ],
-    "Household income or consumption by percentage share":[
-        "NA%",
-        "NA%"
+    "infant mortality rate":[
+        "10.5 deaths/1000 live births",
+        "9.82 deaths/1000 live births",
+        "11.26 deaths/1000 live births (2014 est.)"
     ],
-    "Hospital bed density":[
-        "3.5 beds/1,000 population (2011)"
+    "central bank discount rate":[
+        "6.5% (31 December 2009)",
+        "6.5% (31 December 2008)"
     ],
-    "Life expectancy at birth":[
-        "73.8 years",
-        "71.24 years",
-        "76.62 years (2014 est.)"
+    "geography - note":[
+        "the administration of the islands of the Grenadines group is divided between Saint Vincent and the Grenadines and Grenada"
     ],
-    "HIV/AIDS - adult prevalence rate":[
-        "NA"
+    "political parties and leaders":[
+        "Grenada United Labor Party or GULP [Wilfred HAYES]",
+        "National Democratic Congress or NDC [Tillman THOMAS]",
+        "New National Party or NNP [Keith MITCHELL]"
     ],
-    "School life expectancy (primary to tertiary education)":[
-        "16 years",
-        "15 years",
-        "16 years (2009)"
+    "obesity - adult prevalence rate":[
+        "22.5% (2008)"
     ],
-    "Manpower reaching militarily significant age annually":[
-        "995",
-        "1,002 (2010 est.)"
+    "broadcast media":[
+        "the Grenada Broadcasting Network, jointly owned by the government and the Caribbean Communications Network of Trinidad and Tobago, operates a TV station and 2 radio stations; multi-channel cable TV subscription service is available; a dozen private radio stations also broadcast (2007)"
     ],
-    "International organization participation":[
-        "ACP, AOSIS, C, Caricom, CDB, CELAC, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, ITU, ITUC, LAES, MIGA, NAM, OAS, OECS, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WHO, WIPO, WTO"
+    "constitution":[
+        "previous 1967; latest presented 19 December 1973, came into operation 7 February 1974, some provisions suspended 1979; amended 1991 (Constitutional Judicature Act, 1991 - restored provisions suspended in 1979), 1992 (2008)"
     ],
-    "Languages":[
-        "English (official), French patois"
+    "contraceptive prevalence rate":[
+        "54.3%",
+        "percent of women aged 15-44 (1990)"
     ],
-    "Country name":[
+    "median age":[
+        "29.9 years",
+        "29.8 years",
+        "29.9 years (2014 est.)"
+    ],
+    "manpower fit for military service":[
+        "22596",
+        "22588 (2010 est.)"
+    ],
+    "country name":[
         "none",
         "Grenada"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "200 nm"
+    "electricity - from fossil fuels":[
+        "98.6% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$NA"
+    "capital":[
+        "Saint George's",
+        "12 03 N, 61 45 W",
+        "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
     ],
-    "Taxes and other revenues":[
-        "20.1% of GDP (2012 est.)"
+    "gdp (purchasing power parity)":[
+        "$1.458 billion (2013 est.)",
+        "$1.447 billion (2012 est.)",
+        "$1.458 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Refined petroleum products - consumption":[
-        "2,803 bbl/day (2011 est.)"
+    "independence":[
+        "7 February 1974 (from the UK)"
     ],
-    "Population growth rate":[
-        "0.5% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 99% of population",
         "rural: 95.3% of population",
         "total: 96.8% of population",
@@ -313,203 +236,91 @@
         "rural: 4.7% of population",
         "total: 3.2% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Ethelstan A. FRIDAY (since 3 September 2013)",
-        "1701 New Hampshire Avenue NW, Washington, DC 20009",
-        "[1] (202) 265-2561",
-        "[1] (202) 265-2468",
-        "New York"
+    "electricity - from hydroelectric plants":[
+        "0% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "25,000 (2009)"
-    ],
-    "Contraceptive prevalence rate":[
-        "54.3%",
-        "percent of women aged 15-44 (1990)"
-    ],
-    "Internet hosts":[
-        "80 (2012)"
-    ],
-    "Current account balance":[
-        "-$214.4 million (2012 est.)",
-        "-$204.5 million (2011 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$679 million (2013 est.)",
         "$538 million (2010 est.)"
     ],
-    "Administrative divisions":[
-        "6 parishes and 1 dependency*; Carriacou and Petite Martinique*, Saint Andrew, Saint David, Saint George, Saint John, Saint Mark, Saint Patrick"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Land use":[
-        "8.82%",
-        "20.59%",
-        "70.59% (2011)"
-    ],
-    "Disputes - international":[
-        "none"
-    ],
-    "Climate":[
-        "tropical; tempered by northeast trade winds"
-    ],
-    "Natural resources":[
-        "timber, tropical fruit, deepwater harbors"
-    ],
-    "Internet country code":[
-        ".gd"
-    ],
-    "Electricity - production":[
-        "201.4 million kWh (2010 est.)"
-    ],
-    "Death rate":[
-        "8.04 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$297 million (2012 est.)",
-        "$290.4 million (2011 est.)"
-    ],
-    "GDP - real growth rate":[
-        "0.8% (2013 est.)",
-        "-0.8% (` est.)",
-        "1% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "6.5% (31 December 2009)",
-        "6.5% (31 December 2008)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "22.5% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "food and beverages, textiles, light assembly operations, tourism, construction"
-    ],
-    "Legal system":[
-        "common law based on English model"
-    ],
-    "Capital":[
-        "Saint George's",
-        "12 03 N, 61 45 W",
-        "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "49,700 kW (2010 est.)"
-    ],
-    "Imports - partners":[
-        "Trinidad and Tobago 44.3%, US 16.4%, China 4.6% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2010 est.)"
-    ],
-    "Birth rate":[
-        "16.3 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "24.5% (male 13,954/female 13,057)",
-        "16.5% (male 9,075/female 9,155)",
-        "40.3% (male 22,765/female 21,628)",
-        "9.2% (male 5,214/female 4,927)",
-        "9.2% (male 4,739/female 5,638) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "9.4% (31 December 2013 est.)",
-        "9.75% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "0 km"
-    ],
-    "Coastline":[
+    "coastline":[
         "121 km"
     ],
-    "Nationality":[
+    "nationality":[
         "Grenadian(s)",
         "Grenadian"
     ],
-    "Telephones - main lines in use":[
-        "28,500 (2012)"
+    "refined petroleum products - imports":[
+        "2004 bbl/day (2010 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "96%",
-        "NA",
-        "NA (2003 est.)"
+    "climate":[
+        "tropical; tempered by northeast trade winds"
     ],
-    "Total renewable water resources":[
+    "hiv/aids - adult prevalence rate":[
         "NA"
     ],
-    "National holiday":[
-        "Independence Day, 7 February (1974)"
+    "manpower reaching militarily significant age annually":[
+        "995",
+        "1002 (2010 est.)"
     ],
-    "Elevation extremes":[
-        "Caribbean Sea 0 m",
-        "Mount Saint Catherine 840 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "0.66 physicians/1,000 population (2006)"
-    ],
-    "Exports - commodities":[
-        "nutmeg, bananas, cocoa, fruit and vegetables, clothing, mace"
-    ],
-    "Labor force":[
-        "59,900 (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "50.9 %",
-        "40.2 %",
-        "10.7 %",
-        "9.3 (2014 est.)"
-    ],
-    "Roadways":[
-        "1,127 km",
+    "roadways":[
+        "1127 km",
         "687 km",
         "440 km (2001)"
     ],
-    "Electricity - exports":[
-        "0 kWh (2012 est.)"
+    "net migration rate":[
+        "-3.24 migrant(s)/1000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Saint George's"
-    ],
-    "Refined petroleum products - imports":[
-        "2,004 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "small-scale cannabis cultivation; lesser transshipment point for marijuana and cocaine to US"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2011 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "East Caribbean dollars (XCD) per US dollar -",
         "2.7 (2013 est.)",
         "2.7 (2012 est.)",
         "2.7 (2010 est.)",
         "2.7 (2009)"
     ],
-    "Ethnic groups":[
-        "black 82%, mixed black and European 13%, European and East Indian 5%, and trace of Arawak/Carib Amerindian"
+    "refined petroleum products - production":[
+        "0 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.1 male(s)/female",
+        "1.07 male(s)/female",
+        "0.99 male(s)/female",
+        "1.05 male(s)/female",
+        "1.03 male(s)/female",
+        "0.83 male(s)/female",
+        "1.02 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "110% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "27468 (2010 est.)"
+    ],
+    "stock of broad money":[
+        "$697.4 million (31 December 2013 est.)",
+        "$689.7 million (31 December 2012 est.)"
+    ],
+    "gdp - real growth rate":[
+        "0.8% (2013 est.)",
+        "-0.8% (` est.)",
+        "1% (2011 est.)"
+    ],
+    "telephone system":[
+        "automatic, island-wide telephone system",
+        "interisland VHF and UHF radiotelephone links",
+        "country code - 1-473; landing point for the East Caribbean Fiber Optic System (ECFS) submarine cable with links to 13 other islands in the eastern Caribbean extending from the British Virgin Islands to Trinidad; SHF radiotelephone links to Trinidad and Tobago and Saint Vincent; VHF and UHF radio links to Trinidad (2009)"
+    ],
+    "flag description":[
+        "a rectangle divided diagonally into yellow triangles (top and bottom) and green triangles (hoist side and outer side), with a red border around the flag; there are seven yellow, five-pointed stars with three centered in the top red border, three centered in the bottom red border, and one on a red disk superimposed at the center of the flag; there is also a symbolic nutmeg pod on the hoist-side triangle (Grenada is the world's second-largest producer of nutmeg, after Indonesia); the seven stars stand for the seven administrative divisions, with the central star denoting the capital, St. George; yellow represents the sun and the warmth of the people, green stands for vegetation and agriculture, and red symbolizes harmony, unity, and courage"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "NA%",
+        "NA%"
+    ],
+    "gdp - composition, by end use":[
         "91.6%",
         "15.8%",
         "16.8%",
@@ -518,17 +329,206 @@
         "-46.1%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "-3.6% of GDP (2013 est.)",
-        "-7.2% of GDP (2012 est.)",
-        "-2.1% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "73.8 years",
+        "71.24 years",
+        "76.62 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "the Grenada Broadcasting Network, jointly owned by the government and the Caribbean Communications Network of Trinidad and Tobago, operates a TV station and 2 radio stations; multi-channel cable TV subscription service is available; a dozen private radio stations also broadcast (2007)"
+    "languages":[
+        "English (official), French patois"
     ],
-    "National anthem":[
-        "\"Hail Grenada\"",
-        "Irva Merle BAPTISTE/Louis Arnold MASANTO",
-        "adopted 1974"
+    "area":[
+        "344 sq km",
+        "344 sq km",
+        "0 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "269000 Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "timber, tropical fruit, deepwater harbors"
+    ],
+    "telephones - mobile cellular":[
+        "128000 (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "1.4% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "Nigeria 40.2%, St. Lucia 10.7%, Antigua and Barbuda 7.3%, US 6.6%, St. Kitts and Nevis 6.5%, Dominica 6.5%, Switzerland 4.3% (2012)"
+    ],
+    "population growth rate":[
+        "0.5% (2014 est.)"
+    ],
+    "sanitation facility access":[
+        "urban: 97.5% of population",
+        "rural: 98.3% of population",
+        "total: 98% of population",
+        "",
+        "urban: 2.5% of population",
+        "rural: 1.7% of population",
+        "total: 2% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "5.6%",
+        "15.8%",
+        "78.5% (2013 est.)"
+    ],
+    "age structure":[
+        "24.5% (male 13954/female 13057)",
+        "16.5% (male 9075/female 9155)",
+        "40.3% (male 22765/female 21628)",
+        "9.2% (male 5214/female 4927)",
+        "9.2% (male 4739/female 5638) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "2803 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "0 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "twice the size of Washington, DC"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "none"
+    ],
+    "population":[
+        "110152 (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "NA"
+    ],
+    "national holiday":[
+        "Independence Day, 7 February (1974)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-4.1% of GDP (2012 est.)"
+    ],
+    "budget":[
+        "$163 million",
+        "$196.3 million (2012 est.)"
+    ],
+    "population below poverty line":[
+        "38% (2008)"
+    ],
+    "death rate":[
+        "8.04 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$NA"
+    ],
+    "industrial production growth rate":[
+        "-2% (2013 est.)"
+    ],
+    "inflation rate (consumer prices)":[
+        "2.4% (2013 est.)",
+        "2.4% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Ethelstan A. FRIDAY (since 3 September 2013)",
+        "1701 New Hampshire Avenue NW, Washington, DC 20009",
+        "[1] (202) 265-2561",
+        "[1] (202) 265-2468",
+        "New York"
+    ],
+    "imports":[
+        "$297 million (2012 est.)",
+        "$290.4 million (2011 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "9.4% (31 December 2013 est.)",
+        "9.75% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "3.9% of GDP (2003)"
+    ],
+    "electricity - consumption":[
+        "178.4 million kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "3.5 beds/1000 population (2011)"
+    ],
+    "ethnic groups":[
+        "black 82%, mixed black and European 13%, European and East Indian 5%, and trace of Arawak/Carib Amerindian"
+    ],
+    "land use":[
+        "8.82%",
+        "20.59%",
+        "70.59% (2011)"
+    ],
+    "stock of domestic credit":[
+        "$744.9 million (31 December 2013 est.)",
+        "$729.5 million (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "bananas, cocoa, nutmeg, mace, citrus, avocados, root crops, sugarcane, corn, vegetables"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "80 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "Committee for Human Rights in Grenada or CHRG",
+        "New Jewel Movement Support Group",
+        "The British Grenada Friendship Society",
+        "The New Jewel 19 Committee"
+    ],
+    "administrative divisions":[
+        "6 parishes and 1 dependency*; Carriacou and Petite Martinique*, Saint Andrew, Saint David, Saint George, Saint John, Saint Mark, Saint Patrick"
+    ],
+    "hiv/aids - deaths":[
+        "NA"
+    ],
+    "crude oil - production":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "28500 (2012)"
+    ],
+    "electricity - production":[
+        "201.4 million kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
+        "Caribbean Sea 0 m",
+        "Mount Saint Catherine 840 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "16 years",
+        "15 years",
+        "16 years (2009)"
+    ],
+    "physicians density":[
+        "0.66 physicians/1000 population (2006)"
+    ],
+    "international organization participation":[
+        "ACP, AOSIS, C, Caricom, CDB, CELAC, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, ITU, ITUC, LAES, MIGA, NAM, OAS, OECS, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WHO, WIPO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$811 million (2013 est.)"
+    ],
+    "electricity - exports":[
+        "0 kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "49700 kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Saint George's (capital) 41000 (2011)"
     ]
 }

@@ -1,139 +1,202 @@
 {
-    "Refugees and internally displaced persons":[
-        "13,467 (Iraq) (2013); 783,065 (Syria) (2014)",
-        "954,000-1.2 million (displaced from 1984-2005 because of fighting between Kurdish PKK and Turkish military; most IDPs are Kurds from eastern and southeastern provinces; no information available on persons displaced by development projects) (2012)",
-        "780 (2012)"
-    ],
-    "Inflation rate (consumer prices)":[
-        "7.6% (2013 est.)",
-        "8.9% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "6.7% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "418,200 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "53,400 sq km (2012)"
-    ],
-    "Exports - partners":[
-        "Germany 8.6%, Iraq 7.1%, Iran 6.5%, UK 5.7%, UAE 5.4%, Russia 4.4%, Italy 4.2%, France 4.1% (2012)"
-    ],
-    "Independence":[
-        "29 October 1923 (successor state to the Ottoman Empire)"
-    ],
-    "Constitution":[
-        "several previous; latest ratified 9 November 1982; amended 2001, 2007, 2010 (2010)"
-    ],
-    "Geography - note":[
-        "strategic location controlling the Turkish Straits (Bosporus, Sea of Marmara, Dardanelles) that link Black and Aegean Seas; Mount Ararat, the legendary landing place of Noah's ark, is in the far eastern portion of the country"
-    ],
-    "Exports":[
-        "$167.6 billion (2013 est.)",
-        "$163.3 billion (2012 est.)"
-    ],
-    "Pipelines":[
-        "gas 12,603 km; oil 3,038 km (2013)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$15,300 (2013 est.)",
-        "$15,000 (2012 est.)",
-        "$14,900 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 97.2% of population",
-        "rural: 75.5% of population",
-        "total: 91.2% of population",
-        "",
-        "urban: 2.8% of population",
-        "rural: 24.5% of population",
-        "total: 8.8% of population (2012 est.)"
-    ],
-    "Waterways":[
-        "1,200 km (2010)"
-    ],
-    "Maternal mortality rate":[
-        "20 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "red with a vertical white crescent moon (the closed portion is toward the hoist side) and white five-pointed star centered just outside the crescent opening; the flag colors and designs closely resemble those on the banner of the Ottoman Empire, which preceded modern-day Turkey; the crescent moon and star serve as insignia for the Turks, as well as being traditional symbols of Islam; according to legend, the flag represents the reflection of the moon and a star in a pool of blood of Turkish warriors"
-    ],
-    "Political pressure groups and leaders":[
-        "Confederation of Businessmen and Industrialists of Turkey or TUSKON [Rizanur MERAL]",
-        "Confederation of Public Sector Unions or KESK [Lami OZGEN]",
-        "Confederation of Revolutionary Workers Unions or DISK [Tayfun GORGUN]",
-        "Independent Industrialists' and Businessmen's Association or MUSIAD [Omer Cihad VARDAN]",
-        "Moral Rights Workers Union or Hak-Is [Mahmut ARSLAN]",
-        "Turkish Confederation of Employers' Unions or TISK [Tugrul KUDATGOBILIK]",
-        "Turkish Confederation of Labor or Turk-Is [Mustafa KUMLU]",
-        "Turkish Confederation of Tradesmen and Craftsmen or TESK [Bendevi PALANDOKEN]",
-        "Turkish Industrialists' and Businessmen's Association or TUSIAD [Muharrem YILMAZ]",
-        "Turkish Union of Chambers of Commerce and Commodity Exchanges or TOBB [M. Rifat HISARCIKLIOGLU]"
-    ],
-    "Telephones - mobile cellular":[
-        "67.68 million (2012)"
-    ],
-    "Natural gas - imports":[
-        "45.92 billion cu m (2012 est.)"
-    ],
-    "Net migration rate":[
-        "0.46 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "17,664,510",
-        "17,340,816 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$821.8 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "3.1% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "36.6% of GDP (2013 est.)",
-        "37.6% of GDP (2012 est.)",
-        "data cover central government debt, and excludes debt instruments issued (or owned) by government entities other than the treasury; the data include treasury debt held by foreign entities; the data exclude debt issued by subnational entities, as well as intra-governmental debt; intra-governmental debt consists of treasury borrowings from surpluses in the social funds, such as for retirement, medical care, and unemployment; debt instruments for the social funds are sold at public auctions"
-    ],
-    "Crude oil - production":[
-        "56,650 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
+    "natural gas - exports":[
         "600 million cu m (2012 est.)"
     ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "39 00 N, 35 00 E"
     ],
-    "Terrain":[
-        "high central plateau (Anatolia); narrow coastal plain; several mountain ranges"
+    "hiv/aids - people living with hiv/aids":[
+        "4600 (2009 est.)"
     ],
-    "Electricity - imports":[
-        "4.362 billion kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "2.9% of GDP (2006)"
-    ],
-    "Government type":[
+    "government type":[
         "republican parliamentary democracy"
     ],
-    "Crude oil - imports":[
-        "338,900 bbl/day (2010 est.)"
+    "religions":[
+        "Muslim 99.8% (mostly Sunni), other 0.2% (mostly Christians and Jews)"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "9.3% (2013 est.)",
         "9.2% (2012 est.)"
     ],
-    "Sex ratio":[
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.04 male(s)/female",
-        "1.02 male(s)/female",
-        "1.02 male(s)/female",
-        "0.84 male(s)/female",
-        "1.02 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "19.4% of GDP (2013 est.)",
+        "20.2% of GDP (2012 est.)",
+        "23.6% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "2.08 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Istiklal Marsi (Independence March)",
+        "Mehmet Akif ERSOY/Zeki UNGOR",
+        "lyrics adopted 1921, music adopted 1932; the anthem's original music was adopted in 1924; a new composition was agreed upon in 1932"
+    ],
+    "environment - current issues":[
+        "water pollution from dumping of chemicals and detergents; air pollution, particularly in urban areas; deforestation; concern for oil spills from increasing Bosporus ship traffic"
+    ],
+    "industries":[
+        "textiles, food processing, automobiles, electronics, mining (coal, chromate, copper, boron), steel, petroleum, construction, lumber, paper"
+    ],
+    "legal system":[
+        "civil law system based on various European legal systems notably the Swiss civil code"
+    ],
+    "health expenditures":[
+        "6.7% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "6.173 billion cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
+        "71.5% of total population (2011)",
+        "2.4% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "machinery, chemicals, semi-finished goods, fuels, transport equipment"
+    ],
+    "crude oil - imports":[
+        "338900 bbl/day (2010 est.)"
+    ],
+    "location":[
+        "Southeastern Europe and Southwestern Asia (that portion of Turkey west of the Bosporus is geographically part of Europe), bordering the Black Sea, between Bulgaria and Georgia, and bordering the Aegean Sea and the Mediterranean Sea, between Greece and Syria"
+    ],
+    "irrigated land":[
+        "53400 sq km (2012)"
+    ],
+    "natural hazards":[
+        "severe earthquakes, especially in northern Turkey, along an arc extending from the Sea of Marmara to Lake Van",
+        "limited volcanic activity; its three historically active volcanoes; Ararat, Nemrut Dagi, and Tendurek Dagi have not erupted since the 19th century or earlier"
+    ],
+    "natural gas - consumption":[
+        "38.13 billion cu m (2010 est.)"
+    ],
+    "exports":[
+        "$167.6 billion (2013 est.)",
+        "$163.3 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
+        "$80.72 billion (31 December 2013 est.)",
+        "$85.23 billion (31 December 2012 est.)"
+    ],
+    "airports - with paved runways":[
+        "91",
+        "16",
+        "38",
+        "17",
+        "16",
+        "4 (2013)"
+    ],
+    "internet users":[
+        "27.233 million (2009)"
+    ],
+    "railways":[
+        "12008 km",
+        "12008 km 1.435-m gauge (3216 km electrified) (2012)"
+    ],
+    "current account balance":[
+        "-$58.35 billion (2013 est.)",
+        "-$47.75 billion (2012 est.)"
+    ],
+    "maternal mortality rate":[
+        "20 deaths/100000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "23.2% of GDP (2013 est.)"
+    ],
+    "children under the age of 5 years underweight":[
+        "3.5% (2004)"
+    ],
+    "refined petroleum products - exports":[
+        "107800 bbl/day (2010 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write",
+        "94.1%",
+        "97.9%",
+        "90.3% (2011 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "270.4 million bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "98 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$15300 (2013 est.)",
+        "$15000 (2012 est.)",
+        "$14900 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "birth rate":[
+        "16.86 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".tr"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "natural gas - production":[
+        "632 million cu m (2012 est.)"
+    ],
+    "exports - commodities":[
+        "apparel, foodstuffs, textiles, metal manufactures, transport equipment"
+    ],
+    "labor force":[
+        "27.91 million",
+        "about 1.2 million Turks work abroad (2013 est.)"
+    ],
+    "dependency ratios":[
+        "48.9 %",
+        "37.7 %",
+        "11.2 %",
+        "8.9 (2014 est.)"
+    ],
+    "imports - partners":[
+        "Russia 11.3%, Germany 9%, China 9%, US 6%, Italy 5.6%, Iran 5.1% (2012)"
+    ],
+    "mother's mean age at first birth":[
+        "22.3 (2010 est.)"
+    ],
+    "ports and terminals":[
+        "Aliaga, Ambarli, Diliskelesi, Eregli, Izmir, Kocaeli (Izmit), Mersin (Icel), Limani, Yarimca",
+        "Ambarli (2121549) Mersin (Icel) (1126866)"
+    ],
+    "labor force - by occupation":[
+        "25.5%",
+        "26.2%",
+        "48.4% (2010)"
+    ],
+    "illicit drugs":[
+        "key transit route for Southwest Asian heroin to Western Europe and, to a lesser extent, the US - via air, land, and sea routes; major Turkish and other international trafficking organizations operate out of Istanbul; laboratories to convert imported morphine base into heroin exist in remote regions of Turkey and near Istanbul; government maintains strict controls over areas of legal opium poppy cultivation and over output of poppy straw concentrate; lax enforcement of money-laundering controls"
+    ],
+    "diplomatic representation from the us":[
+        "Ambassador Francis J. RICCIARDONE, Jr. (since 3 January 2011)",
+        "110 Ataturk Boulevard, Kavaklidere, 06100 Ankara",
+        "PSC 93, Box 5000, APO AE 09823",
+        "[90] (312) 455-5555",
+        "[90] (312) 467-0019",
+        "Istanbul",
+        "Adana; note - there is a Consular Agent in Izmir"
+    ],
+    "terrain":[
+        "high central plateau (Anatolia); narrow coastal plain; several mountain ranges"
+    ],
+    "electricity - imports":[
+        "4.362 billion kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
+        "21.43 deaths/1000 live births",
+        "22.48 deaths/1000 live births",
+        "20.32 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "5.25% (31 December 2011)",
+        "15% (22 December 2009)"
+    ],
+    "geography - note":[
+        "strategic location controlling the Turkish Straits (Bosporus, Sea of Marmara, Dardanelles) that link Black and Aegean Seas; Mount Ararat, the legendary landing place of Noah's ark, is in the far eastern portion of the country"
+    ],
+    "political parties and leaders":[
         "Democratic Left Party or DSP [Masum TURKER]",
         "Democratic Party or DP [Gultekin UYSAL]",
         "Felicity Party or SP [Mustafa KAMALAK] (sometimes translated as Contentment Party)",
@@ -148,244 +211,55 @@
         "",
         "the parties listed above are some of the more significant of the 61 parties that Turkey had according to the Ministry of Interior statistics current as of May 2009"
     ],
-    "Unemployment, youth ages 15-24":[
-        "17.5%",
-        "16.3%",
-        "19.9% (2012)"
+    "obesity - adult prevalence rate":[
+        "27.8% (2008)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    "broadcast media":[
+        "Turkish Radio and Television Corporation (TRT) operates multiple TV and radio networks and stations; multiple privately owned national television stations and up to 300 private regional and local television stations; multi-channel cable TV subscriptions available; more than 1000 private radio broadcast stations (2009)"
     ],
-    "Stock of domestic credit":[
-        "$549.5 billion (31 December 2013 est.)",
-        "$552.3 billion (31 December 2012 est.)"
+    "constitution":[
+        "several previous; latest ratified 9 November 1982; amended 2001, 2007, 2010 (2010)"
     ],
-    "Area":[
-        "783,562 sq km",
-        "769,632 sq km",
-        "13,930 sq km"
+    "contraceptive prevalence rate":[
+        "73% (2008)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-2.1% of GDP (2013 est.)"
-    ],
-    "Land use":[
-        "26.21%",
-        "3.94%",
-        "69.84% (2011)"
-    ],
-    "Median age":[
+    "median age":[
         "29.6 years",
         "29.2 years",
         "30 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "4,600 (2009 est.)"
+    "military - note":[
+        "the ruling Justice and Development Party (AKP) has actively pursued the goal of asserting civilian control over the military since first taking power in 2002; the Turkish Armed Forces (TSK) role in internal security has been significantly reduced; the TSK leadership continues to be an influential institution within Turkey, but plays a much smaller role in politics; the Turkish military remains focused on the threats emanating from the Syrian civil war, Russia's actions in Ukraine, and the PKK insurgency; primary domestic threats are listed as fundamentalism (with the definition in some dispute with the civilian government), separatism (Kurdish discontent), and the extreme left wing; Ankara strongly opposed establishment of an autonomous Kurdish region in Iraq; an overhaul of the Turkish Land Forces Command (TLFC) taking place under the Force 2014 program is to produce 20-30% smaller, more highly trained forces characterized by greater mobility and firepower and capable of joint and combined operations; the TLFC has taken on increasing international peacekeeping responsibilities including in Afghanistan; the Turkish Navy is a regional naval power that wants to develop the capability to project power beyond Turkey's coastal waters; the Navy is heavily involved in NATO, multinational, and UN operations; its roles include control of territorial waters and security for sea lines of communications; the Turkish Air Force adopted an Aerospace and Missile Defense Concept in 2002 and has initiated project work on an integrated missile defense system; Air Force priorities include attaining a modern deployable, survivable, and sustainable force structure, and establishing a sustainable command and control system; Turkey is a NATO ally and hosts NATO's Land Forces Command in Izmir, as well as the AN/TPY-2 radar as part of NATO Missile Defense (2014)"
     ],
-    "Urbanization":[
-        "71.5% of total population (2011)",
-        "2.4% annual rate of change (2010-15 est.)"
+    "manpower fit for military service":[
+        "17664510",
+        "17340816 (2010 est.)"
     ],
-    "Imports - commodities":[
-        "machinery, chemicals, semi-finished goods, fuels, transport equipment"
-    ],
-    "Location":[
-        "Southeastern Europe and Southwestern Asia (that portion of Turkey west of the Bosporus is geographically part of Europe), bordering the Black Sea, between Bulgaria and Georgia, and bordering the Aegean Sea and the Mediterranean Sea, between Greece and Syria"
-    ],
-    "Electricity - from fossil fuels":[
-        "64.9% of total installed capacity (2010 est.)"
-    ],
-    "Military expenditures":[
-        "2.31% of GDP (2012)",
-        "2.28% of GDP (2011)",
-        "2.31% of GDP (2010)"
-    ],
-    "Telephone system":[
-        "comprehensive telecommunications network undergoing rapid modernization and expansion, especially in mobile-cellular services",
-        "additional digital exchanges are permitting a rapid increase in subscribers; the construction of a network of technologically advanced intercity trunk lines, using both fiber-optic cable and digital microwave radio relay, is facilitating communication between urban centers; remote areas are reached by a domestic satellite system; combined fixed-line and mobile-cellular teledensity is roughly 100 telephones per 100 persons",
-        "country code - 90; international service is provided by the SEA-ME-WE-3 submarine cable and by submarine fiber-optic cables in the Mediterranean and Black Seas that link Turkey with Italy, Greece, Israel, Bulgaria, Romania, and Russia; satellite earth stations - 12 Intelsat; mobile satellite terminals - 328 in the Inmarsat and Eutelsat systems (2010)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$1.167 trillion (2013 est.)",
-        "$1.124 trillion (2012 est.)",
-        "$1.101 trillion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "severe earthquakes, especially in northern Turkey, along an arc extending from the Sea of Marmara to Lake Van",
-        "limited volcanic activity; its three historically active volcanoes; Ararat, Nemrut Dagi, and Tendurek Dagi have not erupted since the 19th century or earlier"
-    ],
-    "Stock of narrow money":[
-        "$80.72 billion (31 December 2013 est.)",
-        "$85.23 billion (31 December 2012 est.)"
-    ],
-    "Airports - with paved runways":[
-        "91",
-        "16",
-        "38",
-        "17",
-        "16",
-        "4 (2013)"
-    ],
-    "Railways":[
-        "12,008 km",
-        "12,008 km 1.435-m gauge (3,216 km electrified) (2012)"
-    ],
-    "Electricity - consumption":[
-        "170.4 billion kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "21,079,077",
-        "20,558,696 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "7",
-        "1",
-        "4",
-        "",
-        "2 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "fewer than 200 (2009 est.)"
-    ],
-    "Area - comparative":[],
-    "Distribution of family income - Gini index":[
-        "40.2 (2010)",
-        "43.6 (2003)"
-    ],
-    "Population":[
-        "81,619,392 (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "270.4 million bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "98 (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "40.1  cu km/yr (14%/10%/76%)",
-        "572.9  cu m/yr (2008)"
-    ],
-    "Budget":[
-        "$190.4 billion",
-        "$207.9 billion (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "296.3 million Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "tobacco, cotton, grain, olives, sugar beets, hazelnuts, pulses, citrus; livestock"
-    ],
-    "Military service age and obligation":[
-        "21-41 years of age for male compulsory military service; 18 years of age for voluntary service; 15 months conscript obligation for non-university graduates, 6-12 months for university graduates; conscripts are called to register at age 20, for service at 21; women serve in the Turkish Armed Forces only as officers; reserve obligation to age 41; under a law passed in November 2011, men aged 30 and older, or who have worked 3 years in foreign countries, may pay $16,200 in lieu of mandatory military service (2013)"
-    ],
-    "Total fertility rate":[
-        "2.08 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "Istanbul 11.253 million; ANKARA (capital) 4.194 million; Izmir 2.927 million; Bursa 1.713 million; Adana 1.468 million; Gaziantep 1.198 million (2011)"
-    ],
-    "Population below poverty line":[
-        "16.9% (2010)"
-    ],
-    "Labor force - by occupation":[
-        "25.5%",
-        "26.2%",
-        "48.4% (2010)"
-    ],
-    "Stock of broad money":[
-        "$383.5 billion (31 December 2013 est.)",
-        "$405.6 billion (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "8.9%",
-        "27.3%",
-        "63.8% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "Ambassador Francis J. RICCIARDONE, Jr. (since 3 January 2011)",
-        "110 Ataturk Boulevard, Kavaklidere, 06100 Ankara",
-        "PSC 93, Box 5000, APO AE 09823",
-        "[90] (312) 455-5555",
-        "[90] (312) 467-0019",
-        "Istanbul",
-        "Adana; note - there is a Consular Agent in Izmir"
-    ],
-    "Contraceptive prevalence rate":[
-        "73% (2008)"
-    ],
-    "Infant mortality rate":[
-        "21.43 deaths/1,000 live births",
-        "22.48 deaths/1,000 live births",
-        "20.32 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Muslim 99.8% (mostly Sunni), other 0.2% (mostly Christians and Jews)"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$117.6 billion (31 December 2013 est.)",
-        "$119.2 billion (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "2.1%",
-        "30.3% (2008)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "3.5% (2004)"
-    ],
-    "Hospital bed density":[
-        "2.5 beds/1,000 population (2010)"
-    ],
-    "Life expectancy at birth":[
-        "73.29 years",
-        "71.33 years",
-        "75.35 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "less than 0.1%; note - no country specific models provided (2009 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "14 years",
-        "15 years",
-        "14 years (2011)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "700,079",
-        "670,328 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ADB (nonregional member), Australia Group, BIS, BSEC, CD, CE, CERN (observer), CICA, D-8, EAPC, EBRD, ECO, EU (candidate country), FAO, FATF, G-20, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OIC, OPCW, OSCE, Pacific Alliance (observer), Paris Club (associate), PCA, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNRWA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC"
-    ],
-    "Languages":[
-        "Turkish (official), Kurdish, other minority languages"
-    ],
-    "Country name":[
+    "country name":[
         "Republic of Turkey",
         "Turkey",
         "Turkiye Cumhuriyeti",
         "Turkiye"
     ],
-    "Maritime claims":[
-        "6 nm in the Aegean Sea; 12 nm in Black Sea and in Mediterranean Sea",
-        "in Black Sea only: to the maritime boundary agreed upon with the former USSR"
+    "electricity - from fossil fuels":[
+        "64.9% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$308.8 billion (31 December 2012 est.)",
-        "$201.8 billion (31 December 2011)",
-        "$306.7 billion (31 December 2010 est.)"
+    "capital":[
+        "Ankara",
+        "39 56 N, 32 52 E",
+        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)",
+        "+1hr, begins last Sunday in March; ends last Sunday in October"
     ],
-    "Taxes and other revenues":[
-        "23.2% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$1.167 trillion (2013 est.)",
+        "$1.124 trillion (2012 est.)",
+        "$1.101 trillion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "22.3 (2010 est.)"
+    "independence":[
+        "29 October 1923 (successor state to the Ottoman Empire)"
     ],
-    "Refined petroleum products - consumption":[
-        "706,100 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "1.12% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 100% of population",
         "rural: 98.8% of population",
         "total: 99.7% of population",
@@ -394,216 +268,51 @@
         "rural: 1.2% of population",
         "total: 0.3% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Sedar KILIC (since 21 May 1014)",
-        "2525 Massachusetts Avenue NW, Washington, DC 20008",
-        "[1] (202) 612-6700",
-        "[1] (202) 612-6744",
-        "Chicago, Houston, New York, Newton (MA)"
-    ],
-    "Internet users":[
-        "27.233 million (2009)"
-    ],
-    "Child labor - children ages 5-14":[
-        "321,866",
-        "3 %",
-        "data represents children ages 6-14 (2006 est.)"
-    ],
-    "Internet hosts":[
-        "7.093 million (2012)"
-    ],
-    "Current account balance":[
-        "-$58.35 billion (2013 est.)",
-        "-$47.75 billion (2012 est.)"
-    ],
-    "Debt - external":[
-        "$359.5 billion (31 December 2013 est.)",
-        "$336.7 billion (31 December 2012 est.)"
-    ],
-    "Administrative divisions":[
-        "81 provinces (iller, singular - ili); Adana, Adiyaman, Afyonkarahisar, Agri, Aksaray, Amasya, Ankara, Antalya, Ardahan, Artvin, Aydin, Balikesir, Bartin, Batman, Bayburt, Bilecik, Bingol, Bitlis, Bolu, Burdur, Bursa, Canakkale, Cankiri, Corum, Denizli, Diyarbakir, Duzce, Edirne, Elazig, Erzincan, Erzurum, Eskisehir, Gaziantep, Giresun, Gumushane, Hakkari, Hatay, Igdir, Isparta, Istanbul, Izmir (Smyrna), Kahramanmaras, Karabuk, Karaman, Kars, Kastamonu, Kayseri, Kilis, Kirikkale, Kirklareli, Kirsehir, Kocaeli, Konya, Kutahya, Malatya, Manisa, Mardin, Mersin, Mugla, Mus, Nevsehir, Nigde, Ordu, Osmaniye, Rize, Sakarya, Samsun, Sanliurfa, Siirt, Sinop, Sirnak, Sivas, Tekirdag, Tokat, Trabzon (Trebizond), Tunceli, Usak, Van, Yalova, Yozgat, Zonguldak"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Industrial production growth rate":[
-        "3.5% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "complex maritime, air, and territorial disputes with Greece in the Aegean Sea; status of north Cyprus question remains; Syria and Iraq protest Turkish hydrological projects to control upper Euphrates waters; Turkey has expressed concern over the status of Kurds in Iraq; in 2009, Swiss mediators facilitated an accord reestablishing diplomatic ties between Armenia and Turkey, but neither side has ratified the agreement and the rapprochement effort has faltered; Turkish authorities have complained that blasting from quarries in Armenia might be damaging the medieval ruins of Ani, on the other side of the Arpacay valley"
-    ],
-    "Climate":[
-        "temperate; hot, dry summers with mild, wet winters; harsher in interior"
-    ],
-    "Natural resources":[
-        "coal, iron ore, copper, chromium, antimony, mercury, gold, barite, borate, celestite (strontium), emery, feldspar, limestone, magnesite, marble, perlite, pumice, pyrites (sulfur), clay, arable land, hydropower"
-    ],
-    "Internet country code":[
-        ".tr"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$194.2 billion (31 December 2013 est.)",
-        "$181.7 billion (31 December 2012 est.)"
-    ],
-    "Electricity - production":[
-        "217.7 billion kWh (2011 est.)"
-    ],
-    "Death rate":[
-        "6.12 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
+    "electricity - from hydroelectric plants":[
         "32% of total installed capacity (2010 est.)"
     ],
-    "Imports":[
-        "$242.9 billion (2013 est.)",
-        "$228.6 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "star and crescent"
-    ],
-    "GDP - real growth rate":[
-        "3.8% (2013 est.)",
-        "2.2% (2012 est.)",
-        "8.8% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "6.173 billion cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "5.25% (31 December 2011)",
-        "15% (22 December 2009)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "27.8% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "107,800 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "textiles, food processing, automobiles, electronics, mining (coal, chromate, copper, boron), steel, petroleum, construction, lumber, paper"
-    ],
-    "Legal system":[
-        "civil law system based on various European legal systems notably the Swiss civil code"
-    ],
-    "Military - note":[
-        "the ruling Justice and Development Party (AKP) has actively pursued the goal of asserting civilian control over the military since first taking power in 2002; the Turkish Armed Forces (TSK) role in internal security has been significantly reduced; the TSK leadership continues to be an influential institution within Turkey, but plays a much smaller role in politics; the Turkish military remains focused on the threats emanating from the Syrian civil war, Russia's actions in Ukraine, and the PKK insurgency; primary domestic threats are listed as fundamentalism (with the definition in some dispute with the civilian government), separatism (Kurdish discontent), and the extreme left wing; Ankara strongly opposed establishment of an autonomous Kurdish region in Iraq; an overhaul of the Turkish Land Forces Command (TLFC) taking place under the \"Force 2014\" program is to produce 20-30% smaller, more highly trained forces characterized by greater mobility and firepower and capable of joint and combined operations; the TLFC has taken on increasing international peacekeeping responsibilities including in Afghanistan; the Turkish Navy is a regional naval power that wants to develop the capability to project power beyond Turkey's coastal waters; the Navy is heavily involved in NATO, multinational, and UN operations; its roles include control of territorial waters and security for sea lines of communications; the Turkish Air Force adopted an \"Aerospace and Missile Defense Concept\" in 2002 and has initiated project work on an integrated missile defense system; Air Force priorities include attaining a modern deployable, survivable, and sustainable force structure, and establishing a sustainable command and control system; Turkey is a NATO ally and hosts NATO's Land Forces Command in Izmir, as well as the AN/TPY-2 radar as part of NATO Missile Defense (2014)"
-    ],
-    "Capital":[
-        "Ankara",
-        "39 56 N, 32 52 E",
-        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)",
-        "+1hr, begins last Sunday in March; ends last Sunday in October"
-    ],
-    "Heliports":[
-        "20 (2013)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "water pollution from dumping of chemicals and detergents; air pollution, particularly in urban areas; deforestation; concern for oil spills from increasing Bosporus ship traffic"
-    ],
-    "Imports - partners":[
-        "Russia 11.3%, Germany 9%, China 9%, US 6%, Italy 5.6%, Iran 5.1% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "38.13 billion cu m (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "49.52 million kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "16.86 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "25.5% (male 10,660,110/female 10,179,850)",
-        "16.8% (male 6,989,099/female 6,709,480)",
-        "42.9% (male 17,650,790/female 17,358,730)",
-        "8.1% (male 3,289,605/female 3,291,199)",
-        "6.6% (male 2,517,219/female 2,973,310) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "18.5% (31 December 2013 est.)",
-        "19% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "2,656 km",
-        "Armenia 268 km, Azerbaijan 17 km, Bulgaria 240 km, Georgia 252 km, Greece 206 km, Iran 499 km, Iraq 352 km, Syria 822 km"
-    ],
-    "Coastline":[
-        "7,200 km"
-    ],
-    "Nationality":[
-        "Turk(s)",
-        "Turkish"
-    ],
-    "Telephones - main lines in use":[
-        "13.86 million (2012)"
-    ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "94.1%",
-        "97.9%",
-        "90.3% (2011 est.)"
-    ],
-    "Total renewable water resources":[
-        "211.6 cu km (2011)"
-    ],
-    "National holiday":[
-        "Republic Day, 29 October (1923)"
-    ],
-    "Elevation extremes":[
-        "Mediterranean Sea 0 m",
-        "Mount Ararat 5,166 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "1.71 physicians/1,000 population (2011)"
-    ],
-    "Exports - commodities":[
-        "apparel, foodstuffs, textiles, metal manufactures, transport equipment"
-    ],
-    "Labor force":[
-        "27.91 million",
-        "about 1.2 million Turks work abroad (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "48.9 %",
-        "37.7 %",
-        "11.2 %",
-        "8.9 (2014 est.)"
-    ],
-    "Roadways":[
-        "385,748 km",
-        "352,268 km (includes 2,127 km of expressways)",
-        "33,486 km (2012)"
-    ],
-    "Electricity - exports":[
-        "1.49 billion kWh (2012 est.)"
-    ],
-    "Ports and terminals":[
-        "Aliaga, Ambarli, Diliskelesi, Eregli, Izmir, Kocaeli (Izmit), Mersin (Icel), Limani, Yarimca",
-        "Ambarli (2,121,549), Mersin (Icel) (1,126,866)"
-    ],
-    "Refined petroleum products - imports":[
-        "301,300 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "key transit route for Southwest Asian heroin to Western Europe and, to a lesser extent, the US - via air, land, and sea routes; major Turkish and other international trafficking organizations operate out of Istanbul; laboratories to convert imported morphine base into heroin exist in remote regions of Turkey and near Istanbul; government maintains strict controls over areas of legal opium poppy cultivation and over output of poppy straw concentrate; lax enforcement of money-laundering controls"
-    ],
-    "Stock of direct foreign investment - abroad":[
+    "stock of direct foreign investment - abroad":[
         "$33.44 billion (31 December 2013 est.)",
         "$30.94 billion (31 December 2012 est.)"
     ],
-    "Natural gas - production":[
-        "632 million cu m (2012 est.)"
+    "debt - external":[
+        "$359.5 billion (31 December 2013 est.)",
+        "$336.7 billion (31 December 2012 est.)"
     ],
-    "Exchange rates":[
+    "coastline":[
+        "7200 km"
+    ],
+    "nationality":[
+        "Turk(s)",
+        "Turkish"
+    ],
+    "refined petroleum products - imports":[
+        "301300 bbl/day (2010 est.)"
+    ],
+    "climate":[
+        "temperate; hot, dry summers with mild, wet winters; harsher in interior"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "less than 0.1%; note - no country specific models provided (2009 est.)"
+    ],
+    "child labor - children ages 5-14":[
+        "321866",
+        "3 %",
+        "data represents children ages 6-14 (2006 est.)"
+    ],
+    "manpower reaching militarily significant age annually":[
+        "700079",
+        "670328 (2010 est.)"
+    ],
+    "roadways":[
+        "385748 km",
+        "352268 km (includes 2127 km of expressways)",
+        "33486 km (2012)"
+    ],
+    "net migration rate":[
+        "0.46 migrant(s)/1000 population (2014 est.)"
+    ],
+    "exchange rates":[
         "Turkish liras (TRY) per US dollar -",
         "1.899 (2013 est.)",
         "1.796 (2012 est.)",
@@ -611,10 +320,71 @@
         "1.55 (2009)",
         "1.3179 (2008)"
     ],
-    "Ethnic groups":[
-        "Turkish 70-75%, Kurdish 18%, other minorities 7-12% (2008 est.)"
+    "refined petroleum products - production":[
+        "418200 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.04 male(s)/female",
+        "1.02 male(s)/female",
+        "1.02 male(s)/female",
+        "0.84 male(s)/female",
+        "1.02 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "36.6% of GDP (2013 est.)",
+        "37.6% of GDP (2012 est.)",
+        "data cover central government debt, and excludes debt instruments issued (or owned) by government entities other than the treasury; the data include treasury debt held by foreign entities; the data exclude debt issued by subnational entities, as well as intra-governmental debt; intra-governmental debt consists of treasury borrowings from surpluses in the social funds, such as for retirement, medical care, and unemployment; debt instruments for the social funds are sold at public auctions"
+    ],
+    "manpower available for military service":[
+        "21079077",
+        "20558696 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$117.6 billion (31 December 2013 est.)",
+        "$119.2 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "7",
+        "1",
+        "4",
+        "",
+        "2 (2013)"
+    ],
+    "stock of broad money":[
+        "$383.5 billion (31 December 2013 est.)",
+        "$405.6 billion (31 December 2012 est.)"
+    ],
+    "refugees and internally displaced persons":[
+        "13467 (Iraq) (2013); 783065 (Syria) (2014)",
+        "954000-1.2 million (displaced from 1984-2005 because of fighting between Kurdish PKK and Turkish military; most IDPs are Kurds from eastern and southeastern provinces; no information available on persons displaced by development projects) (2012)",
+        "780 (2012)"
+    ],
+    "national symbol(s)":[
+        "star and crescent"
+    ],
+    "gdp - real growth rate":[
+        "3.8% (2013 est.)",
+        "2.2% (2012 est.)",
+        "8.8% (2011 est.)"
+    ],
+    "telephone system":[
+        "comprehensive telecommunications network undergoing rapid modernization and expansion, especially in mobile-cellular services",
+        "additional digital exchanges are permitting a rapid increase in subscribers; the construction of a network of technologically advanced intercity trunk lines, using both fiber-optic cable and digital microwave radio relay, is facilitating communication between urban centers; remote areas are reached by a domestic satellite system; combined fixed-line and mobile-cellular teledensity is roughly 100 telephones per 100 persons",
+        "country code - 90; international service is provided by the SEA-ME-WE-3 submarine cable and by submarine fiber-optic cables in the Mediterranean and Black Seas that link Turkey with Italy, Greece, Israel, Bulgaria, Romania, and Russia; satellite earth stations - 12 Intelsat; mobile satellite terminals - 328 in the Inmarsat and Eutelsat systems (2010)"
+    ],
+    "flag description":[
+        "red with a vertical white crescent moon (the closed portion is toward the hoist side) and white five-pointed star centered just outside the crescent opening; the flag colors and designs closely resemble those on the banner of the Ottoman Empire, which preceded modern-day Turkey; the crescent moon and star serve as insignia for the Turks, as well as being traditional symbols of Islam; according to legend, the flag represents the reflection of the moon and a star in a pool of blood of Turkish warriors"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "2.1%",
+        "30.3% (2008)"
+    ],
+    "gdp - composition, by end use":[
         "71%",
         "15.4%",
         "19.4%",
@@ -623,17 +393,247 @@
         "-32.5%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "19.4% of GDP (2013 est.)",
-        "20.2% of GDP (2012 est.)",
-        "23.6% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "73.29 years",
+        "71.33 years",
+        "75.35 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "Turkish Radio and Television Corporation (TRT) operates multiple TV and radio networks and stations; multiple privately owned national television stations and up to 300 private regional and local television stations; multi-channel cable TV subscriptions available; more than 1,000 private radio broadcast stations (2009)"
+    "languages":[
+        "Turkish (official), Kurdish, other minority languages"
     ],
-    "National anthem":[
-        "\"Istiklal Marsi\" (Independence March)",
-        "Mehmet Akif ERSOY/Zeki UNGOR",
-        "lyrics adopted 1921, music adopted 1932; the anthem's original music was adopted in 1924; a new composition was agreed upon in 1932"
+    "area":[
+        "783562 sq km",
+        "769632 sq km",
+        "13930 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "296.3 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "coal, iron ore, copper, chromium, antimony, mercury, gold, barite, borate, celestite (strontium), emery, feldspar, limestone, magnesite, marble, perlite, pumice, pyrites (sulfur), clay, arable land, hydropower"
+    ],
+    "telephones - mobile cellular":[
+        "67.68 million (2012)"
+    ],
+    "maritime claims":[
+        "6 nm in the Aegean Sea; 12 nm in Black Sea and in Mediterranean Sea",
+        "in Black Sea only: to the maritime boundary agreed upon with the former USSR"
+    ],
+    "electricity - from other renewable sources":[
+        "3.1% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "Germany 8.6%, Iraq 7.1%, Iran 6.5%, UK 5.7%, UAE 5.4%, Russia 4.4%, Italy 4.2%, France 4.1% (2012)"
+    ],
+    "population growth rate":[
+        "1.12% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "21-41 years of age for male compulsory military service; 18 years of age for voluntary service; 15 months conscript obligation for non-university graduates, 6-12 months for university graduates; conscripts are called to register at age 20, for service at 21; women serve in the Turkish Armed Forces only as officers; reserve obligation to age 41; under a law passed in November 2011, men aged 30 and older, or who have worked 3 years in foreign countries, may pay $16200 in lieu of mandatory military service (2013)"
+    ],
+    "pipelines":[
+        "gas 12603 km; oil 3038 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 97.2% of population",
+        "rural: 75.5% of population",
+        "total: 91.2% of population",
+        "",
+        "urban: 2.8% of population",
+        "rural: 24.5% of population",
+        "total: 8.8% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "8.9%",
+        "27.3%",
+        "63.8% (2013 est.)"
+    ],
+    "age structure":[
+        "25.5% (male 10660110/female 10179850)",
+        "16.8% (male 6989099/female 6709480)",
+        "42.9% (male 17650790/female 17358730)",
+        "8.1% (male 3289605/female 3291199)",
+        "6.6% (male 2517219/female 2973310) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "706100 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "2656 km",
+        "Armenia 268 km, Azerbaijan 17 km, Bulgaria 240 km, Georgia 252 km, Greece 206 km, Iran 499 km, Iraq 352 km, Syria 822 km"
+    ],
+    "natural gas - imports":[
+        "45.92 billion cu m (2012 est.)"
+    ],
+    "area - comparative":[],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "complex maritime, air, and territorial disputes with Greece in the Aegean Sea; status of north Cyprus question remains; Syria and Iraq protest Turkish hydrological projects to control upper Euphrates waters; Turkey has expressed concern over the status of Kurds in Iraq; in 2009, Swiss mediators facilitated an accord reestablishing diplomatic ties between Armenia and Turkey, but neither side has ratified the agreement and the rapprochement effort has faltered; Turkish authorities have complained that blasting from quarries in Armenia might be damaging the medieval ruins of Ani, on the other side of the Arpacay valley"
+    ],
+    "population":[
+        "81619392 (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "211.6 cu km (2011)"
+    ],
+    "national holiday":[
+        "Republic Day, 29 October (1923)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-2.1% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$190.4 billion",
+        "$207.9 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "16.9% (2010)"
+    ],
+    "military expenditures":[
+        "2.31% of GDP (2012)",
+        "2.28% of GDP (2011)",
+        "2.31% of GDP (2010)"
+    ],
+    "death rate":[
+        "6.12 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$308.8 billion (31 December 2012 est.)",
+        "$201.8 billion (31 December 2011)",
+        "$306.7 billion (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "3.5% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "40.2 (2010)",
+        "43.6 (2003)"
+    ],
+    "inflation rate (consumer prices)":[
+        "7.6% (2013 est.)",
+        "8.9% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Sedar KILIC (since 21 May 1014)",
+        "2525 Massachusetts Avenue NW, Washington, DC 20008",
+        "[1] (202) 612-6700",
+        "[1] (202) 612-6744",
+        "Chicago, Houston, New York, Newton (MA)"
+    ],
+    "imports":[
+        "$242.9 billion (2013 est.)",
+        "$228.6 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "18.5% (31 December 2013 est.)",
+        "19% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "2.9% of GDP (2006)"
+    ],
+    "electricity - consumption":[
+        "170.4 billion kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "2.5 beds/1000 population (2010)"
+    ],
+    "ethnic groups":[
+        "Turkish 70-75%, Kurdish 18%, other minorities 7-12% (2008 est.)"
+    ],
+    "unemployment, youth ages 15-24":[
+        "17.5%",
+        "16.3%",
+        "19.9% (2012)"
+    ],
+    "land use":[
+        "26.21%",
+        "3.94%",
+        "69.84% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "40.1  cu km/yr (14%/10%/76%)",
+        "572.9  cu m/yr (2008)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$194.2 billion (31 December 2013 est.)",
+        "$181.7 billion (31 December 2012 est.)"
+    ],
+    "stock of domestic credit":[
+        "$549.5 billion (31 December 2013 est.)",
+        "$552.3 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "tobacco, cotton, grain, olives, sugar beets, hazelnuts, pulses, citrus; livestock"
+    ],
+    "waterways":[
+        "1200 km (2010)"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "7.093 million (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "Confederation of Businessmen and Industrialists of Turkey or TUSKON [Rizanur MERAL]",
+        "Confederation of Public Sector Unions or KESK [Lami OZGEN]",
+        "Confederation of Revolutionary Workers Unions or DISK [Tayfun GORGUN]",
+        "Independent Industrialists' and Businessmen's Association or MUSIAD [Omer Cihad VARDAN]",
+        "Moral Rights Workers Union or Hak-Is [Mahmut ARSLAN]",
+        "Turkish Confederation of Employers' Unions or TISK [Tugrul KUDATGOBILIK]",
+        "Turkish Confederation of Labor or Turk-Is [Mustafa KUMLU]",
+        "Turkish Confederation of Tradesmen and Craftsmen or TESK [Bendevi PALANDOKEN]",
+        "Turkish Industrialists' and Businessmen's Association or TUSIAD [Muharrem YILMAZ]",
+        "Turkish Union of Chambers of Commerce and Commodity Exchanges or TOBB [M. Rifat HISARCIKLIOGLU]"
+    ],
+    "heliports":[
+        "20 (2013)"
+    ],
+    "administrative divisions":[
+        "81 provinces (iller, singular - ili); Adana, Adiyaman, Afyonkarahisar, Agri, Aksaray, Amasya, Ankara, Antalya, Ardahan, Artvin, Aydin, Balikesir, Bartin, Batman, Bayburt, Bilecik, Bingol, Bitlis, Bolu, Burdur, Bursa, Canakkale, Cankiri, Corum, Denizli, Diyarbakir, Duzce, Edirne, Elazig, Erzincan, Erzurum, Eskisehir, Gaziantep, Giresun, Gumushane, Hakkari, Hatay, Igdir, Isparta, Istanbul, Izmir (Smyrna), Kahramanmaras, Karabuk, Karaman, Kars, Kastamonu, Kayseri, Kilis, Kirikkale, Kirklareli, Kirsehir, Kocaeli, Konya, Kutahya, Malatya, Manisa, Mardin, Mersin, Mugla, Mus, Nevsehir, Nigde, Ordu, Osmaniye, Rize, Sakarya, Samsun, Sanliurfa, Siirt, Sinop, Sirnak, Sivas, Tekirdag, Tokat, Trabzon (Trebizond), Tunceli, Usak, Van, Yalova, Yozgat, Zonguldak"
+    ],
+    "hiv/aids - deaths":[
+        "fewer than 200 (2009 est.)"
+    ],
+    "crude oil - production":[
+        "56650 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "13.86 million (2012)"
+    ],
+    "electricity - production":[
+        "217.7 billion kWh (2011 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
+        "Mediterranean Sea 0 m",
+        "Mount Ararat 5166 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "14 years",
+        "15 years",
+        "14 years (2011)"
+    ],
+    "physicians density":[
+        "1.71 physicians/1000 population (2011)"
+    ],
+    "international organization participation":[
+        "ADB (nonregional member), Australia Group, BIS, BSEC, CD, CE, CERN (observer), CICA, D-8, EAPC, EBRD, ECO, EU (candidate country), FAO, FATF, G-20, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OIC, OPCW, OSCE, Pacific Alliance (observer), Paris Club (associate), PCA, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNRWA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC"
+    ],
+    "gdp (official exchange rate)":[
+        "$821.8 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "1.49 billion kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "49.52 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Istanbul 11.253 million; Ankara (capital) 4.194 million; Izmir 2.927 million; Bursa 1.713 million; Adana 1.468 million; Gaziantep 1.198 million (2011)"
     ]
 }

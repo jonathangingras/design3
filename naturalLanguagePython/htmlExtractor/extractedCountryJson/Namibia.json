@@ -1,120 +1,198 @@
 {
-    "Inflation rate (consumer prices)":[
-        "5.5% (2013 est.)",
-        "6.5% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "5.3% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Irrigated land":[
-        "75.73 sq km (2003)"
-    ],
-    "Independence":[
-        "21 March 1990 (from South African mandate)"
-    ],
-    "Constitution":[
-        "drafted 9 February 1990, signed 16 March 1990, entered into force 21 March 1990; amended 1998, 2010 (2010)"
-    ],
-    "Geography - note":[
-        "first country in the world to incorporate the protection of the environment into its constitution; some 14% of the land is protected, including virtually the entire Namib Desert coastal strip"
-    ],
-    "Exports":[
-        "$5.124 billion (2013 est.)",
-        "$4.883 billion (2012 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$8,200 (2013 est.)",
-        "$7,900 (2012 est.)",
-        "$7,600 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 56.1% of population",
-        "rural: 16.9% of population",
-        "total: 32.2% of population",
-        "",
-        "urban: 43.9% of population",
-        "rural: 83.1% of population",
-        "total: 67.8% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "200 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "a wide red stripe edged by narrow white stripes divides the flag diagonally from lower hoist corner to upper fly corner; the upper hoist-side triangle is blue and charged with a yellow, 12-rayed sunburst; the lower fly-side triangle is green; red signifies the heroism of the people and their determination to build a future of equal opportunity for all; white stands for peace, unity, tranquility, and harmony; blue represents the Namibian sky and the Atlantic Ocean, the country's precious water resources and rain; the yellow sun denotes power and existence; green symbolizes vegetation and agricultural resources"
-    ],
-    "Political pressure groups and leaders":[
-        "National Society for Human Rights or NSHR (NAMRIGHTS as of 2010)",
-        "various labor unions"
-    ],
-    "Telephones - mobile cellular":[
-        "2.435 million (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - exports":[
         "0 cu m (2012 est.)"
     ],
-    "Trafficking in persons":[
-        "Namibia is predominantly a country of origin and destination for children and, to a lesser extent, women subjected to forced labor and sex trafficking; victims lured by promises of legitimate jobs are forced to work in hazardous condition in urban centers and on commercial farms; traffickers exploit Namibian children, as well as children from Angola, Zambia, and Zimbabwe, for forced labor in agriculture, cattle herding, domestic service, and criminal activities; children are also forced into prostitution, often catering to tourists from southern Africa and Europe; girls of the San tribe are particularly vulnerable",
-        "Tier 2 Watch List - Namibia does not fully comply with the minimum standards for the elimination of trafficking; however, it is making significant efforts to do so; in 2012, the government launched a National Plan of Action on Gender-Based Violence, which included addressing human trafficking but did not complete its draft comprehensive anti-trafficking legislation or obtain parliamentary passage of the Child Care and Protection Bill, which would criminalize child trafficking; a process has been developed for referring trafficking victims for assistance but a system for screening potential victims and providing official designation of trafficking victim status is lacking (2013)"
-    ],
-    "Net migration rate":[
-        "0.05 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "351,431",
-        "311,513 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$12.3 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "0% of total installed capacity (2013 est.)"
-    ],
-    "Public debt":[
-        "27.2% of GDP (2013 est.)",
-        "25.8% of GDP (2012 est.)"
-    ],
-    "Crude oil - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
-        "0 cu m (2012 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "22 00 S, 17 00 E"
     ],
-    "Terrain":[
-        "mostly high plateau; Namib Desert along coast; Kalahari Desert in east"
+    "hiv/aids - people living with hiv/aids":[
+        "220100 (2012 est.)"
     ],
-    "Electricity - imports":[
-        "2.907 billion kWh (2013 est.)"
-    ],
-    "Education expenditures":[
-        "8.4% of GDP (2010)"
-    ],
-    "Government type":[
+    "government type":[
         "republic"
     ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
+    "religions":[
+        "Christian 80% to 90% (at least 50% Lutheran), indigenous beliefs 10% to 20%"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "27.4% (2012 est.)",
         "51.2% (2008 est.)"
     ],
-    "Sex ratio":[
-        "1.03 male(s)/female",
-        "1.02 male(s)/female",
-        "1.02 male(s)/female",
-        "1.09 male(s)/female",
-        "1.02 male(s)/female",
-        "0.78 male(s)/female",
-        "1.02 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "NA% (2013 est.)",
+        "30.4% of GDP (2012 est.)",
+        "27% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "2.25 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Namibia, Land of the Brave",
+        "Axali DOESEB",
+        "adopted 1991"
+    ],
+    "environment - current issues":[
+        "limited natural freshwater resources; desertification; wildlife poaching; land degradation has led to few conservation areas"
+    ],
+    "industries":[
+        "meatpacking, fish processing, dairy products, pasta, beverages; mining (diamonds, lead, zinc, tin, silver, tungsten, uranium, copper)"
+    ],
+    "legal system":[
+        "mixed legal system of uncodified civil law based on Roman-Dutch law and customary law"
+    ],
+    "health expenditures":[
+        "5.3% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "62.29 billion cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
+        "38.4% of total population (2011)",
+        "3.14% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "foodstuffs; petroleum products and fuel, machinery and equipment, chemicals"
+    ],
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
+        "Southern Africa, bordering the South Atlantic Ocean, between Angola and South Africa"
+    ],
+    "irrigated land":[
+        "75.73 sq km (2003)"
+    ],
+    "natural hazards":[
+        "prolonged periods of drought"
+    ],
+    "natural gas - consumption":[
+        "0 cu m (2012 est.)"
+    ],
+    "exports":[
+        "$5.124 billion (2013 est.)",
+        "$4.883 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
+        "$2.723 billion (31 December 2013 est.)",
+        "$2.941 billion (31 December 2012 est.)"
+    ],
+    "airports - with paved runways":[
+        "19",
+        "4",
+        "2",
+        "12",
+        "1 (2013)"
+    ],
+    "internet users":[
+        "127500 (2009)"
+    ],
+    "railways":[
+        "2626 km",
+        "2626 km 1.067-m gauge (2008)"
+    ],
+    "current account balance":[
+        "-$658.4 million (2013 est.)",
+        "-$414 million (2012 est.)"
+    ],
+    "maternal mortality rate":[
+        "200 deaths/100000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "35.2% of GDP (2013 est.)"
+    ],
+    "children under the age of 5 years underweight":[
+        "17.5% (2007)"
+    ],
+    "refined petroleum products - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write",
+        "88.8%",
+        "89%",
+        "88.5% (2010 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "0 bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "112 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$8200 (2013 est.)",
+        "$7900 (2012 est.)",
+        "$7600 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "major infectious diseases":[
+        "high",
+        "bacterial diarrhea, hepatitis A, and typhoid fever",
+        "malaria",
+        "schistosomiasis (2013)"
+    ],
+    "birth rate":[
+        "20.28 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".na"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "natural gas - production":[
+        "0 cu m (2012 est.)"
+    ],
+    "exports - commodities":[
+        "diamonds, copper, gold, zinc, lead, uranium; cattle, white fish and mollusks"
+    ],
+    "labor force":[
+        "880400 (2013 est.)"
+    ],
+    "dependency ratios":[
+        "64.2 %",
+        "58.3 %",
+        "5.9 %",
+        "17 (2014 est.)"
+    ],
+    "mother's mean age at first birth":[
+        "21.4",
+        "median age at first birth among women 25-29 (2006-07 est.)"
+    ],
+    "ports and terminals":[
+        "Luderitz, Walvis Bay"
+    ],
+    "labor force - by occupation":[
+        "16.3%",
+        "22.4%",
+        "61.3%",
+        "about half of Namibia's people are unemployed while about two-thirds live in rural areas; roughly two-thirds of rural dwellers rely on subsistence agriculture (2008 est.)"
+    ],
+    "diplomatic representation from the us":[
+        "Ambassador Wanda L. NESBITT (since 20 July 2010)",
+        "14 Lossen Street, Windhoek",
+        "Private Bag 12029 Ausspannplatz, Windhoek",
+        "[264] (61) 295-8500",
+        "[264] (61) 295-8603"
+    ],
+    "terrain":[
+        "mostly high plateau; Namib Desert along coast; Kalahari Desert in east"
+    ],
+    "electricity - imports":[
+        "2.907 billion kWh (2013 est.)"
+    ],
+    "infant mortality rate":[
+        "45.64 deaths/1000 live births",
+        "48.6 deaths/1000 live births",
+        "42.59 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "5.5% (31 December 2013 est.)",
+        "12% (31 December 2010 est.)"
+    ],
+    "geography - note":[
+        "first country in the world to incorporate the protection of the environment into its constitution; some 14% of the land is protected, including virtually the entire Namib Desert coastal strip"
+    ],
+    "political parties and leaders":[
         "All People's Party or APP [Ignatius SHIXWAMENI]",
         "Congress of Democrats or COD [Benjamin ULENGA]",
         "Democratic Turnhalle Alliance of Namibia or DTA [McHenry VENAANI]",
@@ -126,251 +204,53 @@
         "South West Africa People's Organization or SWAPO [Hifikepunye POHAMBA]",
         "United Democratic Front or UDF [Justus //GAROEB]"
     ],
-    "Unemployment, youth ages 15-24":[
-        "40.1%",
-        "29.4%",
-        "34.3% (2012)"
+    "obesity - adult prevalence rate":[
+        "9.5% (2008)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    "broadcast media":[
+        "1 private and 1 state-run TV station; satellite and cable TV service is available; state-run radio service broadcasts in multiple languages; about a dozen private radio stations; transmissions of multiple international broadcasters are available (2007)"
     ],
-    "Stock of domestic credit":[
-        "$5.942 billion (31 December 2013 est.)",
-        "$6.266 billion (31 December 2012 est.)"
+    "constitution":[
+        "drafted 9 February 1990, signed 16 March 1990, entered into force 21 March 1990; amended 1998, 2010 (2010)"
     ],
-    "Area":[
-        "824,292 sq km",
-        "823,290 sq km",
-        "1,002 sq km"
+    "contraceptive prevalence rate":[
+        "55.1% (2006/07)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-6.5% of GDP (2013 est.)"
-    ],
-    "Land use":[
-        "0.97%",
-        "0.01%",
-        "99.02% (2011)"
-    ],
-    "Median age":[
+    "median age":[
         "22.8 years",
         "22.8 years",
         "22.8 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "220,100 (2012 est.)"
+    "manpower fit for military service":[
+        "351431",
+        "311513 (2010 est.)"
     ],
-    "Urbanization":[
-        "38.4% of total population (2011)",
-        "3.14% annual rate of change (2010-15 est.)"
-    ],
-    "Imports - commodities":[
-        "foodstuffs; petroleum products and fuel, machinery and equipment, chemicals"
-    ],
-    "Location":[
-        "Southern Africa, bordering the South Atlantic Ocean, between Angola and South Africa"
-    ],
-    "Electricity - from fossil fuels":[
-        "31.8% of total installed capacity (2013 est.)"
-    ],
-    "Military expenditures":[
-        "3.11% of GDP (2012)",
-        "3.38% of GDP (2011)",
-        "3.11% of GDP (2010)"
-    ],
-    "Telephone system":[
-        "good system; core fiber-optic network links most centers and connections are now digital",
-        "multiple mobile-cellular providers with a combined subscribership of more than 100 telephones per 100 persons",
-        "country code - 264; fiber-optic cable to South Africa, microwave radio relay link to Botswana, direct links to other neighboring countries; connected to the South African Far East (SAFE) submarine cable through South Africa; satellite earth stations - 4 Intelsat (2010)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$17.79 billion (2013 est.)",
-        "$17.05 billion (2012 est.)",
-        "$16.23 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "prolonged periods of drought"
-    ],
-    "Stock of narrow money":[
-        "$2.723 billion (31 December 2013 est.)",
-        "$2.941 billion (31 December 2012 est.)"
-    ],
-    "Airports - with paved runways":[
-        "19",
-        "4",
-        "2",
-        "12",
-        "1 (2013)"
-    ],
-    "Railways":[
-        "2,626 km",
-        "2,626 km 1.067-m gauge (2008)"
-    ],
-    "Electricity - consumption":[
-        "4.238 billion kWh (2013 est.)"
-    ],
-    "Manpower available for military service":[
-        "568,231 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "93",
-        "25",
-        "52",
-        "",
-        "16 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "5,000 (2012 est.)"
-    ],
-    "Area - comparative":[
-        "slightly more than half the size of Alaska"
-    ],
-    "Distribution of family income - Gini index":[
-        "59.7 (2010)",
-        "70.7 (2003)"
-    ],
-    "Population":[
-        "2,198,406",
-        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "0 bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "112 (2013)"
-    ],
-    "Major infectious diseases":[
-        "high",
-        "bacterial diarrhea, hepatitis A, and typhoid fever",
-        "malaria",
-        "schistosomiasis (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "0.29  cu km/yr (25%/5%/70%)",
-        "146  cu m/yr (2002)"
-    ],
-    "Budget":[
-        "$4.325 billion",
-        "$5.126 billion (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "3.217 million Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "millet, sorghum, peanuts, grapes; livestock; fish"
-    ],
-    "Military service age and obligation":[
-        "18 years of age for voluntary military service; no conscription (2012)"
-    ],
-    "Total fertility rate":[
-        "2.25 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "WINDHOEK (capital) 380,000 (2011)"
-    ],
-    "Population below poverty line":[
-        "28.7%",
-        "the UNDP's 2005 Human Development Report indicated that 34.9% of the population live on $1 per day and 55.8% live on $2 per day (2010 est.)"
-    ],
-    "Labor force - by occupation":[
-        "16.3%",
-        "22.4%",
-        "61.3%",
-        "about half of Namibia's people are unemployed while about two-thirds live in rural areas; roughly two-thirds of rural dwellers rely on subsistence agriculture (2008 est.)"
-    ],
-    "Stock of broad money":[
-        "$7.22 billion (31 December 2013 est.)",
-        "$7.228 billion (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "7.7%",
-        "29.6%",
-        "62.6% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "Ambassador Wanda L. NESBITT (since 20 July 2010)",
-        "14 Lossen Street, Windhoek",
-        "Private Bag 12029 Ausspannplatz, Windhoek",
-        "[264] (61) 295-8500",
-        "[264] (61) 295-8603"
-    ],
-    "Infant mortality rate":[
-        "45.64 deaths/1,000 live births",
-        "48.6 deaths/1,000 live births",
-        "42.59 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Christian 80% to 90% (at least 50% Lutheran), indigenous beliefs 10% to 20%"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$2.267 billion (31 December 2013 est.)",
-        "$1.738 billion (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "2.4%",
-        "42% (2010)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "17.5% (2007)"
-    ],
-    "Hospital bed density":[
-        "2.7 beds/1,000 population (2009)"
-    ],
-    "Life expectancy at birth":[
-        "51.85 years",
-        "52.22 years",
-        "51.46 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "13.3% (2012 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "11 years",
-        "11 years",
-        "11 years (2006)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "26,413",
-        "26,038 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OPCW, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Oshiwambo languages 48.9%, Nama/Damara 11.3%, Afrikaans 10.4% (common language of most of the population and about 60% of the white population), Otjiherero languages 8.6%, Kavango languages 8.5%, Caprivi languages 4.8%, English (official) 3.4%, other African languages 2.3%, other 1.7%",
-        "Namibia has 13 recognized national languages, including 10 indigenous African languages and 3 Indo-European languages (2011 est.)"
-    ],
-    "Country name":[
+    "country name":[
         "Republic of Namibia",
         "Namibia",
         "Republic of Namibia",
         "Namibia",
         "German South-West Africa (Sued-West Afrika), South-West Africa"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "24 nm",
-        "200 nm"
+    "electricity - from fossil fuels":[
+        "31.8% of total installed capacity (2013 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$1.305 billion (31 December 2012 est.)",
-        "$1.152 billion (31 December 2011)",
-        "$1.176 billion (31 December 2010 est.)"
+    "capital":[
+        "Windhoek",
+        "22 34 S, 17 05 E",
+        "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)",
+        "+1hr, begins first Sunday in September; ends first Sunday in April"
     ],
-    "Taxes and other revenues":[
-        "35.2% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$17.79 billion (2013 est.)",
+        "$17.05 billion (2012 est.)",
+        "$16.23 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "21.4",
-        "median age at first birth among women 25-29 (2006-07 est.)"
+    "independence":[
+        "21 March 1990 (from South African mandate)"
     ],
-    "Refined petroleum products - consumption":[
-        "22,990 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "0.67% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 98.4% of population",
         "rural: 87.4% of population",
         "total: 91.7% of population",
@@ -379,195 +259,45 @@
         "rural: 12.6% of population",
         "total: 8.3% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Martin ANDJABA (since 3 September 2010)",
-        "1605 New Hampshire Avenue NW, Washington, DC 20009",
-        "[1] (202) 986-0540",
-        "[1] (202) 986-0443"
+    "electricity - from hydroelectric plants":[
+        "68.2% of total installed capacity (2013 est.)"
     ],
-    "Internet users":[
-        "127,500 (2009)"
+    "stock of direct foreign investment - abroad":[
+        "$NA"
     ],
-    "Contraceptive prevalence rate":[
-        "55.1% (2006/07)"
-    ],
-    "Internet hosts":[
-        "78,280 (2012)"
-    ],
-    "Current account balance":[
-        "-$658.4 million (2013 est.)",
-        "-$414 million (2012 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$4.312 billion (31 December 2013 est.)",
         "$4.292 billion (31 December 2012 est.)"
     ],
-    "Administrative divisions":[
-        "14 regions; Erongo, Hardap, //Karas, Kavango East, Kavango West, Khomas, Kunene, Ohangwena, Omaheke, Omusati, Oshana, Oshikoto, Otjozondjupa, Zambezi; note - the Karas Region was renamed //Karas in September 2013 to include the alveolar lateral click of the Khoekhoegowab language"
+    "coastline":[
+        "1572 km"
     ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2013 est.)"
-    ],
-    "Industrial production growth rate":[
-        "5.6% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "concerns from international experts and local populations over the Okavango Delta ecology in Botswana and human displacement scuttled Namibian plans to construct a hydroelectric dam on Popa Falls along the Angola-Namibia border; the governments of South Africa and Namibia have not signed or ratified the text of the 1994 Surveyor's General agreement placing the boundary in the middle of the Orange River; Namibia has supported, and in 2004 Zimbabwe dropped objections to, plans between Botswana and Zambia to build a bridge over the Zambezi River, thereby de facto recognizing a short, but not clearly delimited, Botswana-Zambia boundary in the river"
-    ],
-    "Climate":[
-        "desert; hot, dry; rainfall sparse and erratic"
-    ],
-    "Natural resources":[
-        "diamonds, copper, uranium, gold, silver, lead, tin, lithium, cadmium, tungsten, zinc, salt, hydropower, fish",
-        "suspected deposits of oil, coal, and iron ore"
-    ],
-    "Internet country code":[
-        ".na"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$NA"
-    ],
-    "Electricity - production":[
-        "1.331 billion kWh (2013 est.)"
-    ],
-    "Death rate":[
-        "13.6 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "68.2% of total installed capacity (2013 est.)"
-    ],
-    "Imports":[
-        "$7.084 billion (2013 est.)",
-        "$6.44 billion (2012 est.)"
-    ],
-    "GDP - real growth rate":[
-        "4.4% (2013 est.)",
-        "5% (2012 est.)",
-        "5.7% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "62.29 billion cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "5.5% (31 December 2013 est.)",
-        "12% (31 December 2010 est.)"
-    ],
-    "Fiscal year":[
-        "1 April - 31 March"
-    ],
-    "Obesity - adult prevalence rate":[
-        "9.5% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "meatpacking, fish processing, dairy products, pasta, beverages; mining (diamonds, lead, zinc, tin, silver, tungsten, uranium, copper)"
-    ],
-    "Legal system":[
-        "mixed legal system of uncodified civil law based on Roman-Dutch law and customary law"
-    ],
-    "Capital":[
-        "Windhoek",
-        "22 34 S, 17 05 E",
-        "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)",
-        "+1hr, begins first Sunday in September; ends first Sunday in April"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "limited natural freshwater resources; desertification; wildlife poaching; land degradation has led to few conservation areas"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2012 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "487,000 kW (2013 est.)"
-    ],
-    "Birth rate":[
-        "20.28 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "31.7% (male 352,368/female 345,593)",
-        "23.1% (male 256,965/female 251,276)",
-        "35.9% (male 410,736/female 378,678)",
-        "4.8% (male 47,832/female 58,602)",
-        "4.3% (male 41,697/female 54,659) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "9.25% (31 December 2013 est.)",
-        "8.7% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "3,936 km",
-        "Angola 1,376 km, Botswana 1,360 km, South Africa 967 km, Zambia 233 km"
-    ],
-    "Coastline":[
-        "1,572 km"
-    ],
-    "Nationality":[
+    "nationality":[
         "Namibian(s)",
         "Namibian"
     ],
-    "Telephones - main lines in use":[
-        "171,000 (2012)"
+    "refined petroleum products - imports":[
+        "20810 bbl/day (2012 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "88.8%",
-        "89%",
-        "88.5% (2010 est.)"
+    "climate":[
+        "desert; hot, dry; rainfall sparse and erratic"
     ],
-    "Total renewable water resources":[
-        "17.72 cu km (2011)"
+    "hiv/aids - adult prevalence rate":[
+        "13.3% (2012 est.)"
     ],
-    "National holiday":[
-        "Independence Day, 21 March (1990)"
+    "manpower reaching militarily significant age annually":[
+        "26413",
+        "26038 (2010 est.)"
     ],
-    "Elevation extremes":[
-        "Atlantic Ocean 0 m",
-        "Konigstein 2,606 m"
+    "roadways":[
+        "44138 km",
+        "6387 km",
+        "37751 km (2010)"
     ],
-    "Suffrage":[
-        "18 years of age; universal"
+    "net migration rate":[
+        "0.05 migrant(s)/1000 population (2014 est.)"
     ],
-    "Physicians density":[
-        "0.37 physicians/1,000 population (2007)"
-    ],
-    "Exports - commodities":[
-        "diamonds, copper, gold, zinc, lead, uranium; cattle, white fish and mollusks"
-    ],
-    "Labor force":[
-        "880,400 (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "64.2 %",
-        "58.3 %",
-        "5.9 %",
-        "17 (2014 est.)"
-    ],
-    "Roadways":[
-        "44,138 km",
-        "6,387 km",
-        "37,751 km (2010)"
-    ],
-    "Electricity - exports":[
-        "89 million kWh (2013 est.)"
-    ],
-    "Ports and terminals":[
-        "Luderitz, Walvis Bay"
-    ],
-    "Refined petroleum products - imports":[
-        "20,810 bbl/day (2012 est.)"
-    ],
-    "Stock of direct foreign investment - abroad":[
-        "$NA"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2012 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "Namibian dollars (NAD) per US dollar -",
         "9.282 (2013 est.)",
         "8.2031 (2012 est.)",
@@ -575,11 +305,61 @@
         "8.42 (2009)",
         "7.75 (2008)"
     ],
-    "Ethnic groups":[
-        "black 87.5%, white 6%, mixed 6.5%",
-        "about 50% of the population belong to the Ovambo tribe and 9% to the Kavangos tribe; other ethnic groups include Herero 7%, Damara 7%, Nama 5%, Caprivian 4%, Bushmen 3%, Baster 2%, Tswana 0.5%"
+    "refined petroleum products - production":[
+        "0 bbl/day (2012 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.03 male(s)/female",
+        "1.02 male(s)/female",
+        "1.02 male(s)/female",
+        "1.09 male(s)/female",
+        "1.02 male(s)/female",
+        "0.78 male(s)/female",
+        "1.02 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "27.2% of GDP (2013 est.)",
+        "25.8% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "568231 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$2.267 billion (31 December 2013 est.)",
+        "$1.738 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "93",
+        "25",
+        "52",
+        "",
+        "16 (2013)"
+    ],
+    "stock of broad money":[
+        "$7.22 billion (31 December 2013 est.)",
+        "$7.228 billion (31 December 2012 est.)"
+    ],
+    "gdp - real growth rate":[
+        "4.4% (2013 est.)",
+        "5% (2012 est.)",
+        "5.7% (2011 est.)"
+    ],
+    "telephone system":[
+        "good system; core fiber-optic network links most centers and connections are now digital",
+        "multiple mobile-cellular providers with a combined subscribership of more than 100 telephones per 100 persons",
+        "country code - 264; fiber-optic cable to South Africa, microwave radio relay link to Botswana, direct links to other neighboring countries; connected to the South African Far East (SAFE) submarine cable through South Africa; satellite earth stations - 4 Intelsat (2010)"
+    ],
+    "flag description":[
+        "a wide red stripe edged by narrow white stripes divides the flag diagonally from lower hoist corner to upper fly corner; the upper hoist-side triangle is blue and charged with a yellow, 12-rayed sunburst; the lower fly-side triangle is green; red signifies the heroism of the people and their determination to build a future of equal opportunity for all; white stands for peace, unity, tranquility, and harmony; blue represents the Namibian sky and the Atlantic Ocean, the country's precious water resources and rain; the yellow sun denotes power and existence; green symbolizes vegetation and agricultural resources"
+    ],
+    "fiscal year":[
+        "1 April - 31 March"
+    ],
+    "household income or consumption by percentage share":[
+        "2.4%",
+        "42% (2010)"
+    ],
+    "gdp - composition, by end use":[
         "59.9%",
         "26.2%",
         "22.8%",
@@ -588,17 +368,237 @@
         "-50.9%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "NA% (2013 est.)",
-        "30.4% of GDP (2012 est.)",
-        "27% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "51.85 years",
+        "52.22 years",
+        "51.46 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "1 private and 1 state-run TV station; satellite and cable TV service is available; state-run radio service broadcasts in multiple languages; about a dozen private radio stations; transmissions of multiple international broadcasters are available (2007)"
+    "languages":[
+        "Oshiwambo languages 48.9%, Nama/Damara 11.3%, Afrikaans 10.4% (common language of most of the population and about 60% of the white population), Otjiherero languages 8.6%, Kavango languages 8.5%, Caprivi languages 4.8%, English (official) 3.4%, other African languages 2.3%, other 1.7%",
+        "Namibia has 13 recognized national languages, including 10 indigenous African languages and 3 Indo-European languages (2011 est.)"
     ],
-    "National anthem":[
-        "\"Namibia, Land of the Brave\"",
-        "Axali DOESEB",
-        "adopted 1991"
+    "area":[
+        "824292 sq km",
+        "823290 sq km",
+        "1002 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "3.217 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "diamonds, copper, uranium, gold, silver, lead, tin, lithium, cadmium, tungsten, zinc, salt, hydropower, fish",
+        "suspected deposits of oil, coal, and iron ore"
+    ],
+    "telephones - mobile cellular":[
+        "2.435 million (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "24 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "0% of total installed capacity (2013 est.)"
+    ],
+    "population growth rate":[
+        "0.67% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18 years of age for voluntary military service; no conscription (2012)"
+    ],
+    "sanitation facility access":[
+        "urban: 56.1% of population",
+        "rural: 16.9% of population",
+        "total: 32.2% of population",
+        "",
+        "urban: 43.9% of population",
+        "rural: 83.1% of population",
+        "total: 67.8% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "7.7%",
+        "29.6%",
+        "62.6% (2013 est.)"
+    ],
+    "age structure":[
+        "31.7% (male 352368/female 345593)",
+        "23.1% (male 256965/female 251276)",
+        "35.9% (male 410736/female 378678)",
+        "4.8% (male 47832/female 58602)",
+        "4.3% (male 41697/female 54659) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "22990 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "3936 km",
+        "Angola 1376 km, Botswana 1360 km, South Africa 967 km, Zambia 233 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2012 est.)"
+    ],
+    "area - comparative":[
+        "slightly more than half the size of Alaska"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "concerns from international experts and local populations over the Okavango Delta ecology in Botswana and human displacement scuttled Namibian plans to construct a hydroelectric dam on Popa Falls along the Angola-Namibia border; the governments of South Africa and Namibia have not signed or ratified the text of the 1994 Surveyor's General agreement placing the boundary in the middle of the Orange River; Namibia has supported, and in 2004 Zimbabwe dropped objections to, plans between Botswana and Zambia to build a bridge over the Zambezi River, thereby de facto recognizing a short, but not clearly delimited, Botswana-Zambia boundary in the river"
+    ],
+    "population":[
+        "2198406",
+        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "17.72 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 21 March (1990)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-6.5% of GDP (2013 est.)"
+    ],
+    "trafficking in persons":[
+        "Namibia is predominantly a country of origin and destination for children and, to a lesser extent, women subjected to forced labor and sex trafficking; victims lured by promises of legitimate jobs are forced to work in hazardous condition in urban centers and on commercial farms; traffickers exploit Namibian children, as well as children from Angola, Zambia, and Zimbabwe, for forced labor in agriculture, cattle herding, domestic service, and criminal activities; children are also forced into prostitution, often catering to tourists from southern Africa and Europe; girls of the San tribe are particularly vulnerable",
+        "Tier 2 Watch List - Namibia does not fully comply with the minimum standards for the elimination of trafficking; however, it is making significant efforts to do so; in 2012, the government launched a National Plan of Action on Gender-Based Violence, which included addressing human trafficking but did not complete its draft comprehensive anti-trafficking legislation or obtain parliamentary passage of the Child Care and Protection Bill, which would criminalize child trafficking; a process has been developed for referring trafficking victims for assistance but a system for screening potential victims and providing official designation of trafficking victim status is lacking (2013)"
+    ],
+    "budget":[
+        "$4.325 billion",
+        "$5.126 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "28.7%",
+        "the UNDP's 2005 Human Development Report indicated that 34.9% of the population live on $1 per day and 55.8% live on $2 per day (2010 est.)"
+    ],
+    "military expenditures":[
+        "3.11% of GDP (2012)",
+        "3.38% of GDP (2011)",
+        "3.11% of GDP (2010)"
+    ],
+    "death rate":[
+        "13.6 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$1.305 billion (31 December 2012 est.)",
+        "$1.152 billion (31 December 2011)",
+        "$1.176 billion (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "5.6% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "59.7 (2010)",
+        "70.7 (2003)"
+    ],
+    "inflation rate (consumer prices)":[
+        "5.5% (2013 est.)",
+        "6.5% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Martin ANDJABA (since 3 September 2010)",
+        "1605 New Hampshire Avenue NW, Washington, DC 20009",
+        "[1] (202) 986-0540",
+        "[1] (202) 986-0443"
+    ],
+    "imports":[
+        "$7.084 billion (2013 est.)",
+        "$6.44 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "9.25% (31 December 2013 est.)",
+        "8.7% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "8.4% of GDP (2010)"
+    ],
+    "electricity - consumption":[
+        "4.238 billion kWh (2013 est.)"
+    ],
+    "hospital bed density":[
+        "2.7 beds/1000 population (2009)"
+    ],
+    "ethnic groups":[
+        "black 87.5%, white 6%, mixed 6.5%",
+        "about 50% of the population belong to the Ovambo tribe and 9% to the Kavangos tribe; other ethnic groups include Herero 7%, Damara 7%, Nama 5%, Caprivian 4%, Bushmen 3%, Baster 2%, Tswana 0.5%"
+    ],
+    "unemployment, youth ages 15-24":[
+        "40.1%",
+        "29.4%",
+        "34.3% (2012)"
+    ],
+    "land use":[
+        "0.97%",
+        "0.01%",
+        "99.02% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "0.29  cu km/yr (25%/5%/70%)",
+        "146  cu m/yr (2002)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$NA"
+    ],
+    "stock of domestic credit":[
+        "$5.942 billion (31 December 2013 est.)",
+        "$6.266 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "millet, sorghum, peanuts, grapes; livestock; fish"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2013 est.)"
+    ],
+    "internet hosts":[
+        "78280 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "National Society for Human Rights or NSHR (NAMRIGHTS as of 2010)",
+        "various labor unions"
+    ],
+    "administrative divisions":[
+        "14 regions; Erongo, Hardap, //Karas, Kavango East, Kavango West, Khomas, Kunene, Ohangwena, Omaheke, Omusati, Oshana, Oshikoto, Otjozondjupa, Zambezi; note - the Karas Region was renamed //Karas in September 2013 to include the alveolar lateral click of the Khoekhoegowab language"
+    ],
+    "hiv/aids - deaths":[
+        "5000 (2012 est.)"
+    ],
+    "crude oil - production":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "171000 (2012)"
+    ],
+    "electricity - production":[
+        "1.331 billion kWh (2013 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
+        "Atlantic Ocean 0 m",
+        "Konigstein 2606 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "11 years",
+        "11 years",
+        "11 years (2006)"
+    ],
+    "physicians density":[
+        "0.37 physicians/1000 population (2007)"
+    ],
+    "international organization participation":[
+        "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OPCW, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$12.3 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "89 million kWh (2013 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "487000 kW (2013 est.)"
+    ],
+    "major urban areas - population":[
+        "Windhoek (capital) 380000 (2011)"
     ]
 }

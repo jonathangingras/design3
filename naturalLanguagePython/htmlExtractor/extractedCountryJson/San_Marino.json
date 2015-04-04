@@ -1,72 +1,115 @@
 {
-    "Health expenditures":[
-        "7.2% of GDP (2010)"
-    ],
-    "Irrigated land":[
-        "NA"
-    ],
-    "Exports - partners":[
-        "Italy 82.3% (2012 est.)"
-    ],
-    "Independence":[
-        "3 September 301"
-    ],
-    "Inflation rate (consumer prices)":[
-        "2.8% (2012 est.)",
-        "2% (2011)"
-    ],
-    "Geography - note":[
-        "landlocked; smallest independent state in Europe after the Holy See and Monaco; dominated by the Apennines"
-    ],
-    "Exports":[
-        "$3.827 billion (2011 est.)",
-        "$2.576 billion (2010 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$NA (2013 est.)",
-        "$55,000 (2012 est.)",
-        "$60,800 (2011 est.)"
-    ],
-    "Flag description":[
-        "two equal horizontal bands of white (top) and light blue with the national coat of arms superimposed in the center; the main colors derive from the shield of the coat of arms, which features three white towers on three peaks on a blue field; the towers represent three castles built on San Marino's highest feature, Mount Titano: Guaita, Cesta, and Montale; the coat of arms is flanked by a wreath, below a crown and above a scroll bearing the word LIBERTAS (Liberty); the white and blue colors are also said to stand for peace and liberty respectively"
-    ],
-    "Political pressure groups and leaders":[
-        "NA"
-    ],
-    "Telephones - mobile cellular":[
-        "36,000 (2011)"
-    ],
-    "Net migration rate":[
-        "8.31 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "5,565",
-        "6,067 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$1.866 billion (2013 est.)"
-    ],
-    "Public debt":[
-        "25.8% of GDP (2013 est.)",
-        "20.3% of GDP (2012 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "43 46 N, 12 25 E"
     ],
-    "Terrain":[
-        "rugged mountains"
-    ],
-    "Education expenditures":[
+    "hiv/aids - people living with hiv/aids":[
         "NA"
     ],
-    "Government type":[
+    "government type":[
         "republic"
     ],
-    "Unemployment rate":[
+    "religions":[
+        "Roman Catholic"
+    ],
+    "unemployment rate":[
         "7% (2012)",
         "5.5% (2011)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "1.49 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Inno Nazionale della Repubblica (National Anthem of the Republic)",
+        "none/Federico CONSOLO",
+        "adopted 1894; the music for the lyric-less anthem is based on a 10th century chorale piece"
+    ],
+    "environment - current issues":[
+        "air pollution; urbanization decreasing rural farmlands"
+    ],
+    "industries":[
+        "tourism, banking, textiles, electronics, ceramics, cement, wine"
+    ],
+    "legal system":[
+        "civil law system with Italian civil law influences"
+    ],
+    "health expenditures":[
+        "7.2% of GDP (2010)"
+    ],
+    "urbanization":[
+        "94.1% of total population (2011)",
+        "0.65% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "wide variety of consumer manufactures, food, energy"
+    ],
+    "location":[
+        "Southern Europe, an enclave in central Italy"
+    ],
+    "irrigated land":[
+        "NA"
+    ],
+    "natural hazards":[
+        "NA"
+    ],
+    "exports":[
+        "$3.827 billion (2011 est.)",
+        "$2.576 billion (2010 est.)"
+    ],
+    "stock of narrow money":[
+        "$1.326 billion (31 December 2007)"
+    ],
+    "internet users":[
+        "17000 (2009)"
+    ],
+    "literacy":[
+        "age 10 and over can read and write",
+        "96%",
+        "97%",
+        "95%"
+    ],
+    "gdp - per capita (ppp)":[
+        "$NA (2013 est.)",
+        "$55000 (2012 est.)",
+        "$60800 (2011 est.)"
+    ],
+    "birth rate":[
+        "8.7 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".sm"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "exports - commodities":[
+        "building stone, lime, wood, chestnuts, wheat, wine, baked goods, hides, ceramics"
+    ],
+    "labor force":[
+        "21960 (September 2013)"
+    ],
+    "imports - partners":[
+        "Italy 81.8% (2012 est.)"
+    ],
+    "labor force - by occupation":[
+        "0.2%",
+        "33.5%",
+        "66.3% (September 2013 es)"
+    ],
+    "diplomatic representation from the us":[
+        "the US does not have an embassy in San Marino; the ambassador to Italy is accredited to San Marino"
+    ],
+    "terrain":[
+        "rugged mountains"
+    ],
+    "infant mortality rate":[
+        "4.52 deaths/1000 live births",
+        "4.71 deaths/1000 live births",
+        "4.31 deaths/1000 live births (2014 est.)"
+    ],
+    "geography - note":[
+        "landlocked; smallest independent state in Europe after the Holy See and Monaco; dominated by the Apennines"
+    ],
+    "political parties and leaders":[
         "Christian Democrats or PDCS [Marco GATTI]",
         "Party of Socialists and Democrats or PSD [Gerardo GIOVAGNOLI]",
         "Popular Alliance or AP [Stefano PALMIERI]",
@@ -82,198 +125,198 @@
         "For San Marino [Emilio DELLA BALDA]",
         "San Marino 3.0 [Simone DELLA VALLE]"
     ],
-    "Environment - current issues":[
-        "air pollution; urbanization decreasing rural farmlands"
+    "broadcast media":[
+        "state-owned public broadcaster operates 1 TV station and 3 radio stations; receives radio and TV broadcasts from Italy (2012)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    "constitution":[
+        "consists of several legislative instruments, chief among them the Statutes (Leges Statuti) of 1600 and the Declaration of Citizen Rights of 1974; latter document amended 2000, 2002 (2013)"
     ],
-    "Stock of domestic credit":[
-        "$8.822 billion (30 September 2010)",
-        "$8.008 billion (31 December 2009)"
-    ],
-    "Area":[
-        "61 sq km",
-        "61 sq km",
-        "0 sq km"
-    ],
-    "Budget surplus (+) or deficit (-)":[
-        "-2.9% of GDP (2012 est.)"
-    ],
-    "Industrial production growth rate":[
-        "-1.1% (2012 est.)"
-    ],
-    "Median age":[
+    "median age":[
         "43.6 years",
         "42.6 years",
         "44.4 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "NA"
+    "military - note":[
+        "defense is the responsibility of Italy"
     ],
-    "Urbanization":[
-        "94.1% of total population (2011)",
-        "0.65% annual rate of change (2010-15 est.)"
+    "manpower fit for military service":[
+        "5565",
+        "6067 (2010 est.)"
     ],
-    "Imports - commodities":[
-        "wide variety of consumer manufactures, food, energy"
-    ],
-    "Location":[
-        "Southern Europe, an enclave in central Italy"
-    ],
-    "GDP (purchasing power parity)":[
-        "$1.306 billion (2013 est.)",
-        "$1.353 billion (2012 est.)",
-        "$1.409 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "NA"
-    ],
-    "Stock of narrow money":[
-        "$1.326 billion (31 December 2007)"
-    ],
-    "Manpower available for military service":[
-        "6,892 (2010 est.)"
-    ],
-    "HIV/AIDS - deaths":[
-        "NA"
-    ],
-    "Area - comparative":[
-        "about one third times the size of Washington, DC"
-    ],
-    "Population":[
-        "32,742 (July 2014 est.)"
-    ],
-    "Budget":[
-        "$667.7 million",
-        "$721.8 million (2011)"
-    ],
-    "Agriculture - products":[
-        "wheat, grapes, corn, olives; cattle, pigs, horses, beef, cheese, hides"
-    ],
-    "Military service age and obligation":[
-        "18 is the legal minimum age for voluntary military service; no conscription; government has the authority to call up all San Marino citizens from 16-60 years of age to service in the military (2012)"
-    ],
-    "Labor force":[
-        "21,960 (September 2013)"
-    ],
-    "Labor force - by occupation":[
-        "0.2%",
-        "33.5%",
-        "66.3% (September 2013 es)"
-    ],
-    "Stock of broad money":[
-        "$4.584 billion (31 December 2007)",
-        "$4.584 billion"
-    ],
-    "GDP - composition, by sector of origin":[
-        "0.1%",
-        "39.2%",
-        "60.7% (2009)"
-    ],
-    "Diplomatic representation from the US":[
-        "the US does not have an embassy in San Marino; the ambassador to Italy is accredited to San Marino"
-    ],
-    "Infant mortality rate":[
-        "4.52 deaths/1,000 live births",
-        "4.71 deaths/1,000 live births",
-        "4.31 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Roman Catholic"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$308.6 million (2012 est.)",
-        "$341.9 million (2011)"
-    ],
-    "Household income or consumption by percentage share":[
-        "NA%",
-        "NA%"
-    ],
-    "Hospital bed density":[
-        "3.9 beds/1,000 population (2011)"
-    ],
-    "Life expectancy at birth":[
-        "83.18 years",
-        "80.64 years",
-        "85.94 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "NA"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "15 years",
-        "15 years",
-        "16 years (2011)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "186",
-        "166 (2010 est.)"
-    ],
-    "International organization participation":[
-        "CE, FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM (observer), IPU, ITU, ITUC (NGOs), LAIA (observer), OPCW, OSCE, Schengen Convention (de facto member), UN, UNCTAD, UNESCO, Union Latina, UNWTO, UPU, WHO, WIPO"
-    ],
-    "Languages":[
-        "Italian"
-    ],
-    "Country name":[
+    "country name":[
         "Republic of San Marino",
         "San Marino",
         "Repubblica di San Marino",
         "San Marino"
     ],
-    "Maritime claims":[
-        "none (landlocked)"
+    "capital":[
+        "San Marino",
+        "43 56 N, 12 25 E",
+        "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)",
+        "+1hr, begins last Sunday in March; ends last Sunday in October"
     ],
-    "Market value of publicly traded shares":[
+    "gdp (purchasing power parity)":[
+        "$1.306 billion (2013 est.)",
+        "$1.353 billion (2012 est.)",
+        "$1.409 billion (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "independence":[
+        "3 September 301"
+    ],
+    "debt - external":[
         "$NA"
     ],
-    "Taxes and other revenues":[
-        "35.8% of GDP (2011)"
+    "coastline":[
+        "0 km (landlocked)"
     ],
-    "Population growth rate":[
-        "0.87% (2014 est.)"
+    "household income or consumption by percentage share":[
+        "NA%",
+        "NA%"
     ],
-    "Constitution":[
-        "consists of several legislative instruments, chief among them the Statutes (Leges Statuti) of 1600 and the Declaration of Citizen Rights of 1974; latter document amended 2000, 2002 (2013)"
-    ],
-    "Diplomatic representation in the US":[
-        "Ambassador Paolo RONDELLI (since 16 July 2007)",
-        "1711 N Street NW, 2nd floor, Washington, DC 20036",
-        "202-223-2418",
-        "202-223-2748"
-    ],
-    "Internet users":[
-        "17,000 (2009)"
-    ],
-    "Internet hosts":[
-        "11,015 (2012)"
-    ],
-    "Debt - external":[
-        "$NA"
-    ],
-    "Administrative divisions":[
-        "9 municipalities (castelli, singular - castello); Acquaviva, Borgo Maggiore, Chiesanuova, Domagnano, Faetano, Fiorentino, Montegiardino, San Marino Citta, Serravalle"
-    ],
-    "Land use":[
-        "16.67%",
-        "0%",
-        "83.33% (2011)"
-    ],
-    "Disputes - international":[
-        "none"
-    ],
-    "Climate":[
+    "climate":[
         "Mediterranean; mild to cool winters; warm, sunny summers"
     ],
-    "Natural resources":[
+    "hiv/aids - adult prevalence rate":[
+        "NA"
+    ],
+    "manpower reaching militarily significant age annually":[
+        "186",
+        "166 (2010 est.)"
+    ],
+    "roadways":[
+        "292 km",
+        "292 km (2006)"
+    ],
+    "net migration rate":[
+        "8.31 migrant(s)/1000 population (2014 est.)"
+    ],
+    "exchange rates":[
+        "euros (EUR) per US dollar -",
+        "0.7634 (2012 est.)",
+        "0.7752 (2011 est.)",
+        "0.755 (2010 est.)",
+        "0.7198 (2009 est.)",
+        "0.6827 (2008 est.)"
+    ],
+    "agriculture - products":[
+        "wheat, grapes, corn, olives; cattle, pigs, horses, beef, cheese, hides"
+    ],
+    "public debt":[
+        "25.8% of GDP (2013 est.)",
+        "20.3% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "6892 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$308.6 million (2012 est.)",
+        "$341.9 million (2011)"
+    ],
+    "stock of broad money":[
+        "$4.584 billion (31 December 2007)",
+        "$4.584 billion"
+    ],
+    "national symbol(s)":[
+        "three peaks each displaying a tower"
+    ],
+    "gdp - real growth rate":[
+        "-3.5% (2013 est.)",
+        "-4% (2012 est.)",
+        "-2.5% (2011 est.)"
+    ],
+    "telephone system":[
+        "automatic telephone system completely integrated into Italian system",
+        "combined fixed-line and mobile-cellular teledensity 170 telephones per 100 persons",
+        "country code - 378; connected to Italian international network (2011)"
+    ],
+    "flag description":[
+        "two equal horizontal bands of white (top) and light blue with the national coat of arms superimposed in the center; the main colors derive from the shield of the coat of arms, which features three white towers on three peaks on a blue field; the towers represent three castles built on San Marino's highest feature, Mount Titano: Guaita, Cesta, and Montale; the coat of arms is flanked by a wreath, below a crown and above a scroll bearing the word LIBERTAS (Liberty); the white and blue colors are also said to stand for peace and liberty respectively"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "nationality":[
+        "Sammarinese (singular and plural)",
+        "Sammarinese"
+    ],
+    "gdp - composition, by end use":[
+        "176.6%",
+        "-153.3%"
+    ],
+    "life expectancy at birth":[
+        "83.18 years",
+        "80.64 years",
+        "85.94 years (2014 est.)"
+    ],
+    "languages":[
+        "Italian"
+    ],
+    "area":[
+        "61 sq km",
+        "61 sq km",
+        "0 sq km"
+    ],
+    "natural resources":[
         "building stone"
     ],
-    "Internet country code":[
-        ".sm"
+    "telephones - mobile cellular":[
+        "36000 (2011)"
     ],
-    "Sex ratio":[
+    "maritime claims":[
+        "none (landlocked)"
+    ],
+    "exports - partners":[
+        "Italy 82.3% (2012 est.)"
+    ],
+    "population growth rate":[
+        "0.87% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18 is the legal minimum age for voluntary military service; no conscription; government has the authority to call up all San Marino citizens from 16-60 years of age to service in the military (2012)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "0.1%",
+        "39.2%",
+        "60.7% (2009)"
+    ],
+    "age structure":[
+        "16% (male 2779/female 2445)",
+        "10.9% (male 1822/female 1733)",
+        "42.4% (male 6552/female 7328)",
+        "12% (male 1957/female 1957)",
+        "18.5% (male 2756/female 3413) (2014 est.)"
+    ],
+    "internet hosts":[
+        "11015 (2012)"
+    ],
+    "land boundaries":[
+        "39 km",
+        "Italy 39 km"
+    ],
+    "area - comparative":[
+        "about one third times the size of Washington, DC"
+    ],
+    "disputes - international":[
+        "none"
+    ],
+    "population":[
+        "32742 (July 2014 est.)"
+    ],
+    "national holiday":[
+        "Founding of the Republic, 3 September (A.D. 301)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-2.9% of GDP (2012 est.)"
+    ],
+    "budget":[
+        "$667.7 million",
+        "$721.8 million (2011)"
+    ],
+    "population below poverty line":[
+        "NA%"
+    ],
+    "sex ratio":[
         "1.1 male(s)/female",
         "1.14 male(s)/female",
         "1.05 male(s)/female",
@@ -282,128 +325,85 @@
         "0.8 male(s)/female",
         "0.94 male(s)/female (2014 est.)"
     ],
-    "Death rate":[
-        "8.31 deaths/1,000 population (2014 est.)"
+    "death rate":[
+        "8.31 deaths/1000 population (2014 est.)"
     ],
-    "Imports":[
+    "market value of publicly traded shares":[
+        "$NA"
+    ],
+    "industrial production growth rate":[
+        "-1.1% (2012 est.)"
+    ],
+    "inflation rate (consumer prices)":[
+        "2.8% (2012 est.)",
+        "2% (2011)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Paolo RONDELLI (since 16 July 2007)",
+        "1711 N Street NW, 2nd floor, Washington, DC 20036",
+        "202-223-2418",
+        "202-223-2748"
+    ],
+    "imports":[
         "$2.551 billion (2011 est.)",
         "$2.132 billion (2010 est.)"
     ],
-    "National symbol(s)":[
-        "three peaks each displaying a tower"
-    ],
-    "GDP - real growth rate":[
-        "-3.5% (2013 est.)",
-        "-4% (2012 est.)",
-        "-2.5% (2011 est.)"
-    ],
-    "Telephone system":[
-        "automatic telephone system completely integrated into Italian system",
-        "combined fixed-line and mobile-cellular teledensity 170 telephones per 100 persons",
-        "country code - 378; connected to Italian international network (2011)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Total fertility rate":[
-        "1.49 children born/woman (2014 est.)"
-    ],
-    "Industries":[
-        "tourism, banking, textiles, electronics, ceramics, cement, wine"
-    ],
-    "Legal system":[
-        "civil law system with Italian civil law influences"
-    ],
-    "Military - note":[
-        "defense is the responsibility of Italy"
-    ],
-    "Capital":[
-        "San Marino",
-        "43 56 N, 12 25 E",
-        "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)",
-        "+1hr, begins last Sunday in March; ends last Sunday in October"
-    ],
-    "Imports - partners":[
-        "Italy 81.8% (2012 est.)"
-    ],
-    "Birth rate":[
-        "8.7 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "16% (male 2,779/female 2,445)",
-        "10.9% (male 1,822/female 1,733)",
-        "42.4% (male 6,552/female 7,328)",
-        "12% (male 1,957/female 1,957)",
-        "18.5% (male 2,756/female 3,413) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
+    "commercial bank prime lending rate":[
         "5.92% (31 December 2011 est.)",
         "5.38% (31 December 2010 est.)"
     ],
-    "Land boundaries":[
-        "39 km",
-        "Italy 39 km"
+    "education expenditures":[
+        "NA"
     ],
-    "Coastline":[
-        "0 km (landlocked)"
+    "hospital bed density":[
+        "3.9 beds/1000 population (2011)"
     ],
-    "Nationality":[
-        "Sammarinese (singular and plural)",
-        "Sammarinese"
+    "ethnic groups":[
+        "Sammarinese, Italian"
     ],
-    "Telephones - main lines in use":[
-        "18,700 (2012)"
+    "land use":[
+        "16.67%",
+        "0%",
+        "83.33% (2011)"
     ],
-    "Literacy":[
-        "age 10 and over can read and write",
-        "96%",
-        "97%",
-        "95%"
+    "stock of domestic credit":[
+        "$8.822 billion (30 September 2010)",
+        "$8.008 billion (31 December 2009)"
     ],
-    "National holiday":[
-        "Founding of the Republic, 3 September (A.D. 301)"
+    "taxes and other revenues":[
+        "35.8% of GDP (2011)"
     ],
-    "Elevation extremes":[
+    "political pressure groups and leaders":[
+        "NA"
+    ],
+    "administrative divisions":[
+        "9 municipalities (castelli, singular - castello); Acquaviva, Borgo Maggiore, Chiesanuova, Domagnano, Faetano, Fiorentino, Montegiardino, San Marino Citta, Serravalle"
+    ],
+    "hiv/aids - deaths":[
+        "NA"
+    ],
+    "telephones - main lines in use":[
+        "18700 (2012)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction"
+    ],
+    "elevation extremes":[
         "Torrente Ausa 55 m",
         "Monte Titano 755 m"
     ],
-    "Suffrage":[
-        "18 years of age; universal"
+    "school life expectancy (primary to tertiary education)":[
+        "15 years",
+        "15 years",
+        "16 years (2011)"
     ],
-    "Physicians density":[
-        "4.88 physicians/1,000 population (2011)"
+    "physicians density":[
+        "4.88 physicians/1000 population (2011)"
     ],
-    "Exports - commodities":[
-        "building stone, lime, wood, chestnuts, wheat, wine, baked goods, hides, ceramics"
+    "international organization participation":[
+        "CE, FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM (observer), IPU, ITU, ITUC (NGOs), LAIA (observer), OPCW, OSCE, Schengen Convention (de facto member), UN, UNCTAD, UNESCO, Union Latina, UNWTO, UPU, WHO, WIPO"
     ],
-    "Population below poverty line":[
-        "NA%"
-    ],
-    "Roadways":[
-        "292 km",
-        "292 km (2006)"
-    ],
-    "Exchange rates":[
-        "euros (EUR) per US dollar -",
-        "0.7634 (2012 est.)",
-        "0.7752 (2011 est.)",
-        "0.755 (2010 est.)",
-        "0.7198 (2009 est.)",
-        "0.6827 (2008 est.)"
-    ],
-    "Ethnic groups":[
-        "Sammarinese, Italian"
-    ],
-    "GDP - composition, by end use":[
-        "176.6%",
-        "-153.3%"
-    ],
-    "Broadcast media":[
-        "state-owned public broadcaster operates 1 TV station and 3 radio stations; receives radio and TV broadcasts from Italy (2012)"
-    ],
-    "National anthem":[
-        "\"Inno Nazionale della Repubblica\" (National Anthem of the Republic)",
-        "none/Federico CONSOLO",
-        "adopted 1894; the music for the lyric-less anthem is based on a 10th century chorale piece"
+    "gdp (official exchange rate)":[
+        "$1.866 billion (2013 est.)"
     ]
 }

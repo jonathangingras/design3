@@ -1,109 +1,181 @@
 {
-    "Inflation rate (consumer prices)":[
-        "5.1% (2012 est.)",
-        "16.7% (2011 est.)"
-    ],
-    "Health expenditures":[
-        "8.5% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Irrigated land":[
-        "0 sq km NA (2003)"
-    ],
-    "Exports - partners":[
-        "France 18.9%, Thailand 15.8%, UK 11.4%, US 9.4%, Sri Lanka 8.6%, Italy 8.1%, Germany 6.4% (2012)"
-    ],
-    "Independence":[
-        "26 July 1965 (from the UK)"
-    ],
-    "Constitution":[
-        "many previous; latest ratified 7 August 2008 (2010)"
-    ],
-    "Geography - note":[
-        "smallest Asian country; archipelago of 1,190 coral islands grouped into 26 atolls (200 inhabited islands, plus 80 islands with tourist resorts); strategic location astride and along major sea lanes in Indian Ocean"
-    ],
-    "Exports":[
-        "$283 million (2012 est.)",
-        "$316 million (2011 est.)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$9,100 (2013 est.)",
-        "$9,000 (2012 est.)",
-        "$9,000 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 97.5% of population",
-        "rural: 99.6% of population",
-        "total: 98.7% of population",
-        "",
-        "urban: 2.5% of population",
-        "rural: 0.4% of population",
-        "total: 1.3% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "60 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "red with a large green rectangle in the center bearing a vertical white crescent moon; the closed side of the crescent is on the hoist side of the flag; red recalls those who have sacrificed their lives in defense of their country, the green rectangle represents peace and prosperity, and the white crescent signifies Islam"
-    ],
-    "Political pressure groups and leaders":[
-        "various unregistered political parties"
-    ],
-    "Telephones - mobile cellular":[
-        "560,000 (2012)"
-    ],
-    "Natural gas - imports":[
+    "natural gas - exports":[
         "0 cu m (2012 est.)"
     ],
-    "Trafficking in persons":[
-        "Maldives is a destination country for men, women, and children subjected to forced labor and sex trafficking and a source country for Maldivian children subjected to human trafficking within the country; Bangladeshi and Indian migrants working both legally and illegally in the construction and service sectors face conditions of forced labor, including fraudulent recruitment, confiscation of identity and travel documents, nonpayment of wages, and debt bondage; a small number of women from Sri Lanka, Thailand, India, China, the Philippines, Bangladesh, Eastern Europe, and former Soviet states are trafficked to Maldives for sexual exploitation; some Maldivian children are transported to the capital for forced domestic service, where they may also be sexually abused",
-        "Tier 2 Watch List - Maldives does not fully comply with the minimum standards for the elimination of trafficking; the government does not have laws prohibiting all human trafficking offenses but introduced an anti-trafficking law to the legislature in December 2012, approved an anti-trafficking plan for 2012-13, and formed an anti-trafficking steering committee in May 2012; the government reported that it prosecuted some sex trafficking cases but did not take concrete actions to protect trafficking victims and prevent trafficking; the government continues to lack systematic procedures for identifying trafficking victims among vulnerable populations and referring them to protective services; officials continue to confuse human trafficking with human smuggling and the presence of undocumented migrants (2013)"
-    ],
-    "Net migration rate":[
-        "-12.67 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "135,374",
-        "85,181 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$2.27 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "0.1% of total installed capacity (2010 est.)"
-    ],
-    "Crude oil - production":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
-        "0 cu m (2012 est.)"
-    ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "3 15 N, 73 00 E"
     ],
-    "Terrain":[
-        "flat, with white sandy beaches"
+    "hiv/aids - people living with hiv/aids":[
+        "NA"
     ],
-    "Electricity - imports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "6.8% of GDP (2011)"
-    ],
-    "Government type":[
+    "government type":[
         "republic"
     ],
-    "Crude oil - imports":[
-        "0 bbl/day (2012 est.)"
+    "religions":[
+        "Sunni Muslim (official)"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "28% (2012 est.)",
         "14.5% (2010 est.)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "1.76 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Gaumee Salaam (National Salute)",
+        "Mohamed Jameel DIDI/Wannakuwattawaduge DON AMARADEVA",
+        "lyrics adopted 1948, music adopted 1972; between 1948 and 1972, the lyrics were sung to the tune of Auld Lang Syne"
+    ],
+    "environment - current issues":[
+        "depletion of freshwater aquifers threatens water supplies; global warming and sea level rise; coral reef bleaching"
+    ],
+    "industries":[
+        "tourism, fish processing, shipping, boat building, coconut processing, woven mats, rope, handicrafts, coral and sand mining"
+    ],
+    "legal system":[
+        "Islamic religious legal system with English common law influences, primarily in commercial matters"
+    ],
+    "health expenditures":[
+        "8.5% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "0 cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
+        "41.2% of total population (2011)",
+        "3.91% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "petroleum products, clothing, intermediate and capital goods"
+    ],
+    "crude oil - imports":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "location":[
+        "Southern Asia, group of atolls in the Indian Ocean, south-southwest of India"
+    ],
+    "irrigated land":[
+        "0 sq km NA (2003)"
+    ],
+    "natural hazards":[
+        "tsunamis; low elevation of islands makes them sensitive to sea level rise"
+    ],
+    "natural gas - consumption":[
+        "0 cu m (2012 est.)"
+    ],
+    "exports":[
+        "$283 million (2012 est.)",
+        "$316 million (2011 est.)"
+    ],
+    "stock of narrow money":[
+        "$547.1 million (31 December 2012 est.)",
+        "$531.4 million (31 December 2011 est.)"
+    ],
+    "airports - with paved runways":[
+        "7",
+        "1",
+        "1",
+        "1",
+        "4 (2013)"
+    ],
+    "internet users":[
+        "86400 (2009)"
+    ],
+    "current account balance":[
+        "-$600 million (2012 est.)",
+        "$437 million (2011 est.)"
+    ],
+    "maternal mortality rate":[
+        "60 deaths/100000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "28.1% of GDP (2012 est.)"
+    ],
+    "children under the age of 5 years underweight":[
+        "17.8% (2009)"
+    ],
+    "refined petroleum products - exports":[
+        "0 bbl/day (2009 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write",
+        "98.4%",
+        "98.4%",
+        "98.4% (2006 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "0 bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "9 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$9100 (2013 est.)",
+        "$9000 (2012 est.)",
+        "$9000 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "birth rate":[
+        "15.59 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".mv"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "natural gas - production":[
+        "0 cu m (2012 est.)"
+    ],
+    "exports - commodities":[
+        "fish"
+    ],
+    "labor force":[
+        "159700 (2012)"
+    ],
+    "dependency ratios":[
+        "50 %",
+        "42.7 %",
+        "7.4 %",
+        "13.6 (2014 est.)"
+    ],
+    "imports - partners":[
+        "Singapore 21.7%, UAE 20.9%, India 9.6%, Malaysia 7.6%, China 6%, Thailand 5.6%, Sri Lanka 4% (2012)"
+    ],
+    "mother's mean age at first birth":[
+        "23.9",
+        "median age at first birth among women 25-29 (2009 est.)"
+    ],
+    "ports and terminals":[
+        "Male"
+    ],
+    "labor force - by occupation":[
+        "15%",
+        "15%",
+        "70% (2010 est.)"
+    ],
+    "diplomatic representation from the us":[
+        "the US does not have an embassy in Maldives; the US Ambassador to Sri Lanka, currently Ambassador Michele J. SISON, is accredited to Maldives and makes periodic visits"
+    ],
+    "terrain":[
+        "flat, with white sandy beaches"
+    ],
+    "electricity - imports":[
+        "0 kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
+        "24.59 deaths/1000 live births",
+        "27.01 deaths/1000 live births",
+        "22.04 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "7% (31 December 2012 est.)",
+        "6.96% (31 December 2011 est.)"
+    ],
+    "geography - note":[
+        "smallest Asian country; archipelago of 1190 coral islands grouped into 26 atolls (200 inhabited islands, plus 80 islands with tourist resorts); strategic location astride and along major sea lanes in Indian Ocean"
+    ],
+    "political parties and leaders":[
         "political parties with an asterisk were dissolved on 7 February 2014 by the Elections Commission under the Political Parties Act, which requires a minimum membership; the status of these parties is unresolved, as the Supreme Court later ruled the dissolution invalid",
         "",
         "Adhaalath (Justice) Party or AP [Sheikh Imran ABDULLA]",
@@ -125,221 +197,54 @@
         "Republican (Jumhooree) Party or JP [Qasim IBRAHIM]",
         "Social Liberal Party or SLP [Mazian RASHEED]*"
     ],
-    "Unemployment, youth ages 15-24":[
-        "22.2%",
-        "15.5%",
-        "30.5% (2006)"
+    "obesity - adult prevalence rate":[
+        "12.9% (2008)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    "broadcast media":[
+        "state-owned radio and TV monopoly until recently; state-owned TV operates 2 channels; 3 privately owned TV stations; state owns Voice of Maldives and operates both an entertainment and a music-based station; 5 privately owned radio stations (2012)"
     ],
-    "Stock of domestic credit":[
-        "$1.559 billion (31 December 2012 est.)",
-        "$1.601 billion (31 December 2011 est.)"
+    "constitution":[
+        "many previous; latest ratified 7 August 2008 (2010)"
     ],
-    "Area":[
-        "298 sq km",
-        "298 sq km",
-        "0 sq km"
+    "contraceptive prevalence rate":[
+        "34.7% (2009)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-12.3% of GDP (2012 est.)"
-    ],
-    "Industrial production growth rate":[
-        "14% (2012 est.)"
-    ],
-    "Median age":[
+    "median age":[
         "27.1 years",
         "27.3 years",
         "26.7 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "NA"
+    "military - note":[
+        "the Maldives National Defense Force (MNDF), with its small size and with little serviceable equipment, is inadequate to prevent external aggression and is primarily tasked to reinforce the Maldives Police Service (MPS) and ensure security in the exclusive economic zone (2008)"
     ],
-    "Urbanization":[
-        "41.2% of total population (2011)",
-        "3.91% annual rate of change (2010-15 est.)"
+    "manpower fit for military service":[
+        "135374",
+        "85181 (2010 est.)"
     ],
-    "Imports - commodities":[
-        "petroleum products, clothing, intermediate and capital goods"
-    ],
-    "Location":[
-        "Southern Asia, group of atolls in the Indian Ocean, south-southwest of India"
-    ],
-    "Electricity - from fossil fuels":[
-        "99.9% of total installed capacity (2010 est.)"
-    ],
-    "Telephone system":[
-        "telephone services have improved; inter-atoll communication through microwave links; all inhabited islands and resorts are connected with telephone and fax service",
-        "each island now has at least 1 public telephone, and there are mobile-cellular networks with a rapidly expanding subscribership that has reached 135 per 100 persons",
-        "country code - 960; linked to international submarine cable Fiber-Optic Link Around the Globe (FLAG); satellite earth station - 3 Intelsat (Indian Ocean) (2011)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$3.073 billion (2013 est.)",
-        "$2.97 billion (2012 est.)",
-        "$2.945 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "tsunamis; low elevation of islands makes them sensitive to sea level rise"
-    ],
-    "Stock of narrow money":[
-        "$547.1 million (31 December 2012 est.)",
-        "$531.4 million (31 December 2011 est.)"
-    ],
-    "Airports - with paved runways":[
-        "7",
-        "1",
-        "1",
-        "1",
-        "4 (2013)"
-    ],
-    "Electricity - consumption":[
-        "280 million kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "156,319",
-        "98,815 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "2",
-        "2 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "fewer than 100 (2009 est.)"
-    ],
-    "Area - comparative":[
-        "about 1.7 times the size of Washington, DC"
-    ],
-    "Distribution of family income - Gini index":[
-        "37.4 (2004)"
-    ],
-    "Population":[
-        "393,595 (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "0 bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "9 (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "0.01  cu km/yr (95%/5%/0%)",
-        "18.44  cu m/yr (2008)"
-    ],
-    "Budget":[
-        "$638 million",
-        "$917 million (2012 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "1.071 million Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "coconuts, corn, sweet potatoes; fish"
-    ],
-    "Military service age and obligation":[
-        "18-28 years of age for voluntary service; no conscription; 10th grade or equivalent education required; must not be a member of a political party (2012)"
-    ],
-    "Total fertility rate":[
-        "1.76 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "MALE (capital) 132,000 (2011)"
-    ],
-    "Population below poverty line":[
-        "16% (2008)"
-    ],
-    "Labor force - by occupation":[
-        "15%",
-        "15%",
-        "70% (2010 est.)"
-    ],
-    "Stock of broad money":[
-        "$1.298 billion (31 December 2012 est.)",
-        "$1.237 billion (31 December 2011 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "3%",
-        "17%",
-        "80% (2012 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "the US does not have an embassy in Maldives; the US Ambassador to Sri Lanka, currently Ambassador Michele J. SISON, is accredited to Maldives and makes periodic visits"
-    ],
-    "Infant mortality rate":[
-        "24.59 deaths/1,000 live births",
-        "27.01 deaths/1,000 live births",
-        "22.04 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Sunni Muslim (official)"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$356 million (30 November 2012 est.)",
-        "$326 million (30 November 2011 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "1.2%",
-        "33.3% (FY09/10)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "17.8% (2009)"
-    ],
-    "Hospital bed density":[
-        "4.3 beds/1,000 population (2009)"
-    ],
-    "Life expectancy at birth":[
-        "75.15 years",
-        "72.86 years",
-        "77.55 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "0.1% (2012 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "13 years",
-        "13 years",
-        "13 years (2003)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "4,167",
-        "3,595 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ADB, AOSIS, C, CP, FAO, G-77, IBRD, ICAO, ICC (NGOs), IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITU, MIGA, NAM, OIC, OPCW, SAARC, SACEP, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Dhivehi (official, dialect of Sinhala, script derived from Arabic), English (spoken by most government officials)"
-    ],
-    "Country name":[
+    "country name":[
         "Republic of Maldives",
         "Maldives",
         "Dhivehi Raajjeyge Jumhooriyyaa",
         "Dhivehi Raajje"
     ],
-    "Maritime claims":[
-        "measured from claimed archipelagic straight baselines",
-        "12 nm",
-        "24 nm",
-        "200 nm"
+    "electricity - from fossil fuels":[
+        "99.9% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$555 million (31 December 2011 est.)"
+    "capital":[
+        "Male",
+        "4 10 N, 73 30 E",
+        "UTC+5 (10 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Taxes and other revenues":[
-        "28.1% of GDP (2012 est.)"
+    "gdp (purchasing power parity)":[
+        "$3.073 billion (2013 est.)",
+        "$2.97 billion (2012 est.)",
+        "$2.945 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "23.9",
-        "median age at first birth among women 25-29 (2009 est.)"
+    "independence":[
+        "26 July 1965 (from the UK)"
     ],
-    "Refined petroleum products - consumption":[
-        "6,875 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "-0.09% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 99.5% of population",
         "rural: 97.9% of population",
         "total: 98.6% of population",
@@ -348,207 +253,52 @@
         "rural: 2.1% of population",
         "total: 1.4% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Ahmed SAREER (since 11 January 2013)",
-        "800 2nd Avenue, Suite 400E, New York, NY 10017",
-        "[1] (212) 599-6194",
-        "[1] (212) 599-6195"
+    "electricity - from hydroelectric plants":[
+        "0% of total installed capacity (2010 est.)"
     ],
-    "Internet users":[
-        "86,400 (2009)"
-    ],
-    "Contraceptive prevalence rate":[
-        "34.7% (2009)"
-    ],
-    "Internet hosts":[
-        "3,296 (2012)"
-    ],
-    "Current account balance":[
-        "-$600 million (2012 est.)",
-        "$437 million (2011 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$890.8 million (2012 est.)",
         "$684.2 million (2011 est.)"
     ],
-    "Administrative divisions":[
-        "7 provinces and 1 municipality*; Dhekunu (South), Maale*, Mathi Dhekunu (Upper South), Mathi Uthuru (Upper North), Medhu (Central), Medhu Dhekunu (South Central), Medhu Uthuru (North Central), Uthuru (North)"
-    ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Land use":[
-        "10%",
-        "10%",
-        "80% (2011)"
-    ],
-    "Disputes - international":[
-        "none"
-    ],
-    "Climate":[
-        "tropical; hot, humid; dry, northeast monsoon (November to March); rainy, southwest monsoon (June to August)"
-    ],
-    "Natural resources":[
-        "fish"
-    ],
-    "Internet country code":[
-        ".mv"
-    ],
-    "Electricity - production":[
-        "301.1 million kWh (2010 est.)"
-    ],
-    "Death rate":[
-        "3.84 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$1.406 billion (2012 est.)",
-        "$1.314 billion (2011 est.)"
-    ],
-    "National symbol(s)":[
-        "coconut palm, yellowfin tuna"
-    ],
-    "GDP - real growth rate":[
-        "3.5% (2013 est.)",
-        "0.9% (2012 est.)",
-        "6.5% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "0 cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "7% (31 December 2012 est.)",
-        "6.96% (31 December 2011 est.)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "12.9% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "0 bbl/day (2009 est.)"
-    ],
-    "Industries":[
-        "tourism, fish processing, shipping, boat building, coconut processing, woven mats, rope, handicrafts, coral and sand mining"
-    ],
-    "Legal system":[
-        "Islamic religious legal system with English common law influences, primarily in commercial matters"
-    ],
-    "Military - note":[
-        "the Maldives National Defense Force (MNDF), with its small size and with little serviceable equipment, is inadequate to prevent external aggression and is primarily tasked to reinforce the Maldives Police Service (MPS) and ensure security in the exclusive economic zone (2008)"
-    ],
-    "Capital":[
-        "Male",
-        "4 10 N, 73 30 E",
-        "UTC+5 (10 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2012 est.)"
-    ],
-    "Environment - current issues":[
-        "depletion of freshwater aquifers threatens water supplies; global warming and sea level rise; coral reef bleaching"
-    ],
-    "Imports - partners":[
-        "Singapore 21.7%, UAE 20.9%, India 9.6%, Malaysia 7.6%, China 6%, Thailand 5.6%, Sri Lanka 4% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "0 cu m (2012 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "62,080 kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "15.59 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "21% (male 42,154/female 40,490)",
-        "23.4% (male 53,760/female 38,385)",
-        "46.5% (male 107,703/female 75,360)",
-        "4.8% (male 9,782/female 9,180)",
-        "4.2% (male 7,974/female 8,807) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "10.5% (31 December 2012 est.)",
-        "10.2% (31 December 2011 est.)"
-    ],
-    "Land boundaries":[
-        "0 km"
-    ],
-    "Coastline":[
+    "coastline":[
         "644 km"
     ],
-    "Nationality":[
-        "Maldivian(s)",
-        "Maldivian"
+    "household income or consumption by percentage share":[
+        "1.2%",
+        "33.3% (FY09/10)"
     ],
-    "Telephones - main lines in use":[
-        "23,140 (2012)"
+    "refined petroleum products - imports":[
+        "6088 bbl/day (2012 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "98.4%",
-        "98.4%",
-        "98.4% (2006 est.)"
+    "climate":[
+        "tropical; hot, humid; dry, northeast monsoon (November to March); rainy, southwest monsoon (June to August)"
     ],
-    "Total renewable water resources":[
-        "0.03 cu km (2011)"
+    "hiv/aids - adult prevalence rate":[
+        "0.1% (2012 est.)"
     ],
-    "National holiday":[
-        "Independence Day, 26 July (1965)"
+    "manpower reaching militarily significant age annually":[
+        "4167",
+        "3595 (2010 est.)"
     ],
-    "Elevation extremes":[
-        "Indian Ocean 0 m",
-        "unnamed location on Viligili in the Addu Atholhu 2.4 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "1.6 physicians/1,000 population (2007)"
-    ],
-    "Exports - commodities":[
-        "fish"
-    ],
-    "Labor force":[
-        "159,700 (2012)"
-    ],
-    "Dependency ratios":[
-        "50 %",
-        "42.7 %",
-        "7.4 %",
-        "13.6 (2014 est.)"
-    ],
-    "Roadways":[
+    "roadways":[
         "88 km",
         "88 km - 60 km in Male; 14 km on Addu Atolis; 14 km on Laamu",
         "island roads are mainly compacted coral (2013)"
     ],
-    "Electricity - exports":[
-        "0 kWh (2012 est.)"
+    "net migration rate":[
+        "-12.67 migrant(s)/1000 population (2014 est.)"
     ],
-    "Ports and terminals":[
-        "Male"
-    ],
-    "Refined petroleum products - imports":[
-        "6,088 bbl/day (2012 est.)"
-    ],
-    "Natural gas - production":[
-        "0 cu m (2012 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "rufiyaa (MVR) per US dollar -",
         "15.365 (2011)",
         "14.602 (2011)",
         "12.8 (2008)",
         "12.8 (2007)"
     ],
-    "Ethnic groups":[
-        "South Indians, Sinhalese, Arabs"
+    "refined petroleum products - production":[
+        "0 bbl/day (2012 est.)"
     ],
-    "Sex ratio":[
+    "sex ratio":[
         "1.05 male(s)/female",
         "1.04 male(s)/female",
         "1.4 male(s)/female",
@@ -557,12 +307,262 @@
         "0.94 male(s)/female",
         "1.34 male(s)/female (2014 est.)"
     ],
-    "Broadcast media":[
-        "state-owned radio and TV monopoly until recently; state-owned TV operates 2 channels; 3 privately owned TV stations; state owns Voice of Maldives and operates both an entertainment and a music-based station; 5 privately owned radio stations (2012)"
+    "manpower available for military service":[
+        "156319",
+        "98815 (2010 est.)"
     ],
-    "National anthem":[
-        "\"Gaumee Salaam\" (National Salute)",
-        "Mohamed Jameel DIDI/Wannakuwattawaduge DON AMARADEVA",
-        "lyrics adopted 1948, music adopted 1972; between 1948 and 1972, the lyrics were sung to the tune of \"Auld Lang Syne\""
+    "reserves of foreign exchange and gold":[
+        "$356 million (30 November 2012 est.)",
+        "$326 million (30 November 2011 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "2",
+        "2 (2013)"
+    ],
+    "stock of broad money":[
+        "$1.298 billion (31 December 2012 est.)",
+        "$1.237 billion (31 December 2011 est.)"
+    ],
+    "national symbol(s)":[
+        "coconut palm, yellowfin tuna"
+    ],
+    "gdp - real growth rate":[
+        "3.5% (2013 est.)",
+        "0.9% (2012 est.)",
+        "6.5% (2011 est.)"
+    ],
+    "telephone system":[
+        "telephone services have improved; inter-atoll communication through microwave links; all inhabited islands and resorts are connected with telephone and fax service",
+        "each island now has at least 1 public telephone, and there are mobile-cellular networks with a rapidly expanding subscribership that has reached 135 per 100 persons",
+        "country code - 960; linked to international submarine cable Fiber-Optic Link Around the Globe (FLAG); satellite earth station - 3 Intelsat (Indian Ocean) (2011)"
+    ],
+    "flag description":[
+        "red with a large green rectangle in the center bearing a vertical white crescent moon; the closed side of the crescent is on the hoist side of the flag; red recalls those who have sacrificed their lives in defense of their country, the green rectangle represents peace and prosperity, and the white crescent signifies Islam"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "nationality":[
+        "Maldivian(s)",
+        "Maldivian"
+    ],
+    "life expectancy at birth":[
+        "75.15 years",
+        "72.86 years",
+        "77.55 years (2014 est.)"
+    ],
+    "languages":[
+        "Dhivehi (official, dialect of Sinhala, script derived from Arabic), English (spoken by most government officials)"
+    ],
+    "area":[
+        "298 sq km",
+        "298 sq km",
+        "0 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "1.071 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "fish"
+    ],
+    "telephones - mobile cellular":[
+        "560000 (2012)"
+    ],
+    "maritime claims":[
+        "measured from claimed archipelagic straight baselines",
+        "12 nm",
+        "24 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "0.1% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "France 18.9%, Thailand 15.8%, UK 11.4%, US 9.4%, Sri Lanka 8.6%, Italy 8.1%, Germany 6.4% (2012)"
+    ],
+    "population growth rate":[
+        "-0.09% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18-28 years of age for voluntary service; no conscription; 10th grade or equivalent education required; must not be a member of a political party (2012)"
+    ],
+    "sanitation facility access":[
+        "urban: 97.5% of population",
+        "rural: 99.6% of population",
+        "total: 98.7% of population",
+        "",
+        "urban: 2.5% of population",
+        "rural: 0.4% of population",
+        "total: 1.3% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "3%",
+        "17%",
+        "80% (2012 est.)"
+    ],
+    "age structure":[
+        "21% (male 42154/female 40490)",
+        "23.4% (male 53760/female 38385)",
+        "46.5% (male 107703/female 75360)",
+        "4.8% (male 9782/female 9180)",
+        "4.2% (male 7974/female 8807) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "6875 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "0 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2012 est.)"
+    ],
+    "area - comparative":[
+        "about 1.7 times the size of Washington, DC"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "disputes - international":[
+        "none"
+    ],
+    "population":[
+        "393595 (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "0.03 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 26 July (1965)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-12.3% of GDP (2012 est.)"
+    ],
+    "trafficking in persons":[
+        "Maldives is a destination country for men, women, and children subjected to forced labor and sex trafficking and a source country for Maldivian children subjected to human trafficking within the country; Bangladeshi and Indian migrants working both legally and illegally in the construction and service sectors face conditions of forced labor, including fraudulent recruitment, confiscation of identity and travel documents, nonpayment of wages, and debt bondage; a small number of women from Sri Lanka, Thailand, India, China, the Philippines, Bangladesh, Eastern Europe, and former Soviet states are trafficked to Maldives for sexual exploitation; some Maldivian children are transported to the capital for forced domestic service, where they may also be sexually abused",
+        "Tier 2 Watch List - Maldives does not fully comply with the minimum standards for the elimination of trafficking; the government does not have laws prohibiting all human trafficking offenses but introduced an anti-trafficking law to the legislature in December 2012, approved an anti-trafficking plan for 2012-13, and formed an anti-trafficking steering committee in May 2012; the government reported that it prosecuted some sex trafficking cases but did not take concrete actions to protect trafficking victims and prevent trafficking; the government continues to lack systematic procedures for identifying trafficking victims among vulnerable populations and referring them to protective services; officials continue to confuse human trafficking with human smuggling and the presence of undocumented migrants (2013)"
+    ],
+    "budget":[
+        "$638 million",
+        "$917 million (2012 est.)"
+    ],
+    "population below poverty line":[
+        "16% (2008)"
+    ],
+    "death rate":[
+        "3.84 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$555 million (31 December 2011 est.)"
+    ],
+    "industrial production growth rate":[
+        "14% (2012 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "37.4 (2004)"
+    ],
+    "inflation rate (consumer prices)":[
+        "5.1% (2012 est.)",
+        "16.7% (2011 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Ahmed SAREER (since 11 January 2013)",
+        "800 2nd Avenue, Suite 400E, New York, NY 10017",
+        "[1] (212) 599-6194",
+        "[1] (212) 599-6195"
+    ],
+    "imports":[
+        "$1.406 billion (2012 est.)",
+        "$1.314 billion (2011 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "10.5% (31 December 2012 est.)",
+        "10.2% (31 December 2011 est.)"
+    ],
+    "education expenditures":[
+        "6.8% of GDP (2011)"
+    ],
+    "electricity - consumption":[
+        "280 million kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "4.3 beds/1000 population (2009)"
+    ],
+    "ethnic groups":[
+        "South Indians, Sinhalese, Arabs"
+    ],
+    "unemployment, youth ages 15-24":[
+        "22.2%",
+        "15.5%",
+        "30.5% (2006)"
+    ],
+    "land use":[
+        "10%",
+        "10%",
+        "80% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "0.01  cu km/yr (95%/5%/0%)",
+        "18.44  cu m/yr (2008)"
+    ],
+    "stock of domestic credit":[
+        "$1.559 billion (31 December 2012 est.)",
+        "$1.601 billion (31 December 2011 est.)"
+    ],
+    "agriculture - products":[
+        "coconuts, corn, sweet potatoes; fish"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "3296 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "various unregistered political parties"
+    ],
+    "administrative divisions":[
+        "7 provinces and 1 municipality*; Dhekunu (South), Maale*, Mathi Dhekunu (Upper South), Mathi Uthuru (Upper North), Medhu (Central), Medhu Dhekunu (South Central), Medhu Uthuru (North Central), Uthuru (North)"
+    ],
+    "hiv/aids - deaths":[
+        "fewer than 100 (2009 est.)"
+    ],
+    "crude oil - production":[
+        "0 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "23140 (2012)"
+    ],
+    "electricity - production":[
+        "301.1 million kWh (2010 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
+        "Indian Ocean 0 m",
+        "unnamed location on Viligili in the Addu Atholhu 2.4 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "13 years",
+        "13 years",
+        "13 years (2003)"
+    ],
+    "physicians density":[
+        "1.6 physicians/1000 population (2007)"
+    ],
+    "international organization participation":[
+        "ADB, AOSIS, C, CP, FAO, G-77, IBRD, ICAO, ICC (NGOs), IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITU, MIGA, NAM, OIC, OPCW, SAARC, SACEP, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$2.27 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "0 kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "62080 kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Male (capital) 132000 (2011)"
     ]
 }

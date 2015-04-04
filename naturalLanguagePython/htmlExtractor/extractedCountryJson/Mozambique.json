@@ -1,191 +1,82 @@
 {
-    "Inflation rate (consumer prices)":[
-        "4.4% (2013 est.)",
-        "2.1% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "6.6% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "992 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "1,181 sq km (2003)"
-    ],
-    "Exports - partners":[
-        "South Africa 31.3%, Belgium 12.8%, China 9%, Italy 7.9%, Spain 6.2%, India 5.8% (2012)"
-    ],
-    "Independence":[
-        "25 June 1975 (from Portugal)"
-    ],
-    "Constitution":[
-        "previous 1975, 1990; latest adopted 16 November 2004, effective 21 December 2004; note - draft amendments planned for parliamentary review in late 2013 (2013)"
-    ],
-    "Geography - note":[
-        "the Zambezi flows through the north-central and most fertile part of the country"
-    ],
-    "Exports":[
-        "$3.92 billion (2013 est.)",
-        "$3.47 billion (2012 est.)"
-    ],
-    "Pipelines":[
-        "gas 972 km; refined products 278 km (2013)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$1,200 (2013 est.)",
-        "$1,200 (2012 est.)",
-        "$1,100 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 43.6% of population",
-        "rural: 10.7% of population",
-        "total: 21% of population",
-        "",
-        "urban: 56.4% of population",
-        "rural: 89.3% of population",
-        "total: 79% of population (2012 est.)"
-    ],
-    "Waterways":[
-        "460 km (Zambezi River navigable to Tete and along Cahora Bassa Lake) (2010)"
-    ],
-    "Maternal mortality rate":[
-        "490 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "three equal horizontal bands of green (top), black, and yellow with a red isosceles triangle based on the hoist side; the black band is edged in white; centered in the triangle is a yellow five-pointed star bearing a crossed rifle and hoe in black superimposed on an open white book; green represents the riches of the land, white peace, black the African continent, yellow the country's minerals, and red the struggle for independence; the rifle symbolizes defense and vigilance, the hoe refers to the country's agriculture, the open book stresses the importance of education, and the star represents Marxism and internationalism"
-    ],
-    "Political pressure groups and leaders":[
-        "Mozambican League of Human Rights (Liga Mocambicana dos Direitos Humanos) or LDH [Alice MABOTE, president]"
-    ],
-    "Telephones - mobile cellular":[
-        "8.108 million (2012)"
-    ],
-    "Natural gas - imports":[
-        "0 cu m (2011 est.)"
-    ],
-    "Net migration rate":[
-        "-2.02 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "2,677,473",
-        "2,941,073 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$14.67 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "0% of total installed capacity (2012 est.)"
-    ],
-    "Public debt":[
-        "46.7% of GDP (2013 est.)",
-        "42.2% of GDP (2012 est.)"
-    ],
-    "Crude oil - production":[
-        "20 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
+    "natural gas - exports":[
         "3.3 billion cu m (2011 est.)"
     ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "18 15 S, 35 00 E"
     ],
-    "Terrain":[
-        "mostly coastal lowlands, uplands in center, high plateaus in northwest, mountains in west"
+    "hiv/aids - people living with hiv/aids":[
+        "1554700 (2012 est.)"
     ],
-    "Electricity - imports":[
-        "8.537 billion kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "5% of GDP (2006)"
-    ],
-    "Government type":[
+    "government type":[
         "republic"
     ],
-    "Crude oil - imports":[
-        "0 bbl/day (2010 est.)"
+    "religions":[
+        "Roman Catholic 28.4%, Muslim 17.9%, Zionist Christian 15.5%, Protestant 12.2% (includes Pentecostal 10.9% and Anglican 1.3%), other 6.7%, none 18.7%, unspecified 0.7% (2007 est.)"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "17% (2007 est.)",
         "21% (1997 est.)"
     ],
-    "Sex ratio":[
-        "1.02 male(s)/female",
-        "1.01 male(s)/female",
-        "0.95 male(s)/female",
-        "0.88 male(s)/female",
-        "0.95 male(s)/female",
-        "0.85 male(s)/female",
-        "0.95 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "-5.6% of GDP (2013 est.)",
+        "-4.6% of GDP (2012 est.)",
+        "0.8% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
-        "Democratic Movement of Mozambique (Movimento Democratico de Mocambique) or MDM [Daviz SIMANGO]",
-        "Front for the Liberation of Mozambique (Frente de Liberatacao de Mocambique) or FRELIMO [Armando Emilio GUEBUZA]",
-        "Mozambique National Resistance (Resistencia Nacional Mocambicana) or RENAMO [Afonso DHLAKAMA]"
+    "total fertility rate":[
+        "5.27 children born/woman (2014 est.)"
     ],
-    "Environment - current issues":[
+    "national anthem":[
+        "Patria Amada (Lovely Fatherland)",
+        "Salomao J. MANHICA/unknown",
+        "adopted 2002"
+    ],
+    "environment - current issues":[
         "a long civil war and recurrent drought in the hinterlands have resulted in increased migration of the population to urban and coastal areas with adverse environmental consequences; desertification; pollution of surface and coastal waters; elephant poaching for ivory is a problem"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    "industries":[
+        "aluminum, petroleum products, chemicals (fertilizer, soap, paints), textiles, cement, glass, asbestos, tobacco, food, beverages"
     ],
-    "Stock of domestic credit":[
-        "$4.438 billion (31 December 2013 est.)",
-        "$3.951 billion (31 December 2012 est.)"
+    "legal system":[
+        "mixed legal system of Portuguese civil law, and customary law; note - in rural, predominately Muslim villages with no formal legal system, Islamic law may be applied"
     ],
-    "Area":[
-        "799,380 sq km",
-        "786,380 sq km",
-        "13,000 sq km"
+    "health expenditures":[
+        "6.6% of GDP (2011)"
     ],
-    "Budget surplus (+) or deficit (-)":[
-        "-8.8% of GDP (2013 est.)"
+    "natural gas - proved reserves":[
+        "127.4 billion cu m (1 January 2013 est.)"
     ],
-    "Land use":[
-        "6.51%",
-        "0.25%",
-        "93.24% (2011)"
-    ],
-    "Median age":[
-        "16.9 years",
-        "16.3 years",
-        "17.5 years (2014 est.)"
-    ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "1,554,700 (2012 est.)"
-    ],
-    "Urbanization":[
+    "urbanization":[
         "31.2% of total population (2011)",
         "3.05% annual rate of change (2010-15 est.)"
     ],
-    "Imports - commodities":[
+    "imports - commodities":[
         "machinery and equipment, vehicles, fuel, chemicals, metal products, foodstuffs, textiles"
     ],
-    "Location":[
+    "crude oil - imports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "location":[
         "Southeastern Africa, bordering the Mozambique Channel, between South Africa and Tanzania"
     ],
-    "Electricity - from fossil fuels":[
-        "0.1% of total installed capacity (2012 est.)"
+    "irrigated land":[
+        "1181 sq km (2003)"
     ],
-    "Telephone system":[
-        "a fair telecommunications system that is shackled with a heavy state presence, lack of competition, and high operating costs and charges",
-        "stagnation in the fixed-line network contrasts with rapid growth in the mobile-cellular network; mobile-cellular coverage now includes all the main cities and key roads, including those from Maputo to the South African and Swaziland borders, the national highway through Gaza and Inhambane provinces, the Beira corridor, and from Nampula to Nacala; extremely low fixed-line teledensity; despite significant growth in mobile-cellular services, teledensity remains low at about 35 per 100 persons",
-        "country code - 258; landing point for the EASSy and SEACOM fiber-optic submarine cable systems; satellite earth stations - 5 Intelsat (2 Atlantic Ocean and 3 Indian Ocean) (2011)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$28.15 billion (2013 est.)",
-        "$26.31 billion (2012 est.)",
-        "$24.49 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
+    "natural hazards":[
         "severe droughts; devastating cyclones and floods in central and southern provinces"
     ],
-    "Stock of narrow money":[
+    "natural gas - consumption":[
+        "80 million cu m (2010 est.)"
+    ],
+    "exports":[
+        "$3.92 billion (2013 est.)",
+        "$3.47 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
         "$4.665 billion (31 December 2013 est.)",
         "$4.335 billion (31 December 2012 est.)"
     ],
-    "Airports - with paved runways":[
+    "airports - with paved runways":[
         "21",
         "1",
         "2",
@@ -193,174 +84,172 @@
         "5",
         "4 (2013)"
     ],
-    "Railways":[
-        "4,787 km",
-        "4,787 km 1.067-m gauge (2008)"
+    "internet users":[
+        "613600 (2009)"
     ],
-    "Electricity - consumption":[
-        "10.19 billion kWh (2012 est.)"
+    "railways":[
+        "4787 km",
+        "4787 km 1.067-m gauge (2008)"
     ],
-    "Manpower available for military service":[
-        "4,613,367 (2010 est.)"
+    "current account balance":[
+        "-$5.884 billion (2013 est.)",
+        "-$5.168 billion (2012 est.)"
     ],
-    "Airports - with unpaved runways":[
-        "77",
-        "1",
-        "9",
-        "29",
-        "",
-        "38 (2013)"
+    "maternal mortality rate":[
+        "490 deaths/100000 live births (2010)"
     ],
-    "HIV/AIDS - deaths":[
-        "76,800 (2012 est.)"
+    "taxes and other revenues":[
+        "32.8% of GDP (2013 est.)"
     ],
-    "Area - comparative":[
-        "slightly less than twice the size of California"
+    "children under the age of 5 years underweight":[
+        "15.6% (2011)"
     ],
-    "Distribution of family income - Gini index":[
-        "45.6 (2008)",
-        "47.3 (2002)"
+    "refined petroleum products - exports":[
+        "953 bbl/day (2010 est.)"
     ],
-    "Population":[
-        "24,692,144",
-        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
+    "literacy":[
+        "age 15 and over can read and write",
+        "56.1%",
+        "70.8%",
+        "42.8% (2010 est.)"
     ],
-    "Crude oil - proved reserves":[
+    "crude oil - proved reserves":[
         "0 bbl (1 January 2013 est.)"
     ],
-    "Airports":[
+    "airports":[
         "98 (2013)"
     ],
-    "Major infectious diseases":[
+    "gdp - per capita (ppp)":[
+        "$1200 (2013 est.)",
+        "$1200 (2012 est.)",
+        "$1100 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "major infectious diseases":[
         "very high",
         "bacterial and protozoal diarrhea, hepatitis A, and typhoid fever",
         "malaria and dengue fever",
         "schistosomiasis",
         "rabies (2013)"
     ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "0.88  cu km/yr (26%/4%/70%)",
-        "46.05  cu m/yr (2005)"
+    "birth rate":[
+        "38.83 births/1000 population (2014 est.)"
     ],
-    "Budget":[
-        "$4.808 billion",
-        "$6.101 billion (2013 est.)"
+    "internet country code":[
+        ".mz"
     ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "3.426 million Mt (2011 est.)"
+    "suffrage":[
+        "18 years of age; universal"
     ],
-    "Agriculture - products":[
-        "cotton, cashew nuts, sugarcane, tea, cassava (manioc, tapioca), corn, coconuts, sisal, citrus and tropical fruits, potatoes, sunflowers; beef, poultry"
+    "natural gas - production":[
+        "3.82 billion cu m (2011 est.)"
     ],
-    "Military service age and obligation":[
-        "registration for military service is mandatory for all males and females at 18 years of age; 18-35 years of age for selective compulsory military service; 18 years of age for voluntary service; 2-year service obligation; women may serve as officers or enlisted (2012)"
+    "exports - commodities":[
+        "aluminum, prawns, cashews, cotton, sugar, citrus, timber; bulk electricity"
     ],
-    "Total fertility rate":[
-        "5.27 children born/woman (2014 est.)"
+    "labor force":[
+        "10.55 million (2013 est.)"
     ],
-    "Major urban areas - population":[
-        "MAPUTO (capital) 1.15 million; Matola 790,000 (2011)"
+    "dependency ratios":[
+        "94.5 %",
+        "88.1 %",
+        "6.4 %",
+        "15.6 (2014 est.)"
     ],
-    "Population below poverty line":[
-        "52% (2009 est.)"
+    "imports - partners":[
+        "South Africa 30.5%, China 12.3%, India 11.6%, US 5.1%, Portugal 4.8%, Australia 4.5% (2012)"
     ],
-    "Labor force - by occupation":[
+    "mother's mean age at first birth":[
+        "18.9",
+        "median age at first birth among women 25-29 (2011 est.)"
+    ],
+    "ports and terminals":[
+        "Beira, Maputo, Nacala"
+    ],
+    "labor force - by occupation":[
         "81%",
         "6%",
         "13% (1997 est.)"
     ],
-    "Stock of broad money":[
-        "$6.856 billion (31 December 2013 est.)",
-        "$6.242 billion (31 December 2012 est.)"
+    "illicit drugs":[
+        "southern African transit point for South Asian hashish and heroin, and South American cocaine probably destined for the European and South African markets; producer of cannabis (for local consumption) and methaqualone (for export to South Africa); corruption and poor regulatory capability make the banking system vulnerable to money laundering, but the lack of a well-developed financial infrastructure limits the country's utility as a money-laundering center"
     ],
-    "GDP - composition, by sector of origin":[
-        "28.7%",
-        "24.9%",
-        "46.4% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
+    "diplomatic representation from the us":[
         "Ambassador Douglas M. GRIFFITHS (since 6 July 2012)",
         "Avenida Kenneth Kuanda 193, Maputo",
         "P. O. Box 783, Maputo",
         "[258] (21) 492797",
         "[258] (21) 490114"
     ],
-    "Contraceptive prevalence rate":[
+    "terrain":[
+        "mostly coastal lowlands, uplands in center, high plateaus in northwest, mountains in west"
+    ],
+    "electricity - imports":[
+        "8.537 billion kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
+        "72.42 deaths/1000 live births",
+        "74.53 deaths/1000 live births",
+        "70.26 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "9.5% (17 January 2013 est.)",
+        "3.25% (31 December 2010 est.)"
+    ],
+    "geography - note":[
+        "the Zambezi flows through the north-central and most fertile part of the country"
+    ],
+    "political parties and leaders":[
+        "Democratic Movement of Mozambique (Movimento Democratico de Mocambique) or MDM [Daviz SIMANGO]",
+        "Front for the Liberation of Mozambique (Frente de Liberatacao de Mocambique) or FRELIMO [Armando Emilio GUEBUZA]",
+        "Mozambique National Resistance (Resistencia Nacional Mocambicana) or RENAMO [Afonso DHLAKAMA]"
+    ],
+    "obesity - adult prevalence rate":[
+        "4.9% (2008)"
+    ],
+    "broadcast media":[
+        "1 state-run TV station supplemented by private TV station; Portuguese state TV's African service, RTP Africa, and Brazilian-owned TV Miramar are available; state-run radio provides nearly 100% territorial coverage and broadcasts in multiple languages; a number of privately owned and community-operated stations; transmissions of multiple international broadcasters are available (2007)"
+    ],
+    "constitution":[
+        "previous 1975, 1990; latest adopted 16 November 2004, effective 21 December 2004; note - draft amendments planned for parliamentary review in late 2013 (2013)"
+    ],
+    "contraceptive prevalence rate":[
         "11.6% (2011)"
     ],
-    "Infant mortality rate":[
-        "72.42 deaths/1,000 live births",
-        "74.53 deaths/1,000 live births",
-        "70.26 deaths/1,000 live births (2014 est.)"
+    "median age":[
+        "16.9 years",
+        "16.3 years",
+        "17.5 years (2014 est.)"
     ],
-    "Religions":[
-        "Roman Catholic 28.4%, Muslim 17.9%, Zionist Christian 15.5%, Protestant 12.2% (includes Pentecostal 10.9% and Anglican 1.3%), other 6.7%, none 18.7%, unspecified 0.7% (2007 est.)"
+    "manpower fit for military service":[
+        "2677473",
+        "2941073 (2010 est.)"
     ],
-    "Reserves of foreign exchange and gold":[
-        "$2.99 billion (31 December 2013 est.)",
-        "$2.77 billion (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "1.9%",
-        "36.7% (2008)"
-    ],
-    "Children under the age of 5 years underweight":[
-        "15.6% (2011)"
-    ],
-    "Hospital bed density":[
-        "0.7 beds/1,000 population (2011)"
-    ],
-    "Life expectancy at birth":[
-        "52.6 years",
-        "51.85 years",
-        "53.37 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "11.1% (2012 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "10 years",
-        "10 years",
-        "9 years (2011)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "274,602",
-        "280,008 (2010 est.)"
-    ],
-    "International organization participation":[
-        "ACP, AfDB, AU, C, CD, CPLP, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OIF (observer), OPCW, SADC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNISFA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Emakhuwa 25.3%, Portuguese (official) 10.7%, Xichangana 10.3%, Cisena 7.5%, Elomwe 7%, Echuwabo 5.1%, other Mozambican languages 30.1%, other 4% (1997 census)"
-    ],
-    "Country name":[
+    "country name":[
         "Republic of Mozambique",
         "Mozambique",
         "Republica de Mocambique",
         "Mocambique",
         "Portuguese East Africa"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "200 nm"
+    "electricity - from fossil fuels":[
+        "0.1% of total installed capacity (2012 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$NA"
+    "capital":[
+        "Maputo",
+        "25 57 S, 32 35 E",
+        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
     ],
-    "Taxes and other revenues":[
-        "32.8% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$28.15 billion (2013 est.)",
+        "$26.31 billion (2012 est.)",
+        "$24.49 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "18.9",
-        "median age at first birth among women 25-29 (2011 est.)"
+    "independence":[
+        "25 June 1975 (from Portugal)"
     ],
-    "Refined petroleum products - consumption":[
-        "19,580 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "2.45% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 80.3% of population",
         "rural: 35% of population",
         "total: 49.2% of population",
@@ -369,191 +258,46 @@
         "rural: 65% of population",
         "total: 50.8% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Amelia Narciso Matos SUMBANA (since 2 November 2009)",
-        "1525 New Hampshire Avenue NW, Washington, DC 20036",
-        "[1] (202) 293-7146",
-        "[1] (202) 835-0245"
+    "electricity - from hydroelectric plants":[
+        "99.9% of total installed capacity (2012 est.)"
     ],
-    "Internet users":[
-        "613,600 (2009)"
-    ],
-    "Child labor - children ages 5-14":[
-        "1,369,080",
-        "22 % (2008 est.)"
-    ],
-    "Internet hosts":[
-        "89,737 (2012)"
-    ],
-    "Current account balance":[
-        "-$5.884 billion (2013 est.)",
-        "-$5.168 billion (2012 est.)"
-    ],
-    "Debt - external":[
+    "debt - external":[
         "$6.276 billion (31 December 2013 est.)",
         "$4.7 billion (31 December 2012 est.)"
     ],
-    "Administrative divisions":[
-        "10 provinces (provincias, singular - provincia), 1 city (cidade)*; Cabo Delgado, Gaza, Inhambane, Manica, Maputo, Cidade de Maputo*, Nampula, Niassa, Sofala, Tete, Zambezia"
+    "coastline":[
+        "2470 km"
     ],
-    "Electricity - from nuclear fuels":[
-        "0% of total installed capacity (2012 est.)"
-    ],
-    "Industrial production growth rate":[
-        "8% (2013 est.)"
-    ],
-    "Disputes - international":[
-        "South Africa has placed military units to assist police operations along the border of Lesotho, Zimbabwe, and Mozambique to control smuggling, poaching, and illegal migration"
-    ],
-    "Climate":[
-        "tropical to subtropical"
-    ],
-    "Natural resources":[
-        "coal, titanium, natural gas, hydropower, tantalum, graphite"
-    ],
-    "Internet country code":[
-        ".mz"
-    ],
-    "Electricity - production":[
-        "14.83 billion kWh (2012 est.)"
-    ],
-    "Death rate":[
-        "12.34 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "99.9% of total installed capacity (2012 est.)"
-    ],
-    "Imports":[
-        "$7.068 billion (2013 est.)",
-        "$6.168 billion (2012 est.)"
-    ],
-    "GDP - real growth rate":[
-        "7% (2013 est.)",
-        "7.4% (2012 est.)",
-        "7.3% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "127.4 billion cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "9.5% (17 January 2013 est.)",
-        "3.25% (31 December 2010 est.)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "4.9% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "953 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "aluminum, petroleum products, chemicals (fertilizer, soap, paints), textiles, cement, glass, asbestos, tobacco, food, beverages"
-    ],
-    "Legal system":[
-        "mixed legal system of Portuguese civil law, and customary law; note - in rural, predominately Muslim villages with no formal legal system, Islamic law may be applied"
-    ],
-    "Capital":[
-        "Maputo",
-        "25 57 S, 32 35 E",
-        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "2.428 million kW (2010 est.)"
-    ],
-    "Imports - partners":[
-        "South Africa 30.5%, China 12.3%, India 11.6%, US 5.1%, Portugal 4.8%, Australia 4.5% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "80 million cu m (2010 est.)"
-    ],
-    "Birth rate":[
-        "38.83 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "45.3% (male 5,627,116/female 5,566,260)",
-        "21.3% (male 2,566,298/female 2,689,695)",
-        "27% (male 3,113,095/female 3,553,266)",
-        "3.5% (male 404,988/female 448,814)",
-        "2.9% (male 332,013/female 390,599) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "15.6% (31 December 2013 est.)",
-        "16.81% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "4,571 km",
-        "Malawi 1,569 km, South Africa 491 km, Swaziland 105 km, Tanzania 756 km, Zambia 419 km, Zimbabwe 1,231 km"
-    ],
-    "Coastline":[
-        "2,470 km"
-    ],
-    "Nationality":[
+    "nationality":[
         "Mozambican(s)",
         "Mozambican"
     ],
-    "Telephones - main lines in use":[
-        "88,100 (2012)"
+    "refined petroleum products - imports":[
+        "16140 bbl/day (2010 est.)"
     ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "56.1%",
-        "70.8%",
-        "42.8% (2010 est.)"
+    "climate":[
+        "tropical to subtropical"
     ],
-    "Total renewable water resources":[
-        "217.1 cu km (2011)"
+    "hiv/aids - adult prevalence rate":[
+        "11.1% (2012 est.)"
     ],
-    "National holiday":[
-        "Independence Day, 25 June (1975)"
+    "child labor - children ages 5-14":[
+        "1369080",
+        "22 % (2008 est.)"
     ],
-    "Elevation extremes":[
-        "Indian Ocean 0 m",
-        "Monte Binga 2,436 m"
+    "manpower reaching militarily significant age annually":[
+        "274602",
+        "280008 (2010 est.)"
     ],
-    "Suffrage":[
-        "18 years of age; universal"
+    "roadways":[
+        "30331 km",
+        "6303 km",
+        "24028 km (2009)"
     ],
-    "Physicians density":[
-        "0.03 physicians/1,000 population (2008)"
+    "net migration rate":[
+        "-2.02 migrant(s)/1000 population (2014 est.)"
     ],
-    "Exports - commodities":[
-        "aluminum, prawns, cashews, cotton, sugar, citrus, timber; bulk electricity"
-    ],
-    "Labor force":[
-        "10.55 million (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "94.5 %",
-        "88.1 %",
-        "6.4 %",
-        "15.6 (2014 est.)"
-    ],
-    "Roadways":[
-        "30,331 km",
-        "6,303 km",
-        "24,028 km (2009)"
-    ],
-    "Electricity - exports":[
-        "9.462 billion kWh (2012 est.)"
-    ],
-    "Ports and terminals":[
-        "Beira, Maputo, Nacala"
-    ],
-    "Refined petroleum products - imports":[
-        "16,140 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "southern African transit point for South Asian hashish and heroin, and South American cocaine probably destined for the European and South African markets; producer of cannabis (for local consumption) and methaqualone (for export to South Africa); corruption and poor regulatory capability make the banking system vulnerable to money laundering, but the lack of a well-developed financial infrastructure limits the country's utility as a money-laundering center"
-    ],
-    "Natural gas - production":[
-        "3.82 billion cu m (2011 est.)"
-    ],
-    "Exchange rates":[
+    "exchange rates":[
         "meticais (MZM) per US dollar -",
         "30 (2013 est.)",
         "28.383 (2012 est.)",
@@ -561,10 +305,62 @@
         "26.28 (2009)",
         "24.125 (2008)"
     ],
-    "Ethnic groups":[
-        "African 99.66% (Makhuwa, Tsonga, Lomwe, Sena, and others), Europeans 0.06%, Euro-Africans 0.2%, Indians 0.08%"
+    "refined petroleum products - production":[
+        "992 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.02 male(s)/female",
+        "1.01 male(s)/female",
+        "0.95 male(s)/female",
+        "0.88 male(s)/female",
+        "0.95 male(s)/female",
+        "0.85 male(s)/female",
+        "0.95 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "46.7% of GDP (2013 est.)",
+        "42.2% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "4613367 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$2.99 billion (31 December 2013 est.)",
+        "$2.77 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "77",
+        "1",
+        "9",
+        "29",
+        "",
+        "38 (2013)"
+    ],
+    "stock of broad money":[
+        "$6.856 billion (31 December 2013 est.)",
+        "$6.242 billion (31 December 2012 est.)"
+    ],
+    "gdp - real growth rate":[
+        "7% (2013 est.)",
+        "7.4% (2012 est.)",
+        "7.3% (2011 est.)"
+    ],
+    "telephone system":[
+        "a fair telecommunications system that is shackled with a heavy state presence, lack of competition, and high operating costs and charges",
+        "stagnation in the fixed-line network contrasts with rapid growth in the mobile-cellular network; mobile-cellular coverage now includes all the main cities and key roads, including those from Maputo to the South African and Swaziland borders, the national highway through Gaza and Inhambane provinces, the Beira corridor, and from Nampula to Nacala; extremely low fixed-line teledensity; despite significant growth in mobile-cellular services, teledensity remains low at about 35 per 100 persons",
+        "country code - 258; landing point for the EASSy and SEACOM fiber-optic submarine cable systems; satellite earth stations - 5 Intelsat (2 Atlantic Ocean and 3 Indian Ocean) (2011)"
+    ],
+    "flag description":[
+        "three equal horizontal bands of green (top), black, and yellow with a red isosceles triangle based on the hoist side; the black band is edged in white; centered in the triangle is a yellow five-pointed star bearing a crossed rifle and hoe in black superimposed on an open white book; green represents the riches of the land, white peace, black the African continent, yellow the country's minerals, and red the struggle for independence; the rifle symbolizes defense and vigilance, the hoe refers to the country's agriculture, the open book stresses the importance of education, and the star represents Marxism and internationalism"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "1.9%",
+        "36.7% (2008)"
+    ],
+    "gdp - composition, by end use":[
         "71.4%",
         "16.9%",
         "33.8%",
@@ -573,17 +369,221 @@
         "-50.5%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "-5.6% of GDP (2013 est.)",
-        "-4.6% of GDP (2012 est.)",
-        "0.8% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "52.6 years",
+        "51.85 years",
+        "53.37 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "1 state-run TV station supplemented by private TV station; Portuguese state TV's African service, RTP Africa, and Brazilian-owned TV Miramar are available; state-run radio provides nearly 100% territorial coverage and broadcasts in multiple languages; a number of privately owned and community-operated stations; transmissions of multiple international broadcasters are available (2007)"
+    "languages":[
+        "Emakhuwa 25.3%, Portuguese (official) 10.7%, Xichangana 10.3%, Cisena 7.5%, Elomwe 7%, Echuwabo 5.1%, other Mozambican languages 30.1%, other 4% (1997 census)"
     ],
-    "National anthem":[
-        "\"Patria Amada\" (Lovely Fatherland)",
-        "Salomao J. MANHICA/unknown",
-        "adopted 2002"
+    "area":[
+        "799380 sq km",
+        "786380 sq km",
+        "13000 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "3.426 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "coal, titanium, natural gas, hydropower, tantalum, graphite"
+    ],
+    "telephones - mobile cellular":[
+        "8.108 million (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "200 nm"
+    ],
+    "electricity - from other renewable sources":[
+        "0% of total installed capacity (2012 est.)"
+    ],
+    "exports - partners":[
+        "South Africa 31.3%, Belgium 12.8%, China 9%, Italy 7.9%, Spain 6.2%, India 5.8% (2012)"
+    ],
+    "population growth rate":[
+        "2.45% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "registration for military service is mandatory for all males and females at 18 years of age; 18-35 years of age for selective compulsory military service; 18 years of age for voluntary service; 2-year service obligation; women may serve as officers or enlisted (2012)"
+    ],
+    "pipelines":[
+        "gas 972 km; refined products 278 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 43.6% of population",
+        "rural: 10.7% of population",
+        "total: 21% of population",
+        "",
+        "urban: 56.4% of population",
+        "rural: 89.3% of population",
+        "total: 79% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "28.7%",
+        "24.9%",
+        "46.4% (2013 est.)"
+    ],
+    "age structure":[
+        "45.3% (male 5627116/female 5566260)",
+        "21.3% (male 2566298/female 2689695)",
+        "27% (male 3113095/female 3553266)",
+        "3.5% (male 404988/female 448814)",
+        "2.9% (male 332013/female 390599) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "19580 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "4571 km",
+        "Malawi 1569 km, South Africa 491 km, Swaziland 105 km, Tanzania 756 km, Zambia 419 km, Zimbabwe 1231 km"
+    ],
+    "natural gas - imports":[
+        "0 cu m (2011 est.)"
+    ],
+    "area - comparative":[
+        "slightly less than twice the size of California"
+    ],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "South Africa has placed military units to assist police operations along the border of Lesotho, Zimbabwe, and Mozambique to control smuggling, poaching, and illegal migration"
+    ],
+    "population":[
+        "24692144",
+        "estimates for this country explicitly take into account the effects of excess mortality due to AIDS; this can result in lower life expectancy, higher infant mortality, higher death rates, lower population growth rates, and changes in the distribution of population by age and sex than would otherwise be expected (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "217.1 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 25 June (1975)"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-8.8% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$4.808 billion",
+        "$6.101 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "52% (2009 est.)"
+    ],
+    "death rate":[
+        "12.34 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$NA"
+    ],
+    "industrial production growth rate":[
+        "8% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "45.6 (2008)",
+        "47.3 (2002)"
+    ],
+    "inflation rate (consumer prices)":[
+        "4.4% (2013 est.)",
+        "2.1% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Amelia Narciso Matos SUMBANA (since 2 November 2009)",
+        "1525 New Hampshire Avenue NW, Washington, DC 20036",
+        "[1] (202) 293-7146",
+        "[1] (202) 835-0245"
+    ],
+    "imports":[
+        "$7.068 billion (2013 est.)",
+        "$6.168 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "15.6% (31 December 2013 est.)",
+        "16.81% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "5% of GDP (2006)"
+    ],
+    "electricity - consumption":[
+        "10.19 billion kWh (2012 est.)"
+    ],
+    "hospital bed density":[
+        "0.7 beds/1000 population (2011)"
+    ],
+    "ethnic groups":[
+        "African 99.66% (Makhuwa, Tsonga, Lomwe, Sena, and others), Europeans 0.06%, Euro-Africans 0.2%, Indians 0.08%"
+    ],
+    "land use":[
+        "6.51%",
+        "0.25%",
+        "93.24% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "0.88  cu km/yr (26%/4%/70%)",
+        "46.05  cu m/yr (2005)"
+    ],
+    "stock of domestic credit":[
+        "$4.438 billion (31 December 2013 est.)",
+        "$3.951 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "cotton, cashew nuts, sugarcane, tea, cassava (manioc, tapioca), corn, coconuts, sisal, citrus and tropical fruits, potatoes, sunflowers; beef, poultry"
+    ],
+    "waterways":[
+        "460 km (Zambezi River navigable to Tete and along Cahora Bassa Lake) (2010)"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2012 est.)"
+    ],
+    "internet hosts":[
+        "89737 (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "Mozambican League of Human Rights (Liga Mocambicana dos Direitos Humanos) or LDH [Alice MABOTE, president]"
+    ],
+    "administrative divisions":[
+        "10 provinces (provincias, singular - provincia), 1 city (cidade)*; Cabo Delgado, Gaza, Inhambane, Manica, Maputo, Cidade de Maputo*, Nampula, Niassa, Sofala, Tete, Zambezia"
+    ],
+    "hiv/aids - deaths":[
+        "76800 (2012 est.)"
+    ],
+    "crude oil - production":[
+        "20 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "88100 (2012)"
+    ],
+    "electricity - production":[
+        "14.83 billion kWh (2012 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt"
+    ],
+    "elevation extremes":[
+        "Indian Ocean 0 m",
+        "Monte Binga 2436 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "10 years",
+        "10 years",
+        "9 years (2011)"
+    ],
+    "physicians density":[
+        "0.03 physicians/1000 population (2008)"
+    ],
+    "international organization participation":[
+        "ACP, AfDB, AU, C, CD, CPLP, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OIF (observer), OPCW, SADC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNISFA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$14.67 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "9.462 billion kWh (2012 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "2.428 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Maputo (capital) 1.15 million; Matola 790000 (2011)"
     ]
 }

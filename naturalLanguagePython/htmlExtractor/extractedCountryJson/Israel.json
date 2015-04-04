@@ -1,128 +1,195 @@
 {
-    "Refugees and internally displaced persons":[
-        "34,988 (Eritrea); 12,926 (Sudan) (2013)",
-        "14 (2012)"
-    ],
-    "Inflation rate (consumer prices)":[
-        "1.7% (2013 est.)",
-        "1.7% (2012 est.)"
-    ],
-    "Health expenditures":[
-        "7.7% of GDP (2011)"
-    ],
-    "Refined petroleum products - production":[
-        "278,400 bbl/day (2010 est.)"
-    ],
-    "Irrigated land":[
-        "2,250 sq km (2004)"
-    ],
-    "Exports - partners":[
-        "US 27.8%, Hong Kong 7.7%, UK 5.7%, Belgium 4.6%, China 4.3% (2012)"
-    ],
-    "Independence":[
-        "14 May 1948 (from League of Nations mandate under British administration)"
-    ],
-    "Constitution":[
-        "no formal constitution; some functions of a constitution are filled by the Declaration of Establishment (1948), the Basic Laws of the Parliament (Knesset), and the Israeli citizenship law (2013)"
-    ],
-    "Geography - note":[
-        "Lake Tiberias (Sea of Galilee) is an important freshwater source; the Dead Sea is the second saltiest body of water in the world (after Lake Assal in Djibouti); there are about 355 Israeli civilian sites including about 145 small outpost communities in the West Bank, 41 sites in the Golan Heights, and 32 in East Jerusalem (2010 est.)"
-    ],
-    "Exports":[
-        "$60.67 billion (2013 est.)",
-        "$62.32 billion (2012 est.)"
-    ],
-    "Pipelines":[
-        "gas 763 km; oil 442 km; refined products 261 km (2013)"
-    ],
-    "GDP - per capita (PPP)":[
-        "$36,200 (2013 est.)",
-        "$34,300 (2012 est.)",
-        "$34,000 (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Sanitation facility access":[
-        "urban: 100% of population",
-        "rural: 100% of population",
-        "total: 100% of population",
-        "",
-        "urban: 0% of population",
-        "rural: 0% of population",
-        "total: 0% of population (2012 est.)"
-    ],
-    "Maternal mortality rate":[
-        "7 deaths/100,000 live births (2010)"
-    ],
-    "Flag description":[
-        "white with a blue hexagram (six-pointed linear star) known as the Magen David (Star of David or Shield of David) centered between two equal horizontal blue bands near the top and bottom edges of the flag; the basic design resembles a traditional Jewish prayer shawl (tallit), which is white with blue stripes; the hexagram as a Jewish symbol dates back to medieval times"
-    ],
-    "Political pressure groups and leaders":[
-        "B'Tselem [Jessica MONTELL, Executive Director] monitors human rights abuses",
-        "Peace Now [Yariv OPPENHEIMER, Secretary General] supports territorial concessions in the West Bank and Gaza Strip",
-        "YESHA Council [Danny DAYAN, Chairman] promotes settler interests and opposes territorial compromise",
-        "Breaking the Silence [Yehuda SHAUL, Executive Director] collects testimonies from soldiers who served in the West Bank and Gaza Strip"
-    ],
-    "Telephones - mobile cellular":[
-        "9.225 million (2012)"
-    ],
-    "Natural gas - imports":[
-        "720 million cu m (2011 est.)"
-    ],
-    "Net migration rate":[
-        "1.68 migrant(s)/1,000 population (2014 est.)"
-    ],
-    "Manpower fit for military service":[
-        "1,517,510",
-        "1,446,132 (2010 est.)"
-    ],
-    "GDP (official exchange rate)":[
-        "$272.7 billion (2013 est.)"
-    ],
-    "Electricity - from other renewable sources":[
-        "1.8% of total installed capacity (2010 est.)"
-    ],
-    "Public debt":[
-        "67.1% of GDP (2013 est.)",
-        "66.9% of GDP (2012 est.)"
-    ],
-    "Crude oil - production":[
-        "5,839 bbl/day (2012 est.)"
-    ],
-    "Natural gas - exports":[
+    "natural gas - exports":[
         "0 cu m (2011 est.)"
     ],
-    "Geographic coordinates":[
+    "geographic coordinates":[
         "31 30 N, 34 45 E"
     ],
-    "Terrain":[
-        "Negev desert in the south; low coastal plain; central mountains; Jordan Rift Valley"
+    "hiv/aids - people living with hiv/aids":[
+        "7500 (2009 est.)"
     ],
-    "Electricity - imports":[
-        "0 kWh (2012 est.)"
-    ],
-    "Education expenditures":[
-        "5.6% of GDP (2011)"
-    ],
-    "Government type":[
+    "government type":[
         "parliamentary democracy"
     ],
-    "Crude oil - imports":[
-        "260,600 bbl/day (2010 est.)"
+    "religions":[
+        "Jewish 75.1%, Muslim 17.4%, Christian 2%, Druze 1.6%, other 3.9% (2012 est.)"
     ],
-    "Unemployment rate":[
+    "unemployment rate":[
         "5.8% (2013 est.)",
         "6.8% (2012 est.)"
     ],
-    "Sex ratio":[
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.05 male(s)/female",
-        "1.01 male(s)/female",
-        "0.78 male(s)/female",
-        "1.01 male(s)/female (2014 est.)"
+    "gross national saving":[
+        "22.2% of GDP (2013 est.)",
+        "21% of GDP (2012 est.)",
+        "21.4% of GDP (2011 est.)"
     ],
-    "Political parties and leaders":[
+    "total fertility rate":[
+        "2.62 children born/woman (2014 est.)"
+    ],
+    "national anthem":[
+        "Hatikvah (The Hope)",
+        "Naftali Herz IMBER/traditional, arranged by Samuel COHEN",
+        "adopted 2004, unofficial since 1948; used as the anthem of the Zionist movement since 1897; the 1888 arrangement by Samuel COHEN is thought to be based on the Romanian folk song Carul cu boi (The Ox Driven Cart)"
+    ],
+    "environment - current issues":[
+        "limited arable land and natural freshwater resources pose serious constraints; desertification; air pollution from industrial and vehicle emissions; groundwater pollution from industrial and domestic waste, chemical fertilizers, and pesticides"
+    ],
+    "industries":[
+        "high-technology products (including aviation, communications, computer-aided design and manufactures, medical electronics, fiber optics), wood and paper products, potash and phosphates, food, beverages, and tobacco, caustic soda, cement, construction, metal products, chemical products, plastics, cut diamonds, textiles, footwear"
+    ],
+    "legal system":[
+        "mixed legal system of English common law, British Mandate regulations, and Jewish, Christian, and Muslim religious laws"
+    ],
+    "health expenditures":[
+        "7.7% of GDP (2011)"
+    ],
+    "natural gas - proved reserves":[
+        "268.5 billion cu m (1 January 2013 est.)"
+    ],
+    "urbanization":[
+        "91.9% of total population (2011)",
+        "1.73% annual rate of change (2010-15 est.)"
+    ],
+    "imports - commodities":[
+        "raw materials, military equipment, investment goods, rough diamonds, fuels, grain, consumer goods"
+    ],
+    "crude oil - imports":[
+        "260600 bbl/day (2010 est.)"
+    ],
+    "location":[
+        "Middle East, bordering the Mediterranean Sea, between Egypt and Lebanon"
+    ],
+    "irrigated land":[
+        "2250 sq km (2004)"
+    ],
+    "natural hazards":[
+        "sandstorms may occur during spring and summer; droughts; periodic earthquakes"
+    ],
+    "natural gas - consumption":[
+        "6.86 billion cu m (2013 est.)"
+    ],
+    "exports":[
+        "$60.67 billion (2013 est.)",
+        "$62.32 billion (2012 est.)"
+    ],
+    "stock of narrow money":[
+        "$37.09 billion (31 December 2013 est.)",
+        "$32.48 billion (31 December 2012 est.)"
+    ],
+    "airports - with paved runways":[
+        "29",
+        "2",
+        "5",
+        "6",
+        "11",
+        "5 (2013)"
+    ],
+    "internet users":[
+        "4.525 million (2009)"
+    ],
+    "railways":[
+        "975 km",
+        "975 km 1.435-m gauge (2008)"
+    ],
+    "current account balance":[
+        "$5.259 billion (2013 est.)",
+        "$609 million (2012 est.)"
+    ],
+    "maternal mortality rate":[
+        "7 deaths/100000 live births (2010)"
+    ],
+    "taxes and other revenues":[
+        "40.2% of GDP (2013 est.)"
+    ],
+    "refined petroleum products - exports":[
+        "83700 bbl/day (2010 est.)"
+    ],
+    "literacy":[
+        "age 15 and over can read and write",
+        "97.1%",
+        "98.5%",
+        "95.9% (2004 est.)"
+    ],
+    "crude oil - proved reserves":[
+        "11.5 million bbl (1 January 2013 est.)"
+    ],
+    "airports":[
+        "47 (2013)"
+    ],
+    "gdp - per capita (ppp)":[
+        "$36200 (2013 est.)",
+        "$34300 (2012 est.)",
+        "$34000 (2011 est.)",
+        "data are in 2013 US dollars"
+    ],
+    "birth rate":[
+        "18.44 births/1000 population (2014 est.)"
+    ],
+    "internet country code":[
+        ".il"
+    ],
+    "suffrage":[
+        "18 years of age; universal"
+    ],
+    "natural gas - production":[
+        "6.86 billion cu m (2013 est.)"
+    ],
+    "exports - commodities":[
+        "machinery and equipment, software, cut diamonds, agricultural products, chemicals, textiles and apparel"
+    ],
+    "labor force":[
+        "3.493 million (2013 est.)"
+    ],
+    "dependency ratios":[
+        "63.1 %",
+        "45.5 %",
+        "17.6 %",
+        "5.7 (2014 est.)"
+    ],
+    "imports - partners":[
+        "US 12.9%, China 7.3%, Germany 6.3%, Switzerland 5.5%, Belgium 4.8% (2012)"
+    ],
+    "mother's mean age at first birth":[
+        "27.3 (2011 est.)"
+    ],
+    "ports and terminals":[
+        "Ashdod, Elat (Eilat), Hadera, Haifa",
+        "Ashdod (1176000) Haifa (1238000)"
+    ],
+    "labor force - by occupation":[
+        "1.6%",
+        "18.1%",
+        "80.3% (2012 est.)"
+    ],
+    "illicit drugs":[
+        "increasingly concerned about ecstasy, cocaine, and heroin abuse; drugs arrive in country from Lebanon and, increasingly, from Jordan; money-laundering center"
+    ],
+    "diplomatic representation from the us":[
+        "Ambassador Daniel B. SHAPIRO (since 8 July 2011)",
+        "71 Hayarkon Street, Tel Aviv 63903",
+        "[972] (3) 519-7475",
+        "[972] (3) 516-4390",
+        "Jerusalem; note - an independent US mission, established in 1928, whose members are not accredited to a foreign government"
+    ],
+    "terrain":[
+        "Negev desert in the south; low coastal plain; central mountains; Jordan Rift Valley"
+    ],
+    "electricity - imports":[
+        "0 kWh (2012 est.)"
+    ],
+    "infant mortality rate":[
+        "3.98 deaths/1000 live births",
+        "4.16 deaths/1000 live births",
+        "3.8 deaths/1000 live births (2014 est.)"
+    ],
+    "central bank discount rate":[
+        "1% (31 December 2013 est.)",
+        "1.75% (31 December 2012 est.)"
+    ],
+    "geography - note":[
+        "Lake Tiberias (Sea of Galilee) is an important freshwater source; the Dead Sea is the second saltiest body of water in the world (after Lake Assal in Djibouti); there are about 355 Israeli civilian sites including about 145 small outpost communities in the West Bank, 41 sites in the Golan Heights, and 32 in East Jerusalem (2010 est.)"
+    ],
+    "political parties and leaders":[
         "Balad [Jamal ZAHALKA]",
         "Democratic Front for Peace and Equality (HADASH) [Muhammad BARAKEH]",
         "Kadima [Shaul MOFAZ]",
@@ -131,242 +198,56 @@
         "National Union [Uri ARIEL]",
         "SHAS [Eliyahu YISHAI]",
         "The Jewish Home (HaBayit HaYehudi) [Naftali BENNETT]",
-        "The Movement (Hatnuah) [Tzipora \"Tzipi\" LIVNI]",
+        "The Movement (Hatnuah) [Tzipora Tzipi LIVNI]",
         "The New Movement-Meretz [Haim ORON]",
         "United Arab List-Ta'al [Ibrahim SARSUR]",
         "United Torah Judaism or UTJ [Yaakov LITZMAN] (a conglomerate of three parties)",
         "Yesh Atid [Yair LAPID]",
         "Yisrael Beiteinu or YB [Avigdor LIEBERMAN]"
     ],
-    "Unemployment, youth ages 15-24":[
-        "12.1%",
-        "11.6%",
-        "12.7% (2012)"
+    "obesity - adult prevalence rate":[
+        "26.2% (2008)"
     ],
-    "International law organization participation":[
-        "has not submitted an ICJ jurisdiction declaration; withdrew acceptance of ICCt jurisdiction in 2002"
+    "broadcast media":[
+        "state broadcasting network, operated by the Israel Broadcasting Authority (IBA), broadcasts on 2 channels, one in Hebrew and the other in Arabic; 5 commercial channels including a channel broadcasting in Russian, a channel broadcasting Knesset proceedings, and a music channel supervised by a public body; multi-channel satellite and cable TV packages provide access to foreign channels; IBA broadcasts on 8 radio networks with multiple repeaters and Israel Defense Forces Radio broadcasts over multiple stations; about 15 privately owned radio stations; overall more than 100 stations and repeater stations (2008)"
     ],
-    "Stock of domestic credit":[
-        "$207.7 billion (31 December 2013 est.)",
-        "$192.3 billion (31 December 2012 est.)"
+    "constitution":[
+        "no formal constitution; some functions of a constitution are filled by the Declaration of Establishment (1948), the Basic Laws of the Parliament (Knesset), and the Israeli citizenship law (2013)"
     ],
-    "Area":[
-        "20,770 sq km",
-        "20,330 sq km",
-        "440 sq km"
-    ],
-    "Budget surplus (+) or deficit (-)":[
-        "-1.5% of GDP (2013 est.)"
-    ],
-    "Industrial production growth rate":[
-        "5.5% (2013 est.)"
-    ],
-    "Median age":[
+    "median age":[
         "29.9 years",
         "29.2 years",
         "30.6 years (2014 est.)"
     ],
-    "HIV/AIDS - people living with HIV/AIDS":[
-        "7,500 (2009 est.)"
+    "manpower fit for military service":[
+        "1517510",
+        "1446132 (2010 est.)"
     ],
-    "Urbanization":[
-        "91.9% of total population (2011)",
-        "1.73% annual rate of change (2010-15 est.)"
-    ],
-    "Imports - commodities":[
-        "raw materials, military equipment, investment goods, rough diamonds, fuels, grain, consumer goods"
-    ],
-    "Location":[
-        "Middle East, bordering the Mediterranean Sea, between Egypt and Lebanon"
-    ],
-    "Electricity - from fossil fuels":[
-        "98.1% of total installed capacity (2010 est.)"
-    ],
-    "Military expenditures":[
-        "5.69% of GDP (2012)",
-        "5.87% of GDP (2011)",
-        "5.69% of GDP (2010)"
-    ],
-    "Telephone system":[
-        "most highly developed system in the Middle East",
-        "good system of coaxial cable and microwave radio relay; all systems are digital; four privately owned mobile-cellular service providers with countrywide coverage",
-        "country code - 972; submarine cables provide links to Europe, Cyprus, and parts of the Middle East; satellite earth stations - 3 Intelsat (2 Atlantic Ocean and 1 Indian Ocean) (2011)"
-    ],
-    "GDP (purchasing power parity)":[
-        "$273.2 billion (2013 est.)",
-        "$264.5 billion (2012 est.)",
-        "$255.9 billion (2011 est.)",
-        "data are in 2013 US dollars"
-    ],
-    "Natural hazards":[
-        "sandstorms may occur during spring and summer; droughts; periodic earthquakes"
-    ],
-    "Stock of narrow money":[
-        "$37.09 billion (31 December 2013 est.)",
-        "$32.48 billion (31 December 2012 est.)"
-    ],
-    "Airports - with paved runways":[
-        "29",
-        "2",
-        "5",
-        "6",
-        "11",
-        "5 (2013)"
-    ],
-    "Railways":[
-        "975 km",
-        "975 km 1.435-m gauge (2008)"
-    ],
-    "Electricity - consumption":[
-        "48.73 billion kWh (2010 est.)"
-    ],
-    "Manpower available for military service":[
-        "1,797,960",
-        "1,713,230 (2010 est.)"
-    ],
-    "Airports - with unpaved runways":[
-        "18",
-        "1",
-        "3",
-        "",
-        "14 (2013)"
-    ],
-    "HIV/AIDS - deaths":[
-        "fewer than 100 (2009 est.)"
-    ],
-    "Area - comparative":[],
-    "Distribution of family income - Gini index":[
-        "37.6 (2012)",
-        "39.2 (2008)"
-    ],
-    "Population":[
-        "7,821,850",
-        "approximately 341,400 Israeli settlers live in the West Bank (2012); approximately 18,900 Israeli settlers live in the Golan Heights (2012); approximately 196,400 Israeli settlers live in East Jerusalem (2011) (July 2014 est.)"
-    ],
-    "Crude oil - proved reserves":[
-        "11.5 million bbl (1 January 2013 est.)"
-    ],
-    "Airports":[
-        "47 (2013)"
-    ],
-    "Freshwater withdrawal (domestic/industrial/agricultural)":[
-        "1.95  cu km/yr (39%/6%/55%)",
-        "282.4  cu m/yr (2009)"
-    ],
-    "Budget":[
-        "$109.7 billion",
-        "$113.9 billion (2013 est.)"
-    ],
-    "Carbon dioxide emissions from consumption of energy":[
-        "72.1 million Mt (2011 est.)"
-    ],
-    "Agriculture - products":[
-        "citrus, vegetables, cotton; beef, poultry, dairy products"
-    ],
-    "Military service age and obligation":[
-        "18 years of age for compulsory (Jews, Druzes) military service; 17 years of age for voluntary (Christians, Muslims, Circassians) military service; both sexes are obligated to military service; conscript service obligation - 36 months for enlisted men, 21 months for enlisted women, 48 months for officers; pilots commit to 9 years service; reserve obligation to age 41-51 (men), 24 (women) \n (2013)"
-    ],
-    "Total fertility rate":[
-        "2.62 children born/woman (2014 est.)"
-    ],
-    "Major urban areas - population":[
-        "Tel Aviv-Yafo 3.381 million; Haifa 1.054 million; JERUSALEM (capital) 791,000 (2009)"
-    ],
-    "Population below poverty line":[
-        "21%",
-        "Israel's poverty line is $7.30 per person per day (2012)"
-    ],
-    "Labor force - by occupation":[
-        "1.6%",
-        "18.1%",
-        "80.3% (2012 est.)"
-    ],
-    "Stock of broad money":[
-        "$151.2 billion (31 December 2013 est.)",
-        "$136.2 billion (31 December 2012 est.)"
-    ],
-    "GDP - composition, by sector of origin":[
-        "2.4%",
-        "31.2%",
-        "66.4% (2013 est.)"
-    ],
-    "Diplomatic representation from the US":[
-        "Ambassador Daniel B. SHAPIRO (since 8 July 2011)",
-        "71 Hayarkon Street, Tel Aviv 63903",
-        "[972] (3) 519-7475",
-        "[972] (3) 516-4390",
-        "Jerusalem; note - an independent US mission, established in 1928, whose members are not accredited to a foreign government"
-    ],
-    "Infant mortality rate":[
-        "3.98 deaths/1,000 live births",
-        "4.16 deaths/1,000 live births",
-        "3.8 deaths/1,000 live births (2014 est.)"
-    ],
-    "Religions":[
-        "Jewish 75.1%, Muslim 17.4%, Christian 2%, Druze 1.6%, other 3.9% (2012 est.)"
-    ],
-    "Reserves of foreign exchange and gold":[
-        "$80.74 billion (31 December 2013 est.)",
-        "$75.91 billion (31 December 2012 est.)"
-    ],
-    "Household income or consumption by percentage share":[
-        "2.5%",
-        "24.3% (2008)"
-    ],
-    "Hospital bed density":[
-        "3.4 beds/1,000 population (2011)"
-    ],
-    "Life expectancy at birth":[
-        "81.28 years",
-        "79.05 years",
-        "83.61 years (2014 est.)"
-    ],
-    "HIV/AIDS - adult prevalence rate":[
-        "0.2% (2009 est.)"
-    ],
-    "School life expectancy (primary to tertiary education)":[
-        "16 years",
-        "15 years",
-        "16 years (2009)"
-    ],
-    "Manpower reaching militarily significant age annually":[
-        "62,304",
-        "59,418 (2010 est.)"
-    ],
-    "International organization participation":[
-        "BIS, BSEC (observer), CE (observer), CICA, EBRD, FAO, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, OAS (observer), OECD, OPCW (signatory), OSCE (partner), Pacific Alliance (observer), Paris Club (associate), PCA, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
-    ],
-    "Languages":[
-        "Hebrew (official), Arabic (used officially for Arab minority), English (most commonly used foreign language)"
-    ],
-    "Country name":[
+    "country name":[
         "State of Israel",
         "Israel",
         "Medinat Yisra'el",
         "Yisra'el"
     ],
-    "Maritime claims":[
-        "12 nm",
-        "to depth of exploitation"
+    "electricity - from fossil fuels":[
+        "98.1% of total installed capacity (2010 est.)"
     ],
-    "Market value of publicly traded shares":[
-        "$148.4 billion (31 December 2012 est.)",
-        "$145 billion (31 December 2011)",
-        "$218.1 billion (31 December 2010 est.)"
+    "capital":[
+        "Jerusalem: note - Israel proclaimed Jerusalem as its capital in 1950, but the US, like all other countries, maintains its embassy in Tel Aviv",
+        "31 46 N, 35 14 E",
+        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)",
+        "+1hr, begins Friday before the last Sunday in March; ends the last Sunday in October"
     ],
-    "Taxes and other revenues":[
-        "40.2% of GDP (2013 est.)"
+    "gdp (purchasing power parity)":[
+        "$273.2 billion (2013 est.)",
+        "$264.5 billion (2012 est.)",
+        "$255.9 billion (2011 est.)",
+        "data are in 2013 US dollars"
     ],
-    "Mother's mean age at first birth":[
-        "27.3 (2011 est.)"
+    "independence":[
+        "14 May 1948 (from League of Nations mandate under British administration)"
     ],
-    "Refined petroleum products - consumption":[
-        "238,400 bbl/day (2011 est.)"
-    ],
-    "Population growth rate":[
-        "1.46% (2014 est.)"
-    ],
-    "Drinking water source":[
+    "drinking water source":[
         "urban: 100% of population",
         "rural: 100% of population",
         "total: 100% of population",
@@ -375,208 +256,45 @@
         "rural: 0% of population",
         "total: 0% of population (2012 est.)"
     ],
-    "Diplomatic representation in the US":[
-        "Ambassador Ron DERMER (since 3 December 2013)",
-        "3514 International Drive NW, Washington, DC 20008",
-        "[1] (202) 364-5500",
-        "[1] (202) 364-5647",
-        "Atlanta, Boston, Chicago, Houston, Los Angeles, Miami, New York, Philadelphia, San Francisco"
-    ],
-    "Internet users":[
-        "4.525 million (2009)"
-    ],
-    "Internet hosts":[
-        "2.483 million (2012)"
-    ],
-    "Current account balance":[
-        "$5.259 billion (2013 est.)",
-        "$609 million (2012 est.)"
-    ],
-    "Debt - external":[
-        "$96.3 billion (31 December 2013 est.)",
-        "$93.98 billion (31 December 2012 est.)"
-    ],
-    "Administrative divisions":[
-        "6 districts (mehozot, singular - mehoz); Central, Haifa, Jerusalem, Northern, Southern, Tel Aviv"
-    ],
-    "Electricity - from nuclear fuels":[
+    "electricity - from hydroelectric plants":[
         "0% of total installed capacity (2010 est.)"
     ],
-    "Land use":[
-        "13.68%",
-        "3.69%",
-        "82.62% (2011)"
-    ],
-    "Disputes - international":[
-        "West Bank and Gaza Strip are Israeli-occupied with current status subject to the Israeli-Palestinian Interim Agreement - permanent status to be determined through further negotiation; Israel continues construction of a \"seam line\" separation barrier along parts of the Green Line and within the West Bank; Israel withdrew its settlers and military from the Gaza Strip and from four settlements in the West Bank in August 2005; Golan Heights is Israeli-occupied (Lebanon claims the Shab'a Farms area of Golan Heights); since 1948, about 350 peacekeepers from the UN Truce Supervision Organization headquartered in Jerusalem monitor ceasefires, supervise armistice agreements, prevent isolated incidents from escalating, and assist other UN personnel in the region"
-    ],
-    "Climate":[
-        "temperate; hot and dry in southern and eastern desert areas"
-    ],
-    "Natural resources":[
-        "timber, potash, copper ore, natural gas, phosphate rock, magnesium bromide, clays, sand"
-    ],
-    "Internet country code":[
-        ".il"
-    ],
-    "Stock of direct foreign investment - at home":[
-        "$86.04 billion (31 December 2013 est.)",
-        "$75.94 billion (31 December 2012 est.)"
-    ],
-    "Electricity - production":[
-        "55.77 billion kWh (2011 est.)"
-    ],
-    "Death rate":[
-        "5.54 deaths/1,000 population (2014 est.)"
-    ],
-    "Electricity - from hydroelectric plants":[
-        "0% of total installed capacity (2010 est.)"
-    ],
-    "Imports":[
-        "$67.03 billion (2013 est.)",
-        "$71.67 billion (2012 est.)"
-    ],
-    "National symbol(s)":[
-        "Star of David (Magen David)"
-    ],
-    "GDP - real growth rate":[
-        "3.3% (2013 est.)",
-        "3.4% (2012 est.)",
-        "4.6% (2011 est.)"
-    ],
-    "Natural gas - proved reserves":[
-        "268.5 billion cu m (1 January 2013 est.)"
-    ],
-    "Central bank discount rate":[
-        "1% (31 December 2013 est.)",
-        "1.75% (31 December 2012 est.)"
-    ],
-    "Fiscal year":[
-        "calendar year"
-    ],
-    "Obesity - adult prevalence rate":[
-        "26.2% (2008)"
-    ],
-    "Refined petroleum products - exports":[
-        "83,700 bbl/day (2010 est.)"
-    ],
-    "Industries":[
-        "high-technology products (including aviation, communications, computer-aided design and manufactures, medical electronics, fiber optics), wood and paper products, potash and phosphates, food, beverages, and tobacco, caustic soda, cement, construction, metal products, chemical products, plastics, cut diamonds, textiles, footwear"
-    ],
-    "Legal system":[
-        "mixed legal system of English common law, British Mandate regulations, and Jewish, Christian, and Muslim religious laws"
-    ],
-    "Capital":[
-        "Jerusalem: note - Israel proclaimed Jerusalem as its capital in 1950, but the US, like all other countries, maintains its embassy in Tel Aviv",
-        "31 46 N, 35 14 E",
-        "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)",
-        "+1hr, begins Friday before the last Sunday in March; ends the last Sunday in October"
-    ],
-    "Heliports":[
-        "3 (2013)"
-    ],
-    "Crude oil - exports":[
-        "0 bbl/day (2010 est.)"
-    ],
-    "Environment - current issues":[
-        "limited arable land and natural freshwater resources pose serious constraints; desertification; air pollution from industrial and vehicle emissions; groundwater pollution from industrial and domestic waste, chemical fertilizers, and pesticides"
-    ],
-    "Imports - partners":[
-        "US 12.9%, China 7.3%, Germany 6.3%, Switzerland 5.5%, Belgium 4.8% (2012)"
-    ],
-    "Natural gas - consumption":[
-        "6.86 billion cu m (2013 est.)"
-    ],
-    "Electricity - installed generating capacity":[
-        "15.33 million kW (2010 est.)"
-    ],
-    "Birth rate":[
-        "18.44 births/1,000 population (2014 est.)"
-    ],
-    "Age structure":[
-        "27.1% (male 1,084,748/female 1,035,525)",
-        "15.7% (male 628,205/female 599,871)",
-        "37.8% (male 1,508,860/female 1,443,898)",
-        "8.8% (male 333,453/female 352,302)",
-        "10.5% (male 368,318/female 466,670) (2014 est.)"
-    ],
-    "Commercial bank prime lending rate":[
-        "3.8% (31 December 2013 est.)",
-        "5.16% (31 December 2012 est.)"
-    ],
-    "Land boundaries":[
-        "1,068 km",
-        "Egypt 208 km, Gaza Strip 59 km, Jordan 307 km, Lebanon 81 km, Syria 83 km, West Bank 330 km"
-    ],
-    "Coastline":[
-        "273 km"
-    ],
-    "Nationality":[
-        "Israeli(s)",
-        "Israeli"
-    ],
-    "Telephones - main lines in use":[
-        "3.594 million (2012)"
-    ],
-    "Literacy":[
-        "age 15 and over can read and write",
-        "97.1%",
-        "98.5%",
-        "95.9% (2004 est.)"
-    ],
-    "Total renewable water resources":[
-        "1.78 cu km (2011)"
-    ],
-    "National holiday":[
-        "Independence Day, 14 May (1948); note - Israel declared independence on 14 May 1948, but the Jewish calendar is lunar and the holiday may occur in April or May"
-    ],
-    "Elevation extremes":[
-        "Dead Sea -408 m",
-        "Har Meron 1,208 m"
-    ],
-    "Suffrage":[
-        "18 years of age; universal"
-    ],
-    "Physicians density":[
-        "3.11 physicians/1,000 population (2011)"
-    ],
-    "Exports - commodities":[
-        "machinery and equipment, software, cut diamonds, agricultural products, chemicals, textiles and apparel"
-    ],
-    "Labor force":[
-        "3.493 million (2013 est.)"
-    ],
-    "Dependency ratios":[
-        "63.1 %",
-        "45.5 %",
-        "17.6 %",
-        "5.7 (2014 est.)"
-    ],
-    "Roadways":[
-        "18,566 km",
-        "18,566 km (includes 449 km of expressways) (2011)"
-    ],
-    "Electricity - exports":[
-        "4.224 billion kWh (2011 est.)"
-    ],
-    "Ports and terminals":[
-        "Ashdod, Elat (Eilat), Hadera, Haifa",
-        "Ashdod (1,176,000), Haifa (1,238,000)"
-    ],
-    "Refined petroleum products - imports":[
-        "56,420 bbl/day (2010 est.)"
-    ],
-    "Illicit drugs":[
-        "increasingly concerned about ecstasy, cocaine, and heroin abuse; drugs arrive in country from Lebanon and, increasingly, from Jordan; money-laundering center"
-    ],
-    "Stock of direct foreign investment - abroad":[
+    "stock of direct foreign investment - abroad":[
         "$80.85 billion (31 December 2013 est.)",
         "$74.75 billion (31 December 2012 est.)"
     ],
-    "Natural gas - production":[
-        "6.86 billion cu m (2013 est.)"
+    "debt - external":[
+        "$96.3 billion (31 December 2013 est.)",
+        "$93.98 billion (31 December 2012 est.)"
     ],
-    "Exchange rates":[
+    "coastline":[
+        "273 km"
+    ],
+    "nationality":[
+        "Israeli(s)",
+        "Israeli"
+    ],
+    "refined petroleum products - imports":[
+        "56420 bbl/day (2010 est.)"
+    ],
+    "climate":[
+        "temperate; hot and dry in southern and eastern desert areas"
+    ],
+    "hiv/aids - adult prevalence rate":[
+        "0.2% (2009 est.)"
+    ],
+    "manpower reaching militarily significant age annually":[
+        "62304",
+        "59418 (2010 est.)"
+    ],
+    "roadways":[
+        "18566 km",
+        "18566 km (includes 449 km of expressways) (2011)"
+    ],
+    "net migration rate":[
+        "1.68 migrant(s)/1000 population (2014 est.)"
+    ],
+    "exchange rates":[
         "new Israeli shekels (ILS) per US dollar -",
         "3.621 (2013 est.)",
         "3.8559 (2012 est.)",
@@ -584,10 +302,69 @@
         "3.93 (2009)",
         "3.588 (2008)"
     ],
-    "Ethnic groups":[
-        "Jewish 75.1% (of which Israel-born 73.6%, Europe/America/Oceania-born 17.9%, Africa-born 5.2%, Asia-born 3.2%), non-Jewish 24.9% (mostly Arab) (2012 est.)"
+    "refined petroleum products - production":[
+        "278400 bbl/day (2010 est.)"
     ],
-    "GDP - composition, by end use":[
+    "sex ratio":[
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.05 male(s)/female",
+        "1.01 male(s)/female",
+        "0.78 male(s)/female",
+        "1.01 male(s)/female (2014 est.)"
+    ],
+    "public debt":[
+        "67.1% of GDP (2013 est.)",
+        "66.9% of GDP (2012 est.)"
+    ],
+    "manpower available for military service":[
+        "1797960",
+        "1713230 (2010 est.)"
+    ],
+    "reserves of foreign exchange and gold":[
+        "$80.74 billion (31 December 2013 est.)",
+        "$75.91 billion (31 December 2012 est.)"
+    ],
+    "airports - with unpaved runways":[
+        "18",
+        "1",
+        "3",
+        "",
+        "14 (2013)"
+    ],
+    "stock of broad money":[
+        "$151.2 billion (31 December 2013 est.)",
+        "$136.2 billion (31 December 2012 est.)"
+    ],
+    "refugees and internally displaced persons":[
+        "34988 (Eritrea); 12926 (Sudan) (2013)",
+        "14 (2012)"
+    ],
+    "national symbol(s)":[
+        "Star of David (Magen David)"
+    ],
+    "gdp - real growth rate":[
+        "3.3% (2013 est.)",
+        "3.4% (2012 est.)",
+        "4.6% (2011 est.)"
+    ],
+    "telephone system":[
+        "most highly developed system in the Middle East",
+        "good system of coaxial cable and microwave radio relay; all systems are digital; four privately owned mobile-cellular service providers with countrywide coverage",
+        "country code - 972; submarine cables provide links to Europe, Cyprus, and parts of the Middle East; satellite earth stations - 3 Intelsat (2 Atlantic Ocean and 1 Indian Ocean) (2011)"
+    ],
+    "flag description":[
+        "white with a blue hexagram (six-pointed linear star) known as the Magen David (Star of David or Shield of David) centered between two equal horizontal blue bands near the top and bottom edges of the flag; the basic design resembles a traditional Jewish prayer shawl (tallit), which is white with blue stripes; the hexagram as a Jewish symbol dates back to medieval times"
+    ],
+    "fiscal year":[
+        "calendar year"
+    ],
+    "household income or consumption by percentage share":[
+        "2.5%",
+        "24.3% (2008)"
+    ],
+    "gdp - composition, by end use":[
         "56.1%",
         "22.7%",
         "19.6%",
@@ -596,17 +373,240 @@
         "-33.5%",
         "(2013 est.)"
     ],
-    "Gross national saving":[
-        "22.2% of GDP (2013 est.)",
-        "21% of GDP (2012 est.)",
-        "21.4% of GDP (2011 est.)"
+    "life expectancy at birth":[
+        "81.28 years",
+        "79.05 years",
+        "83.61 years (2014 est.)"
     ],
-    "Broadcast media":[
-        "state broadcasting network, operated by the Israel Broadcasting Authority (IBA), broadcasts on 2 channels, one in Hebrew and the other in Arabic; 5 commercial channels including a channel broadcasting in Russian, a channel broadcasting Knesset proceedings, and a music channel supervised by a public body; multi-channel satellite and cable TV packages provide access to foreign channels; IBA broadcasts on 8 radio networks with multiple repeaters and Israel Defense Forces Radio broadcasts over multiple stations; about 15 privately owned radio stations; overall more than 100 stations and repeater stations (2008)"
+    "languages":[
+        "Hebrew (official), Arabic (used officially for Arab minority), English (most commonly used foreign language)"
     ],
-    "National anthem":[
-        "\"Hatikvah\" (The Hope)",
-        "Naftali Herz IMBER/traditional, arranged by Samuel COHEN",
-        "adopted 2004, unofficial since 1948; used as the anthem of the Zionist movement since 1897; the 1888 arrangement by Samuel COHEN is thought to be based on the Romanian folk song \"Carul cu boi\" (The Ox Driven Cart)"
+    "area":[
+        "20770 sq km",
+        "20330 sq km",
+        "440 sq km"
+    ],
+    "carbon dioxide emissions from consumption of energy":[
+        "72.1 million Mt (2011 est.)"
+    ],
+    "natural resources":[
+        "timber, potash, copper ore, natural gas, phosphate rock, magnesium bromide, clays, sand"
+    ],
+    "telephones - mobile cellular":[
+        "9.225 million (2012)"
+    ],
+    "maritime claims":[
+        "12 nm",
+        "to depth of exploitation"
+    ],
+    "electricity - from other renewable sources":[
+        "1.8% of total installed capacity (2010 est.)"
+    ],
+    "exports - partners":[
+        "US 27.8%, Hong Kong 7.7%, UK 5.7%, Belgium 4.6%, China 4.3% (2012)"
+    ],
+    "population growth rate":[
+        "1.46% (2014 est.)"
+    ],
+    "military service age and obligation":[
+        "18 years of age for compulsory (Jews, Druzes) military service; 17 years of age for voluntary (Christians, Muslims, Circassians) military service; both sexes are obligated to military service; conscript service obligation - 36 months for enlisted men, 21 months for enlisted women, 48 months for officers; pilots commit to 9 years service; reserve obligation to age 41-51 (men), 24 (women) \n (2013)"
+    ],
+    "pipelines":[
+        "gas 763 km; oil 442 km; refined products 261 km (2013)"
+    ],
+    "sanitation facility access":[
+        "urban: 100% of population",
+        "rural: 100% of population",
+        "total: 100% of population",
+        "",
+        "urban: 0% of population",
+        "rural: 0% of population",
+        "total: 0% of population (2012 est.)"
+    ],
+    "gdp - composition, by sector of origin":[
+        "2.4%",
+        "31.2%",
+        "66.4% (2013 est.)"
+    ],
+    "age structure":[
+        "27.1% (male 1084748/female 1035525)",
+        "15.7% (male 628205/female 599871)",
+        "37.8% (male 1508860/female 1443898)",
+        "8.8% (male 333453/female 352302)",
+        "10.5% (male 368318/female 466670) (2014 est.)"
+    ],
+    "refined petroleum products - consumption":[
+        "238400 bbl/day (2011 est.)"
+    ],
+    "land boundaries":[
+        "1068 km",
+        "Egypt 208 km, Gaza Strip 59 km, Jordan 307 km, Lebanon 81 km, Syria 83 km, West Bank 330 km"
+    ],
+    "natural gas - imports":[
+        "720 million cu m (2011 est.)"
+    ],
+    "area - comparative":[],
+    "crude oil - exports":[
+        "0 bbl/day (2010 est.)"
+    ],
+    "disputes - international":[
+        "West Bank and Gaza Strip are Israeli-occupied with current status subject to the Israeli-Palestinian Interim Agreement - permanent status to be determined through further negotiation; Israel continues construction of a seam line separation barrier along parts of the Green Line and within the West Bank; Israel withdrew its settlers and military from the Gaza Strip and from four settlements in the West Bank in August 2005; Golan Heights is Israeli-occupied (Lebanon claims the Shab'a Farms area of Golan Heights); since 1948, about 350 peacekeepers from the UN Truce Supervision Organization headquartered in Jerusalem monitor ceasefires, supervise armistice agreements, prevent isolated incidents from escalating, and assist other UN personnel in the region"
+    ],
+    "population":[
+        "7821850",
+        "approximately 341400 Israeli settlers live in the West Bank (2012); approximately 18900 Israeli settlers live in the Golan Heights (2012); approximately 196400 Israeli settlers live in East Jerusalem (2011) (July 2014 est.)"
+    ],
+    "total renewable water resources":[
+        "1.78 cu km (2011)"
+    ],
+    "national holiday":[
+        "Independence Day, 14 May (1948); note - Israel declared independence on 14 May 1948, but the Jewish calendar is lunar and the holiday may occur in April or May"
+    ],
+    "budget surplus (+) or deficit (-)":[
+        "-1.5% of GDP (2013 est.)"
+    ],
+    "budget":[
+        "$109.7 billion",
+        "$113.9 billion (2013 est.)"
+    ],
+    "population below poverty line":[
+        "21%",
+        "Israel's poverty line is $7.30 per person per day (2012)"
+    ],
+    "military expenditures":[
+        "5.69% of GDP (2012)",
+        "5.87% of GDP (2011)",
+        "5.69% of GDP (2010)"
+    ],
+    "death rate":[
+        "5.54 deaths/1000 population (2014 est.)"
+    ],
+    "market value of publicly traded shares":[
+        "$148.4 billion (31 December 2012 est.)",
+        "$145 billion (31 December 2011)",
+        "$218.1 billion (31 December 2010 est.)"
+    ],
+    "industrial production growth rate":[
+        "5.5% (2013 est.)"
+    ],
+    "distribution of family income - gini index":[
+        "37.6 (2012)",
+        "39.2 (2008)"
+    ],
+    "inflation rate (consumer prices)":[
+        "1.7% (2013 est.)",
+        "1.7% (2012 est.)"
+    ],
+    "diplomatic representation in the us":[
+        "Ambassador Ron DERMER (since 3 December 2013)",
+        "3514 International Drive NW, Washington, DC 20008",
+        "[1] (202) 364-5500",
+        "[1] (202) 364-5647",
+        "Atlanta, Boston, Chicago, Houston, Los Angeles, Miami, New York, Philadelphia, San Francisco"
+    ],
+    "imports":[
+        "$67.03 billion (2013 est.)",
+        "$71.67 billion (2012 est.)"
+    ],
+    "commercial bank prime lending rate":[
+        "3.8% (31 December 2013 est.)",
+        "5.16% (31 December 2012 est.)"
+    ],
+    "education expenditures":[
+        "5.6% of GDP (2011)"
+    ],
+    "electricity - consumption":[
+        "48.73 billion kWh (2010 est.)"
+    ],
+    "hospital bed density":[
+        "3.4 beds/1000 population (2011)"
+    ],
+    "ethnic groups":[
+        "Jewish 75.1% (of which Israel-born 73.6%, Europe/America/Oceania-born 17.9%, Africa-born 5.2%, Asia-born 3.2%), non-Jewish 24.9% (mostly Arab) (2012 est.)"
+    ],
+    "unemployment, youth ages 15-24":[
+        "12.1%",
+        "11.6%",
+        "12.7% (2012)"
+    ],
+    "land use":[
+        "13.68%",
+        "3.69%",
+        "82.62% (2011)"
+    ],
+    "freshwater withdrawal (domestic/industrial/agricultural)":[
+        "1.95  cu km/yr (39%/6%/55%)",
+        "282.4  cu m/yr (2009)"
+    ],
+    "stock of direct foreign investment - at home":[
+        "$86.04 billion (31 December 2013 est.)",
+        "$75.94 billion (31 December 2012 est.)"
+    ],
+    "stock of domestic credit":[
+        "$207.7 billion (31 December 2013 est.)",
+        "$192.3 billion (31 December 2012 est.)"
+    ],
+    "agriculture - products":[
+        "citrus, vegetables, cotton; beef, poultry, dairy products"
+    ],
+    "electricity - from nuclear fuels":[
+        "0% of total installed capacity (2010 est.)"
+    ],
+    "internet hosts":[
+        "2.483 million (2012)"
+    ],
+    "political pressure groups and leaders":[
+        "B'Tselem [Jessica MONTELL, Executive Director] monitors human rights abuses",
+        "Peace Now [Yariv OPPENHEIMER, Secretary General] supports territorial concessions in the West Bank and Gaza Strip",
+        "YESHA Council [Danny DAYAN, Chairman] promotes settler interests and opposes territorial compromise",
+        "Breaking the Silence [Yehuda SHAUL, Executive Director] collects testimonies from soldiers who served in the West Bank and Gaza Strip"
+    ],
+    "heliports":[
+        "3 (2013)"
+    ],
+    "administrative divisions":[
+        "6 districts (mehozot, singular - mehoz); Central, Haifa, Jerusalem, Northern, Southern, Tel Aviv"
+    ],
+    "hiv/aids - deaths":[
+        "fewer than 100 (2009 est.)"
+    ],
+    "crude oil - production":[
+        "5839 bbl/day (2012 est.)"
+    ],
+    "telephones - main lines in use":[
+        "3.594 million (2012)"
+    ],
+    "electricity - production":[
+        "55.77 billion kWh (2011 est.)"
+    ],
+    "international law organization participation":[
+        "has not submitted an ICJ jurisdiction declaration; withdrew acceptance of ICCt jurisdiction in 2002"
+    ],
+    "elevation extremes":[
+        "Dead Sea -408 m",
+        "Har Meron 1208 m"
+    ],
+    "school life expectancy (primary to tertiary education)":[
+        "16 years",
+        "15 years",
+        "16 years (2009)"
+    ],
+    "physicians density":[
+        "3.11 physicians/1000 population (2011)"
+    ],
+    "international organization participation":[
+        "BIS, BSEC (observer), CE (observer), CICA, EBRD, FAO, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, OAS (observer), OECD, OPCW (signatory), OSCE (partner), Pacific Alliance (observer), Paris Club (associate), PCA, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO"
+    ],
+    "gdp (official exchange rate)":[
+        "$272.7 billion (2013 est.)"
+    ],
+    "electricity - exports":[
+        "4.224 billion kWh (2011 est.)"
+    ],
+    "electricity - installed generating capacity":[
+        "15.33 million kW (2010 est.)"
+    ],
+    "major urban areas - population":[
+        "Tel Aviv-yafo 3.381 million; Haifa 1.054 million; Jerusalem (capital) 791000 (2009)"
     ]
 }
