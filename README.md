@@ -62,4 +62,4 @@ Utilités:
 
 - assurez-vous d'avoir elasticsearch qui est démarré
 -cd dans le repertoire "design3"
-- rouler <code>python -m naturalLanguagePython "votre question"<\code>
+- rouler <code>python -m naturalLanguagePython "votre question"</code>
