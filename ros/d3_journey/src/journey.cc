@@ -121,9 +121,7 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-  		ROS_ERROR_STREAM(atlas_told);
-  		return "";
-    	//return decoder.questionStr(atlas_told);
+  		return decoder.questionStr(atlas_told);
 	}
 };
 
@@ -135,9 +133,7 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 		colorList(_colorList) {}
 
 	std::string ask(std::string question) {
-		// AntoineCode with Popener
-
-		std::string answer = "Germany";
+		std::string answer = d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
 		colorList->setColorList(colors);
