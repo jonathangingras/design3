@@ -1,0 +1,30 @@
+[2015-04-02 10:12:29,242][INFO ][node                     ] [Urthona] version[1.4.4], pid[4488], build[c88f77f/2015-02-19T13:05:36Z]
+[2015-04-02 10:12:29,257][INFO ][node                     ] [Urthona] initializing ...
+[2015-04-02 10:12:29,295][INFO ][plugins                  ] [Urthona] loaded [], sites [head]
+[2015-04-02 10:12:34,778][INFO ][node                     ] [Urthona] initialized
+[2015-04-02 10:12:34,778][INFO ][node                     ] [Urthona] starting ...
+[2015-04-02 10:12:35,216][INFO ][transport                ] [Urthona] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.248.207.94:9300]}
+[2015-04-02 10:12:35,481][INFO ][discovery                ] [Urthona] elasticsearch/sirlwbirS0qSpCzNaxA95Q
+[2015-04-02 10:12:39,296][INFO ][cluster.service          ] [Urthona] new_master [Urthona][sirlwbirS0qSpCzNaxA95Q][Antoine-m14x][inet[/10.248.207.94:9300]], reason: zen-disco-join (elected_as_master)
+[2015-04-02 10:12:39,461][INFO ][http                     ] [Urthona] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.248.207.94:9200]}
+[2015-04-02 10:12:39,461][INFO ][node                     ] [Urthona] started
+[2015-04-02 10:12:40,755][INFO ][gateway                  ] [Urthona] recovered [1] indices into cluster_state
+[2015-04-02 11:30:49,963][INFO ][node                     ] [Urthona] stopping ...
+[2015-04-02 11:30:50,385][INFO ][node                     ] [Urthona] stopped
+[2015-04-02 11:30:50,385][INFO ][node                     ] [Urthona] closing ...
+[2015-04-02 11:30:50,401][INFO ][node                     ] [Urthona] closed
+[2015-04-02 14:05:49,433][INFO ][node                     ] [MODAM] version[1.4.4], pid[2420], build[c88f77f/2015-02-19T13:05:36Z]
+[2015-04-02 14:05:49,449][INFO ][node                     ] [MODAM] initializing ...
+[2015-04-02 14:05:49,449][INFO ][plugins                  ] [MODAM] loaded [], sites [head]
+[2015-04-02 14:05:51,605][INFO ][node                     ] [MODAM] initialized
+[2015-04-02 14:05:51,605][INFO ][node                     ] [MODAM] starting ...
+[2015-04-02 14:05:51,777][INFO ][transport                ] [MODAM] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.248.207.94:9300]}
+[2015-04-02 14:05:51,871][INFO ][discovery                ] [MODAM] elasticsearch/f1HrIBUaTVG0WVyDk6PTUA
+[2015-04-02 14:05:55,674][INFO ][cluster.service          ] [MODAM] new_master [MODAM][f1HrIBUaTVG0WVyDk6PTUA][Antoine-m14x][inet[/10.248.207.94:9300]], reason: zen-disco-join (elected_as_master)
+[2015-04-02 14:05:55,736][INFO ][http                     ] [MODAM] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.248.207.94:9200]}
+[2015-04-02 14:05:55,736][INFO ][node                     ] [MODAM] started
+[2015-04-02 14:05:56,220][INFO ][gateway                  ] [MODAM] recovered [1] indices into cluster_state
+[2015-04-02 14:12:32,524][INFO ][node                     ] [MODAM] stopping ...
+[2015-04-02 14:12:32,727][INFO ][node                     ] [MODAM] stopped
+[2015-04-02 14:12:32,727][INFO ][node                     ] [MODAM] closing ...
+[2015-04-02 14:12:32,743][INFO ][node                     ] [MODAM] closed
