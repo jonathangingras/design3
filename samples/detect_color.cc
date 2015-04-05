@@ -5,28 +5,21 @@ int main(int argc, char** argv) {
     loader.setFile("colors.json");
     loader.loadJSON();
 
-    d3t12::ColorPalette palette;
-    loader.fillPalette(palette);
-    d3t12::ColorFilter colorFilter(palette.getColor(argv[2]));
+    d3t12::ColorPalette::Ptr palette(new d3t12::ColorPalette);
+    loader.fillPalette(*palette);
+    d3t12::CubeDetectorFactory factory(palette);
     
-    cv::Mat input = cv::imread(argv[1]), resizedInput;
-    cv::resize(input, resizedInput, cv::Size(input.size().width*(atof(argv[3])), input.size().height*(atof(argv[3]))) , 0, 0, cv::INTER_LANCZOS4);
+    d3t12::cvMatPtr input(new cv::Mat);
+    *input = cv::imread(argv[1]);
 
-    cv::Mat workingSquaresMatrix = resizedInput.clone();
-    cv::Mat outputSquaresMatrix = resizedInput.clone(), 
-    colorsMask;
+    cv::Rect cube = factory.createCubeDetector(argv[2], input)->detectCube();
+    cv::rectangle(*input, cube, cv::Scalar(255,0,0));
 
-    colorFilter.filter(colorsMask, resizedInput);
-
-    d3t12::SquareFilter squareFilter;
+    /*d3t12::SquareFilter squareFilter;
     squareFilter.findSquares(workingSquaresMatrix);
-    squareFilter.drawSquares(outputSquaresMatrix);
-
-    cv::Mat finalMatrix;
-    outputSquaresMatrix.copyTo(finalMatrix/*, colorsMask*/);
+    squareFilter.drawSquares(outputSquaresMatrix);*/
     
-    cv::imshow("resizedInput", resizedInput);
-    cv::imshow("output", finalMatrix);
+    cv::imshow("resizedInput", *input);
     cv::waitKey(0);
 
     return 0;

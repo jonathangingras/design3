@@ -7,6 +7,7 @@ add_library(d3t12_vision
 	IncrementalRect.cc
 	CubeDetector.cc
 	ColoredCubeDetector.cc
+	RedCubeDetector.cc
 	BlackCubeDetector.cc
 	WhiteCubeDetector.cc
 	CubeDetectorFactory.cc

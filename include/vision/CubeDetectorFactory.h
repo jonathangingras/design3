@@ -5,6 +5,7 @@
 #include <vision/ColorPalette.h>
 #include <vision/CubeDetector.h>
 #include <vision/ColoredCubeDetector.h>
+#include <vision/RedCubeDetector.h>
 #include <vision/WhiteCubeDetector.h>
 #include <vision/BlackCubeDetector.h>
 

@@ -262,7 +262,7 @@ TEST(FindCubeState, runsHowExpected) {
 	CubeRelativePosition relativePosition(1.0,-0.5);
 
 	EXPECT_CALL(CAST_DETECTORFACTORY(detectorFactory), createCubeDetector("somecolor", _)).Times(1).WillOnce(Return(cubeDetectorMock));
-	EXPECT_CALL(CAST_TARGETER(cameraTargeter), targetCenter()).Times(1);
+	EXPECT_CALL(CAST_TARGETER(cameraTargeter), targetCenter()).Times(5);
 	EXPECT_CALL(CAST_FINDER(finder), findCubePosition()).Times(1).WillOnce(Return(relativePosition));
 
 	state->run();

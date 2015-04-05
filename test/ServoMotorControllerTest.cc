@@ -121,10 +121,10 @@ TEST_hasGoodAngleWhenSetDeg(cameraVertical, 60)
 TEST_hasGoodAngleWhenSetDeg(cameraVertical, 70)
 TEST_hasGoodAngleWhenSetDeg(cameraVertical, 90)
 
-TEST_doesntExceedMinMax(cameraVertical, 46, 90) //because of forced min
+TEST_doesntExceedMinMax(cameraVertical, 41, 90) //because of forced min
 
-TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 0, 4150)// because of forced min
-TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 45, 4150)// because of forced min
+TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 0, 3950)// because of forced min
+TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 45, 4098)// because of forced min
 TEST_goodCommandWhenAngleSetAtDegree(cameraVertical, 3, 90, 5952)
 
 
