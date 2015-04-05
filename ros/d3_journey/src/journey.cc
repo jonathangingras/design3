@@ -187,12 +187,37 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
     inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose):
         cameraPose(_cameraPose) {}
 
+    void resetAngle() {
+
+    }
+
     void adjustY(float degrees) {
         cameraPose->increasePitch(deg2rad(degrees));
     }
 
     void adjustX(float degrees) {
         cameraPose->increaseYaw(deg2rad(degrees));
+    }
+};
+
+struct ConcreteMotorAdjuster : public d3t12::ImageAngleAdjuster {
+    d3t12::CameraPoseHandler::Ptr cameraPose;
+    d3t12::PoseCommander::Ptr poseCommander;
+
+    inline ConcreteMotorAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose, d3t12::PoseCommander::Ptr _poseCommander):
+        cameraPose(_cameraPose), poseCommander(_poseCommander) {}
+
+    void resetAngle() {
+    	cameraPose->setPitch(M_PI/4);
+    	cameraPose->setYaw(M_PI/2);
+    }
+
+    void adjustY(float degrees) {
+        poseCommander->commandDirectly(d3t12::RobotPose(0.1*degrees, 0.0, 0.0));
+    }
+
+    void adjustX(float degrees) {
+        poseCommander->commandDirectly(d3t12::RobotPose(0.0, -0.1*degrees, 0.0));
     }
 };
 
@@ -290,10 +315,17 @@ int main(int argc, char** argv) {
 
 	d3t12::CameraPoseHandler::Ptr cameraPose(new d3t12::CameraPoseHandler);
 	d3t12::ImageAngleGetter::Ptr angleGetter(new ConcreteAngleGetter(cameraPose));
+
 	d3t12::ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ConcreteAngleAdjuster(cameraPose));
     d3t12::CubeCenterTargeter::Ptr cameraTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
         cameraPoseAdjuster
+    ));
+
+    d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
+        imageCapturer,
+        motorAdjuster
     ));
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
@@ -318,7 +350,7 @@ int main(int argc, char** argv) {
 		detectorFactory,
 		image,
 		cameraTargeter,
-		cameraTargeter,
+		motorTargeter,
 		finder,
 	
 		cameraPoseAdjuster,

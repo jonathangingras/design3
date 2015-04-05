@@ -81,6 +81,7 @@ void CubeCenterTargeter::targetCenter() {
 	if(!detector.get()) {
 		std::cerr << "detector is null!!" << std::endl;
 	}
+	adjuster->resetAngle();
 
 	cv::Rect rect;
 	cv::Point imageCenter;

@@ -100,7 +100,7 @@ void GoToCubeZoneState::run() {
 
 void GrabCubeState::run() {
 	//TODO implement a motor targeter
-	//motorTargeter->targetCenter();
+	motorTargeter->targetCenter();
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(0.05,0,0));
 	prehensor->close();
@@ -108,7 +108,7 @@ void GrabCubeState::run() {
 	poseCommander->commandDirectly(RobotPose(-0.025,0,0));
 	poseCommander->commandDirectly(RobotPose(0.03,0,0));
 	prehensor->close();
-	cameraTargeter->targetCenter();
+	//cameraTargeter->targetCenter();
 	prehensor->rise();
 }
 

@@ -19,6 +19,10 @@ public:
     inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose):
         cameraPose(_cameraPose) {}
 
+    void resetAngle() {
+        
+    }
+
     void adjustY(float degrees) {
         cameraPose->increasePitch(deg2rad(degrees));
     }
