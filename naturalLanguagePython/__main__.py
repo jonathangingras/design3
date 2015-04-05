@@ -5,7 +5,7 @@ import sys
 
 if __name__ == "__main__":
     currentRealPath = os.getcwd()
-    currentRealPath += "\\naturalLanguagePython"
+    currentRealPath += "/naturalLanguagePython"
     question = sys.argv[1]
     questionResponder = QuestionResponder(currentRealPath)
     nameOfCountry = questionResponder.askQuestion(question)
