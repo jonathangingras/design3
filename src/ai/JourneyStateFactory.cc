@@ -55,6 +55,8 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 	} else if(stateName == "GrabCube") {
 		GrabCubeState* state = new GrabCubeState;
 		state->prehensor = prehensor;
+		state->detectorFactory = detectorFactory;
+		state->image = image;
 		state->cameraTargeter = cameraTargeter;
 		state->motorTargeter = motorTargeter;
 		state->poseGetter = poseGetter;

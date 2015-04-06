@@ -99,6 +99,8 @@ class GrabCubeState : public JourneyState {
 friend class JourneyStateFactory;
 
 	Prehensor::Ptr prehensor;
+	CubeDetectorFactory::Ptr detectorFactory;
+	cvMatPtr image;
 	CubeCenterTargeter::Ptr cameraTargeter;
 	CubeCenterTargeter::Ptr motorTargeter;
 	PoseGetter::Ptr poseGetter;
@@ -110,7 +112,7 @@ public:
 
 class PlanReturnToDetectionZoneState : public JourneyState {
 friend class JourneyStateFactory;
-
+	
 	PathInformer::Ptr pathInformer;
 	PoseGetter::Ptr poseGetter;
 	PathPlanner::Ptr pathPlanner;

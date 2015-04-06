@@ -19,6 +19,7 @@
 
 #include "BitmapFormatException.h"
 #include "BadColorStringException.h"
+#include "NoCubeFoundException.h"
 
 #include <common/JanssonException.h>
 

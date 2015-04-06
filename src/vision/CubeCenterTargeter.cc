@@ -1,3 +1,4 @@
+#include <vision/NoCubeFoundException.h>
 #include <vision/CubeCenterTargeter.h>
 
 namespace d3t12 {
@@ -77,11 +78,14 @@ static inline bool noDetection(const cv::Rect& cubeRect) {
 	return cubeRect.width == 0 || cubeRect.height == 0;
 }
 
+void CubeCenterTargeter::resetAngle() {
+	adjuster->resetAngle();
+}
+
 void CubeCenterTargeter::targetCenter() {
 	if(!detector.get()) {
 		std::cerr << "detector is null!!" << std::endl;
 	}
-	adjuster->resetAngle();
 
 	cv::Rect rect;
 	cv::Point imageCenter;
@@ -89,7 +93,7 @@ void CubeCenterTargeter::targetCenter() {
 	do {
 		capturer->capture();
 		rect = detector->detectCube();
-		if( noDetection( rect ) ) break;
+		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
 		imageCenter = cv::Point(320, 240);
 		macroAdjust(imageCenter, rect);
 	} while(!pointInRect(imageCenter, rect));
@@ -97,7 +101,7 @@ void CubeCenterTargeter::targetCenter() {
 	do {
 		capturer->capture();
 		rect = detector->detectCube();
-		if( noDetection( rect ) ) break;
+		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
 		imageCenter = cv::Point(320, 240);
 		microAdjust(imageCenter, rect);
 	} while(needMicroAdjust(imageCenter, rect));

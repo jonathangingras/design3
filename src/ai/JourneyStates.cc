@@ -6,6 +6,7 @@ namespace d3t12 {
 
 void GoToAtlasState::run() {
 	RobotPose pose = poseGetter->getPose();
+	HEY
 	if(pose != backpack->atlasZonePose) {
 		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
 		for(int i = 0; i < commands.size(); ++i) {
@@ -58,6 +59,7 @@ void AskCubeState::run() {
 		}
 	}
 	leds->addNew(backpack->currentColor);
+	std::cout << "asking color: " << backpack->currentColor << std::endl;
 
 	d3t12::sleepSecondsNanoSeconds(5,0);
 }
@@ -65,9 +67,19 @@ void AskCubeState::run() {
 void FindCubeState::run() {
 	CubeDetector::Ptr detector = detectorFactory->createCubeDetector(backpack->currentColor, image);
 	cameraTargeter->setDetector(detector);
+	cameraTargeter->resetAngle();
 	
-	for(int i = 0; i < 5; ++i) {
-		cameraTargeter->targetCenter();
+	for(int i = 0; i < 100; ++i) {
+		bool error = true;
+		while(error) {
+			try {
+				cameraTargeter->targetCenter();
+			} catch(NoCubeFoundException& err) {
+				error = true;
+				continue;
+			}
+			error = false;
+		}
 	}
 
 	backpack->cubeTarget = finder->findCubePosition();
@@ -100,7 +112,21 @@ void GoToCubeZoneState::run() {
 
 void GrabCubeState::run() {
 	//TODO implement a motor targeter
-	motorTargeter->targetCenter();
+	CubeDetector::Ptr detector = detectorFactory->createCubeDetector(backpack->currentColor, image);
+	motorTargeter->setDetector(detector);
+	motorTargeter->resetAngle();
+	
+	bool error = true;
+	while(error) {
+		try {
+			motorTargeter->targetCenter();
+		} catch(NoCubeFoundException& err) {
+			error = true;
+			continue;
+		}
+		error = false;
+	}
+
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(0.05,0,0));
 	prehensor->close();

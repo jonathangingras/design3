@@ -86,20 +86,31 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 	void commandPose(d3t12::RobotPose pose) {
 		tf::TransformListener listener(ros::Duration(10));
 
-		geometry_msgs::PoseStamped robotPoseOnTable;
-		robotPoseOnTable.header.frame_id = "d3_table_origin";
-		robotPoseOnTable.header.stamp = ros::Time();
-		robotPoseOnTable.pose.position.x = pose.x;
-		robotPoseOnTable.pose.position.y = pose.y;
-		robotPoseOnTable.pose.position.z = 0;
-		robotPoseOnTable.pose.orientation = tf::createQuaternionMsgFromYaw(pose.yaw);
+		geometry_msgs::PoseStamped currentRobotPoseOnRobot;
+		currentRobotPoseOnRobot.header.frame_id = "robot_center";
+		currentRobotPoseOnRobot.header.stamp = ros::Time();
+		currentRobotPoseOnRobot.pose.position.x = 0;
+		currentRobotPoseOnRobot.pose.position.y = 0;
+		currentRobotPoseOnRobot.pose.position.z = 0;
+		currentRobotPoseOnRobot.pose.orientation = tf::createQuaternionMsgFromYaw(0);
 
-		geometry_msgs::PoseStamped robotPoseOnRobot;
+		geometry_msgs::PoseStamped currentRobotPoseOnTable;
+
+		geometry_msgs::PoseStamped wantedRobotPoseOnTable;
+		wantedRobotPoseOnTable.header.frame_id = "d3_table_origin";
+		wantedRobotPoseOnTable.header.stamp = currentRobotPoseOnRobot.header.stamp;
+		wantedRobotPoseOnTable.pose.position.x = pose.x;
+		wantedRobotPoseOnTable.pose.position.y = pose.y;
+		wantedRobotPoseOnTable.pose.position.z = 0;
+		wantedRobotPoseOnTable.pose.orientation = tf::createQuaternionMsgFromYaw(pose.yaw);
+
+		geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
 
 		bool error = true;
 		while(error) {
 			try {
-				listener.transformPose("robot_center", robotPoseOnTable, robotPoseOnRobot);
+				listener.transformPose("d3_table_origin", currentRobotPoseOnRobot, currentRobotPoseOnTable);
+				listener.transformPose("robot_center", wantedRobotPoseOnTable, wantedRobotPoseOnRobot);
 			} catch(tf::TransformException& ex) {
 				error = true;
 				continue;
@@ -107,10 +118,12 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 			error = false;
 		}
 
-		tf::Quaternion yaw;
-		tf::quaternionMsgToTF(robotPoseOnRobot.pose.orientation, yaw);
+		double diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
 
-		d3t12::RobotPose command(robotPoseOnRobot.pose.position.x, robotPoseOnRobot.pose.position.y, tf::getYaw(yaw));
+		d3t12::RobotPose command(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, diffYaw);
+
+		ROS_ERROR_STREAM("pathplanner ouputed:" << pose.x << ',' << pose.y << ',' << pose.yaw);
+		ROS_ERROR_STREAM("tf ouputed:" << wantedRobotPoseOnRobot.pose.position.x << ' ' << wantedRobotPoseOnRobot.pose.position.y << ' ' << diffYaw);
 
 		commandDirectly(command);
 	}
@@ -121,7 +134,8 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-  		return decoder.questionStr(atlas_told);
+  		//return decoder.questionStr(atlas_told);
+  		return "";
 	}
 };
 
@@ -133,7 +147,8 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 		colorList(_colorList) {}
 
 	std::string ask(std::string question) {
-		std::string answer = d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
+		std::string answer = "Germany";
+		//d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
 		colorList->setColorList(colors);
@@ -188,7 +203,8 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
         cameraPose(_cameraPose) {}
 
     void resetAngle() {
-
+    	cameraPose->setPitch(M_PI/4);
+    	cameraPose->setYaw(M_PI/2);
     }
 
     void adjustY(float degrees) {
@@ -259,19 +275,20 @@ void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& s
 }
 
 void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
-	runState(stateFactory, "GoToAtlas");
+	//runState(stateFactory, "GoToAtlas");
 	runState(stateFactory, "HandleQuestion");
 	runState(stateFactory, "ShowFlagsOnLEDs");
-	nextCube: runState(stateFactory, "GoToDetectionZone"); 
-	runState(stateFactory, "AskCube");
-	runState(stateFactory, "FindCube");
-	runState(stateFactory, "PlanPathToCubeZone");
-	runState(stateFactory, "GoToCubeZone");
+	//nextCube: runState(stateFactory, "GoToDetectionZone"); 
+	askcube: runState(stateFactory, "AskCube");
+	//runState(stateFactory, "FindCube");
+	//runState(stateFactory, "PlanPathToCubeZone");
+	//runState(stateFactory, "GoToCubeZone");
 	runState(stateFactory, "GrabCube");
-	runState(stateFactory, "PlanReturnToDetectionZone");
-	runState(stateFactory, "ReturnToDetectionZone");
+	//runState(stateFactory, "PlanReturnToDetectionZone");
+	//runState(stateFactory, "ReturnToDetectionZone");
 	runState(stateFactory, "DropCube");
-	goto nextCube;
+	goto askcube;
+	//goto nextCube;
 }
 
 int main(int argc, char** argv) {
@@ -306,7 +323,7 @@ int main(int argc, char** argv) {
 	d3t12::ImageCapturer::Ptr imageCapturer(new ConcreteImageCapturer(0, image));
 
 	d3t12::ColorJSONLoader loader;
-    loader.setFile("/home/team12/catkin_ws/src/design3/config/colors.json");
+    loader.setFile(std::string(getenv("HOME")) + "/catkin_ws/src/design3/config/colors.json");
     loader.loadJSON();
     d3t12::ColorPalette::Ptr palette(new d3t12::ColorPalette);
     loader.fillPalette(*palette);
