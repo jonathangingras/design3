@@ -213,11 +213,11 @@ struct ConcreteMotorAdjuster : public d3t12::ImageAngleAdjuster {
     }
 
     void adjustY(float degrees) {
-        poseCommander->commandDirectly(d3t12::RobotPose(0.1*degrees, 0.0, 0.0));
+        poseCommander->commandDirectly(d3t12::RobotPose(0.01*degrees, 0.0, 0.0));
     }
 
     void adjustX(float degrees) {
-        poseCommander->commandDirectly(d3t12::RobotPose(0.0, -0.1*degrees, 0.0));
+        poseCommander->commandDirectly(d3t12::RobotPose(0.0, -0.01*degrees, 0.0));
     }
 };
 
