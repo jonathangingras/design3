@@ -55,6 +55,14 @@ void GoToDetectionZoneState::run() {
 }
 
 void AskCubeState::run() {
+	if(leds->matrixFilled()) {
+		leds->turnMasterOn();
+		d3t12::sleepSecondsNanoSeconds(5,0);
+		leds->reset();
+
+		throw FlagCompletedException("Flag done!");
+	}
+
 	for(int i = 0; i < 9; ++i) {
 		backpack->currentColor = *colorList->current();
 
@@ -161,7 +169,11 @@ void ReturnToDetectionZoneState::run() {
 }
 
 void DropCubeState::run() {
-	//TODO add code for dropping at good place
+	RobotPose dropPose = dropList->previous();
+	std::cout << "drop pose: " << dropPose.x << ", " << dropPose.y << ", " << dropPose.yaw << std::endl;
+
+	poseCommander->commandPose(RETURN_SEEKING_CUBE_ZONE_POSE);
+	poseCommander->commandPose(dropPose);
 
 	prehensor->lower();
 	prehensor->open();

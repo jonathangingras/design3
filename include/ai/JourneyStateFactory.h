@@ -29,6 +29,8 @@ private:
 	ImageAngleAdjuster::Ptr cameraPoseAdjuster;
 	Prehensor::Ptr prehensor;
 
+	CubeDropPoseList::Ptr dropList;
+
 	JourneyBackPack::Ptr backpack;
 
 public:
@@ -56,6 +58,8 @@ public:
 		ImageAngleAdjuster::Ptr _cameraPoseAdjuster,
 		Prehensor::Ptr _prehensor,
 
+		CubeDropPoseList::Ptr _dropList,
+
 		JourneyBackPack::Ptr _backpack
 	): 
 		poseGetter(_poseGetter),
@@ -78,6 +82,8 @@ public:
 
 		cameraPoseAdjuster(_cameraPoseAdjuster),
 		prehensor(_prehensor),
+
+		dropList(_dropList),
 
 		backpack(_backpack)
 	{}

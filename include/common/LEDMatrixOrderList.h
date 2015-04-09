@@ -34,6 +34,14 @@ public:
 		return indices[currentIndex];
 	}
 
+	inline int previous() {
+		return (currentIndex - 1 > -1 ? indices[currentIndex - 1] : indices[8]);
+	}
+
+	inline void reset() {
+		currentIndex = 0;
+	}
+
 	inline LEDMatrixOrderList(): currentIndex(0) {
 		indices[0] = 7;
 		indices[1] = 8;
@@ -59,7 +67,7 @@ public:
 
 	inline CubeList(LEDMatrixOrderList::Ptr _orderList): orderList(_orderList) {}
 
-	inline void setColorList(std::vector<Type>& _elements) {
+	inline void setList(std::vector<Type>& _elements) {
 		for(int i = 0; i < _elements.size(); ++i) {
 			elements.push_back(_elements[i]);
 		}
@@ -71,6 +79,14 @@ public:
 
 	inline Type current() const {
 		return (elements.size() == 9 ? elements[orderList->current() - 1] : nullElement);
+	}
+
+	inline Type previous() const {
+		return (elements.size() == 9 ? elements[orderList->previous() - 1] : nullElement);
+	}
+
+	inline void reset() {
+		orderList->reset();
 	}
 };
 

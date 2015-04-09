@@ -167,7 +167,7 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 		//d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
-		colorList->setColorList(colors);
+		colorList->setList(colors);
 
 		return answer;
 	}
@@ -293,11 +293,18 @@ void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& s
 }
 
 void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
-	runState(stateFactory, "GoToAtlas");
+	beginning: runState(stateFactory, "GoToAtlas");
 	runState(stateFactory, "HandleQuestion");
 	runState(stateFactory, "ShowFlagsOnLEDs");
 	nextCube: runState(stateFactory, "GoToDetectionZone"); 
-	runState(stateFactory, "AskCube");
+	
+	try {
+		runState(stateFactory, "AskCube");
+	} catch(d3t12::FlagCompletedException& flagDoneError) {
+		ROS_ERROR_STREAM(flagDoneError.what());
+		goto beginning;
+	}
+	
 	runState(stateFactory, "FindCube");
 	runState(stateFactory, "PlanPathToCubeZone");
 	runState(stateFactory, "GoToCubeZone");
@@ -329,6 +336,21 @@ int main(int argc, char** argv) {
 	d3t12::LEDMatrixController::Ptr leds(new d3t12::LEDMatrixController(commandPort));
 	d3t12::LEDColorList::Ptr colorList(new d3t12::LEDColorList(leds->getOrderList()));
 
+	d3t12::CubeDropPoseList::Ptr dropList(new d3t12::CubeDropPoseList(leds->getOrderList()));
+	std::vector<d3t12::RobotPose> dropListVector;
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.44, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.66, M_PI));
+
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.44, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.66, M_PI));
+
+	dropListVector.push_back(d3t12::RobotPose(0.55, 0.44, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.55, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.55, 0.66, M_PI));
+	dropList->setList(dropListVector);
+
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
 	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList));
 	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter);
@@ -356,12 +378,14 @@ int main(int argc, char** argv) {
         cameraPoseAdjuster
     ));
 
-    d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
+    /*d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
     d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
         motorAdjuster,
         d3t12::CenterTargetParameters(1.5, 4.0, 0.4, cv::Point(300,290))
-    ));
+    ));*/
+    d3t12::ImageAngleAdjuster::Ptr motorAdjuster(cameraPoseAdjuster);
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(cameraTargeter);
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
 
@@ -390,6 +414,8 @@ int main(int argc, char** argv) {
 	
 		cameraPoseAdjuster,
 		prehensor,
+
+		dropList,
 
 		backpack
 	));

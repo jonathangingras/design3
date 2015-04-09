@@ -34,6 +34,12 @@ public:
 		return orderList;
 	}
 
+	inline void reset() {
+		orderList->reset();
+		added = 0;
+		turnAllOff();
+	}
+
 	virtual void turnAllOff();
 };
 

@@ -104,7 +104,7 @@ PathInformer::Ptr pathInformer(new PathInformerMock); \
  \
 std::vector<StringPtr> colors = CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList("Germany"); \
 LEDColorList::Ptr colorList(new LEDColorList(LEDMatrixOrderList::Ptr(new LEDMatrixOrderList))); \
-colorList->setColorList(colors); \
+colorList->setList(colors); \
 std::ostringstream* portStream = new std::ostringstream; \
 LEDMatrixController::Ptr leds(new LEDMatrixControllerMock( MicroControllerCommandPort::Ptr(new MicroControllerCommandPort ( MicroControllerCommandPort::OStreamPtr(portStream) ) ) )  ); \
 PathPlanner::Ptr pathPlanner(new PathPlannerMock); \
@@ -117,6 +117,8 @@ CubePositionFinder::Ptr finder(new CubePositionFinderMock);\
  \
 ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ImageAngleAdjusterMock); \
 Prehensor::Ptr prehensor(new PrehensorMock); \
+ \
+CubeDropPoseList::Ptr dropList; \
  \
 JourneyBackPack::Ptr backpack(new JourneyBackPack); \
  \
@@ -137,6 +139,7 @@ JourneyStateFactory factory( \
 	finder, \
 	cameraPoseAdjuster, \
 	prehensor, \
+	dropList, \
 	backpack \
 ); \
 CubeDetector::Ptr cubeDetectorMock(new CubeDetectorMock);

@@ -81,6 +81,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
 		state->prehensor = prehensor;
+		state->dropList = dropList;
 		statePtr = JourneyState::Ptr(state);	
 	}
 

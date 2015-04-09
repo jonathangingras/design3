@@ -7,8 +7,11 @@
 #include "JourneyState.h"
 #include "Interfaces.h"
 #include "PathPlanner.h"
+#include "FlagCompletedException.h"
 
 namespace d3t12 {
+
+typedef CubeList<RobotPose> CubeDropPoseList;
 
 class GoToAtlasState : public JourneyState {
 friend class JourneyStateFactory;
@@ -140,6 +143,7 @@ friend class JourneyStateFactory;
 	Prehensor::Ptr prehensor;
 	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
+	CubeDropPoseList::Ptr dropList;
 
 public:
 	void run();

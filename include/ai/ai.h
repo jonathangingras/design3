@@ -5,4 +5,6 @@
 #include "PathPlanner.h"
 #include "JourneyStateFactory.h"
 
+#include "FlagCompletedException.h"
+
 #endif
