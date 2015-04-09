@@ -22,16 +22,16 @@ static inline bool pointInRect(const cv::Point& point, const cv::Rect& rect) {
 void CubeCenterTargeter::macroAdjust(const cv::Point& imageCenter, const cv::Rect& rect) {
 	if(!pointXInRect(imageCenter, rect)) {
 		if(imageCenter.x <= rect.x) {
-			adjuster->adjustX(2);
+			adjuster->adjustX(targetParameters.macroUnit);
 		} else {
-			adjuster->adjustX(-2);
+			adjuster->adjustX(-targetParameters.macroUnit);
 		}
 	}
 	if(!pointYInRect(imageCenter, rect)) {
 		if(imageCenter.y <= rect.y) {
-			adjuster->adjustY(-2);
+			adjuster->adjustY(-targetParameters.macroUnit);
 		} else {
-			adjuster->adjustY(2);
+			adjuster->adjustY(targetParameters.macroUnit);
 		}
 	}
 }
@@ -39,18 +39,18 @@ void CubeCenterTargeter::macroAdjust(const cv::Point& imageCenter, const cv::Rec
 void CubeCenterTargeter::microAdjust(const cv::Point& imageCenter, const cv::Rect& rect) {
 	cv::Point cubeCenter = rectCenter(rect);
 
-	if(rect.width >= 5 && imageCenter.x - cubeCenter.x > rect.width/4) {
-		adjuster->adjustX(-0.5);
+	if(rect.width >= 5 && imageCenter.x - cubeCenter.x > rect.width*targetParameters.scaleFactor) {
+		adjuster->adjustX(-targetParameters.microUnit);
 	}
-	if(rect.width >= 5 && cubeCenter.x - imageCenter.x > rect.width/4) {
-		adjuster->adjustX(0.5);
+	if(rect.width >= 5 && cubeCenter.x - imageCenter.x > rect.width*targetParameters.scaleFactor) {
+		adjuster->adjustX(targetParameters.microUnit);
 	}
 
-	if(rect.width >= 5 && imageCenter.y - cubeCenter.y > rect.height/4) {
-		adjuster->adjustY(0.5);
+	if(rect.height >= 5 && imageCenter.y - cubeCenter.y > rect.height*targetParameters.scaleFactor) {
+		adjuster->adjustY(targetParameters.microUnit);
 	}
-	if(rect.width >= 5 && cubeCenter.y - imageCenter.y > rect.height/4) {
-		adjuster->adjustY(-0.5);
+	if(rect.height >= 5 && cubeCenter.y - imageCenter.y > rect.height*targetParameters.scaleFactor) {
+		adjuster->adjustY(-targetParameters.microUnit);
 	}
 }
 
@@ -58,17 +58,17 @@ bool CubeCenterTargeter::needMicroAdjust(const cv::Point& imageCenter, const cv:
 	bool answer = false;
 	cv::Point cubeCenter = rectCenter(rect);
 
-	if(rect.width >= 5 && imageCenter.x - cubeCenter.x >= rect.width/4) {
+	if(rect.width >= 5 && imageCenter.x - cubeCenter.x >= rect.width*targetParameters.scaleFactor) {
 		answer = true;
 	}
-	if(rect.width >= 5 && cubeCenter.x - imageCenter.x >= rect.width/4) {
+	if(rect.width >= 5 && cubeCenter.x - imageCenter.x >= rect.width*targetParameters.scaleFactor) {
 		answer = true;
 	}
 
-	if(rect.width >= 5 && imageCenter.y - cubeCenter.y >= rect.height/4) {
+	if(rect.height >= 5 && imageCenter.y - cubeCenter.y >= rect.height*targetParameters.scaleFactor) {
 		answer = true;
 	}
-	if(rect.width >= 5 && cubeCenter.y - imageCenter.y >= rect.height/4) {
+	if(rect.height >= 5 && cubeCenter.y - imageCenter.y >= rect.height*targetParameters.scaleFactor) {
 		answer = true;
 	}
 	return answer;
@@ -94,7 +94,7 @@ void CubeCenterTargeter::targetCenter() {
 		capturer->capture();
 		rect = detector->detectCube();
 		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
-		imageCenter = cv::Point(320, 240);
+		imageCenter = targetParameters.centerTarget;
 		macroAdjust(imageCenter, rect);
 	} while(!pointInRect(imageCenter, rect));
 
@@ -102,7 +102,7 @@ void CubeCenterTargeter::targetCenter() {
 		capturer->capture();
 		rect = detector->detectCube();
 		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
-		imageCenter = cv::Point(320, 240);
+		imageCenter = targetParameters.centerTarget;
 		microAdjust(imageCenter, rect);
 	} while(needMicroAdjust(imageCenter, rect));
 }

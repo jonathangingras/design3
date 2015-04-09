@@ -8,7 +8,7 @@
 #include "PathPlanner.h"
 #include "CubeRelativePosition.h"
 
-#define ATLAS_ZONE_POSE RobotPose(0.15,0.33,-M_PI/2)
+#define ATLAS_ZONE_POSE RobotPose(0.15,0.36,-M_PI/2)
 #define SEEKING_CUBE_ZONE_POSE RobotPose(0.98,0.55,0)
 #define RETURN_SEEKING_CUBE_ZONE_POSE RobotPose(0.98,0.55,M_PI)
 

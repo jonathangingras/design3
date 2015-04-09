@@ -186,6 +186,8 @@ struct PlannedPathDrawer {
       ys.push_back(uiPose.y);
     }
 
+    ROS_ERROR_STREAM("calling path drawer");
+
     mutex.lock();
 
     clearLines();
@@ -262,7 +264,7 @@ int main(int argc, char** argv) {
     //TODO add a subscription to atlas asker so it can change when sent
     //next 3 lines are examples
     UIContentSetter setter(&viewer, flagsPath);
-    setter.setAnswer("Germany");
+    setter.setAnswer("Gabon");
     setter.setQuestion("Who likes sausage?");
     
     return app.exec();

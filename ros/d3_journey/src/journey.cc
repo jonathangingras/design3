@@ -83,7 +83,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		}
 	}
 
-	void commandPose(d3t12::RobotPose pose) {
+	void updateTf(const d3t12::RobotPose& pose, geometry_msgs::PoseStamped& currentRobotPoseOnTable, geometry_msgs::PoseStamped& wantedRobotPoseOnRobot, double& diffYaw) {
 		tf::TransformListener listener(ros::Duration(10));
 
 		geometry_msgs::PoseStamped currentRobotPoseOnRobot;
@@ -94,7 +94,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		currentRobotPoseOnRobot.pose.position.z = 0;
 		currentRobotPoseOnRobot.pose.orientation = tf::createQuaternionMsgFromYaw(0);
 
-		geometry_msgs::PoseStamped currentRobotPoseOnTable;
+		//geometry_msgs::PoseStamped currentRobotPoseOnTable;
 
 		geometry_msgs::PoseStamped wantedRobotPoseOnTable;
 		wantedRobotPoseOnTable.header.frame_id = "d3_table_origin";
@@ -104,7 +104,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		wantedRobotPoseOnTable.pose.position.z = 0;
 		wantedRobotPoseOnTable.pose.orientation = tf::createQuaternionMsgFromYaw(pose.yaw);
 
-		geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
+		//geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
 
 		bool error = true;
 		while(error) {
@@ -118,14 +118,30 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 			error = false;
 		}
 
-		double diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
+		diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
 
-		d3t12::RobotPose command(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, diffYaw);
+		ROS_ERROR_STREAM("tf ouputed:" << wantedRobotPoseOnTable.pose.position.x << ' ' << wantedRobotPoseOnTable.pose.position.y << ' ' << tf::getYaw(wantedRobotPoseOnTable.pose.orientation));
+	}
+
+	void commandPose(d3t12::RobotPose pose) {
+		geometry_msgs::PoseStamped currentRobotPoseOnTable;
+		geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
+
+		double diffYaw;
+		updateTf(pose, currentRobotPoseOnTable, wantedRobotPoseOnRobot, diffYaw);
+
+		d3t12::RobotPose angleCommand(0.0, 0.0, diffYaw);
+
+		commandDirectly(angleCommand);
+
+
+		updateTf(pose, currentRobotPoseOnTable, wantedRobotPoseOnRobot, diffYaw);
+
+		d3t12::RobotPose translationCommand(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, 0.0);
+
+		commandDirectly(translationCommand);
 
 		ROS_ERROR_STREAM("pathplanner ouputed:" << pose.x << ',' << pose.y << ',' << pose.yaw);
-		ROS_ERROR_STREAM("tf ouputed:" << wantedRobotPoseOnRobot.pose.position.x << ' ' << wantedRobotPoseOnRobot.pose.position.y << ' ' << diffYaw);
-
-		commandDirectly(command);
 	}
 };
 
@@ -147,7 +163,7 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 		colorList(_colorList) {}
 
 	std::string ask(std::string question) {
-		std::string answer = "Germany";
+		std::string answer = "Gabon";
 		//d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
@@ -183,6 +199,8 @@ struct ConcretePathInformer : public d3t12::PathInformer {
 			poses.push_back(pose);
 		}
 		poseArray.poses = poses;
+
+		ROS_ERROR_STREAM("publishing array");
 		
 		pathPublisher.publish(poseArray);
 	}
@@ -203,7 +221,7 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
         cameraPose(_cameraPose) {}
 
     void resetAngle() {
-    	cameraPose->setPitch(M_PI/4);
+    	cameraPose->setPitch(M_PI/4 + M_PI/6);
     	cameraPose->setYaw(M_PI/2);
     }
 
@@ -275,20 +293,19 @@ void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& s
 }
 
 void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
-	//runState(stateFactory, "GoToAtlas");
+	runState(stateFactory, "GoToAtlas");
 	runState(stateFactory, "HandleQuestion");
 	runState(stateFactory, "ShowFlagsOnLEDs");
-	//nextCube: runState(stateFactory, "GoToDetectionZone"); 
-	askcube: runState(stateFactory, "AskCube");
-	//runState(stateFactory, "FindCube");
-	//runState(stateFactory, "PlanPathToCubeZone");
-	//runState(stateFactory, "GoToCubeZone");
+	nextCube: runState(stateFactory, "GoToDetectionZone"); 
+	runState(stateFactory, "AskCube");
+	runState(stateFactory, "FindCube");
+	runState(stateFactory, "PlanPathToCubeZone");
+	runState(stateFactory, "GoToCubeZone");
 	runState(stateFactory, "GrabCube");
-	//runState(stateFactory, "PlanReturnToDetectionZone");
-	//runState(stateFactory, "ReturnToDetectionZone");
+	runState(stateFactory, "PlanReturnToDetectionZone");
+	runState(stateFactory, "ReturnToDetectionZone");
 	runState(stateFactory, "DropCube");
-	goto askcube;
-	//goto nextCube;
+	goto nextCube;
 }
 
 int main(int argc, char** argv) {
@@ -342,7 +359,8 @@ int main(int argc, char** argv) {
     d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
     d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
-        motorAdjuster
+        motorAdjuster,
+        d3t12::CenterTargetParameters(1.5, 4.0, 0.4, cv::Point(300,290))
     ));
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));

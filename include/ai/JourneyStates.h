@@ -16,6 +16,7 @@ friend class JourneyStateFactory;
 	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
 	PathPlanner::Ptr pathPlanner;
+	PathInformer::Ptr pathInformer;
 
 public:
 	void run();
@@ -48,6 +49,7 @@ friend class JourneyStateFactory;
 	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;
 	PathPlanner::Ptr pathPlanner;
+	PathInformer::Ptr pathInformer;
 
 public:
 	void run();

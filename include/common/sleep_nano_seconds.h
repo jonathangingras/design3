@@ -16,10 +16,10 @@ inline void sleepSecondsNanoSeconds(time_t secs, long nanoSecs) {
 		done = nanosleep(&delay, &remaining);
 		delay = remaining;
 
-		if(errno != 0 && errno != EINTR) {
-			fprintf(stderr, "error when sleeping: %s\n", strerror(errno));
-			break;
-		}
+		//if(errno != 0 && errno != EINTR) {
+		//	fprintf(stderr, "error when sleeping: %s\n", strerror(errno));
+		//	break;
+		//}
 	}
 }
 

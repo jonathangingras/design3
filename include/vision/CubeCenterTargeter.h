@@ -6,6 +6,8 @@
 #include <vision/ImageAngleAdjuster.h>
 #include <vision/CubeDetector.h>
 
+#include "CenterTargetParameters.h"
+
 namespace d3t12 {
 
 class CubeCenterTargeter {
@@ -14,18 +16,19 @@ protected:
 	ImageAngleAdjuster::Ptr adjuster;
 	ImageCapturer::Ptr capturer;
 
-private:
+	CenterTargetParameters targetParameters;
+
 	void macroAdjust(const cv::Point& center, const cv::Rect& rect);
 	void microAdjust(const cv::Point& center, const cv::Rect& rect);
 	bool needMicroAdjust(const cv::Point& imageCenter, const cv::Rect& rect);
 
 public:
 	typedef boost::shared_ptr<CubeCenterTargeter> Ptr;
-	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster):
-		capturer(_capturer), detector(_detector), adjuster(_adjuster) {}
+	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, CubeDetector::Ptr _detector, ImageAngleAdjuster::Ptr _adjuster, CenterTargetParameters _targetParameters = CenterTargetParameters()):
+		capturer(_capturer), detector(_detector), adjuster(_adjuster), targetParameters(_targetParameters) {}
 
-	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, ImageAngleAdjuster::Ptr _adjuster):
-		capturer(_capturer), adjuster(_adjuster) {}
+	inline CubeCenterTargeter(ImageCapturer::Ptr _capturer, ImageAngleAdjuster::Ptr _adjuster, CenterTargetParameters _targetParameters = CenterTargetParameters()):
+		capturer(_capturer), adjuster(_adjuster), targetParameters(_targetParameters) {}
 
 	inline void setDetector(CubeDetector::Ptr _detector) {
 		detector = _detector;

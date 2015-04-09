@@ -12,6 +12,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
 		state->pathPlanner = pathPlanner;
+		state->pathInformer = pathInformer;
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "HandleQuestion") {
 		HandleQuestionState* state = new HandleQuestionState;
@@ -28,7 +29,8 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		GoToDetectionZoneState* state = new GoToDetectionZoneState;
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
-		state->pathPlanner = pathPlanner;		
+		state->pathPlanner = pathPlanner;
+		state->pathInformer = pathInformer;
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "AskCube") {
 		AskCubeState* state = new AskCubeState;

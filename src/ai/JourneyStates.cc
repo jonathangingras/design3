@@ -9,6 +9,7 @@ void GoToAtlasState::run() {
 	HEY
 	if(pose != backpack->atlasZonePose) {
 		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
+		pathInformer->informPath(commands);
 		for(int i = 0; i < commands.size(); ++i) {
 			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
 			poseCommander->commandPose(commands[i].toRobotPose());
@@ -28,7 +29,7 @@ void HandleQuestionState::run() {
 
 void ShowFlagsOnLEDsState::run() {
 	for(int i = 0; i < 9; ++i) {
-		StringPtr colorStr = colorList->next();
+		StringPtr colorStr = colorList->current();
 		if(colorStr->empty()) { leds->addBlank(); }
 		else{leds->addNew(*colorStr); }
 	}
@@ -42,6 +43,7 @@ void GoToDetectionZoneState::run() {
 	RobotPose pose = poseGetter->getPose();
 	if(pose != backpack->detectionZonePose) {
 		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->detectionZonePose);
+		pathInformer->informPath(commands);
 		for(int i = 0; i < commands.size(); ++i) {
 			poseCommander->commandPose(commands[i].toRobotPose());
 		}
@@ -50,7 +52,7 @@ void GoToDetectionZoneState::run() {
 
 void AskCubeState::run() {
 	for(int i = 0; i < 9; ++i) {
-		backpack->currentColor = *colorList->next();
+		backpack->currentColor = *colorList->current();
 
 		if(!backpack->currentColor.empty()) {
 			break;
@@ -83,6 +85,7 @@ void FindCubeState::run() {
 	}
 
 	backpack->cubeTarget = finder->findCubePosition();
+	std::cout << "found cube position: " << backpack->cubeTarget << std::endl;
 }
 
 void PlanPathToCubeZoneState::run() {
@@ -95,7 +98,7 @@ void PlanPathToCubeZoneState::run() {
 	else { wantedYaw = 0; }*/
 	
 	backpack->poseTarget = RobotPose( 
-		currentPose.x + backpack->cubeTarget.x, 
+		currentPose.x + backpack->cubeTarget.x - 0.31, 
 		currentPose.y + backpack->cubeTarget.y, 
 		0 //wantedYaw
 	);
@@ -128,11 +131,11 @@ void GrabCubeState::run() {
 	}
 
 	prehensor->open();
-	poseCommander->commandDirectly(RobotPose(0.05,0,0));
+	poseCommander->commandDirectly(RobotPose(0.20,0,0));
 	prehensor->close();
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(-0.025,0,0));
-	poseCommander->commandDirectly(RobotPose(0.03,0,0));
+	poseCommander->commandDirectly(RobotPose(0.05,0,0));
 	prehensor->close();
 	//cameraTargeter->targetCenter();
 	prehensor->rise();
@@ -162,6 +165,8 @@ void DropCubeState::run() {
 	prehensor->close();
 	prehensor->lower();
 
+	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
+	poseCommander->commandDirectly(RobotPose(0,0,M_PI));
 	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
 }
 

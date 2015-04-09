@@ -11,8 +11,8 @@ void LEDMatrixController::turnMasterOff() {
 }
 
 void LEDMatrixController::addNew(const std::string& colorStr) {
-	orderList->increase();
 	*commandPort << commandBuilder.setLED(orderList->current()).setColor(colorStr).build();
+	orderList->increase();
 }
 
 void LEDMatrixController::addBlank() {
