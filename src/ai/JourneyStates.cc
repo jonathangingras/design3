@@ -134,6 +134,9 @@ void GrabCubeState::run() {
 		error = false;
 	}
 
+	CubeRelativePosition target = finder->findCubePosition();
+	poseCommander->commandDirectly(RobotPose(target.x - 0.32, target.y, 0));
+
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(0.20,0,0));
 	prehensor->close();

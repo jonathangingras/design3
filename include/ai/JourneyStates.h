@@ -101,6 +101,7 @@ public:
 class GrabCubeState : public JourneyState {
 friend class JourneyStateFactory;
 
+	CubePositionFinder::Ptr finder;
 	Prehensor::Ptr prehensor;
 	CubeDetectorFactory::Ptr detectorFactory;
 	cvMatPtr image;

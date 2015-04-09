@@ -12,6 +12,12 @@ void LEDMatrixController::turnMasterOff() {
 
 void LEDMatrixController::addNew(const std::string& colorStr) {
 	*commandPort << commandBuilder.setLED(orderList->current()).setColor(colorStr).build();
+
+	++added;
+	if(added > 9) {
+		added -= 9;
+	}
+
 	orderList->increase();
 }
 
@@ -20,8 +26,8 @@ void LEDMatrixController::addBlank() {
 }
 
 void LEDMatrixController::removeCurrent() {
-	*commandPort << commandBuilder.setLED(orderList->current()).setPower(false).build();
 	orderList->cancelCurrent();
+	*commandPort << commandBuilder.setLED(orderList->current()).setPower(false).build();
 }
 
 void LEDMatrixController::turnAllOff() {

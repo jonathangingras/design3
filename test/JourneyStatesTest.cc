@@ -145,7 +145,8 @@ TEST(LEDMatrixOrderList, outputsGoodColors) {
 	SETUP
 
 	for(int i = 0; i < 9; ++i) {
-		std::cout << *colorList->next() << std::endl;
+		std::cout << *colorList->current() << std::endl;
+		colorList->increase();
 	}
 }
 

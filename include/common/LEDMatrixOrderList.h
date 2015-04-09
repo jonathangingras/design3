@@ -16,21 +16,16 @@ public:
 
 	inline void cancelCurrent() {
 		--currentIndex;
-		if(currentIndex < -1) {
-			currentIndex = -1;
+		if(currentIndex < 0) {
+			currentIndex = 8;
 		}
 	}
 
 	inline void increase() {
 		++currentIndex;
-		if(currentIndex == 9) {
+		if(currentIndex > 8) {
 			currentIndex = 0;
 		}
-	}
-
-	inline int next() {
-		increase();
-		return indices[currentIndex];
 	}
 
 	inline int current() {
@@ -39,7 +34,7 @@ public:
 		return indices[currentIndex];
 	}
 
-	inline LEDMatrixOrderList(): currentIndex(-1) {
+	inline LEDMatrixOrderList(): currentIndex(0) {
 		indices[0] = 7;
 		indices[1] = 8;
 		indices[2] = 9;
@@ -52,20 +47,21 @@ public:
 	}
 };
 
-class LEDColorList {
+template <typename Type>
+class CubeList {
 private:
 	LEDMatrixOrderList::Ptr orderList;
-	std::vector<StringPtr> colors;
-	StringPtr nullStr;
+	std::vector<Type> elements;
+	Type nullElement;
 
 public:
-	typedef boost::shared_ptr<LEDColorList> Ptr;
+	typedef boost::shared_ptr<CubeList> Ptr;
 
-	inline LEDColorList(LEDMatrixOrderList::Ptr _orderList): orderList(_orderList), nullStr(new std::string("")) {}
+	inline CubeList(LEDMatrixOrderList::Ptr _orderList): orderList(_orderList) {}
 
-	inline void setColorList(std::vector<StringPtr>& _colors) {
-		for(int i = 0; i < _colors.size(); ++i) {
-			colors.push_back(_colors[i]);
+	inline void setColorList(std::vector<Type>& _elements) {
+		for(int i = 0; i < _elements.size(); ++i) {
+			elements.push_back(_elements[i]);
 		}
 	}
 
@@ -73,14 +69,12 @@ public:
 		orderList->increase();
 	}
 
-	inline StringPtr current() const {
-		return (colors.size() == 9 ? colors[orderList->current() - 1] : nullStr);
-	}
-
-	inline StringPtr next() {
-		return (colors.size() == 9 ? colors[orderList->next() - 1] : nullStr);
+	inline Type current() const {
+		return (elements.size() == 9 ? elements[orderList->current() - 1] : nullElement);
 	}
 };
+
+typedef CubeList<StringPtr> LEDColorList;
 
 }
 

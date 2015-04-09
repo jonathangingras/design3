@@ -181,6 +181,61 @@ TEST(LEDMatrixController, matrixNotFilledWhenAdded8LEDs) {
 	EXPECT_FALSE(leds.matrixFilled());
 }
 
+TEST(LEDMatrixController, matrixNotFilledWhenAdded17LEDs) {
+	SETUP
+
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+
+	EXPECT_FALSE(leds.matrixFilled());
+}
+
+TEST(LEDMatrixController, matrixFilledWhenAdded18LEDs) {
+	SETUP
+
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+	leds.addNew("black");
+
+	EXPECT_TRUE(leds.matrixFilled());
+}
+
+TEST(LEDMatrixController, matrixNotFilledWhenAddedNoLED) {
+	SETUP
+
+	EXPECT_FALSE(leds.matrixFilled());
+}
+
 TEST(LEDMatrixController, matrixNotFilledAfterResumingAfterFillingOnce) {
 	SETUP
 

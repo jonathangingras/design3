@@ -12,11 +12,12 @@ private:
 	LEDMatrixOrderList::Ptr orderList;
 	MicroControllerCommandPort::Ptr commandPort;
 	MicroControllerLEDCommandBuilder commandBuilder;
+	int added;
 
 public:
 	typedef boost::shared_ptr<LEDMatrixController> Ptr;
 	inline LEDMatrixController(MicroControllerCommandPort::Ptr _commandPort): 
-		commandPort(_commandPort), orderList(new LEDMatrixOrderList) {}
+		commandPort(_commandPort), orderList(new LEDMatrixOrderList), added(0) {}
 
 	void turnMasterOn();
 	void turnMasterOff();
@@ -26,7 +27,7 @@ public:
 	virtual void removeCurrent();
 
 	inline bool matrixFilled() {
-		return orderList->current() == 3;
+		return orderList->current() == 7 && added;
 	}
 
 	inline LEDMatrixOrderList::Ptr getOrderList() {
