@@ -153,12 +153,13 @@ int main(int argc, char** argv) {
         cameraPoseAdjuster
     ));
 
-    d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
-    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeTopTargeter(
+    /*d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
-        motorAdjuster,
+        motorAdjuster
         d3t12::CenterTargetParameters(1.0, 2.0, 0.4, cv::Point(300,190))
-    ));
+    ));*/
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(cameraTargeter);
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
 
@@ -182,6 +183,11 @@ int main(int argc, char** argv) {
 		error = false;
 	}
 	if(!exitGuard->good()) return 1;
+
+
+	d3t12::CubeRelativePosition target = finder->findCubePosition();
+	poseCommander->commandDirectly(d3t12::RobotPose(target.x - 0.32, target.y, 0));
+
 
 	prehensor->open();
 	std::cout << "opened" << std::endl;

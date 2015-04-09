@@ -16,6 +16,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "HandleQuestion") {
 		HandleQuestionState* state = new HandleQuestionState;
+		state->leds = leds;
 		state->questionGetter = questionGetter;
 		state->questionAsker = questionAsker;
 		state->confirmationGetter = confirmationGetter;

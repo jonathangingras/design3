@@ -25,6 +25,7 @@ public:
 class HandleQuestionState : public JourneyState {
 friend class JourneyStateFactory;
 
+	LEDMatrixController::Ptr leds;
 	QuestionGetter::Ptr questionGetter;
 	QuestionAsker::Ptr questionAsker;
 	ConfirmationGetter::Ptr confirmationGetter;

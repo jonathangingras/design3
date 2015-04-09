@@ -18,6 +18,10 @@ void GoToAtlasState::run() {
 }
 
 void HandleQuestionState::run() {
+	leds->turnMasterOn();
+
+	d3t12::sleepSecondsNanoSeconds(5,0);
+
 	for(int i = 0; i < 2; ++i) {
 		std::string questionStr = questionGetter->getQuestion();
 		std::string answer = questionAsker->ask(questionStr);
