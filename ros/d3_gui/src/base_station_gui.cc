@@ -177,7 +177,7 @@ struct PlannedPathDrawer {
     currentLines.clear();
   }
 
-  void operator()(const d3t12::tf::robotPoseArray::ConstPtr& robotPoseArray) {
+  void updateLines(const d3t12::tf::robotPoseArray::ConstPtr& robotPoseArray) {
     std::vector<float> xs, ys;
 
     for(std::vector<d3t12::tf::robotPose>::const_iterator it = robotPoseArray->poses.begin(); it != robotPoseArray->poses.end(); ++it) {
@@ -186,10 +186,6 @@ struct PlannedPathDrawer {
       ys.push_back(uiPose.y);
     }
 
-    ROS_ERROR_STREAM("calling path drawer");
-
-    mutex.lock();
-
     clearLines();
 
     if(robotPoseArray->poses.size()) {
@@ -197,7 +193,14 @@ struct PlannedPathDrawer {
         currentLines.push_back( scene->addLine(*itx, *ity, *(itx + 1), *(ity + 1), pen) );
       }
     }
+  }
 
+  void operator()(const d3t12::tf::robotPoseArray::ConstPtr& _robotPoseArray) {
+    ROS_ERROR_STREAM("calling path drawer");
+    if(!_robotPoseArray.get()) return;
+
+    mutex.lock();
+    updateLines(_robotPoseArray);
     mutex.unlock();
   }
 

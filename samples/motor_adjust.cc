@@ -11,6 +11,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 	inline ConcretePoseCommander(d3t12::MicroControllerCommandPort::Ptr _commandPort): 
 		commandPort(_commandPort), motors(_commandPort) {
 		*commandPort << "clcmode p";
+		//*commandPort << "setecho off";
 	}
 
 	void getFlag() {
@@ -18,7 +19,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		std::string inStr;
 		do {
 			*commandPort << "getflag";
-			d3t12::sleepSecondsNanoSeconds(0, 5000000);
+			d3t12::sleepSecondsNanoSeconds(0, 7000000);
 			inPort >> inStr;
 		} while(inStr.empty() || *(inStr.end() - 3) != '1');
 	}
@@ -30,8 +31,8 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 			motors.rotate( pose.yaw );
 			getFlag();
 		}
-		if( fabs(pose.x) >= 0.01 || fabs(pose.y) >= 0.01 ) {
-			motors.moveTo( (fabs(pose.x) >= 0.01 ? pose.x : 0), (fabs(pose.y) >= 0.01 ? pose.y : 0) );
+		if( fabs(pose.x) >= 0.005 || fabs(pose.y) >= 0.005 ) {
+			motors.moveTo( (fabs(pose.x) >= 0.005 ? pose.x : 0), (fabs(pose.y) >= 0.005 ? pose.y : 0) );
 			getFlag();
 		}
 	}
@@ -54,7 +55,7 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
         cameraPose(_cameraPose) {}
 
     void resetAngle() {
-    	cameraPose->setPitch(M_PI/4 + M_PI/6);
+    	cameraPose->setPitch(M_PI/4);
     	cameraPose->setYaw(M_PI/2);
     }
 
@@ -75,7 +76,7 @@ struct ConcreteMotorAdjuster : public d3t12::ImageAngleAdjuster {
         cameraPose(_cameraPose), poseCommander(_poseCommander) {}
 
     void resetAngle() {
-    	cameraPose->setPitch(M_PI/4 - M_PI/6 - M_PI/12);
+    	cameraPose->setPitch(M_PI/4 - M_PI/6);
     	cameraPose->setYaw(M_PI/2);
     }
 
@@ -150,16 +151,17 @@ int main(int argc, char** argv) {
 	d3t12::ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ConcreteAngleAdjuster(cameraPose));
     d3t12::CubeCenterTargeter::Ptr cameraTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
-        cameraPoseAdjuster
+        cameraPoseAdjuster,
+        d3t12::CenterTargetParameters(1.0, 2.0, 0.125, cv::Point(320,240))
     ));
 
-    /*d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
-    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
+    //d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeTopTargeter(
         imageCapturer,
-        motorAdjuster
-        d3t12::CenterTargetParameters(1.0, 2.0, 0.4, cv::Point(300,190))
-    ));*/
-    d3t12::CubeCenterTargeter::Ptr motorTargeter(cameraTargeter);
+        cameraPoseAdjuster,
+        d3t12::CenterTargetParameters(1.0, 2.0, 0.125, cv::Point(320,240))
+    ));
+    //d3t12::CubeCenterTargeter::Ptr motorTargeter(cameraTargeter);
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
 
@@ -186,27 +188,31 @@ int main(int argc, char** argv) {
 
 
 	d3t12::CubeRelativePosition target = finder->findCubePosition();
-	poseCommander->commandDirectly(d3t12::RobotPose(target.x - 0.32, target.y, 0));
+	poseCommander->commandDirectly(d3t12::RobotPose(target.x - 0.36, target.y - 0.02, 0));
 
 
 	prehensor->open();
 	std::cout << "opened" << std::endl;
 	poseCommander->commandDirectly(d3t12::RobotPose(0.20,0,0));
 	std::cout << "advanced" << std::endl;
+	d3t12::sleepSecondsNanoSeconds(2,0);
 	prehensor->close();
 	std::cout << "closed" << std::endl;
+	d3t12::sleepSecondsNanoSeconds(2,0);
 	prehensor->open();
 	poseCommander->commandDirectly(d3t12::RobotPose(-0.025,0,0));
-	poseCommander->commandDirectly(d3t12::RobotPose(0.05,0,0));
+	d3t12::sleepSecondsNanoSeconds(1,0);
+	poseCommander->commandDirectly(d3t12::RobotPose(0.08,0,0));
+	d3t12::sleepSecondsNanoSeconds(1,0);
 
 	prehensor->close();
 	//cameraTargeter->targetCenter();
-	prehensor->rise();
+	/*prehensor->rise();
 	prehensor->lower();
 	prehensor->open();
 	poseCommander->commandDirectly(d3t12::RobotPose(-0.15,0,0));
 	prehensor->close();
-	prehensor->lower();
+	prehensor->lower();*/
 	///////////////////////////////
 	
 	return 0;

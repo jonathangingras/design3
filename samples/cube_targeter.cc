@@ -20,7 +20,8 @@ public:
         cameraPose(_cameraPose) {}
 
     void resetAngle() {
-        
+        cameraPose->setPitch(M_PI/4);
+        cameraPose->setYaw(M_PI/2);
     }
 
     void adjustY(float degrees) {
@@ -82,11 +83,12 @@ int main(int argc, char** argv) {
     d3t12::CameraPoseHandler::Ptr cameraPose(new d3t12::CameraPoseHandler);
 
     d3t12::ImageAngleAdjuster::Ptr angleAdjuster(new ConcreteAngleAdjuster(cameraPose));
-    d3t12::CubeCenterTargeter targeter(
-        d3t12::ImageCapturer::Ptr(new CameraImageCapturer(1, src)),
-        detector,
-        angleAdjuster
+    d3t12::CubeTopTargeter targeter(
+        d3t12::ImageCapturer::Ptr(new CameraImageCapturer(0, src)),
+        angleAdjuster,
+        d3t12::CenterTargetParameters(0.25, 0.75, 0.15, cv::Point(320,240))
     );
+    targeter.setDetector(detector);
 
     d3t12::ImageAngleGetter::Ptr angleGetter(new ConcreteAngleGetter(cameraPose));
     d3t12::CubePositionFinder finder(angleGetter, 0.34, 0.03, 0.02);

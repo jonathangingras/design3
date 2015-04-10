@@ -21,7 +21,7 @@ PathCommand PathPlanner::planPathAngle(RobotPose initialPose, RobotPose finalPos
     return PathCommand(0,0,finalYaw);
 }
 
-std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose finalPose) {
+/*std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose finalPose) {
 	std::vector<PathCommand> poses;	
 	poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
 
@@ -34,6 +34,56 @@ std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose 
 		poses.push_back(PathCommand(finalPose.x, initialPose.y, finalPose.yaw));
 		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
 	} else {
+		poses.push_back(PathCommand(initialPose.x, finalPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	}
+
+	return poses;
+}*/
+
+/*std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose finalPose) {
+	std::vector<PathCommand> poses;	
+	poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
+	if(initialPose.x + 0.40 > 2.30) {
+		initialPose.x -= 0.4;
+		poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
+	}
+	if(finalPose.y - initialPose.y < 0.20 && finalPose.yaw == -M_PI/2) {
+		poses.push_back(PathCommand(initialPose.x, initialPose.y + 0.2, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	} else if(finalPose.y - initialPose.y > 0.20 && finalPose.yaw == M_PI/2) {
+		poses.push_back(PathCommand(initialPose.x, initialPose.y - 0.2, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	} else {
+		poses.push_back(PathCommand(initialPose.x, finalPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	}
+
+	return poses;
+}*/
+
+std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose finalPose) {
+	std::vector<PathCommand> poses;	
+	poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
+
+	if(finalPose.y - initialPose.y < 0.20 && finalPose.yaw == -M_PI/2) {
+		initialPose.y += 0.2;
+		poses.push_back(PathCommand(initialPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	} else if(finalPose.y - initialPose.y > 0.20 && finalPose.yaw == M_PI/2) {
+		initialPose.y -= 0.2;
+		poses.push_back(PathCommand(initialPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, initialPose.y, finalPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	} else if(finalPose.x - initialPose.x < -0.01) {
+		initialPose.x = initialPose.x - 0,4;
+		poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
+		poses.push_back(PathCommand(initialPose.x , finalPose.y, initialPose.yaw));
+		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
+	}else {
 		poses.push_back(PathCommand(initialPose.x, finalPose.y, finalPose.yaw));
 		poses.push_back(PathCommand(finalPose.x, finalPose.y, finalPose.yaw));
 	}

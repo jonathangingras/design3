@@ -55,13 +55,13 @@ void GoToDetectionZoneState::run() {
 }
 
 void AskCubeState::run() {
-	if(leds->matrixFilled()) {
+	/*if(leds->matrixFilled()) {
 		leds->turnMasterOn();
 		d3t12::sleepSecondsNanoSeconds(5,0);
 		leds->reset();
 
 		throw FlagCompletedException("Flag done!");
-	}
+	}*/
 
 	for(int i = 0; i < 9; ++i) {
 		backpack->currentColor = *colorList->current();
@@ -110,7 +110,7 @@ void PlanPathToCubeZoneState::run() {
 	else { wantedYaw = 0; }*/
 	
 	backpack->poseTarget = RobotPose( 
-		currentPose.x + backpack->cubeTarget.x - 0.31, 
+		currentPose.x + backpack->cubeTarget.x - 0.36, 
 		currentPose.y + backpack->cubeTarget.y, 
 		0 //wantedYaw
 	);
@@ -143,14 +143,18 @@ void GrabCubeState::run() {
 	}
 
 	CubeRelativePosition target = finder->findCubePosition();
-	poseCommander->commandDirectly(RobotPose(target.x - 0.32, target.y, 0));
+	poseCommander->commandDirectly(RobotPose(target.x - 0.36, target.y - 0.02, 0));
 
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(0.20,0,0));
+	d3t12::sleepSecondsNanoSeconds(2,0);
 	prehensor->close();
+	d3t12::sleepSecondsNanoSeconds(2,0);
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(-0.025,0,0));
-	poseCommander->commandDirectly(RobotPose(0.05,0,0));
+	d3t12::sleepSecondsNanoSeconds(1,0);
+	poseCommander->commandDirectly(RobotPose(0.08,0,0));
+	d3t12::sleepSecondsNanoSeconds(1,0);
 	prehensor->close();
 	//cameraTargeter->targetCenter();
 	prehensor->rise();

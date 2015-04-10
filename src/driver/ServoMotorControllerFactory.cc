@@ -28,7 +28,7 @@ ServoMotorController::Ptr ServoMotorControllerFactory::createController(const st
 		controller->currentInt = 4268;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
 		//next one is because tag confilcts with white
-		controller->forcedMin = 3950;
+		controller->forcedMin = 2244;//3950;
 	} else if(servoName == "cameraHorizontal") {
 		controller->channel = 2;
 		controller->min = 2440;

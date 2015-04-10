@@ -52,9 +52,10 @@ struct PoseReceiver : public d3t12::PoseGetter {
 struct ConcretePoseCommander : public d3t12::PoseCommander {
 	d3t12::MicroControllerCommandPort::Ptr commandPort;
 	d3t12::MotorController motors;
+	tf::TransformListener listener;
 
 	inline ConcretePoseCommander(d3t12::MicroControllerCommandPort::Ptr _commandPort): 
-		commandPort(_commandPort), motors(_commandPort) {
+		commandPort(_commandPort), motors(_commandPort), listener(ros::Duration(10)) {
 		*commandPort << "clcmode p";
 	}
 
@@ -63,7 +64,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		std::string inStr;
 		do {
 			*commandPort << "getflag";
-			d3t12::sleepSecondsNanoSeconds(0, 500000000);
+			d3t12::sleepSecondsNanoSeconds(0, 7000000);
 			inPort >> inStr;
 		} while(inStr.empty() || *(inStr.end() - 3) != '1');
 	}
@@ -84,8 +85,6 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 	}
 
 	void updateTf(const d3t12::RobotPose& pose, geometry_msgs::PoseStamped& currentRobotPoseOnTable, geometry_msgs::PoseStamped& wantedRobotPoseOnRobot, double& diffYaw) {
-		tf::TransformListener listener(ros::Duration(10));
-
 		geometry_msgs::PoseStamped currentRobotPoseOnRobot;
 		currentRobotPoseOnRobot.header.frame_id = "robot_center";
 		currentRobotPoseOnRobot.header.stamp = ros::Time();
@@ -119,6 +118,7 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		}
 
 		diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
+		if(2*M_PI - fabs(diffYaw) <= 0.1) diffYaw = 0;
 
 		ROS_ERROR_STREAM("tf ouputed:" << wantedRobotPoseOnTable.pose.position.x << ' ' << wantedRobotPoseOnTable.pose.position.y << ' ' << tf::getYaw(wantedRobotPoseOnTable.pose.orientation));
 	}
@@ -163,7 +163,7 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 		colorList(_colorList) {}
 
 	std::string ask(std::string question) {
-		std::string answer = "Gabon";
+		std::string answer = "Uganda";
 		//d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
@@ -208,6 +208,7 @@ struct ConcretePathInformer : public d3t12::PathInformer {
 
 struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
     d3t12::CameraPoseHandler::Ptr cameraPose;
+    double initPitch;
 
     inline float rad2deg(double rad) {
         return (rad*180)/M_PI;
@@ -217,11 +218,11 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
         return (deg*M_PI)/180;
     }
 
-    inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose):
-        cameraPose(_cameraPose) {}
+    inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose, double _initPitch):
+        cameraPose(_cameraPose), initPitch(_initPitch) {}
 
     void resetAngle() {
-    	cameraPose->setPitch(M_PI/4 + M_PI/6);
+    	cameraPose->setPitch(initPitch);
     	cameraPose->setYaw(M_PI/2);
     }
 
@@ -338,17 +339,17 @@ int main(int argc, char** argv) {
 
 	d3t12::CubeDropPoseList::Ptr dropList(new d3t12::CubeDropPoseList(leds->getOrderList()));
 	std::vector<d3t12::RobotPose> dropListVector;
-	dropListVector.push_back(d3t12::RobotPose(0.75, 0.44, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.75, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.85, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.85, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.85, 0.44, M_PI));
+
 	dropListVector.push_back(d3t12::RobotPose(0.75, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.44, M_PI));
 
-	dropListVector.push_back(d3t12::RobotPose(0.65, 0.44, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.65, 0.55, M_PI));
 	dropListVector.push_back(d3t12::RobotPose(0.65, 0.66, M_PI));
-
-	dropListVector.push_back(d3t12::RobotPose(0.55, 0.44, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.55, 0.55, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.55, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.55, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.44, M_PI));
 	dropList->setList(dropListVector);
 
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
@@ -372,20 +373,17 @@ int main(int argc, char** argv) {
 	d3t12::CameraPoseHandler::Ptr cameraPose(new d3t12::CameraPoseHandler);
 	d3t12::ImageAngleGetter::Ptr angleGetter(new ConcreteAngleGetter(cameraPose));
 
-	d3t12::ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ConcreteAngleAdjuster(cameraPose));
+	d3t12::ImageAngleAdjuster::Ptr cameraPoseAdjuster(new ConcreteAngleAdjuster(cameraPose, M_PI/4 + M_PI/12));
     d3t12::CubeCenterTargeter::Ptr cameraTargeter(new d3t12::CubeCenterTargeter(
         imageCapturer,
         cameraPoseAdjuster
     ));
 
-    /*d3t12::ImageAngleAdjuster::Ptr motorAdjuster(new ConcreteMotorAdjuster(cameraPose, poseCommander));
-    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeCenterTargeter(
+    d3t12::CubeCenterTargeter::Ptr motorTargeter(new d3t12::CubeTopTargeter(
         imageCapturer,
-        motorAdjuster,
-        d3t12::CenterTargetParameters(1.5, 4.0, 0.4, cv::Point(300,290))
-    ));*/
-    d3t12::ImageAngleAdjuster::Ptr motorAdjuster(cameraPoseAdjuster);
-    d3t12::CubeCenterTargeter::Ptr motorTargeter(cameraTargeter);
+        d3t12::ImageAngleAdjuster::Ptr(new ConcreteAngleAdjuster(cameraPose, M_PI/4)),
+        d3t12::CenterTargetParameters(0.25, 0.75, 0.15, cv::Point(320,240))
+    ));
 
     d3t12::CubePositionFinder::Ptr finder(new d3t12::CubePositionFinder(angleGetter, 0.34, 0.03, 0.02));
 
