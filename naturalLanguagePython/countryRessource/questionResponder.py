@@ -21,14 +21,18 @@ class QuestionResponder(object):
         return formattedSearchStrategyByKeywordDictionary
 
     def askQuestion(self, question):
-        nameOfCountry = ""
-        if question is not None and question != "":
-            dictionary = self.countryService.analyzeQuestionFromAtlas(question)
-            formattedDictionary = self.__formatInformationDictionary(dictionary)
-            formattedSearchStrategyByKeywordDictionary = self.__getSearchStrategyByKeywordDictionary(dictionary,
+        try:
+            nameOfCountry = ""
+            if question is not None and question != "":
+                dictionary = self.countryService.analyzeQuestionFromAtlas(question)
+                formattedDictionary = self.__formatInformationDictionary(dictionary)
+                formattedSearchStrategyByKeywordDictionary = self.__getSearchStrategyByKeywordDictionary(dictionary,
                                                                                                      question)
-            nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
+                print(formattedDictionary)
+                nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
+        except Exception:
+            print(dictionary)
+            print(formattedDictionary)
+            print(formattedSearchStrategyByKeywordDictionary)
+            nameOfCountry = "This is not the country you were looking for!"
         return nameOfCountry
-
-if __name__ == "__main__":
-    print("allo")
