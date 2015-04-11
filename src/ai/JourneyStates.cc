@@ -10,6 +10,10 @@ void GoToAtlasState::run() {
 	if(pose != backpack->atlasZonePose) {
 		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
 		pathInformer->informPath(commands);
+		pathInformer->informPath(commands);
+		pathInformer->informPath(commands);
+		pathInformer->informPath(commands);
+		pathInformer->informPath(commands);
 		for(int i = 0; i < commands.size(); ++i) {
 			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
 			poseCommander->commandPose(commands[i].toRobotPose());
@@ -177,6 +181,8 @@ void DropCubeState::run() {
 	std::cout << "drop pose: " << dropPose.x << ", " << dropPose.y << ", " << dropPose.yaw << std::endl;
 
 	poseCommander->commandPose(RETURN_SEEKING_CUBE_ZONE_POSE);
+	poseCommander->commandY(dropPose);
+	poseCommander->commandX(dropPose);
 	poseCommander->commandPose(dropPose);
 
 	prehensor->lower();
@@ -190,7 +196,6 @@ void DropCubeState::run() {
 
 	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
 	poseCommander->commandDirectly(RobotPose(0,0,M_PI));
-	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
 }
 
 } //d3t12

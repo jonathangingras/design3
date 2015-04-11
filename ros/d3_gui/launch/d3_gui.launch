@@ -1,6 +1,6 @@
 <launch>
 
-<arg name="qml_path" default="$(find d3_gui)/qml/kikiantoine.qml" />
+<arg name="qml_path" default="$(find d3_gui)/qml/maingui.qml" />
 <arg name="image_path" default="$(find d3_gui)/qml/robot.png" />
 <arg name="flags_path" default="$(find d3_gui)/flags" />
 

@@ -72,8 +72,12 @@ QString QmlApplicationViewerPrivate::adjustPath(const QString &path)
     return path;
 }*/
 
-QmlApplicationViewer::QmlApplicationViewer(QWidget *parent)
-    : QDeclarativeView(parent)
+void d3t12::UIEmitter::emitSignal() {
+  emit updateSignal();
+}
+
+QmlApplicationViewer::QmlApplicationViewer(d3t12::UIEmitter* _emitter, QWidget *parent)
+    : QDeclarativeView(parent), emitter(_emitter), updater(NULL)
     //, d(new QmlApplicationViewerPrivate())
 {
     connect(engine(), SIGNAL(quit()), SLOT(close()));
@@ -87,6 +91,14 @@ QmlApplicationViewer::QmlApplicationViewer(QWidget *parent)
     new QmlJSDebugger::QDeclarativeViewObserver(this, this);
 #endif
 #endif
+
+    connect(emitter, SIGNAL(updateSignal()), this, SLOT(updateSlot()));
+}
+
+void QmlApplicationViewer::updateSlot() {
+    if(updater) {
+        updater->update();
+    }
 }
 
 QmlApplicationViewer::~QmlApplicationViewer()

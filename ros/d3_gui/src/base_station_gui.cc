@@ -4,6 +4,7 @@
 #include <RosQtExitGuard.h>
 #include <d3_table_transform/robotPose.h>
 #include <d3_table_transform/robotPoseArray.h>
+#include <common/common.h>
 
 //Qt MUST BE included last because of some shit it does with signals in its
 //immensely giant unintuitive crappy API
@@ -13,6 +14,7 @@
 #include <QDeclarativeProperty>
 #include <QGraphicsPixmapItem>
 #include <QmlApplicationViewer.h>
+#include <QThread>
 
 namespace d3t12 {
   namespace tf = d3_table_transform;
@@ -91,10 +93,13 @@ public:
   }
 };
 
-class UIContentSetter {
+class UIContentSetter : public d3t12::Updater {
 private:
   QDeclarativeView* view;
   std::string flagsPath;
+  boost::mutex* mutex;
+
+  std::string currentCountry;
 
   inline QObject* getCountryTextInput() {
     return view->rootObject()->findChild<QObject*>("countryName");
@@ -111,27 +116,61 @@ private:
   void setCountryName(std::string countryNameStr) {
     QObject* countryTextInput = getCountryTextInput();
     QDeclarativeProperty countryTextProperty(countryTextInput, "text");
+    //mutex->lock();
     countryTextProperty.write(QVariant(QString(countryNameStr.c_str())));
+    //mutex->unlock();
   }
 
   void setCountryFlag(std::string flagPath) {
     QObject* flagImage = getFlagImage();
     QDeclarativeProperty flagProperty(flagImage, "source");
+    //mutex->lock();
     flagProperty.write(QVariant(QString(flagPath.c_str())));
+    //mutex->unlock();
   }
 
 public:
-  inline UIContentSetter(QDeclarativeView* _view, std::string _flagsPath): view(_view), flagsPath(_flagsPath) {}
+  inline UIContentSetter(QDeclarativeView* _view, std::string _flagsPath, boost::mutex* _mutex): view(_view), flagsPath(_flagsPath), mutex(_mutex) {}
 
   void setAnswer(std::string countryName) {
-    setCountryName(countryName);
-    setCountryFlag(flagsPath + '/' + countryName + ".gif");
+    currentCountry = countryName;
+  }
+
+  void update() {
+    if(currentCountry.empty()) return;
+    setCountryName(currentCountry);
+    setCountryFlag(flagsPath + '/' + currentCountry + ".gif");
+  }
+
+  void triggerTimer() {
+    QObject* timer = view->rootObject()->findChild<QObject*>("timerTrigger");
+    QDeclarativeProperty runProperty(timer, "running");
+    
+    //mutex->lock();
+    runProperty.write(QVariant(true));
+    //mutex->unlock();
+    
+    d3t12::sleepSecondsNanoSeconds(1, 0);
+    
+    //mutex->lock();
+    runProperty.write(QVariant(false));
+    //mutex->unlock();
+  }
+
+  void resetTimer() {
+    QObject* timer = view->rootObject()->findChild<QObject*>("timerObject");
+    QDeclarativeProperty timerProperty(timer, "ticks");
+    //mutex->lock();
+    timerProperty.write(QVariant(-1));
+    //mutex->unlock();
   }
 
   void setQuestion(std::string questionStr) {
     QObject* questionTextInput = getQuestionTextInput();
     QDeclarativeProperty questionTextProperty(questionTextInput, "text");
+    //mutex->lock();
     questionTextProperty.write(QVariant(QString(questionStr.c_str())));
+    //mutex->unlock();
   }
 
 };
@@ -209,6 +248,45 @@ struct PlannedPathDrawer {
   }
 };
 
+struct Timer : public QThread {
+  UIContentSetter* setter;
+  boost::mutex* mutex;
+  boost::mutex timeLock;
+  
+  inline Timer(UIContentSetter* _setter, boost::mutex* _mutex):
+    setter(_setter), mutex(_mutex) {
+      timeLock.lock();
+      start();
+  }
+
+  void pause() {
+    timeLock.lock();
+  }
+
+  void resume() {
+    timeLock.unlock();
+  }
+
+  void reset() {
+    timeLock.unlock();
+    timeLock.lock();
+    setter->resetTimer();
+    setter->triggerTimer();
+  }
+
+  void time() {
+    timeLock.lock();
+    timeLock.unlock();
+    setter->triggerTimer();
+  }
+
+  void run() {
+    while(1) {
+      time();
+    }
+  }
+};
+
 void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphicsScene* scene, QGraphicsPixmapItem* item, UIPose::Ptr uiPose) {
   while(exitGuard->good()) {
     mutex->lock();
@@ -220,13 +298,47 @@ void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphics
     item->setRotation(uiPoseCpy.angle);
 
     usleep(20000);
+    mutex->lock();
     scene->update();
+    mutex->unlock();
   }
 }
 
 void rosSpin() {
   ros::spin();
 }
+
+void tryshit(Timer* timer, d3t12::UIEmitter* emitter, UIContentSetter* setter) {
+  
+  shit:
+  timer->resume();
+  ROS_ERROR_STREAM("started");
+  sleep(5);
+
+  setter->setQuestion("Who likes sausage?");
+  setter->setAnswer("Germany");
+  emitter->emitSignal();
+  
+  timer->pause();
+  ROS_ERROR_STREAM("paused");
+  sleep(5);
+
+  timer->reset();
+  ROS_ERROR_STREAM("reset");
+  sleep(5);
+
+  setter->setQuestion("Who likes me?");
+  setter->setAnswer("Haiti");
+  emitter->emitSignal();
+
+  goto shit;
+}
+
+/*struct ConcreteUpdateRequester : public d3t12::UpdateRequester {
+  void requestUpdate() {
+
+  }
+};*/
 
 Q_DECL_EXPORT 
 int main(int argc, char** argv) {
@@ -241,7 +353,8 @@ int main(int argc, char** argv) {
     node.getParam("d3_base_station_gui/imagePath", imagePath);
     node.getParam("d3_base_station_gui/flagsPath", flagsPath);
 
-    QmlApplicationViewer viewer;
+    d3t12::UIEmitter emitter;
+    QmlApplicationViewer viewer(&emitter);
     viewer.setSource(QUrl(qmlPath.c_str()));
     viewer.show();
 
@@ -265,10 +378,11 @@ int main(int argc, char** argv) {
     boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose);
 
     //TODO add a subscription to atlas asker so it can change when sent
-    //next 3 lines are examples
-    UIContentSetter setter(&viewer, flagsPath);
-    setter.setAnswer("Gabon");
-    setter.setQuestion("Who likes sausage?");
+    UIContentSetter setter(&viewer, flagsPath, &mutex);
+    viewer.setUpdater(&setter);
+    Timer timer(&setter, &mutex);
+
+    boost::thread shitter(tryshit, &timer, &emitter, &setter);
     
     return app.exec();
 }

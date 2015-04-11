@@ -67,7 +67,10 @@ PathCommand PathPlanner::planPathAngle(RobotPose initialPose, RobotPose finalPos
 std::vector<PathCommand> PathPlanner::planPath(RobotPose initialPose, RobotPose finalPose) {
 	std::vector<PathCommand> poses;	
 	poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
-
+	if(initialPose.x + 0.50 > 2.30) {
+		initialPose.x -= 0.4;
+		poses.push_back(PathCommand(initialPose.x, initialPose.y, initialPose.yaw));
+	}
 	if(finalPose.y - initialPose.y < 0.20 && finalPose.yaw == -M_PI/2) {
 		initialPose.y += 0.2;
 		poses.push_back(PathCommand(initialPose.x, initialPose.y, finalPose.yaw));

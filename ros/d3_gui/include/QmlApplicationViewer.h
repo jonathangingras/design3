@@ -13,10 +13,39 @@
 
 #include <QtDeclarative/QDeclarativeView>
 
-class QmlApplicationViewer : public QDeclarativeView { Q_OBJECT
+namespace d3t12 {
+
+class UIEmitter : public QObject { Q_OBJECT
 public:
-    explicit QmlApplicationViewer(QWidget *parent = 0);
-    virtual ~QmlApplicationViewer();
+  void emitSignal();
+
+signals:
+  void updateSignal();
+};
+
+struct Updater {
+  virtual void update() = 0;
+};
+
+}
+
+class QmlApplicationViewer : public QDeclarativeView { Q_OBJECT
+  d3t12::Updater* updater;
+  d3t12::UIEmitter* emitter;
+
+public:
+  explicit QmlApplicationViewer(d3t12::UIEmitter* _emitter, QWidget *parent = 0);
+  virtual ~QmlApplicationViewer();
+
+  inline void setUpdater(d3t12::Updater* _updater) {
+    updater = _updater;
+  }
+
+//signals:
+//  void updateSignal();
+
+public slots:
+  void updateSlot();
 
     /*void setMainQmlFile(const QString &file);
     void addImportPath(const QString &path);*/

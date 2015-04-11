@@ -143,6 +143,30 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 
 		ROS_ERROR_STREAM("pathplanner ouputed:" << pose.x << ',' << pose.y << ',' << pose.yaw);
 	}
+
+	void commandX(d3t12::RobotPose pose) {
+		geometry_msgs::PoseStamped currentRobotPoseOnTable;
+		geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
+
+		double diffYaw;
+		updateTf(pose, currentRobotPoseOnTable, wantedRobotPoseOnRobot, diffYaw);
+
+		d3t12::RobotPose translationCommand(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, 0.0);
+
+		commandDirectly(d3t12::RobotPose(translationCommand.x, 0, 0));
+	}
+
+	void commandY(d3t12::RobotPose pose) {
+		geometry_msgs::PoseStamped currentRobotPoseOnTable;
+		geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
+
+		double diffYaw;
+		updateTf(pose, currentRobotPoseOnTable, wantedRobotPoseOnRobot, diffYaw);
+
+		d3t12::RobotPose translationCommand(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, 0.0);
+
+		commandDirectly(d3t12::RobotPose(0, translationCommand.y, 0));		
+	}
 };
 
 struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved to other node as a receiver of std_msgs::String message
@@ -150,8 +174,7 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-  		//return decoder.questionStr(atlas_told);
-  		return "";
+  		return decoder.questionStr(atlas_told);
 	}
 };
 
@@ -162,11 +185,24 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 	inline ConcreteQuestionAsker(d3t12::LEDColorList::Ptr _colorList):
 		colorList(_colorList) {}
 
-	std::string ask(std::string question) {
-		std::string answer = "Uganda";
-		//d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
+	inline void removeEndLine(std::string& str) {
+		std::string::iterator endStr = --str.end();
+		if(*endStr == '\n') {
+			str.erase(endStr);
+		}
+	}
 
-		colors = d3t12::CountryToColorLister(std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json").getColorList(answer);
+	std::string ask(std::string question) {
+		std::string answer = d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
+
+		ROS_ERROR_STREAM("COUNTRY ANSWER ------>>>> " << answer);
+
+		std::string jsonFile = std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json";
+		d3t12::CountryToColorLister listTranslater(jsonFile);
+		
+		removeEndLine(answer);
+		colors = listTranslater.getColorList(answer);
+
 		colorList->setList(colors);
 
 		return answer;
@@ -319,6 +355,7 @@ void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
 int main(int argc, char** argv) {
 	ros::init(argc, argv, "design3_robot_journey");
 	ros::NodeHandle node;
+	chdir(getenv("HOME"));
 
 	d3t12::MicroControllerCommandPort::Ptr commandPort(
 		new d3t12::MicroControllerCommandPort(
@@ -335,6 +372,7 @@ int main(int argc, char** argv) {
 	d3t12::PoseCommander::Ptr poseCommander(new ConcretePoseCommander(commandPort));
 
 	d3t12::LEDMatrixController::Ptr leds(new d3t12::LEDMatrixController(commandPort));
+	leds->reset();
 	d3t12::LEDColorList::Ptr colorList(new d3t12::LEDColorList(leds->getOrderList()));
 
 	d3t12::CubeDropPoseList::Ptr dropList(new d3t12::CubeDropPoseList(leds->getOrderList()));

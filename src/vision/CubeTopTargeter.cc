@@ -35,7 +35,7 @@ void CubeTopTargeter::targetCenter() {
 		capturer->capture();
 		rect = detector->detectCube();
 		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
-		rect.height = 5;
+		rect.height = 10;
 		imageCenter = targetParameters.centerTarget;
 		macroAdjust(imageCenter, rect);
 	} while(!pointInRect(imageCenter, rect));
@@ -44,7 +44,7 @@ void CubeTopTargeter::targetCenter() {
 		capturer->capture();
 		rect = detector->detectCube();
 		if( noDetection( rect ) ) throw NoCubeFoundException("targetCenter: could not find cube!");
-		rect.height = 5;
+		rect.height = 10;
 		imageCenter = targetParameters.centerTarget;
 		microAdjust(imageCenter, rect);
 	} while(needMicroAdjust(imageCenter, rect));
