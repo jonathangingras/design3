@@ -441,15 +441,23 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
 
+    def test_usepercentageWithoutDecimalSearchingReligionsShouldReturnSomething(self):
+        expectedDictionary = {}
+        expectedDictionary['religions'] = ["513% of protestant", "076% of buddhist"]
+        question = "What country has religions including 513% of protestant and 076% of buddhist?"
 
-    # def test_useImpossibleQuestionSentenceAndUnseNltkLastAttemptInQuestionSentenceShouldReturnSomething(self):
-    #     question = "My population use more than 12 Questions."
-    #     expectedDictionnary = {}
-    #     expectedDictionnary['population'] = ["12 Questions"]
-    #     self.processLanguage = QuestionInformationAnalyser()
-    #     self.processLanguage.analyseQuestion(question)
-    #     print self.processLanguage.questionDictionary
-    #     self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionnary)
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_usepercentageWithoutDecimalSearchingGDPShouldReturnSomething(self):
+        expectedDictionary = {}
+        expectedDictionary['public debt'] = ["79% of GDP"]
+        question = "My public debt is 79% of GDP."
+
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
 
 
