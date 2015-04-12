@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <std_msgs/String.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/PointStamped.h>
 #include <RosQtExitGuard.h>
@@ -98,6 +99,7 @@ private:
   QDeclarativeView* view;
   std::string flagsPath;
   boost::mutex* mutex;
+  d3t12::UIEmitter* emitter;
 
   std::string currentCountry;
 
@@ -130,47 +132,51 @@ private:
   }
 
 public:
-  inline UIContentSetter(QDeclarativeView* _view, std::string _flagsPath, boost::mutex* _mutex): view(_view), flagsPath(_flagsPath), mutex(_mutex) {}
+  inline UIContentSetter(QDeclarativeView* _view, std::string _flagsPath, boost::mutex* _mutex, d3t12::UIEmitter* _emitter):
+    view(_view), flagsPath(_flagsPath), mutex(_mutex), emitter(_emitter) {}
 
   void setAnswer(std::string countryName) {
     currentCountry = countryName;
+    emitter->emitSignal();
   }
 
   void update() {
     if(currentCountry.empty()) return;
+    mutex->lock();
     setCountryName(currentCountry);
     setCountryFlag(flagsPath + '/' + currentCountry + ".gif");
+    mutex->unlock();
   }
 
   void triggerTimer() {
     QObject* timer = view->rootObject()->findChild<QObject*>("timerTrigger");
     QDeclarativeProperty runProperty(timer, "running");
     
-    //mutex->lock();
+    mutex->lock();
     runProperty.write(QVariant(true));
-    //mutex->unlock();
+    mutex->unlock();
     
     d3t12::sleepSecondsNanoSeconds(1, 0);
     
-    //mutex->lock();
+    mutex->lock();
     runProperty.write(QVariant(false));
-    //mutex->unlock();
+    mutex->unlock();
   }
 
   void resetTimer() {
     QObject* timer = view->rootObject()->findChild<QObject*>("timerObject");
     QDeclarativeProperty timerProperty(timer, "ticks");
-    //mutex->lock();
+    mutex->lock();
     timerProperty.write(QVariant(-1));
-    //mutex->unlock();
+    mutex->unlock();
   }
 
   void setQuestion(std::string questionStr) {
     QObject* questionTextInput = getQuestionTextInput();
     QDeclarativeProperty questionTextProperty(questionTextInput, "text");
-    //mutex->lock();
+    mutex->lock();
     questionTextProperty.write(QVariant(QString(questionStr.c_str())));
-    //mutex->unlock();
+    mutex->unlock();
   }
 
 };
@@ -308,7 +314,7 @@ void rosSpin() {
   ros::spin();
 }
 
-void tryshit(Timer* timer, d3t12::UIEmitter* emitter, UIContentSetter* setter) {
+/*void tryshit(Timer* timer, UIContentSetter* setter) {
   
   shit:
   timer->resume();
@@ -317,7 +323,6 @@ void tryshit(Timer* timer, d3t12::UIEmitter* emitter, UIContentSetter* setter) {
 
   setter->setQuestion("Who likes sausage?");
   setter->setAnswer("Germany");
-  emitter->emitSignal();
   
   timer->pause();
   ROS_ERROR_STREAM("paused");
@@ -329,16 +334,29 @@ void tryshit(Timer* timer, d3t12::UIEmitter* emitter, UIContentSetter* setter) {
 
   setter->setQuestion("Who likes me?");
   setter->setAnswer("Haiti");
-  emitter->emitSignal();
 
   goto shit;
-}
+}*/
 
-/*struct ConcreteUpdateRequester : public d3t12::UpdateRequester {
-  void requestUpdate() {
+struct QuestionWritter {
+  UIContentSetter* setter;
 
+  inline QuestionWritter(UIContentSetter* _setter): setter(_setter) {}
+
+  void operator()(const std_msgs::String::ConstPtr& question) {
+    setter->setQuestion(question->data);
   }
-};*/
+};
+
+struct AnswerWritter {
+  UIContentSetter* setter;
+
+  inline AnswerWritter(UIContentSetter* _setter): setter(_setter) {}
+
+  void operator()(const std_msgs::String::ConstPtr& answer) {
+    setter->setAnswer(answer->data);
+  }
+};
 
 Q_DECL_EXPORT 
 int main(int argc, char** argv) {
@@ -378,11 +396,15 @@ int main(int argc, char** argv) {
     boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose);
 
     //TODO add a subscription to atlas asker so it can change when sent
-    UIContentSetter setter(&viewer, flagsPath, &mutex);
+    UIContentSetter setter(&viewer, flagsPath, &mutex, &emitter);
+    AnswerWritter answerWritter(&setter);
+    QuestionWritter questionWritter(&setter);
+    ros::Subscriber quSub = node.subscribe<std_msgs::String>("/robot_journey/question", 1, questionWritter);
+    ros::Subscriber anSub = node.subscribe<std_msgs::String>("/robot_journey/answer", 1, answerWritter);
+
     viewer.setUpdater(&setter);
     Timer timer(&setter, &mutex);
-
-    boost::thread shitter(tryshit, &timer, &emitter, &setter);
+    timer.resume();
     
     return app.exec();
 }

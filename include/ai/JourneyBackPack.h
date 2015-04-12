@@ -28,10 +28,12 @@ struct JourneyBackPack {
 	RobotPose detectionZonePose;
 	RobotPose atlasZonePose;
 
+	int cubeCurrentIndex;
+
 	inline JourneyBackPack(RobotPose _detectionZonePose, RobotPose _atlasZonePose):
-		detectionZonePose(_detectionZonePose), atlasZonePose(_atlasZonePose), cubeTarget(0,0), poseTarget(0,0,0) {}
+		detectionZonePose(_detectionZonePose), atlasZonePose(_atlasZonePose), cubeTarget(0,0), poseTarget(0,0,0), cubeCurrentIndex(0) {}
 	inline JourneyBackPack():
-		detectionZonePose(SEEKING_CUBE_ZONE_POSE), atlasZonePose(ATLAS_ZONE_POSE), cubeTarget(0,0), poseTarget(0,0,0) {}
+		detectionZonePose(SEEKING_CUBE_ZONE_POSE), atlasZonePose(ATLAS_ZONE_POSE), cubeTarget(0,0), poseTarget(0,0,0), cubeCurrentIndex(0) {}
 };
 
 }

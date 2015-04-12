@@ -59,15 +59,9 @@ void GoToDetectionZoneState::run() {
 }
 
 void AskCubeState::run() {
-	/*if(leds->matrixFilled()) {
-		leds->turnMasterOn();
-		d3t12::sleepSecondsNanoSeconds(5,0);
-		leds->reset();
-
-		throw FlagCompletedException("Flag done!");
-	}*/
-
 	for(int i = 0; i < 9; ++i) {
+		backpack->cubeCurrentIndex++;
+
 		backpack->currentColor = *colorList->current();
 
 		if(!backpack->currentColor.empty()) {
@@ -76,6 +70,16 @@ void AskCubeState::run() {
 			leds->addBlank();
 		}
 	}
+
+	if(backpack->cubeCurrentIndex > 9) {
+		backpack->cubeCurrentIndex = 0;
+		leds->turnMasterOn();
+		d3t12::sleepSecondsNanoSeconds(5,0);
+		leds->reset();
+
+		throw FlagCompletedException("Flag done!");
+	}
+
 	leds->addNew(backpack->currentColor);
 	std::cout << "asking color: " << backpack->currentColor << std::endl;
 
@@ -181,6 +185,8 @@ void DropCubeState::run() {
 	std::cout << "drop pose: " << dropPose.x << ", " << dropPose.y << ", " << dropPose.yaw << std::endl;
 
 	poseCommander->commandPose(RETURN_SEEKING_CUBE_ZONE_POSE);
+	poseCommander->commandY(dropPose);
+	poseCommander->commandY(dropPose);
 	poseCommander->commandY(dropPose);
 	poseCommander->commandX(dropPose);
 	poseCommander->commandPose(dropPose);

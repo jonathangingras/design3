@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <std_msgs/String.h>
 
 #include <common/common.h>
 #include <driver/driver.h>
@@ -59,14 +60,34 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		*commandPort << "clcmode p";
 	}
 
+	inline bool check(const std::string& str) {
+		if(str.length() < 12) return false;
+		
+		std::string::const_reverse_iterator it = str.rbegin();
+		std::string rstr;
+		for(int i = 0; it != str.rbegin() + 12; ++it, ++i) {
+			if(i < 2) continue;
+			rstr += *it;
+		}
+		
+		return rstr == "1\r\ngalfteg";//"getflag\n1\n>";
+	}
+
 	void getFlag() {
 		d3t12::NonBlockIfStream inPort("/dev/ttySTM32");
 		std::string inStr;
-		do {
+		/*do {
 			*commandPort << "getflag";
-			d3t12::sleepSecondsNanoSeconds(0, 7000000);
+			d3t12::sleepSecondsNanoSeconds(0, 10000000);
 			inPort >> inStr;
-		} while(inStr.empty() || *(inStr.end() - 3) != '1');
+		} while(inStr.empty() || *(inStr.end() - 3) != '1');*/
+		for(int i = 0; i < 3; ++i) {
+			do {
+				*commandPort << "getflag";
+				d3t12::sleepSecondsNanoSeconds(0, 10000000);
+				inPort >> inStr;
+			} while(!check(inStr));
+		}
 	}
 
 	void commandDirectly(d3t12::RobotPose pose) {
@@ -170,40 +191,61 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 };
 
 struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved to other node as a receiver of std_msgs::String message
+	ros::Publisher& questionPublisher;
+
+	inline ConcreteQuestionGetter(ros::Publisher& _questionPublisher):
+		questionPublisher(_questionPublisher) {}
+
 	std::string getQuestion() {
 		d3t12::CURLGetter getter("https://192.168.0.2");
   		d3t12::AtlasJSONDecoder decoder;
   		std::string atlas_told = getter.performGET();
-  		return decoder.questionStr(atlas_told);
+  		
+  		std_msgs::String ansMsg;
+  		ansMsg.data = decoder.questionStr(atlas_told);
+
+  		questionPublisher.publish(ansMsg);
+  		return ansMsg.data;
 	}
 };
 
 struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 	d3t12::LEDColorList::Ptr colorList;
 	std::vector<d3t12::StringPtr> colors;
+	ros::Publisher& answerPublisher;
 
-	inline ConcreteQuestionAsker(d3t12::LEDColorList::Ptr _colorList):
-		colorList(_colorList) {}
+	inline ConcreteQuestionAsker(d3t12::LEDColorList::Ptr _colorList, ros::Publisher& _answerPublisher):
+		colorList(_colorList), answerPublisher(_answerPublisher) {}
 
 	inline void removeEndLine(std::string& str) {
-		std::string::iterator endStr = --str.end();
-		if(*endStr == '\n') {
-			str.erase(endStr);
+		std::string::iterator it = str.begin();
+		std::string ret;
+		for(; it != str.end(); ++it) {
+			if(*it != '\n' && *it != '\r') {
+				ret += *it;
+			}
 		}
+		str = ret;
 	}
 
 	std::string ask(std::string question) {
-		std::string answer = d3t12::Popener().popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
-
-		ROS_ERROR_STREAM("COUNTRY ANSWER ------>>>> " << answer);
+		d3t12::Popener popener;
+		std::string answer = popener.popen("python2.7.9 -m naturalLanguagePython '" + question + "'");
 
 		std::string jsonFile = std::string(getenv("HOME")) + "/catkin_ws/src/design3/ros/d3_gui/flags.json";
 		d3t12::CountryToColorLister listTranslater(jsonFile);
 		
 		removeEndLine(answer);
+
+		ROS_ERROR_STREAM("COUNTRY ANSWER ------>>>> " << answer);
+
 		colors = listTranslater.getColorList(answer);
 
 		colorList->setList(colors);
+
+		std_msgs::String ansMsg;
+  		ansMsg.data = answer;
+		answerPublisher.publish(ansMsg);
 
 		return answer;
 	}
@@ -369,6 +411,10 @@ int main(int argc, char** argv) {
 	d3t12::PoseGetter::Ptr poseGetter(poseReceiver);
 	ros::Subscriber robotPoseSubscriber = node.subscribe<d3t12::tf::robotPose>("robot_positioner/robot_pose", 1, &PoseReceiver::callback, poseReceiver);
 
+	ros::Publisher questionPublisher = node.advertise<std_msgs::String>("/robot_journey/question", 1);
+	ros::Publisher answerPublisher = node.advertise<std_msgs::String>("/robot_journey/answer", 1);
+
+
 	d3t12::PoseCommander::Ptr poseCommander(new ConcretePoseCommander(commandPort));
 
 	d3t12::LEDMatrixController::Ptr leds(new d3t12::LEDMatrixController(commandPort));
@@ -377,21 +423,21 @@ int main(int argc, char** argv) {
 
 	d3t12::CubeDropPoseList::Ptr dropList(new d3t12::CubeDropPoseList(leds->getOrderList()));
 	std::vector<d3t12::RobotPose> dropListVector;
-	dropListVector.push_back(d3t12::RobotPose(0.85, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.85, 0.67, M_PI));
 	dropListVector.push_back(d3t12::RobotPose(0.85, 0.55, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.85, 0.44, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.85, 0.43, M_PI));
 
-	dropListVector.push_back(d3t12::RobotPose(0.75, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.75, 0.67, M_PI));
 	dropListVector.push_back(d3t12::RobotPose(0.75, 0.55, M_PI));
 	dropListVector.push_back(d3t12::RobotPose(0.75, 0.44, M_PI));
 
-	dropListVector.push_back(d3t12::RobotPose(0.65, 0.66, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.67, M_PI));
 	dropListVector.push_back(d3t12::RobotPose(0.65, 0.55, M_PI));
-	dropListVector.push_back(d3t12::RobotPose(0.65, 0.44, M_PI));
+	dropListVector.push_back(d3t12::RobotPose(0.65, 0.43, M_PI));
 	dropList->setList(dropListVector);
 
-	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter);
-	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList));
+	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter(questionPublisher));
+	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList, answerPublisher));
 	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter);
 	d3t12::PathInformer::Ptr pathInformer(new ConcretePathInformer(node));
 

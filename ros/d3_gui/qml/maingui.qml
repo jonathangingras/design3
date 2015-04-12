@@ -259,7 +259,7 @@ Rectangle {
         TextInput {
             id: question
             objectName: "questionText"
-            text: "La question de Atlas va là "
+            text: ""
             horizontalAlignment: TextInput.AlignHCenter
             anchors.fill: parent
             readOnly: true
@@ -286,7 +286,7 @@ Rectangle {
             objectName: "countryName"
             x: 0
             y: 0
-            text: "Le pays trouvé va là"
+            text: ""
             horizontalAlignment: TextInput.AlignHCenter
             anchors.rightMargin: 0
             anchors.bottomMargin: 0

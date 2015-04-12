@@ -2521,8 +2521,8 @@
       ]
     },
     {
-      "name": "Saint_Martin",
-      "file": "/home/jorobot/catkin_ws/src/design3/ros/d3_gui/flags/Saint_Martin.gif",
+      "name": "San_Marino",
+      "file": "/home/jorobot/catkin_ws/src/design3/ros/d3_gui/flags/San_Marino.gif",
       "color_list": [
         "white",
         "yellow",
