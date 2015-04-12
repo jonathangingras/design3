@@ -6,10 +6,12 @@ class SearchValueWithRegex(object):
     def __init__(self):
         self.listRegexValueWord = [r"(?<=starts with )([A-Z][a-z]+){1}",
                                  r"(?<=ends with )(\w+){1}",
-                                 r"((?<=including )|(?<=include )|(?<= are ))((\d+\.?\d+\%?)(\s\w+)* and (\d+\.?\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))",
+                                 r"((?<=including )|(?<=include )|(?<= are ))((\d+[\s\.]?\d+\%?)+(\s\w+)* and (\d+\.?\d+\%?)(\s\w+)*|(\w+(\s\w+)*\,\s)+(\w+(\s\w+)*\,?\s)?and (\w+)|(\w+ and \w+(\s\w+){0,3}))",
+                                 # r"((?<=including )|(?<=include )|(?<= are ))((\d+\.?\d+\%?)(\s\w+)* and (\d+\.?\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+)|(\w+ and \w+\s?))"
+                                 # use less but not safe for three words in enumeration
                                  r"((\d+\.\d+\%?)(\s\w+)* and (\d+\.\d+\%?)(\s\w+)*|(\w+\,\s)+(\w+\,?\s)?and (\w+))",
-                                 r"(?<=between )(\S?\d+)+(\.)?(\d+)((\%)|(\w+)+) and ((\S?\d+[%.]?)+)((\s\w+)+)?",
-                                 r"((?<=greater than )|(?<=less than ))(((\d+)(\ |\.|\%)?)+(\w+\/\d+)?)+",
+                                 r"(?<=between )((\S?\d+)+[\.\s\,]?(\d+)+((\%)|(\w+))?)+ and ((\S?\d*[%\.\s]?\d+)+)((\%)|(\s\w+)+)?",
+                                 r"(((?<=greater than )|(?<=less than ))((\d+)([\s\.\%])?)+((\w+(\s\w+)*\/(\w+)?)?(\d+)?([\s\.\,]\d+)*)*)",
                                  r"((\d+\s)?([A-Z][a-z]{2,}\s(\d+)))",
                                  r"((([(\d+\d+)|(\d+)]+\ \d+)|([(\d+\d+)|(\d+)]+\.\d+)) [SENW])",
                                  r"(?<=is the )((\w+\s?){1,2})((?=\.))",
@@ -17,14 +19,14 @@ class SearchValueWithRegex(object):
                                  r"(?<=[Ww]hat country has )(([A-Z][a-z]+\s?)?(\w*['-]?\w*\-?)?(\s?[A-Z][a-z]+)?){1,3}(?= as)",
                                  r"(\.[a-z]+)",
                                  r"((?<=including a )|(?<=(?<!(including ))ing\b as a ))(\w+\s?)+",
-                                 r"(\d*\.?\d+\%)",
+                                 r"((\d\s?)*(\d+\.?\d+\%))",
                                  r"(?<= contains )(\w+\s?\-?\'?){1,2}",
-                                 r"((\d+[ /.]?\d+[ %]?)((\w+llion)|(sq km)))",
+                                 r"((\d+[\s\,\.\%]?)+(((\w+llion)(( cu(bic)? m(\w+)?)|( kWh)|( bbl)|( km))?)|(( sq)? km)))",
+                                 #r"((\d+[\s\,\.]?\d+[\s%]?)((\w+llion)|(sq km)))", simple but without speculation about new question
                                  r"(?<= is )(\d+(\s|\.?)\d+\%?)(\s[a-z]{1,2})?(\s[A-Z]{1,})?",
                                  r"((?<=is )([A-Z][a-z]*([\s\,]*))+|(?<= are )([A-Z][a-z]*[\s\,]*([a-z ]+)?)+)",
                                  r"((?<=The )(\w+\s*?){2}(?= is ))",
-                                 r"((?<=is )(\d+\s\w*?)+)",
-                                 r"((?<=[Mm]y )(?<=.)*?((?= is)|(?= was)|(?= are)|(?= is the))(\s+\w))"]
+                                 r"((?<=is )(\d+\s\w*?)+)"]
 
     def __addElementsFromListTempIntoListOfKey(self, indexBegin, listTemp,listOfValue):
         for key in listTemp:

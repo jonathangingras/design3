@@ -459,6 +459,79 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
+    def test_AnalyseQuestionWithElectricityProductionUsingReallyBigNumberAsKeyShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['electricity production'] = ['600 456 345 456', '650 billion kWh']
+        question = "My electricity production is between 600 456 345 456 and 650 billion kWh."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithElectricityProductionUsingReallyBigNumberWithDecimalAsKeyShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['electricity production'] = ['600 456 345.456', '650 456 345.456 billion kWh']
+        question = "My electricity production is between 600 456 345.456 and 650 456 345.456 billion kWh."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_addBigNumberOnTheNumberUsedForAQuestionWithBetweenAndPercentShoudReturnProperDictionnary(self):
+        expectedDictionary = {}
+        expectedDictionary['inflation rate'] = ["23 320.5673%", "34 560.4565%"]
+        question = "What country has an inflation rate between 23 320.5673% and 34 560.4565%?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithBirthRateAsKeyUsingBigNumberAsValueShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['birth rate'] = ["46.12 births/ 1000"]
+        question = "What country has a birth rate of 46.12 births/ 1000 population?"
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithDeathRateAsKeyUsingExtremeNumberAndGramaticalDistortionShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['death rate'] = ["10345 543.37 DEaths/1 000 000.400",'10 3545.40 443 deaths/1000']
+        question = "The death rate of this country is greater than 10345 543.37 DEaths/1 000 000.400 population and less than 10 3545.40 443 deaths/1000 population."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithHomeMadeQuestionAndUsingProductionPerDayWithSlashShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['oil production'] = ["3.856 million bbl/day"]
+        question = "My country has an oil production greater than 3.856 million bbl/day."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithHomeMadeQuestionAndUsingProductionInCubicMeterPerDayWithSlashShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['gas production'] = ["143.1 billion cubic meter/day"]
+        question = "My country has an gas production greater than 143.1 billion cubic meter/day."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithHomeMadeQuestionAndUsingWaterUseInCubicMeterPerYearShouldReturnProperDictionary(self):
+        expectedDictionary = {}
+        expectedDictionary['annual water use'] = ["123 143.1 billion cubic meter"]
+        question = "My country has an annual water use greater than 123 143.1 billion cubic meter."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+    def test_AnalyseQuestionWithExportPartnersAsKeyAndCountryNameInTwoWordShouldReturnProperDictionary(self):
+        expectedDictionary = {"export partners" : ["US", "Germany", "South Africa", "France", "Spain","United Kingdom", "Canada", "Italy"]}
+        question = "My export partners are US, Germany, South Africa, France, Spain, United Kingdom, Canada and Italy."
+        self.processLanguage = QuestionInformationAnalyser()
+        self.processLanguage.analyseQuestion(question)
+        self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
+
+
+
 
 
 
