@@ -6,5 +6,6 @@
   "Inflation": "60",
   "electricity - production" : "1000",
   "unemployment rate": "99",
-  "inflation rate (consumer prices)":  "100"
+  "inflation rate (consumer prices)":  "100",
+  "default": "100"
 }

@@ -5,5 +5,6 @@
   "birth rate": "0.00",
   "Inflation": "-10",
   "electricity - production" : "0",
-  "inflation rate (consumer prices)": "-10"
+  "inflation rate (consumer prices)": "-10",
+  "default": "0"
 }

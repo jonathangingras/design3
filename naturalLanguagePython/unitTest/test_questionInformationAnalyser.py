@@ -409,7 +409,7 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    def test_useNegativeNumbersForAQuestionWithBetweenAndPercentShoudReturnProperDictionnary(self):
+    def test_useNegativeNumbersForAQuestionWithBetweenAndPercentShouldReturnProperDictionary(self):
         expectedDictionary = {}
         expectedDictionary['inflation rate'] = ["-118.456%", "-10.5678%"]
         question = "What country has an inflation rate between -118.456% and -10.5678%?"
@@ -417,7 +417,7 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    def test_useSymbolInTheQuestionSentenceShouldBeCapturedAndReturnProperDictionnary(self):
+    def test_useSymbolInTheQuestionSentenceShouldBeCapturedAndReturnProperDictionary(self):
         expectedDictionary = {}
         expectedDictionary['electricity production'] = ["600", "650", "billion dollar"]
         question = "My electricity production is between 600$ and 650$ billion dollar."
@@ -475,7 +475,7 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    def test_addBigNumberOnTheNumberUsedForAQuestionWithBetweenAndPercentShoudReturnProperDictionnary(self):
+    def test_addBigNumberOnTheNumberUsedForAQuestionWithBetweenAndPercentShouldReturnProperDictionary(self):
         expectedDictionary = {}
         expectedDictionary['inflation rate'] = ["23 320.5673%", "34 560.4565%"]
         question = "What country has an inflation rate between 23 320.5673% and 34 560.4565%?"
@@ -491,7 +491,7 @@ class testQuestionInformationAnalyser(TestCase):
         self.processLanguage.analyseQuestion(question)
         self.assertDictEqual(self.processLanguage.questionDictionary, expectedDictionary)
 
-    def test_AnalyseQuestionWithDeathRateAsKeyUsingExtremeNumberAndGramaticalDistortionShouldReturnProperDictionary(self):
+    def test_AnalyseQuestionWithDeathRateAsKeyUsingExtremeNumberAndGrammaticalDistortionShouldReturnProperDictionary(self):
         expectedDictionary = {}
         expectedDictionary['death rate'] = ["10345 543.37 DEaths/1 000 000.400",'10 3545.40 443 deaths/1000']
         question = "The death rate of this country is greater than 10345 543.37 DEaths/1 000 000.400 population and less than 10 3545.40 443 deaths/1000 population."

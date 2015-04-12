@@ -76,6 +76,7 @@ class SearchLessThan(SearchInformation):
 
     def __iterativeSearchQuery(self, keyword, repository, value):
         self.__setDecrementValue(keyword)
+        value = self.__decrementValue(value)
         self.searchFinished = False
         while (self.searchFinished is False):
             query = self.__buildingIterativeQuery(keyword, value)

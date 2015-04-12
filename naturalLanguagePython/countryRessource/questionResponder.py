@@ -1,5 +1,7 @@
 __author__ = 'Antoine'
 from naturalLanguagePython.countryService.countryService import CountryService
+
+
 class QuestionResponder(object):
 
     def __init__(self, currentProjectPath):
@@ -28,11 +30,11 @@ class QuestionResponder(object):
                 formattedDictionary = self.__formatInformationDictionary(dictionary)
                 formattedSearchStrategyByKeywordDictionary = self.__getSearchStrategyByKeywordDictionary(dictionary,
                                                                                                      question)
-                print(formattedDictionary)
+
                 nameOfCountry = self.countryService.searchCountry(formattedDictionary, formattedSearchStrategyByKeywordDictionary)
         except Exception:
-            print(dictionary)
-            print(formattedDictionary)
-            print(formattedSearchStrategyByKeywordDictionary)
+            # print(dictionary)
+            # print(formattedDictionary)
+            # print(formattedSearchStrategyByKeywordDictionary)
             nameOfCountry = "This is not the country you were looking for!"
         return nameOfCountry

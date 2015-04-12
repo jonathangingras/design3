@@ -2,6 +2,8 @@
   "conversion":[
     {
       "export partners" : "exports - partners",
+      "exports partners": "exports - partners",
+      "imports partners": "imports - partners",
       "national symbol" : "national symbol(s)",
       "date of independence": "independence",
       "latitude" : "geographic coordinates",
@@ -17,7 +19,23 @@
       "illicit drug": "illicit drugs",
       "electricity production": "electricity - production",
       "inflation rate": "inflation rate (consumer prices)",
-      "capital name": "capital"
+      "capital name": "capital",
+      "electricity consumption": "electricity - consumption",
+      "agriculture products": "agriculture - products",
+      "crude oil exports": "crude oils - exports",
+      "crude oil imports": "crude oils - imports",
+      "account balance": "current account balance",
+      "crude oil productions": "crude oil - production",
+      "GDP": "gdp (official exchange rate)",
+      "nationals holiday": "national holiday",
+      "natural gas consumption":"natural gas - consumption",
+      "natural gas exports": "natural gas - exports",
+      "natural gas imports": "natural gas - imports",
+      "natural gas production": "natural gas - production",
+      "natural resource": "natural resources",
+      "population numbers": "population",
+      "telephone mobile cellular": "telephones - mobile cellular",
+      "telephones mobile cellular": "telephones - mobile cellular"
     }
   ]
 

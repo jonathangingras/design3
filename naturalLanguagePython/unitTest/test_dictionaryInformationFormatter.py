@@ -19,3 +19,13 @@ class TestDictionaryInformationFormatter(TestCase):
         receivedDictionary = {"capital": "aCapital"}
         expectedDictionary = {"capital": "aCapital"}
         self.assertEqual(expectedDictionary, self.dictionaryInformationFormatter.formatDictionary(receivedDictionary))
+
+    def test_changingKeywordOfDictionaryWhenReceivingKeywordWithUpperLetterShouldReturnTheFormattedDictionary(self):
+        receivedDictionary = {"CApital": "aCapital"}
+        expectedDictionary = {"capital": "aCapital"}
+        self.assertEqual(expectedDictionary, self.dictionaryInformationFormatter.formatDictionary(receivedDictionary))
+
+    def test_changingKeywordOfDictionaryWhenReceivingKeywordWithUpperLetterWordsShouldReturnTheFormattedDictionary(self):
+        receivedDictionary = {"Exports Partners": "aPartner"}
+        expectedDictionary = {"exports - partners": "aPartner"}
+        self.assertEqual(expectedDictionary, self.dictionaryInformationFormatter.formatDictionary(receivedDictionary))

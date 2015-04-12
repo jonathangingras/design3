@@ -25,7 +25,10 @@ class SearchGreaterThan(SearchInformation):
         self.maxValue = self.greaterValueJson[keyword]
 
     def __setIncrementValue(self, keyword):
-        self.increment = self.incrementByKeyword[keyword]
+        if self.incrementByKeyword.has_key(keyword):
+            self.increment = self.incrementByKeyword[keyword]
+        else:
+            self.increment = self.incrementByKeyword["default"]
 
     def __incrementValue(self, value):
         splitValue = value.split(" ")
@@ -72,6 +75,7 @@ class SearchGreaterThan(SearchInformation):
     def __iterativeSearchQuery(self, keyword, repository, value):
         self.__setIncrementValue(keyword)
         self.searchFinished = False
+        value = self.__incrementValue(value)
         while (self.searchFinished is False):
             query = self.__buildingQuery(keyword, value)
             value = self.__incrementValue(value)

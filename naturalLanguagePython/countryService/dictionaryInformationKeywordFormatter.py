@@ -20,8 +20,15 @@ class DictionaryInformationFormatter(object):
         possibleConversion = possibleConversion[0]
         return possibleConversion
 
+    def __formatToLowerCaseKeyword(self, receivedDictionary):
+        dictionary = {}
+        for keyword in receivedDictionary:
+            dictionary[str.lower(keyword)] = receivedDictionary[keyword]
+        return dictionary
+
     def formatDictionary(self, receivedDictionary):
         convertedDictionary = {}
+        receivedDictionary = self.__formatToLowerCaseKeyword(receivedDictionary)
         possibleConversion = self.__obtainPossibleKeywordConversion()
         for keyword in receivedDictionary:
             if keyword in possibleConversion:

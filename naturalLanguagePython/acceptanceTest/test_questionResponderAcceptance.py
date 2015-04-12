@@ -76,7 +76,7 @@ class TestQuestionResponder(TestCase):
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askQuestion))
 
     def test_askingQuestionWhenSearchingByItsReligionsShouldReturnCountryName(self):
-        askedQuestion = "What country has religions including Hindu, Muslim, Christian, and Sikh?"
+        askedQuestion = "What country has religions including hindu, muslim, christian, and sikh?"
         expectedNameOfCountry = "India"
         self.assertEqual(expectedNameOfCountry, self.questionResponder.askQuestion(askedQuestion))
 
@@ -192,7 +192,7 @@ class TestQuestionResponder(TestCase):
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
     def test_askingQuestionWhenSearchingByTheIllicitDrugPenaltyShouldReturnCountryName(self):
-        askedQuestion = "What country considers illicit drug trafficking as a serious offenses and carry death penalty?"
+        askedQuestion = "What country considers illicit drug trafficking as a serious offense and carry death penalty?"
         expectedCountryName = "Brunei"
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
 
@@ -222,6 +222,6 @@ class TestQuestionResponder(TestCase):
         self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
     #
     # def test_askingQuestionWhenSearchingByItsLocalShortCapitalNameCompositionAndByTheApproximationOfBirthShouldReturnCountryName(self):
-    #     askedQuestion = "My birth rate is approximately 16 births/1000 and my local short country name contains 2 words."
+    #     askedQuestion = "My country has an oil production greater than 3.856 million bbl/day."
     #     expectedCountryName = "canada"
-    #     # self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))
+    #     self.assertEqual(expectedCountryName, self.questionResponder.askQuestion(askedQuestion))

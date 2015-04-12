@@ -45,7 +45,6 @@ class ProcessLanguage(object):
     def extractOnlyQuestionSubject(self):
         chunkParser = nltk.RegexpParser(self.chunkGramSubjectOnly)
         self.chunkedList = chunkParser.parse(self.taggedList)
-        # print self.chunkedList
         for subTreeQuestion in self.chunkedList.subtrees():
             if subTreeQuestion._label in ['ChunkSubjectOnly']:
                 stringToConcat = ""
