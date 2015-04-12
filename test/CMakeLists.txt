@@ -18,6 +18,11 @@ function(add_design3_test test_name)
 	)
 endfunction(add_design3_test)
 
+#common
+add_design3_test(NonBlockIfStreamTest)
+add_design3_test(dummyWriter)
+add_design3_test(SleepNanoSecondsTest)
+
 #rest
 add_design3_test(CURLGetterTest)
 
@@ -27,3 +32,14 @@ add_design3_test(ColorJSONLoaderTest)
 add_design3_test(ColorPaletteTest)
 add_design3_test(IncrementalRectTest)
 add_design3_test(ColoredCubeDetectorTest)
+add_design3_test(CubeCenterTargeterTest)
+
+#driver
+add_design3_test(MicroControllerCommandBuilderTest)
+add_design3_test(ServoMotorControllerTest)
+add_design3_test(LEDMatrixControllerTest)
+
+#ai
+add_design3_test(CubePositionFinderTest)
+add_design3_test(JourneySchedulerTest)
+add_design3_test(JourneyStatesTest)

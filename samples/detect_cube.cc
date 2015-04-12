@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
     d3t12::cvMatPtr src(new cv::Mat);
-    d3t12::CameraCapturer capturer(0);
+    d3t12::CameraCapturer capturer(1);
     
     d3t12::ColorJSONLoader loader;
     loader.setFile("colors.json");

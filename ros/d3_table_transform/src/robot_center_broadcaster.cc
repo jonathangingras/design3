@@ -9,8 +9,8 @@ int main(int argc, char** argv) {
 	d3t12::SIGINTHandler::getInstance().setSignalHandler(exitGuard);
 
 	d3t12::TfPublisher publisher(
-		"ar_marker_9", "robot_center",
-		tf::Vector3(0, -0.0525, -0.125), d3t12::quaternionFromRPY(M_PI/2, 3*M_PI/2, M_PI/2)
+		"ar_marker_0", "robot_center",
+		tf::Vector3(0, 0, -0.109), d3t12::quaternionFromRPY(M_PI/2, 3*M_PI/2, M_PI/2)
 	);
 	
 	publisher.publishTfInLoop(100, exitGuard);

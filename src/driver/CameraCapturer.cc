@@ -56,6 +56,33 @@ void CameraCapturer::setWhiteBalanceTemperature(int temp_value) {
 	}
 }
 
+void CameraCapturer::deativateAutoExposure() {
+	int exposure;
+
+	if(kiki_v4l2_get_parameter(&device_handle, V4L2_CID_EXPOSURE_AUTO, &exposure)) {
+		throw CameraCapturerException("could not get parameter V4L2_CID_EXPOSURE_AUTO");
+	}
+	
+	if(exposure != V4L2_EXPOSURE_SHUTTER_PRIORITY) {
+		if(kiki_v4l2_set_parameter(&device_handle, V4L2_CID_EXPOSURE_AUTO, V4L2_EXPOSURE_SHUTTER_PRIORITY)) {
+			throw CameraCapturerException("could not set parameter V4L2_CID_EXPOSURE_AUTO");
+		}
+	}
+
+	if(kiki_v4l2_get_parameter(&device_handle, V4L2_CID_EXPOSURE_AUTO, &exposure)) {
+		throw CameraCapturerException("could not get parameter V4L2_CID_EXPOSURE_AUTO");
+	}
+
+	if(exposure != V4L2_EXPOSURE_SHUTTER_PRIORITY) {
+		std::ostringstream oss;
+		oss << "AutoExposure stays on at: " << exposure << ", resetting parameter.";
+		std::cerr << oss.str();
+		if(kiki_v4l2_reset_parameter(&device_handle, V4L2_CID_EXPOSURE_AUTO)) {
+			throw CameraCapturerException("could not reset parameter V4L2_CID_EXPOSURE_AUTO");
+		}
+	}
+}
+
 CameraCapturer::CameraCapturer(int deviceId, int width, int height, int whiteBalanceTemperature, bool _deactivateWhiteBalance) {
 	imageSize.width = width;
 	imageSize.height = height;
@@ -70,6 +97,7 @@ CameraCapturer::CameraCapturer(int deviceId, int width, int height, int whiteBal
 
 	if(_deactivateWhiteBalance) {
 		deactivateWhiteBalance();
+		//deativateAutoExposure();
 		setWhiteBalanceTemperature(whiteBalanceTemperature);
 	}
 

@@ -111,8 +111,10 @@ cv::Rect BlackCubeDetector::detectCube() {
 
 				cv::Mat blackMask = getBlackMask(*sourceImage);
 
+				IncrementalRect incRect;
 				for(int i = 0; i < contours2.size(); ++i) {
 					cv::Rect rect = cv::boundingRect(contours2[i]);
+					incRect += rect;
 					cv::Point rectCenter( rect.x + rect.width/2, rect.y + rect.height - 3 );
 
 					if(get8bitsAt(blackMask, rectCenter.x, rectCenter.y) == 255) {
@@ -120,9 +122,10 @@ cv::Rect BlackCubeDetector::detectCube() {
 					}
 				}
 
-				std::sort(contours2.begin(), contours2.end(), compareContoursHeight);
+		//		std::sort(contours2.begin(), contours2.end(), compareContoursHeight);
 
-		return ( contours2.end() != contours2.begin() ? cv::boundingRect(*--contours2.end()) : cv::Rect() );
+		//return ( contours2.end() != contours2.begin() ? cv::boundingRect(*--contours2.end()) : cv::Rect() );
+		return incRect.toCvRect();
 }
 
 BlackCubeDetector::~BlackCubeDetector() {}

@@ -10,6 +10,7 @@ find_package(
 	geometry_msgs 
 	roscpp 
 	std_msgs 
+	message_generation
 	tf
 )
 
@@ -23,12 +24,23 @@ link_directories(
 	${DESIGN3_LIBRARY_DIRS}
 )
 
+add_message_files(
+  FILES
+  robotPose.msg
+  robotPoseArray.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+)
+
 catkin_package(
 	CATKIN_DEPENDS 
 	geometry_msgs 
 	roscpp 
 	rospy 
-	std_msgs 
+	std_msgs
+	message_runtime
 	tf
 )
 

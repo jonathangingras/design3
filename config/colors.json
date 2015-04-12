@@ -5,7 +5,8 @@
 		{ "name" : "black",  "space" : "hsv" , "range" : [115,0,0,180,64,102] },
 		{ "name" : "yellow", "space" : "hsv" , "range" : [25,150,130,30,255,255] },
 		{ "name" : "green",  "space" : "hsv" , "range" : [40, 130, 100, 55, 255, 255] },
-		{ "name" : "red",    "space" : "hsv" , "range" : [0,120,120,15,255,255] },
+		{ "name" : "red1",    "space" : "hsv" , "range" : [0,120,120,5,255,255] },
+		{ "name" : "red2",    "space" : "hsv" , "range" : [175,120,120,180,255,255] },
 		{ "name" : "white", "space" : "hsv" , "range" : [0, 0, 225, 30, 20, 255] },
 		{ "name" : "turquoise",  "space" : "hsv" , "range" : [60,120,140,75,200,230] }
 	]

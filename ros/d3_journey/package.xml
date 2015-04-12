@@ -1,0 +1,28 @@
+<package>
+	<name>d3_journey</name>
+	<version>0.0.1</version>
+	
+	<description>
+		design3 robot journey main node
+	</description>
+
+	<license>wtf</license>
+	<author>Jonathan Gingras</author>
+	<author email="jonathan.gingras.1@gmail.com">Jonathan Gingras</author>
+	<maintainer email="jonathan.gingras.1@gmail.com">Jonathan Gingras</maintainer>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>geometry_msgs</build_depend>
+	<build_depend>rospy</build_depend>
+	<build_depend>roscpp</build_depend>
+	<build_depend>std_msgs</build_depend>
+	<build_depend>tf</build_depend>
+	<build_depend>d3_table_transform</build_depend>
+
+	<run_depend>geometry_msgs</run_depend>
+	<run_depend>roscpp</run_depend>
+	<run_depend>rospy</run_depend>
+	<run_depend>std_msgs</run_depend>
+	<run_depend>tf</run_depend>
+	<run_depend>d3_table_transform</run_depend>
+</package>

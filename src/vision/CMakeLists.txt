@@ -7,9 +7,12 @@ add_library(d3t12_vision
 	IncrementalRect.cc
 	CubeDetector.cc
 	ColoredCubeDetector.cc
+	RedCubeDetector.cc
 	BlackCubeDetector.cc
 	WhiteCubeDetector.cc
 	CubeDetectorFactory.cc
+	CubeCenterTargeter.cc
+	CubeTopTargeter.cc
 )
 
 target_link_libraries(d3t12_vision
