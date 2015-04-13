@@ -101,16 +101,24 @@ void QmlApplicationViewer::updateSlot() {
     }
 }
 
-QmlApplicationViewer::~QmlApplicationViewer()
-{
-    //delete d;
+QmlApplicationViewer::~QmlApplicationViewer() {}
+
+void defaultFunction(void* ptr) {}
+
+void (*d3t12::StartButton::callback)(void*) = &defaultFunction;
+void* d3t12::StartButton::ptr = NULL;
+void d3t12::StartButton::clickButton() {
+  callback(ptr);
 }
 
-/*void QmlApplicationViewer::setMainQmlFile(const QString &file) {
-    d->mainQmlFile = QmlApplicationViewerPrivate::adjustPath(file);
-    setSource(QUrl::fromLocalFile(d->mainQmlFile));
+void (*d3t12::CountryOkButton::callback)(void*) = &defaultFunction;
+void* d3t12::CountryOkButton::ptr = NULL;
+void d3t12::CountryOkButton::clickButton() {
+  callback(ptr);
 }
 
-void QmlApplicationViewer::addImportPath(const QString &path) {
-    engine()->addImportPath(QmlApplicationViewerPrivate::adjustPath(path));
-}*/
+void (*d3t12::BadCountryButton::callback)(void*) = &defaultFunction;
+void* d3t12::BadCountryButton::ptr = NULL;
+void d3t12::BadCountryButton::clickButton() {
+  callback(ptr);
+}

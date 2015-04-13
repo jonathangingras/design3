@@ -27,7 +27,28 @@ struct Updater {
   virtual void update() = 0;
 };
 
-}
+class StartButton : public QObject { Q_OBJECT
+public:
+  static void* ptr;
+  static void (*callback)(void*);
+  Q_INVOKABLE void clickButton();
+};
+
+class CountryOkButton : public QObject { Q_OBJECT
+public:
+  static void* ptr;
+  static void (*callback)(void*);
+  Q_INVOKABLE void clickButton();
+};
+
+class BadCountryButton : public QObject { Q_OBJECT
+public:
+  static void* ptr;
+  static void (*callback)(void*);
+  Q_INVOKABLE void clickButton();
+};
+
+} //d3t12
 
 class QmlApplicationViewer : public QDeclarativeView { Q_OBJECT
   d3t12::Updater* updater;
@@ -41,17 +62,8 @@ public:
     updater = _updater;
   }
 
-//signals:
-//  void updateSignal();
-
 public slots:
   void updateSlot();
-
-    /*void setMainQmlFile(const QString &file);
-    void addImportPath(const QString &path);*/
-
-//private:
-//    class QmlApplicationViewerPrivate *d;
 };
 
 #endif // QMLAPPLICATIONVIEWER_H

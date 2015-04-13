@@ -16,6 +16,8 @@
 #include <QGraphicsPixmapItem>
 #include <QmlApplicationViewer.h>
 #include <QThread>
+#include <QtDeclarative>
+#include <QDeclarativeEngine>
 
 namespace d3t12 {
   namespace tf = d3_table_transform;
@@ -118,17 +120,13 @@ private:
   void setCountryName(std::string countryNameStr) {
     QObject* countryTextInput = getCountryTextInput();
     QDeclarativeProperty countryTextProperty(countryTextInput, "text");
-    //mutex->lock();
     countryTextProperty.write(QVariant(QString(countryNameStr.c_str())));
-    //mutex->unlock();
   }
 
   void setCountryFlag(std::string flagPath) {
     QObject* flagImage = getFlagImage();
     QDeclarativeProperty flagProperty(flagImage, "source");
-    //mutex->lock();
     flagProperty.write(QVariant(QString(flagPath.c_str())));
-    //mutex->unlock();
   }
 
 public:
@@ -148,26 +146,11 @@ public:
     mutex->unlock();
   }
 
-  void triggerTimer() {
-    QObject* timer = view->rootObject()->findChild<QObject*>("timerTrigger");
-    QDeclarativeProperty runProperty(timer, "running");
-    
+  void setTimer(int secs) {
+    QObject* timer = view->rootObject()->findChild<QObject*>("timer");
+    QDeclarativeProperty secsProperty(timer, "secs");
     mutex->lock();
-    runProperty.write(QVariant(true));
-    mutex->unlock();
-    
-    d3t12::sleepSecondsNanoSeconds(1, 0);
-    
-    mutex->lock();
-    runProperty.write(QVariant(false));
-    mutex->unlock();
-  }
-
-  void resetTimer() {
-    QObject* timer = view->rootObject()->findChild<QObject*>("timerObject");
-    QDeclarativeProperty timerProperty(timer, "ticks");
-    mutex->lock();
-    timerProperty.write(QVariant(-1));
+    secsProperty.write(QVariant(secs));
     mutex->unlock();
   }
 
@@ -254,17 +237,28 @@ struct PlannedPathDrawer {
   }
 };
 
-struct Timer : public QThread {
+struct Timer {
+private:
+  typedef boost::shared_ptr<boost::thread> ThreadPtr;
   UIContentSetter* setter;
-  boost::mutex* mutex;
   boost::mutex timeLock;
-  
-  inline Timer(UIContentSetter* _setter, boost::mutex* _mutex):
-    setter(_setter), mutex(_mutex) {
-      timeLock.lock();
-      start();
+  ThreadPtr thread;
+  int secs;
+
+  void time() {
+    timeLock.lock();
+    timeLock.unlock();
+    setter->setTimer(++secs);
+    d3t12::sleepSecondsNanoSeconds(1,0);
   }
 
+  static void run(Timer* timer) {
+    while(1) {
+      timer->time();
+    }
+  }
+
+public:
   void pause() {
     timeLock.lock();
   }
@@ -276,20 +270,14 @@ struct Timer : public QThread {
   void reset() {
     timeLock.unlock();
     timeLock.lock();
-    setter->resetTimer();
-    setter->triggerTimer();
+    secs = 0;
+    setter->setTimer(secs);
   }
 
-  void time() {
-    timeLock.lock();
-    timeLock.unlock();
-    setter->triggerTimer();
-  }
-
-  void run() {
-    while(1) {
-      time();
-    }
+  inline Timer(UIContentSetter* _setter):
+    setter(_setter), secs(-1) {
+      timeLock.lock();
+      thread = ThreadPtr(new boost::thread(&this->run, this));
   }
 };
 
@@ -314,30 +302,6 @@ void rosSpin() {
   ros::spin();
 }
 
-/*void tryshit(Timer* timer, UIContentSetter* setter) {
-  
-  shit:
-  timer->resume();
-  ROS_ERROR_STREAM("started");
-  sleep(5);
-
-  setter->setQuestion("Who likes sausage?");
-  setter->setAnswer("Germany");
-  
-  timer->pause();
-  ROS_ERROR_STREAM("paused");
-  sleep(5);
-
-  timer->reset();
-  ROS_ERROR_STREAM("reset");
-  sleep(5);
-
-  setter->setQuestion("Who likes me?");
-  setter->setAnswer("Haiti");
-
-  goto shit;
-}*/
-
 struct QuestionWritter {
   UIContentSetter* setter;
 
@@ -358,6 +322,24 @@ struct AnswerWritter {
   }
 };
 
+namespace d3t12 {
+
+void StartButtonCallback(void* ptr) {
+  ROS_ERROR_STREAM("StartButton");
+  ((Timer*)ptr)->resume();
+}
+
+void CountryOkButtonCallback(void* ptr) {
+  ROS_ERROR_STREAM("CountryOkButton: " << *(int*)ptr);
+}
+
+void BadCountryButtonCallback(void* ptr) {
+  ROS_ERROR_STREAM("BadCountryButton: " << *(int*)ptr);
+}
+
+} //d3t12
+
+
 Q_DECL_EXPORT 
 int main(int argc, char** argv) {
 		QApplication app(argc, argv);
@@ -370,6 +352,20 @@ int main(int argc, char** argv) {
     node.getParam("d3_base_station_gui/qmlPath", qmlPath);
     node.getParam("d3_base_station_gui/imagePath", imagePath);
     node.getParam("d3_base_station_gui/flagsPath", flagsPath);
+
+
+    qmlRegisterType<d3t12::StartButton>("com.d3t12.button", 1, 0, "D3T12StartButton");
+    int i = 9;
+    d3t12::StartButton::callback = &d3t12::StartButtonCallback;
+
+    qmlRegisterType<d3t12::CountryOkButton>("com.d3t12.button", 1, 0, "D3T12CountryOkButton");
+    d3t12::CountryOkButton::ptr = &i;
+    d3t12::CountryOkButton::callback = &d3t12::CountryOkButtonCallback;
+
+    qmlRegisterType<d3t12::BadCountryButton>("com.d3t12.button", 1, 0, "D3T12BadCountryButton");
+    d3t12::BadCountryButton::ptr = &i;
+    d3t12::BadCountryButton::callback = &d3t12::BadCountryButtonCallback;
+
 
     d3t12::UIEmitter emitter;
     QmlApplicationViewer viewer(&emitter);
@@ -403,8 +399,8 @@ int main(int argc, char** argv) {
     ros::Subscriber anSub = node.subscribe<std_msgs::String>("/robot_journey/answer", 1, answerWritter);
 
     viewer.setUpdater(&setter);
-    Timer timer(&setter, &mutex);
-    timer.resume();
+    Timer timer(&setter);
+    d3t12::StartButton::ptr = &timer;
     
     return app.exec();
 }
