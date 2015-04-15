@@ -143,6 +143,7 @@ public:
 class DropCubeState : public JourneyState {
 friend class JourneyStateFactory;
 
+	PathInformer::Ptr pathInformer;
 	Prehensor::Ptr prehensor;
 	PoseGetter::Ptr poseGetter;
 	PoseCommander::Ptr poseCommander;

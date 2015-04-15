@@ -106,6 +106,11 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		}
 	}
 
+	inline double wrapAngle(double angle) {
+    	double twoPi = 2.0 * M_PI;
+    	return angle - twoPi * floor(angle/twoPi);
+	}
+
 	void updateTf(const d3t12::RobotPose& pose, geometry_msgs::PoseStamped& currentRobotPoseOnTable, geometry_msgs::PoseStamped& wantedRobotPoseOnRobot, double& diffYaw) {
 		geometry_msgs::PoseStamped currentRobotPoseOnRobot;
 		currentRobotPoseOnRobot.header.frame_id = "robot_center";
@@ -161,7 +166,8 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		}
 
 		diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
-		if(2*M_PI - fabs(diffYaw) <= 0.1) diffYaw = 0;
+		//if(2*M_PI - fabs(diffYaw) <= 0.1) diffYaw = 0;
+		diffYaw = WrapPosNegPI(diffYaw);
 
 		ROS_ERROR_STREAM("tf ouputed:" << wantedRobotPoseOnTable.pose.position.x << ' ' << wantedRobotPoseOnTable.pose.position.y << ' ' << tf::getYaw(wantedRobotPoseOnTable.pose.orientation));
 	}
@@ -443,11 +449,11 @@ void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& s
 	std::cout << "done state: " << stateName << std::endl; 
 }
 
-void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory, boost::mutex* journeyMutex, boost::mutex* countryMutex) {
-	journeyMutex->lock();
+void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory, boost::mutex* journeyMutex, boost::mutex* countryMutex, ros::Publisher* pauser) {
+	beginning: journeyMutex->lock();
 	journeyMutex->unlock();
 
-	beginning: runState(stateFactory, "GoToAtlas");
+	runState(stateFactory, "GoToAtlas");
 	
 	ask: countryMutex->lock();
 	try {
@@ -471,6 +477,13 @@ void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory, boost::mutex* j
 		runState(stateFactory, "AskCube");
 	} catch(d3t12::FlagCompletedException& flagDoneError) {
 		ROS_ERROR_STREAM(flagDoneError.what());
+
+		std_msgs::String pauseStr;
+		pauseStr.data = "pause";
+		pauser->publish(pauseStr);
+
+		journeyMutex->lock();
+
 		goto beginning;
 	}
 	
@@ -503,6 +516,7 @@ int main(int argc, char** argv) {
 
 	ros::Publisher questionPublisher = node.advertise<std_msgs::String>("/robot_journey/question", 1);
 	ros::Publisher answerPublisher = node.advertise<std_msgs::String>("/robot_journey/answer", 1);
+	ros::Publisher pauser = node.advertise<std_msgs::String>("/robot_journey/pauser", 1);
 
 	d3t12::PoseCommander::Ptr poseCommander(new ConcretePoseCommander(commandPort));
 
@@ -595,7 +609,7 @@ int main(int argc, char** argv) {
 	boost::mutex journeyMutex;
 	JourneySignalReceiver journeySignalReceiver(&journeyMutex, &countryMutex, (ConcreteConfirmationGetter*)confirmationGetter.get());
 	ros::Subscriber guiSubscriber = node.subscribe<std_msgs::String>("/d3_gui/journey_signal", 1, journeySignalReceiver);
-	boost::thread mainThread(factoryThread, stateFactory, &journeyMutex, &countryMutex);
+	boost::thread mainThread(factoryThread, stateFactory, &journeyMutex, &countryMutex, &pauser);
 
 	ros::spin();
 	

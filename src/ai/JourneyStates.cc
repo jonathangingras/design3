@@ -4,8 +4,23 @@ namespace d3t12 {
 
 void GoToAtlasState::run() {
 	RobotPose pose = poseGetter->getPose();
+	std::vector<PathCommand> commands;
+	pathInformer->informPath(commands);
+
 	if(pose != backpack->atlasZonePose) {
-		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
+		RobotPose firstPose = backpack->atlasZonePose;
+		firstPose.y += 0.3;
+		commands = pathPlanner->planPath(pose, RobotPose(firstPose.x, firstPose.y, 0));
+		
+		pathInformer->informPath(commands);
+		
+		for(int i = 0; i < commands.size(); ++i) {
+			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
+			poseCommander->commandPose(commands[i].toRobotPose());
+		}
+
+		pose = poseGetter->getPose();
+		commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
 		
 		pathInformer->informPath(commands);
 		
@@ -123,6 +138,10 @@ void PlanPathToCubeZoneState::run() {
 	
 	backpack->plannedCommands = pathPlanner->planPath(currentPose, backpack->poseTarget);
 	pathInformer->informPath(backpack->plannedCommands);
+
+	if(backpack->plannedCommands.size() != 0) {
+		backpack->poseTarget = (--(backpack->plannedCommands.end()))->toRobotPose();
+	}
 }
 
 void GoToCubeZoneState::run() {
@@ -154,7 +173,9 @@ void GrabCubeState::run() {
 	
 	backpack->plannedCommands.clear();
 	backpack->plannedCommands.push_back(backpack->poseTarget);
-	backpack->plannedCommands.push_back(RobotPose(targetPose.x + backpack->poseTarget.x, targetPose.y + backpack->poseTarget.y, 0));
+	RobotPose nextPos(targetPose.x + backpack->poseTarget.x, targetPose.y + backpack->poseTarget.y, 0);
+	backpack->plannedCommands.push_back(nextPos);
+	backpack->plannedCommands.push_back(RobotPose(nextPos.x + 0.25, nextPos.y, 0));
 	pathInformer->informPath(backpack->plannedCommands);
 
 
@@ -208,13 +229,18 @@ void DropCubeState::run() {
 
 	poseCommander->commandX(dropPose);
 
-	if(cubeNo == 2 || cubeNo == 5 || cubeNo == 8) { dropPose.y += 0.05; }
-	if(cubeNo == 3 || cubeNo == 6 || cubeNo == 9) { dropPose.y += 0.07; }
+	if(cubeNo == 2 || cubeNo == 5 || cubeNo == 8) { dropPose.y += 0.06; }
+	if(cubeNo == 3 || cubeNo == 6 || cubeNo == 9) { dropPose.y += 0.09; }
 
 	poseCommander->commandY(dropPose);
 
 	prehensor->lower();
 	prehensor->open();
+
+	std::vector<PathCommand> commands;
+	commands.push_back(dropPose);
+	commands.push_back(RobotPose(dropPose.x + 0.5, dropPose.y, 0));
+	pathInformer->informPath(commands);
 
 	poseCommander->commandDirectly(RobotPose(-0.30,0,0));
 

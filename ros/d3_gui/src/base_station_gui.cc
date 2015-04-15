@@ -186,17 +186,44 @@ struct PoseListener {
   }
 };
 
+struct ActualPathDrawer {
+  boost::mutex inMutex;
+
+  QPen pen;
+  QGraphicsScene* scene;
+  std::vector<QGraphicsEllipseItem*> currentPoints;
+
+  inline ActualPathDrawer(QGraphicsScene* _scene):
+    pen(QColor(0,0,255)), scene(_scene) {}
+
+  void clearPoints() {
+    inMutex.lock();
+    for(std::vector<QGraphicsEllipseItem*>::iterator it = currentPoints.begin(); it != currentPoints.end(); ++it) {
+      scene->removeItem(*it);
+    }
+    currentPoints.clear();
+    inMutex.unlock();
+  }
+
+  void addPoint(UIPose pose) {
+    inMutex.lock();
+    currentPoints.push_back( scene->addEllipse(pose.x - 1, pose.y - 1, 2, 2, pen) );
+    inMutex.unlock();
+  }
+};
+
 struct PlannedPathDrawer {
   ros::NodeHandle& nodeHandle;
   boost::mutex& mutex;
   UIPoseConverter* poseConverter;
+  ActualPathDrawer* actualPath;
 
   QPen pen;
   QGraphicsScene* scene;
   std::vector<QGraphicsLineItem*> currentLines;
 
-  inline PlannedPathDrawer(ros::NodeHandle& _nodeHandle, boost::mutex& _mutex, UIPoseConverter* _poseConverter, QGraphicsScene* _scene):
-    nodeHandle(_nodeHandle), mutex(_mutex), poseConverter(_poseConverter), pen(QColor(255,0,0)), scene(_scene) {}
+  inline PlannedPathDrawer(ros::NodeHandle& _nodeHandle, boost::mutex& _mutex, UIPoseConverter* _poseConverter, QGraphicsScene* _scene, ActualPathDrawer* _actualPath):
+    nodeHandle(_nodeHandle), mutex(_mutex), poseConverter(_poseConverter), pen(QColor(255,0,0)), scene(_scene), actualPath(_actualPath) {}
 
   void clearLines() {
     for(std::vector<QGraphicsLineItem*>::iterator it = currentLines.begin(); it != currentLines.end(); ++it) {
@@ -228,38 +255,13 @@ struct PlannedPathDrawer {
     if(!_robotPoseArray.get()) return;
 
     mutex.lock();
-    updateLines(_robotPoseArray);
+    if(_robotPoseArray->poses.empty()) { actualPath->clearPoints(); clearLines(); }
+    else { updateLines(_robotPoseArray); }
     mutex.unlock();
   }
 
   ros::Subscriber subscribe() {
     return nodeHandle.subscribe<d3t12::tf::robotPoseArray>("/d3_journey/robot_path", 1, *this);
-  }
-};
-
-struct ActualPathDrawer {
-  boost::mutex inMutex;
-
-  QPen pen;
-  QGraphicsScene* scene;
-  std::vector<QGraphicsEllipseItem*> currentPoints;
-
-  inline ActualPathDrawer(QGraphicsScene* _scene):
-    pen(QColor(0,0,255)), scene(_scene) {}
-
-  void clearPoints() {
-    inMutex.lock();
-    for(std::vector<QGraphicsEllipseItem*>::iterator it = currentPoints.begin(); it != currentPoints.end(); ++it) {
-      scene->removeItem(*it);
-    }
-    currentPoints.clear();
-    inMutex.unlock();
-  }
-
-  void addPoint(UIPose pose) {
-    inMutex.lock();
-    currentPoints.push_back( scene->addEllipse(pose.x - 1, pose.y - 1, 2, 2, pen) );
-    inMutex.unlock();
   }
 };
 
@@ -350,6 +352,17 @@ struct AnswerWritter {
   }
 };
 
+struct Pauser {
+  Timer* timer;
+
+  inline Pauser(Timer* _timer):
+    timer(_timer) {}
+
+  void operator()(const std_msgs::String::ConstPtr& str) {
+    timer->pause();
+  }
+};
+
 namespace d3t12 {
 
 struct JourneySignaler {
@@ -436,16 +449,17 @@ int main(int argc, char** argv) {
     UIPoseConverter poseConverter(2.305, &viewer);
     UIPose::Ptr uiPose(new UIPose);
     boost::mutex mutex;
-    
+
+    ActualPathDrawer actualPath(viewer.scene());
+
     PoseListener poseListener(node, mutex, uiPose, &poseConverter);
     ros::Subscriber poseSubscriber = poseListener.subscribe();
 
-    PlannedPathDrawer pathDrawer(node, mutex, &poseConverter, viewer.scene());
+    PlannedPathDrawer pathDrawer(node, mutex, &poseConverter, viewer.scene(), &actualPath);
     ros::Subscriber plannedPathSubscriber = pathDrawer.subscribe();
 
     //threads
     boost::thread rosSpinner(rosSpin);
-    ActualPathDrawer actualPath(viewer.scene());
     boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose, &actualPath);
 
     //TODO add a subscription to atlas asker so it can change when sent
@@ -455,9 +469,12 @@ int main(int argc, char** argv) {
     ros::Subscriber quSub = node.subscribe<std_msgs::String>("/robot_journey/question", 1, questionWritter);
     ros::Subscriber anSub = node.subscribe<std_msgs::String>("/robot_journey/answer", 1, answerWritter);
 
+    Timer timer(&setter);
+    Pauser pauser(&timer);
+    ros::Subscriber pauseSub = node.subscribe<std_msgs::String>("/robot_journey/pauser", 1, pauser);
+
     viewer.setUpdater(&setter);
 
-    Timer timer(&setter);
     ros::Publisher goPublisher = node.advertise<std_msgs::String>("/d3_gui/journey_signal", 1);
     d3t12::JourneySignaler journeySignaler(&timer, &goPublisher);
     d3t12::StartButton::ptr = &journeySignaler;

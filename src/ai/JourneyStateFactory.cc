@@ -80,6 +80,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		statePtr = JourneyState::Ptr(state);	
 	} else if(stateName == "DropCube") {
 		DropCubeState* state = new DropCubeState;
+		state->pathInformer = pathInformer;
 		state->poseGetter = poseGetter;
 		state->poseCommander = poseCommander;
 		state->prehensor = prehensor;

@@ -9,10 +9,10 @@ ServoMotorController::Ptr ServoMotorControllerFactory::createController(const st
 
 	if(servoName == "prehensorVertical") {
 		controller->channel = 5;
-		controller->min = 4650;
-		controller->forcedMin = 4650;
-		controller->max = 5350;
-		controller->currentInt = 5350;
+		controller->min = 4500;
+		controller->forcedMin = 4500;
+		controller->max = 5250;
+		controller->currentInt = 5250;
 		controller->slope = (controller->max - controller->min)/(M_PI/2);
 	} else if(servoName == "prehensorHorizontal") {
 		controller->channel = 4;
