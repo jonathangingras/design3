@@ -151,13 +151,12 @@ void GrabCubeState::run() {
 	CubeRelativePosition target = finder->findCubePosition();
 	RobotPose targetPose = RobotPose(target.x - 0.36, target.y - 0.02, 0);
 	
-	/*if(backpack->plannedCommands.size()) {
-		RobotPose currentPose = backpack->plannedCommands.end()->toRobotPose();
-		backpack->plannedCommands.clear();
-		backpack->plannedCommands.push_back(currentPose);
-		backpack->plannedCommands.push_back(targetPose);
-		pathInformer->informPath(backpack->plannedCommands);
-	}*/
+	
+	backpack->plannedCommands.clear();
+	backpack->plannedCommands.push_back(backpack->poseTarget);
+	backpack->plannedCommands.push_back(RobotPose(targetPose.x + backpack->poseTarget.x, targetPose.y + backpack->poseTarget.y, 0));
+	pathInformer->informPath(backpack->plannedCommands);
+
 
 	poseCommander->commandDirectly(targetPose);
 

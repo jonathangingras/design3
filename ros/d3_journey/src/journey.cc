@@ -127,29 +127,37 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 
 		//geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
 
-		int error = 0;
-		while(error < 2) {
+		int nbGoodTF = 0, rollPitchError = 0;
+		double roll, pitch, yaw;
+		while(nbGoodTF < 2) {
+			if(rollPitchError > 100) {
+				if(fabs(yaw) < M_PI/2) { commandDirectly(d3t12::RobotPose(-0.15, 0.0, 0.0)); }
+				else { commandDirectly(d3t12::RobotPose(0.15, 0.0, 0.0)); }
+
+				rollPitchError = 0;
+			}
 			try {
 				listener.transformPose("d3_table_origin", currentRobotPoseOnRobot, currentRobotPoseOnTable);
 				
-				double roll, pitch, yaw;
 				tf::Quaternion q;
 				tf::quaternionMsgToTF(currentRobotPoseOnTable.pose.orientation, q);
 				tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
 				
 				if(fabs(roll) > 0.17) {
+					++rollPitchError;
 					throw tf::TransformException("has roll!");
 				}
 				if(fabs(pitch) > 0.17) {
+					++rollPitchError;
 					throw tf::TransformException("has pitch!");
 				}
 				
 				listener.transformPose("robot_center", wantedRobotPoseOnTable, wantedRobotPoseOnRobot);
 			} catch(tf::TransformException& ex) {
-				error = 0;
+				nbGoodTF = 0;
 				continue;
 			}
-			error++;
+			nbGoodTF++;
 		}
 
 		diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
