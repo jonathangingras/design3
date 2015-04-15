@@ -10,6 +10,7 @@ struct PathCommand {
 	double x, y, yaw;
 
 	inline PathCommand(double _x, double _y, double _yaw): x(_x), y(_y), yaw(_yaw) {}
+	inline PathCommand(RobotPose pose): x(pose.x), y(pose.y), yaw(pose.yaw) {}
 	inline RobotPose toRobotPose() const {
 		return RobotPose(x,y,yaw);
 	}

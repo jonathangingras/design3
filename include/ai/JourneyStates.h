@@ -8,6 +8,7 @@
 #include "Interfaces.h"
 #include "PathPlanner.h"
 #include "FlagCompletedException.h"
+#include "BadAnswerException.h"
 
 namespace d3t12 {
 
@@ -104,6 +105,7 @@ public:
 class GrabCubeState : public JourneyState {
 friend class JourneyStateFactory;
 
+	PathInformer::Ptr pathInformer;
 	CubePositionFinder::Ptr finder;
 	Prehensor::Ptr prehensor;
 	CubeDetectorFactory::Ptr detectorFactory;
@@ -120,6 +122,7 @@ public:
 class PlanReturnToDetectionZoneState : public JourneyState {
 friend class JourneyStateFactory;
 	
+	CubeDropPoseList::Ptr dropList;
 	PathInformer::Ptr pathInformer;
 	PoseGetter::Ptr poseGetter;
 	PathPlanner::Ptr pathPlanner;

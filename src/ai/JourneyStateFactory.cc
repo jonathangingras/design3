@@ -57,6 +57,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		statePtr = JourneyState::Ptr(state);
 	} else if(stateName == "GrabCube") {
 		GrabCubeState* state = new GrabCubeState;
+		state->pathInformer = pathInformer;
 		state->finder = finder;
 		state->prehensor = prehensor;
 		state->detectorFactory = detectorFactory;
@@ -68,6 +69,7 @@ JourneyState::Ptr JourneyStateFactory::createState(std::string stateName) {
 		statePtr = JourneyState::Ptr(state);	
 	} else if(stateName == "PlanReturnToDetectionZone") {
 		PlanReturnToDetectionZoneState* state = new PlanReturnToDetectionZoneState;
+		state->dropList = dropList;
 		state->pathInformer = pathInformer;
 		state->poseGetter = poseGetter;
 		state->pathPlanner = pathPlanner;

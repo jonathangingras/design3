@@ -6,5 +6,6 @@
 #include "JourneyStateFactory.h"
 
 #include "FlagCompletedException.h"
+#include "BadAnswerException.h"
 
 #endif

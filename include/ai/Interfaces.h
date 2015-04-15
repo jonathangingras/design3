@@ -44,6 +44,7 @@ struct PathInformer {
 	typedef boost::shared_ptr<PathInformer> Ptr;
 	virtual ~PathInformer() {}
 	virtual void informPath(const std::vector<PathCommand>& path) = 0;
+	virtual void resetPath() {}
 };
 
 } //d3t12

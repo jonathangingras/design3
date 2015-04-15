@@ -9,6 +9,7 @@
 
 #include <geometry_msgs/Point.h>
 #include <tf/transform_listener.h>
+#include <tf/transform_datatypes.h>
 
 #include <d3_table_transform/robotPose.h>
 #include <d3_table_transform/robotPoseArray.h>
@@ -126,16 +127,29 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 
 		//geometry_msgs::PoseStamped wantedRobotPoseOnRobot;
 
-		bool error = true;
-		while(error) {
+		int error = 0;
+		while(error < 2) {
 			try {
 				listener.transformPose("d3_table_origin", currentRobotPoseOnRobot, currentRobotPoseOnTable);
+				
+				double roll, pitch, yaw;
+				tf::Quaternion q;
+				tf::quaternionMsgToTF(currentRobotPoseOnTable.pose.orientation, q);
+				tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
+				
+				if(fabs(roll) > 0.17) {
+					throw tf::TransformException("has roll!");
+				}
+				if(fabs(pitch) > 0.17) {
+					throw tf::TransformException("has pitch!");
+				}
+				
 				listener.transformPose("robot_center", wantedRobotPoseOnTable, wantedRobotPoseOnRobot);
 			} catch(tf::TransformException& ex) {
-				error = true;
+				error = 0;
 				continue;
 			}
-			error = false;
+			error++;
 		}
 
 		diffYaw = tf::getYaw(currentRobotPoseOnTable.pose.orientation) - tf::getYaw(wantedRobotPoseOnTable.pose.orientation);
@@ -184,9 +198,9 @@ struct ConcretePoseCommander : public d3t12::PoseCommander {
 		double diffYaw;
 		updateTf(pose, currentRobotPoseOnTable, wantedRobotPoseOnRobot, diffYaw);
 
-		d3t12::RobotPose translationCommand(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, 0.0);
+		d3t12::RobotPose translationCommand(wantedRobotPoseOnRobot.pose.position.x, wantedRobotPoseOnRobot.pose.position.y, diffYaw);
 
-		commandDirectly(d3t12::RobotPose(0, translationCommand.y, 0));		
+		commandDirectly(d3t12::RobotPose(0, translationCommand.y, translationCommand.yaw));		
 	}
 };
 
@@ -211,7 +225,6 @@ struct ConcreteQuestionGetter : public d3t12::QuestionGetter { //must be moved t
 
 struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 	d3t12::LEDColorList::Ptr colorList;
-	std::vector<d3t12::StringPtr> colors;
 	ros::Publisher& answerPublisher;
 
 	inline ConcreteQuestionAsker(d3t12::LEDColorList::Ptr _colorList, ros::Publisher& _answerPublisher):
@@ -239,7 +252,7 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 
 		ROS_ERROR_STREAM("COUNTRY ANSWER ------>>>> " << answer);
 
-		colors = listTranslater.getColorList(answer);
+		std::vector<d3t12::StringPtr> colors = listTranslater.getColorList(answer);
 
 		colorList->setList(colors);
 
@@ -252,9 +265,20 @@ struct ConcreteQuestionAsker : public d3t12::QuestionAsker {
 };
 
 struct ConcreteConfirmationGetter : public d3t12::ConfirmationGetter {
+	boost::mutex* countryMutex;
+	bool good;
+
+	inline ConcreteConfirmationGetter(boost::mutex* _countryMutex):
+		countryMutex(_countryMutex), good(true) {}
+
+	void setOk(bool _good) {
+		good = _good;
+	}
+
 	bool ok() {
-		//implement from topic received from gui button
-		return true;
+		countryMutex->lock();
+		countryMutex->unlock();
+		return good;
 	}
 };
 
@@ -263,6 +287,13 @@ struct ConcretePathInformer : public d3t12::PathInformer {
 
 	inline ConcretePathInformer(ros::NodeHandle& node) {
 		pathPublisher = node.advertise<d3t12::tf::robotPoseArray>("/d3_journey/robot_path", 1);
+	}
+
+	void resetPath() {
+		d3t12::tf::robotPoseArray poseArray;
+		std::vector<d3t12::tf::robotPose> emptyVector;
+		poseArray.poses = emptyVector;
+		pathPublisher.publish(poseArray);
 	}
 
 	void informPath(const std::vector<d3t12::PathCommand>& path) {
@@ -280,13 +311,14 @@ struct ConcretePathInformer : public d3t12::PathInformer {
 
 		ROS_ERROR_STREAM("publishing array");
 		
-		pathPublisher.publish(poseArray);
+		for(int i = 0; i < 5; ++i) { pathPublisher.publish(poseArray); }
 	}
 };
 
 struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
     d3t12::CameraPoseHandler::Ptr cameraPose;
     double initPitch;
+    int angleChangeCalled;
 
     inline float rad2deg(double rad) {
         return (rad*180)/M_PI;
@@ -297,11 +329,18 @@ struct ConcreteAngleAdjuster : public d3t12::ImageAngleAdjuster {
     }
 
     inline ConcreteAngleAdjuster(d3t12::CameraPoseHandler::Ptr _cameraPose, double _initPitch):
-        cameraPose(_cameraPose), initPitch(_initPitch) {}
+        cameraPose(_cameraPose), initPitch(_initPitch), angleChangeCalled(0) {}
 
     void resetAngle() {
     	cameraPose->setPitch(initPitch);
     	cameraPose->setYaw(M_PI/2);
+    }
+
+    void changeAngle() {
+    	++angleChangeCalled;
+        if(angleChangeCalled == 0) { cameraPose->setYaw(M_PI/2); }
+        if(angleChangeCalled == 1) { cameraPose->setYaw(M_PI/4); }
+        if(angleChangeCalled == 2) { cameraPose->setYaw(3*M_PI/4); angleChangeCalled = -1; }
     }
 
     void adjustY(float degrees) {
@@ -365,15 +404,58 @@ struct ConcreteImageCapturer : public d3t12::ImageCapturer {
     }
 };
 
+struct JourneySignalReceiver {
+	boost::mutex* journeyMutex;
+	boost::mutex* countryMutex;
+	ConcreteConfirmationGetter* confirmer;
+
+	inline JourneySignalReceiver(boost::mutex* _journeyMutex, boost::mutex* _countryMutex, ConcreteConfirmationGetter* _confirmer):
+		journeyMutex(_journeyMutex), countryMutex(_countryMutex), confirmer(_confirmer) {
+		journeyMutex->lock();
+	}
+
+	void operator()(const std_msgs::String::ConstPtr& _signal) {
+		if(_signal->data == "go") {
+			journeyMutex->unlock();
+		}
+		if(_signal->data == "good") {
+			confirmer->setOk(true);
+			countryMutex->unlock();
+		}
+		if(_signal->data == "bad") {
+			confirmer->setOk(false);
+			countryMutex->unlock();
+		}
+	}
+};
+
 void runState(d3t12::JourneyStateFactory::Ptr stateFactory, const std::string& stateName) {
 	d3t12::JourneyState::Ptr state = stateFactory->createState(stateName);
 	state->run();
 	std::cout << "done state: " << stateName << std::endl; 
 }
 
-void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory) {
+void factoryThread(d3t12::JourneyStateFactory::Ptr stateFactory, boost::mutex* journeyMutex, boost::mutex* countryMutex) {
+	journeyMutex->lock();
+	journeyMutex->unlock();
+
 	beginning: runState(stateFactory, "GoToAtlas");
-	runState(stateFactory, "HandleQuestion");
+	
+	ask: countryMutex->lock();
+	try {
+		runState(stateFactory, "HandleQuestion");
+	} catch(d3t12::BadAnswerException& err) {
+		goto ask;
+	} catch(d3t12::JanssonException& err) {
+		countryMutex->unlock();
+		d3t12::sleepSecondsNanoSeconds(2,0);
+		goto ask;
+	} catch(d3t12::CURLException& err) {
+		countryMutex->unlock();
+		d3t12::sleepSecondsNanoSeconds(2,0);
+		goto ask;
+	}
+	
 	runState(stateFactory, "ShowFlagsOnLEDs");
 	nextCube: runState(stateFactory, "GoToDetectionZone"); 
 	
@@ -414,7 +496,6 @@ int main(int argc, char** argv) {
 	ros::Publisher questionPublisher = node.advertise<std_msgs::String>("/robot_journey/question", 1);
 	ros::Publisher answerPublisher = node.advertise<std_msgs::String>("/robot_journey/answer", 1);
 
-
 	d3t12::PoseCommander::Ptr poseCommander(new ConcretePoseCommander(commandPort));
 
 	d3t12::LEDMatrixController::Ptr leds(new d3t12::LEDMatrixController(commandPort));
@@ -438,7 +519,8 @@ int main(int argc, char** argv) {
 
 	d3t12::QuestionGetter::Ptr questionGetter(new ConcreteQuestionGetter(questionPublisher));
 	d3t12::QuestionAsker::Ptr questionAsker(new ConcreteQuestionAsker(colorList, answerPublisher));
-	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter);
+	boost::mutex countryMutex;
+	d3t12::ConfirmationGetter::Ptr confirmationGetter(new ConcreteConfirmationGetter(&countryMutex));
 	d3t12::PathInformer::Ptr pathInformer(new ConcretePathInformer(node));
 
 	d3t12::PathPlanner::Ptr pathPlanner(new d3t12::PathPlanner);
@@ -502,7 +584,10 @@ int main(int argc, char** argv) {
 		backpack
 	));
 
-	boost::thread mainThread(factoryThread, stateFactory);
+	boost::mutex journeyMutex;
+	JourneySignalReceiver journeySignalReceiver(&journeyMutex, &countryMutex, (ConcreteConfirmationGetter*)confirmationGetter.get());
+	ros::Subscriber guiSubscriber = node.subscribe<std_msgs::String>("/d3_gui/journey_signal", 1, journeySignalReceiver);
+	boost::thread mainThread(factoryThread, stateFactory, &journeyMutex, &countryMutex);
 
 	ros::spin();
 	

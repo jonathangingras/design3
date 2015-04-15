@@ -214,7 +214,7 @@ struct PlannedPathDrawer {
       ys.push_back(uiPose.y);
     }
 
-    clearLines();
+    //clearLines();
 
     if(robotPoseArray->poses.size()) {
       for(std::vector<float>::const_iterator itx = xs.begin(), ity = ys.begin(); itx != xs.end() - 1 && ity != ys.end() - 1; ++itx, ++ity) {
@@ -237,6 +237,32 @@ struct PlannedPathDrawer {
   }
 };
 
+struct ActualPathDrawer {
+  boost::mutex inMutex;
+
+  QPen pen;
+  QGraphicsScene* scene;
+  std::vector<QGraphicsEllipseItem*> currentPoints;
+
+  inline ActualPathDrawer(QGraphicsScene* _scene):
+    pen(QColor(0,0,255)), scene(_scene) {}
+
+  void clearPoints() {
+    inMutex.lock();
+    for(std::vector<QGraphicsEllipseItem*>::iterator it = currentPoints.begin(); it != currentPoints.end(); ++it) {
+      scene->removeItem(*it);
+    }
+    currentPoints.clear();
+    inMutex.unlock();
+  }
+
+  void addPoint(UIPose pose) {
+    inMutex.lock();
+    currentPoints.push_back( scene->addEllipse(pose.x - 1, pose.y - 1, 2, 2, pen) );
+    inMutex.unlock();
+  }
+};
+
 struct Timer {
 private:
   typedef boost::shared_ptr<boost::thread> ThreadPtr;
@@ -247,14 +273,14 @@ private:
 
   void time() {
     timeLock.lock();
-    timeLock.unlock();
     setter->setTimer(++secs);
-    d3t12::sleepSecondsNanoSeconds(1,0);
+    timeLock.unlock();
   }
 
   static void run(Timer* timer) {
     while(1) {
       timer->time();
+      usleep(1000000);
     }
   }
 
@@ -281,20 +307,22 @@ public:
   }
 };
 
-void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphicsScene* scene, QGraphicsPixmapItem* item, UIPose::Ptr uiPose) {
+void updateScene(d3t12::SignalFunctor* exitGuard, boost::mutex* mutex, QGraphicsScene* scene, QGraphicsPixmapItem* item, UIPose::Ptr uiPose, ActualPathDrawer* actualPath) {
   while(exitGuard->good()) {
     mutex->lock();
+
     UIPose uiPoseCpy = *uiPose;
-    mutex->unlock();
 
     item->setScale(uiPoseCpy.scale);
     item->setPos(uiPoseCpy.x, uiPoseCpy.y);
     item->setRotation(uiPoseCpy.angle);
 
-    usleep(20000);
-    mutex->lock();
+    actualPath->addPoint(uiPoseCpy);
+
     scene->update();
+
     mutex->unlock();
+    usleep(100000);
   }
 }
 
@@ -324,17 +352,48 @@ struct AnswerWritter {
 
 namespace d3t12 {
 
+struct JourneySignaler {
+  Timer* timer;
+  ros::Publisher* publisher;
+
+  inline JourneySignaler(Timer* _timer, ros::Publisher* _publisher):
+    timer(_timer), publisher(_publisher) {}
+
+  void startJourney() {
+    std_msgs::String msg;
+    msg.data = "go";
+    publisher->publish(msg);
+
+    timer->reset();
+    timer->resume();
+  }
+
+  void confirmCountry() {
+    std_msgs::String msg;
+    msg.data = "good";
+    publisher->publish(msg);
+  }
+
+  void infirmCountry() {
+    std_msgs::String msg;
+    msg.data = "bad";
+    publisher->publish(msg);
+  }
+};
+
 void StartButtonCallback(void* ptr) {
   ROS_ERROR_STREAM("StartButton");
-  ((Timer*)ptr)->resume();
+  ((JourneySignaler*)ptr)->startJourney();
 }
 
 void CountryOkButtonCallback(void* ptr) {
-  ROS_ERROR_STREAM("CountryOkButton: " << *(int*)ptr);
+  ROS_ERROR_STREAM("CountryOkButton");
+  ((JourneySignaler*)ptr)->confirmCountry();
 }
 
 void BadCountryButtonCallback(void* ptr) {
-  ROS_ERROR_STREAM("BadCountryButton: " << *(int*)ptr);
+  ROS_ERROR_STREAM("BadCountryButton");
+  ((JourneySignaler*)ptr)->infirmCountry();
 }
 
 } //d3t12
@@ -355,15 +414,12 @@ int main(int argc, char** argv) {
 
 
     qmlRegisterType<d3t12::StartButton>("com.d3t12.button", 1, 0, "D3T12StartButton");
-    int i = 9;
     d3t12::StartButton::callback = &d3t12::StartButtonCallback;
 
     qmlRegisterType<d3t12::CountryOkButton>("com.d3t12.button", 1, 0, "D3T12CountryOkButton");
-    d3t12::CountryOkButton::ptr = &i;
     d3t12::CountryOkButton::callback = &d3t12::CountryOkButtonCallback;
 
     qmlRegisterType<d3t12::BadCountryButton>("com.d3t12.button", 1, 0, "D3T12BadCountryButton");
-    d3t12::BadCountryButton::ptr = &i;
     d3t12::BadCountryButton::callback = &d3t12::BadCountryButtonCallback;
 
 
@@ -389,7 +445,8 @@ int main(int argc, char** argv) {
 
     //threads
     boost::thread rosSpinner(rosSpin);
-    boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose);
+    ActualPathDrawer actualPath(viewer.scene());
+    boost::thread sceneUpdaterThread(updateScene, exitGuard.get(), &mutex, viewer.scene(), &item, uiPose, &actualPath);
 
     //TODO add a subscription to atlas asker so it can change when sent
     UIContentSetter setter(&viewer, flagsPath, &mutex, &emitter);
@@ -399,8 +456,13 @@ int main(int argc, char** argv) {
     ros::Subscriber anSub = node.subscribe<std_msgs::String>("/robot_journey/answer", 1, answerWritter);
 
     viewer.setUpdater(&setter);
+
     Timer timer(&setter);
-    d3t12::StartButton::ptr = &timer;
-    
+    ros::Publisher goPublisher = node.advertise<std_msgs::String>("/d3_gui/journey_signal", 1);
+    d3t12::JourneySignaler journeySignaler(&timer, &goPublisher);
+    d3t12::StartButton::ptr = &journeySignaler;
+    d3t12::CountryOkButton::ptr = &journeySignaler;
+    d3t12::BadCountryButton::ptr = &journeySignaler;
+
     return app.exec();
 }

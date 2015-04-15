@@ -1,4 +1,4 @@
-set(D3_CV_LIBS opencv_core opencv_imgproc opencv_highgui)
+set(D3_CV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_features2d)
 set(D3_VISION_LIBS jansson ${D3_CV_LIBS} d3t12_vision)
 set(D3_REST_LIBS ${CURL_LIBRARIES} ${JANSSON_LIBRARIES} d3t12_rest)
 set(D3_DRIVER_LIBS d3t12_driver)

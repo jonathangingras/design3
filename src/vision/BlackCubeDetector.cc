@@ -1,4 +1,5 @@
 #include <vision/BlackCubeDetector.h>
+#include <opencv2/features2d.hpp>
 
 namespace d3t12 {
 
@@ -63,6 +64,63 @@ cv::Rect BlackCubeDetector::detectCube() {
 		cv::dilate(gray, gray, element);
 		cv::dilate(gray, gray, element);
 		cv::dilate(gray, gray, element);
+
+		cv::imshow("gray1", gray);
+
+		cv::Mat graySave;
+		gray.copyTo(graySave);
+
+		IncrementalRect incRect;
+
+		// normal case
+
+		cv::Mat elementNormal = cv::getStructuringElement(
+			cv::MORPH_CROSS,
+			cv::Size( 2*erosion_size + 1, 2*erosion_size+1 ),
+			cv::Point( erosion_size, erosion_size )
+		);
+
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		cv::dilate(graySave, graySave, elementNormal);
+		
+		cv::dilate(graySave, graySave, element);
+		cv::dilate(graySave, graySave, element);
+		cv::dilate(graySave, graySave, element);
+
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+		
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+		cv::erode(graySave, graySave, element);
+
+		cv::imshow("gray2", graySave);
+		cv::SimpleBlobDetector::Params params;
+		params.maxArea = 1000000;
+		cv::SimpleBlobDetector blobber(params);
+		
+		std::vector<cv::KeyPoint> keypoints;
+		blobber.detect( gray, keypoints);
+		int i;
+		for(i = 0; i < keypoints.size(); ++i) {
+			cv::rectangle(*sourceImage, cv::Rect(keypoints[i].pt.x, keypoints[i].pt.y, 4, 4), cv::Scalar(0,0,255));
+			incRect += cv::Rect(keypoints[i].pt.x - 50, keypoints[i].pt.y - 50, 100, 100);
+		}
+
+		if(i) return incRect.toCvRect();
+
+		//morphology hasard worst case
  
 		cv::Mat canny_output;
 				std::vector<cv::Vec4i> hierarchy, hierarchy2;
@@ -111,13 +169,15 @@ cv::Rect BlackCubeDetector::detectCube() {
 
 				cv::Mat blackMask = getBlackMask(*sourceImage);
 
-				IncrementalRect incRect;
+				
 				for(int i = 0; i < contours2.size(); ++i) {
 					cv::Rect rect = cv::boundingRect(contours2[i]);
-					incRect += rect;
+					
 					cv::Point rectCenter( rect.x + rect.width/2, rect.y + rect.height - 3 );
 
-					if(get8bitsAt(blackMask, rectCenter.x, rectCenter.y) == 255) {
+					if(get8bitsAt(blackMask, rectCenter.x, rectCenter.y) == 255 && rect.y > 20) {
+						incRect += rect;
+
 						cv::rectangle(*sourceImage, cv::boundingRect(contours2[i]), cv::Scalar(255,0,0));
 					}
 				}
@@ -125,6 +185,7 @@ cv::Rect BlackCubeDetector::detectCube() {
 		//		std::sort(contours2.begin(), contours2.end(), compareContoursHeight);
 
 		//return ( contours2.end() != contours2.begin() ? cv::boundingRect(*--contours2.end()) : cv::Rect() );
+
 		return incRect.toCvRect();
 }
 

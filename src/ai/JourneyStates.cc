@@ -2,18 +2,13 @@
 
 namespace d3t12 {
 
-#define HEY std::cout << "hey" << std::endl;
-
 void GoToAtlasState::run() {
 	RobotPose pose = poseGetter->getPose();
-	HEY
 	if(pose != backpack->atlasZonePose) {
 		std::vector<PathCommand> commands = pathPlanner->planPath(pose, backpack->atlasZonePose);
+		
 		pathInformer->informPath(commands);
-		pathInformer->informPath(commands);
-		pathInformer->informPath(commands);
-		pathInformer->informPath(commands);
-		pathInformer->informPath(commands);
+		
 		for(int i = 0; i < commands.size(); ++i) {
 			std::cout << commands[i].x << ',' << commands[i].y << ',' << commands[i].yaw << std::endl;
 			poseCommander->commandPose(commands[i].toRobotPose());
@@ -26,12 +21,10 @@ void HandleQuestionState::run() {
 
 	d3t12::sleepSecondsNanoSeconds(5,0);
 
-	for(int i = 0; i < 2; ++i) {
-		std::string questionStr = questionGetter->getQuestion();
-		std::string answer = questionAsker->ask(questionStr);
-		if(confirmationGetter->ok()) {
-			break;
-		}
+	std::string questionStr = questionGetter->getQuestion();
+	std::string answer = questionAsker->ask(questionStr);
+	if(!confirmationGetter->ok()) {
+		throw BadAnswerException("bad country!");
 	}
 }
 
@@ -91,16 +84,21 @@ void FindCubeState::run() {
 	cameraTargeter->setDetector(detector);
 	cameraTargeter->resetAngle();
 	
-	for(int i = 0; i < 100; ++i) {
-		bool error = true;
+	for(int i = 0; i < 10; ++i) {
+		int error = 1;
 		while(error) {
+			if(error >= 100) {
+				cameraTargeter->changeAngle();
+				error = 1;
+			}
+
 			try {
 				cameraTargeter->targetCenter();
 			} catch(NoCubeFoundException& err) {
-				error = true;
+				error += 1;
 				continue;
 			}
-			error = false;
+			error = 0;
 		}
 	}
 
@@ -151,7 +149,17 @@ void GrabCubeState::run() {
 	}
 
 	CubeRelativePosition target = finder->findCubePosition();
-	poseCommander->commandDirectly(RobotPose(target.x - 0.36, target.y - 0.02, 0));
+	RobotPose targetPose = RobotPose(target.x - 0.36, target.y - 0.02, 0);
+	
+	/*if(backpack->plannedCommands.size()) {
+		RobotPose currentPose = backpack->plannedCommands.end()->toRobotPose();
+		backpack->plannedCommands.clear();
+		backpack->plannedCommands.push_back(currentPose);
+		backpack->plannedCommands.push_back(targetPose);
+		pathInformer->informPath(backpack->plannedCommands);
+	}*/
+
+	poseCommander->commandDirectly(targetPose);
 
 	prehensor->open();
 	poseCommander->commandDirectly(RobotPose(0.20,0,0));
@@ -164,41 +172,54 @@ void GrabCubeState::run() {
 	poseCommander->commandDirectly(RobotPose(0.08,0,0));
 	d3t12::sleepSecondsNanoSeconds(1,0);
 	prehensor->close();
-	//cameraTargeter->targetCenter();
+	
 	prehensor->rise();
 }
 
 void PlanReturnToDetectionZoneState::run() {
 	RobotPose currentPose = poseGetter->getPose();
 	backpack->plannedCommands = pathPlanner->planPath(currentPose, RETURN_SEEKING_CUBE_ZONE_POSE);
+
+	RobotPose dropPose = dropList->previous(), frontDropPose = RETURN_SEEKING_CUBE_ZONE_POSE;
+	backpack->plannedCommands.push_back(RobotPose(frontDropPose.x, dropPose.y, dropPose.yaw));
+	backpack->plannedCommands.push_back(RobotPose(dropPose.x, dropPose.y, dropPose.yaw));
+
 	pathInformer->informPath(backpack->plannedCommands);
 }
 
 void ReturnToDetectionZoneState::run() {
-	for(int i = 0; i < backpack->plannedCommands.size(); ++i) {
+	for(int i = 0; i < backpack->plannedCommands.size() - 2; ++i) {
 		poseCommander->commandPose(backpack->plannedCommands[i].toRobotPose());
 	}
 }
 
 void DropCubeState::run() {
 	RobotPose dropPose = dropList->previous();
-	std::cout << "drop pose: " << dropPose.x << ", " << dropPose.y << ", " << dropPose.yaw << std::endl;
+	int cubeNo = dropList->getOrderList()->previous();
+
+	if(cubeNo != 1 && cubeNo != 4 && cubeNo != 7) { dropPose.y -= 0.03; }
+	std::cout << "drop pose #" << cubeNo << ": " << dropPose.x << ", " << dropPose.y << ", " << dropPose.yaw << std::endl;
 
 	poseCommander->commandPose(RETURN_SEEKING_CUBE_ZONE_POSE);
 	poseCommander->commandY(dropPose);
 	poseCommander->commandY(dropPose);
 	poseCommander->commandY(dropPose);
+	poseCommander->commandY(dropPose);
+	poseCommander->commandY(dropPose);
+
 	poseCommander->commandX(dropPose);
-	poseCommander->commandPose(dropPose);
+
+	if(cubeNo == 2 || cubeNo == 5 || cubeNo == 8) { dropPose.y += 0.05; }
+	if(cubeNo == 3 || cubeNo == 6 || cubeNo == 9) { dropPose.y += 0.07; }
+
+	poseCommander->commandY(dropPose);
 
 	prehensor->lower();
 	prehensor->open();
-	prehensor->rise();
 
 	poseCommander->commandDirectly(RobotPose(-0.30,0,0));
 
 	prehensor->close();
-	prehensor->lower();
 
 	poseCommander->commandDirectly(RobotPose(-0.20,0,0));
 	poseCommander->commandDirectly(RobotPose(0,0,M_PI));

@@ -34,6 +34,10 @@ public:
 		detector = _detector;
 	}
 
+	inline void changeAngle() {
+		adjuster->changeAngle();
+	}
+
 	virtual void resetAngle();
 	virtual void targetCenter();
 };

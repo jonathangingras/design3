@@ -45,6 +45,8 @@ int main(int argc, char** argv) {
 		pose.y = robotPoseOnTable.pose.position.y;
 		pose.yaw = tf::getYaw(q);
 		posePublisher.publish(pose);
+
+		usleep(200000);
 	}
 
 	std::cout << "bye" << std::endl;

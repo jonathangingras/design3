@@ -67,10 +67,8 @@ public:
 
 	inline CubeList(LEDMatrixOrderList::Ptr _orderList): orderList(_orderList) {}
 
-	inline void setList(std::vector<Type>& _elements) {
-		for(int i = 0; i < _elements.size(); ++i) {
-			elements.push_back(_elements[i]);
-		}
+	inline void setList(std::vector<Type> _elements) {
+		elements = _elements;
 	}
 
 	inline void increase() {
@@ -83,6 +81,10 @@ public:
 
 	inline Type previous() const {
 		return (elements.size() == 9 ? elements[orderList->previous() - 1] : nullElement);
+	}
+
+	inline LEDMatrixOrderList::Ptr getOrderList() const {
+		return orderList;
 	}
 
 	inline void reset() {

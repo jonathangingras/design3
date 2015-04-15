@@ -14,6 +14,8 @@ public:
 
 	virtual void adjustY(float degrees) = 0;
 	virtual void adjustX(float degrees) = 0;
+
+	virtual void changeAngle() {}
 };
 
 }
